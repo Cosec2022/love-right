@@ -1,5 +1,7 @@
 import { evaluateCondition } from "./condition-evaluator.js";
 import { buildMemoryProfile } from "./result-compressor.js";
+import { ArchetypeClassifier } from "./archetype-classifier.js";
+import { resolveOutcome } from "./outcome-resolver.js";
 
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
@@ -49,6 +51,7 @@ export class ResultEngine {
     this.resultsSpec = resultsSpec;
     this.scoreEngine = scoreEngine;
     this.sceneMap = new Map(story.scenes.map((scene) => [scene.id, scene]));
+    this.v2Classifier = resultsSpec.modelVersion === 2 ? new ArchetypeClassifier() : null;
   }
 
   passesGates(archetype, context) {
@@ -146,6 +149,13 @@ export class ResultEngine {
   }
 
   pickArchetype(scoring, stateContext = {}) {
+    if (this.v2Classifier) {
+      const classified = this.v2Classifier.classify(scoring.spatial.profile, Object.fromEntries(Object.entries(scoring.spatial.exposure).map(([id, value]) => [id, value ? Math.min(1, value / 3) : 0])));
+      const local = new Map(this.resultsSpec.archetypes.map((item) => [item.id, item]));
+      const hydrate = (item) => ({ ...(local.get(item.id) ?? { id: item.id, title: item.id, tagline: item.id, tags: [] }), ...item, finalScore: item.score });
+      const primary = hydrate(classified.primary);
+      return { ...primary, secondary: classified.secondary ? hydrate(classified.secondary) : null, margin: classified.margin, confidence: classified.evidence, ranking: classified.scores.map((item) => ({ id:item.id, title:item.id, finalScore:item.score, gatePassed:true })) };
+    }
     const context = {
       traits: scoring.traits,
       rawTraits: scoring.rawTraits,
@@ -240,7 +250,7 @@ export class ResultEngine {
       meters,
       flags: state.flags,
       answers: state.answers,
-      outcome: state.outcome,
+      outcome: resolveOutcome(state),
       visited: state.visited
     });
     const context = {

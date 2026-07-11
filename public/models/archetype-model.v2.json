@@ -1,0 +1,16 @@
+{
+  "modelVersion": 2,
+  "axisVersion": 2,
+  "axes": ["approach","trust","certainty","abandonment","idealization","novelty","discernment","jealousy","expression","conflict","repair","reassurance","autonomy","commitment","care","validation"],
+  "archetypes": [
+    {"id":"direct-pursuit","canonicalPrototype":{"approach":0.7,"expression":0.5,"certainty":0.3},"axisWeights":{"approach":1,"expression":.8,"certainty":.5},"minimumEvidence":.3,"semanticDescription":"主动而清楚地推进关系"},
+    {"id":"clear-slow","canonicalPrototype":{"discernment":0.7,"autonomy":0.45,"approach":-0.2},"axisWeights":{"discernment":1,"autonomy":.7,"approach":.5},"minimumEvidence":.3,"semanticDescription":"以行动验证后慢慢靠近"},
+    {"id":"steady-confirm","canonicalPrototype":{"certainty":0.7,"commitment":0.5,"reassurance":0.35},"axisWeights":{"certainty":1,"commitment":.7,"reassurance":.5},"minimumEvidence":.3,"semanticDescription":"需要明确方向与稳定确认"},
+    {"id":"chosen-sensitive","canonicalPrototype":{"validation":0.7,"abandonment":0.45,"care":0.3},"axisWeights":{"validation":1,"abandonment":.7,"care":.4},"minimumEvidence":.3,"semanticDescription":"在重要时刻需要被坚定选择"},
+    {"id":"repair-nurturer","canonicalPrototype":{"repair":0.7,"care":0.55,"conflict":0.35},"axisWeights":{"repair":1,"care":.8,"conflict":.5},"minimumEvidence":.3,"semanticDescription":"愿意照顾与修复关系"},
+    {"id":"romantic-resonance","canonicalPrototype":{"idealization":0.7,"novelty":0.5,"trust":0.25},"axisWeights":{"idealization":1,"novelty":.8,"trust":.4},"minimumEvidence":.3,"semanticDescription":"容易被细节、氛围和共鸣打动"},
+    {"id":"free-close","canonicalPrototype":{"autonomy":0.7,"trust":0.3,"approach":0.15},"axisWeights":{"autonomy":1,"trust":.5,"approach":.35},"minimumEvidence":.3,"semanticDescription":"亲密同时保持独立生活"},
+    {"id":"push-pull","canonicalPrototype":{"abandonment":0.65,"reassurance":0.55,"approach":-0.2},"axisWeights":{"abandonment":1,"reassurance":.8,"approach":.4},"minimumEvidence":.3,"semanticDescription":"在需要靠近与害怕受伤间摇摆"}
+  ],
+  "blendThreshold": 0.035
+}
