@@ -154,7 +154,7 @@ export class ResultEngine {
       const local = new Map(this.resultsSpec.archetypes.map((item) => [item.id, item]));
       const hydrate = (item) => ({ ...(local.get(item.id) ?? { id: item.id, title: item.id, tagline: item.id, tags: [] }), ...item, finalScore: item.score });
       const primary = hydrate(classified.primary);
-      return { ...primary, secondary: classified.secondary ? hydrate(classified.secondary) : null, margin: classified.margin, confidence: classified.evidence, ranking: classified.scores.map((item) => ({ id:item.id, title:item.id, finalScore:item.score, gatePassed:true })) };
+      return { ...primary, secondary: null, margin: classified.margin, confidence: classified.evidence, ranking: classified.scores.map((item) => ({ id:item.id, title:item.id, finalScore:item.score, gatePassed:true })) };
     }
     const context = {
       traits: scoring.traits,
@@ -280,6 +280,7 @@ export class ResultEngine {
     const memory = buildMemoryProfile(archetype, meters, this.resultsSpec);
 
     return {
+      classification: { modelVersion: this.v2Classifier ? 2 : 1, source: this.v2Classifier ? "global-archetype-model" : "story-local-model" },
       story: this.story.metadata,
       traits: scoring.traits,
       rawTraits: scoring.rawTraits,

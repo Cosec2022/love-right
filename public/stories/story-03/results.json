@@ -1,79 +1,6 @@
 {
   "schemaVersion": 2,
   "storyId": "story-03",
-  "spatialModel": {
-    "mode": "cluster",
-    "blendThreshold": 0.0065,
-    "weights": {
-      "distance": 1.0
-    },
-    "blendPairs": [
-      [
-        "clear-slow",
-        "steady-confirm"
-      ],
-      [
-        "clear-slow",
-        "free-close"
-      ],
-      [
-        "clear-slow",
-        "chosen-sensitive"
-      ],
-      [
-        "clear-slow",
-        "direct-pursuit"
-      ],
-      [
-        "clear-slow",
-        "repair-nurturer"
-      ],
-      [
-        "steady-confirm",
-        "chosen-sensitive"
-      ],
-      [
-        "steady-confirm",
-        "repair-nurturer"
-      ],
-      [
-        "steady-confirm",
-        "romantic-resonance"
-      ],
-      [
-        "romantic-resonance",
-        "push-pull"
-      ],
-      [
-        "romantic-resonance",
-        "direct-pursuit"
-      ],
-      [
-        "romantic-resonance",
-        "free-close"
-      ],
-      [
-        "direct-pursuit",
-        "repair-nurturer"
-      ],
-      [
-        "direct-pursuit",
-        "chosen-sensitive"
-      ],
-      [
-        "free-close",
-        "push-pull"
-      ],
-      [
-        "chosen-sensitive",
-        "push-pull"
-      ],
-      [
-        "chosen-sensitive",
-        "repair-nurturer"
-      ]
-    ]
-  },
   "meters": [
     {
       "id": "approach",
@@ -192,25 +119,6 @@
       "id": "clear-slow",
       "title": "清醒慢热型",
       "tagline": "你会心动，但不会因为心动取消判断。",
-      "center": {
-        "approach": 0.0475,
-        "trust": 0.3279,
-        "certainty": 0.3413,
-        "abandonment": 0.2222,
-        "idealization": 0.0525,
-        "novelty": 0.1507,
-        "discernment": 0.488,
-        "jealousy": -0.2071,
-        "expression": 0.1925,
-        "conflict": -0.0124,
-        "repair": 0.2316,
-        "reassurance": 0.1332,
-        "autonomy": 0.4622,
-        "commitment": 0.2365,
-        "care": 0.2082,
-        "validation": 0.179
-      },
-      "bias": 0,
       "tags": [
         "慢热",
         "看行动",
@@ -222,25 +130,6 @@
       "id": "steady-confirm",
       "title": "稳定确认型",
       "tagline": "你真正会留下的关系，必须既有喜欢，也有明确的位置。",
-      "center": {
-        "approach": 0.2258,
-        "trust": 0.3012,
-        "certainty": 0.4174,
-        "abandonment": 0.1952,
-        "idealization": 0.1968,
-        "novelty": 0.1931,
-        "discernment": 0.4697,
-        "jealousy": 0.0814,
-        "expression": 0.4156,
-        "conflict": -0.0071,
-        "repair": 0.2824,
-        "reassurance": 0.2362,
-        "autonomy": 0.4362,
-        "commitment": 0.3126,
-        "care": 0.1295,
-        "validation": 0.2094
-      },
-      "bias": 0,
       "tags": [
         "需要明确",
         "重视承诺",
@@ -252,25 +141,6 @@
       "id": "romantic-resonance",
       "title": "浪漫共振型",
       "tagline": "你会被细节、氛围和只属于两个人的暗号打动。",
-      "center": {
-        "approach": 0.2116,
-        "trust": 0.35,
-        "certainty": 0.3934,
-        "abandonment": 0.1468,
-        "idealization": 0.1868,
-        "novelty": 0.1903,
-        "discernment": 0.4753,
-        "jealousy": -0.2388,
-        "expression": 0.4038,
-        "conflict": -0.0055,
-        "repair": 0.2793,
-        "reassurance": 0.242,
-        "autonomy": 0.425,
-        "commitment": 0.3056,
-        "care": 0.1118,
-        "validation": 0.2088
-      },
-      "bias": 0,
       "tags": [
         "吃细节",
         "重氛围",
@@ -282,25 +152,6 @@
       "id": "direct-pursuit",
       "title": "主动直球型",
       "tagline": "你宁愿认真靠近，也不愿把喜欢耗在无限试探里。",
-      "center": {
-        "approach": 0.187,
-        "trust": 0.3707,
-        "certainty": 0.3937,
-        "abandonment": -0.0383,
-        "idealization": 0.0982,
-        "novelty": 0.1666,
-        "discernment": 0.476,
-        "jealousy": -0.1191,
-        "expression": 0.4281,
-        "conflict": -0.0169,
-        "repair": 0.2537,
-        "reassurance": -0.0411,
-        "autonomy": 0.4456,
-        "commitment": 0.2857,
-        "care": 0.1667,
-        "validation": 0.1397
-      },
-      "bias": 0,
       "tags": [
         "敢靠近",
         "会问清",
@@ -312,25 +163,6 @@
       "id": "free-close",
       "title": "自由靠近型",
       "tagline": "你可以很亲密，但爱情不能把你缩小成只剩关系。",
-      "center": {
-        "approach": 0.1645,
-        "trust": 0.3496,
-        "certainty": 0.3736,
-        "abandonment": 0.1001,
-        "idealization": 0.0952,
-        "novelty": 0.1616,
-        "discernment": 0.4819,
-        "jealousy": -0.1767,
-        "expression": 0.2267,
-        "conflict": -0.3241,
-        "repair": 0.1558,
-        "reassurance": 0.0894,
-        "autonomy": 0.4366,
-        "commitment": 0.2908,
-        "care": 0.0921,
-        "validation": 0.1767
-      },
-      "bias": 0,
       "tags": [
         "需要空间",
         "不爱查岗",
@@ -342,25 +174,6 @@
       "id": "chosen-sensitive",
       "title": "偏爱确认型",
       "tagline": "你最深的需要不是被追，而是被持续、明确地选择。",
-      "center": {
-        "approach": 0.0707,
-        "trust": 0.2431,
-        "certainty": 0.3811,
-        "abandonment": 0.255,
-        "idealization": 0.0014,
-        "novelty": 0.1258,
-        "discernment": 0.493,
-        "jealousy": 0.1282,
-        "expression": 0.3599,
-        "conflict": -0.0012,
-        "repair": 0.248,
-        "reassurance": 0.2423,
-        "autonomy": 0.4713,
-        "commitment": 0.2556,
-        "care": 0.1655,
-        "validation": 0.1482
-      },
-      "bias": 0,
       "tags": [
         "在意明确偏爱",
         "希望被放在心上",
@@ -372,25 +185,6 @@
       "id": "repair-nurturer",
       "title": "温柔修复型",
       "tagline": "你相信好的关系不是不出问题，而是两个人愿意一起把问题处理完。",
-      "center": {
-        "approach": 0.0688,
-        "trust": 0.3484,
-        "certainty": 0.4032,
-        "abandonment": 0.1273,
-        "idealization": -0.0855,
-        "novelty": 0.0865,
-        "discernment": 0.4793,
-        "jealousy": -0.1401,
-        "expression": 0.4352,
-        "conflict": -0.0089,
-        "repair": 0.2871,
-        "reassurance": 0.2231,
-        "autonomy": 0.4681,
-        "commitment": 0.2781,
-        "care": 0.1685,
-        "validation": 0.179
-      },
-      "bias": 0,
       "tags": [
         "愿意修复",
         "照顾细节",
@@ -402,25 +196,6 @@
       "id": "push-pull",
       "title": "反差拉扯型",
       "tagline": "你不是没有边界，而是心动和自我保护经常同时发生。",
-      "center": {
-        "approach": 0.1124,
-        "trust": 0.2599,
-        "certainty": 0.3939,
-        "abandonment": 0.2319,
-        "idealization": 0.0662,
-        "novelty": 0.1552,
-        "discernment": 0.4817,
-        "jealousy": 0.1063,
-        "expression": 0.2336,
-        "conflict": -0.3209,
-        "repair": 0.1529,
-        "reassurance": 0.2054,
-        "autonomy": 0.4504,
-        "commitment": 0.2676,
-        "care": 0.0827,
-        "validation": 0.1782
-      },
-      "bias": 0,
       "tags": [
         "先退后靠近",
         "容易反复确认",
@@ -794,5 +569,6 @@
         }
       ]
     }
-  }
+  },
+  "modelVersion": 2
 }
