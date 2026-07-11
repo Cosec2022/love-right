@@ -1,12 +1,25 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://love-right.coseclab.dev/schemas/results.schema.json",
-  "title": "Love Right Dynamic Results Package",
+  "title": "Love Right Spatial Results Package v2",
   "type": "object",
-  "required": ["schemaVersion", "storyId", "meters", "archetypes", "sections"],
+  "required": ["schemaVersion", "storyId", "spatialModel", "meters", "archetypes", "sections"],
   "properties": {
-    "schemaVersion": {"const": 1},
+    "schemaVersion": {"const": 2},
     "storyId": {"type": "string"},
+    "spatialModel": {
+      "type": "object",
+      "properties": {
+        "mode": {"enum": ["cluster", "spatial"]},
+        "blendThreshold": {"type": "number", "minimum": 0},
+        "blendPairs": {
+          "type": "array",
+          "items": {"type": "array", "prefixItems": [{"type": "string"}, {"type": "string"}], "minItems": 2, "maxItems": 2}
+        },
+        "weights": {"type": "object", "additionalProperties": {"type": "number"}}
+      },
+      "additionalProperties": true
+    },
     "meters": {
       "type": "array",
       "items": {
@@ -18,7 +31,10 @@
             "type": "array", "minItems": 1,
             "items": {
               "type": "object", "required": ["trait"],
-              "properties": {"trait": {"type": "string"}, "weight": {"type": "number"}, "inverse": {"type": "boolean"}},
+              "properties": {
+                "trait": {"type": "string"}, "weight": {"type": "number"},
+                "inverse": {"type": "boolean"}, "context": {"type": "string"}
+              },
               "additionalProperties": false
             }
           }
@@ -29,14 +45,19 @@
     "archetypes": {
       "type": "array", "minItems": 1,
       "items": {
-        "type": "object", "required": ["id", "title", "tagline", "target", "tags"],
+        "type": "object",
+        "required": ["id", "title", "tagline", "tags"],
         "properties": {
           "id": {"type": "string"}, "title": {"type": "string"}, "tagline": {"type": "string"},
+          "center": {"type": "object", "additionalProperties": {"type": "number"}},
           "target": {"type": "object", "additionalProperties": {"type": "number"}},
           "weights": {"type": "object", "additionalProperties": {"type": "number"}},
+          "contextCenters": {"type": "object"}, "interactionTargets": {"type": "array"},
+          "consistencyAxes": {"type": "array", "items": {"type": "string"}},
+          "gates": {"type": "array"}, "gatePenalty": {"type": "number"}, "bias": {"type": "number"},
           "tags": {"type": "array", "items": {"type": "string"}}
         },
-        "additionalProperties": false
+        "additionalProperties": true
       }
     },
     "sections": {"type": "object"}

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "story-01",
   "slug": "summer-wind",
   "status": "published",
@@ -12,61 +12,78 @@
     "coverTheme": "night-rose",
     "estimatedMinutes": 8,
     "tags": [
+      "女性视角",
       "18幕连续剧情",
-      "恋爱心理",
-      "过往投射",
-      "未来预告"
+      "空间人格模型",
+      "多结局"
     ],
-    "disclaimer": "娱乐性叙事情境投射，不是心理诊断、事实识别或未来预言。"
+    "disclaimer": "娱乐性叙事情境投射，不是心理诊断、事实识别或未来预言。",
+    "audience": "female"
   },
   "traits": [
     {
-      "id": "security",
-      "label": "依恋安全"
+      "id": "approach",
+      "label": "靠近主动"
     },
     {
-      "id": "spark",
-      "label": "心动强度"
+      "id": "trust",
+      "label": "初始信任"
     },
     {
-      "id": "idealism",
-      "label": "浪漫理想"
+      "id": "certainty",
+      "label": "关系清晰"
+    },
+    {
+      "id": "abandonment",
+      "label": "失去敏感"
+    },
+    {
+      "id": "idealization",
+      "label": "浪漫投射"
+    },
+    {
+      "id": "novelty",
+      "label": "未知吸引"
+    },
+    {
+      "id": "discernment",
+      "label": "行动判断"
+    },
+    {
+      "id": "jealousy",
+      "label": "竞争警觉"
+    },
+    {
+      "id": "expression",
+      "label": "情绪表达"
+    },
+    {
+      "id": "conflict",
+      "label": "冲突面对"
+    },
+    {
+      "id": "repair",
+      "label": "修复意愿"
     },
     {
       "id": "reassurance",
-      "label": "确认需求"
+      "label": "回应需要"
     },
     {
       "id": "autonomy",
-      "label": "边界独立"
+      "label": "自我边界"
     },
     {
       "id": "commitment",
       "label": "长期投入"
     },
     {
-      "id": "directness",
-      "label": "沟通直接"
-    },
-    {
       "id": "care",
-      "label": "照顾投入"
-    },
-    {
-      "id": "discernment",
-      "label": "识人谨慎"
-    },
-    {
-      "id": "novelty",
-      "label": "新鲜偏好"
+      "label": "照顾倾向"
     },
     {
       "id": "validation",
-      "label": "公开认可"
-    },
-    {
-      "id": "repair",
-      "label": "关系修复"
+      "label": "被选择需求"
     }
   ],
   "scoreConfig": {
@@ -101,57 +118,101 @@
         {
           "id": "a",
           "text": "点头跟上，觉得偶遇本身就值得期待",
-          "effects": {
-            "spark": 1,
-            "security": 1,
-            "novelty": 1,
-            "idealism": 1
-          },
           "setFlags": {
             "route": "base"
           },
-          "next": "s02_detail"
+          "next": "s02_detail",
+          "vector": {
+            "approach": 0.21,
+            "trust": 0.78,
+            "certainty": -0.26,
+            "abandonment": -0.78,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "discernment": -0.78,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "autonomy": -0.47,
+            "commitment": 0.26,
+            "validation": 0.26
+          },
+          "intensity": 1.11,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "先说谢谢，但刻意和他保持半步距离",
-          "effects": {
-            "discernment": 2,
-            "autonomy": 1,
-            "security": 1
-          },
           "setFlags": {
             "route": "base"
           },
-          "next": "s02_detail"
+          "next": "s02_detail",
+          "vector": {
+            "approach": -0.45,
+            "trust": 0.27,
+            "certainty": -0.26,
+            "abandonment": -0.78,
+            "idealization": -0.51,
+            "novelty": -0.68,
+            "discernment": 0.78,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "autonomy": 0.16,
+            "commitment": 0.26,
+            "validation": 0.26
+          },
+          "intensity": 1.05,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "笑着问他：‘你不会也走错了吧？’",
-          "effects": {
-            "spark": 2,
-            "directness": 2,
-            "novelty": 1
-          },
           "setFlags": {
             "route": "base"
           },
-          "next": "s02_detail"
+          "next": "s02_detail",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.27,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "idealization": 0.25,
+            "novelty": 0.57,
+            "discernment": -0.78,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "autonomy": -0.47,
+            "commitment": 0.26,
+            "validation": 0.26
+          },
+          "intensity": 1.16,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "婉拒，自己重新找路",
-          "effects": {
-            "autonomy": 2,
-            "discernment": 2,
-            "commitment": -1
-          },
           "setFlags": {
             "route": "declined"
           },
-          "next": "s02_reencounter"
+          "next": "s02_reencounter",
+          "vector": {
+            "approach": -0.55,
+            "trust": -0.78,
+            "certainty": -0.26,
+            "abandonment": 0.78,
+            "idealization": -0.51,
+            "novelty": -0.68,
+            "discernment": 0.78,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "autonomy": 0.78,
+            "commitment": -0.78,
+            "validation": -0.78
+          },
+          "intensity": 1.18,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "approach"
     },
     {
       "id": "s02_detail",
@@ -177,47 +238,107 @@
         {
           "id": "a",
           "text": "有点惊讶，问他为什么一直在注意你",
-          "effects": {
-            "reassurance": 1,
-            "spark": 1,
-            "directness": 1,
-            "validation": 1
+          "next": "s03_rain",
+          "vector": {
+            "approach": 0.67,
+            "trust": 0.78,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "idealization": -0.08,
+            "novelty": -0.26,
+            "discernment": -0.78,
+            "repair": -0.33,
+            "reassurance": 0.78,
+            "autonomy": -0.26,
+            "care": -0.78,
+            "validation": 0.78
           },
-          "next": "s03_rain"
+          "intensity": 1.17,
+          "confidence": 0.92,
+          "setFlags": {
+            "appeal": "steady"
+          }
         },
         {
           "id": "b",
           "text": "轻描淡写地说：‘只是觉得写得不错。’",
-          "effects": {
-            "autonomy": 1,
-            "discernment": 1,
-            "directness": -1
+          "next": "s03_rain",
+          "vector": {
+            "approach": -0.78,
+            "trust": -0.78,
+            "certainty": -0.58,
+            "abandonment": -0.26,
+            "idealization": -0.61,
+            "novelty": -0.26,
+            "discernment": 0.78,
+            "expression": -0.78,
+            "conflict": -0.78,
+            "repair": -0.33,
+            "reassurance": -0.26,
+            "autonomy": 0.78,
+            "care": -0.78,
+            "validation": -0.26
           },
-          "next": "s03_rain"
+          "intensity": 1.23,
+          "confidence": 0.92,
+          "setFlags": {
+            "appeal": "gentle"
+          }
         },
         {
           "id": "c",
           "text": "直接告诉他，那句话让你想起了一些事",
-          "effects": {
-            "care": 1,
-            "idealism": 1,
-            "repair": 1,
-            "directness": 2
+          "next": "s03_rain",
+          "vector": {
+            "approach": -0.57,
+            "trust": 0.78,
+            "certainty": -0.1,
+            "abandonment": -0.26,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "discernment": -0.78,
+            "expression": 0.39,
+            "conflict": 0.5,
+            "repair": 0.78,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "care": 0.78,
+            "validation": -0.26
           },
-          "next": "s03_rain"
+          "intensity": 1.18,
+          "confidence": 0.92,
+          "setFlags": {
+            "appeal": "direct"
+          }
         },
         {
           "id": "d",
           "text": "反问他：‘那你呢？你最喜欢哪一句？’",
-          "effects": {
-            "discernment": 1,
-            "directness": 2,
-            "care": 1,
-            "spark": 1
+          "next": "s03_rain",
+          "vector": {
+            "approach": 0.67,
+            "trust": -0.78,
+            "certainty": -0.1,
+            "abandonment": -0.26,
+            "idealization": -0.08,
+            "novelty": -0.26,
+            "discernment": 0.78,
+            "expression": 0.39,
+            "conflict": 0.33,
+            "repair": -0.13,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "care": 0.78,
+            "validation": -0.26
           },
-          "next": "s03_rain"
+          "intensity": 1.08,
+          "confidence": 0.92,
+          "setFlags": {
+            "appeal": "witty"
+          }
         }
-      ]
+      ],
+      "context": "approach"
     },
     {
       "id": "s03_rain",
@@ -239,44 +360,85 @@
         {
           "id": "a",
           "text": "他淋湿的那边肩膀",
-          "effects": {
-            "care": 2,
-            "commitment": 1,
-            "security": 1
+          "next": "s04_message",
+          "vector": {
+            "approach": -0.47,
+            "trust": 0.78,
+            "certainty": -0.26,
+            "abandonment": -0.48,
+            "idealization": -0.61,
+            "novelty": -0.69,
+            "repair": 0.78,
+            "reassurance": -0.26,
+            "commitment": 0.78,
+            "care": 0.78,
+            "validation": -0.1
           },
-          "next": "s04_message"
+          "intensity": 1.11,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "你们偶尔碰到的手臂",
-          "effects": {
-            "spark": 2,
-            "idealism": 1,
-            "novelty": 1
+          "next": "s04_message",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.26,
+            "certainty": -0.26,
+            "abandonment": -0.15,
+            "idealization": 0.44,
+            "novelty": 0.6,
+            "repair": -0.47,
+            "reassurance": -0.26,
+            "commitment": -0.26,
+            "care": -0.47,
+            "validation": -0.34
           },
-          "next": "s04_message"
+          "intensity": 1.02,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "他有没有故意把伞偏向你",
-          "effects": {
-            "reassurance": 2,
-            "validation": 1,
-            "care": 1
+          "next": "s04_message",
+          "vector": {
+            "approach": -0.47,
+            "trust": -0.26,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "idealization": -0.61,
+            "novelty": -0.69,
+            "repair": 0.16,
+            "reassurance": 0.78,
+            "commitment": -0.26,
+            "care": 0.16,
+            "validation": 0.78
           },
-          "next": "s04_message"
+          "intensity": 1.1,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "这场雨会不会让你们再多走一会儿",
-          "effects": {
-            "idealism": 2,
-            "spark": 1,
-            "novelty": 1
+          "next": "s04_message",
+          "vector": {
+            "approach": 0.16,
+            "trust": -0.26,
+            "certainty": -0.26,
+            "abandonment": -0.15,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "repair": -0.47,
+            "reassurance": -0.26,
+            "commitment": -0.26,
+            "care": -0.47,
+            "validation": -0.34
           },
-          "next": "s04_message"
+          "intensity": 1.01,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "approach"
     },
     {
       "id": "s04_message",
@@ -302,45 +464,92 @@
         {
           "id": "a",
           "text": "‘到了，你呢？’",
-          "effects": {
-            "directness": 1,
-            "security": 1,
-            "care": 1
+          "next": "s05_silence",
+          "vector": {
+            "approach": -0.2,
+            "trust": 0.78,
+            "certainty": -0.14,
+            "abandonment": -0.43,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "discernment": -0.78,
+            "expression": 0.47,
+            "conflict": 0.47,
+            "repair": 0.78,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "care": 0.78
           },
-          "next": "s05_silence"
+          "intensity": 1.11,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "‘刚到，今天谢谢你。’",
-          "effects": {
-            "directness": 1,
-            "discernment": 1,
-            "security": 1
+          "next": "s05_silence",
+          "vector": {
+            "approach": -0.2,
+            "trust": 0.48,
+            "certainty": -0.14,
+            "abandonment": -0.43,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "discernment": 0.78,
+            "expression": 0.47,
+            "conflict": 0.47,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "care": -0.26
           },
-          "next": "s05_silence"
+          "intensity": 1.03,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "发一张窗外下雨的照片",
-          "effects": {
-            "idealism": 2,
-            "spark": 1,
-            "novelty": 1
+          "next": "s05_silence",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.48,
+            "certainty": -0.5,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "discernment": -0.78,
+            "expression": -0.16,
+            "conflict": -0.16,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "care": -0.26
           },
-          "next": "s05_silence"
+          "intensity": 1.08,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "故意过一会儿再回，不想显得太主动",
-          "effects": {
-            "reassurance": 1,
-            "discernment": 1,
-            "autonomy": 1,
-            "directness": -1
+          "next": "s05_silence",
+          "vector": {
+            "approach": -0.37,
+            "trust": -0.78,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "discernment": 0.78,
+            "expression": -0.78,
+            "conflict": -0.78,
+            "repair": -0.26,
+            "reassurance": 0.78,
+            "autonomy": 0.78,
+            "care": -0.26
           },
-          "next": "s05_silence"
+          "intensity": 1.21,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "ambiguity"
     },
     {
       "id": "s05_silence",
@@ -366,44 +575,88 @@
         {
           "id": "a",
           "text": "觉得他可能在说你",
-          "effects": {
-            "idealism": 2,
-            "reassurance": 2,
-            "spark": 1
+          "next": "s06_record",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.21,
+            "certainty": 0.78,
+            "abandonment": 0.69,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "discernment": -0.78,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "reassurance": 0.78,
+            "autonomy": -0.78,
+            "validation": -0.26
           },
-          "next": "s06_record"
+          "intensity": 1.18,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "想点赞，但忍住了",
-          "effects": {
-            "discernment": 1,
-            "autonomy": 1,
-            "reassurance": 1
+          "next": "s06_record",
+          "vector": {
+            "approach": -0.78,
+            "trust": -0.35,
+            "abandonment": 0.26,
+            "idealization": -0.32,
+            "novelty": -0.26,
+            "discernment": 0.78,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "reassurance": 0.16,
+            "autonomy": 0.78,
+            "validation": -0.26
           },
-          "next": "s06_record"
+          "intensity": 1.03,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "直接问他：‘这是在说谁？’",
-          "effects": {
-            "directness": 2,
-            "spark": 1,
-            "validation": 1
+          "next": "s06_record",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.21,
+            "certainty": -0.09,
+            "abandonment": -0.17,
+            "idealization": -0.14,
+            "novelty": -0.26,
+            "discernment": -0.78,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "reassurance": -0.47,
+            "autonomy": -0.78,
+            "validation": 0.78
           },
-          "next": "s06_record"
+          "intensity": 1.11,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "告诉自己别想太多",
-          "effects": {
-            "security": 2,
-            "autonomy": 1,
-            "discernment": 1
+          "next": "s06_record",
+          "vector": {
+            "approach": -0.78,
+            "trust": 0.78,
+            "certainty": -0.72,
+            "abandonment": -0.78,
+            "idealization": -0.32,
+            "novelty": -0.26,
+            "discernment": 0.78,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "reassurance": -0.47,
+            "autonomy": 0.78,
+            "validation": -0.26
           },
-          "next": "s06_record"
+          "intensity": 1.14,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "ambiguity"
     },
     {
       "id": "s06_record",
@@ -429,43 +682,80 @@
         {
           "id": "a",
           "text": "他特意记住了你的话",
-          "effects": {
-            "reassurance": 1,
-            "care": 2,
-            "idealism": 1
+          "next": "s07_date",
+          "vector": {
+            "approach": -0.47,
+            "trust": -0.37,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "idealization": 0.15,
+            "novelty": -0.19,
+            "discernment": -0.47,
+            "repair": 0.78,
+            "reassurance": 0.78,
+            "care": 0.78
           },
-          "next": "s07_date"
+          "intensity": 1.09,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "他可能只是刚好也喜欢",
-          "effects": {
-            "discernment": 2,
-            "security": 1
+          "next": "s07_date",
+          "vector": {
+            "approach": -0.47,
+            "trust": 0.23,
+            "certainty": -0.26,
+            "abandonment": -0.43,
+            "idealization": -0.68,
+            "novelty": -0.39,
+            "discernment": 0.78,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "care": -0.26
           },
-          "next": "s07_date"
+          "intensity": 1.0,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "他有一点故意制造偶遇",
-          "effects": {
-            "spark": 1,
-            "discernment": 1,
-            "novelty": 1
+          "next": "s07_date",
+          "vector": {
+            "approach": 0.16,
+            "trust": -0.64,
+            "certainty": -0.26,
+            "idealization": -0.25,
+            "novelty": 0.78,
+            "discernment": 0.16,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "care": -0.26
           },
-          "next": "s07_date"
+          "intensity": 0.95,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "不管是不是巧合，你都已经有点开心",
-          "effects": {
-            "spark": 2,
-            "idealism": 1,
-            "security": 1
+          "next": "s07_date",
+          "vector": {
+            "approach": 0.78,
+            "trust": 0.78,
+            "certainty": -0.26,
+            "abandonment": -0.43,
+            "idealization": 0.78,
+            "novelty": -0.19,
+            "discernment": -0.47,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "care": -0.26
           },
-          "next": "s07_date"
+          "intensity": 1.03,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "ambiguity"
     },
     {
       "id": "s07_date",
@@ -491,44 +781,87 @@
         {
           "id": "a",
           "text": "认真讲一段过去",
-          "effects": {
-            "directness": 2,
-            "care": 1,
-            "repair": 1,
-            "commitment": 1
+          "next": "s08_name",
+          "vector": {
+            "approach": -0.15,
+            "trust": 0.47,
+            "certainty": 0.78,
+            "idealization": -0.26,
+            "discernment": -0.47,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "repair": 0.78,
+            "autonomy": -0.78,
+            "commitment": 0.78,
+            "care": 0.78,
+            "validation": 0.78
           },
-          "next": "s08_name"
+          "intensity": 1.2,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "说一个模糊的答案，观察他的反应",
-          "effects": {
-            "discernment": 2,
-            "autonomy": 1
+          "next": "s08_name",
+          "vector": {
+            "approach": -0.31,
+            "trust": -0.78,
+            "certainty": -0.26,
+            "idealization": -0.26,
+            "discernment": 0.78,
+            "expression": -0.26,
+            "conflict": -0.2,
+            "autonomy": 0.78,
+            "commitment": -0.26,
+            "care": -0.26,
+            "validation": -0.26
           },
-          "next": "s08_name"
+          "intensity": 1.02,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "笑着说：‘你先回答。’",
-          "effects": {
-            "directness": 1,
-            "discernment": 1,
-            "spark": 1
+          "next": "s08_name",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.16,
+            "certainty": 0.26,
+            "idealization": 0.78,
+            "discernment": 0.16,
+            "expression": 0.26,
+            "conflict": 0.2,
+            "autonomy": -0.78,
+            "commitment": -0.26,
+            "care": -0.26,
+            "validation": -0.26
           },
-          "next": "s08_name"
+          "intensity": 1.01,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "说自己已经不记得了",
-          "effects": {
-            "autonomy": 1,
-            "repair": -1,
-            "directness": -1
+          "next": "s08_name",
+          "vector": {
+            "approach": -0.31,
+            "trust": 0.47,
+            "certainty": -0.78,
+            "idealization": -0.26,
+            "discernment": -0.47,
+            "expression": -0.78,
+            "conflict": -0.78,
+            "repair": -0.71,
+            "autonomy": 0.78,
+            "commitment": -0.26,
+            "care": -0.26,
+            "validation": -0.26
           },
-          "next": "s08_name"
+          "intensity": 1.12,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "jealousy"
     },
     {
       "id": "s08_name",
@@ -550,44 +883,83 @@
         {
           "id": "a",
           "text": "直接问他们是什么关系",
-          "effects": {
-            "directness": 2,
-            "security": 1,
-            "discernment": 1
+          "next": "s09_emotion",
+          "vector": {
+            "approach": -0.26,
+            "certainty": -0.36,
+            "abandonment": -0.41,
+            "idealization": -0.26,
+            "discernment": 0.78,
+            "expression": 0.78,
+            "conflict": 0.67,
+            "repair": -0.26,
+            "reassurance": -0.47,
+            "care": -0.26
           },
-          "next": "s09_emotion"
+          "intensity": 1.03,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "表面不问，但之后会明显变冷",
-          "effects": {
-            "reassurance": 2,
-            "directness": -1,
-            "discernment": 1
+          "next": "s09_emotion",
+          "vector": {
+            "approach": -0.26,
+            "trust": -0.5,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "idealization": -0.26,
+            "discernment": 0.78,
+            "expression": -0.78,
+            "conflict": -0.78,
+            "repair": -0.26,
+            "reassurance": 0.78,
+            "care": -0.26
           },
-          "next": "s09_emotion"
+          "intensity": 1.13,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "相信他会在合适的时候解释",
-          "effects": {
-            "security": 2,
-            "care": 1,
-            "repair": 1
+          "next": "s09_emotion",
+          "vector": {
+            "approach": -0.26,
+            "trust": 0.78,
+            "certainty": -0.73,
+            "abandonment": -0.72,
+            "idealization": -0.26,
+            "discernment": -0.78,
+            "expression": -0.26,
+            "repair": 0.78,
+            "reassurance": -0.47,
+            "care": 0.78
           },
-          "next": "s09_emotion"
+          "intensity": 1.1,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "用玩笑试探：‘前女友？’",
-          "effects": {
-            "spark": 1,
-            "directness": 1,
-            "reassurance": 1
+          "next": "s09_emotion",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.36,
+            "certainty": 0.3,
+            "abandonment": 0.34,
+            "idealization": 0.78,
+            "discernment": -0.78,
+            "expression": 0.26,
+            "conflict": 0.19,
+            "repair": -0.26,
+            "reassurance": 0.16,
+            "care": -0.26
           },
-          "next": "s09_emotion"
+          "intensity": 1.03,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "jealousy"
     },
     {
       "id": "s09_emotion",
@@ -613,43 +985,88 @@
         {
           "id": "a",
           "text": "‘有一点，但我不知道自己有没有资格问。’",
-          "effects": {
-            "reassurance": 2,
-            "validation": 1,
-            "care": 1
+          "next": "s10_confession",
+          "vector": {
+            "approach": 0.26,
+            "trust": -0.18,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "discernment": -0.26,
+            "expression": -0.16,
+            "conflict": -0.11,
+            "repair": 0.4,
+            "reassurance": 0.78,
+            "autonomy": -0.26,
+            "care": 0.78,
+            "validation": 0.78
           },
-          "next": "s10_confession"
+          "intensity": 1.09,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "‘没有，你想多了。’",
-          "effects": {
-            "autonomy": 1,
-            "directness": -2,
-            "repair": -1
+          "next": "s10_confession",
+          "vector": {
+            "approach": -0.78,
+            "trust": -0.18,
+            "certainty": -0.61,
+            "abandonment": -0.15,
+            "discernment": -0.26,
+            "expression": -0.78,
+            "conflict": -0.78,
+            "repair": -0.78,
+            "reassurance": -0.26,
+            "autonomy": 0.78,
+            "care": -0.26,
+            "validation": -0.78
           },
-          "next": "s10_confession"
+          "intensity": 1.14,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "‘我不喜欢不清不楚的关系。’",
-          "effects": {
-            "directness": 2,
-            "validation": 1,
-            "security": 1
+          "next": "s10_confession",
+          "vector": {
+            "approach": 0.26,
+            "trust": 0.78,
+            "abandonment": -0.48,
+            "discernment": -0.26,
+            "expression": 0.47,
+            "conflict": 0.44,
+            "repair": 0.19,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "care": -0.26,
+            "validation": 0.78
           },
-          "next": "s10_confession"
+          "intensity": 1.03,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "‘你先告诉我，她是谁。’",
-          "effects": {
-            "directness": 2,
-            "discernment": 1
+          "next": "s10_confession",
+          "vector": {
+            "approach": 0.26,
+            "trust": -0.41,
+            "certainty": -0.18,
+            "abandonment": -0.15,
+            "discernment": 0.78,
+            "expression": 0.47,
+            "conflict": 0.44,
+            "repair": 0.19,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "care": -0.26,
+            "validation": -0.78
           },
-          "next": "s10_confession"
+          "intensity": 1.03,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "jealousy"
     },
     {
       "id": "s10_confession",
@@ -675,44 +1092,93 @@
         {
           "id": "a",
           "text": "过去不重要，只要他现在选择你",
-          "effects": {
-            "validation": 2,
-            "commitment": 2,
-            "reassurance": 1
+          "next": "s11_hand",
+          "vector": {
+            "approach": 0.47,
+            "trust": 0.78,
+            "certainty": 0.55,
+            "abandonment": 0.16,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "discernment": -0.78,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "reassurance": 0.16,
+            "autonomy": -0.47,
+            "commitment": 0.78,
+            "validation": 0.78
           },
-          "next": "s11_hand"
+          "intensity": 1.11,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "你能理解，但会担心自己只是替代品",
-          "effects": {
-            "reassurance": 2,
-            "discernment": 1,
-            "idealism": 1
+          "next": "s11_hand",
+          "vector": {
+            "approach": 0.47,
+            "trust": 0.16,
+            "certainty": 0.69,
+            "abandonment": 0.78,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "discernment": -0.16,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "reassurance": 0.78,
+            "autonomy": -0.47,
+            "commitment": -0.11,
+            "validation": -0.23
           },
-          "next": "s11_hand"
+          "intensity": 1.11,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "你需要他先处理干净过去",
-          "effects": {
-            "discernment": 2,
-            "autonomy": 1,
-            "directness": 2
+          "next": "s11_hand",
+          "vector": {
+            "approach": -0.16,
+            "trust": -0.47,
+            "certainty": -0.46,
+            "abandonment": -0.47,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "discernment": 0.47,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "reassurance": -0.47,
+            "autonomy": 0.16,
+            "commitment": -0.11,
+            "validation": -0.23
           },
-          "next": "s11_hand"
+          "intensity": 1.06,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "你开始想保护自己，不敢再投入太快",
-          "effects": {
-            "autonomy": 2,
-            "discernment": 2,
-            "commitment": -1
+          "next": "s11_hand",
+          "vector": {
+            "approach": -0.78,
+            "trust": -0.47,
+            "certainty": -0.78,
+            "abandonment": -0.47,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "discernment": 0.47,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "reassurance": -0.47,
+            "autonomy": 0.78,
+            "commitment": -0.56,
+            "validation": -0.32
           },
-          "next": "s11_hand"
+          "intensity": 1.12,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "intimacy"
     },
     {
       "id": "s11_hand",
@@ -738,44 +1204,90 @@
         {
           "id": "a",
           "text": "直接把手放进他手里",
-          "effects": {
-            "spark": 2,
-            "commitment": 1,
-            "idealism": 1
+          "next": "s12_cancel",
+          "vector": {
+            "approach": 0.43,
+            "trust": -0.26,
+            "certainty": -0.34,
+            "idealization": 0.31,
+            "novelty": -0.26,
+            "discernment": -0.26,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "commitment": 0.78,
+            "validation": 0.78
           },
-          "next": "s12_cancel"
+          "intensity": 1.03,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "笑着说：‘你不是已经牵了吗？’",
-          "effects": {
-            "spark": 2,
-            "directness": 1,
-            "novelty": 1
+          "next": "s12_cancel",
+          "vector": {
+            "approach": 0.43,
+            "trust": -0.26,
+            "certainty": -0.1,
+            "idealization": -0.23,
+            "novelty": 0.78,
+            "discernment": -0.26,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "commitment": -0.26,
+            "validation": -0.26
           },
-          "next": "s12_cancel"
+          "intensity": 1.04,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "先看着他，不说话",
-          "effects": {
-            "idealism": 2,
-            "reassurance": 1,
-            "spark": 1
+          "next": "s12_cancel",
+          "vector": {
+            "approach": -0.09,
+            "trust": -0.26,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "idealization": 0.7,
+            "discernment": -0.26,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "reassurance": 0.78,
+            "autonomy": -0.26,
+            "commitment": -0.26,
+            "validation": -0.26
           },
-          "next": "s12_cancel"
+          "intensity": 1.06,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "告诉他，你还需要一点时间",
-          "effects": {
-            "discernment": 2,
-            "autonomy": 2,
-            "security": 1
+          "next": "s12_cancel",
+          "vector": {
+            "approach": -0.78,
+            "trust": 0.78,
+            "certainty": -0.34,
+            "abandonment": -0.66,
+            "idealization": -0.78,
+            "novelty": -0.47,
+            "discernment": 0.78,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "reassurance": -0.26,
+            "autonomy": 0.78,
+            "commitment": -0.26,
+            "validation": -0.26
           },
-          "next": "s12_cancel"
+          "intensity": 1.15,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "intimacy"
     },
     {
       "id": "s12_cancel",
@@ -801,43 +1313,86 @@
         {
           "id": "a",
           "text": "回复‘没关系’，但心里很失落",
-          "effects": {
-            "reassurance": 2,
-            "directness": -1,
-            "care": 1
+          "next": "s13_call",
+          "vector": {
+            "approach": 0.26,
+            "trust": -0.5,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "discernment": -0.26,
+            "expression": -0.39,
+            "conflict": -0.37,
+            "repair": -0.09,
+            "reassurance": 0.78,
+            "autonomy": -0.26,
+            "care": 0.78,
+            "validation": -0.26
           },
-          "next": "s13_call"
+          "intensity": 1.09,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "问清楚原因，希望他认真解释",
-          "effects": {
-            "directness": 2,
-            "repair": 1,
-            "security": 1
+          "next": "s13_call",
+          "vector": {
+            "approach": 0.26,
+            "trust": 0.64,
+            "certainty": -0.11,
+            "abandonment": -0.36,
+            "discernment": -0.26,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "repair": 0.78,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "care": -0.26,
+            "validation": -0.26
           },
-          "next": "s13_call"
+          "intensity": 1.06,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "不回复，等他自己意识到问题",
-          "effects": {
-            "discernment": 1,
-            "validation": 1,
-            "directness": -1
+          "next": "s13_call",
+          "vector": {
+            "approach": 0.26,
+            "trust": -0.78,
+            "certainty": -0.28,
+            "discernment": 0.78,
+            "expression": -0.39,
+            "conflict": -0.37,
+            "repair": -0.34,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "care": -0.26,
+            "validation": 0.78
           },
-          "next": "s13_call"
+          "intensity": 1.04,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "改变自己的安排，不让这件事影响整晚",
-          "effects": {
-            "autonomy": 2,
-            "security": 1
+          "next": "s13_call",
+          "vector": {
+            "approach": -0.78,
+            "trust": 0.64,
+            "certainty": -0.4,
+            "abandonment": -0.36,
+            "discernment": -0.26,
+            "repair": -0.34,
+            "reassurance": -0.26,
+            "autonomy": 0.78,
+            "care": -0.26,
+            "validation": -0.26
           },
-          "next": "s13_call"
+          "intensity": 1.02,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "intimacy"
     },
     {
       "id": "s13_call",
@@ -863,38 +1418,84 @@
         {
           "id": "a",
           "text": "立刻问他在哪里，想去见他",
-          "effects": {
-            "care": 2,
-            "commitment": 2,
-            "spark": 1
-          }
+          "vector": {
+            "approach": 0.78,
+            "certainty": -0.78,
+            "abandonment": -0.78,
+            "novelty": -0.26,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "repair": 0.78,
+            "reassurance": -0.78,
+            "autonomy": -0.26,
+            "commitment": 0.78,
+            "care": 0.78
+          },
+          "intensity": 1.14,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "先安慰他，再问以后还会不会联系",
-          "effects": {
-            "reassurance": 2,
-            "commitment": 1,
-            "directness": 1
-          }
+          "vector": {
+            "approach": -0.2,
+            "certainty": 0.65,
+            "abandonment": 0.78,
+            "idealization": -0.41,
+            "novelty": -0.26,
+            "expression": 0.26,
+            "conflict": 0.26,
+            "repair": -0.26,
+            "reassurance": 0.78,
+            "autonomy": -0.26,
+            "commitment": 0.16,
+            "care": -0.26,
+            "validation": -0.26
+          },
+          "intensity": 1.05,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "有些生气，因为他一直替你决定",
-          "effects": {
-            "directness": 2,
-            "autonomy": 1,
-            "validation": 1
-          }
+          "vector": {
+            "approach": -0.37,
+            "certainty": -0.24,
+            "abandonment": -0.78,
+            "idealization": -0.41,
+            "novelty": -0.26,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "repair": -0.26,
+            "reassurance": -0.78,
+            "autonomy": 0.78,
+            "commitment": -0.47,
+            "care": -0.26,
+            "validation": 0.78
+          },
+          "intensity": 1.17,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "沉默，害怕自己表现得太在意",
-          "effects": {
-            "reassurance": 2,
-            "directness": -1,
-            "idealism": 1
-          }
+          "vector": {
+            "approach": -0.2,
+            "certainty": 0.37,
+            "abandonment": 0.78,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "expression": -0.78,
+            "conflict": -0.78,
+            "repair": -0.26,
+            "reassurance": 0.78,
+            "autonomy": -0.26,
+            "commitment": -0.47,
+            "care": -0.26,
+            "validation": -0.54
+          },
+          "intensity": 1.17,
+          "confidence": 0.92
         }
       ],
       "next": {
@@ -908,7 +1509,8 @@
           }
         ],
         "default": "s14_last_day"
-      }
+      },
+      "context": "rupture"
     },
     {
       "id": "s14_last_day",
@@ -934,44 +1536,85 @@
         {
           "id": "a",
           "text": "‘会，只是可能需要更久。’",
-          "effects": {
-            "commitment": 2,
-            "security": 1,
-            "idealism": 1
+          "next": "s15_station",
+          "vector": {
+            "approach": -0.78,
+            "trust": 0.78,
+            "certainty": -0.26,
+            "abandonment": -0.78,
+            "idealization": -0.26,
+            "novelty": -0.6,
+            "discernment": -0.26,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "commitment": 0.78,
+            "validation": 0.78
           },
-          "next": "s15_station"
+          "intensity": 1.1,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "‘我不知道，但我很喜欢现在发生的一切。’",
-          "effects": {
-            "idealism": 2,
-            "spark": 1,
-            "novelty": 1
+          "next": "s15_station",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.12,
+            "certainty": -0.26,
+            "abandonment": 0.26,
+            "idealization": 0.52,
+            "novelty": 0.69,
+            "discernment": -0.26,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "commitment": -0.47,
+            "validation": -0.47
           },
-          "next": "s15_station"
+          "intensity": 1.02,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "‘重要的不是在哪里认识，是你之后怎么做。’",
-          "effects": {
-            "discernment": 2,
-            "directness": 1,
-            "commitment": 1
+          "next": "s15_station",
+          "vector": {
+            "approach": -0.78,
+            "trust": -0.55,
+            "certainty": 0.78,
+            "abandonment": 0.26,
+            "idealization": -0.78,
+            "novelty": -0.78,
+            "discernment": 0.78,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "commitment": 0.16,
+            "validation": 0.16
           },
-          "next": "s15_station"
+          "intensity": 1.15,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "‘可能不会，所以我才更珍惜这几天。’",
-          "effects": {
-            "idealism": 2,
-            "novelty": 1,
-            "spark": 1
+          "next": "s15_station",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.12,
+            "certainty": -0.26,
+            "abandonment": 0.26,
+            "idealization": 0.52,
+            "novelty": 0.69,
+            "discernment": -0.26,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "commitment": -0.47,
+            "validation": -0.47
           },
-          "next": "s15_station"
+          "intensity": 1.02,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "rupture"
     },
     {
       "id": "s15_station",
@@ -997,43 +1640,93 @@
         {
           "id": "a",
           "text": "‘不会，但你也不要让我等太久。’",
-          "effects": {
-            "validation": 2,
-            "directness": 2,
-            "commitment": 1
+          "next": "s16_missing",
+          "vector": {
+            "approach": -0.66,
+            "trust": 0.26,
+            "certainty": 0.34,
+            "abandonment": -0.78,
+            "idealization": -0.41,
+            "novelty": -0.26,
+            "discernment": -0.26,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "reassurance": -0.78,
+            "autonomy": -0.26,
+            "commitment": 0.78,
+            "validation": 0.78
           },
-          "next": "s16_missing"
+          "intensity": 1.18,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "‘那要看你值不值得我记住。’",
-          "effects": {
-            "autonomy": 1,
-            "discernment": 2,
-            "spark": 1
+          "next": "s16_missing",
+          "vector": {
+            "approach": 0.53,
+            "trust": -0.78,
+            "certainty": -0.78,
+            "abandonment": -0.78,
+            "idealization": -0.19,
+            "novelty": -0.26,
+            "discernment": 0.78,
+            "expression": -0.47,
+            "conflict": -0.47,
+            "reassurance": -0.78,
+            "autonomy": 0.78,
+            "commitment": -0.26,
+            "validation": -0.26
           },
-          "next": "s16_missing"
+          "intensity": 1.18,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "‘有些人不是想忘就能忘的。’",
-          "effects": {
-            "idealism": 2,
-            "reassurance": 1
+          "next": "s16_missing",
+          "vector": {
+            "approach": -0.66,
+            "trust": 0.26,
+            "certainty": 0.12,
+            "abandonment": 0.78,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "discernment": -0.26,
+            "expression": -0.47,
+            "conflict": -0.47,
+            "reassurance": 0.78,
+            "autonomy": -0.26,
+            "commitment": -0.26,
+            "validation": -0.26
           },
-          "next": "s16_missing"
+          "intensity": 1.12,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "‘我不知道，你呢？’",
-          "effects": {
-            "reassurance": 1,
-            "directness": 1,
-            "spark": 1
+          "next": "s16_missing",
+          "vector": {
+            "approach": 0.78,
+            "trust": 0.26,
+            "certainty": 0.32,
+            "abandonment": 0.78,
+            "idealization": -0.19,
+            "novelty": -0.26,
+            "discernment": -0.26,
+            "expression": 0.16,
+            "conflict": 0.16,
+            "reassurance": 0.78,
+            "autonomy": -0.26,
+            "commitment": -0.26,
+            "validation": -0.26
           },
-          "next": "s16_missing"
+          "intensity": 1.04,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "rupture"
     },
     {
       "id": "s16_missing",
@@ -1059,42 +1752,84 @@
         {
           "id": "a",
           "text": "先确认他是不是安全",
-          "effects": {
-            "care": 2,
-            "security": 1
+          "next": "s17_reality",
+          "vector": {
+            "approach": 0.26,
+            "trust": 0.46,
+            "certainty": -0.72,
+            "abandonment": -0.26,
+            "discernment": -0.26,
+            "expression": -0.26,
+            "conflict": -0.2,
+            "repair": 0.23,
+            "autonomy": -0.26,
+            "care": 0.78,
+            "validation": -0.26
           },
-          "next": "s17_reality"
+          "intensity": 1.0,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "告诉他，你不喜欢这种突然失联",
-          "effects": {
-            "directness": 2,
-            "repair": 1,
-            "security": 1
+          "next": "s17_reality",
+          "vector": {
+            "approach": 0.26,
+            "trust": 0.46,
+            "certainty": 0.78,
+            "abandonment": -0.26,
+            "discernment": -0.26,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "repair": 0.62,
+            "autonomy": -0.26,
+            "care": -0.26,
+            "validation": -0.26
           },
-          "next": "s17_reality"
+          "intensity": 1.06,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "等他主动解释完整，再决定态度",
-          "effects": {
-            "discernment": 2,
-            "security": 1
+          "next": "s17_reality",
+          "vector": {
+            "approach": 0.26,
+            "trust": -0.14,
+            "certainty": -0.72,
+            "abandonment": -0.26,
+            "discernment": 0.78,
+            "expression": -0.26,
+            "conflict": -0.2,
+            "autonomy": -0.26,
+            "care": -0.26,
+            "validation": -0.26
           },
-          "next": "s17_reality"
+          "intensity": 0.97,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "装作不在意，回复得比他更冷淡",
-          "effects": {
-            "autonomy": 1,
-            "validation": 1,
-            "repair": -1
+          "next": "s17_reality",
+          "vector": {
+            "approach": -0.78,
+            "trust": -0.78,
+            "certainty": 0.66,
+            "abandonment": 0.78,
+            "discernment": -0.26,
+            "expression": -0.26,
+            "conflict": -0.38,
+            "repair": -0.78,
+            "autonomy": 0.78,
+            "care": -0.26,
+            "validation": 0.78
           },
-          "next": "s17_reality"
+          "intensity": 1.14,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "commitment"
     },
     {
       "id": "s17_reality",
@@ -1120,37 +1855,80 @@
         {
           "id": "a",
           "text": "只要彼此坚定，时间不是问题",
-          "effects": {
-            "idealism": 2,
-            "commitment": 2,
-            "security": 1
-          }
+          "vector": {
+            "approach": -0.2,
+            "trust": 0.78,
+            "certainty": -0.26,
+            "abandonment": -0.78,
+            "idealization": 0.78,
+            "discernment": -0.47,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "autonomy": -0.26,
+            "commitment": 0.78,
+            "validation": 0.78
+          },
+          "intensity": 1.09,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "可以等，但必须有明确的未来",
-          "effects": {
-            "commitment": 2,
-            "directness": 1,
-            "discernment": 1
-          }
+          "vector": {
+            "approach": -0.2,
+            "trust": -0.26,
+            "certainty": 0.78,
+            "abandonment": 0.26,
+            "idealization": -0.74,
+            "novelty": -0.37,
+            "discernment": 0.16,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "autonomy": -0.26,
+            "commitment": 0.78,
+            "validation": 0.78
+          },
+          "intensity": 1.12,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "不愿意把最好的时间交给不确定",
-          "effects": {
-            "autonomy": 2,
-            "discernment": 2
-          }
+          "vector": {
+            "approach": -0.37,
+            "trust": -0.46,
+            "certainty": -0.26,
+            "abandonment": 0.26,
+            "idealization": -0.74,
+            "novelty": -0.37,
+            "discernment": 0.78,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "autonomy": 0.78,
+            "commitment": -0.78,
+            "validation": -0.78
+          },
+          "intensity": 1.12,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "先开始再说，感情本来就无法计算",
-          "effects": {
-            "spark": 2,
-            "novelty": 1,
-            "idealism": 1
-          }
+          "vector": {
+            "approach": 0.78,
+            "certainty": -0.26,
+            "abandonment": 0.26,
+            "idealization": 0.7,
+            "novelty": 0.78,
+            "discernment": -0.47,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "autonomy": -0.26,
+            "commitment": -0.78,
+            "validation": -0.78
+          },
+          "intensity": 1.09,
+          "confidence": 0.92
         }
       ],
       "next": {
@@ -1164,7 +1942,8 @@
           }
         ],
         "default": "s18_invitation"
-      }
+      },
+      "context": "commitment"
     },
     {
       "id": "s18_invitation",
@@ -1194,48 +1973,90 @@
         {
           "id": "a",
           "text": "买下最近一班车票，不提前告诉他",
-          "effects": {
-            "spark": 2,
-            "idealism": 2,
-            "novelty": 1
-          },
           "outcome": "leap",
-          "next": "$result"
+          "next": "$result",
+          "vector": {
+            "approach": 0.78,
+            "certainty": -0.65,
+            "abandonment": 0.26,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "discernment": -0.78,
+            "expression": -0.47,
+            "conflict": -0.47,
+            "autonomy": -0.26,
+            "commitment": -0.26,
+            "validation": -0.3
+          },
+          "intensity": 1.1,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "先发消息确认，不愿意只靠猜测",
-          "effects": {
-            "discernment": 2,
-            "directness": 1,
-            "security": 1
-          },
           "outcome": "confirm",
-          "next": "$result"
+          "next": "$result",
+          "vector": {
+            "approach": -0.2,
+            "trust": 0.78,
+            "certainty": -0.26,
+            "abandonment": -0.78,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "discernment": 0.78,
+            "expression": 0.16,
+            "conflict": 0.16,
+            "autonomy": -0.26,
+            "commitment": -0.26,
+            "validation": -0.3
+          },
+          "intensity": 1.03,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "去，但告诉自己这次一定要问清楚",
-          "effects": {
-            "commitment": 1,
-            "directness": 2,
-            "discernment": 1
-          },
           "outcome": "clarify",
-          "next": "$result"
+          "next": "$result",
+          "vector": {
+            "approach": -0.2,
+            "trust": -0.38,
+            "certainty": 0.13,
+            "abandonment": 0.26,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "autonomy": -0.26,
+            "commitment": 0.78,
+            "validation": -0.18
+          },
+          "intensity": 1.02,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "不去，等待他真正走到你面前",
-          "effects": {
-            "validation": 2,
-            "autonomy": 2,
-            "discernment": 1
-          },
           "outcome": "wait",
-          "next": "$result"
+          "next": "$result",
+          "vector": {
+            "approach": -0.37,
+            "trust": -0.38,
+            "certainty": 0.78,
+            "abandonment": 0.26,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "expression": -0.47,
+            "conflict": -0.47,
+            "autonomy": 0.78,
+            "commitment": -0.26,
+            "validation": 0.78
+          },
+          "intensity": 1.06,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "commitment"
     },
     {
       "id": "s02_reencounter",
@@ -1270,61 +2091,115 @@
           "id": "a",
           "text": "接过票根，主动问他最喜欢墙上的哪封信",
           "subtext": "你重新打开了一点谈话空间",
-          "effects": {
-            "directness": 2,
-            "spark": 1,
-            "idealism": 1,
-            "security": 1
-          },
           "setFlags": {
-            "route": "reopened"
+            "route": "reopened",
+            "appeal": "steady"
           },
-          "next": "s03_reopened"
+          "next": "s03_reopened",
+          "vector": {
+            "approach": 0.21,
+            "trust": 0.78,
+            "certainty": 0.47,
+            "abandonment": -0.78,
+            "idealization": 0.78,
+            "novelty": -0.14,
+            "discernment": -0.47,
+            "expression": 0.47,
+            "conflict": 0.47,
+            "repair": -0.26,
+            "autonomy": -0.47,
+            "commitment": 0.26,
+            "care": -0.26,
+            "validation": 0.26
+          },
+          "intensity": 1.12,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "说声谢谢，顺口问他是不是也一个人来看展",
           "subtext": "礼貌，但不急着定义这次相遇",
-          "effects": {
-            "discernment": 1,
-            "autonomy": 1,
-            "directness": 1,
-            "care": 1
-          },
           "setFlags": {
-            "route": "reopened"
+            "route": "reopened",
+            "appeal": "gentle"
           },
-          "next": "s03_reopened"
+          "next": "s03_reopened",
+          "vector": {
+            "approach": -0.45,
+            "trust": -0.26,
+            "certainty": -0.16,
+            "abandonment": 0.26,
+            "idealization": -0.54,
+            "novelty": -0.32,
+            "discernment": 0.16,
+            "expression": -0.16,
+            "conflict": -0.16,
+            "repair": 0.78,
+            "autonomy": 0.16,
+            "commitment": 0.26,
+            "care": 0.78,
+            "validation": 0.26
+          },
+          "intensity": 1.04,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "笑着说：‘看来我们这次都没走错。’",
           "subtext": "用轻松的方式重新靠近",
-          "effects": {
-            "spark": 2,
-            "directness": 2,
-            "novelty": 1
-          },
           "setFlags": {
-            "route": "reopened"
+            "route": "reopened",
+            "appeal": "direct"
           },
-          "next": "s03_reopened"
+          "next": "s03_reopened",
+          "vector": {
+            "approach": 0.78,
+            "certainty": 0.47,
+            "abandonment": 0.26,
+            "idealization": 0.31,
+            "novelty": 0.78,
+            "discernment": -0.47,
+            "expression": 0.47,
+            "conflict": 0.47,
+            "repair": -0.26,
+            "autonomy": -0.47,
+            "commitment": 0.26,
+            "care": -0.26,
+            "validation": 0.26
+          },
+          "intensity": 1.09,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "只说谢谢，让这次偶遇停在这里",
           "subtext": "你拒绝的是这个人，不是爱情",
-          "effects": {
-            "autonomy": 2,
-            "discernment": 2,
-            "commitment": -1
-          },
           "setFlags": {
-            "route": "newLead"
+            "route": "newLead",
+            "appeal": "witty"
           },
-          "next": "s03_new_lead"
+          "next": "s03_new_lead",
+          "vector": {
+            "approach": -0.55,
+            "trust": -0.46,
+            "certainty": -0.78,
+            "abandonment": 0.26,
+            "idealization": -0.54,
+            "novelty": -0.32,
+            "discernment": 0.78,
+            "expression": -0.78,
+            "conflict": -0.78,
+            "repair": -0.26,
+            "autonomy": 0.78,
+            "commitment": -0.78,
+            "care": -0.26,
+            "validation": -0.78
+          },
+          "intensity": 1.23,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "approach"
     },
     {
       "id": "s03_reopened",
@@ -1351,47 +2226,96 @@
           "id": "a",
           "text": "他把看起来更结实的那把伞留给了你",
           "subtext": "你会从照顾里读取心意",
-          "effects": {
-            "care": 2,
-            "commitment": 1,
-            "security": 1
+          "next": "s04_message",
+          "vector": {
+            "approach": -0.45,
+            "trust": 0.78,
+            "certainty": -0.26,
+            "abandonment": -0.48,
+            "idealization": -0.58,
+            "novelty": -0.31,
+            "discernment": -0.26,
+            "repair": 0.78,
+            "reassurance": -0.26,
+            "autonomy": -0.78,
+            "commitment": 0.78,
+            "care": 0.78,
+            "validation": 0.78
           },
-          "next": "s04_message"
+          "intensity": 1.18,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "他没有故意走近，却一直保持在你身边",
           "subtext": "克制反而让你更容易心动",
-          "effects": {
-            "spark": 2,
-            "idealism": 1,
-            "autonomy": 1
+          "next": "s04_message",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.18,
+            "certainty": -0.26,
+            "abandonment": -0.15,
+            "idealization": 0.37,
+            "novelty": -0.17,
+            "discernment": -0.26,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "autonomy": 0.78,
+            "commitment": -0.26,
+            "care": -0.26,
+            "validation": -0.26
           },
-          "next": "s04_message"
+          "intensity": 1.02,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "他记得你刚才拒绝过，没有再次替你做决定",
           "subtext": "尊重会明显提高你的好感",
-          "effects": {
-            "reassurance": 2,
-            "discernment": 1,
-            "autonomy": 1
+          "next": "s04_message",
+          "vector": {
+            "approach": -0.56,
+            "trust": -0.41,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "idealization": -0.58,
+            "novelty": -0.31,
+            "discernment": 0.78,
+            "repair": -0.26,
+            "reassurance": 0.78,
+            "autonomy": 0.78,
+            "commitment": -0.26,
+            "care": -0.26,
+            "validation": -0.26
           },
-          "next": "s04_message"
+          "intensity": 1.16,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "你竟然希望这场雨再下久一点",
           "subtext": "你已经允许故事继续一点点",
-          "effects": {
-            "idealism": 2,
-            "spark": 1,
-            "novelty": 1
+          "next": "s04_message",
+          "vector": {
+            "approach": 0.22,
+            "trust": -0.18,
+            "certainty": -0.26,
+            "abandonment": -0.15,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "discernment": -0.26,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "autonomy": -0.78,
+            "commitment": -0.26,
+            "care": -0.26,
+            "validation": -0.26
           },
-          "next": "s04_message"
+          "intensity": 1.04,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "approach"
     },
     {
       "id": "s03_new_lead",
@@ -1422,47 +2346,94 @@
           "id": "a",
           "text": "他搬招牌时被雨淋湿的肩膀",
           "subtext": "你会先看见别人的付出",
-          "effects": {
-            "care": 2,
-            "commitment": 1,
-            "security": 1
+          "next": "s04_new_lead",
+          "vector": {
+            "approach": -0.46,
+            "trust": 0.78,
+            "certainty": -0.26,
+            "abandonment": -0.66,
+            "idealization": -0.49,
+            "novelty": -0.31,
+            "discernment": -0.26,
+            "repair": 0.78,
+            "reassurance": -0.26,
+            "autonomy": -0.47,
+            "commitment": 0.78,
+            "care": 0.78,
+            "validation": 0.78
           },
-          "next": "s04_new_lead"
+          "intensity": 1.17,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "这份善意没有附带任何熟络要求",
           "subtext": "没有压力的靠近更容易让你放松",
-          "effects": {
-            "spark": 1,
-            "idealism": 1,
-            "autonomy": 2
+          "next": "s04_new_lead",
+          "vector": {
+            "approach": 0.35,
+            "trust": -0.12,
+            "certainty": -0.26,
+            "idealization": 0.21,
+            "novelty": -0.17,
+            "discernment": -0.26,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "autonomy": 0.78,
+            "commitment": -0.26,
+            "care": -0.26,
+            "validation": -0.26
           },
-          "next": "s04_new_lead"
+          "intensity": 0.97,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "他没有趁机要你的联系方式",
           "subtext": "边界感会直接影响你的好感",
-          "effects": {
-            "reassurance": 1,
-            "discernment": 2,
-            "autonomy": 1
+          "next": "s04_new_lead",
+          "vector": {
+            "approach": -0.67,
+            "trust": -0.55,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "idealization": -0.49,
+            "novelty": -0.31,
+            "discernment": 0.78,
+            "repair": -0.26,
+            "reassurance": 0.78,
+            "autonomy": 0.16,
+            "commitment": -0.26,
+            "care": -0.26,
+            "validation": -0.26
           },
-          "next": "s04_new_lead"
+          "intensity": 1.13,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "你会不会真的为了还伞再回来",
           "subtext": "你开始允许下一次见面发生",
-          "effects": {
-            "idealism": 2,
-            "spark": 1,
-            "novelty": 1
+          "next": "s04_new_lead",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.12,
+            "certainty": -0.26,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "discernment": -0.26,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "autonomy": -0.47,
+            "commitment": -0.26,
+            "care": -0.26,
+            "validation": -0.26
           },
-          "next": "s04_new_lead"
+          "intensity": 1.04,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "approach"
     },
     {
       "id": "s04_new_lead",
@@ -1493,48 +2464,95 @@
           "id": "a",
           "text": "‘收到了，你今晚也会去吗？’",
           "subtext": "你愿意把话题继续下去",
-          "effects": {
-            "directness": 1,
-            "security": 1,
-            "care": 1
+          "next": "s05_new_lead",
+          "vector": {
+            "approach": -0.2,
+            "trust": 0.78,
+            "certainty": -0.14,
+            "abandonment": -0.43,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "discernment": -0.78,
+            "expression": 0.47,
+            "conflict": 0.47,
+            "repair": 0.78,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "care": 0.78
           },
-          "next": "s05_new_lead"
+          "intensity": 1.11,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "‘收到了，谢谢你的伞和地址。’",
           "subtext": "友好，但仍然保留节奏",
-          "effects": {
-            "directness": 1,
-            "discernment": 1,
-            "security": 1
+          "next": "s05_new_lead",
+          "vector": {
+            "approach": -0.2,
+            "trust": 0.48,
+            "certainty": -0.14,
+            "abandonment": -0.43,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "discernment": 0.78,
+            "expression": 0.47,
+            "conflict": 0.47,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "care": -0.26
           },
-          "next": "s05_new_lead"
+          "intensity": 1.03,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "发一张窗外已经放晴的照片",
           "subtext": "你更习惯用氛围传递好感",
-          "effects": {
-            "idealism": 2,
-            "spark": 1,
-            "novelty": 1
+          "next": "s05_new_lead",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.48,
+            "certainty": -0.5,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "discernment": -0.78,
+            "expression": -0.16,
+            "conflict": -0.16,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "autonomy": -0.26,
+            "care": -0.26
           },
-          "next": "s05_new_lead"
+          "intensity": 1.08,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "过一会儿再回，不想显得太主动",
           "subtext": "你会先管理自己的暴露感",
-          "effects": {
-            "reassurance": 1,
-            "discernment": 1,
-            "autonomy": 1,
-            "directness": -1
+          "next": "s05_new_lead",
+          "vector": {
+            "approach": -0.37,
+            "trust": -0.78,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "discernment": 0.78,
+            "expression": -0.78,
+            "conflict": -0.78,
+            "repair": -0.26,
+            "reassurance": 0.78,
+            "autonomy": 0.78,
+            "care": -0.26
           },
-          "next": "s05_new_lead"
+          "intensity": 1.21,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "ambiguity"
     },
     {
       "id": "s05_new_lead",
@@ -1561,47 +2579,91 @@
           "id": "a",
           "text": "觉得他可能在说你",
           "subtext": "你会本能地把细节连成故事",
-          "effects": {
-            "idealism": 2,
-            "reassurance": 2,
-            "spark": 1
+          "next": "s06_new_lead",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.21,
+            "certainty": 0.78,
+            "abandonment": 0.69,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "discernment": -0.78,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "reassurance": 0.78,
+            "autonomy": -0.78,
+            "validation": -0.26
           },
-          "next": "s06_new_lead"
+          "intensity": 1.18,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "想点赞，但最后还是忍住了",
           "subtext": "你想回应，也怕自己理解过度",
-          "effects": {
-            "discernment": 1,
-            "autonomy": 1,
-            "reassurance": 1
+          "next": "s06_new_lead",
+          "vector": {
+            "approach": -0.78,
+            "trust": -0.35,
+            "abandonment": 0.26,
+            "idealization": -0.32,
+            "novelty": -0.26,
+            "discernment": 0.78,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "reassurance": 0.16,
+            "autonomy": 0.78,
+            "validation": -0.26
           },
-          "next": "s06_new_lead"
+          "intensity": 1.03,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "直接问他：‘这是在说谁？’",
           "subtext": "你不喜欢把心思一直留在猜测里",
-          "effects": {
-            "directness": 2,
-            "spark": 1,
-            "validation": 1
+          "next": "s06_new_lead",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.21,
+            "certainty": -0.09,
+            "abandonment": -0.17,
+            "idealization": -0.14,
+            "novelty": -0.26,
+            "discernment": -0.78,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "reassurance": -0.47,
+            "autonomy": -0.78,
+            "validation": 0.78
           },
-          "next": "s06_new_lead"
+          "intensity": 1.11,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "告诉自己别想太多",
           "subtext": "你会先把解释权还给事实",
-          "effects": {
-            "security": 2,
-            "autonomy": 1,
-            "discernment": 1
+          "next": "s06_new_lead",
+          "vector": {
+            "approach": -0.78,
+            "trust": 0.78,
+            "certainty": -0.72,
+            "abandonment": -0.78,
+            "idealization": -0.32,
+            "novelty": -0.26,
+            "discernment": 0.78,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "reassurance": -0.47,
+            "autonomy": 0.78,
+            "validation": -0.26
           },
-          "next": "s06_new_lead"
+          "intensity": 1.14,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "ambiguity"
     },
     {
       "id": "s06_new_lead",
@@ -1628,46 +2690,83 @@
           "id": "a",
           "text": "他特意记住了你的话",
           "subtext": "被记住会明显提高你的心动",
-          "effects": {
-            "reassurance": 1,
-            "care": 2,
-            "idealism": 1
+          "next": "s07_date",
+          "vector": {
+            "approach": -0.47,
+            "trust": -0.37,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "idealization": 0.15,
+            "novelty": -0.19,
+            "discernment": -0.47,
+            "repair": 0.78,
+            "reassurance": 0.78,
+            "care": 0.78
           },
-          "next": "s07_date"
+          "intensity": 1.09,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "他可能只是刚好也喜欢",
           "subtext": "你会先保留一种更安全的解释",
-          "effects": {
-            "discernment": 2,
-            "security": 1
+          "next": "s07_date",
+          "vector": {
+            "approach": -0.47,
+            "trust": 0.23,
+            "certainty": -0.26,
+            "abandonment": -0.43,
+            "idealization": -0.68,
+            "novelty": -0.39,
+            "discernment": 0.78,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "care": -0.26
           },
-          "next": "s07_date"
+          "intensity": 1.0,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "他也许猜到你会来这里",
           "subtext": "一点点设计感让你既警惕又好奇",
-          "effects": {
-            "spark": 1,
-            "discernment": 1,
-            "novelty": 1
+          "next": "s07_date",
+          "vector": {
+            "approach": 0.16,
+            "trust": -0.64,
+            "certainty": -0.26,
+            "idealization": -0.25,
+            "novelty": 0.78,
+            "discernment": 0.16,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "care": -0.26
           },
-          "next": "s07_date"
+          "intensity": 0.95,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "不管是不是巧合，你都愿意接受这次邀请",
           "subtext": "这一次是你明确选择让故事继续",
-          "effects": {
-            "spark": 2,
-            "idealism": 1,
-            "security": 1
+          "next": "s07_date",
+          "vector": {
+            "approach": 0.78,
+            "trust": 0.78,
+            "certainty": -0.26,
+            "abandonment": -0.43,
+            "idealization": 0.78,
+            "novelty": -0.19,
+            "discernment": -0.47,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "care": -0.26
           },
-          "next": "s07_date"
+          "intensity": 1.03,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "ambiguity"
     },
     {
       "id": "s14_new_lead",
@@ -1702,47 +2801,90 @@
           "id": "a",
           "text": "‘会，只是可能需要更久。’",
           "subtext": "你相信吸引并不只属于特定场景",
-          "effects": {
-            "commitment": 2,
-            "idealism": 1,
-            "security": 1
+          "next": "s15_station",
+          "vector": {
+            "approach": -0.66,
+            "trust": 0.56,
+            "certainty": -0.26,
+            "abandonment": -0.78,
+            "idealization": -0.12,
+            "discernment": -0.26,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "autonomy": -0.26,
+            "commitment": 0.78,
+            "validation": 0.78
           },
-          "next": "s15_station"
+          "intensity": 1.06,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "‘我不知道，但我很喜欢现在发生的一切。’",
           "subtext": "你愿意珍惜当下，不急着保证永远",
-          "effects": {
-            "spark": 1,
-            "security": 1,
-            "idealism": 1
+          "next": "s15_station",
+          "vector": {
+            "approach": 0.78,
+            "trust": 0.56,
+            "certainty": -0.26,
+            "abandonment": -0.78,
+            "idealization": 0.12,
+            "discernment": -0.26,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "autonomy": -0.26,
+            "commitment": -0.47,
+            "validation": -0.47
           },
-          "next": "s15_station"
+          "intensity": 1.03,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "‘重要的不是在哪里认识，是你之后怎么做。’",
           "subtext": "你最终还是会用行动判断关系",
-          "effects": {
-            "discernment": 2,
-            "directness": 2,
-            "commitment": 1
+          "next": "s15_station",
+          "vector": {
+            "approach": -0.66,
+            "trust": -0.78,
+            "certainty": 0.78,
+            "abandonment": 0.78,
+            "idealization": -0.78,
+            "novelty": -0.78,
+            "discernment": 0.78,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "autonomy": -0.26,
+            "commitment": 0.16,
+            "validation": 0.16
           },
-          "next": "s15_station"
+          "intensity": 1.2,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "‘可能不会，所以我才更珍惜这几天。’",
           "subtext": "你接受短暂也可以拥有真实价值",
-          "effects": {
-            "idealism": 2,
-            "autonomy": 1,
-            "spark": 1
+          "next": "s15_station",
+          "vector": {
+            "approach": 0.53,
+            "trust": -0.34,
+            "certainty": -0.26,
+            "abandonment": 0.78,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "discernment": -0.26,
+            "expression": -0.26,
+            "conflict": -0.26,
+            "autonomy": 0.78,
+            "commitment": -0.47,
+            "validation": -0.47
           },
-          "next": "s15_station"
+          "intensity": 1.11,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "rupture"
     },
     {
       "id": "s18_new_lead",
@@ -1773,54 +2915,238 @@
           "id": "a",
           "text": "买下最近一班车票，不提前告诉他",
           "subtext": "你愿意为命运感保留一次冒险",
-          "effects": {
-            "spark": 2,
-            "idealism": 2,
-            "novelty": 2,
-            "reassurance": 1
-          },
           "outcome": "leap",
-          "next": "$result"
+          "next": "$result",
+          "vector": {
+            "approach": 0.78,
+            "trust": -0.21,
+            "certainty": 0.78,
+            "abandonment": 0.65,
+            "idealization": 0.78,
+            "novelty": 0.78,
+            "discernment": -0.47,
+            "expression": -0.78,
+            "conflict": -0.65,
+            "repair": -0.26,
+            "reassurance": 0.78,
+            "autonomy": -0.47,
+            "commitment": -0.11,
+            "validation": -0.35
+          },
+          "intensity": 1.22,
+          "confidence": 0.92
         },
         {
           "id": "b",
           "text": "先发消息确认，不愿意只靠猜测",
           "subtext": "你需要浪漫，也需要基本确定性",
-          "effects": {
-            "directness": 2,
-            "discernment": 2,
-            "security": 2
-          },
           "outcome": "confirm",
-          "next": "$result"
+          "next": "$result",
+          "vector": {
+            "approach": -0.18,
+            "trust": 0.78,
+            "certainty": -0.54,
+            "abandonment": -0.78,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "discernment": 0.78,
+            "expression": 0.78,
+            "conflict": 0.51,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "autonomy": -0.47,
+            "commitment": -0.11,
+            "validation": -0.35
+          },
+          "intensity": 1.13,
+          "confidence": 0.92
         },
         {
           "id": "c",
           "text": "去，但告诉自己这次一定要问清楚",
           "subtext": "你愿意靠近，同时保留现实判断",
-          "effects": {
-            "commitment": 2,
-            "directness": 2,
-            "autonomy": 1,
-            "repair": 1
-          },
           "outcome": "clarify",
-          "next": "$result"
+          "next": "$result",
+          "vector": {
+            "approach": -0.26,
+            "trust": -0.21,
+            "certainty": -0.54,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "discernment": -0.47,
+            "expression": 0.78,
+            "conflict": 0.78,
+            "repair": 0.78,
+            "reassurance": -0.26,
+            "autonomy": 0.16,
+            "commitment": 0.78,
+            "validation": -0.08
+          },
+          "intensity": 1.09,
+          "confidence": 0.92
         },
         {
           "id": "d",
           "text": "不去，等待他真正走到你面前",
           "subtext": "你不再独自完成关系的最后一步",
-          "effects": {
-            "autonomy": 2,
-            "validation": 2,
-            "discernment": 1,
-            "commitment": -1
-          },
           "outcome": "wait",
-          "next": "$result"
+          "next": "$result",
+          "vector": {
+            "approach": -0.34,
+            "trust": -0.36,
+            "certainty": 0.31,
+            "idealization": -0.26,
+            "novelty": -0.26,
+            "discernment": 0.16,
+            "expression": -0.78,
+            "conflict": -0.65,
+            "repair": -0.26,
+            "reassurance": -0.26,
+            "autonomy": 0.78,
+            "commitment": -0.56,
+            "validation": 0.78
+          },
+          "intensity": 1.1,
+          "confidence": 0.92
         }
-      ]
+      ],
+      "context": "commitment"
     }
-  ]
+  ],
+  "space": {
+    "version": 2,
+    "axes": [
+      {
+        "id": "approach",
+        "label": "靠近主动",
+        "low": "保护性退后",
+        "high": "主动靠近"
+      },
+      {
+        "id": "trust",
+        "label": "初始信任",
+        "low": "先验证",
+        "high": "先相信"
+      },
+      {
+        "id": "certainty",
+        "label": "关系清晰",
+        "low": "容忍模糊",
+        "high": "需要说清"
+      },
+      {
+        "id": "abandonment",
+        "label": "失去敏感",
+        "low": "不易被牵动",
+        "high": "容易担心失去"
+      },
+      {
+        "id": "idealization",
+        "label": "浪漫投射",
+        "low": "现实验证",
+        "high": "赋予意义"
+      },
+      {
+        "id": "novelty",
+        "label": "未知吸引",
+        "low": "熟悉稳定",
+        "high": "新鲜刺激"
+      },
+      {
+        "id": "discernment",
+        "label": "行动判断",
+        "low": "凭感觉",
+        "high": "看行动验证"
+      },
+      {
+        "id": "jealousy",
+        "label": "竞争警觉",
+        "low": "不易比较",
+        "high": "对第三人敏感"
+      },
+      {
+        "id": "expression",
+        "label": "情绪表达",
+        "low": "收住不说",
+        "high": "直接表达"
+      },
+      {
+        "id": "conflict",
+        "label": "冲突面对",
+        "low": "回避冷却",
+        "high": "当场处理"
+      },
+      {
+        "id": "repair",
+        "label": "修复意愿",
+        "low": "切断止损",
+        "high": "解释修复"
+      },
+      {
+        "id": "reassurance",
+        "label": "回应需要",
+        "low": "内在消化",
+        "high": "需要安抚"
+      },
+      {
+        "id": "autonomy",
+        "label": "自我边界",
+        "low": "关系融合",
+        "high": "保持独立"
+      },
+      {
+        "id": "commitment",
+        "label": "长期投入",
+        "low": "重视当下",
+        "high": "面向长期"
+      },
+      {
+        "id": "care",
+        "label": "照顾倾向",
+        "low": "接受照顾",
+        "high": "照顾别人"
+      },
+      {
+        "id": "validation",
+        "label": "被选择需求",
+        "low": "内在自足",
+        "high": "需要明确选择"
+      }
+    ],
+    "contexts": [
+      {
+        "id": "approach",
+        "label": "初次靠近"
+      },
+      {
+        "id": "ambiguity",
+        "label": "暧昧与不确定"
+      },
+      {
+        "id": "intimacy",
+        "label": "亲密与暴露"
+      },
+      {
+        "id": "jealousy",
+        "label": "第三人与比较"
+      },
+      {
+        "id": "rupture",
+        "label": "失约与冲突"
+      },
+      {
+        "id": "commitment",
+        "label": "现实与长期"
+      }
+    ],
+    "config": {
+      "priorWeight": 0.75,
+      "display": {
+        "center": 50,
+        "spread": 42,
+        "min": 8,
+        "max": 92
+      }
+    }
+  }
 }

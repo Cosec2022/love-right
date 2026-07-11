@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "storyId": "story-01",
+  "storyId": "story-04",
   "spatialModel": {
     "mode": "cluster",
     "blendThreshold": 0.0065,
@@ -193,22 +193,22 @@
       "title": "清醒慢热型",
       "tagline": "你会心动，但不会因为心动取消判断。",
       "center": {
-        "approach": -0.0907,
-        "trust": -0.0896,
-        "certainty": -0.059,
-        "abandonment": 0.0128,
-        "idealization": -0.0641,
-        "novelty": -0.055,
-        "discernment": 0.1434,
-        "jealousy": 0.0,
-        "expression": -0.1168,
-        "conflict": -0.1185,
-        "repair": -0.1423,
-        "reassurance": -0.0115,
-        "autonomy": 0.1775,
-        "commitment": -0.11,
-        "care": -0.1127,
-        "validation": -0.0702
+        "approach": 0.0932,
+        "trust": 0.2768,
+        "certainty": 0.335,
+        "abandonment": 0.2013,
+        "idealization": 0.0215,
+        "novelty": 0.252,
+        "discernment": 0.3675,
+        "jealousy": -0.2572,
+        "expression": 0.2656,
+        "conflict": 0.0,
+        "repair": 0.1173,
+        "reassurance": 0.0851,
+        "autonomy": 0.3989,
+        "commitment": 0.0548,
+        "care": 0.2963,
+        "validation": 0.2189
       },
       "bias": 0,
       "tags": [
@@ -223,22 +223,22 @@
       "title": "稳定确认型",
       "tagline": "你真正会留下的关系，必须既有喜欢，也有明确的位置。",
       "center": {
-        "approach": -0.0635,
-        "trust": -0.0466,
-        "certainty": 0.0744,
-        "abandonment": 0.1035,
-        "idealization": -0.0627,
-        "novelty": -0.0661,
-        "discernment": 0.0519,
-        "jealousy": 0.0,
-        "expression": -0.0452,
-        "conflict": -0.0418,
-        "repair": 0.0714,
-        "reassurance": 0.1231,
-        "autonomy": 0.037,
-        "commitment": -0.0318,
-        "care": 0.093,
-        "validation": -0.0215
+        "approach": 0.0518,
+        "trust": 0.2485,
+        "certainty": 0.3853,
+        "abandonment": 0.2057,
+        "idealization": -0.0307,
+        "novelty": 0.0335,
+        "discernment": 0.3951,
+        "jealousy": 0.1556,
+        "expression": 0.2577,
+        "conflict": 0.0,
+        "repair": 0.1998,
+        "reassurance": 0.1884,
+        "autonomy": 0.4081,
+        "commitment": 0.1453,
+        "care": 0.3073,
+        "validation": 0.2436
       },
       "bias": 0,
       "tags": [
@@ -253,22 +253,22 @@
       "title": "浪漫共振型",
       "tagline": "你会被细节、氛围和只属于两个人的暗号打动。",
       "center": {
-        "approach": 0.0998,
-        "trust": 0.0547,
-        "certainty": 0.0772,
-        "abandonment": 0.0797,
-        "idealization": 0.1335,
-        "novelty": 0.1286,
-        "discernment": -0.1747,
-        "jealousy": 0.0,
-        "expression": 0.0198,
-        "conflict": 0.0246,
-        "repair": 0.0933,
-        "reassurance": 0.1026,
-        "autonomy": -0.1516,
-        "commitment": 0.0306,
-        "care": 0.0945,
-        "validation": 0.0117
+        "approach": 0.1312,
+        "trust": 0.2695,
+        "certainty": 0.1168,
+        "abandonment": 0.198,
+        "idealization": 0.0541,
+        "novelty": 0.2989,
+        "discernment": 0.3821,
+        "jealousy": 0.1456,
+        "expression": 0.2484,
+        "conflict": 0.0,
+        "repair": 0.2098,
+        "reassurance": 0.1779,
+        "autonomy": 0.3866,
+        "commitment": 0.0773,
+        "care": 0.3042,
+        "validation": 0.1334
       },
       "bias": 0,
       "tags": [
@@ -283,22 +283,22 @@
       "title": "主动直球型",
       "tagline": "你宁愿认真靠近，也不愿把喜欢耗在无限试探里。",
       "center": {
-        "approach": -0.1068,
-        "trust": 0.0209,
-        "certainty": -0.0752,
-        "abandonment": -0.142,
-        "idealization": -0.148,
-        "novelty": -0.1432,
-        "discernment": 0.1276,
-        "jealousy": 0.0,
-        "expression": 0.0449,
-        "conflict": 0.0472,
-        "repair": 0.025,
-        "reassurance": -0.1463,
-        "autonomy": 0.0987,
-        "commitment": 0.0333,
-        "care": -0.0029,
-        "validation": 0.0189
+        "approach": 0.2275,
+        "trust": 0.33,
+        "certainty": 0.3792,
+        "abandonment": 0.1104,
+        "idealization": 0.0607,
+        "novelty": 0.2653,
+        "discernment": 0.3446,
+        "jealousy": -0.2346,
+        "expression": 0.3367,
+        "conflict": 0.0,
+        "repair": 0.2276,
+        "reassurance": 0.0873,
+        "autonomy": 0.3838,
+        "commitment": 0.2424,
+        "care": 0.2955,
+        "validation": 0.2482
       },
       "bias": 0,
       "tags": [
@@ -313,22 +313,22 @@
       "title": "自由靠近型",
       "tagline": "你可以很亲密，但爱情不能把你缩小成只剩关系。",
       "center": {
-        "approach": 0.0469,
-        "trust": 0.0408,
-        "certainty": -0.1133,
-        "abandonment": -0.1033,
-        "idealization": 0.0748,
-        "novelty": 0.0801,
-        "discernment": -0.03,
-        "jealousy": 0.0,
-        "expression": -0.011,
-        "conflict": -0.0084,
-        "repair": -0.0098,
-        "reassurance": -0.1079,
-        "autonomy": 0.0075,
-        "commitment": -0.0511,
-        "care": -0.0249,
-        "validation": -0.0529
+        "approach": 0.1701,
+        "trust": 0.2479,
+        "certainty": 0.3066,
+        "abandonment": 0.1752,
+        "idealization": 0.0213,
+        "novelty": 0.2789,
+        "discernment": 0.3756,
+        "jealousy": 0.1503,
+        "expression": 0.255,
+        "conflict": 0.0,
+        "repair": 0.2307,
+        "reassurance": -0.0704,
+        "autonomy": 0.4134,
+        "commitment": 0.1418,
+        "care": 0.3231,
+        "validation": 0.1392
       },
       "bias": 0,
       "tags": [
@@ -343,22 +343,22 @@
       "title": "偏爱确认型",
       "tagline": "你最深的需要不是被追，而是被持续、明确地选择。",
       "center": {
-        "approach": 0.0142,
-        "trust": -0.0135,
-        "certainty": 0.0968,
-        "abandonment": 0.0422,
-        "idealization": -0.0279,
-        "novelty": -0.033,
-        "discernment": -0.0303,
-        "jealousy": 0.0,
-        "expression": 0.0751,
-        "conflict": 0.0727,
-        "repair": -0.063,
-        "reassurance": 0.0239,
-        "autonomy": -0.0505,
-        "commitment": 0.0908,
-        "care": -0.0765,
-        "validation": 0.1134
+        "approach": 0.1644,
+        "trust": 0.2623,
+        "certainty": 0.4004,
+        "abandonment": 0.2012,
+        "idealization": 0.0645,
+        "novelty": 0.2935,
+        "discernment": 0.3456,
+        "jealousy": 0.1512,
+        "expression": 0.29,
+        "conflict": 0.0,
+        "repair": 0.0006,
+        "reassurance": 0.2017,
+        "autonomy": 0.3748,
+        "commitment": 0.2153,
+        "care": 0.2892,
+        "validation": 0.2468
       },
       "bias": 0,
       "tags": [
@@ -373,22 +373,22 @@
       "title": "温柔修复型",
       "tagline": "你相信好的关系不是不出问题，而是两个人愿意一起把问题处理完。",
       "center": {
-        "approach": -0.0071,
-        "trust": 0.0945,
-        "certainty": -0.0028,
-        "abandonment": -0.1023,
-        "idealization": -0.0459,
-        "novelty": -0.0686,
-        "discernment": -0.0714,
-        "jealousy": 0.0,
-        "expression": 0.0929,
-        "conflict": 0.1021,
-        "repair": 0.1871,
-        "reassurance": -0.0891,
-        "autonomy": -0.089,
-        "commitment": 0.1811,
-        "care": 0.1641,
-        "validation": 0.0943
+        "approach": 0.2072,
+        "trust": 0.3047,
+        "certainty": 0.3943,
+        "abandonment": 0.1489,
+        "idealization": 0.06,
+        "novelty": 0.2932,
+        "discernment": 0.3823,
+        "jealousy": 0.1609,
+        "expression": 0.3353,
+        "conflict": 0.0,
+        "repair": 0.2761,
+        "reassurance": 0.2061,
+        "autonomy": 0.3878,
+        "commitment": 0.2333,
+        "care": 0.2927,
+        "validation": 0.268
       },
       "bias": 0,
       "tags": [
@@ -403,22 +403,22 @@
       "title": "反差拉扯型",
       "tagline": "你不是没有边界，而是心动和自我保护经常同时发生。",
       "center": {
-        "approach": 0.0569,
-        "trust": -0.0659,
-        "certainty": 0.0496,
-        "abandonment": 0.1533,
-        "idealization": 0.1264,
-        "novelty": 0.1437,
-        "discernment": -0.0461,
-        "jealousy": 0.0,
-        "expression": -0.1082,
-        "conflict": -0.1095,
-        "repair": -0.1163,
-        "reassurance": 0.1463,
-        "autonomy": -0.0103,
-        "commitment": -0.1093,
-        "care": -0.0887,
-        "validation": -0.0737
+        "approach": 0.0213,
+        "trust": 0.2111,
+        "certainty": 0.3652,
+        "abandonment": 0.2451,
+        "idealization": 0.0252,
+        "novelty": 0.2798,
+        "discernment": 0.3998,
+        "jealousy": 0.1736,
+        "expression": 0.2278,
+        "conflict": 0.0,
+        "repair": 0.1244,
+        "reassurance": 0.1798,
+        "autonomy": 0.415,
+        "commitment": -0.0373,
+        "care": 0.2868,
+        "validation": 0.2452
       },
       "bias": 0,
       "tags": [
@@ -432,10 +432,10 @@
   "sections": {
     "ending": {
       "byOutcome": {
-        "leap": "你买下了最近一班车票，没有提前告诉他。列车进入那座城市时，天刚刚暗下来。你不确定他会不会在，却愿意为一个没有说完的故事，再勇敢一次。",
-        "confirm": "你先发去一条消息。不是因为不够浪漫，而是你已经知道：适合你的心动，不该永远建立在猜测上。当他回复“我会等你”时，你才开始收拾行李。",
-        "clarify": "你还是去了。车门打开以前，你已经决定，这次不再只听好听的话。你会走到他面前，把喜欢、距离和未来问清楚。",
-        "wait": "你没有登上那班车。你等待他真正走到你面前。不是故意错过，而是你越来越明白：值得的关系，不会永远让你独自完成最后一步。"
+        "together": "你说，正式开始，也各自把生活过好。许言没有要求你把半年写成等待，而是和你一起把见面、联系与各自目标放进日程。关系没有取消自由，反而让彼此更愿意回来。",
+        "continue": "你们决定认真联系，不用机场的一次情绪替未来签字。她理解你的谨慎，也要求双方都用行动证明兴趣仍在。半年以后，答案会由真实相处给出。",
+        "terms": "你们在出发前把频率、边界、期待和可能改变的地方说清楚。它不浪漫得像电影，却让两个人都不用靠猜测度过接下来的日子。",
+        "pause": "你承认喜欢，也承认现在无法承担这段关系。许言没有把它理解成不够勇敢。她收下你的诚实，你们没有用承诺把彼此困在不合适的时间。"
       },
       "appendRules": [
         {
@@ -443,28 +443,28 @@
             "flag": "appeal",
             "equals": "steady"
           },
-          "text": "你真正被打动的，是他在复杂时仍然稳得住，而不是说了多少漂亮的话。"
+          "text": "你真正被打动的，是她在复杂时仍然稳得住，而不是说了多少漂亮的话。"
         },
         {
           "when": {
             "flag": "appeal",
             "equals": "witty"
           },
-          "text": "你喜欢的不是油滑，而是他能让紧张的时刻稍微松下来，同时又不逃避重要问题。"
+          "text": "你喜欢的不是油滑，而是她能让紧张的时刻稍微松下来，同时又不逃避重要问题。"
         },
         {
           "when": {
             "flag": "appeal",
             "equals": "gentle"
           },
-          "text": "你对温柔的要求很具体：不是过度照顾，而是他看见你的状态，也尊重你是否需要。"
+          "text": "你对温柔的要求很具体：不是过度照顾，而是她看见你的状态，也尊重你是否需要。"
         },
         {
           "when": {
             "flag": "appeal",
             "equals": "direct"
           },
-          "text": "你会对克制却明确的人更难抵抗。他不替你决定，却会让你知道自己的心意。"
+          "text": "你会对克制却明确的人更难抵抗。她不替你决定，却会让你知道自己的心意。"
         },
         {
           "default": true,
@@ -604,18 +604,18 @@
               "trait": "novelty",
               "gte": 58
             },
-            "text": "下一次让你明显心动的男生，更可能出现在临时出发、朋友组局、展览演出或陌生环境里。你本来没准备开始，注意力却被一个不刻意的细节留住。"
+            "text": "下一次让你明显心动的女生，更可能出现在临时出发、朋友组局、展览演出或陌生环境里。你本来没准备开始，注意力却被一个不刻意的细节留住。"
           },
           {
             "when": {
               "trait": "commitment",
               "gte": 59
             },
-            "text": "你更可能通过稳定重复的接触认识下一位重要的男生：同一个项目、朋友的朋友、课程或常去的地方。吸引不是突然失控，而是逐渐确认对方可靠。"
+            "text": "你更可能通过稳定重复的接触认识下一位重要的女生：同一个项目、朋友的朋友、课程或常去的地方。吸引不是突然失控，而是逐渐确认对方可靠。"
           },
           {
             "default": true,
-            "text": "下一段关系更可能从轻松而自然的相处开始。对方不会一开始就制造巨大情绪，但会让你越来越习惯把日常分享给他。"
+            "text": "下一段关系更可能从轻松而自然的相处开始。对方不会一开始就制造巨大情绪，但会让你越来越习惯把日常分享给她。"
           }
         ]
       },
@@ -627,18 +627,18 @@
               "trait": "expression",
               "gte": 58
             },
-            "text": "真正的转折来自一次直接谈话。他会把喜欢说清楚，你也不会再用玩笑躲开。关系从可能性变成双方共同承担的选择。"
+            "text": "真正的转折来自一次直接谈话。她会把喜欢说清楚，你也不会再用玩笑躲开。关系从可能性变成双方共同承担的选择。"
           },
           {
             "when": {
               "trait": "reassurance",
               "gte": 58
             },
-            "text": "转折发生在你最不确定的时候。他不会只说“别多想”，而会用一个具体安排让你知道，你不是临时选项。"
+            "text": "转折发生在你最不确定的时候。她不会只说“别多想”，而会用一个具体安排让你知道，你不是临时选项。"
           },
           {
             "default": true,
-            "text": "转折来自一次并不浪漫的现实事件：计划改变、工作压力、家里有事。你会看到他在麻烦里仍然稳定，于是开始相信关系可以继续。"
+            "text": "转折来自一次并不浪漫的现实事件：计划改变、工作压力、家里有事。你会看到她在麻烦里仍然稳定，于是开始相信关系可以继续。"
           }
         ]
       },
@@ -675,42 +675,70 @@
       }
     ],
     "match": {
-      "base": "真正适合你的男生，不是最会制造情绪的人，而是吸引力、边界感和可靠性能够同时成立的人。",
+      "base": "真正适合你的女生，不是最会制造情绪的人，而是吸引力、边界感和可靠性能够同时成立的人。",
       "appendRules": [
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "steady"
+          },
+          "text": "你会长期欣赏情绪稳定、做事有能力的女生；她不需要依赖你证明价值，也愿意在关系里共同承担。"
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "witty"
+          },
+          "text": "你容易被聪明而松弛的幽默吸引。她能和你互相调侃，但不会用玩笑躲开真正重要的话。"
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "gentle"
+          },
+          "text": "适合你的温柔不是无条件迁就，而是她能看见你的脆弱，又不把照顾变成控制或施舍。"
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "direct"
+          },
+          "text": "你适合和表达清楚的女生相处。她会告诉你喜欢，也会告诉你边界，让主动不再变成猜谜。"
+        },
         {
           "when": {
             "trait": "reassurance",
             "gte": 58
           },
-          "text": "他需要愿意主动说明状态，不用失联和冷淡测试你的底线。"
+          "text": "她需要愿意主动说明状态，不用失联和冷淡测试你的底线。"
         },
         {
           "when": {
             "trait": "autonomy",
             "gte": 58
           },
-          "text": "他也应当有自己的生活，不会把爱理解成检查、限制或占有。"
+          "text": "她也应当有自己的生活，不会把爱理解成检查、限制或占有。"
         },
         {
           "when": {
             "trait": "idealization",
             "gte": 58
           },
-          "text": "只有务实还不够，他最好保留审美、好奇心和制造共同记忆的能力。"
+          "text": "只有务实还不够，她最好保留审美、好奇心和制造共同记忆的能力。"
         },
         {
           "when": {
             "trait": "commitment",
             "gte": 59
           },
-          "text": "最关键的是，他不能只会表达心动，也愿意把未来变成具体安排。"
+          "text": "最关键的是，她不能只会表达心动，也愿意把未来变成具体安排。"
         },
         {
           "when": {
             "trait": "expression",
             "lte": 44
           },
-          "text": "他最好比你更会把话说开，因为你有时会先观察，等失望积累后才表达。"
+          "text": "她最好比你更会把话说开，因为你有时会先观察，等失望积累后才表达。"
         }
       ]
     },

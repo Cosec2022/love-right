@@ -1,20 +1,28 @@
 # Love Right
 
-**Love Right** 是 CosecLab 的互动恋爱叙事与人格投射引擎。它不再是一份写死在单个 HTML 里的测试，而是一套可以持续增加故事内容包的产品骨架。
+**Love Right** 是 CosecLab 的互动恋爱叙事与人格投射引擎。用户不是填写一份显性的问卷，而是在连续关系情境中作出选择；引擎记录选择在16维恋爱空间中的方向、强度、情境、前后变化和维度组合，再生成动态结果。
 
-当前版本：`v0.2.0 · Engine Alpha`
+当前版本：`v0.4.1 · Spatial Story Pack`
 
-## 已经具备
+## 当前内容
 
-- 故事目录与独立内容包
-- 场景图、真实条件分支、人物路线切换与多结局
-- 选择效果、状态标记、返回回滚和本机续玩
-- 12项底层维度、派生指标和原型匹配
-- 规则驱动的动态结果拼装
-- “为什么这样判断”的关键选择证据
-- 内容图验证：重复 ID、断路、不可达场景、无法到达结局、未知维度
-- 新故事脚手架与批量生成契约
-- Story 01 已从旧单页迁移到引擎
+- Story 01 ·《那年夏天，风替他说了喜欢》
+- Story 02 ·《最后一班地铁之前》——女性视角，职场慢热
+- Story 03 ·《婚礼散场以后》——女性视角，旧识重逢
+- Story 04 ·《她把你的名字写在杯套背面》——男性视角，都市相遇
+
+三篇新增故事全部使用同一个运行时，没有复制前端页面。
+
+## v0.4.1 重点
+
+- 16维双向恋爱空间，不再把所有答案只做单向加分
+- 保存18次选择组成的空间轨迹、情境画像、摇摆程度与前后趋势
+- 8种结果原型全部可达，随机分布不再塌到单一类型
+- 混合结果只在差距足够小且类型组合合理时出现
+- 男/女主魅力偏好不直接宣布为测试题，而是在第6、12、17幕的措辞和行动中回响
+- 适配对象文案会吸收用户隐含选择的魅力类型
+- 四篇故事均为18个测量槽位，返回、分支、结果和本地续玩共用同一套 Engine
+- `npm run audit` 自动跑随机合法路线和 A/B/C/D 固定路线
 
 ## 项目结构
 
@@ -29,9 +37,10 @@ love-right/
 │   │   └── ui/
 │   └── stories/
 │       ├── catalog.json
-│       └── story-01/
-│           ├── story.json
-│           └── results.json
+│       ├── story-01/
+│       ├── story-02/
+│       ├── story-03/
+│       └── story-04/
 ├── schemas/
 ├── scripts/
 ├── tests/
@@ -45,21 +54,27 @@ npm install
 npm run dev
 ```
 
-不要直接用 `file://` 打开 `index.html`，模块和 JSON 内容包需要通过本地服务器读取。
+不要直接使用 `file://` 打开 `index.html`。模块与 JSON 内容包需要由本地服务器或 Cloudflare Worker 提供。
 
-## 检查
+## 发布前检查
 
 ```bash
 npm run check
 ```
 
-当前检查包含：
+检查包含：
 
 ```text
-内容与分支图验证
-+ 引擎单元测试
-+ 拒绝路线回归测试
-+ 完整18幕结果测试
+内容图与 Schema 校验
++ 静态前端契约
++ Story / Score / Result Engine 测试
++ 18幕完整路线
++ 返回状态回滚
++ 魅力偏好三次剧情回响
++ 男性目标故事
++ 随机结果分布
++ 混合结果比例
++ A/B/C/D 固定路线区分度
 ```
 
 ## 创建下一篇故事
@@ -68,14 +83,7 @@ npm run check
 npm run new-story -- midnight-message "凌晨两点，他问你睡了吗"
 ```
 
-这会生成：
-
-```text
-public/stories/midnight-message/story.json
-public/stories/midnight-message/results.json
-```
-
-并将草稿登记到 `catalog.json`。草稿不会显示在故事库；完成后把目录项和内容包的 `status` 改为 `published`。
+脚手架会自动继承统一16维空间、结果指标和原型词汇。草稿必须扩展到18个槽位，并重新校准结果分布后才能改为 `published`。
 
 ## 部署
 
@@ -83,8 +91,16 @@ public/stories/midnight-message/results.json
 npm run deploy
 ```
 
-预设域名：`love-right.coseclab.dev`
+正式域名：`love-right.coseclab.dev`
+
+GitHub `main` 已连接 Cloudflare 时，正常工作流是：
+
+```bash
+git add .
+git commit -m "feat: add story pack and spatial scoring"
+git push
+```
 
 ## 产品边界
 
-Love Right 可以做强代入、强传播和动态叙事，但结果必须保持娱乐性与可能性表达。不得把内容包装成临床诊断、真实经历读取或确定的未来预测。
+Love Right 可以做强代入、强传播和动态叙事，但结果必须保持娱乐性与可能性表达。不得把结果包装成临床诊断、真实经历读取、忠诚度判断或确定的未来预言。

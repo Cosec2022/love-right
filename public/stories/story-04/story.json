@@ -1,0 +1,2473 @@
+{
+  "schemaVersion": 2,
+  "id": "story-04",
+  "slug": "name-on-cup",
+  "status": "published",
+  "locale": "zh-CN",
+  "metadata": {
+    "series": "LOVE RIGHT · STORY 04",
+    "title": "她把你的名字写在杯套背面",
+    "subtitle": "在共享工作室认识的她聪明、独立，也从不让你猜太久。她要去很远的地方时，你会怎样理解喜欢、支持和承诺？",
+    "description": "男性视角故事。一个松弛、聪明、尊重边界的女主角，与你经历靠近、吃醋、失败和异地选择。",
+    "estimatedMinutes": 10,
+    "coverTheme": "coffee-film",
+    "audience": "male",
+    "tags": [
+      "男性视角",
+      "独立女主",
+      "都市相遇",
+      "异地选择"
+    ],
+    "disclaimer": "娱乐性叙事情境投射，不是心理诊断、事实识别或未来预言。"
+  },
+  "space": {
+    "version": 2,
+    "axes": [
+      {
+        "id": "approach",
+        "label": "靠近主动",
+        "low": "保护性退后",
+        "high": "主动靠近"
+      },
+      {
+        "id": "trust",
+        "label": "初始信任",
+        "low": "先验证",
+        "high": "先相信"
+      },
+      {
+        "id": "certainty",
+        "label": "关系清晰",
+        "low": "容忍模糊",
+        "high": "需要说清"
+      },
+      {
+        "id": "abandonment",
+        "label": "失去敏感",
+        "low": "不易被牵动",
+        "high": "容易担心失去"
+      },
+      {
+        "id": "idealization",
+        "label": "浪漫投射",
+        "low": "现实验证",
+        "high": "赋予意义"
+      },
+      {
+        "id": "novelty",
+        "label": "未知吸引",
+        "low": "熟悉稳定",
+        "high": "新鲜刺激"
+      },
+      {
+        "id": "discernment",
+        "label": "行动判断",
+        "low": "凭感觉",
+        "high": "看行动验证"
+      },
+      {
+        "id": "jealousy",
+        "label": "竞争警觉",
+        "low": "不易比较",
+        "high": "对第三人敏感"
+      },
+      {
+        "id": "expression",
+        "label": "情绪表达",
+        "low": "收住不说",
+        "high": "直接表达"
+      },
+      {
+        "id": "conflict",
+        "label": "冲突面对",
+        "low": "回避冷却",
+        "high": "当场处理"
+      },
+      {
+        "id": "repair",
+        "label": "修复意愿",
+        "low": "切断止损",
+        "high": "解释修复"
+      },
+      {
+        "id": "reassurance",
+        "label": "回应需要",
+        "low": "内在消化",
+        "high": "需要安抚"
+      },
+      {
+        "id": "autonomy",
+        "label": "自我边界",
+        "low": "关系融合",
+        "high": "保持独立"
+      },
+      {
+        "id": "commitment",
+        "label": "长期投入",
+        "low": "重视当下",
+        "high": "面向长期"
+      },
+      {
+        "id": "care",
+        "label": "照顾倾向",
+        "low": "接受照顾",
+        "high": "照顾别人"
+      },
+      {
+        "id": "validation",
+        "label": "被选择需求",
+        "low": "内在自足",
+        "high": "需要明确选择"
+      }
+    ],
+    "contexts": [
+      {
+        "id": "approach",
+        "label": "初次靠近"
+      },
+      {
+        "id": "ambiguity",
+        "label": "暧昧与不确定"
+      },
+      {
+        "id": "intimacy",
+        "label": "亲密与暴露"
+      },
+      {
+        "id": "jealousy",
+        "label": "第三人与比较"
+      },
+      {
+        "id": "rupture",
+        "label": "失约与冲突"
+      },
+      {
+        "id": "commitment",
+        "label": "现实与长期"
+      }
+    ],
+    "config": {
+      "priorWeight": 0.75,
+      "display": {
+        "center": 50,
+        "spread": 42,
+        "min": 8,
+        "max": 92
+      }
+    }
+  },
+  "traits": [
+    {
+      "id": "approach",
+      "label": "靠近主动"
+    },
+    {
+      "id": "trust",
+      "label": "初始信任"
+    },
+    {
+      "id": "certainty",
+      "label": "关系清晰"
+    },
+    {
+      "id": "abandonment",
+      "label": "失去敏感"
+    },
+    {
+      "id": "idealization",
+      "label": "浪漫投射"
+    },
+    {
+      "id": "novelty",
+      "label": "未知吸引"
+    },
+    {
+      "id": "discernment",
+      "label": "行动判断"
+    },
+    {
+      "id": "jealousy",
+      "label": "竞争警觉"
+    },
+    {
+      "id": "expression",
+      "label": "情绪表达"
+    },
+    {
+      "id": "conflict",
+      "label": "冲突面对"
+    },
+    {
+      "id": "repair",
+      "label": "修复意愿"
+    },
+    {
+      "id": "reassurance",
+      "label": "回应需要"
+    },
+    {
+      "id": "autonomy",
+      "label": "自我边界"
+    },
+    {
+      "id": "commitment",
+      "label": "长期投入"
+    },
+    {
+      "id": "care",
+      "label": "照顾倾向"
+    },
+    {
+      "id": "validation",
+      "label": "被选择需求"
+    }
+  ],
+  "scoreConfig": {
+    "center": 50,
+    "spread": 42,
+    "min": 8,
+    "max": 92
+  },
+  "initialScene": "s01",
+  "scenes": [
+    {
+      "id": "s01",
+      "slot": 1,
+      "chapter": "01｜杯套背面的名字",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你在共享工作室拿错了一杯咖啡。杯套背面写着“许言”，旁边还有一行小字：少冰，别空腹。"
+        },
+        {
+          "type": "paragraph",
+          "text": "一个女生走过来，没有生气，只看了看你手里的杯子：“既然已经喝了，你至少得告诉我，你那杯是什么。”"
+        }
+      ],
+      "prompt": "你会怎样回应？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "道歉，再买一杯给她",
+          "vector": {
+            "approach": 0.48,
+            "care": 0.28,
+            "trust": 0.22,
+            "repair": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s02"
+        },
+        {
+          "id": "b",
+          "text": "笑着说可以交换，但她可能会后悔",
+          "vector": {
+            "novelty": 0.45,
+            "expression": 0.5,
+            "approach": 0.42
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s02"
+        },
+        {
+          "id": "c",
+          "text": "先确认她有没有过敏或不喝的东西",
+          "vector": {
+            "care": 0.52,
+            "discernment": 0.35,
+            "trust": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s02"
+        },
+        {
+          "id": "d",
+          "text": "把咖啡还她，保持礼貌距离",
+          "vector": {
+            "approach": -0.48,
+            "autonomy": 0.58,
+            "trust": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s02"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "slot": 2,
+      "chapter": "02｜她没有故意显得特别",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "她叫许言，是来这里剪一部纪录片的。你们偶尔在深夜碰见。"
+        },
+        {
+          "type": "paragraph",
+          "text": "她不会每次都来聊天，但会在你卡住时把耳机摘下一边：“需要一个完全不懂你行业的人听听吗？”"
+        }
+      ],
+      "prompt": "你对这种相处的感受是？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "轻松，不需要持续表现自己",
+          "vector": {
+            "trust": 0.52,
+            "autonomy": 0.32,
+            "approach": 0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s03"
+        },
+        {
+          "id": "b",
+          "text": "想知道她是不是只对我这样",
+          "vector": {
+            "validation": 0.35,
+            "reassurance": 0.28,
+            "approach": 0.32
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s03"
+        },
+        {
+          "id": "c",
+          "text": "会主动问她的片子做到哪里了",
+          "vector": {
+            "approach": 0.55,
+            "care": 0.35,
+            "expression": 0.25
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s03"
+        },
+        {
+          "id": "d",
+          "text": "把它当普通同事式友好",
+          "vector": {
+            "idealization": -0.45,
+            "discernment": 0.52,
+            "approach": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s03"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "slot": 3,
+      "chapter": "03｜你更容易被她哪一面吸引",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "一次停电，工作室里的人都在抱怨。许言用备用电源先保存所有人的文件，再坐到窗边等。"
+        },
+        {
+          "type": "paragraph",
+          "text": "她没有说自己多冷静，只把位置让给一个快没电的实习生。"
+        }
+      ],
+      "prompt": "你最先把她和其他人区分开的，是哪一点？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "稳定有能力，遇事不乱",
+          "vector": {
+            "trust": 0.52,
+            "discernment": 0.4,
+            "commitment": 0.25
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s04",
+          "setFlags": {
+            "appeal": "steady"
+          }
+        },
+        {
+          "id": "b",
+          "text": "聪明有趣，能让平淡的时间变轻",
+          "vector": {
+            "novelty": 0.5,
+            "idealization": 0.32,
+            "approach": 0.32
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s04",
+          "setFlags": {
+            "appeal": "witty"
+          }
+        },
+        {
+          "id": "c",
+          "text": "温柔细致，但不会过度照顾",
+          "vector": {
+            "care": 0.5,
+            "autonomy": 0.4,
+            "trust": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s04",
+          "setFlags": {
+            "appeal": "gentle"
+          }
+        },
+        {
+          "id": "d",
+          "text": "坦率直接，不靠猜测维持吸引",
+          "vector": {
+            "expression": 0.62,
+            "certainty": 0.52,
+            "approach": 0.38
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s04",
+          "setFlags": {
+            "appeal": "direct"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "slot": 4,
+      "chapter": "04｜她问的是你真正想做什么",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你在准备一个不太有把握的个人项目。别人都问能不能赚钱，许言问：“如果没有人评价，你还想不想做？”"
+        },
+        {
+          "type": "paragraph",
+          "text": "她没有鼓励你辞职追梦，只认真听完了你的答案。"
+        }
+      ],
+      "prompt": "你会怎样回应？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "告诉她这件事对自己真正意味着什么",
+          "vector": {
+            "trust": 0.6,
+            "expression": 0.48,
+            "approach": 0.32
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s05"
+        },
+        {
+          "id": "b",
+          "text": "只说还在考虑，不想暴露没把握的一面",
+          "vector": {
+            "trust": -0.28,
+            "expression": -0.42,
+            "autonomy": 0.4,
+            "discernment": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s05"
+        },
+        {
+          "id": "c",
+          "text": "反问她为什么会拍纪录片",
+          "vector": {
+            "approach": 0.42,
+            "expression": 0.4,
+            "novelty": 0.25
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s05"
+        },
+        {
+          "id": "d",
+          "text": "觉得问题很好，但不把理解等同于喜欢",
+          "vector": {
+            "discernment": 0.68,
+            "idealization": -0.25,
+            "trust": 0.15
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s05"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "slot": 5,
+      "chapter": "05｜她在杯套背面留下地址",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "周五晚上，你的杯子旁多了一张新杯套。背面写着一个旧电影院的地址和一句："
+        },
+        {
+          "type": "quote",
+          "text": "“那边在放你上次提到的片。一个人也值得去。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "没有署名，但你知道是她。"
+        }
+      ],
+      "prompt": "你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "问她要不要一起去",
+          "vector": {
+            "approach": 0.7,
+            "expression": 0.55,
+            "novelty": 0.42
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "steady"
+                },
+                "to": "s06_steady"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "witty"
+                },
+                "to": "s06_witty"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "gentle"
+                },
+                "to": "s06_gentle"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "direct"
+                },
+                "to": "s06_direct"
+              }
+            ],
+            "default": "s06_steady"
+          }
+        },
+        {
+          "id": "b",
+          "text": "自己去，看她会不会出现",
+          "vector": {
+            "novelty": 0.45,
+            "discernment": 0.42,
+            "approach": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "steady"
+                },
+                "to": "s06_steady"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "witty"
+                },
+                "to": "s06_witty"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "gentle"
+                },
+                "to": "s06_gentle"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "direct"
+                },
+                "to": "s06_direct"
+              }
+            ],
+            "default": "s06_steady"
+          }
+        },
+        {
+          "id": "c",
+          "text": "直接问这算不算邀请",
+          "vector": {
+            "certainty": 0.68,
+            "expression": 0.58,
+            "approach": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "steady"
+                },
+                "to": "s06_steady"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "witty"
+                },
+                "to": "s06_witty"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "gentle"
+                },
+                "to": "s06_gentle"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "direct"
+                },
+                "to": "s06_direct"
+              }
+            ],
+            "default": "s06_steady"
+          }
+        },
+        {
+          "id": "d",
+          "text": "不去，觉得这种暗示太模糊",
+          "vector": {
+            "certainty": 0.55,
+            "approach": -0.58,
+            "discernment": 0.5,
+            "autonomy": 0.48
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "steady"
+                },
+                "to": "s06_steady"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "witty"
+                },
+                "to": "s06_witty"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "gentle"
+                },
+                "to": "s06_gentle"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "direct"
+                },
+                "to": "s06_direct"
+              }
+            ],
+            "default": "s06_steady"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s06_steady",
+      "slot": 6,
+      "chapter": "06｜她把选择留给你",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你问她是否一起。许言回复：“我会去，但不是等你赴约。你来，我们就一起看；你不来，我也看自己的。”没有压力，也没有撤回兴趣。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你最终到了。她已经坐在后排，旁边的位置没有放包，却也没有招手催你。"
+        }
+      ],
+      "prompt": "你会怎样坐下？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "直接坐到她旁边",
+          "vector": {
+            "approach": 0.62,
+            "trust": 0.42,
+            "idealization": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        },
+        {
+          "id": "b",
+          "text": "先问这个位置是不是留给我的",
+          "vector": {
+            "certainty": 0.52,
+            "expression": 0.4,
+            "validation": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        },
+        {
+          "id": "c",
+          "text": "坐下后开玩笑说“偶遇成功”",
+          "vector": {
+            "novelty": 0.45,
+            "expression": 0.55,
+            "approach": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        },
+        {
+          "id": "d",
+          "text": "隔一个位置，保持舒服距离",
+          "vector": {
+            "autonomy": 0.58,
+            "approach": -0.18,
+            "discernment": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        }
+      ]
+    },
+    {
+      "id": "s06_witty",
+      "slot": 6,
+      "chapter": "06｜她不动声色地把暧昧变得好笑",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "许言回复：“严格来说，这是一次有条件的偶遇。条件是你知道地点，我也知道。”你看着那句话笑了很久。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你最终到了。她已经坐在后排，旁边的位置没有放包，却也没有招手催你。"
+        }
+      ],
+      "prompt": "你会怎样坐下？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "直接坐到她旁边",
+          "vector": {
+            "approach": 0.62,
+            "trust": 0.42,
+            "idealization": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        },
+        {
+          "id": "b",
+          "text": "先问这个位置是不是留给我的",
+          "vector": {
+            "certainty": 0.52,
+            "expression": 0.4,
+            "validation": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        },
+        {
+          "id": "c",
+          "text": "坐下后开玩笑说“偶遇成功”",
+          "vector": {
+            "novelty": 0.45,
+            "expression": 0.55,
+            "approach": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        },
+        {
+          "id": "d",
+          "text": "隔一个位置，保持舒服距离",
+          "vector": {
+            "autonomy": 0.58,
+            "approach": -0.18,
+            "discernment": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        }
+      ]
+    },
+    {
+      "id": "s06_gentle",
+      "slot": 6,
+      "chapter": "06｜她关心你，却不替你安排",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "许言说：“你这周看起来很累。不来也不用解释。那部片下个月还有一场。”她给了邀请，也给了完整的拒绝空间。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你最终到了。她已经坐在后排，旁边的位置没有放包，却也没有招手催你。"
+        }
+      ],
+      "prompt": "你会怎样坐下？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "直接坐到她旁边",
+          "vector": {
+            "approach": 0.62,
+            "trust": 0.42,
+            "idealization": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        },
+        {
+          "id": "b",
+          "text": "先问这个位置是不是留给我的",
+          "vector": {
+            "certainty": 0.52,
+            "expression": 0.4,
+            "validation": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        },
+        {
+          "id": "c",
+          "text": "坐下后开玩笑说“偶遇成功”",
+          "vector": {
+            "novelty": 0.45,
+            "expression": 0.55,
+            "approach": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        },
+        {
+          "id": "d",
+          "text": "隔一个位置，保持舒服距离",
+          "vector": {
+            "autonomy": 0.58,
+            "approach": -0.18,
+            "discernment": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        }
+      ]
+    },
+    {
+      "id": "s06_direct",
+      "slot": 6,
+      "chapter": "06｜她没有让你一直猜",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "许言回复：“是邀请。我想和你一起看，但不希望你因为不好意思拒绝才来。”一句话把心意和边界都说清楚。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你最终到了。她已经坐在后排，旁边的位置没有放包，却也没有招手催你。"
+        }
+      ],
+      "prompt": "你会怎样坐下？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "直接坐到她旁边",
+          "vector": {
+            "approach": 0.62,
+            "trust": 0.42,
+            "idealization": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        },
+        {
+          "id": "b",
+          "text": "先问这个位置是不是留给我的",
+          "vector": {
+            "certainty": 0.52,
+            "expression": 0.4,
+            "validation": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        },
+        {
+          "id": "c",
+          "text": "坐下后开玩笑说“偶遇成功”",
+          "vector": {
+            "novelty": 0.45,
+            "expression": 0.55,
+            "approach": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        },
+        {
+          "id": "d",
+          "text": "隔一个位置，保持舒服距离",
+          "vector": {
+            "autonomy": 0.58,
+            "approach": -0.18,
+            "discernment": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "slot": 7,
+      "chapter": "07｜电影结束后，她没有问你喜不喜欢她",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "电影散场，许言问你最不喜欢哪个镜头。你说完，她认真反驳了两分钟。"
+        },
+        {
+          "type": "paragraph",
+          "text": "她不需要你们观点一致，也没有把“聊得来”表演成灵魂伴侣。"
+        }
+      ],
+      "prompt": "这会让你？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "更欣赏她有自己的判断",
+          "vector": {
+            "autonomy": 0.52,
+            "trust": 0.42,
+            "discernment": 0.35,
+            "idealization": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s08"
+        },
+        {
+          "id": "b",
+          "text": "希望她偶尔更明显地表达喜欢",
+          "vector": {
+            "validation": 0.45,
+            "reassurance": 0.35,
+            "certainty": 0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s08"
+        },
+        {
+          "id": "c",
+          "text": "觉得争论本身很有吸引力",
+          "vector": {
+            "novelty": 0.48,
+            "expression": 0.45,
+            "idealization": 0.32
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s08"
+        },
+        {
+          "id": "d",
+          "text": "担心两个人想法不同会很累",
+          "vector": {
+            "commitment": -0.28,
+            "trust": -0.18,
+            "certainty": 0.22
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s08"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "slot": 8,
+      "chapter": "08｜那个和她很熟的男人",
+      "context": "jealousy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "下周，一个男人来工作室接她。两个人显然认识很久，讲话不用解释背景。"
+        },
+        {
+          "type": "paragraph",
+          "text": "许言介绍那是她的制片搭档。她没有观察你的表情，也没有刻意拉开距离表演清白。"
+        }
+      ],
+      "prompt": "你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "之后自然问他们合作多久了",
+          "vector": {
+            "expression": 0.48,
+            "certainty": 0.38,
+            "jealousy": 0.22,
+            "discernment": 0.3
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s09"
+        },
+        {
+          "id": "b",
+          "text": "先看她平时的边界，不急着下结论",
+          "vector": {
+            "discernment": 0.72,
+            "jealousy": 0.25,
+            "trust": 0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s09"
+        },
+        {
+          "id": "c",
+          "text": "明显减少主动，避免自己太投入",
+          "vector": {
+            "approach": -0.45,
+            "abandonment": 0.38,
+            "jealousy": 0.52,
+            "expression": -0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s09"
+        },
+        {
+          "id": "d",
+          "text": "认为长期搭档熟悉很正常",
+          "vector": {
+            "trust": 0.58,
+            "jealousy": -0.55,
+            "reassurance": -0.25
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s09"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "slot": 9,
+      "chapter": "09｜她看出了你的距离",
+      "context": "jealousy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你两天没有去公共区。第三天，许言敲了敲你的桌面。"
+        },
+        {
+          "type": "paragraph",
+          "text": "“你可以不解释，但如果是我做了什么，我希望你给我一次知道的机会。”她没有问你是不是吃醋。"
+        }
+      ],
+      "prompt": "你会怎样回应？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "坦白自己有一点在意",
+          "vector": {
+            "expression": 0.7,
+            "trust": 0.35,
+            "repair": 0.4,
+            "jealousy": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s10"
+        },
+        {
+          "id": "b",
+          "text": "说只是忙，不想显得没有分寸",
+          "vector": {
+            "expression": -0.5,
+            "autonomy": 0.42,
+            "abandonment": 0.25
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s10"
+        },
+        {
+          "id": "c",
+          "text": "问她对你们关系怎么理解",
+          "vector": {
+            "certainty": 0.7,
+            "expression": 0.55,
+            "validation": 0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s10"
+        },
+        {
+          "id": "d",
+          "text": "说搭档的事与自己无关",
+          "vector": {
+            "autonomy": 0.52,
+            "jealousy": -0.1,
+            "approach": -0.22,
+            "trust": -0.1
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s10"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "slot": 10,
+      "chapter": "10｜她没有用暧昧享受你的投入",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "许言说，她和搭档没有恋爱关系。然后补了一句："
+        },
+        {
+          "type": "quote",
+          "text": "“我对你有好感。但如果你只想当朋友，我也会调整自己的方式，不让你承担我的期待。”"
+        }
+      ],
+      "prompt": "你最真实的反应是？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "如释重负，也愿意承认自己的好感",
+          "vector": {
+            "approach": 0.7,
+            "expression": 0.62,
+            "trust": 0.48,
+            "certainty": 0.45
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s11"
+        },
+        {
+          "id": "b",
+          "text": "欣赏她明确，但还需要时间",
+          "vector": {
+            "discernment": 0.58,
+            "autonomy": 0.45,
+            "certainty": 0.35,
+            "approach": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s11"
+        },
+        {
+          "id": "c",
+          "text": "问她希望怎样开始",
+          "vector": {
+            "certainty": 0.62,
+            "commitment": 0.28,
+            "expression": 0.45
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s11"
+        },
+        {
+          "id": "d",
+          "text": "觉得明确以后反而有压力",
+          "vector": {
+            "approach": -0.35,
+            "autonomy": 0.52,
+            "reassurance": 0.25,
+            "commitment": -0.25
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s11"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "slot": 11,
+      "chapter": "11｜第一次约会不是她安排的",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "许言把下一次见面的决定交给你。她说：“我已经表达过一次，现在轮到你决定要不要往前。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "这不是考验，而是不愿让关系只由一个人推动。"
+        }
+      ],
+      "prompt": "你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "认真计划一次她会喜欢的约会",
+          "vector": {
+            "approach": 0.68,
+            "care": 0.4,
+            "commitment": 0.35,
+            "expression": 0.25
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "steady"
+                },
+                "to": "s12_steady"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "witty"
+                },
+                "to": "s12_witty"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "gentle"
+                },
+                "to": "s12_gentle"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "direct"
+                },
+                "to": "s12_direct"
+              }
+            ],
+            "default": "s12_steady"
+          }
+        },
+        {
+          "id": "b",
+          "text": "约她简单吃饭，不把第一次弄得太重",
+          "vector": {
+            "approach": 0.42,
+            "autonomy": 0.35,
+            "idealization": -0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "steady"
+                },
+                "to": "s12_steady"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "witty"
+                },
+                "to": "s12_witty"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "gentle"
+                },
+                "to": "s12_gentle"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "direct"
+                },
+                "to": "s12_direct"
+              }
+            ],
+            "default": "s12_steady"
+          }
+        },
+        {
+          "id": "c",
+          "text": "先问她最近真正想做什么",
+          "vector": {
+            "care": 0.42,
+            "expression": 0.35,
+            "trust": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "steady"
+                },
+                "to": "s12_steady"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "witty"
+                },
+                "to": "s12_witty"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "gentle"
+                },
+                "to": "s12_gentle"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "direct"
+                },
+                "to": "s12_direct"
+              }
+            ],
+            "default": "s12_steady"
+          }
+        },
+        {
+          "id": "d",
+          "text": "继续等她主动，确认她的兴趣是否稳定",
+          "vector": {
+            "approach": -0.35,
+            "discernment": 0.58,
+            "validation": 0.35,
+            "reassurance": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "steady"
+                },
+                "to": "s12_steady"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "witty"
+                },
+                "to": "s12_witty"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "gentle"
+                },
+                "to": "s12_gentle"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "direct"
+                },
+                "to": "s12_direct"
+              }
+            ],
+            "default": "s12_steady"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12_steady",
+      "slot": 12,
+      "chapter": "12｜她没有因为你的笨拙降低耐心",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你安排的餐厅临时停业。许言看了一眼地图：“旁边有家面馆。计划失效不代表约会失效。”她没有替你圆场，也没有让你一直道歉。"
+        }
+      ],
+      "prompt": "这会让你怎样？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "明显放松，更愿意展现真实自己",
+          "vector": {
+            "trust": 0.65,
+            "expression": 0.4,
+            "approach": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        },
+        {
+          "id": "b",
+          "text": "更想照顾她的感受，把约会补好",
+          "vector": {
+            "care": 0.58,
+            "repair": 0.4,
+            "commitment": 0.25
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        },
+        {
+          "id": "c",
+          "text": "直接告诉她，我其实很紧张",
+          "vector": {
+            "expression": 0.72,
+            "trust": 0.48,
+            "reassurance": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        },
+        {
+          "id": "d",
+          "text": "仍然会反复复盘自己的表现",
+          "vector": {
+            "abandonment": 0.32,
+            "discernment": 0.48,
+            "reassurance": 0.35,
+            "trust": -0.1
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        }
+      ]
+    },
+    {
+      "id": "s12_witty",
+      "slot": 12,
+      "chapter": "12｜她把意外变成了你们的笑点",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "餐厅停业时，许言说：“很好，第一次约会已经有了一个可以在以后反复嘲笑的开场。”她笑得自然，失误没有变成你的考试。"
+        }
+      ],
+      "prompt": "这会让你怎样？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "明显放松，更愿意展现真实自己",
+          "vector": {
+            "trust": 0.65,
+            "expression": 0.4,
+            "approach": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        },
+        {
+          "id": "b",
+          "text": "更想照顾她的感受，把约会补好",
+          "vector": {
+            "care": 0.58,
+            "repair": 0.4,
+            "commitment": 0.25
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        },
+        {
+          "id": "c",
+          "text": "直接告诉她，我其实很紧张",
+          "vector": {
+            "expression": 0.72,
+            "trust": 0.48,
+            "reassurance": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        },
+        {
+          "id": "d",
+          "text": "仍然会反复复盘自己的表现",
+          "vector": {
+            "abandonment": 0.32,
+            "discernment": 0.48,
+            "reassurance": 0.35,
+            "trust": -0.1
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        }
+      ]
+    },
+    {
+      "id": "s12_gentle",
+      "slot": 12,
+      "chapter": "12｜她先看见你在紧张",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "餐厅停业，你明显有点懊恼。许言说：“我答应的是和你吃饭，不是验收你的安排。”她没有否认你的用心，也不让用心变成压力。"
+        }
+      ],
+      "prompt": "这会让你怎样？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "明显放松，更愿意展现真实自己",
+          "vector": {
+            "trust": 0.65,
+            "expression": 0.4,
+            "approach": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        },
+        {
+          "id": "b",
+          "text": "更想照顾她的感受，把约会补好",
+          "vector": {
+            "care": 0.58,
+            "repair": 0.4,
+            "commitment": 0.25
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        },
+        {
+          "id": "c",
+          "text": "直接告诉她，我其实很紧张",
+          "vector": {
+            "expression": 0.72,
+            "trust": 0.48,
+            "reassurance": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        },
+        {
+          "id": "d",
+          "text": "仍然会反复复盘自己的表现",
+          "vector": {
+            "abandonment": 0.32,
+            "discernment": 0.48,
+            "reassurance": 0.35,
+            "trust": -0.1
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        }
+      ]
+    },
+    {
+      "id": "s12_direct",
+      "slot": 12,
+      "chapter": "12｜她告诉你，喜欢不需要完美表现",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "餐厅停业后，许言说：“你不用靠一次完美约会证明自己。我愿意来，是因为想见你。”她表达得清楚，却没有把你的紧张当成可笑。"
+        }
+      ],
+      "prompt": "这会让你怎样？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "明显放松，更愿意展现真实自己",
+          "vector": {
+            "trust": 0.65,
+            "expression": 0.4,
+            "approach": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        },
+        {
+          "id": "b",
+          "text": "更想照顾她的感受，把约会补好",
+          "vector": {
+            "care": 0.58,
+            "repair": 0.4,
+            "commitment": 0.25
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        },
+        {
+          "id": "c",
+          "text": "直接告诉她，我其实很紧张",
+          "vector": {
+            "expression": 0.72,
+            "trust": 0.48,
+            "reassurance": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        },
+        {
+          "id": "d",
+          "text": "仍然会反复复盘自己的表现",
+          "vector": {
+            "abandonment": 0.32,
+            "discernment": 0.48,
+            "reassurance": 0.35,
+            "trust": -0.1
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "slot": 13,
+      "chapter": "13｜她得到去国外拍摄的机会",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "关系刚刚变得清楚，许言拿到一个半年海外拍摄项目。"
+        },
+        {
+          "type": "paragraph",
+          "text": "她说自己很想去，也不想用“如果你需要我留下”把决定推给你。"
+        }
+      ],
+      "prompt": "你会怎样回应？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "支持她去，再一起讨论关系安排",
+          "vector": {
+            "autonomy": 0.55,
+            "commitment": 0.55,
+            "trust": 0.48,
+            "certainty": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s14"
+        },
+        {
+          "id": "b",
+          "text": "希望她先明确，这段关系对她有多重要",
+          "vector": {
+            "validation": 0.58,
+            "reassurance": 0.45,
+            "certainty": 0.55
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s14"
+        },
+        {
+          "id": "c",
+          "text": "关系刚开始，不愿承担半年异地",
+          "vector": {
+            "commitment": -0.48,
+            "discernment": 0.48,
+            "autonomy": 0.5
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s14"
+        },
+        {
+          "id": "d",
+          "text": "先不定义，让半年后自然决定",
+          "vector": {
+            "certainty": -0.55,
+            "commitment": -0.2,
+            "autonomy": 0.35,
+            "trust": 0.25
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s14"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "slot": 14,
+      "chapter": "14｜她没有要求你证明支持",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "许言说：“支持我，不等于你必须接受所有安排。你可以诚实说这对你很难。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "她把独立和关系放在同一句话里，没有用任何一方压倒另一方。"
+        }
+      ],
+      "prompt": "你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "说出自己的担心，也愿意共同设计办法",
+          "vector": {
+            "expression": 0.68,
+            "repair": 0.52,
+            "commitment": 0.58,
+            "autonomy": 0.38
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s15"
+        },
+        {
+          "id": "b",
+          "text": "隐藏担心，避免成为她的负担",
+          "vector": {
+            "expression": -0.58,
+            "care": 0.35,
+            "abandonment": 0.28,
+            "autonomy": 0.22
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s15"
+        },
+        {
+          "id": "c",
+          "text": "要求一个具体联系和见面计划",
+          "vector": {
+            "certainty": 0.72,
+            "reassurance": 0.42,
+            "commitment": 0.48
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s15"
+        },
+        {
+          "id": "d",
+          "text": "认为真正喜欢就应该无条件支持",
+          "vector": {
+            "autonomy": -0.45,
+            "care": 0.45,
+            "discernment": -0.22,
+            "commitment": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s15"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "slot": 15,
+      "chapter": "15｜你的项目也到了关键处",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "她出发前，你的个人项目突然失败。你不想让她担心，连续几天只说“还好”。"
+        },
+        {
+          "type": "paragraph",
+          "text": "许言没有追问细节，只发来：“我可以听，也可以陪你不说。你选。”"
+        }
+      ],
+      "prompt": "你会怎样做？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "把失败和羞耻感都告诉她",
+          "vector": {
+            "trust": 0.7,
+            "expression": 0.65,
+            "reassurance": 0.28,
+            "approach": 0.3
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s16"
+        },
+        {
+          "id": "b",
+          "text": "只说事实，不谈情绪",
+          "vector": {
+            "expression": -0.2,
+            "discernment": 0.28,
+            "trust": 0.32,
+            "autonomy": 0.38
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s16"
+        },
+        {
+          "id": "c",
+          "text": "让她先专注出发，自己处理",
+          "vector": {
+            "autonomy": 0.58,
+            "care": 0.35,
+            "reassurance": -0.42,
+            "expression": -0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s16"
+        },
+        {
+          "id": "d",
+          "text": "因为状态不好而暂时疏远",
+          "vector": {
+            "approach": -0.52,
+            "abandonment": 0.35,
+            "trust": -0.25,
+            "repair": -0.22
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s16"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "slot": 16,
+      "chapter": "16｜她没有把安慰写成答案",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你说完以后，许言没有立刻保证“一切都会好”。"
+        },
+        {
+          "type": "paragraph",
+          "text": "她只问：“你现在需要我相信你会重新来，还是一起看看哪一步出了问题？”"
+        }
+      ],
+      "prompt": "哪一种更接近你的需要？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "先被相信，再慢慢处理问题",
+          "vector": {
+            "reassurance": 0.52,
+            "trust": 0.48,
+            "idealization": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "steady"
+                },
+                "to": "s17_steady"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "witty"
+                },
+                "to": "s17_witty"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "gentle"
+                },
+                "to": "s17_gentle"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "direct"
+                },
+                "to": "s17_direct"
+              }
+            ],
+            "default": "s17_steady"
+          }
+        },
+        {
+          "id": "b",
+          "text": "一起分析问题，行动让我安心",
+          "vector": {
+            "discernment": 0.62,
+            "repair": 0.48,
+            "trust": 0.38
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "steady"
+                },
+                "to": "s17_steady"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "witty"
+                },
+                "to": "s17_witty"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "gentle"
+                },
+                "to": "s17_gentle"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "direct"
+                },
+                "to": "s17_direct"
+              }
+            ],
+            "default": "s17_steady"
+          }
+        },
+        {
+          "id": "c",
+          "text": "只需要她在，不必解决",
+          "vector": {
+            "trust": 0.55,
+            "reassurance": 0.35,
+            "approach": 0.25
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "steady"
+                },
+                "to": "s17_steady"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "witty"
+                },
+                "to": "s17_witty"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "gentle"
+                },
+                "to": "s17_gentle"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "direct"
+                },
+                "to": "s17_direct"
+              }
+            ],
+            "default": "s17_steady"
+          }
+        },
+        {
+          "id": "d",
+          "text": "不希望她介入，自己恢复",
+          "vector": {
+            "autonomy": 0.68,
+            "reassurance": -0.48,
+            "trust": 0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "steady"
+                },
+                "to": "s17_steady"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "witty"
+                },
+                "to": "s17_witty"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "gentle"
+                },
+                "to": "s17_gentle"
+              },
+              {
+                "when": {
+                  "flag": "appeal",
+                  "equals": "direct"
+                },
+                "to": "s17_direct"
+              }
+            ],
+            "default": "s17_steady"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s17_steady",
+      "slot": 17,
+      "chapter": "17｜出发前的最后一个夜晚",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "她出发前，你们在工作室收拾设备。许言把一只备用硬盘放到你手边，目录、日期和恢复步骤都整理得清楚。"
+        },
+        {
+          "type": "paragraph",
+          "text": "“这不是替你做决定。”她说，“只是我相信你会继续，所以先把能留下的东西留好。”"
+        }
+      ],
+      "prompt": "你最想回应什么？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "告诉她，我会等她回来，也会继续自己的生活",
+          "vector": {
+            "commitment": 0.62,
+            "autonomy": 0.55,
+            "trust": 0.48,
+            "expression": 0.4
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        },
+        {
+          "id": "b",
+          "text": "问清楚你们是否正式在一起",
+          "vector": {
+            "certainty": 0.72,
+            "validation": 0.5,
+            "expression": 0.42
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        },
+        {
+          "id": "c",
+          "text": "说不做长期保证，但愿意认真联系",
+          "vector": {
+            "autonomy": 0.52,
+            "commitment": 0.22,
+            "certainty": -0.2,
+            "trust": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        },
+        {
+          "id": "d",
+          "text": "害怕异地消耗，想在出发前结束",
+          "vector": {
+            "approach": -0.55,
+            "commitment": -0.52,
+            "abandonment": 0.42,
+            "autonomy": 0.58
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        }
+      ]
+    },
+    {
+      "id": "s17_witty",
+      "slot": 17,
+      "chapter": "17｜出发前的最后一个夜晚",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "她出发前，你们在工作室收拾设备。许言把一只备用硬盘留给你。"
+        },
+        {
+          "type": "paragraph",
+          "text": "“里面没有情书，只有你项目的备份。”她看着你笑，“情书如果要写，我会单独写，不让你靠文件名猜。”"
+        }
+      ],
+      "prompt": "你最想回应什么？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "告诉她，我会等她回来，也会继续自己的生活",
+          "vector": {
+            "commitment": 0.62,
+            "autonomy": 0.55,
+            "trust": 0.48,
+            "expression": 0.4
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        },
+        {
+          "id": "b",
+          "text": "问清楚你们是否正式在一起",
+          "vector": {
+            "certainty": 0.72,
+            "validation": 0.5,
+            "expression": 0.42
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        },
+        {
+          "id": "c",
+          "text": "说不做长期保证，但愿意认真联系",
+          "vector": {
+            "autonomy": 0.52,
+            "commitment": 0.22,
+            "certainty": -0.2,
+            "trust": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        },
+        {
+          "id": "d",
+          "text": "害怕异地消耗，想在出发前结束",
+          "vector": {
+            "approach": -0.55,
+            "commitment": -0.52,
+            "abandonment": 0.42,
+            "autonomy": 0.58
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        }
+      ]
+    },
+    {
+      "id": "s17_gentle",
+      "slot": 17,
+      "chapter": "17｜出发前的最后一个夜晚",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "她出发前，你们在工作室收拾设备。许言把一只备用硬盘留给你，里面不仅有项目备份，还有一份她替你整理过、却没有擅自修改的素材清单。"
+        },
+        {
+          "type": "paragraph",
+          "text": "“你想用就用，不想看也没关系。”她的帮助停在你能够舒服接受的位置。"
+        }
+      ],
+      "prompt": "你最想回应什么？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "告诉她，我会等她回来，也会继续自己的生活",
+          "vector": {
+            "commitment": 0.62,
+            "autonomy": 0.55,
+            "trust": 0.48,
+            "expression": 0.4
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        },
+        {
+          "id": "b",
+          "text": "问清楚你们是否正式在一起",
+          "vector": {
+            "certainty": 0.72,
+            "validation": 0.5,
+            "expression": 0.42
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        },
+        {
+          "id": "c",
+          "text": "说不做长期保证，但愿意认真联系",
+          "vector": {
+            "autonomy": 0.52,
+            "commitment": 0.22,
+            "certainty": -0.2,
+            "trust": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        },
+        {
+          "id": "d",
+          "text": "害怕异地消耗，想在出发前结束",
+          "vector": {
+            "approach": -0.55,
+            "commitment": -0.52,
+            "abandonment": 0.42,
+            "autonomy": 0.58
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        }
+      ]
+    },
+    {
+      "id": "s17_direct",
+      "slot": 17,
+      "chapter": "17｜出发前的最后一个夜晚",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "她出发前，你们在工作室收拾设备。许言把备用硬盘递给你，随后没有用玩笑把真正的话藏过去。"
+        },
+        {
+          "type": "paragraph",
+          "text": "“项目我替你留了备份。至于我，我会认真联系你，也希望你认真回应。喜欢这件事，我不想让我们靠猜。”"
+        }
+      ],
+      "prompt": "你最想回应什么？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "告诉她，我会等她回来，也会继续自己的生活",
+          "vector": {
+            "commitment": 0.62,
+            "autonomy": 0.55,
+            "trust": 0.48,
+            "expression": 0.4
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        },
+        {
+          "id": "b",
+          "text": "问清楚你们是否正式在一起",
+          "vector": {
+            "certainty": 0.72,
+            "validation": 0.5,
+            "expression": 0.42
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        },
+        {
+          "id": "c",
+          "text": "说不做长期保证，但愿意认真联系",
+          "vector": {
+            "autonomy": 0.52,
+            "commitment": 0.22,
+            "certainty": -0.2,
+            "trust": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        },
+        {
+          "id": "d",
+          "text": "害怕异地消耗，想在出发前结束",
+          "vector": {
+            "approach": -0.55,
+            "commitment": -0.52,
+            "abandonment": 0.42,
+            "autonomy": 0.58
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "slot": 18,
+      "chapter": "18｜她把你的名字写在杯套背面",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "机场见面时，她递给你一杯咖啡。杯套背面这次写的是你的名字，下面还有一句："
+        },
+        {
+          "type": "quote",
+          "text": "“半年以后见。中间的日子，我们一起决定怎么过。”"
+        }
+      ],
+      "prompt": "你会怎样回答？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "“我们正式开始，也各自把生活过好。”",
+          "vector": {
+            "approach": 0.7,
+            "commitment": 0.72,
+            "autonomy": 0.5,
+            "trust": 0.58
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "$result",
+          "outcome": "together"
+        },
+        {
+          "id": "b",
+          "text": "“认真联系，等你回来再决定长期。”",
+          "vector": {
+            "commitment": 0.3,
+            "discernment": 0.58,
+            "autonomy": 0.45,
+            "approach": 0.3
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "$result",
+          "outcome": "continue"
+        },
+        {
+          "id": "c",
+          "text": "“先把联系频率和彼此期待说清楚。”",
+          "vector": {
+            "certainty": 0.8,
+            "expression": 0.55,
+            "commitment": 0.45,
+            "reassurance": 0.3
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "$result",
+          "outcome": "terms"
+        },
+        {
+          "id": "d",
+          "text": "“我喜欢你，但现在不适合开始。”",
+          "vector": {
+            "approach": -0.58,
+            "autonomy": 0.68,
+            "commitment": -0.48,
+            "discernment": 0.52
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "$result",
+          "outcome": "pause"
+        }
+      ]
+    }
+  ]
+}

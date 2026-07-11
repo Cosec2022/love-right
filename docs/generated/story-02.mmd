@@ -1,0 +1,173 @@
+flowchart TD
+  START([Start]) --> s01
+  s01["01｜会议室里，他没有替你解围"]
+  s01 -- "A" --> s02
+  s01 -- "B" --> s02
+  s01 -- "C" --> s02
+  s01 -- "D" --> s02
+  s02["02｜他记得的不是咖啡口味"]
+  s02 -- "A" --> s03
+  s02 -- "B" --> s03
+  s02 -- "C" --> s03
+  s02 -- "D" --> s03
+  s03["03｜你注意到他的哪一种魅力"]
+  s03 -- "A" --> s04
+  s03 -- "B" --> s04
+  s03 -- "C" --> s04
+  s03 -- "D" --> s04
+  s04["04｜便利店外的十分钟"]
+  s04 -- "A" --> s05
+  s04 -- "B" --> s05
+  s04 -- "C" --> s05
+  s04 -- "D" --> s05
+  s05["05｜周末的消息"]
+  s05 -- "A" --> s06_steady
+  s05 -- "A" --> s06_witty
+  s05 -- "A" --> s06_gentle
+  s05 -- "A" --> s06_direct
+  s05 -- "B" --> s06_steady
+  s05 -- "B" --> s06_witty
+  s05 -- "B" --> s06_gentle
+  s05 -- "B" --> s06_direct
+  s05 -- "C" --> s06_steady
+  s05 -- "C" --> s06_witty
+  s05 -- "C" --> s06_gentle
+  s05 -- "C" --> s06_direct
+  s05 -- "D" --> s06_steady
+  s05 -- "D" --> s06_witty
+  s05 -- "D" --> s06_gentle
+  s05 -- "D" --> s06_direct
+  s06_steady["06｜他没有追问"]
+  s06_steady -- "A" --> s07
+  s06_steady -- "B" --> s07
+  s06_steady -- "C" --> s07
+  s06_steady -- "D" --> s07
+  s06_witty["06｜他把退路写得很好笑"]
+  s06_witty -- "A" --> s07
+  s06_witty -- "B" --> s07
+  s06_witty -- "C" --> s07
+  s06_witty -- "D" --> s07
+  s06_gentle["06｜他没有把关心变成压力"]
+  s06_gentle -- "A" --> s07
+  s06_gentle -- "B" --> s07
+  s06_gentle -- "C" --> s07
+  s06_gentle -- "D" --> s07
+  s06_direct["06｜他把心思说到刚刚好"]
+  s06_direct -- "A" --> s07
+  s06_direct -- "B" --> s07
+  s06_direct -- "C" --> s07
+  s06_direct -- "D" --> s07
+  s07["07｜电梯停住的三分钟"]
+  s07 -- "A" --> s08
+  s07 -- "B" --> s08
+  s07 -- "C" --> s08
+  s07 -- "D" --> s08
+  s08["08｜他没有利用脆弱靠近"]
+  s08 -- "A" --> s09
+  s08 -- "B" --> s09
+  s08 -- "C" --> s09
+  s08 -- "D" --> s09
+  s09["09｜那个熟悉地叫他名字的人"]
+  s09 -- "A" --> s10
+  s09 -- "B" --> s10
+  s09 -- "C" --> s10
+  s09 -- "D" --> s10
+  s10["10｜他没有逼你承认吃醋"]
+  s10 -- "A" --> s11
+  s10 -- "B" --> s11
+  s10 -- "C" --> s11
+  s10 -- "D" --> s11
+  s11["11｜项目结束以后呢"]
+  s11 -- "A" --> s12_steady
+  s11 -- "A" --> s12_witty
+  s11 -- "A" --> s12_gentle
+  s11 -- "A" --> s12_direct
+  s11 -- "B" --> s12_steady
+  s11 -- "B" --> s12_witty
+  s11 -- "B" --> s12_gentle
+  s11 -- "B" --> s12_direct
+  s11 -- "C" --> s12_steady
+  s11 -- "C" --> s12_witty
+  s11 -- "C" --> s12_gentle
+  s11 -- "C" --> s12_direct
+  s11 -- "D" --> s12_steady
+  s11 -- "D" --> s12_witty
+  s11 -- "D" --> s12_gentle
+  s11 -- "D" --> s12_direct
+  s12_steady["12｜他的答案落在日历上"]
+  s12_steady -- "A" --> s13
+  s12_steady -- "B" --> s13
+  s12_steady -- "C" --> s13
+  s12_steady -- "D" --> s13
+  s12_witty["12｜他把认真藏在一句玩笑后面"]
+  s12_witty -- "A" --> s13
+  s12_witty -- "B" --> s13
+  s12_witty -- "C" --> s13
+  s12_witty -- "D" --> s13
+  s12_gentle["12｜他先替你把压力拿开"]
+  s12_gentle -- "A" --> s13
+  s12_gentle -- "B" --> s13
+  s12_gentle -- "C" --> s13
+  s12_gentle -- "D" --> s13
+  s12_direct["12｜他没有再用项目当借口"]
+  s12_direct -- "A" --> s13
+  s12_direct -- "B" --> s13
+  s12_direct -- "C" --> s13
+  s12_direct -- "D" --> s13
+  s13["13｜第一次真正的失约"]
+  s13 -- "A" --> s14
+  s13 -- "B" --> s14
+  s13 -- "C" --> s14
+  s13 -- "D" --> s14
+  s14["14｜解释不是免罪牌"]
+  s14 -- "A" --> s15
+  s14 -- "B" --> s15
+  s14 -- "C" --> s15
+  s14 -- "D" --> s15
+  s15["15｜他得到另一座城市的机会"]
+  s15 -- "A" --> s16
+  s15 -- "B" --> s16
+  s15 -- "C" --> s16
+  s15 -- "D" --> s16
+  s16["16｜他没有拿你当留下的理由"]
+  s16 -- "A" --> s17_steady
+  s16 -- "A" --> s17_witty
+  s16 -- "A" --> s17_gentle
+  s16 -- "A" --> s17_direct
+  s16 -- "B" --> s17_steady
+  s16 -- "B" --> s17_witty
+  s16 -- "B" --> s17_gentle
+  s16 -- "B" --> s17_direct
+  s16 -- "C" --> s17_steady
+  s16 -- "C" --> s17_witty
+  s16 -- "C" --> s17_gentle
+  s16 -- "C" --> s17_direct
+  s16 -- "D" --> s17_steady
+  s16 -- "D" --> s17_witty
+  s16 -- "D" --> s17_gentle
+  s16 -- "D" --> s17_direct
+  s17_steady["17｜最后一次并肩汇报"]
+  s17_steady -- "A" --> s18
+  s17_steady -- "B" --> s18
+  s17_steady -- "C" --> s18
+  s17_steady -- "D" --> s18
+  s17_witty["17｜最后一次并肩汇报"]
+  s17_witty -- "A" --> s18
+  s17_witty -- "B" --> s18
+  s17_witty -- "C" --> s18
+  s17_witty -- "D" --> s18
+  s17_gentle["17｜最后一次并肩汇报"]
+  s17_gentle -- "A" --> s18
+  s17_gentle -- "B" --> s18
+  s17_gentle -- "C" --> s18
+  s17_gentle -- "D" --> s18
+  s17_direct["17｜最后一次并肩汇报"]
+  s17_direct -- "A" --> s18
+  s17_direct -- "B" --> s18
+  s17_direct -- "C" --> s18
+  s17_direct -- "D" --> s18
+  s18["18｜最后一班地铁之前"]
+  s18 -- "A" --> RESULT([Result])
+  s18 -- "B" --> RESULT([Result])
+  s18 -- "C" --> RESULT([Result])
+  s18 -- "D" --> RESULT([Result])

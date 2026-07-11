@@ -1,0 +1,97 @@
+{
+  "catalog": {
+    "count": 4,
+    "titles": [
+      "那年夏天，风替他说了喜欢",
+      "最后一班地铁之前",
+      "婚礼散场以后",
+      "她把你的名字写在杯套背面"
+    ],
+    "overflow": 0
+  },
+  "stories": [
+    {
+      "title": "那年夏天，风替他说了喜欢",
+      "answers": 18,
+      "result": "反差拉扯型",
+      "meters": 8,
+      "traits": 16,
+      "evidence": 4,
+      "history": 2,
+      "future": 3,
+      "overflow": 0,
+      "backTested": true
+    },
+    {
+      "title": "最后一班地铁之前",
+      "answers": 18,
+      "result": "温柔修复型",
+      "meters": 8,
+      "traits": 16,
+      "evidence": 4,
+      "history": 2,
+      "future": 3,
+      "overflow": 0,
+      "backTested": false
+    },
+    {
+      "title": "婚礼散场以后",
+      "answers": 18,
+      "result": "偏爱确认型 · 带一点清醒慢热型",
+      "meters": 8,
+      "traits": 16,
+      "evidence": 4,
+      "history": 2,
+      "future": 3,
+      "overflow": 0,
+      "backTested": false
+    },
+    {
+      "title": "她把你的名字写在杯套背面",
+      "answers": 18,
+      "result": "浪漫共振型",
+      "meters": 8,
+      "traits": 16,
+      "evidence": 4,
+      "history": 2,
+      "future": 3,
+      "overflow": 0,
+      "backTested": false
+    }
+  ],
+  "errors": [],
+  "appealCallbacks": {
+    "steady": {
+      "slots": [
+        6,
+        12,
+        17
+      ],
+      "verified": true
+    },
+    "witty": {
+      "slots": [
+        6,
+        12,
+        17
+      ],
+      "verified": true
+    },
+    "gentle": {
+      "slots": [
+        6,
+        12,
+        17
+      ],
+      "verified": true
+    },
+    "direct": {
+      "slots": [
+        6,
+        12,
+        17
+      ],
+      "verified": true
+    }
+  }
+}

@@ -1,145 +1,107 @@
-# Love Right 引擎架构
+# Love Right Engine Architecture
 
 ## 1. 内容与运行时分离
 
-每篇故事由两个内容包组成：
+每篇故事由两个独立内容包组成：
 
 ```text
-story.json    剧情、分支、选择、状态与评分影响
-results.json  派生指标、人格原型与动态结果规则
+story.json    场景、分支、状态、16维答案向量
+results.json  指标、结果原型、动态报告规则
 ```
 
-前端不包含任何 Story 01 专用逻辑。新增故事时，运行时、样式和评分代码都不需要复制。
+前端不包含任何 Story 01、02、03 或04的专用业务逻辑。故事库通过 `catalog.json` 加载内容包。
 
 ## 2. Story Engine
 
-`StoryEngine` 负责：
+负责：
 
-- 读取当前场景
-- 接受一个选择
-- 累加底层维度原始分
-- 写入或撤销剧情标记
-- 解析直接跳转或条件跳转
-- 保存完整选择记录
-- 返回上一幕并恢复当时的所有状态
-- 将进度保存到 `localStorage`
+- 场景图与条件跳转
+- flags 与人物路线记忆
+- 18个 assessment slot
+- 多人物、多结局与拒绝路线
+- 返回上一幕时完整回滚答案、flags、向量和当前位置
+- `localStorage` 本机续玩
+- 记录每次选择的 vector、context、intensity、confidence 和 cross
 
-状态结构：
+## 3. Score Engine
 
-```json
-{
-  "currentSceneId": "s03_new_lead",
-  "answers": [],
-  "rawTraits": {},
-  "flags": {"route": "newLead"},
-  "visited": [],
-  "outcome": null,
-  "complete": false,
-  "history": []
-}
-```
-
-## 3. 场景图
-
-每个选择可以：
-
-```json
-{
-  "effects": {"spark": 2, "discernment": -1},
-  "setFlags": {"route": "newLead"},
-  "outcome": "clarify",
-  "next": "s04_message"
-}
-```
-
-也可以使用条件跳转：
-
-```json
-{
-  "cases": [
-    {"when": {"flag": "route", "equals": "newLead"}, "to": "s14_new_lead"}
-  ],
-  "default": "s14_original"
-}
-```
-
-终点固定写成：
-
-```json
-"next": "$result"
-```
-
-## 4. Assessment Slot
-
-同一剧情位置可能存在多个分支版本，但它们使用相同的 `slot`。例如：
+Score Engine 将具名向量编译成内部空间数组：
 
 ```text
-slot 03
-├── 原人物共伞
-├── 尊重边界后的两把伞
-└── 新人物旧书店借伞
+answerMatrix: Float64Array[18][16]
+contextProfiles: 6 × 16
+interaction: 16 × 16
+trajectory: 18 × 16
 ```
 
-评分归一化按 slot 计算理论最大影响，因此不同路线仍然可以比较，不会因为某条路线多了一幕就天然得分更高。
+输出包括：
 
-## 5. Score Engine
+- `profile`：16维最终位置
+- `contextProfiles`：不同情境下的位置
+- `variance` / `consistency`：是否反复摇摆
+- `trend`：后半段相对前半段的变化
+- `interaction`：维度共同出现关系
+- `traits`：映射到8—92的页面分数
 
-底层分数：
+## 4. 隐含魅力偏好
 
-```text
-标准分 = center + spread × 原始分 / 该维度理论最大绝对值
-```
-
-默认输出限制在 `8—92`，避免制造绝对的 0 或 100。
-
-派生指标由多个维度加权平均，也支持反向维度：
+每篇故事可以在自然情境中记录：
 
 ```json
-{
-  "label": "心动速度",
-  "components": [
-    {"trait": "spark"},
-    {"trait": "novelty"},
-    {"trait": "discernment", "inverse": true}
-  ]
-}
+"setFlags": {"appeal": "gentle"}
 ```
 
-## 6. Result Engine
-
-结果由规则拼装，而不是从八份固定文案中整份抽取：
+这不是让用户直接挑选“你喜欢哪种男主”，而是从她最先注意的行为细节中推断偏好。该 flag 在后文至少三次回响：
 
 ```text
-人格原型
-+ 终局选择
-+ 高低维度修饰
-+ 过去模式规则
-+ 未来三幕规则
-+ 适配对象规则
-+ 风险提醒规则
+早期：第6幕的靠近方式
+中段：第12幕的关系表达
+后段：第17幕的关键行动
+结果：适合对象描述
 ```
 
-条件语法支持：
+故事的主事件和测量长度不变，但人物语言、行动和节奏会更接近用户刚刚表现出的类型偏好。
 
-- `all` / `any` / `not`
-- `trait` / `rawTrait` / `meter`
-- `flag`
-- `answer`
-- `outcome`
-- `archetype`
-- `gte` / `lte` / `equals` / `in`
+## 5. Result Engine
 
-## 7. 校验层
+Result Engine 负责：
 
-`npm run validate` 会检查：
+1. 对8种原型计算空间匹配分。
+2. 应用准入/惩罚规则和 bias。
+3. 判断是否允许混合结果。
+4. 根据 outcome、traits、flags、answers 和 archetype 拼装报告。
+5. 从最有解释力的答案生成“为什么这样判断”。
 
-- 内容包、结果包和目录 ID 是否一致
-- 场景 ID 与选择 ID 是否重复
-- 评分是否引用未知维度
-- 跳转目标是否存在
-- 是否有不可达场景
-- 是否有场景无法走到结果
-- slot 是否连续
-- 结果规则是否引用未知维度
+结果报告由以下模块组成：
 
-这让批量生成故事时，格式正确不再依赖人工逐项排查。
+```text
+故事结局
+恋爱心理
+8个可读参数
+关键选择证据
+过去模式推演
+未来三幕
+适配对象
+误判信号
+16项底层分数
+```
+
+## 6. 质量门槛
+
+```bash
+npm run validate
+npm test
+npm run audit
+npm run check
+```
+
+发布检查覆盖：
+
+- 断路、死循环、不可达场景
+- 未知轴与非法向量
+- 所有路线18个答案完成
+- 返回状态回滚
+- 魅力偏好在第6、12、17幕正确出现
+- 男性目标故事存在
+- 固定路线区分度
+- 主结果分布与混合比例
