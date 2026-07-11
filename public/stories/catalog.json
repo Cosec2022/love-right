@@ -91,6 +91,49 @@
       "coverTheme": "river-amber",
       "storyUrl": "./stories/story-07/story.json",
       "resultsUrl": "./stories/story-07/results.json"
+    },
+    {
+      "id": "story-08",
+      "slug": "rain-before-wedding",
+      "status": "published",
+      "title": "婚礼前夜，他从雨里回来",
+      "series": "LOVE RIGHT · STORY 08",
+      "description": "禁忌之恋：婚礼前夜，未完成的旧爱带着当年缺失的真相回来。你会选择承诺、遗憾，还是第一次替自己决定？",
+      "estimatedMinutes": 13,
+      "audience": "female",
+      "coverTheme": "river-wedding",
+      "storyUrl": "./stories/story-08/story.json",
+      "resultsUrl": "./stories/story-08/results.json",
+      "contentBadge": "forbidden-romance"
+    },
+    {
+      "id": "story-09",
+      "slug": "best-friends-ex-fiance",
+      "status": "published",
+      "title": "她爱上了闺蜜最不能原谅的人",
+      "series": "LOVE RIGHT · STORY 09",
+      "description": "禁忌之恋：当你爱上闺蜜的前未婚夫，真正需要选择的不是谁赢了，而是你能否同时承认欲望与责任。",
+      "estimatedMinutes": 13,
+      "audience": "female",
+      "coverTheme": "midnight-office",
+      "storyUrl": "./stories/story-09/story.json",
+      "resultsUrl": "./stories/story-09/results.json",
+      "contentBadge": "forbidden-romance"
+    },
+    {
+      "id": "story-10",
+      "slug": "lock-the-door",
+      "status": "published",
+      "title": "请把门锁上",
+      "series": "LOVE RIGHT · STORY 10",
+      "description": "18+ 成人限定：暴雨、欲望与一段进入房门之后仍需面对白天的关系。所有角色成年，亲密清醒、自愿且可撤回。",
+      "estimatedMinutes": 13,
+      "audience": "female",
+      "coverTheme": "night-rose",
+      "storyUrl": "./stories/story-10/story.json",
+      "resultsUrl": "./stories/story-10/results.json",
+      "contentBadge": "adult-18-plus",
+      "ageRating": "18+"
     }
   ]
 }

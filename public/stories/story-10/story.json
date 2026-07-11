@@ -1,0 +1,2131 @@
+{
+  "schemaVersion": 2,
+  "id": "story-10",
+  "slug": "lock-the-door",
+  "status": "published",
+  "locale": "zh-CN",
+  "metadata": {
+    "series": "LOVE RIGHT · STORY 10",
+    "title": "请把门锁上",
+    "subtitle": "他每一次靠近，都把最后的决定权留给你。",
+    "description": "18+ 成人限定：暴雨、欲望与一段进入房门之后仍需面对白天的关系。所有角色成年，亲密清醒、自愿且可撤回。",
+    "estimatedMinutes": 13,
+    "coverTheme": "night-rose",
+    "audience": "female",
+    "tags": [
+      "女性视角",
+      "18+",
+      "成人心动",
+      "明确同意"
+    ],
+    "disclaimer": "18+ 成年人自愿亲密叙事。娱乐性情境投射，不是心理诊断或现实关系建议。"
+  },
+  "space": {
+    "version": 2,
+    "axes": [
+      {
+        "id": "approach",
+        "label": "靠近主动",
+        "low": "保护性退后",
+        "high": "主动靠近"
+      },
+      {
+        "id": "trust",
+        "label": "初始信任",
+        "low": "先验证",
+        "high": "先相信"
+      },
+      {
+        "id": "certainty",
+        "label": "关系清晰",
+        "low": "容忍模糊",
+        "high": "需要说清"
+      },
+      {
+        "id": "abandonment",
+        "label": "失去敏感",
+        "low": "不易被牵动",
+        "high": "容易担心失去"
+      },
+      {
+        "id": "idealization",
+        "label": "浪漫投射",
+        "low": "现实验证",
+        "high": "赋予意义"
+      },
+      {
+        "id": "novelty",
+        "label": "未知吸引",
+        "low": "熟悉稳定",
+        "high": "新鲜刺激"
+      },
+      {
+        "id": "discernment",
+        "label": "行动判断",
+        "low": "凭感觉",
+        "high": "看行动验证"
+      },
+      {
+        "id": "jealousy",
+        "label": "竞争警觉",
+        "low": "不易比较",
+        "high": "对第三人敏感"
+      },
+      {
+        "id": "expression",
+        "label": "情绪表达",
+        "low": "收住不说",
+        "high": "直接表达"
+      },
+      {
+        "id": "conflict",
+        "label": "冲突面对",
+        "low": "回避冷却",
+        "high": "当场处理"
+      },
+      {
+        "id": "repair",
+        "label": "修复意愿",
+        "low": "切断止损",
+        "high": "解释修复"
+      },
+      {
+        "id": "reassurance",
+        "label": "回应需要",
+        "low": "内在消化",
+        "high": "需要安抚"
+      },
+      {
+        "id": "autonomy",
+        "label": "自我边界",
+        "low": "关系融合",
+        "high": "保持独立"
+      },
+      {
+        "id": "commitment",
+        "label": "长期投入",
+        "low": "重视当下",
+        "high": "面向长期"
+      },
+      {
+        "id": "care",
+        "label": "照顾倾向",
+        "low": "接受照顾",
+        "high": "照顾别人"
+      },
+      {
+        "id": "validation",
+        "label": "被选择需求",
+        "low": "内在自足",
+        "high": "需要明确选择"
+      }
+    ],
+    "contexts": [
+      {
+        "id": "approach",
+        "label": "初次靠近"
+      },
+      {
+        "id": "ambiguity",
+        "label": "暧昧与不确定"
+      },
+      {
+        "id": "intimacy",
+        "label": "亲密与暴露"
+      },
+      {
+        "id": "jealousy",
+        "label": "第三人与比较"
+      },
+      {
+        "id": "rupture",
+        "label": "失约与冲突"
+      },
+      {
+        "id": "commitment",
+        "label": "现实与长期"
+      }
+    ],
+    "config": {
+      "priorWeight": 0.75,
+      "display": {
+        "center": 50,
+        "spread": 42,
+        "min": 8,
+        "max": 92
+      }
+    }
+  },
+  "traits": [
+    {
+      "id": "approach",
+      "label": "靠近主动"
+    },
+    {
+      "id": "trust",
+      "label": "初始信任"
+    },
+    {
+      "id": "certainty",
+      "label": "关系清晰"
+    },
+    {
+      "id": "abandonment",
+      "label": "失去敏感"
+    },
+    {
+      "id": "idealization",
+      "label": "浪漫投射"
+    },
+    {
+      "id": "novelty",
+      "label": "未知吸引"
+    },
+    {
+      "id": "discernment",
+      "label": "行动判断"
+    },
+    {
+      "id": "jealousy",
+      "label": "竞争警觉"
+    },
+    {
+      "id": "expression",
+      "label": "情绪表达"
+    },
+    {
+      "id": "conflict",
+      "label": "冲突面对"
+    },
+    {
+      "id": "repair",
+      "label": "修复意愿"
+    },
+    {
+      "id": "reassurance",
+      "label": "回应需要"
+    },
+    {
+      "id": "autonomy",
+      "label": "自我边界"
+    },
+    {
+      "id": "commitment",
+      "label": "长期投入"
+    },
+    {
+      "id": "care",
+      "label": "照顾倾向"
+    },
+    {
+      "id": "validation",
+      "label": "被选择需求"
+    }
+  ],
+  "scoreConfig": {
+    "center": 50,
+    "spread": 42,
+    "min": 8,
+    "max": 92
+  },
+  "initialScene": "s01",
+  "scenes": [
+    {
+      "id": "s01",
+      "slot": 1,
+      "chapter": "01｜她不是永远冷静",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "海边酒店的广告拍摄进入第三天。所有人都说你“永远冷静”，只有摄影师闻野看见你重新扣好袖口。"
+        },
+        {
+          "type": "paragraph",
+          "text": "“你每次快撑不住，都会先把袖子卷起来，再一颗颗扣回去。”他没有追问，只替你挡住了嘈杂的人群。"
+        }
+      ],
+      "prompt": "被这样看见时，你会怎样回应？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "说他观察得太多了",
+          "vector": {
+            "idealization": 0.28,
+            "trust": 0.18,
+            "approach": 0.18,
+            "novelty": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s02",
+          "aftermath": "你用警惕保护自己，却也记住了他的准确。",
+          "setFlags": {
+            "appeal": "quiet"
+          }
+        },
+        {
+          "id": "b",
+          "text": "承认今天确实有点累",
+          "vector": {
+            "expression": 0.35,
+            "discernment": 0.26,
+            "approach": 0.2,
+            "certainty": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s02",
+          "aftermath": "你第一次允许自己不必永远表现良好。",
+          "setFlags": {
+            "appeal": "direct"
+          }
+        },
+        {
+          "id": "c",
+          "text": "让他别把你当需要照顾的人",
+          "vector": {
+            "discernment": 0.42,
+            "idealization": 0.18,
+            "trust": 0.16,
+            "novelty": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s02",
+          "aftermath": "你强调能力与照顾必须被分开。",
+          "setFlags": {
+            "appeal": "focused"
+          }
+        },
+        {
+          "id": "d",
+          "text": "问他还看见了什么",
+          "vector": {
+            "trust": 0.38,
+            "commitment": 0.2,
+            "care": 0.16,
+            "approach": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s02",
+          "aftermath": "你主动要求更深一点的理解。",
+          "setFlags": {
+            "appeal": "steady"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "slot": 2,
+      "chapter": "02｜不加糖的咖啡",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "凌晨四点补拍，他递来咖啡，没有糖，也没有你最讨厌的肉桂粉。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你只在一个月前的会议上推开过一次同款饮料。"
+        }
+      ],
+      "prompt": "这份被记住的照顾让你更接近哪种反应？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "接过咖啡，说一句谢谢",
+          "vector": {
+            "expression": 0.55,
+            "conflict": 0.34,
+            "autonomy": 0.28,
+            "commitment": 0.22
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s03",
+          "aftermath": "你自然接受了这份细节。"
+        },
+        {
+          "id": "b",
+          "text": "问他是不是对所有合作对象都记这么细",
+          "vector": {
+            "repair": 0.36,
+            "discernment": 0.38,
+            "expression": 0.3,
+            "trust": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s03",
+          "aftermath": "你需要确认这是否是一种明确偏爱。"
+        },
+        {
+          "id": "c",
+          "text": "把咖啡分给助理，不接受私人照顾",
+          "vector": {
+            "expression": 0.46,
+            "conflict": 0.28,
+            "idealization": 0.2,
+            "discernment": 0.24
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s03",
+          "aftermath": "你把关系重新放回职业位置。"
+        },
+        {
+          "id": "d",
+          "text": "喝一口后说：“记性好很危险。”",
+          "vector": {
+            "discernment": 0.48,
+            "trust": 0.22,
+            "autonomy": 0.18,
+            "expression": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s03",
+          "aftermath": "你用一句话让暧昧有了回声。"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "slot": 3,
+      "chapter": "03｜只有你们知道是谁救了拍摄",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "客户以为成片构思来自闻野，只有他知道真正救场的是你凌晨重写的脚本。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他在文件作者栏里加回你的名字，却没有当众邀功。"
+        }
+      ],
+      "prompt": "你会怎样处理这次安静的站队？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "保留共同秘密，等发布后再说",
+          "vector": {
+            "trust": 0.46,
+            "repair": 0.32,
+            "approach": 0.18,
+            "discernment": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s04",
+          "aftermath": "你允许两个人共享一件只有彼此知道的事。"
+        },
+        {
+          "id": "b",
+          "text": "要求他立刻在会议上澄清",
+          "vector": {
+            "autonomy": 0.4,
+            "discernment": 0.28,
+            "trust": -0.18,
+            "conflict": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s04",
+          "aftermath": "你要的是公开归属，而不只是私人理解。"
+        },
+        {
+          "id": "c",
+          "text": "告诉他不需要替你争功",
+          "vector": {
+            "approach": 0.32,
+            "expression": 0.3,
+            "novelty": 0.28,
+            "trust": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s04",
+          "aftermath": "你警惕照顾削弱自己的主体性。"
+        },
+        {
+          "id": "d",
+          "text": "给他发一句：“今晚算我欠你。”",
+          "vector": {
+            "autonomy": 0.42,
+            "certainty": 0.26,
+            "approach": -0.18,
+            "commitment": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s04",
+          "aftermath": "你让感谢变成了带有温度的私人承诺。"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "slot": 4,
+      "chapter": "04｜电梯停在十七层",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "暴雨导致电梯短暂停运。应急灯下，你们之间只剩半步。闻野先把手撑在你身侧防止晃动，却没有碰你。"
+        },
+        {
+          "type": "paragraph",
+          "text": "“我可以站远一点。”他说。"
+        }
+      ],
+      "prompt": "在封闭空间的身体张力里，你会怎样选择距离？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "说不用，维持这半步",
+          "vector": {
+            "certainty": 0.48,
+            "autonomy": 0.42,
+            "trust": 0.28,
+            "approach": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s05_boundary",
+          "aftermath": "你允许距离本身说话。",
+          "setFlags": {
+            "workspace": "boundary"
+          },
+          "subtext": "让她靠近，但先把边界说清。"
+        },
+        {
+          "id": "b",
+          "text": "让他站到另一边",
+          "vector": {
+            "trust": 0.56,
+            "approach": 0.42,
+            "autonomy": -0.2,
+            "idealization": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s05_open",
+          "aftermath": "你清楚表达了需要更多空间。",
+          "setFlags": {
+            "workspace": "open"
+          },
+          "subtext": "先交出信任，也承担可能被越界的风险。"
+        },
+        {
+          "id": "c",
+          "text": "用玩笑说像廉价偶像剧",
+          "vector": {
+            "autonomy": 0.62,
+            "discernment": 0.36,
+            "approach": -0.42,
+            "trust": -0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s05_refuse",
+          "aftermath": "玩笑让紧张变得可呼吸。",
+          "setFlags": {
+            "workspace": "refuse"
+          },
+          "subtext": "保住私人空间，让关系绕一条更远的路。"
+        },
+        {
+          "id": "d",
+          "text": "问他为什么一直这么克制",
+          "vector": {
+            "autonomy": 0.48,
+            "trust": 0.14,
+            "discernment": 0.38,
+            "approach": 0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s05_present",
+          "aftermath": "你开始追问克制背后的欲望与原因。",
+          "setFlags": {
+            "workspace": "present"
+          },
+          "subtext": "门没有关上，但进入必须经过你的同意。"
+        }
+      ],
+      "decisionType": "hard",
+      "decisionLabel": "关键选择",
+      "decisionNote": "这一次的决定会真正改变你们之后相处的距离。"
+    },
+    {
+      "id": "s05_boundary",
+      "slot": 5,
+      "chapter": "05｜他在客户面前站到你这边",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你此前的选择改变了两个人之间的距离。事情仍然发生，但它不再拥有完全相同的语气。"
+        },
+        {
+          "type": "paragraph",
+          "text": "客户临时要求让年轻女模取代你出镜，理由是你“太强势，不够让人亲近”。"
+        },
+        {
+          "type": "paragraph",
+          "text": "闻野当场关闭摄影机：“她的专业不是需要被修掉的瑕疵。要换她，就换摄影师。”"
+        }
+      ],
+      "prompt": "面对他的公开维护，你会怎样保持自己的主体性？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "接过话，自己反击客户",
+          "vector": {
+            "approach": 0.45,
+            "trust": 0.32,
+            "expression": 0.3,
+            "novelty": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你让自己成为主要发言者。"
+        },
+        {
+          "id": "b",
+          "text": "让他先冷静，避免项目崩盘",
+          "vector": {
+            "autonomy": 0.38,
+            "discernment": 0.3,
+            "approach": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你优先管理现实风险。"
+        },
+        {
+          "id": "c",
+          "text": "接受站队，并提出替代拍法",
+          "vector": {
+            "approach": 0.34,
+            "novelty": 0.34,
+            "expression": 0.26,
+            "idealization": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你接受被选择，也共同解决问题。"
+        },
+        {
+          "id": "d",
+          "text": "会后问他是否把私人情绪带进工作",
+          "vector": {
+            "autonomy": 0.46,
+            "certainty": 0.32,
+            "trust": 0.1,
+            "expression": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你需要确认他的保护没有越过职业判断。"
+        }
+      ]
+    },
+    {
+      "id": "s05_open",
+      "slot": 5,
+      "chapter": "05｜他在客户面前站到你这边",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你此前的选择改变了两个人之间的距离。事情仍然发生，但它不再拥有完全相同的语气。"
+        },
+        {
+          "type": "paragraph",
+          "text": "客户临时要求让年轻女模取代你出镜，理由是你“太强势，不够让人亲近”。"
+        },
+        {
+          "type": "paragraph",
+          "text": "闻野当场关闭摄影机：“她的专业不是需要被修掉的瑕疵。要换她，就换摄影师。”"
+        }
+      ],
+      "prompt": "面对他的公开维护，你会怎样保持自己的主体性？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "接过话，自己反击客户",
+          "vector": {
+            "approach": 0.45,
+            "trust": 0.32,
+            "expression": 0.3,
+            "novelty": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你让自己成为主要发言者。"
+        },
+        {
+          "id": "b",
+          "text": "让他先冷静，避免项目崩盘",
+          "vector": {
+            "autonomy": 0.38,
+            "discernment": 0.3,
+            "approach": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你优先管理现实风险。"
+        },
+        {
+          "id": "c",
+          "text": "接受站队，并提出替代拍法",
+          "vector": {
+            "approach": 0.34,
+            "novelty": 0.34,
+            "expression": 0.26,
+            "idealization": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你接受被选择，也共同解决问题。"
+        },
+        {
+          "id": "d",
+          "text": "会后问他是否把私人情绪带进工作",
+          "vector": {
+            "autonomy": 0.46,
+            "certainty": 0.32,
+            "trust": 0.1,
+            "expression": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你需要确认他的保护没有越过职业判断。"
+        }
+      ]
+    },
+    {
+      "id": "s05_refuse",
+      "slot": 5,
+      "chapter": "05｜他在客户面前站到你这边",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你此前的选择改变了两个人之间的距离。事情仍然发生，但它不再拥有完全相同的语气。"
+        },
+        {
+          "type": "paragraph",
+          "text": "客户临时要求让年轻女模取代你出镜，理由是你“太强势，不够让人亲近”。"
+        },
+        {
+          "type": "paragraph",
+          "text": "闻野当场关闭摄影机：“她的专业不是需要被修掉的瑕疵。要换她，就换摄影师。”"
+        }
+      ],
+      "prompt": "面对他的公开维护，你会怎样保持自己的主体性？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "接过话，自己反击客户",
+          "vector": {
+            "approach": 0.45,
+            "trust": 0.32,
+            "expression": 0.3,
+            "novelty": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你让自己成为主要发言者。"
+        },
+        {
+          "id": "b",
+          "text": "让他先冷静，避免项目崩盘",
+          "vector": {
+            "autonomy": 0.38,
+            "discernment": 0.3,
+            "approach": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你优先管理现实风险。"
+        },
+        {
+          "id": "c",
+          "text": "接受站队，并提出替代拍法",
+          "vector": {
+            "approach": 0.34,
+            "novelty": 0.34,
+            "expression": 0.26,
+            "idealization": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你接受被选择，也共同解决问题。"
+        },
+        {
+          "id": "d",
+          "text": "会后问他是否把私人情绪带进工作",
+          "vector": {
+            "autonomy": 0.46,
+            "certainty": 0.32,
+            "trust": 0.1,
+            "expression": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你需要确认他的保护没有越过职业判断。"
+        }
+      ]
+    },
+    {
+      "id": "s05_present",
+      "slot": 5,
+      "chapter": "05｜他在客户面前站到你这边",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你此前的选择改变了两个人之间的距离。事情仍然发生，但它不再拥有完全相同的语气。"
+        },
+        {
+          "type": "paragraph",
+          "text": "客户临时要求让年轻女模取代你出镜，理由是你“太强势，不够让人亲近”。"
+        },
+        {
+          "type": "paragraph",
+          "text": "闻野当场关闭摄影机：“她的专业不是需要被修掉的瑕疵。要换她，就换摄影师。”"
+        }
+      ],
+      "prompt": "面对他的公开维护，你会怎样保持自己的主体性？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "接过话，自己反击客户",
+          "vector": {
+            "approach": 0.45,
+            "trust": 0.32,
+            "expression": 0.3,
+            "novelty": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你让自己成为主要发言者。"
+        },
+        {
+          "id": "b",
+          "text": "让他先冷静，避免项目崩盘",
+          "vector": {
+            "autonomy": 0.38,
+            "discernment": 0.3,
+            "approach": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你优先管理现实风险。"
+        },
+        {
+          "id": "c",
+          "text": "接受站队，并提出替代拍法",
+          "vector": {
+            "approach": 0.34,
+            "novelty": 0.34,
+            "expression": 0.26,
+            "idealization": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你接受被选择，也共同解决问题。"
+        },
+        {
+          "id": "d",
+          "text": "会后问他是否把私人情绪带进工作",
+          "vector": {
+            "autonomy": 0.46,
+            "certainty": 0.32,
+            "trust": 0.1,
+            "expression": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你需要确认他的保护没有越过职业判断。"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "slot": 6,
+      "chapter": "06｜强大不是免费的",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你说：“我最讨厌别人夸我强。通常他们下一句就是，所以你应该自己处理。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "闻野没有说你可以依赖他：“那今晚你可以不证明。需要什么，你直接说。”"
+        }
+      ],
+      "prompt": "这一刻，你愿意提出什么需要？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "说只想安静十分钟",
+          "vector": {
+            "expression": 0.42,
+            "trust": 0.3,
+            "approach": 0.22,
+            "abandonment": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07",
+          "aftermath": "他安静坐在门外，把空间和陪伴同时留给你。"
+        },
+        {
+          "id": "b",
+          "text": "让他抱你一下，但不要问原因",
+          "vector": {
+            "certainty": 0.38,
+            "discernment": 0.34,
+            "expression": 0.32,
+            "jealousy": 0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07",
+          "aftermath": "他先确认你是否仍愿意，再把手臂收紧。"
+        },
+        {
+          "id": "c",
+          "text": "告诉他你不习惯提出需要",
+          "vector": {
+            "novelty": 0.32,
+            "approach": 0.3,
+            "expression": 0.26,
+            "repair": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07",
+          "aftermath": "你让他知道，直接开口本身已经很难。"
+        },
+        {
+          "id": "d",
+          "text": "讽刺他现在很会说正确答案",
+          "vector": {
+            "autonomy": 0.44,
+            "expression": -0.28,
+            "approach": -0.16,
+            "discernment": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07",
+          "aftermath": "你仍然怀疑温柔是否只是熟练表演。"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "slot": 7,
+      "chapter": "07｜他没有趁你的离婚靠近",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "闻野承认，他半年前偶然看见你签离婚文件。那时他已经喜欢你，却故意接了外地项目。"
+        },
+        {
+          "type": "paragraph",
+          "text": "“我不想成为你用来证明自己还被需要的人。”他的父亲曾在母亲最脆弱时开始另一段关系。"
+        }
+      ],
+      "prompt": "你如何理解他的克制？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "问他现在为什么认为时机到了",
+          "vector": {
+            "approach": 0.48,
+            "care": 0.34,
+            "trust": 0.24,
+            "autonomy": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s08",
+          "aftermath": "你要求他解释现在，而不只解释过去。"
+        },
+        {
+          "id": "b",
+          "text": "告诉他别把父亲的错误变成自己的枷锁",
+          "vector": {
+            "care": 0.38,
+            "discernment": 0.42,
+            "approach": 0.02,
+            "trust": 0.1
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s08",
+          "aftermath": "你看见了他克制背后的恐惧。"
+        },
+        {
+          "id": "c",
+          "text": "说你不需要任何人替你判断是否准备好",
+          "vector": {
+            "trust": 0.42,
+            "repair": 0.28,
+            "commitment": 0.24,
+            "expression": 0.24
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s08",
+          "aftermath": "你提醒他尊重不能变成替你决定。"
+        },
+        {
+          "id": "d",
+          "text": "承认这件事让你更信任他",
+          "vector": {
+            "autonomy": 0.52,
+            "approach": -0.46,
+            "care": -0.28,
+            "trust": -0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s08",
+          "aftermath": "你被他的等待说服了一部分。"
+        }
+      ],
+      "variants": [
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "quiet"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "她在雨里并不显得慌乱，只是站到风口最重的位置，安静地等你确认怎么配合。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "direct"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "她直接指出招牌受力的位置，也直接说：“你一个人扛不住，别逞强。”"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "focused"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "她抬头看了几秒，就判断出真正松动的不是招牌，而是后面的固定架。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "steady"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "风雨同时压下来时，她没有多说一句安慰，只把梯子、绳索和电源依次处理好。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "slot": 8,
+      "chapter": "08｜暴雨中的最后一组镜头",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "海水倒灌，主景即将被淹。你决定在撤场前抢最后一组镜头。"
+        },
+        {
+          "type": "paragraph",
+          "text": "闻野没有命令你离开，而是把风险、撤离时间和替代方案说清，等你自己决定。"
+        }
+      ],
+      "prompt": "高压之下，你会怎样与他合作？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "和他一起留下十分钟",
+          "vector": {
+            "discernment": 0.42,
+            "trust": -0.18,
+            "autonomy": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s09",
+          "aftermath": "你们共同承担了一次经过计算的冒险。"
+        },
+        {
+          "id": "b",
+          "text": "要求全员撤离，放弃成片",
+          "vector": {
+            "approach": 0.4,
+            "novelty": 0.36,
+            "expression": 0.26,
+            "idealization": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s09",
+          "aftermath": "你把人的安全放在作品之前。"
+        },
+        {
+          "id": "c",
+          "text": "让他留下，你负责外部安全",
+          "vector": {
+            "idealization": 0.5,
+            "trust": 0.28,
+            "approach": 0.24,
+            "reassurance": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s09",
+          "aftermath": "你选择分工，而不是两个人一起逞强。"
+        },
+        {
+          "id": "d",
+          "text": "重新设计一组室内镜头",
+          "vector": {
+            "certainty": 0.42,
+            "expression": 0.4,
+            "discernment": 0.28,
+            "trust": 0.1
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s09",
+          "aftermath": "你用创造力替代危险证明。"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "slot": 9,
+      "chapter": "09｜“我现在想吻你”",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "项目终于保住。酒店走廊停电，只剩窗外闪电。闻野在你房门前停住。"
+        },
+        {
+          "type": "paragraph",
+          "text": "“我现在很想吻你。你说不，我就回房。你说慢一点，我就慢一点。”"
+        }
+      ],
+      "prompt": "你会怎样回应这份明确欲望？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "说“吻我”，由你先缩短距离",
+          "vector": {
+            "expression": 0.56,
+            "certainty": 0.44,
+            "trust": 0.36,
+            "commitment": -0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s10",
+          "aftermath": "你主动定义了这次靠近。",
+          "setFlags": {
+            "departure": "open"
+          },
+          "subtext": "把离开的可能交给她判断。"
+        },
+        {
+          "id": "b",
+          "text": "说“慢一点”，让他先牵你的手",
+          "vector": {
+            "certainty": -0.18,
+            "discernment": 0.32,
+            "autonomy": 0.3,
+            "approach": 0.06
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s10",
+          "aftermath": "你承认欲望，也清楚说出节奏。",
+          "setFlags": {
+            "departure": "uncertain"
+          },
+          "subtext": "保留余地，也让她无法把你写进计划。"
+        },
+        {
+          "id": "c",
+          "text": "拒绝：“今晚不是一个好决定。”",
+          "vector": {
+            "trust": -0.28,
+            "reassurance": 0.26,
+            "idealization": 0.2,
+            "expression": -0.38
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s10",
+          "aftermath": "你拒绝让成功、暴雨和气氛替你决定。",
+          "setFlags": {
+            "departure": "soften"
+          },
+          "subtext": "给出温和答案，却藏起真正的距离。"
+        },
+        {
+          "id": "d",
+          "text": "问他想要的是这一晚，还是你",
+          "vector": {
+            "approach": 0.28,
+            "certainty": 0.26,
+            "expression": 0.34,
+            "novelty": 0.22
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s10",
+          "aftermath": "你在亲密前先确认它是否愿意进入白天。",
+          "setFlags": {
+            "departure": "reciprocal"
+          },
+          "subtext": "先知道她会去哪里，再决定自己说多少。"
+        }
+      ],
+      "decisionType": "hard",
+      "decisionLabel": "关键选择",
+      "decisionNote": "你是否说出真实计划，会改变她后来怎样理解你的靠近。"
+    },
+    {
+      "id": "s10",
+      "slot": 10,
+      "chapter": "10｜房门以内",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "他的手停在你腰侧，每一次靠近都留出改变主意的时间。你能听见他呼吸变重，也感觉到自己不再需要扮演冷静。"
+        },
+        {
+          "type": "paragraph",
+          "text": "房门在身后合上，却没有立刻落锁。"
+        }
+      ],
+      "prompt": "你愿意怎样定义接下来的亲密？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "亲手把门锁上",
+          "vector": {
+            "trust": 0.46,
+            "repair": 0.32,
+            "expression": 0.28,
+            "approach": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s11",
+          "aftermath": "锁门是你主动做出的选择，而不是被气氛带走。"
+        },
+        {
+          "id": "b",
+          "text": "让门保持未锁，提醒自己仍可离开",
+          "vector": {
+            "autonomy": 0.42,
+            "discernment": 0.34,
+            "trust": 0.02,
+            "conflict": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s11",
+          "aftermath": "你保留出口，也保留随时改变主意的权利。"
+        },
+        {
+          "id": "c",
+          "text": "按住他的手，告诉他你喜欢怎样被靠近",
+          "vector": {
+            "discernment": 0.42,
+            "approach": 0.28,
+            "expression": 0.3,
+            "trust": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s11",
+          "aftermath": "你不让他猜测，而是直接表达身体边界与偏好。"
+        },
+        {
+          "id": "d",
+          "text": "停下来，说只想接吻，不想继续",
+          "vector": {
+            "idealization": 0.42,
+            "approach": 0.34,
+            "novelty": 0.3,
+            "discernment": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s11",
+          "aftermath": "他立刻停下，没有追问，也没有让拒绝变成惩罚。"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "slot": 11,
+      "chapter": "11｜这一夜最美好的部分",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "后来真正让你记住的，不是房间里发生了什么，而是凌晨他把暴雨镜头投到白墙上。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你裹着他的衬衫坐在地毯上。片中的你站在风里，第一次不像任何人的妻子、上司或救火队长。"
+        }
+      ],
+      "prompt": "亲密之后，你最需要的是什么？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "靠在他肩上看完整段成片",
+          "vector": {
+            "trust": 0.52,
+            "repair": 0.28,
+            "approach": 0.22,
+            "care": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s12",
+          "aftermath": "你需要身体之后仍然存在的陪伴。"
+        },
+        {
+          "id": "b",
+          "text": "问他是否会后悔",
+          "vector": {
+            "discernment": 0.42,
+            "autonomy": 0.28,
+            "trust": -0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s12",
+          "aftermath": "你需要确认自己不会在天亮前被重新定义。"
+        },
+        {
+          "id": "c",
+          "text": "说这一晚不代表明天",
+          "vector": {
+            "expression": 0.38,
+            "approach": 0.28,
+            "care": 0.26,
+            "trust": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s12",
+          "aftermath": "你主动为这一夜保留有限边界。"
+        },
+        {
+          "id": "d",
+          "text": "告诉他你很久没有这样喜欢自己",
+          "vector": {
+            "care": 0.42,
+            "repair": 0.24,
+            "trust": 0.24,
+            "discernment": -0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s12",
+          "aftermath": "你发现被欲望唤醒的首先是对自己的喜欢。"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "slot": 12,
+      "chapter": "12｜清晨的边界",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "醒来时，闻野没有擅自抱住你。选择安静的人会看见床边的水；强调边界的人会看见衣物整齐放在门边。"
+        },
+        {
+          "type": "paragraph",
+          "text": "故事记得你昨夜允许了什么，也记得你没有允许什么。"
+        }
+      ],
+      "prompt": "天亮以后，你会怎样恢复自己的节奏？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "叫醒他，一起吃早餐",
+          "vector": {
+            "abandonment": 0.58,
+            "trust": -0.38,
+            "conflict": 0.32,
+            "reassurance": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13",
+          "aftermath": "你愿意让亲密进入普通生活。"
+        },
+        {
+          "id": "b",
+          "text": "先洗澡整理好自己",
+          "vector": {
+            "certainty": 0.5,
+            "expression": 0.44,
+            "discernment": 0.26,
+            "trust": -0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13",
+          "aftermath": "你先把身体与秩序重新收回。"
+        },
+        {
+          "id": "c",
+          "text": "留一张纸条，回到工作状态",
+          "vector": {
+            "repair": 0.42,
+            "expression": 0.36,
+            "trust": 0.08,
+            "abandonment": 0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13",
+          "aftermath": "你选择快速退出，避免晨后期待扩大。"
+        },
+        {
+          "id": "d",
+          "text": "躺回去，再允许自己靠近一次",
+          "vector": {
+            "abandonment": 0.5,
+            "approach": -0.34,
+            "expression": -0.2,
+            "reassurance": 0.3
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13",
+          "aftermath": "你在清醒中再次选择靠近，而不是被夜晚延续。"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "slot": 13,
+      "chapter": "13｜柏林的工作邮件",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你在桌上看见一封邮件：闻野两周后将去柏林担任一年驻地摄影师。他昨晚没有提。"
+        },
+        {
+          "type": "paragraph",
+          "text": "邮件并非秘密，却足以让你怀疑，自己是否只是恰好出现在他离开以前。"
+        }
+      ],
+      "prompt": "面对这份迟到的信息，你会怎样做？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "直接问他为什么没说",
+          "vector": {
+            "expression": 0.58,
+            "conflict": 0.5,
+            "autonomy": 0.36,
+            "repair": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s14",
+          "aftermath": "你选择立刻处理信息不平等。"
+        },
+        {
+          "id": "b",
+          "text": "装作没看见，等他主动提",
+          "vector": {
+            "expression": 0.5,
+            "repair": 0.46,
+            "trust": 0.16,
+            "conflict": 0.34
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s14",
+          "aftermath": "你给他一次主动坦白的机会，也承担等待的不安。"
+        },
+        {
+          "id": "c",
+          "text": "把昨夜重新定义成一次成年人选择",
+          "vector": {
+            "autonomy": 0.42,
+            "conflict": -0.5,
+            "repair": 0.06,
+            "abandonment": 0.34
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s14",
+          "aftermath": "你用边界降低可能的失望。"
+        },
+        {
+          "id": "d",
+          "text": "先问自己是否真的想要他留下",
+          "vector": {
+            "certainty": 0.38,
+            "approach": 0.22,
+            "expression": 0.46,
+            "idealization": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s14",
+          "aftermath": "你先厘清自己的需要，而不是立刻要求他牺牲。"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "slot": 14,
+      "chapter": "14｜克制也可能替你决定",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "闻野解释，他怕昨晚说出柏林会像逼你承诺，也怕你刚离婚就被迫考虑异地。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你说：“你没有逼我，但你又替我决定了什么信息该知道。”他把完整合同、日期和拒绝窗口交给你。"
+        }
+      ],
+      "prompt": "你愿意给这次隐瞒怎样的修复机会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "允许他解释，并一起讨论现实方案",
+          "vector": {
+            "commitment": 0.46,
+            "idealization": 0.3,
+            "autonomy": 0.28,
+            "novelty": -0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s15",
+          "aftermath": "你要求修复进入共同规划。",
+          "setFlags": {
+            "bench": "whole"
+          },
+          "subtext": "让记忆完整留下，也接受新空间为它让路。"
+        },
+        {
+          "id": "b",
+          "text": "要求他先拒绝柏林，证明不是一夜",
+          "vector": {
+            "repair": 0.48,
+            "commitment": 0.36,
+            "trust": 0.24,
+            "discernment": 0.24
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s15",
+          "aftermath": "你需要立刻可见的牺牲证明。",
+          "setFlags": {
+            "bench": "table"
+          },
+          "subtext": "让旧工作台继续被人使用，而不是只被纪念。"
+        },
+        {
+          "id": "c",
+          "text": "告诉他你需要几天，不接受当场修复",
+          "vector": {
+            "autonomy": 0.38,
+            "discernment": 0.34,
+            "idealization": 0.22,
+            "commitment": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s15",
+          "aftermath": "你保留时间，不让一句解释迅速消除伤害。",
+          "setFlags": {
+            "bench": "board"
+          },
+          "subtext": "只留下最私人、最不可替代的那一块。"
+        },
+        {
+          "id": "d",
+          "text": "结束关系：你不能再次进入信息不对等的爱情",
+          "vector": {
+            "novelty": 0.5,
+            "autonomy": 0.34,
+            "commitment": -0.14,
+            "idealization": -0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s15",
+          "aftermath": "你承认欲望存在，也决定保护自己。",
+          "setFlags": {
+            "bench": "new"
+          },
+          "subtext": "允许旧物离开，让这里真正成为新的地方。"
+        }
+      ],
+      "decisionType": "hard",
+      "decisionLabel": "关键选择",
+      "decisionNote": "这不是偏好题。你选择保留什么，也是在决定怎样面对过去。"
+    },
+    {
+      "id": "s15",
+      "slot": 15,
+      "chapter": "15｜欲望进入白天",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "客户准备将成片署名全部归给闻野，并邀请他带团队去柏林。若你公开反对，昨夜关系可能被猜到。"
+        },
+        {
+          "type": "paragraph",
+          "text": "闻野说：“这次由你决定怎么处理，我跟。”"
+        }
+      ],
+      "prompt": "爱情与事业冲突时，你会怎样维护自己？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "公开要求署名，不隐瞒两人的合作",
+          "vector": {
+            "expression": 0.5,
+            "repair": 0.4,
+            "trust": 0.28,
+            "reassurance": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s16",
+          "aftermath": "你让自己的名字公开回到作品上。"
+        },
+        {
+          "id": "b",
+          "text": "让他先接受机会，再私下补合同",
+          "vector": {
+            "certainty": 0.48,
+            "expression": 0.44,
+            "conflict": 0.24,
+            "repair": 0.22
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s16",
+          "aftermath": "你优先保住机会，再处理公平。"
+        },
+        {
+          "id": "c",
+          "text": "终止客户合作，保留作品版权",
+          "vector": {
+            "autonomy": 0.42,
+            "expression": -0.34,
+            "repair": -0.1,
+            "commitment": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s16",
+          "aftermath": "你愿意付出职业成本守住作品。"
+        },
+        {
+          "id": "d",
+          "text": "把感情与署名分开，只按专业证据谈判",
+          "vector": {
+            "expression": 0.48,
+            "autonomy": 0.36,
+            "certainty": 0.32,
+            "commitment": -0.06
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s16",
+          "aftermath": "你拒绝让爱情成为专业判断的主要理由。"
+        }
+      ],
+      "variants": [
+        {
+          "when": {
+            "flag": "bench",
+            "equals": "whole"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "完整工作台被加固后留在原处，旧划痕和新钢架同时存在。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "bench",
+            "equals": "table"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "工作台中段被重新打磨，变成书店里最长的一张公共桌。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "bench",
+            "equals": "board"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "那块刻着歪线的木板被嵌进新墙面，只有你知道它原来在哪里。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "bench",
+            "equals": "new"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "工作台被全部移走，空出来的位置第一次让江面完整地照进屋里。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "slot": 16,
+      "chapter": "16｜这一夜之后，你们是什么",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "离开酒店前，闻野问：“我不会把昨晚叫成错误，也不会替你叫成爱情。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "“你告诉我，它接下来应该是什么。”"
+        }
+      ],
+      "prompt": "你会怎样定义这段成年亲密？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "开始真实关系，一起讨论异地与事业",
+          "vector": {
+            "commitment": 0.42,
+            "trust": 0.3,
+            "approach": 0.2,
+            "expression": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s17",
+          "aftermath": "你愿意把欲望带进现实规划。"
+        },
+        {
+          "id": "b",
+          "text": "承认彼此相爱，但只保留这一夜",
+          "vector": {
+            "reassurance": 0.38,
+            "approach": 0.32,
+            "expression": 0.38,
+            "validation": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s17",
+          "aftermath": "你承认有限亲密也可以真实。"
+        },
+        {
+          "id": "c",
+          "text": "要求从约会重新开始，不让身体替关系加速",
+          "vector": {
+            "autonomy": 0.42,
+            "discernment": 0.32,
+            "approach": -0.18,
+            "trust": 0.02
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s17",
+          "aftermath": "你要求关系速度重新回到白天。"
+        },
+        {
+          "id": "d",
+          "text": "结束，不让欲望成为下一段依赖",
+          "vector": {
+            "expression": 0.46,
+            "certainty": 0.42,
+            "autonomy": 0.32,
+            "commitment": -0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s17",
+          "aftermath": "你选择结束，也不否认这一夜的意义。"
+        }
+      ],
+      "variants": [
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "open"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "许妍记得你说过可能离开，所以这句话里没有挽留，只是在确认你明天是否仍愿意参与。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "uncertain"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "她没有追问你最终会不会走，但也没有再把你默认写进开业后的安排。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "soften"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "你能感觉到，她仍然不知道你真正的计划。那句“明天还来吗”因此比表面更重。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "reciprocal"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "你们都知道彼此未来几个月的大致方向，却还没有说这是否意味着要为对方留位置。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "slot": 17,
+      "chapter": "17｜机场或工作室",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "两周后，白墙上的暴雨镜头入围展映。不同路线里，你会在机场、工作室、视频通话或空荡展厅再次见到闻野。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他没有用一句“跟我走”替代现实方案。"
+        }
+      ],
+      "prompt": "最后一次见面，你还需要他怎样回应？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "把自己的行程表递给他",
+          "vector": {
+            "commitment": 0.5,
+            "approach": 0.38,
+            "certainty": 0.38,
+            "trust": 0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18",
+          "aftermath": "你用计划回应计划，让关系真正进入日历。"
+        },
+        {
+          "id": "b",
+          "text": "只抱他一次，不谈以后",
+          "vector": {
+            "approach": 0.3,
+            "certainty": 0.4,
+            "expression": 0.34,
+            "reassurance": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18",
+          "aftermath": "你允许身体完成一次清醒告别。"
+        },
+        {
+          "id": "c",
+          "text": "问他是否仍愿意按你的速度来",
+          "vector": {
+            "trust": 0.26,
+            "approach": 0.12,
+            "autonomy": 0.3,
+            "expression": -0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18",
+          "aftermath": "你再次确认节奏不会因亲密而被收走。"
+        },
+        {
+          "id": "d",
+          "text": "站在作品前，让他先说自己决定了什么",
+          "vector": {
+            "expression": 0.42,
+            "autonomy": 0.4,
+            "commitment": -0.18,
+            "trust": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18",
+          "aftermath": "你要求他先承担自己的现实选择。"
+        }
+      ],
+      "variants": [
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "open"
+          },
+          "appendContent": [
+            {
+              "type": "quote",
+              "text": "她说：“你去哪里工作是一回事，愿不愿意回来，是另一回事。”"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "uncertain"
+          },
+          "appendContent": [
+            {
+              "type": "quote",
+              "text": "她说：“你不需要因为舍不得就留下，但别把不决定当成没有选择。”"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "soften"
+          },
+          "appendContent": [
+            {
+              "type": "quote",
+              "text": "她说：“真正让我介意的不是你会走，是你一直没让我知道该不该等。”"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "reciprocal"
+          },
+          "appendContent": [
+            {
+              "type": "quote",
+              "text": "她说：“我们都知道自己接下来要去哪里。剩下的问题，是愿不愿意把对方也算进去。”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "slot": 18,
+      "chapter": "18｜你真正渴望的是什么",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你终于明白，欲望并不自动意味着失控。真正重要的是，你在靠近、停止、要求和离开时，是否仍然是自己的主人。"
+        },
+        {
+          "type": "paragraph",
+          "text": "这一夜没有替你定义答案，只留下了更清楚的你。"
+        }
+      ],
+      "prompt": "哪一句最接近你的成人爱情结论？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "我想被强烈渴望，也想保有最后的决定权",
+          "vector": {
+            "approach": 0.66,
+            "commitment": 0.6,
+            "expression": 0.54,
+            "trust": 0.42
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你要的是欲望与自主同时存在。",
+          "setFlags": {
+            "ending": "return"
+          },
+          "outcome": "return",
+          "subtext": "回到她面前，让喜欢进入真实生活。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "靠窗的位置",
+            "copy": "你买了最早的一班车。书店开门时，许妍正在靠窗的位置整理最后一排书。她看见你，没有问会不会永远留下，只把身边的椅子向外拉了一点。你终于明白，回来不是认输，心动也不必用牺牲证明。"
+          }
+        },
+        {
+          "id": "b",
+          "text": "我想要的不是一夜，是进入白天后仍被选择",
+          "vector": {
+            "certainty": 0.46,
+            "commitment": 0.34,
+            "autonomy": 0.42,
+            "trust": 0.34
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你真正需要的是晨后持续的现实选择。",
+          "setFlags": {
+            "ending": "commute"
+          },
+          "outcome": "commute",
+          "subtext": "给出下一步，但不拿永远交换爱情。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "往返的人",
+            "copy": "你回去参加开业，也把未来说得诚实：你不会承诺永远留在这里。许妍把一把备用钥匙放进你手里。后来你们各自生活，也一次次认真安排见面。爱情没有把谁困在岸边，只让每次出发都有了想见的人。"
+          }
+        },
+        {
+          "id": "c",
+          "text": "我需要先重新爱上自己的身体和生活",
+          "vector": {
+            "trust": 0.36,
+            "repair": 0.34,
+            "autonomy": 0.38,
+            "approach": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "这段亲密首先把你带回自己。",
+          "setFlags": {
+            "ending": "distance"
+          },
+          "outcome": "distance",
+          "subtext": "不靠一次奔赴证明感情，从普通联系开始。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "从普通生活开始",
+            "copy": "你没有赶上开业，只在晚上接通她的视频。她带你看完书店，镜头最后停在靠窗空着的位置。你们没有用一场奔赴把关系说满，而是从每天一两条消息开始，让彼此慢慢进入真实、琐碎又可以持续的生活。"
+          }
+        },
+        {
+          "id": "d",
+          "text": "我享受这一夜，但不需要把它变成永远",
+          "vector": {
+            "autonomy": 0.62,
+            "approach": -0.52,
+            "commitment": -0.42,
+            "repair": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你允许有限关系拥有真实价值。",
+          "setFlags": {
+            "ending": "farewell"
+          },
+          "outcome": "farewell",
+          "subtext": "承认心动，也接受故事可以停在这里。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "渡船已经开走",
+            "copy": "你祝她开业顺利，没有回去。那张靠窗的位置留在照片里，像一段没有被否认、也没有被强迫继续的心动。后来你仍会想起她，却不再把没有拥有解释成失败。有些人让你重新看见一座城，然后陪你走到这里。"
+          }
+        }
+      ],
+      "decisionType": "final",
+      "decisionLabel": "最后的选择",
+      "decisionNote": "选下去以后，故事会先揭晓你亲手走出的结局。"
+    }
+  ]
+}
