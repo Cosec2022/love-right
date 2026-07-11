@@ -1004,3 +1004,69 @@
   .ending-reveal-card { padding: 64px 48px 44px; }
   .ending-reveal-copy { text-align: center; font-size: 15px; }
 }
+
+/* Love Right story content badges · v0.4.3 */
+.story-card-kicker-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.story-card-kicker-row > .story-kicker,
+.story-card-kicker-row > .story-eyebrow,
+.story-card-kicker-row > .story-label,
+.story-card-kicker-row > .card-kicker,
+.story-card-kicker-row > .eyebrow,
+.story-card-kicker-row > [data-story-kicker] {
+  margin: 0;
+}
+
+.story-content-badges {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.story-content-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 850;
+  line-height: 1;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+
+.story-content-badge--forbidden {
+  color: #95515a;
+  border: 1px solid rgba(149, 81, 90, .36);
+  background: rgba(255, 247, 247, .82);
+}
+
+.story-content-badge--adult {
+  color: #fff9f7;
+  border: 1px solid #7f3542;
+  background: #7f3542;
+  box-shadow: 0 5px 14px rgba(96, 36, 48, .16);
+}
+
+@media (max-width: 640px) {
+  .story-card-kicker-row {
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .story-content-badge {
+    min-height: 22px;
+    padding: 3px 8px;
+    font-size: 10px;
+  }
+}
+/* End Love Right story content badges · v0.4.3 */
+

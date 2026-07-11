@@ -3,26 +3,93 @@
   "$id": "https://love-right.coseclab.dev/schemas/catalog.schema.json",
   "title": "Love Right Story Catalog v2",
   "type": "object",
-  "required": ["schemaVersion", "stories"],
+  "required": [
+    "schemaVersion",
+    "stories"
+  ],
   "properties": {
-    "schemaVersion": {"const": 2},
+    "schemaVersion": {
+      "const": 2
+    },
     "stories": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "slug", "status", "title", "storyUrl", "resultsUrl"],
+        "required": [
+          "id",
+          "slug",
+          "status",
+          "title",
+          "storyUrl",
+          "resultsUrl"
+        ],
         "properties": {
-          "id": {"type": "string"},
-          "slug": {"type": "string"},
-          "status": {"enum": ["draft", "published", "archived"]},
-          "title": {"type": "string"},
-          "series": {"type": "string"},
-          "description": {"type": "string"},
-          "estimatedMinutes": {"type": "integer", "minimum": 1},
-          "audience": {"enum": ["female", "male", "all"]},
-          "coverTheme": {"type": "string"},
-          "storyUrl": {"type": "string"},
-          "resultsUrl": {"type": "string"}
+          "id": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "draft",
+              "published",
+              "archived"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "series": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "estimatedMinutes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "audience": {
+            "enum": [
+              "female",
+              "male",
+              "all"
+            ]
+          },
+          "coverTheme": {
+            "type": "string"
+          },
+          "storyUrl": {
+            "type": "string"
+          },
+          "resultsUrl": {
+            "type": "string"
+          },
+          "contentBadge": {
+            "type": "string",
+            "enum": [
+              "forbidden-romance",
+              "adult-18-plus"
+            ]
+          },
+          "contentBadges": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "forbidden-romance",
+                "adult-18-plus"
+              ]
+            },
+            "uniqueItems": true,
+            "minItems": 1,
+            "maxItems": 2
+          },
+          "ageRating": {
+            "type": "string",
+            "maxLength": 40
+          }
         },
         "additionalProperties": true
       }
