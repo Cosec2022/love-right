@@ -1070,3 +1070,63 @@
 }
 /* End Love Right story content badges · v0.4.3 */
 
+
+
+/* Love Right brand icon v0.5.6 */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 16px rgba(63, 48, 71, .14);
+}
+.brand-text {
+  color: var(--rose-deep);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .18em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+@media (max-width: 420px) {
+  .brand { gap: 7px; }
+  .brand-logo { width: 30px; height: 30px; flex-basis: 30px; border-radius: 9px; }
+  .brand-text { font-size: 9px; letter-spacing: .13em; }
+}
+
+
+/* Love Right brand icon v0.5.6-fix START */
+.brand {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+.brand::before {
+  content: "";
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: block;
+  background: url("./assets/love-right-icon.png") center / cover no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 5px 16px rgba(63, 48, 71, .14);
+}
+@media (max-width: 420px) {
+  .brand { gap: 7px; }
+  .brand::before {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+    border-radius: 9px;
+  }
+}
+/* Love Right brand icon v0.5.6-fix END */
