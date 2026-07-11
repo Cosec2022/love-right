@@ -145,8 +145,7 @@ async function bootstrap() {
     renderer.error(`${error.message}\n\n请在项目目录运行 npm install && npm run dev。`);
   }
 }
-
-void bootstrap(); document.getElementById("startBtn")?.addEventListener("click", () => {
+document.getElementById("startBtn")?.addEventListener("click", () => {
   if (!engine) return;
   if (engine.state.complete) renderCurrentResult();
   else {
@@ -179,3 +178,10 @@ window.addEventListener("popstate", async () => {
   if (entry) await openStory(entry, { pushUrl: false });
   else await showLibrary({ pushUrl: false });
 });
+
+// Start only after this module has finished binding all static controls.
+Promise.resolve()
+  .then(() => bootstrap())
+  .catch((error) => {
+    console.error("Love Right bootstrap failed:", error);
+  });
