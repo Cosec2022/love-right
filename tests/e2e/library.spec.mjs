@@ -7,7 +7,7 @@ const errors = (page) => {
   return messages;
 };
 
-const waitForLibrary = (page) => expect(page.locator(".story-entry")).toHaveCount(10);
+const waitForLibrary = (page) => expect(page.locator(".story-entry")).toHaveCount(12);
 
 test("homepage launches with the published library, slogan and no errors", async ({ page }) => {
   const browserErrors = errors(page);
@@ -24,13 +24,13 @@ test("audience filters rerender cards without duplicates", async ({ page }) => {
   await page.goto("/");
   await waitForLibrary(page);
   await page.getByRole("button", { name: "女性向" }).click();
-  await expect(page.locator(".story-entry")).toHaveCount(6);
+  await expect(page.locator(".story-entry")).toHaveCount(8);
   await page.getByRole("button", { name: "男性向" }).click();
   await expect(page.locator(".story-entry")).toHaveCount(4);
   await page.getByRole("button", { name: "全部" }).click();
   await waitForLibrary(page);
   await page.getByRole("button", { name: "女性向" }).click();
-  await expect(page.locator(".story-entry")).toHaveCount(6);
+  await expect(page.locator(".story-entry")).toHaveCount(8);
 });
 
 test("content badges appear only in their card metadata", async ({ page }) => {
@@ -109,7 +109,7 @@ test("mobile library has no horizontal overflow and Story 10 starts", async ({ p
   await waitForLibrary(page);
   expect(await page.locator("body").evaluate((body) => body.scrollWidth <= window.innerWidth)).toBe(true);
   await page.getByRole("button", { name: "女性向" }).click();
-  await expect(page.locator(".story-entry")).toHaveCount(6);
+  await expect(page.locator(".story-entry")).toHaveCount(8);
   await page.getByRole("button", { name: "全部" }).click();
   await page.getByRole("button", { name: /请把门锁上/ }).click();
   await expect(page.locator("#startScreen.active #storyTitle")).toHaveText("请把门锁上");

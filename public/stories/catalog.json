@@ -134,6 +134,32 @@
       "resultsUrl": "./stories/story-10/results.json",
       "contentBadge": "adult-18-plus",
       "ageRating": "18+"
+    },
+    {
+      "id": "story-11",
+      "slug": "seventh-night-after-moving",
+      "status": "published",
+      "title": "搬家后的第七个晚上",
+      "series": "LOVE RIGHT · STORY 11",
+      "description": "城市老楼里的搬家日常：从漏水的水槽到停电的楼道，决定谁能进入你的生活。",
+      "estimatedMinutes": 12,
+      "audience": "female",
+      "coverTheme": "river-amber",
+      "storyUrl": "./stories/story-11/story.json",
+      "resultsUrl": "./stories/story-11/results.json"
+    },
+    {
+      "id": "story-12",
+      "slug": "sunday-he-arrived-on-time",
+      "status": "published",
+      "title": "星期天，他准时到了",
+      "series": "LOVE RIGHT · STORY 12",
+      "description": "成年人的现代约会：从排他约会到家庭邀请，选择适合自己的约会节奏。",
+      "estimatedMinutes": 12,
+      "audience": "female",
+      "coverTheme": "midnight-office",
+      "storyUrl": "./stories/story-12/story.json",
+      "resultsUrl": "./stories/story-12/results.json"
     }
   ]
 }

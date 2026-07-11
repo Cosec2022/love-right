@@ -10,9 +10,9 @@ const read = (path) => readFile(new URL(path, root), "utf8");
 const catalog = JSON.parse(await read("public/stories/catalog.json"));
 
 test("library has ten published stories and audience filters are deterministic", () => {
-  assert.equal(publishedStories(catalog).length, 10);
-  assert.equal(storiesForAudience(catalog, "all").length, 10);
-  assert.equal(storiesForAudience(catalog, "female").length, 6);
+  assert.equal(publishedStories(catalog).length, 12);
+  assert.equal(storiesForAudience(catalog, "all").length, 12);
+  assert.equal(storiesForAudience(catalog, "female").length, 8);
   assert.equal(storiesForAudience(catalog, "male").length, 4);
 });
 
