@@ -30,8 +30,16 @@
       <article class="card library-hero">
         <p class="eyebrow">COSEC LAB · INTERACTIVE STORY ENGINE</p>
         <h1 class="library-title">Love<br>Right</h1>
-        <p class="library-copy">你不是回答一份问卷，而是在一段关系里作出选择。每个故事都使用同一套可复用引擎记录靠近、犹豫、边界与确认爱的方式。</p>
+        <p class="library-copy lr-home-slogan">先经历一段爱情，再看清自己是谁。</p>
       </article>
+      <div class="story-audience-filter" aria-label="筛选故事">
+        <span class="story-audience-filter__label">筛选故事</span>
+        <div class="story-audience-filter__buttons">
+          <button id="filterAll" class="story-audience-filter__button is-active" type="button" data-audience="all">全部</button>
+          <button id="filterFemale" class="story-audience-filter__button" type="button" data-audience="female">女性向</button>
+          <button id="filterMale" class="story-audience-filter__button" type="button" data-audience="male">男性向</button>
+        </div>
+      </div>
       <div id="storyList" class="story-list">
         <div class="card loading-card">正在打开故事库……</div>
       </div>
@@ -154,7 +162,5 @@
 
   <div id="toast" class="toast">结果已复制</div>
   <script type="module" src="./app/main.js?v=20260711214813"></script>
-  <script type="module" src="./app/ui/content-badges.js?v=20260711214404"></script>
-  <script type="module" src="./app/ui/homepage-enhancements.js"></script>
 </body>
 </html>

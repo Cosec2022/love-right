@@ -1,5 +1,14 @@
 const el = (id) => document.getElementById(id);
 
+export const publishedStories = (catalog) => catalog.stories.filter((story) => story.status === "published");
+export const storiesForAudience = (catalog, audience = "all") => publishedStories(catalog)
+  .filter((story) => audience === "all" || story.audience === audience);
+
+const badgeLabels = Object.freeze({
+  "forbidden-romance": "禁忌之恋",
+  "adult-18-plus": "18+ 成人限定"
+});
+
 const appendParagraphs = (container, paragraphs) => {
   container.replaceChildren();
   for (const text of paragraphs) {
@@ -20,10 +29,13 @@ export class Renderer {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  renderCatalog(catalog, onSelect) {
+  renderCatalog(catalog, audience, onSelect) {
     const list = el("storyList");
+    for (const button of document.querySelectorAll("[data-audience]")) {
+      button.classList.toggle("is-active", button.dataset.audience === audience);
+    }
     list.replaceChildren();
-    for (const story of catalog.stories.filter((item) => item.status === "published")) {
+    for (const story of storiesForAudience(catalog, audience)) {
       const button = document.createElement("button");
       button.type = "button";
       button.className = "story-entry";
@@ -31,14 +43,22 @@ export class Renderer {
         <span class="entry-kicker"></span>
         <h2></h2>
         <p></p>
-        <span class="entry-meta">
-          <span class="engine-badge">${story.estimatedMinutes ?? 8} 分钟</span>
-          <span class="engine-badge">${story.audience === "male" ? "男性视角" : "女性视角"}</span>
-          <span class="engine-badge">空间结果</span>
-        </span>`;
+        <span class="entry-meta"></span>`;
       button.querySelector(".entry-kicker").textContent = story.series;
       button.querySelector("h2").textContent = story.title;
       button.querySelector("p").textContent = story.description;
+      const meta = button.querySelector(".entry-meta");
+      for (const label of [
+        `${story.estimatedMinutes ?? 8} 分钟`,
+        story.audience === "male" ? "男性视角" : "女性视角",
+        "空间结果",
+        ...[story.contentBadge, ...(story.contentBadges ?? [])].filter(Boolean).map((badge) => badgeLabels[badge]).filter(Boolean)
+      ]) {
+        const badge = document.createElement("span");
+        badge.className = "engine-badge";
+        badge.textContent = label;
+        meta.appendChild(badge);
+      }
       button.addEventListener("click", () => onSelect(story));
       list.appendChild(button);
     }
@@ -240,14 +260,16 @@ export class Renderer {
     el("warningCopy").textContent = result.warning;
 
     const labelById = Object.fromEntries(story.traits.map((trait) => [trait.id, trait.label]));
-    el("traitGrid").innerHTML = Object.entries(result.traits).map(([id, score]) => {
-      const level = score >= 72 ? "高" : score <= 38 ? "低" : "中";
-      return `<div class="trait-pill"><span></span><strong>${score} · ${level}</strong></div>`;
-    }).join("");
-    [...el("traitGrid").children].forEach((card, index) => {
-      const traitId = Object.keys(result.traits)[index];
-      card.querySelector("span").textContent = labelById[traitId] ?? traitId;
-    });
+    el("traitGrid").replaceChildren(...Object.entries(result.traits).map(([id, score]) => {
+      const card = document.createElement("div");
+      card.className = "trait-pill";
+      const label = document.createElement("span");
+      label.textContent = labelById[id] ?? id;
+      const value = document.createElement("strong");
+      value.textContent = score;
+      card.append(label, value);
+      return card;
+    }));
 
     el("resultFooter").textContent = `${story.metadata.disclaimer} Love Right · A CosecLab Experiment`;
     this.show("resultScreen");
