@@ -1,8 +1,10 @@
 import { readFile, access } from "node:fs/promises";
 import path from "node:path";
+import { verifyModuleEntrypoint } from "./static-helpers.mjs";
 
 const root = path.resolve(new URL("..", import.meta.url).pathname);
 const publicDir = path.join(root, "public");
+
 const html = await readFile(path.join(publicDir, "index.html"), "utf8");
 const renderer = await readFile(path.join(publicDir, "app", "ui", "renderer.js"), "utf8");
 const main = await readFile(path.join(publicDir, "app", "main.js"), "utf8");
@@ -10,7 +12,8 @@ const main = await readFile(path.join(publicDir, "app", "main.js"), "utf8");
 const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]));
 const referenced = new Set([
   ...renderer.matchAll(/el\("([^"]+)"\)/g),
-  ...main.matchAll(/getElementById\("([^"]+)"\)/g)
+  ...main.matchAll(/getElementById\("([^"]+)"\)/g),
+  ...(main.match(/const REQUIRED_DOM_IDS = \[([\s\S]*?)\];/)?.[1].matchAll(/"([^"]+)"/g) ?? [])
 ].map((match) => match[1]));
 const missing = [...referenced].filter((id) => !ids.has(id));
 if (missing.length) {
@@ -44,8 +47,10 @@ if (html.indexOf('id="endingCopy"') > html.indexOf('id="contradictionCopy"')) {
   process.exit(1);
 }
 
-if (!html.includes('type="module" src="./app/main.js"')) {
-  console.error("index.html does not load the application module.");
+try {
+  verifyModuleEntrypoint(html);
+} catch (error) {
+  console.error(error.message);
   process.exit(1);
 }
 
