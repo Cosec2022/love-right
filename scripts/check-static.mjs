@@ -34,8 +34,13 @@ if (html.includes("你的心动参数") || html.includes('id="meterGrid"')) {
   process.exit(1);
 }
 
-if (!html.includes('id="contradictionCopy"') || !html.includes('id="insightGrid"') || !html.includes('id="moveList"')) {
-  console.error("Memory-first result sections are missing.");
+if (!html.includes('id="endingStoryTitle"') || !html.includes('id="endingCopy"') || !html.includes('id="contradictionCopy"') || !html.includes('id="insightGrid"') || !html.includes('id="emotionIndexGrid"') || !html.includes('id="moveList"')) {
+  console.error("Result page sections are missing.");
+  process.exit(1);
+}
+
+if (html.indexOf('id="endingCopy"') > html.indexOf('id="contradictionCopy"')) {
+  console.error("Story ending must appear before the psychological interpretation.");
   process.exit(1);
 }
 

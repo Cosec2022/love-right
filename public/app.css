@@ -692,3 +692,131 @@
   .insight-card::before { left: 17px; top: 15px; }
   .move-row { grid-template-columns: 92px 1fr; padding: 15px 17px; }
 }
+
+/* v0.4.3 romantic ending + six emotional indices */
+.ending-card {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 14px;
+  padding: 24px 20px 22px;
+  border: 1px solid rgba(178, 132, 119, .17);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(199,164,106,.22), transparent 32%),
+    radial-gradient(circle at 8% 92%, rgba(153,112,125,.13), transparent 36%),
+    linear-gradient(145deg, rgba(255,250,243,.94), rgba(244,235,231,.88));
+  box-shadow: 0 16px 34px rgba(88, 57, 69, .09);
+}
+.ending-card::after {
+  content: "✦";
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  color: rgba(161, 105, 116, .18);
+  font-size: 34px;
+}
+.ending-kicker {
+  margin: 0 0 7px;
+  color: var(--rose-deep);
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: .18em;
+}
+.ending-title {
+  margin: 0 34px 14px 0;
+  color: #352f38;
+  font-family: "Songti SC", "STSong", serif;
+  font-size: clamp(20px, 5vw, 27px);
+  line-height: 1.35;
+  letter-spacing: -.025em;
+}
+.ending-copy p {
+  margin: 0;
+  color: #5a4d53;
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 14px;
+  line-height: 1.95;
+}
+.ending-copy p + p {
+  margin-top: 11px;
+  padding-top: 11px;
+  border-top: 1px solid rgba(113, 77, 88, .10);
+  color: #8a5b64;
+}
+.ending-card + .contradiction-card { margin-top: 0; }
+
+.emotion-index-note {
+  margin: -4px 2px 12px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65;
+}
+.emotion-index-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.emotion-index-card {
+  min-width: 0;
+  padding: 14px 13px 13px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,255,255,.66);
+}
+.emotion-index-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+.emotion-index-head span {
+  color: #4c454e;
+  font-size: 12px;
+  font-weight: 900;
+}
+.emotion-index-head strong {
+  color: var(--rose-deep);
+  font-size: 23px;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+.emotion-index-track {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(45,39,50,.08);
+}
+.emotion-index-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #9f6972, #c7a46a, #807794);
+  transition: width .9s cubic-bezier(.2,.8,.2,1);
+}
+.emotion-index-foot { margin-top: 9px; }
+.emotion-index-level {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #9a6871;
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .08em;
+}
+.emotion-index-foot p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.55;
+}
+.emotion-index-card[data-level="high"] {
+  background: linear-gradient(145deg, rgba(255,252,247,.88), rgba(244,231,228,.74));
+}
+.emotion-index-card[data-level="low"] .emotion-index-fill {
+  background: linear-gradient(90deg, #8d879b, #b7a9a2);
+}
+
+@media (min-width: 760px) {
+  .emotion-index-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .ending-card { padding: 28px 27px 26px; }
+}

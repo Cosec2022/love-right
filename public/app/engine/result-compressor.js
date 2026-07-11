@@ -40,12 +40,12 @@ const DEFAULT_PROFILES = {
     fit: "适合你的人不会把距离当冷淡，也不会把自由当失联；他懂得亲密和独立可以同时存在。"
   },
   "chosen-sensitive": {
-    title: "最想被坚定选择的人",
-    hook: "你要的不是很多人喜欢，而是一个人在重要时刻一次次站在你这边。",
-    contradiction: "你看起来在等一句话，真正等的是麻烦出现以后，对方仍然不把你放下。",
-    attraction: "明确的偏爱、稳定的优先级和不怕别人知道的认真，最容易让你心软。",
+    title: "想被认真放在心上的人",
+    hook: "你要的不是很多人喜欢，而是一个人在重要时刻始终把你放在心上。",
+    contradiction: "你看起来在等一句话，真正等的是麻烦出现以后，对方仍然没有把你放下。",
+    attraction: "清楚的偏爱、稳定的优先级和不怕别人知道的认真，最容易让你心软。",
     fear: "你最怕自己只是对方众多可能性中的一个，却已经交出了最认真的部分。",
-    fit: "适合你的人会把偏爱说清，也会在选择有成本时继续用行动确认。"
+    fit: "适合你的人会把心意说清，也会在选择有成本时继续用行动确认。"
   },
   "repair-nurturer": {
     title: "总想把关系照顾好的人",
@@ -65,7 +65,97 @@ const DEFAULT_PROFILES = {
   }
 };
 
+const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 const meterValue = (meters, id) => Number(meters?.[id] ?? 50);
+
+const INDEX_DEFINITIONS = [
+  {
+    id: "heart",
+    title: "心动浓度",
+    components: [["romance", 0.62], ["approach", 0.38]],
+    low: "心动来得慢，你更相信相处后的真实。",
+    middle: "你会被打动，也会给自己一点时间确认。",
+    high: "气氛、细节和只属于两个人的瞬间很容易点亮你。"
+  },
+  {
+    id: "courage",
+    title: "靠近勇气",
+    components: [["approach", 0.62], ["expression", 0.38]],
+    low: "你更习惯等对方持续靠近，再决定给多少回应。",
+    middle: "有感觉时会给出信号，但不会一次交出全部主动。",
+    high: "你愿意主动制造下一次见面，也敢在关键处把话说清。"
+  },
+  {
+    id: "certainty",
+    title: "确定需求",
+    components: [["securityNeed", 0.58], ["clarity", 0.42]],
+    low: "你能容忍一段时间的模糊，更看重相处本身。",
+    middle: "你可以慢慢来，但需要看见关系正在向前。",
+    high: "你需要清楚的位置、稳定的回应和可以被兑现的方向。"
+  },
+  {
+    id: "judgment",
+    title: "清醒判断",
+    components: [["judgment", 0.72], ["boundary", 0.28]],
+    low: "你更愿意先相信当下的感觉，再让现实慢慢给答案。",
+    middle: "你允许自己心动，也会留意对方前后是否一致。",
+    high: "你会用行动、时间和一致性反复检验一段喜欢。"
+  },
+  {
+    id: "boundary",
+    title: "自我边界",
+    components: [["boundary", 0.78], ["judgment", 0.22]],
+    low: "喜欢一个人时，你容易让关系快速进入生活中心。",
+    middle: "你愿意靠近，也会保留一点属于自己的节奏。",
+    high: "再喜欢也不会轻易交出生活、判断和退出的权利。"
+  },
+  {
+    id: "longterm",
+    title: "长期投入",
+    components: [["longterm", 0.72], ["clarity", 0.28]],
+    low: "你更重视当下是否真实舒服，不会过早许诺很远。",
+    middle: "你愿意认真，但会等现实条件逐渐跟上。",
+    high: "确认彼此以后，你会自然把对方放进未来和日常安排。"
+  }
+];
+
+const buildEmotionalIndices = (meters) => {
+  const rawItems = INDEX_DEFINITIONS.map((definition) => {
+    const raw = definition.components.reduce(
+      (sum, [meterId, weight]) => sum + meterValue(meters, meterId) * weight,
+      0
+    );
+    return { ...definition, raw };
+  });
+
+  const rawValues = rawItems.map((item) => item.raw);
+  const mean = rawValues.reduce((sum, value) => sum + value, 0) / rawValues.length;
+  const standardDeviation = Math.sqrt(
+    rawValues.reduce((sum, value) => sum + (value - mean) ** 2, 0) / rawValues.length
+  );
+  const contrastBase = Math.max(standardDeviation, 4.5);
+
+  return rawItems.map((item) => {
+    // These are within-profile relative indices. The adaptive contrast keeps
+    // a user's strongest and weakest tendencies visible without changing the
+    // ordering produced by the underlying spatial model.
+    const value = clamp(
+      Math.round(54 + ((item.raw - mean) / contrastBase) * 19 + (item.raw - 50) * 0.25),
+      18,
+      92
+    );
+    const level = value >= 72 ? "明显偏高" : value >= 60 ? "偏高" : value <= 32 ? "明显偏低" : value <= 44 ? "偏低" : "相对平衡";
+    const text = value >= 64 ? item.high : value <= 42 ? item.low : item.middle;
+    return {
+      id: item.id,
+      title: item.title,
+      value,
+      level,
+      text,
+      raw: Math.round(item.raw)
+    };
+  });
+};
 
 const buildMoves = (meters) => {
   const approach = meterValue(meters, "approach");
@@ -138,6 +228,7 @@ export function buildMemoryProfile(archetype, meters, resultsSpec) {
       { id: "fear", title: "你在关系里最怕什么", text: profile.fear },
       { id: "fit", title: "真正适合你的人", text: profile.fit }
     ],
+    indices: buildEmotionalIndices(meters),
     moves: buildMoves(meters)
   };
 }

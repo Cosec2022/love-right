@@ -1,6 +1,6 @@
 {
   "name": "love-right",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "private": true,
   "type": "module",
   "description": "Love Right — a reusable spatial interactive romance story and projection engine by CosecLab.",

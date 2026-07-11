@@ -114,6 +114,9 @@ export class Renderer {
     el("resultTagline").textContent = result.memory.hook;
     el("resultLabel").textContent = result.memory.label;
 
+    el("endingStoryTitle").textContent = story.metadata.title;
+    appendParagraphs(el("endingCopy"), result.ending);
+
     el("contradictionTitle").textContent = result.memory.contradiction.title;
     el("contradictionCopy").textContent = result.memory.contradiction.text;
 
@@ -126,6 +129,41 @@ export class Renderer {
       const copy = document.createElement("p");
       copy.textContent = item.text;
       card.append(title, copy);
+      return card;
+    }));
+
+    el("emotionIndexGrid").replaceChildren(...result.memory.indices.map((item) => {
+      const card = document.createElement("article");
+      card.className = "emotion-index-card";
+      card.dataset.level = item.value >= 64 ? "high" : item.value <= 42 ? "low" : "middle";
+
+      const head = document.createElement("div");
+      head.className = "emotion-index-head";
+      const title = document.createElement("span");
+      title.textContent = item.title;
+      const score = document.createElement("strong");
+      score.textContent = item.value;
+      head.append(title, score);
+
+      const track = document.createElement("div");
+      track.className = "emotion-index-track";
+      const fill = document.createElement("div");
+      fill.className = "emotion-index-fill";
+      fill.style.width = "0%";
+      fill.setAttribute("aria-label", `${item.title} ${item.value}`);
+      track.appendChild(fill);
+
+      const foot = document.createElement("div");
+      foot.className = "emotion-index-foot";
+      const level = document.createElement("span");
+      level.className = "emotion-index-level";
+      level.textContent = item.level;
+      const copy = document.createElement("p");
+      copy.textContent = item.text;
+      foot.append(level, copy);
+
+      card.append(head, track, foot);
+      requestAnimationFrame(() => { fill.style.width = `${item.value}%`; });
       return card;
     }));
 
@@ -153,7 +191,6 @@ export class Renderer {
       evidence.appendChild(card);
     }
 
-    appendParagraphs(el("endingCopy"), result.ending);
     appendParagraphs(el("psychologyCopy"), result.psychology);
     appendParagraphs(el("historyCopy"), result.history);
 

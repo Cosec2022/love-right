@@ -4,7 +4,7 @@
   "brand": "CosecLab",
   "type": "interactive-story-platform",
   "status": "engine-alpha",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "url": "https://love-right.coseclab.dev",
   "description": "可批量承载沉浸式恋爱故事、条件分支、跨故事人格投射与动态结果生成的内容引擎。",
   "currentStory": "story-01",

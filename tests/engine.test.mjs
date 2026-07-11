@@ -54,7 +54,11 @@ test("all published stories complete in exactly 18 answers and build spatial res
     assert.ok(result.memory.title, `${story.id}: memory title`);
     assert.ok(result.memory.hook, `${story.id}: memory hook`);
     assert.equal(result.memory.insights.length, 3, `${story.id}: three memorable insights`);
+    assert.equal(result.memory.indices.length, 6, `${story.id}: six emotional indices`);
     assert.equal(result.memory.moves.length, 4, `${story.id}: four relationship moves`);
+    const indexValues = result.memory.indices.map((item) => item.value);
+    assert.ok(indexValues.every((value) => value >= 18 && value <= 92), `${story.id}: emotional index range`);
+    assert.ok(Math.max(...indexValues) - Math.min(...indexValues) >= 20, `${story.id}: emotional indices need contrast`);
     assert.equal(result.evidence.length, 3, `${story.id}: three story moments`);
     assert.equal(Object.keys(result.traits).length, 16, story.id);
     assert.equal(Object.keys(result.meters).length, 8, story.id);
@@ -150,7 +154,17 @@ test("memory-first titles stay distinct and avoid parameter-style naming", async
       titles.push(result.memory.title);
       assert.equal(/型$/.test(result.memory.title), false, `${story.id}: ${result.memory.title}`);
       assert.equal(result.memory.title.includes("分"), false, `${story.id}: ${result.memory.title}`);
+      assert.notEqual(result.memory.title, "最想被坚定选择的人", `${story.id}: awkward legacy title`);
     }
     assert.ok(new Set(titles).size >= 3, `${story.id}: ${titles.join(",")}`);
+  }
+});
+
+
+test("romantic ending is first-class and substantially written", async () => {
+  for (const { story, results } of publishedPackages) {
+    const result = new ResultEngine(story, results, new ScoreEngine(story)).build(completeWithPattern(story, 0).state);
+    assert.ok(result.ending.length >= 2, `${story.id}: ending has scene and echo`);
+    assert.ok(result.ending[0].length >= 80, `${story.id}: ending should carry a full romantic scene`);
   }
 });
