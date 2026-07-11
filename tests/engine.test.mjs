@@ -168,3 +168,83 @@ test("romantic ending is first-class and substantially written", async () => {
     assert.ok(result.ending[0].length >= 80, `${story.id}: ending should carry a full romantic scene`);
   }
 });
+
+test("new male stories have real plot-dependent branches", async () => {
+  const competition = packages.find(({ story }) => story.id === "story-05").story;
+  const backupTargets = competition.scenes.find((scene) => scene.id === "s08").choices.map((choice) => choice.next);
+  assert.equal(new Set(backupTargets).size, 4, "story-05 backup decision must change the next scene");
+
+  const anonymous = packages.find(({ story }) => story.id === "story-06").story;
+  const revealTargets = anonymous.scenes.find((scene) => scene.id === "s15").choices.map((choice) => choice.next);
+  assert.equal(new Set(revealTargets).size, 4, "story-06 reveal decision must change the identity scene");
+});
+
+test("new male-target stories use female leads and private-type attraction copy", async () => {
+  const maleStories = publishedPackages.map(({ story }) => story).filter((story) => ["story-05", "story-06"].includes(story.id));
+  assert.equal(maleStories.length, 2);
+  for (const story of maleStories) {
+    assert.match(story.metadata.subtitle, /她/);
+    const opening = story.scenes.slice(0, 3).flatMap((scene) => scene.content.map((item) => item.text)).join(" ");
+    assert.match(opening, /类型|注意|吸引|好看/);
+  }
+});
+
+test("emotional aftermath is carried into the next scene and restored by back", () => {
+  const { story } = packages.find(({ story }) => story.id === "story-01");
+  const engine = new StoryEngine(story, { store: memoryStore() });
+  engine.start();
+  while (engine.getCurrentScene().id !== "s08_name") engine.choose(engine.getCurrentScene().choices[0].id);
+  const before = structuredClone(engine.state);
+  engine.choose("b");
+  const next = engine.getCurrentScene();
+  assert.equal(next.id, "s09_emotion");
+  assert.equal(next.content[0].type, "continuity");
+  assert.match(next.content[0].text, /距离|不舒服|冷/);
+  assert.ok(engine.state.relationship.guard !== before.relationship.guard || engine.state.relationship.hurt !== before.relationship.hurt);
+  assert.equal(engine.back(), true);
+  assert.deepEqual(engine.state.relationship, before.relationship);
+  assert.equal(engine.state.pendingAftermath, before.pendingAftermath);
+});
+
+test("high-stakes scenes explicitly acknowledge every user response", () => {
+  const expected = {
+    "story-01": ["s08_name", "s10_confession", "s12_cancel", "s16_missing"],
+    "story-02": ["s09", "s13", "s15"],
+    "story-03": ["s09", "s13", "s16"],
+    "story-04": ["s08", "s13", "s15"],
+    "story-05": ["s08", "s10", "s13", "s15"],
+    "story-06": ["s07", "s08", "s10", "s13", "s15"]
+  };
+  for (const { story } of publishedPackages) {
+    for (const sceneId of expected[story.id] ?? []) {
+      const scene = story.scenes.find((item) => item.id === sceneId);
+      assert.ok(scene, `${story.id}/${sceneId}`);
+      for (const choice of scene.choices) {
+        assert.ok(choice.aftermath?.length >= 24, `${story.id}/${sceneId}/${choice.id} needs emotional follow-through`);
+      }
+    }
+  }
+});
+
+test("active, cautious, warm-to-cold and cold-to-warm routes leave distinct emotional climates", () => {
+  const signatures = [];
+  const { story } = packages.find(({ story }) => story.id === "story-05");
+  const patterns = [
+    [0, 0],
+    [1, 1],
+    [0, 3],
+    [3, 0]
+  ];
+  for (const [firstHalf, secondHalf] of patterns) {
+    const engine = new StoryEngine(story, { store: memoryStore() });
+    engine.start();
+    while (!engine.state.complete) {
+      const scene = engine.getCurrentScene();
+      const index = scene.slot <= 9 ? firstHalf : secondHalf;
+      engine.choose(scene.choices[Math.min(index, scene.choices.length - 1)].id);
+    }
+    const r = engine.state.relationship;
+    signatures.push([r.warmth, r.trust, r.guard, r.hurt, r.tension, r.repair].map((v) => v.toFixed(2)).join("|"));
+  }
+  assert.equal(new Set(signatures).size, 4, signatures.join("\n"));
+});

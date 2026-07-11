@@ -3,43 +3,123 @@
   "$id": "https://love-right.coseclab.dev/schemas/story.schema.json",
   "title": "Love Right Spatial Story Package v2",
   "type": "object",
-  "required": ["schemaVersion", "id", "slug", "metadata", "space", "traits", "initialScene", "scenes"],
+  "required": [
+    "schemaVersion",
+    "id",
+    "slug",
+    "metadata",
+    "space",
+    "traits",
+    "initialScene",
+    "scenes"
+  ],
   "properties": {
-    "schemaVersion": {"const": 2},
-    "id": {"type": "string", "minLength": 1},
-    "slug": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$"},
-    "status": {"enum": ["draft", "published", "archived"]},
-    "locale": {"type": "string"},
+    "schemaVersion": {
+      "const": 2
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "published",
+        "archived"
+      ]
+    },
+    "locale": {
+      "type": "string"
+    },
     "metadata": {
       "type": "object",
-      "required": ["series", "title", "subtitle", "description", "tags", "disclaimer"],
+      "required": [
+        "series",
+        "title",
+        "subtitle",
+        "description",
+        "tags",
+        "disclaimer"
+      ],
       "properties": {
-        "series": {"type": "string"},
-        "title": {"type": "string"},
-        "subtitle": {"type": "string"},
-        "description": {"type": "string"},
-        "estimatedMinutes": {"type": "integer", "minimum": 1},
-        "coverTheme": {"type": "string"},
-        "audience": {"enum": ["female", "male", "all"]},
-        "tags": {"type": "array", "items": {"type": "string"}},
-        "disclaimer": {"type": "string"}
+        "series": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "estimatedMinutes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "coverTheme": {
+          "type": "string"
+        },
+        "audience": {
+          "enum": [
+            "female",
+            "male",
+            "all"
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "disclaimer": {
+          "type": "string"
+        }
       },
       "additionalProperties": true
     },
     "space": {
       "type": "object",
-      "required": ["version", "axes", "contexts"],
+      "required": [
+        "version",
+        "axes",
+        "contexts"
+      ],
       "properties": {
-        "version": {"type": "integer", "minimum": 2},
+        "version": {
+          "type": "integer",
+          "minimum": 2
+        },
         "axes": {
           "type": "array",
           "minItems": 1,
           "items": {
             "type": "object",
-            "required": ["id", "label", "low", "high"],
+            "required": [
+              "id",
+              "label",
+              "low",
+              "high"
+            ],
             "properties": {
-              "id": {"type": "string"}, "label": {"type": "string"},
-              "low": {"type": "string"}, "high": {"type": "string"}
+              "id": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "low": {
+                "type": "string"
+              },
+              "high": {
+                "type": "string"
+              }
             },
             "additionalProperties": false
           }
@@ -49,12 +129,24 @@
           "minItems": 1,
           "items": {
             "type": "object",
-            "required": ["id", "label"],
-            "properties": {"id": {"type": "string"}, "label": {"type": "string"}},
+            "required": [
+              "id",
+              "label"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              }
+            },
             "additionalProperties": false
           }
         },
-        "config": {"type": "object"}
+        "config": {
+          "type": "object"
+        }
       },
       "additionalProperties": false
     },
@@ -63,48 +155,137 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["id", "label"],
-        "properties": {"id": {"type": "string"}, "label": {"type": "string"}},
+        "required": [
+          "id",
+          "label"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          }
+        },
         "additionalProperties": false
       }
     },
-    "initialScene": {"type": "string"},
-    "scenes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/scene"}}
+    "initialScene": {
+      "type": "string"
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/scene"
+      }
+    }
   },
   "$defs": {
     "condition": {
       "type": "object",
       "properties": {
-        "all": {"type": "array", "items": {"$ref": "#/$defs/condition"}},
-        "any": {"type": "array", "items": {"$ref": "#/$defs/condition"}},
-        "not": {"$ref": "#/$defs/condition"},
-        "path": {"type": "string"}, "op": {"type": "string"}, "value": {},
-        "flag": {"type": "string"}, "trait": {"type": "string"}, "rawTrait": {"type": "string"},
-        "meter": {"type": "string"}, "outcome": {}, "archetype": {}, "visited": {"type": "string"},
-        "answer": {"type": "object"},
-        "equals": {}, "notEquals": {}, "gte": {"type": "number"}, "lte": {"type": "number"},
-        "gt": {"type": "number"}, "lt": {"type": "number"},
-        "in": {"type": "array"}, "notIn": {"type": "array"}, "default": {"const": true}
+        "all": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/condition"
+          }
+        },
+        "any": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/condition"
+          }
+        },
+        "not": {
+          "$ref": "#/$defs/condition"
+        },
+        "path": {
+          "type": "string"
+        },
+        "op": {
+          "type": "string"
+        },
+        "value": {},
+        "flag": {
+          "type": "string"
+        },
+        "trait": {
+          "type": "string"
+        },
+        "rawTrait": {
+          "type": "string"
+        },
+        "meter": {
+          "type": "string"
+        },
+        "outcome": {},
+        "archetype": {},
+        "visited": {
+          "type": "string"
+        },
+        "answer": {
+          "type": "object"
+        },
+        "equals": {},
+        "notEquals": {},
+        "gte": {
+          "type": "number"
+        },
+        "lte": {
+          "type": "number"
+        },
+        "gt": {
+          "type": "number"
+        },
+        "lt": {
+          "type": "number"
+        },
+        "in": {
+          "type": "array"
+        },
+        "notIn": {
+          "type": "array"
+        },
+        "default": {
+          "const": true
+        }
       },
       "additionalProperties": true
     },
     "next": {
       "oneOf": [
-        {"type": "string"},
+        {
+          "type": "string"
+        },
         {
           "type": "object",
-          "required": ["default"],
+          "required": [
+            "default"
+          ],
           "properties": {
             "cases": {
               "type": "array",
               "items": {
                 "type": "object",
-                "required": ["when", "to"],
-                "properties": {"when": {"$ref": "#/$defs/condition"}, "to": {"type": "string"}},
+                "required": [
+                  "when",
+                  "to"
+                ],
+                "properties": {
+                  "when": {
+                    "$ref": "#/$defs/condition"
+                  },
+                  "to": {
+                    "type": "string"
+                  }
+                },
                 "additionalProperties": false
               }
             },
-            "default": {"type": "string"}
+            "default": {
+              "type": "string"
+            }
           },
           "additionalProperties": false
         }
@@ -112,49 +293,245 @@
     },
     "choice": {
       "type": "object",
-      "required": ["id", "text"],
+      "required": [
+        "id",
+        "text"
+      ],
       "properties": {
-        "id": {"type": "string"}, "text": {"type": "string"}, "subtext": {"type": "string"},
-        "vector": {"type": "object", "additionalProperties": {"type": "number", "minimum": -1, "maximum": 1}},
-        "effects": {"type": "object", "additionalProperties": {"type": "number"}},
-        "context": {"type": "string"},
-        "intensity": {"type": "number", "exclusiveMinimum": 0, "maximum": 2},
-        "confidence": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "subtext": {
+          "type": "string"
+        },
+        "vector": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": -1,
+            "maximum": 1
+          }
+        },
+        "effects": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "context": {
+          "type": "string"
+        },
+        "intensity": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 2
+        },
+        "confidence": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
         "cross": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["axes", "value"],
+            "required": [
+              "axes",
+              "value"
+            ],
             "properties": {
-              "axes": {"type": "array", "prefixItems": [{"type": "string"}, {"type": "string"}], "minItems": 2, "maxItems": 2},
-              "value": {"type": "number", "minimum": -1, "maximum": 1},
-              "weight": {"type": "number"}
+              "axes": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "value": {
+                "type": "number",
+                "minimum": -1,
+                "maximum": 1
+              },
+              "weight": {
+                "type": "number"
+              }
             },
             "additionalProperties": false
           }
         },
-        "setFlags": {"type": "object"}, "unsetFlags": {"type": "array", "items": {"type": "string"}},
-        "outcome": {"type": "string"}, "next": {"$ref": "#/$defs/next"}
+        "setFlags": {
+          "type": "object"
+        },
+        "unsetFlags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "outcome": {
+          "type": "string"
+        },
+        "next": {
+          "$ref": "#/$defs/next"
+        },
+        "relationship": {
+          "type": "object",
+          "properties": {
+            "warmth": {
+              "type": "number",
+              "minimum": -2,
+              "maximum": 2
+            },
+            "trust": {
+              "type": "number",
+              "minimum": -2,
+              "maximum": 2
+            },
+            "guard": {
+              "type": "number",
+              "minimum": -2,
+              "maximum": 2
+            },
+            "hurt": {
+              "type": "number",
+              "minimum": -2,
+              "maximum": 2
+            },
+            "tension": {
+              "type": "number",
+              "minimum": -2,
+              "maximum": 2
+            },
+            "repair": {
+              "type": "number",
+              "minimum": -2,
+              "maximum": 2
+            }
+          },
+          "additionalProperties": false
+        },
+        "aftermath": {
+          "type": "string",
+          "minLength": 1
+        }
       },
       "additionalProperties": false
     },
     "scene": {
       "type": "object",
-      "required": ["id", "slot", "chapter", "content", "prompt", "choices"],
+      "required": [
+        "id",
+        "slot",
+        "chapter",
+        "content",
+        "prompt",
+        "choices"
+      ],
       "properties": {
-        "id": {"type": "string"}, "slot": {"type": "integer", "minimum": 1},
-        "chapter": {"type": "string"}, "prompt": {"type": "string"}, "note": {"type": "string"},
-        "context": {"type": "string"},
+        "id": {
+          "type": "string"
+        },
+        "slot": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "chapter": {
+          "type": "string"
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "context": {
+          "type": "string"
+        },
         "content": {
-          "type": "array", "minItems": 1,
+          "type": "array",
+          "minItems": 1,
           "items": {
-            "type": "object", "required": ["type", "text"],
-            "properties": {"type": {"enum": ["paragraph", "quote"]}, "text": {"type": "string"}},
-            "additionalProperties": false
+            "$ref": "#/$defs/contentBlock"
           }
         },
-        "choices": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/choice"}},
-        "next": {"$ref": "#/$defs/next"}
+        "choices": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "#/$defs/choice"
+          }
+        },
+        "next": {
+          "$ref": "#/$defs/next"
+        },
+        "variants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "when"
+            ],
+            "properties": {
+              "when": {
+                "type": "object"
+              },
+              "content": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/contentBlock"
+                }
+              },
+              "prependContent": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/contentBlock"
+                }
+              },
+              "appendContent": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/contentBlock"
+                }
+              },
+              "prompt": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "contentBlock": {
+      "type": "object",
+      "required": [
+        "type",
+        "text"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "paragraph",
+            "quote",
+            "continuity"
+          ]
+        },
+        "text": {
+          "type": "string"
+        }
       },
       "additionalProperties": false
     }

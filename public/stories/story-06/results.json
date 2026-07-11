@@ -1,0 +1,798 @@
+{
+  "schemaVersion": 2,
+  "storyId": "story-06",
+  "spatialModel": {
+    "mode": "cluster",
+    "blendThreshold": 0.0065,
+    "weights": {
+      "distance": 1.0
+    },
+    "blendPairs": [
+      [
+        "clear-slow",
+        "steady-confirm"
+      ],
+      [
+        "clear-slow",
+        "free-close"
+      ],
+      [
+        "clear-slow",
+        "chosen-sensitive"
+      ],
+      [
+        "clear-slow",
+        "direct-pursuit"
+      ],
+      [
+        "clear-slow",
+        "repair-nurturer"
+      ],
+      [
+        "steady-confirm",
+        "chosen-sensitive"
+      ],
+      [
+        "steady-confirm",
+        "repair-nurturer"
+      ],
+      [
+        "steady-confirm",
+        "romantic-resonance"
+      ],
+      [
+        "romantic-resonance",
+        "push-pull"
+      ],
+      [
+        "romantic-resonance",
+        "direct-pursuit"
+      ],
+      [
+        "romantic-resonance",
+        "free-close"
+      ],
+      [
+        "direct-pursuit",
+        "repair-nurturer"
+      ],
+      [
+        "direct-pursuit",
+        "chosen-sensitive"
+      ],
+      [
+        "free-close",
+        "push-pull"
+      ],
+      [
+        "chosen-sensitive",
+        "push-pull"
+      ],
+      [
+        "chosen-sensitive",
+        "repair-nurturer"
+      ]
+    ]
+  },
+  "meters": [
+    {
+      "id": "approach",
+      "label": "靠近主动",
+      "components": [
+        {
+          "trait": "approach"
+        }
+      ]
+    },
+    {
+      "id": "clarity",
+      "label": "关系清晰",
+      "components": [
+        {
+          "trait": "certainty",
+          "weight": 1.2
+        },
+        {
+          "trait": "expression",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "id": "romance",
+      "label": "浪漫投射",
+      "components": [
+        {
+          "trait": "idealization",
+          "weight": 1.2
+        },
+        {
+          "trait": "novelty",
+          "weight": 0.6
+        }
+      ]
+    },
+    {
+      "id": "judgment",
+      "label": "行动判断",
+      "components": [
+        {
+          "trait": "discernment",
+          "weight": 1.2
+        },
+        {
+          "trait": "trust",
+          "inverse": true,
+          "weight": 0.35
+        }
+      ]
+    },
+    {
+      "id": "securityNeed",
+      "label": "安全确认",
+      "components": [
+        {
+          "trait": "reassurance"
+        },
+        {
+          "trait": "validation"
+        },
+        {
+          "trait": "abandonment",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "id": "expression",
+      "label": "表达直接",
+      "components": [
+        {
+          "trait": "expression"
+        },
+        {
+          "trait": "conflict",
+          "weight": 0.65
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "label": "自我边界",
+      "components": [
+        {
+          "trait": "autonomy"
+        },
+        {
+          "trait": "discernment",
+          "weight": 0.35
+        }
+      ]
+    },
+    {
+      "id": "longterm",
+      "label": "长期能力",
+      "components": [
+        {
+          "trait": "commitment"
+        },
+        {
+          "trait": "repair",
+          "weight": 0.75
+        },
+        {
+          "trait": "care",
+          "weight": 0.55
+        }
+      ]
+    }
+  ],
+  "archetypes": [
+    {
+      "id": "clear-slow",
+      "title": "清醒慢热型",
+      "tagline": "你会心动，但不会因为心动取消判断。",
+      "center": {
+        "approach": 0.0932,
+        "trust": 0.2768,
+        "certainty": 0.335,
+        "abandonment": 0.2013,
+        "idealization": 0.0215,
+        "novelty": 0.252,
+        "discernment": 0.3675,
+        "jealousy": -0.2572,
+        "expression": 0.2656,
+        "conflict": 0.0,
+        "repair": 0.1173,
+        "reassurance": 0.0851,
+        "autonomy": 0.3989,
+        "commitment": 0.0548,
+        "care": 0.2963,
+        "validation": 0.2189
+      },
+      "bias": 0,
+      "tags": [
+        "慢热",
+        "看行动",
+        "保留边界",
+        "一旦确认很认真"
+      ]
+    },
+    {
+      "id": "steady-confirm",
+      "title": "稳定确认型",
+      "tagline": "你真正会留下的关系，必须既有喜欢，也有明确的位置。",
+      "center": {
+        "approach": 0.0518,
+        "trust": 0.2485,
+        "certainty": 0.3853,
+        "abandonment": 0.2057,
+        "idealization": -0.0307,
+        "novelty": 0.0335,
+        "discernment": 0.3951,
+        "jealousy": 0.1556,
+        "expression": 0.2577,
+        "conflict": 0.0,
+        "repair": 0.1998,
+        "reassurance": 0.1884,
+        "autonomy": 0.4081,
+        "commitment": 0.1453,
+        "care": 0.3073,
+        "validation": 0.2436
+      },
+      "bias": 0,
+      "tags": [
+        "需要明确",
+        "重视承诺",
+        "稳定回应",
+        "不爱猜"
+      ]
+    },
+    {
+      "id": "romantic-resonance",
+      "title": "浪漫共振型",
+      "tagline": "你会被细节、氛围和只属于两个人的暗号打动。",
+      "center": {
+        "approach": 0.1312,
+        "trust": 0.2695,
+        "certainty": 0.1168,
+        "abandonment": 0.198,
+        "idealization": 0.0541,
+        "novelty": 0.2989,
+        "discernment": 0.3821,
+        "jealousy": 0.1456,
+        "expression": 0.2484,
+        "conflict": 0.0,
+        "repair": 0.2098,
+        "reassurance": 0.1779,
+        "autonomy": 0.3866,
+        "commitment": 0.0773,
+        "care": 0.3042,
+        "validation": 0.1334
+      },
+      "bias": 0,
+      "tags": [
+        "吃细节",
+        "重氛围",
+        "心动记忆",
+        "愿意相信感觉"
+      ]
+    },
+    {
+      "id": "direct-pursuit",
+      "title": "主动直球型",
+      "tagline": "你宁愿认真靠近，也不愿把喜欢耗在无限试探里。",
+      "center": {
+        "approach": 0.2275,
+        "trust": 0.33,
+        "certainty": 0.3792,
+        "abandonment": 0.1104,
+        "idealization": 0.0607,
+        "novelty": 0.2653,
+        "discernment": 0.3446,
+        "jealousy": -0.2346,
+        "expression": 0.3367,
+        "conflict": 0.0,
+        "repair": 0.2276,
+        "reassurance": 0.0873,
+        "autonomy": 0.3838,
+        "commitment": 0.2424,
+        "care": 0.2955,
+        "validation": 0.2482
+      },
+      "bias": 0,
+      "tags": [
+        "敢靠近",
+        "会问清",
+        "不玩消失",
+        "行动诚实"
+      ]
+    },
+    {
+      "id": "free-close",
+      "title": "自由靠近型",
+      "tagline": "你可以很亲密，但爱情不能把你缩小成只剩关系。",
+      "center": {
+        "approach": 0.1701,
+        "trust": 0.2479,
+        "certainty": 0.3066,
+        "abandonment": 0.1752,
+        "idealization": 0.0213,
+        "novelty": 0.2789,
+        "discernment": 0.3756,
+        "jealousy": 0.1503,
+        "expression": 0.255,
+        "conflict": 0.0,
+        "repair": 0.2307,
+        "reassurance": -0.0704,
+        "autonomy": 0.4134,
+        "commitment": 0.1418,
+        "care": 0.3231,
+        "validation": 0.1392
+      },
+      "bias": 0,
+      "tags": [
+        "需要空间",
+        "不爱查岗",
+        "平等靠近",
+        "各自有生活"
+      ]
+    },
+    {
+      "id": "chosen-sensitive",
+      "title": "偏爱确认型",
+      "tagline": "你最深的需要不是被追，而是被持续、明确地选择。",
+      "center": {
+        "approach": 0.1644,
+        "trust": 0.2623,
+        "certainty": 0.4004,
+        "abandonment": 0.2012,
+        "idealization": 0.0645,
+        "novelty": 0.2935,
+        "discernment": 0.3456,
+        "jealousy": 0.1512,
+        "expression": 0.29,
+        "conflict": 0.0,
+        "repair": 0.0006,
+        "reassurance": 0.2017,
+        "autonomy": 0.3748,
+        "commitment": 0.2153,
+        "care": 0.2892,
+        "validation": 0.2468
+      },
+      "bias": 0,
+      "tags": [
+        "在意明确偏爱",
+        "希望被放在心上",
+        "敏感但不矫情",
+        "回应要稳定"
+      ]
+    },
+    {
+      "id": "repair-nurturer",
+      "title": "温柔修复型",
+      "tagline": "你相信好的关系不是不出问题，而是两个人愿意一起把问题处理完。",
+      "center": {
+        "approach": 0.2072,
+        "trust": 0.3047,
+        "certainty": 0.3943,
+        "abandonment": 0.1489,
+        "idealization": 0.06,
+        "novelty": 0.2932,
+        "discernment": 0.3823,
+        "jealousy": 0.1609,
+        "expression": 0.3353,
+        "conflict": 0.0,
+        "repair": 0.2761,
+        "reassurance": 0.2061,
+        "autonomy": 0.3878,
+        "commitment": 0.2333,
+        "care": 0.2927,
+        "validation": 0.268
+      },
+      "bias": 0,
+      "tags": [
+        "愿意修复",
+        "照顾细节",
+        "有长期能力",
+        "容易多做一步"
+      ]
+    },
+    {
+      "id": "push-pull",
+      "title": "反差拉扯型",
+      "tagline": "你不是没有边界，而是心动和自我保护经常同时发生。",
+      "center": {
+        "approach": 0.0213,
+        "trust": 0.2111,
+        "certainty": 0.3652,
+        "abandonment": 0.2451,
+        "idealization": 0.0252,
+        "novelty": 0.2798,
+        "discernment": 0.3998,
+        "jealousy": 0.1736,
+        "expression": 0.2278,
+        "conflict": 0.0,
+        "repair": 0.1244,
+        "reassurance": 0.1798,
+        "autonomy": 0.415,
+        "commitment": -0.0373,
+        "care": 0.2868,
+        "validation": 0.2452
+      },
+      "bias": 0,
+      "tags": [
+        "先退后靠近",
+        "容易反复确认",
+        "理智与心动并存",
+        "需要稳定的人"
+      ]
+    }
+  ],
+  "sections": {
+    "ending": {
+      "byOutcome": {
+        "together": "你没有再录一段精心准备的语音，而是直接拨通电话。她接起时先笑了一声：“终于不用等系统倒计时了。”你们聊到店外天色变亮，声音里偶尔有停顿、走神和没组织好的句子，却比那七段完美的三分钟更让人安心。后来你第一次推开唱片店的门，她抬头看你，现实中的她仍然恰好符合你的类型，而你终于喜欢上了那个不需要剪辑的她。",
+        "continue": "你回复了一段没有提前排练的语音，承认自己需要重新认识。她没有追问感情结果，只约你第二天在店里喝杯咖啡。没有匿名保护以后，你们的谈话反而慢了下来：会冷场，会意见不同，也会发现新的共同点。那七天没有变成承诺，只成为一扇门。你们从门后走出来，决定用真实生活验证，这份心动能不能留下。",
+        "terms": "你们约定先做现实中的朋友，不让七天的浓度替未来作答。她仍会给你推荐唱片，你也不再从每首歌里寻找暗号。某个普通的关店夜晚，她忽然问：“今天可以多聊三分钟吗？”你点头。关系没有被强行命名，却开始拥有比匿名更踏实的日常，也让喜欢有机会在不被催促的地方重新生长。",
+        "pause": "你告诉她，这七天很特别，但自己不准备把它带进现实。她没有追问，也没有把你的选择理解成否定。最后一段语音里，她说：“那就让它停在最合适的地方。”后来你偶尔经过那家唱片店，隔着玻璃看见她低头整理唱片。你没有进去，却不再觉得遗憾。有些关系并非因为没有继续就失去意义，它只是让你听见了自己真正渴望怎样被理解。"
+      },
+      "appendRules": [
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "steady"
+          },
+          "text": "她没有用距离考验你，只把说过的每一件事慢慢做到。你喜欢的，是这种不用追赶也不会突然消失的认真。"
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "witty"
+          },
+          "text": "她总能在最紧张的时刻让你笑，却从不把重要问题变成玩笑。轻松和可靠，在她身上恰好同时存在。"
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "gentle"
+          },
+          "text": "她会注意到你的状态，也尊重你什么时候需要安静。那种不打扰的体贴，比热烈的追问更让你想靠近。"
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "direct"
+          },
+          "text": "她没有把心意藏在暗示里，只清楚告诉你自己想要什么。你因此不必表演洒脱，也不必反复猜测。"
+        },
+        {
+          "default": true,
+          "text": "真正让你心动的，不只是她出现得特别，而是她愿意和你一起把这段喜欢带进现实。"
+        }
+      ]
+    },
+    "psychology": {
+      "byArchetype": {
+        "clear-slow": "你不是难以心动，而是不愿意用想象替别人补完人品。你会观察一个人怎样处理边界、承诺和麻烦；只有行动长期一致，你才会把柔软交出来。",
+        "steady-confirm": "你真正需要的是可理解、可落地的关系。你可以接受忙碌和现实，但不愿长期依靠猜测维持安全感。对方主动说明、兑现安排，会比偶尔的浓烈更打动你。",
+        "romantic-resonance": "你会记住别人忽略的小事：一句话的停顿、递过来的东西、只属于两个人的暗号。你不是只爱浪漫，而是通过这些细节确认彼此是否真的看见了对方。",
+        "direct-pursuit": "你对喜欢相对诚实。你可以承担靠近以后不如预期，却很难接受两个人明明在意，还要靠冷淡和试探维持体面。你欣赏同样敢于表达的人。",
+        "free-close": "你希望爱情让生活变大，而不是让生活只剩爱情。你能投入，也需要独处、朋友、工作和自己的节奏。越不试图控制你的人，越容易得到你的主动靠近。",
+        "chosen-sensitive": "你在意的不是形式上的追求，而是稳定的优先级。偶尔热烈不难，真正让你放心的是：关系出现现实压力时，对方仍然没有把你放回可有可无的位置。",
+        "repair-nurturer": "你对关系有很强的维护能力。你会解释、体谅，也愿意在冲突后多走一步。你的优势是长情，风险是容易把本应由两个人完成的修复独自扛完。",
+        "push-pull": "你会在靠近时保留退路，也会在准备离开时重新想起那些好。不是你故意制造拉扯，而是心动和自我保护常常同时启动。真正适合你的人需要稳定，而不是更会制造悬念。"
+      },
+      "appendRules": [
+        {
+          "when": {
+            "path": "spatial.trend.approach",
+            "op": ">=",
+            "value": 0.18
+          },
+          "text": "你在故事后半段明显比开始时更愿意靠近。你并非被第一眼征服，而是会被持续一致的细节慢慢说服。"
+        },
+        {
+          "when": {
+            "path": "spatial.trend.approach",
+            "op": "<=",
+            "value": -0.18
+          },
+          "text": "越接近现实选择，你反而越会收回冲动。你需要确认对方能承担关系，而不只是擅长让人心动。"
+        },
+        {
+          "when": {
+            "trait": "autonomy",
+            "gte": 62
+          },
+          "text": "你需要亲密，也需要完整的自我。对方越尊重你的节奏，你越可能主动把他放进生活。"
+        },
+        {
+          "default": true,
+          "text": "你在靠近与保留之间相对平衡，不会立刻交出全部，也不需要靠故意冷淡证明自己。"
+        }
+      ]
+    },
+    "history": {
+      "groups": [
+        [
+          {
+            "when": {
+              "all": [
+                {
+                  "trait": "reassurance",
+                  "gte": 58
+                },
+                {
+                  "trait": "abandonment",
+                  "gte": 56
+                }
+              ]
+            },
+            "text": "你过去可能经历过回应突然变少、关系迟迟不被定义，或总要从细节里判断对方还在不在意。这让你后来更需要明确，也更怕自己显得太需要。"
+          },
+          {
+            "when": {
+              "all": [
+                {
+                  "trait": "autonomy",
+                  "gte": 60
+                },
+                {
+                  "trait": "discernment",
+                  "gte": 58
+                }
+              ]
+            },
+            "text": "你可能经历过一段让你觉得被管束、被要求调整太多，或在失望后才发现自己早已让出边界的关系。因此你后来更习惯先观察，再决定是否投入。"
+          },
+          {
+            "when": {
+              "trait": "idealization",
+              "gte": 61
+            },
+            "text": "你可能曾经喜欢过一个并没有真正进入生活的人。关系未必正式开始，但某些细节和未完成感留了很久，让你知道想象也会形成真实的情绪。"
+          },
+          {
+            "default": true,
+            "text": "你过去大概不总是遇到坏人，更像遇到过“彼此有好感，但表达方式和节奏不匹配”的关系。你能理解很多事，却会在小失望累积后突然安静。"
+          }
+        ],
+        [
+          {
+            "when": {
+              "all": [
+                {
+                  "trait": "care",
+                  "gte": 58
+                },
+                {
+                  "trait": "repair",
+                  "gte": 58
+                }
+              ]
+            },
+            "text": "你往往愿意替关系多做一步：解释、照顾、等对方缓过来。它让你很有长期能力，也可能让你忽略，对方是否在同样认真地维护你。"
+          },
+          {
+            "when": {
+              "trait": "conflict",
+              "lte": 44
+            },
+            "text": "你不喜欢在情绪最满时争论，经常先退开整理。别人可能误以为你不在意，其实你是在确认说出口以后会不会让关系更糟。"
+          },
+          {
+            "when": {
+              "trait": "discernment",
+              "gte": 62
+            },
+            "text": "一旦某个行为改变了你对一个人的判断，你很难仅靠解释恢复信任。别人以为你突然冷了，实际上你通常已经观察了很久。"
+          },
+          {
+            "default": true,
+            "text": "你不太愿意把自己写成受伤的人，常常先替对方找现实理由。直到某个小细节重复出现，你才承认这段关系可能并不适合。"
+          }
+        ]
+      ]
+    },
+    "future": [
+      {
+        "title": "相遇",
+        "rules": [
+          {
+            "when": {
+              "trait": "novelty",
+              "gte": 58
+            },
+            "text": "下一次让你明显心动的女生，更可能出现在临时出发、朋友组局、展览演出或陌生环境里。你本来没准备开始，注意力却被一个不刻意的细节留住。"
+          },
+          {
+            "when": {
+              "trait": "commitment",
+              "gte": 59
+            },
+            "text": "你更可能通过稳定重复的接触认识下一位重要的女生：同一个项目、朋友的朋友、课程或常去的地方。吸引不是突然失控，而是逐渐确认对方可靠。"
+          },
+          {
+            "default": true,
+            "text": "下一段关系更可能从轻松而自然的相处开始。对方不会一开始就制造巨大情绪，但会让你越来越习惯把日常分享给她。"
+          }
+        ]
+      },
+      {
+        "title": "转折",
+        "rules": [
+          {
+            "when": {
+              "trait": "expression",
+              "gte": 58
+            },
+            "text": "真正的转折来自一次直接谈话。她会把喜欢说清楚，你也不会再用玩笑躲开。关系从可能性变成双方共同承担的选择。"
+          },
+          {
+            "when": {
+              "trait": "reassurance",
+              "gte": 58
+            },
+            "text": "转折发生在你最不确定的时候。她不会只说“别多想”，而会用一个具体安排让你知道，你不是临时选项。"
+          },
+          {
+            "default": true,
+            "text": "转折来自一次并不浪漫的现实事件：计划改变、工作压力、家里有事。你会看到她在麻烦里仍然稳定，于是开始相信关系可以继续。"
+          }
+        ]
+      },
+      {
+        "title": "稳定",
+        "rules": [
+          {
+            "when": {
+              "all": [
+                {
+                  "trait": "autonomy",
+                  "gte": 58
+                },
+                {
+                  "trait": "novelty",
+                  "gte": 55
+                }
+              ]
+            },
+            "text": "稳定后的你们不会每天黏在一起，而是保留各自生活，再不断创造共同经历。关系有空间，也有明确的回程。"
+          },
+          {
+            "when": {
+              "trait": "care",
+              "gte": 58
+            },
+            "text": "稳定后的画面很生活化：顺路带一份吃的、记得重要日子、在彼此忙乱时接住一点。浪漫没有消失，只是变成了长期可见的照顾。"
+          },
+          {
+            "default": true,
+            "text": "稳定后的关系会比你想象中平静。你们不必反复证明爱，却会把未来放进真实日程。你会发现，安心也可以让人持续心动。"
+          }
+        ]
+      }
+    ],
+    "match": {
+      "base": "真正适合你的女生，既能让你有想象，也敢把真实、边界和不完美带进关系。她不需要被你拯救，仍愿意让你参与她的生活。",
+      "appendRules": [
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "steady"
+          },
+          "text": "你会长期欣赏情绪稳定、做事有能力的女生；她不需要依赖你证明价值，也愿意在关系里共同承担。"
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "witty"
+          },
+          "text": "你容易被聪明而松弛的幽默吸引。她能和你互相调侃，但不会用玩笑躲开真正重要的话。"
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "gentle"
+          },
+          "text": "适合你的温柔不是无条件迁就，而是她能看见你的脆弱，又不把照顾变成控制或施舍。"
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "direct"
+          },
+          "text": "你适合和表达清楚的女生相处。她会告诉你喜欢，也会告诉你边界，让主动不再变成猜谜。"
+        },
+        {
+          "when": {
+            "trait": "reassurance",
+            "gte": 58
+          },
+          "text": "她需要愿意主动说明状态，不用失联和冷淡测试你的底线。"
+        },
+        {
+          "when": {
+            "trait": "autonomy",
+            "gte": 58
+          },
+          "text": "她也应当有自己的生活，不会把爱理解成检查、限制或占有。"
+        },
+        {
+          "when": {
+            "trait": "idealization",
+            "gte": 58
+          },
+          "text": "只有务实还不够，她最好保留审美、好奇心和制造共同记忆的能力。"
+        },
+        {
+          "when": {
+            "trait": "commitment",
+            "gte": 59
+          },
+          "text": "最关键的是，她不能只会表达心动，也愿意把未来变成具体安排。"
+        },
+        {
+          "when": {
+            "trait": "expression",
+            "lte": 44
+          },
+          "text": "她最好比你更会把话说开，因为你有时会先观察，等失望积累后才表达。"
+        }
+      ]
+    },
+    "warning": {
+      "rules": [
+        {
+          "when": {
+            "all": [
+              {
+                "trait": "idealization",
+                "gte": 61
+              },
+              {
+                "trait": "discernment",
+                "lte": 48
+              }
+            ]
+          },
+          "text": "你容易把“很懂氛围、很会表达”误认为“有长期能力”。真正要看的是：热烈过去以后，对方是否仍然稳定、透明，并愿意承担不浪漫的部分。"
+        },
+        {
+          "when": {
+            "all": [
+              {
+                "trait": "reassurance",
+                "gte": 59
+              },
+              {
+                "trait": "validation",
+                "gte": 58
+              }
+            ]
+          },
+          "text": "你容易把一次强烈靠近，当成关系已经被确认。请区分“对方此刻很需要你”和“对方长期愿意选择你”；感觉很像，结果却不同。"
+        },
+        {
+          "when": {
+            "trait": "autonomy",
+            "gte": 63
+          },
+          "text": "你容易把所有需要协调的亲密都误判成控制。健康关系确实需要边界，也会要求双方说明、调整和承担；不是所有不方便都代表失去自由。"
+        },
+        {
+          "when": {
+            "trait": "care",
+            "gte": 63
+          },
+          "text": "被需要容易让你迅速建立责任感，但关系的深度不能只由你付出的多少证明。也要看当你需要时，对方能不能稳定地回来。"
+        },
+        {
+          "default": true,
+          "text": "你容易被恰好出现的心动说服，却忽略长期关系还需要回应、边界和节奏匹配。除了问喜不喜欢，也要看彼此是否适合一起处理现实。"
+        }
+      ]
+    }
+  }
+}

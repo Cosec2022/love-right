@@ -9,6 +9,7 @@ const warnings = [];
 const fail = (message) => errors.push(message);
 const warn = (message) => warnings.push(message);
 const readJson = async (file) => JSON.parse(await readFile(file, "utf8"));
+const relationshipKeys = new Set(["warmth", "trust", "guard", "hurt", "tension", "repair"]);
 
 function targetsFrom(next) {
   if (!next) return [];
@@ -94,6 +95,11 @@ async function validateStory(entry) {
         const [left, right] = item.axes ?? [];
         if (!axisIds.has(left) || !axisIds.has(right)) fail(`${entry.id}/${scene.id}/${choice.id}: invalid cross axes.`);
       }
+      for (const [key, value] of Object.entries(choice.relationship ?? {})) {
+        if (!relationshipKeys.has(key)) fail(`${entry.id}/${scene.id}/${choice.id}: unknown relationship key '${key}'.`);
+        if (!Number.isFinite(value) || Math.abs(value) > 2) fail(`${entry.id}/${scene.id}/${choice.id}: relationship '${key}' must be numeric in [-2, 2].`);
+      }
+      if (choice.aftermath !== undefined && String(choice.aftermath).trim().length < 8) fail(`${entry.id}/${scene.id}/${choice.id}: aftermath is too short to carry emotional continuity.`);
     }
   }
 

@@ -897,7 +897,8 @@
             "care": -0.26
           },
           "intensity": 1.03,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你没有把疑问藏起来。接下来的几步路里，气氛不再只是暧昧，而是在等一个清楚的答案。"
         },
         {
           "id": "b",
@@ -917,7 +918,8 @@
             "care": -0.26
           },
           "intensity": 1.13,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你没有追问，可那点不舒服并没有消失。你们继续往前走时，你已经悄悄把距离拉开了一些。"
         },
         {
           "id": "c",
@@ -936,7 +938,8 @@
             "care": 0.78
           },
           "intensity": 1.1,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你决定暂时相信他，也把解释的机会留给了他。只是这份信任还很轻，经不起敷衍。"
         },
         {
           "id": "d",
@@ -956,7 +959,8 @@
             "care": -0.26
           },
           "intensity": 1.03,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "玩笑替你开了口，却没有替你消除介意。你在等他听懂，也在看他会不会认真回答。"
         }
       ],
       "context": "jealousy"
@@ -1109,7 +1113,8 @@
             "validation": 0.78
           },
           "intensity": 1.11,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你愿意把注意力放在现在，但并没有因此忘记，他接下来需要用行动证明自己的选择。"
         },
         {
           "id": "b",
@@ -1131,7 +1136,8 @@
             "validation": -0.23
           },
           "intensity": 1.11,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你理解他的过去，却仍被“替代品”三个字轻轻刺了一下。靠近没有停止，戒备也没有退场。"
         },
         {
           "id": "c",
@@ -1153,7 +1159,8 @@
             "validation": -0.23
           },
           "intensity": 1.06,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你没有接受一个悬而未决的开始。于是你们之间多了一条清楚的线，必须先处理过去，才能继续靠近。"
         },
         {
           "id": "d",
@@ -1175,7 +1182,8 @@
             "validation": -0.32
           },
           "intensity": 1.12,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你把心收回了一点。接下来的沉默不是欲擒故纵，而是你真的需要重新判断这段关系值不值得。"
         }
       ],
       "context": "intimacy"
@@ -1329,7 +1337,8 @@
             "validation": -0.26
           },
           "intensity": 1.09,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你说了没关系，失落却留了下来。凌晨电话响起时，你并没有因为他的声音立刻忘掉那场落空。"
         },
         {
           "id": "b",
@@ -1350,7 +1359,8 @@
             "validation": -0.26
           },
           "intensity": 1.06,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你需要的不是一句抱歉，而是一个能让人相信的原因。电话响起时，问题仍然在那里等他回答。"
         },
         {
           "id": "c",
@@ -1370,7 +1380,8 @@
             "validation": 0.78
           },
           "intensity": 1.04,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你没有回复，也没有替他把事情圆过去。电话响起时，你的沉默仍带着明显的冷意。"
         },
         {
           "id": "d",
@@ -1389,7 +1400,8 @@
             "validation": -0.26
           },
           "intensity": 1.02,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你把自己的夜晚重新安排好，没有让失约夺走全部情绪。电话响起时，你已经没有刚才那么急着等他了。"
         }
       ],
       "context": "intimacy"
@@ -1767,7 +1779,8 @@
             "validation": -0.26
           },
           "intensity": 1.0,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "确认他平安以后，你才允许自己处理那份被晾在原地的不安。关心没有抹掉问题，只让谈话有了开始。"
         },
         {
           "id": "b",
@@ -1787,7 +1800,8 @@
             "validation": -0.26
           },
           "intensity": 1.06,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你把不舒服说得很清楚。接下来的联系不再只靠心动，而要看他是否真的能改变相处方式。"
         },
         {
           "id": "c",
@@ -1806,7 +1820,8 @@
             "validation": -0.26
           },
           "intensity": 0.97,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你没有替他补全解释。关系停在原地，直到他愿意把缺失的部分完整交代出来。"
         },
         {
           "id": "d",
@@ -1826,7 +1841,8 @@
             "validation": 0.78
           },
           "intensity": 1.14,
-          "confidence": 0.92
+          "confidence": 0.92,
+          "aftermath": "你用冷淡保护自己，也让两个人之间的距离真正拉开。之后每一次靠近，都需要比以前更多的诚意。"
         }
       ],
       "context": "commitment"

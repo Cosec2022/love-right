@@ -52,6 +52,32 @@
       "coverTheme": "coffee-film",
       "storyUrl": "./stories/story-04/story.json",
       "resultsUrl": "./stories/story-04/results.json"
+    },
+    {
+      "id": "story-05",
+      "slug": "the-seat-she-won",
+      "status": "published",
+      "title": "她赢走了你最想要的位置",
+      "series": "LOVE RIGHT · STORY 05",
+      "description": "男性视角：当欣赏、竞争和喜欢同时发生，你是在爱她，还是想赢她？",
+      "estimatedMinutes": 10,
+      "audience": "male",
+      "coverTheme": "studio-amber",
+      "storyUrl": "./stories/story-05/story.json",
+      "resultsUrl": "./stories/story-05/results.json"
+    },
+    {
+      "id": "story-06",
+      "slug": "three-minutes-at-one",
+      "status": "published",
+      "title": "凌晨一点，她只给你三分钟",
+      "series": "LOVE RIGHT · STORY 06",
+      "description": "男性视角：先喜欢声音，再遇见现实中的她。你能接受未经剪辑的真实关系吗？",
+      "estimatedMinutes": 10,
+      "audience": "male",
+      "coverTheme": "radio-blue",
+      "storyUrl": "./stories/story-06/story.json",
+      "resultsUrl": "./stories/story-06/results.json"
     }
   ]
 }

@@ -80,6 +80,7 @@ export class Renderer {
     sceneCopy.replaceChildren();
     for (const block of scene.content ?? []) {
       const node = document.createElement(block.type === "quote" ? "blockquote" : "p");
+      if (block.type === "continuity") node.className = "continuity-line";
       node.textContent = block.text;
       sceneCopy.appendChild(node);
     }

@@ -820,3 +820,15 @@
   .emotion-index-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .ending-card { padding: 28px 27px 26px; }
 }
+
+/* v0.5.1: the next scene remembers the emotional temperature of the last choice. */
+.continuity-line {
+  margin: 0 0 1rem;
+  padding: 0.72rem 0.9rem;
+  border-left: 2px solid color-mix(in srgb, var(--accent, #b58a78) 62%, transparent);
+  border-radius: 0 0.55rem 0.55rem 0;
+  background: color-mix(in srgb, var(--paper, #f7f0e8) 72%, transparent);
+  font-size: 0.94rem;
+  line-height: 1.72;
+  opacity: 0.86;
+}
