@@ -8,8 +8,8 @@
     "series": "LOVE RIGHT · STORY 08",
     "title": "婚礼前夜，他从雨里回来",
     "subtitle": "六年没有联系的旧爱，只请求你给他十分钟。",
-    "description": "禁忌之恋：婚礼前夜，未完成的旧爱带着当年缺失的真相回来。你会选择承诺、遗憾，还是第一次替自己决定？",
-    "estimatedMinutes": 13,
+    "description": "婚礼前夜，六年未见的旧爱带着刚修复的录音回来。你可以不见、不听、不原谅；每一次重新靠近，都必须有新的理由。",
+    "estimatedMinutes": 16,
     "coverTheme": "river-wedding",
     "audience": "female",
     "tags": [
@@ -238,81 +238,81 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "婚礼前一晚，你刚把白纱挂好，手机亮起。六年没有联系的周叙只发来一句：“我在楼下。十分钟后走。你不下来，我就把东西交给前台。”"
+          "text": "婚礼前一晚九点半，伴娘在隔壁核对明早六点的化妆流程。你刚把白纱挂好，手机亮起。六年没有联系的周叙发来一句：“我在楼下。十分钟后走。你不下来，我就把东西交给前台。”"
         },
         {
           "type": "paragraph",
-          "text": "他没有说想见你，也没有祝你新婚快乐。窗外的雨把酒店门口照得模糊，你却一眼认出了那把旧黑伞。"
+          "text": "他没有说想见你，也没有祝你新婚快乐。窗外的雨把酒店门口照得模糊，你仍认出了那把旧黑伞。"
         }
       ],
-      "prompt": "你会怎样回应这条消息？",
+      "prompt": "你怎样处理这次突然出现？",
       "choices": [
         {
           "id": "a",
           "text": "披上外套下楼，只给他十分钟",
           "vector": {
-            "idealization": 0.28,
-            "trust": 0.18,
-            "approach": 0.18,
-            "novelty": 0.16
+            "approach": 0.28,
+            "trust": 0.12,
+            "autonomy": 0.22,
+            "novelty": 0.18
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s02",
-          "aftermath": "你给了他十分钟，也给自己一次确认过去的机会。",
+          "aftermath": "你下楼见他，也把十分钟的结束时间说得很清楚。",
           "setFlags": {
-            "appeal": "quiet"
+            "contact_mode": "meet"
           }
         },
         {
           "id": "b",
-          "text": "让他把东西放在前台，不见面",
+          "text": "让前台收下盒子，不见面",
           "vector": {
-            "expression": 0.35,
-            "discernment": 0.26,
-            "approach": 0.2,
-            "certainty": 0.18
+            "autonomy": 0.42,
+            "discernment": 0.32,
+            "approach": -0.26,
+            "certainty": 0.2
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s02",
-          "aftermath": "你保住了边界；他没有继续请求，只把盒子交给前台。",
+          "aftermath": "你把见面从今晚的选项里移除，只允许物品进入房间。",
           "setFlags": {
-            "appeal": "direct"
+            "contact_mode": "frontdesk"
           }
         },
         {
           "id": "c",
-          "text": "先问他带来的是什么",
+          "text": "先让他拍下盒子和标签，再决定要不要收",
           "vector": {
-            "discernment": 0.42,
-            "idealization": 0.18,
-            "trust": 0.16,
-            "novelty": 0.18
+            "discernment": 0.44,
+            "trust": -0.08,
+            "expression": 0.22,
+            "certainty": 0.24
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s02",
-          "aftermath": "你先索取信息，不愿让旧情替你决定。",
+          "aftermath": "你先确认物品和来意；他只发照片，没有借机催你下楼。",
           "setFlags": {
-            "appeal": "focused"
+            "contact_mode": "message"
           }
         },
         {
           "id": "d",
-          "text": "不回复，却站到窗边看着他",
+          "text": "不回复，请前台确认来人，自己站在窗边看",
           "vector": {
-            "trust": 0.38,
-            "commitment": 0.2,
-            "care": 0.16,
-            "approach": 0.14
+            "autonomy": 0.34,
+            "trust": -0.18,
+            "approach": -0.2,
+            "idealization": 0.14
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s02",
-          "aftermath": "你没有回答，但身体比语言更早承认这件事仍会牵动你。",
+          "aftermath": "十分钟后他按原话离开，盒子留在前台，没有第二条催促。",
           "setFlags": {
-            "appeal": "steady"
+            "contact_mode": "observe"
           }
         }
       ]
@@ -320,75 +320,137 @@
     {
       "id": "s02",
       "slot": 2,
-      "chapter": "02｜他仍记得你的动作",
+      "chapter": "02｜盒盖里的旧便签",
       "context": "ambiguity",
       "content": [
         {
           "type": "paragraph",
-          "text": "雨棚下，他看了一眼你握伞的手：“你紧张的时候，拇指会一直蹭无名指。以前没有戒指，现在有了。”"
+          "text": "盒子最终到了你手里。盒盖内侧贴着大学时的旧便签，周叙的字已经褪色：“她紧张时会用拇指蹭无名指。别急着问，先把麦克风递给她。”"
         },
         {
           "type": "paragraph",
-          "text": "他说完便移开目光，没有问你幸不幸福，也没有用回忆逼你解释。"
+          "text": "以前那里没有戒指。现在有了。这个细节来自六年前的共同生活，不是他隔着雨夜重新读懂了你。"
         }
       ],
-      "prompt": "被他这样看见时，你更接近哪种反应？",
+      "variants": [
+        {
+          "when": {
+            "flag": "contact_mode",
+            "equals": "meet"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "雨棚下，周叙把盒子放到你们之间的长椅上，没有越过你划出的十分钟。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "contact_mode",
+            "equals": "frontdesk"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "你回到房间取走前台送来的盒子。周叙已经离开，便签旁只留着一句：“不需要回复。”"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "contact_mode",
+            "equals": "message"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "照片确认无误后，你让前台收下盒子。周叙没有要求见面，只发来开锁密码。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "contact_mode",
+            "equals": "observe"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "前台在十分钟后打来电话，说来人已经走了，只留下一个密封盒。"
+            }
+          ]
+        }
+      ],
+      "prompt": "这个被保存六年的观察，让你首先想到什么？",
       "choices": [
         {
           "id": "a",
-          "text": "把手放进口袋，笑他记性太好",
+          "text": "把手放进口袋，承认自己仍记得这张便签",
           "vector": {
-            "expression": 0.55,
-            "conflict": 0.34,
-            "autonomy": 0.28,
-            "commitment": 0.22
+            "idealization": 0.22,
+            "approach": 0.18,
+            "trust": 0.12,
+            "expression": 0.18
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s03",
-          "aftermath": "你允许他指出脆弱，却仍保留轻松的距离。"
+          "aftermath": "你承认记忆仍在，却没有因此承诺任何未来。",
+          "setFlags": {
+            "memory_response": "soften"
+          }
         },
         {
           "id": "b",
-          "text": "问他既然记得，为什么六年没回来",
+          "text": "问他既然记得，为什么六年都没有联系",
           "vector": {
-            "repair": 0.36,
-            "discernment": 0.38,
-            "expression": 0.3,
-            "trust": 0.16
+            "expression": 0.42,
+            "conflict": 0.2,
+            "discernment": 0.3,
+            "trust": -0.18
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s03",
-          "aftermath": "你不想先谈心动，只想先追究缺席。"
+          "aftermath": "你把浪漫细节推回它无法回答的六年沉默。",
+          "setFlags": {
+            "memory_response": "challenge"
+          }
         },
         {
           "id": "c",
-          "text": "抬起戒指给他看：“所以你来晚了。”",
+          "text": "拍下戒指发给他：“记得不等于来得及。”",
           "vector": {
-            "expression": 0.46,
-            "conflict": 0.28,
-            "idealization": 0.2,
-            "discernment": 0.24
+            "certainty": 0.36,
+            "autonomy": 0.34,
+            "approach": -0.2,
+            "expression": 0.26
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s03",
-          "aftermath": "你用现在的承诺提醒他，不是所有记忆都有资格重新开始。"
+          "aftermath": "你让他看见现实，也让旧记忆停止冒充现在。",
+          "setFlags": {
+            "memory_response": "ring"
+          }
         },
         {
           "id": "d",
-          "text": "不接这句话，只问他要给你什么",
+          "text": "不谈便签，只问盒子里究竟是什么",
           "vector": {
-            "discernment": 0.48,
-            "trust": 0.22,
-            "autonomy": 0.18,
-            "expression": -0.12
+            "discernment": 0.4,
+            "idealization": -0.2,
+            "certainty": 0.28,
+            "approach": -0.1
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s03",
-          "aftermath": "你把谈话拉回事实，不愿让他掌握节奏。"
+          "aftermath": "你把注意力从被记住，移回这次出现必须说明的事实。",
+          "setFlags": {
+            "memory_response": "facts"
+          }
         }
       ]
     },
@@ -404,670 +466,798 @@
         },
         {
           "type": "paragraph",
-          "text": "周叙说：“最后一段一直没有录完。它属于你，所以该由你决定要不要听。”"
+          "text": "一张维修单夹在下面。设备今天下午才完成修复，最后一轨仍缺一段环境声。周叙写道：“它属于你。听、不听、退回，都由你决定。”"
         }
       ],
-      "prompt": "你会怎样处理这段只属于你们的声音？",
+      "prompt": "你怎样处理这台录音机？",
       "choices": [
         {
           "id": "a",
-          "text": "按下播放键，不看他的表情",
+          "text": "按下播放键，先听已经存在的部分",
           "vector": {
-            "trust": 0.46,
-            "repair": 0.32,
-            "approach": 0.18,
-            "discernment": 0.2
+            "discernment": 0.42,
+            "trust": 0.14,
+            "idealization": -0.34,
+            "novelty": 0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s04",
-          "aftermath": "你选择直接面对未完成的过去。"
+          "aftermath": "你先听事实留下的声音，不急着替任何人解释。",
+          "setFlags": {
+            "track_handling": "played"
+          }
         },
         {
           "id": "b",
-          "text": "把录音机递回去：“有些东西不该再听。”",
+          "text": "封回盒子，请前台明早退还给他",
           "vector": {
-            "autonomy": 0.4,
-            "discernment": 0.28,
-            "trust": -0.18,
-            "conflict": 0.18
+            "autonomy": 0.44,
+            "approach": -0.3,
+            "certainty": 0.28,
+            "trust": -0.16
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s04",
-          "aftermath": "你拒绝让共同秘密自动获得进入现在的权利。"
+          "aftermath": "你决定暂时不听；录音机仍留在前台保管，而不是继续握在你手里。",
+          "setFlags": {
+            "track_handling": "returned"
+          }
         },
         {
           "id": "c",
-          "text": "问他究竟录了什么",
+          "text": "只问缺的是哪一段、为什么今天才修好",
           "vector": {
-            "approach": 0.32,
-            "expression": 0.3,
-            "novelty": 0.28,
-            "trust": 0.18
+            "discernment": 0.46,
+            "expression": 0.24,
+            "idealization": -0.16,
+            "trust": -0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s04",
-          "aftermath": "你需要先知道内容，再决定是否靠近。"
+          "aftermath": "你要求一条可核对的时间线，而不是一段怀旧气氛。",
+          "setFlags": {
+            "track_handling": "asked"
+          }
         },
         {
           "id": "d",
-          "text": "笑起来：“你居然还记得这个谎。”",
+          "text": "承认自己还记得“第十七轨”的暗号",
           "vector": {
-            "autonomy": 0.42,
-            "certainty": 0.26,
-            "approach": -0.18,
-            "commitment": 0.12
+            "expression": 0.3,
+            "idealization": 0.24,
+            "approach": 0.18,
+            "care": 0.12
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s04",
-          "aftermath": "共同的暗号让两个人第一次松动了一点。"
+          "aftermath": "你承认共同语言仍然存在，却没有把它等同于重新开始。",
+          "setFlags": {
+            "track_handling": "remembered"
+          }
         }
       ]
     },
     {
       "id": "s04",
       "slot": 4,
-      "chapter": "04｜只走到桥那边",
+      "chapter": "04｜桥声要不要补完",
       "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "录音最后缺了一段环境声。周叙想去你们当年分开的桥边补完：“只走到桥那边。我不问婚礼，也不求你改变任何事。”"
+          "text": "周叙说明，缺失的是旧桥在夜雨中的回声。三天前他因城市声音档案项目调回本城，今天下午才从共同朋友那里得知你明天结婚，也是在同一天下午拿回修好的机器。"
         },
         {
           "type": "paragraph",
-          "text": "他把选择说得很清楚，也把拒绝留得很完整。"
+          "text": "他承认本可以把盒子交给前台后离开，却仍想亲手确认你是否愿意让这段录音完成。这个解释让出现变得有因，却没有让时间点变得无辜。"
         }
       ],
-      "prompt": "你会不会和他走这一段路？",
+      "variants": [
+        {
+          "when": {
+            "flag": "track_handling",
+            "equals": "returned"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "录音机仍在前台。周叙说，他可以独自补录，再把原始文件和维修记录一起留下。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "track_handling",
+            "equals": "played"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "你已经听见旧轨道里二十二岁的自己，缺口因此比沉默更明显。"
+            }
+          ]
+        }
+      ],
+      "prompt": "你允许这段补录以什么方式发生？",
       "choices": [
         {
           "id": "a",
-          "text": "答应，但提醒他十一点前必须回来",
+          "text": "和他去有监控的桥头，约定十一点前回酒店",
           "vector": {
-            "certainty": 0.48,
-            "autonomy": 0.42,
-            "trust": 0.28,
-            "approach": 0.2
+            "certainty": 0.58,
+            "autonomy": 0.56,
+            "trust": 0.12,
+            "approach": 0.18
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s05_boundary",
-          "aftermath": "你允许靠近，也明确了结束时间。",
+          "aftermath": "你把地点发给伴娘，也把返回时间发给周叙。",
           "setFlags": {
-            "workspace": "boundary"
+            "meeting_mode": "bridge_together"
           },
-          "subtext": "让她靠近，但先把边界说清。"
+          "subtext": "允许同行，但时间、地点和结束方式都在明处。"
         },
         {
           "id": "b",
-          "text": "拒绝同行，让他一个人去录",
+          "text": "不去，让他独自录好后把原始文件交前台",
           "vector": {
-            "trust": 0.56,
-            "approach": 0.42,
-            "autonomy": -0.2,
-            "idealization": 0.18
+            "autonomy": 0.48,
+            "discernment": 0.3,
+            "approach": -0.34,
+            "trust": 0.06
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s05_open",
-          "aftermath": "你没有让怀旧替你安排今晚。",
+          "aftermath": "你留在酒店；这段声音可以完成，但不需要你陪他完成。",
           "setFlags": {
-            "workspace": "open"
+            "meeting_mode": "hotel_remote"
           },
-          "subtext": "先交出信任，也承担可能被越界的风险。"
+          "subtext": "拒绝同行，故事仍可通过文件和信息继续。"
         },
         {
           "id": "c",
-          "text": "叫一辆车，和他保持距离",
+          "text": "分开叫车，只在有灯和监控的桥头见十分钟",
           "vector": {
-            "autonomy": 0.62,
-            "discernment": 0.36,
-            "approach": -0.42,
-            "trust": -0.18
+            "autonomy": 0.4,
+            "discernment": 0.34,
+            "trust": -0.08,
+            "approach": 0.1
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s05_refuse",
-          "aftermath": "你愿意见证，却用距离维持控制。",
+          "aftermath": "你愿意核对这件事，却没有接受两个人重走旧路。",
           "setFlags": {
-            "workspace": "refuse"
+            "meeting_mode": "bridge_public"
           },
-          "subtext": "保住私人空间，让关系绕一条更远的路。"
+          "subtext": "重新见面，但条件和距离都已经改变。"
         },
         {
           "id": "d",
-          "text": "说“你欠我的不止一段声音”，仍跟上他",
+          "text": "不去桥边，让他回酒店大堂解释为什么偏偏今晚",
           "vector": {
-            "autonomy": 0.48,
-            "trust": 0.14,
-            "discernment": 0.38,
-            "approach": 0.08
+            "expression": 0.38,
+            "conflict": 0.2,
+            "certainty": 0.32,
+            "approach": -0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s05_present",
-          "aftermath": "你的愤怒没有消失，但它终于获得了说话的机会。",
+          "aftermath": "你拒绝怀旧路线，把谈话留在公开的大堂。",
           "setFlags": {
-            "workspace": "present"
+            "meeting_mode": "hotel_lobby"
           },
-          "subtext": "门没有关上，但进入必须经过你的同意。"
+          "subtext": "不跟随他的安排，改由你决定谈话地点和主题。"
         }
       ],
       "decisionType": "hard",
       "decisionLabel": "关键选择",
-      "decisionNote": "这一次的决定会真正改变你们之后相处的距离。"
+      "decisionNote": "这一次的决定会改变后面的事实，而不只是改变语气。"
     },
     {
       "id": "s05_boundary",
       "slot": 5,
-      "chapter": "05｜你是否让他解释",
+      "chapter": "05｜桥头的二十分钟",
       "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "你此前的选择改变了两个人之间的距离。事情仍然发生，但它不再拥有完全相同的语气。"
+          "text": "十点二十二分，你们分坐后排两端抵达桥头。伴娘知道定位，回程车也已经预约。周叙没有带你走到当年分开的桥下，只在监控范围内架起收音杆。"
         },
         {
           "type": "paragraph",
-          "text": "桥下雨声很重。他把录音机递给你：“我不是要你逃婚。我只是欠你一次完整的解释。你可以不听。”"
-        },
-        {
-          "type": "paragraph",
-          "text": "这是他第一次不替你决定真相什么时候出现。"
+          "text": "十点四十二分，他主动看了一眼时间：“还剩十八分钟。我可以解释，也可以只把文件交给你。”"
         }
       ],
-      "prompt": "你愿意给这段解释什么位置？",
+      "prompt": "你给这段解释多少位置？",
       "choices": [
         {
           "id": "a",
-          "text": "让他说完，哪怕答案会毁掉今晚",
+          "text": "让他说完整事实，不替自己辩护",
           "vector": {
-            "approach": 0.45,
-            "trust": 0.32,
-            "expression": 0.3,
-            "novelty": 0.16
+            "approach": 0.28,
+            "discernment": 0.46,
+            "expression": 0.5,
+            "idealization": -0.24
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你选择知道全部，再判断它值不值得原谅。"
+          "aftermath": "你让他把事实说完，也保留最后判断的权利。",
+          "setFlags": {
+            "explanation_mode": "full"
+          }
         },
         {
           "id": "b",
-          "text": "只允许他说三分钟",
+          "text": "只给三分钟，只说时间线和结果",
           "vector": {
             "autonomy": 0.38,
-            "discernment": 0.3,
+            "certainty": 0.3,
+            "discernment": 0.24,
             "approach": -0.12
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你给真相一个严格边界。"
+          "aftermath": "你给迟到的解释设下了清楚的时限。",
+          "setFlags": {
+            "explanation_mode": "three_minutes"
+          }
         },
         {
           "id": "c",
-          "text": "拒绝解释：“你当年已经做过选择。”",
+          "text": "不听个人解释，只收下可核对的材料",
           "vector": {
-            "approach": 0.34,
-            "novelty": 0.34,
-            "expression": 0.26,
-            "idealization": 0.18
+            "autonomy": 0.44,
+            "trust": -0.24,
+            "discernment": 0.36,
+            "approach": -0.3
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你认为迟到的解释不能自动修改当年的结果。"
+          "aftermath": "你拒绝让他的叙述替代当年的事实。",
+          "setFlags": {
+            "explanation_mode": "refused"
+          }
         },
         {
           "id": "d",
-          "text": "先问他回来是为了你，还是为了让自己好受",
+          "text": "先问他为什么偏偏今晚出现、想让你做什么",
           "vector": {
-            "autonomy": 0.46,
+            "expression": 0.38,
             "certainty": 0.32,
-            "trust": 0.1,
-            "expression": 0.2
+            "discernment": 0.3,
+            "trust": -0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你先审视动机，不肯只被漂亮的话说服。"
+          "aftermath": "你没有先听爱情，而是先追问这次出现的责任。",
+          "setFlags": {
+            "explanation_mode": "motive"
+          }
         }
       ]
     },
     {
       "id": "s05_open",
       "slot": 5,
-      "chapter": "05｜你是否让他解释",
+      "chapter": "05｜你留在酒店",
       "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "你此前的选择改变了两个人之间的距离。事情仍然发生，但它不再拥有完全相同的语气。"
+          "text": "你没有下楼。你通过前台授权周叙只为补录取回机器，录完必须立即归还。十点四十分，他发来一段二十七秒的桥声、原始文件编号和带时间戳的维修单；没有自拍，也没有“你应该在这里”。"
         },
         {
           "type": "paragraph",
-          "text": "桥下雨声很重。他把录音机递给你：“我不是要你逃婚。我只是欠你一次完整的解释。你可以不听。”"
-        },
-        {
-          "type": "paragraph",
-          "text": "这是他第一次不替你决定真相什么时候出现。"
+          "text": "最后一条消息只有一句：“需要解释的话，你决定用文字、三分钟语音，或者只看材料。今晚我不会再要求见面。”"
         }
       ],
-      "prompt": "你愿意给这段解释什么位置？",
+      "prompt": "你怎样接收这份迟到的信息？",
       "choices": [
         {
           "id": "a",
-          "text": "让他说完，哪怕答案会毁掉今晚",
+          "text": "让他发来完整时间线，等你看完再回答",
           "vector": {
-            "approach": 0.45,
-            "trust": 0.32,
-            "expression": 0.3,
-            "novelty": 0.16
+            "approach": 0.18,
+            "discernment": 0.46,
+            "expression": 0.46,
+            "idealization": -0.28
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你选择知道全部，再判断它值不值得原谅。"
+          "aftermath": "你允许事实进入房间，却没有允许他一起进来。",
+          "setFlags": {
+            "explanation_mode": "full"
+          }
         },
         {
           "id": "b",
-          "text": "只允许他说三分钟",
+          "text": "只要三分钟语音，只说日期、决定和结果",
           "vector": {
             "autonomy": 0.38,
-            "discernment": 0.3,
+            "certainty": 0.3,
+            "discernment": 0.24,
             "approach": -0.12
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你给真相一个严格边界。"
+          "aftermath": "你给迟到的解释设下了清楚的时限。",
+          "setFlags": {
+            "explanation_mode": "three_minutes"
+          }
         },
         {
           "id": "c",
-          "text": "拒绝解释：“你当年已经做过选择。”",
+          "text": "不听个人解释，只让他留下可核对的材料",
           "vector": {
-            "approach": 0.34,
-            "novelty": 0.34,
-            "expression": 0.26,
-            "idealization": 0.18
+            "autonomy": 0.44,
+            "trust": -0.24,
+            "discernment": 0.36,
+            "approach": -0.3
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你认为迟到的解释不能自动修改当年的结果。"
+          "aftermath": "你拒绝让他的叙述替代当年的事实。",
+          "setFlags": {
+            "explanation_mode": "refused"
+          }
         },
         {
           "id": "d",
-          "text": "先问他回来是为了你，还是为了让自己好受",
+          "text": "先问他为什么偏偏今晚出现、想让你做什么",
           "vector": {
-            "autonomy": 0.46,
+            "expression": 0.38,
             "certainty": 0.32,
-            "trust": 0.1,
-            "expression": 0.2
+            "discernment": 0.3,
+            "trust": -0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你先审视动机，不肯只被漂亮的话说服。"
+          "aftermath": "你没有先听爱情，而是先追问这次出现的责任。",
+          "setFlags": {
+            "explanation_mode": "motive"
+          }
         }
       ]
     },
     {
       "id": "s05_refuse",
       "slot": 5,
-      "chapter": "05｜你是否让他解释",
+      "chapter": "05｜只到有灯的地方",
       "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "你此前的选择改变了两个人之间的距离。事情仍然发生，但它不再拥有完全相同的语气。"
+          "text": "你们分开叫车，在桥头便利店外见面。周叙没有替你撑伞，也没有带你走进更暗的桥下。他把录音杆放在两人之间，先说明录制只要七分钟。"
         },
         {
           "type": "paragraph",
-          "text": "桥下雨声很重。他把录音机递给你：“我不是要你逃婚。我只是欠你一次完整的解释。你可以不听。”"
-        },
-        {
-          "type": "paragraph",
-          "text": "这是他第一次不替你决定真相什么时候出现。"
+          "text": "结束后他站回原来的距离：“你答应的是见证补录，不是听我讲过去。要不要听，是另一件事。”"
         }
       ],
-      "prompt": "你愿意给这段解释什么位置？",
+      "prompt": "你是否另行允许他解释？",
       "choices": [
         {
           "id": "a",
-          "text": "让他说完，哪怕答案会毁掉今晚",
+          "text": "让他说完整事实，不替自己辩护",
           "vector": {
-            "approach": 0.45,
-            "trust": 0.32,
-            "expression": 0.3,
-            "novelty": 0.16
+            "approach": 0.22,
+            "discernment": 0.48,
+            "expression": 0.46,
+            "idealization": -0.26
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你选择知道全部，再判断它值不值得原谅。"
+          "aftermath": "你让他把事实说完，也保留最后判断的权利。",
+          "setFlags": {
+            "explanation_mode": "full"
+          }
         },
         {
           "id": "b",
-          "text": "只允许他说三分钟",
+          "text": "只给三分钟，只说时间线和结果",
           "vector": {
             "autonomy": 0.38,
-            "discernment": 0.3,
+            "certainty": 0.3,
+            "discernment": 0.24,
             "approach": -0.12
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你给真相一个严格边界。"
+          "aftermath": "你给迟到的解释设下了清楚的时限。",
+          "setFlags": {
+            "explanation_mode": "three_minutes"
+          }
         },
         {
           "id": "c",
-          "text": "拒绝解释：“你当年已经做过选择。”",
+          "text": "不听个人解释，只收下可核对的材料",
           "vector": {
-            "approach": 0.34,
-            "novelty": 0.34,
-            "expression": 0.26,
-            "idealization": 0.18
+            "autonomy": 0.44,
+            "trust": -0.24,
+            "discernment": 0.36,
+            "approach": -0.3
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你认为迟到的解释不能自动修改当年的结果。"
+          "aftermath": "你拒绝让他的叙述替代当年的事实。",
+          "setFlags": {
+            "explanation_mode": "refused"
+          }
         },
         {
           "id": "d",
-          "text": "先问他回来是为了你，还是为了让自己好受",
+          "text": "先问他为什么偏偏今晚出现、想让你做什么",
           "vector": {
-            "autonomy": 0.46,
+            "expression": 0.38,
             "certainty": 0.32,
-            "trust": 0.1,
-            "expression": 0.2
+            "discernment": 0.3,
+            "trust": -0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你先审视动机，不肯只被漂亮的话说服。"
+          "aftermath": "你没有先听爱情，而是先追问这次出现的责任。",
+          "setFlags": {
+            "explanation_mode": "motive"
+          }
         }
       ]
     },
     {
       "id": "s05_present",
       "slot": 5,
-      "chapter": "05｜你是否让他解释",
+      "chapter": "05｜大堂里的问题",
       "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "你此前的选择改变了两个人之间的距离。事情仍然发生，但它不再拥有完全相同的语气。"
+          "text": "周叙回到酒店大堂，坐在离电梯最近、也最容易随时结束谈话的位置。桥声是他下午试录的旧素材，今晚并不需要你陪他去任何地方。"
         },
         {
           "type": "paragraph",
-          "text": "桥下雨声很重。他把录音机递给你：“我不是要你逃婚。我只是欠你一次完整的解释。你可以不听。”"
-        },
-        {
-          "type": "paragraph",
-          "text": "这是他第一次不替你决定真相什么时候出现。"
+          "text": "你先问：“为什么偏偏现在？”他没有说命运，只说自己今天才得知婚礼，也承认亲自出现有自私的部分。"
         }
       ],
-      "prompt": "你愿意给这段解释什么位置？",
+      "prompt": "你接下来愿意听到什么程度？",
       "choices": [
         {
           "id": "a",
-          "text": "让他说完，哪怕答案会毁掉今晚",
+          "text": "让他说完整事实，不替自己辩护",
           "vector": {
-            "approach": 0.45,
-            "trust": 0.32,
-            "expression": 0.3,
-            "novelty": 0.16
+            "approach": 0.2,
+            "discernment": 0.5,
+            "expression": 0.5,
+            "idealization": -0.3
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你选择知道全部，再判断它值不值得原谅。"
+          "aftermath": "你让他把事实说完，也保留最后判断的权利。",
+          "setFlags": {
+            "explanation_mode": "full"
+          }
         },
         {
           "id": "b",
-          "text": "只允许他说三分钟",
+          "text": "只给三分钟，只说时间线和结果",
           "vector": {
             "autonomy": 0.38,
-            "discernment": 0.3,
+            "certainty": 0.3,
+            "discernment": 0.24,
             "approach": -0.12
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你给真相一个严格边界。"
+          "aftermath": "你给迟到的解释设下了清楚的时限。",
+          "setFlags": {
+            "explanation_mode": "three_minutes"
+          }
         },
         {
           "id": "c",
-          "text": "拒绝解释：“你当年已经做过选择。”",
+          "text": "不听个人解释，只收下可核对的材料",
           "vector": {
-            "approach": 0.34,
-            "novelty": 0.34,
-            "expression": 0.26,
-            "idealization": 0.18
+            "autonomy": 0.44,
+            "trust": -0.24,
+            "discernment": 0.36,
+            "approach": -0.3
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你认为迟到的解释不能自动修改当年的结果。"
+          "aftermath": "你拒绝让他的叙述替代当年的事实。",
+          "setFlags": {
+            "explanation_mode": "refused"
+          }
         },
         {
           "id": "d",
-          "text": "先问他回来是为了你，还是为了让自己好受",
+          "text": "先问他为什么偏偏今晚出现、想让你做什么",
           "vector": {
-            "autonomy": 0.46,
+            "expression": 0.38,
             "certainty": 0.32,
-            "trust": 0.1,
-            "expression": 0.2
+            "discernment": 0.3,
+            "trust": -0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s06",
-          "aftermath": "你先审视动机，不肯只被漂亮的话说服。"
+          "aftermath": "你没有先听爱情，而是先追问这次出现的责任。",
+          "setFlags": {
+            "explanation_mode": "motive"
+          }
         }
       ]
     },
     {
       "id": "s06",
       "slot": 6,
-      "chapter": "06｜你希望他后悔",
+      "chapter": "06｜你真正要确认的事",
       "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "你终于说出最不体面的一句：“我有时希望你过得不好。这样至少能证明，离开我不是正确决定。”"
+          "text": "有一件事始终没有改变：六年前，他没有让你参与那次离开的决定。"
         },
         {
           "type": "paragraph",
-          "text": "周叙没有说你善良：“你不是想看我痛苦。你只是想证明，当年的你值得被留下。”"
+          "text": "你看着那页时间线，终于说出一句并不体面的话：“我有时希望你过得不好。这样至少能证明，离开我不是正确答案。”"
         }
       ],
-      "prompt": "你会怎样面对被他说中的需要？",
+      "variants": [
+        {
+          "when": {
+            "flag": "explanation_mode",
+            "equals": "full"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "周叙把日期、项目和那次没有赴约的决定完整说完，没有用母亲、签证或误会替自己减轻责任。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "explanation_mode",
+            "equals": "three_minutes"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "三分钟到了，周叙真的停下。剩余的话没有借你的沉默继续往下说。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "explanation_mode",
+            "equals": "refused"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "周叙只留下维修单、项目邮件日期和一页书面时间线，没有继续解释。你回了一句，不是为了重新打开谈话，而是为了把自己的愤怒说完整。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "explanation_mode",
+            "equals": "motive"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "周叙先回答动机：“我想把东西还你，也想知道自己是否还有可能。这两件事混在一起，是我的自私。”"
+            }
+          ]
+        }
+      ],
+      "prompt": "这句话说出口以后，你怎样面对它？",
       "choices": [
         {
           "id": "a",
-          "text": "承认：“对，我就是想被选择一次。”",
+          "text": "承认：“对，我只是想被选择一次。”",
           "vector": {
-            "expression": 0.42,
-            "trust": 0.3,
-            "approach": 0.22,
-            "abandonment": 0.14
+            "expression": 0.52,
+            "reassurance": 0.62,
+            "abandonment": 0.42,
+            "approach": 0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s07",
-          "aftermath": "你第一次把最深的需求说得没有修饰。"
+          "aftermath": "你没有把需要包装成体面，也没有要求他立刻补偿。",
+          "setFlags": {
+            "need_response": "chosen"
+          }
         },
         {
           "id": "b",
-          "text": "立刻后悔，把话收回去",
+          "text": "承认自己也在用他的后悔惩罚过去的自己",
           "vector": {
-            "certainty": 0.38,
             "discernment": 0.34,
-            "expression": 0.32,
-            "jealousy": 0.08
+            "repair": 0.26,
+            "reassurance": 0.24,
+            "autonomy": 0.14
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s07",
-          "aftermath": "你仍然害怕真实需要会让自己显得软弱。"
+          "aftermath": "你看见愤怒保护过你，也看见它正在消耗你。",
+          "setFlags": {
+            "need_response": "self_aware"
+          }
         },
         {
           "id": "c",
-          "text": "反问他有什么资格理解你",
+          "text": "阻止他解释你：“别替我总结。”",
           "vector": {
-            "novelty": 0.32,
-            "approach": 0.3,
-            "expression": 0.26,
-            "repair": 0.12
+            "autonomy": 0.42,
+            "expression": 0.3,
+            "trust": -0.18,
+            "certainty": 0.18
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s07",
-          "aftermath": "你不允许理解替代责任。"
+          "aftermath": "你拒绝再次被理解成一个方便的答案。",
+          "setFlags": {
+            "need_response": "guarded"
+          }
         },
         {
           "id": "d",
-          "text": "说自己现在过得很好，不需要证明",
+          "text": "告诉他你现在需要时间，不需要他的后悔作证",
           "vector": {
-            "autonomy": 0.44,
-            "expression": -0.28,
-            "approach": -0.16,
-            "discernment": 0.2
+            "autonomy": 0.36,
+            "certainty": 0.34,
+            "repair": 0.18,
+            "approach": -0.14
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s07",
-          "aftermath": "你继续保护体面，也让真正的伤口留在话外。"
+          "aftermath": "你把价值从他的后悔里收回来，哪怕还没有完全做到。",
+          "setFlags": {
+            "need_response": "time"
+          }
         }
       ]
     },
     {
       "id": "s07",
       "slot": 7,
-      "chapter": "07｜他保存的清晨",
+      "chapter": "07｜维修单上的名字",
       "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "周叙告诉你，母亲去世后，他有半年无法录任何人的声音。唯一能听的是你们当年的清晨，因为里面的你还在笑着骂他拿反了麦克风。"
+          "text": "维修单背面夹着一份旧录音授权表。紧急联系人一栏曾写着周叙母亲的名字，旁边标注着去世日期。"
         },
         {
           "type": "paragraph",
-          "text": "“我不是靠它活下来。”他说，“我只是一直没舍得删。”"
+          "text": "附页上有一句单独加粗的话：“那是我离开后的事，不是我当年没来见你的理由。她去世以后，我有半年听不了任何人的声音，但这不能替六年前的我免责。”"
         }
       ],
-      "prompt": "你会怎样回应他的脆弱？",
+      "prompt": "你怎样接住这段与原谅无关的悲伤？",
       "choices": [
         {
           "id": "a",
-          "text": "握住录音机，不碰他",
+          "text": "握住录音机，不碰他，只说自己听见了",
           "vector": {
-            "approach": 0.48,
             "care": 0.34,
-            "trust": 0.24,
-            "autonomy": 0.12
+            "trust": 0.18,
+            "approach": 0.08,
+            "repair": 0.16
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s08",
-          "aftermath": "你陪伴他的伤口，却没有用身体替代答案。"
+          "aftermath": "你允许悲伤被看见，却没有把安慰变成复合。",
+          "setFlags": {
+            "grief_response": "recording"
+          }
         },
         {
           "id": "b",
-          "text": "问他为什么那时没有联系你",
+          "text": "问他那半年为什么仍然没有联系你",
           "vector": {
-            "care": 0.38,
-            "discernment": 0.42,
-            "approach": 0.02,
-            "trust": 0.1
+            "expression": 0.38,
+            "conflict": 0.18,
+            "discernment": 0.28,
+            "trust": -0.16
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s08",
-          "aftermath": "你仍然需要知道，他为何在最需要人时也选择沉默。"
+          "aftermath": "你没有让后来的痛苦覆盖更早的沉默。",
+          "setFlags": {
+            "grief_response": "why_silent"
+          }
         },
         {
           "id": "c",
-          "text": "告诉他：“我不想成为你的遗物。”",
+          "text": "告诉他：“我不想成为你唯一舍不得删的遗物。”",
           "vector": {
-            "trust": 0.42,
-            "repair": 0.28,
-            "commitment": 0.24,
-            "expression": 0.24
+            "autonomy": 0.38,
+            "expression": 0.34,
+            "idealization": -0.24,
+            "approach": -0.12
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s08",
-          "aftermath": "你拒绝只存在于他的过去。"
+          "aftermath": "你拒绝被保存成一段过去，而不是被当作现在的人。",
+          "setFlags": {
+            "grief_response": "not_relic"
+          }
         },
         {
           "id": "d",
-          "text": "轻声问他母亲离开时是不是一个人",
+          "text": "问他母亲最后那段时间有没有人陪",
           "vector": {
-            "autonomy": 0.52,
-            "approach": -0.46,
-            "care": -0.28,
-            "trust": -0.16
+            "care": 0.42,
+            "repair": 0.2,
+            "trust": 0.14,
+            "approach": 0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s08",
-          "aftermath": "你看见了他强撑背后的孤独。"
+          "aftermath": "你关心那段真实生活，也没有把关心当成原谅。",
+          "setFlags": {
+            "grief_response": "ask_grief"
+          }
         }
       ],
       "variants": [
         {
           "when": {
-            "flag": "appeal",
-            "equals": "quiet"
+            "flag": "meeting_mode",
+            "in": [
+              "bridge_together",
+              "bridge_public",
+              "hotel_lobby"
+            ]
           },
           "appendContent": [
             {
               "type": "paragraph",
-              "text": "她在雨里并不显得慌乱，只是站到风口最重的位置，安静地等你确认怎么配合。"
+              "text": "你抬头时，周叙又亲口重复了一遍，没有借丧亲向你索取安慰。"
             }
           ]
         },
         {
           "when": {
-            "flag": "appeal",
-            "equals": "direct"
+            "flag": "meeting_mode",
+            "equals": "hotel_remote"
           },
           "appendContent": [
             {
               "type": "paragraph",
-              "text": "她直接指出招牌受力的位置，也直接说：“你一个人扛不住，别逞强。”"
-            }
-          ]
-        },
-        {
-          "when": {
-            "flag": "appeal",
-            "equals": "focused"
-          },
-          "appendContent": [
-            {
-              "type": "paragraph",
-              "text": "她抬头看了几秒，就判断出真正松动的不是招牌，而是后面的固定架。"
-            }
-          ]
-        },
-        {
-          "when": {
-            "flag": "appeal",
-            "equals": "steady"
-          },
-          "appendContent": [
-            {
-              "type": "paragraph",
-              "text": "风雨同时压下来时，她没有多说一句安慰，只把梯子、绳索和电源依次处理好。"
+              "text": "你只在扫描件里读到这段话。周叙没有随后打电话确认你是否心软。"
             }
           ]
         }
@@ -1076,392 +1266,697 @@
     {
       "id": "s08",
       "slot": 8,
-      "chapter": "08｜把缺失的声音补回来",
+      "chapter": "08｜卡住的磁带",
       "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "录音机突然卡带。附近唯一亮灯的是一家旧器材店。你们在狭窄柜台后拆开机器，他找螺丝，你扶住磁头。"
+          "text": "十一点过后，录音机在倒带时卡住。酒店值班经理联系了影音工程师，开放一楼商务中心。透明玻璃外能看见前台，工程师也一直在场。"
         },
         {
           "type": "paragraph",
-          "text": "六年过去，你们仍然知道对方下一步会做什么。这份默契美好，也危险。"
+          "text": "周叙带着现场维修箱回来，只把工具交给工程师：“她不需要和我单独修。怎么处理，由她决定。”"
         }
       ],
-      "prompt": "面对重新出现的默契，你会怎么做？",
+      "variants": [
+        {
+          "when": {
+            "flag": "meeting_mode",
+            "equals": "hotel_remote"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "你原本没有见他。前台确认磁带卡住后，周叙只为交维修工具回到大堂，没有要求进入你的房间。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "meeting_mode",
+            "in": [
+              "bridge_together",
+              "bridge_public"
+            ]
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "你们按约定时间回到酒店，没有在桥边继续拖延。"
+            }
+          ]
+        }
+      ],
+      "prompt": "你愿意怎样完成这次维修？",
       "choices": [
         {
           "id": "a",
-          "text": "接过工具，和他一起修",
+          "text": "在工程师在场时，和周叙一起确认磁带位置",
           "vector": {
-            "discernment": 0.42,
-            "trust": -0.18,
-            "autonomy": 0.16
+            "approach": 0.22,
+            "trust": 0.2,
+            "repair": 0.26,
+            "autonomy": 0.14
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
-          "next": "s09",
-          "aftermath": "你允许两个人重新完成一件事。"
+          "next": "s09_close",
+          "aftermath": "你允许一次有限合作，条件仍然公开而具体。",
+          "setFlags": {
+            "repair_mode": "together"
+          }
         },
         {
           "id": "b",
-          "text": "只在旁边提醒他别弄坏录音",
+          "text": "站在玻璃外看，只在需要时回答旧录音顺序",
           "vector": {
-            "approach": 0.4,
-            "novelty": 0.36,
-            "expression": 0.26,
-            "idealization": 0.2
+            "discernment": 0.28,
+            "autonomy": 0.26,
+            "trust": 0.08,
+            "approach": -0.04
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
-          "next": "s09",
-          "aftermath": "你参与，却不完全交出控制。"
+          "next": "s09_close",
+          "aftermath": "你参与的是信息，不是恢复旧默契。",
+          "setFlags": {
+            "repair_mode": "observe"
+          }
         },
         {
           "id": "c",
-          "text": "笑他还是把零件摆得一团乱",
+          "text": "把机器交给工程师，要求周叙离开商务中心",
           "vector": {
-            "idealization": 0.5,
-            "trust": 0.28,
-            "approach": 0.24,
-            "reassurance": 0.14
+            "autonomy": 0.46,
+            "certainty": 0.3,
+            "approach": -0.32,
+            "trust": -0.12
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
-          "next": "s09",
-          "aftermath": "玩笑让关系短暂回到从前。"
+          "next": "s09_distance",
+          "aftermath": "周叙把工具留下后离开，维修不再依赖两个人共处。",
+          "setFlags": {
+            "repair_mode": "engineer"
+          }
         },
         {
           "id": "d",
-          "text": "让店主处理，不让旧默契继续蔓延",
+          "text": "今晚不再见周叙，让工程师独立完成并通过邮箱交付",
           "vector": {
-            "certainty": 0.42,
-            "expression": 0.4,
-            "discernment": 0.28,
-            "trust": 0.1
+            "autonomy": 0.4,
+            "commitment": -0.18,
+            "certainty": 0.32,
+            "approach": -0.28
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
-          "next": "s09",
-          "aftermath": "你主动阻止默契被误认为未来。"
+          "next": "s09_distance",
+          "aftermath": "你结束了今晚的私人接触；后续只能通过工程师和文件继续。",
+          "setFlags": {
+            "repair_mode": "end_night"
+          }
         }
       ]
     },
     {
-      "id": "s09",
+      "id": "s09_close",
       "slot": 9,
-      "chapter": "09｜他想吻你",
+      "chapter": "09｜靠近之前的问题",
       "context": "ambiguity",
       "content": [
         {
           "type": "paragraph",
-          "text": "卷闸门被风吹得作响。你们靠得太近，他的手停在你脸侧，却没有落下。"
+          "text": "磁带取出后，工程师去前台打印维修记录。玻璃门没有关，走廊里一直有人。周叙站在原地，没有把刚才的合作解释成亲密许可。"
         },
         {
           "type": "paragraph",
-          "text": "“我想吻你。”他说，“但你不点头，我不会碰你。”"
+          "text": "短暂的安静里，他说：“我想吻你。但你不点头，这件事就停在这里。”"
         }
       ],
-      "prompt": "这一秒，你更接近哪种选择？",
+      "prompt": "你怎样回应这份欲望和它的后果？",
       "choices": [
         {
           "id": "a",
-          "text": "抬眼看他，却说别让我替你做决定",
+          "text": "明确点头，让他靠近一次",
           "vector": {
-            "expression": 0.56,
-            "certainty": 0.44,
-            "trust": 0.36,
-            "commitment": -0.08
+            "approach": 0.56,
+            "trust": 0.18,
+            "expression": 0.38,
+            "commitment": -0.24
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s10",
-          "aftermath": "你想被明确渴望，也希望他承担主动的重量。",
+          "aftermath": "你允许了一个吻，没有因此答应复合或离开婚礼。",
           "setFlags": {
-            "departure": "open"
+            "kiss_state": "invited",
+            "contact_after_night": "open"
           },
-          "subtext": "把离开的可能交给她判断。"
+          "subtext": "同意这一刻，不等于同意他替你定义明天。"
         },
         {
           "id": "b",
-          "text": "向前一步，先吻他",
+          "text": "主动吻他，然后先退开",
           "vector": {
-            "certainty": -0.18,
-            "discernment": 0.32,
             "autonomy": 0.3,
-            "approach": 0.06
+            "approach": 0.46,
+            "expression": 0.36,
+            "novelty": 0.18
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s10",
-          "aftermath": "你没有等待被带走，而是亲自缩短了距离。",
+          "aftermath": "你主动承认欲望，也主动结束这一刻。",
           "setFlags": {
-            "departure": "uncertain"
+            "kiss_state": "initiated",
+            "contact_after_night": "open"
           },
-          "subtext": "保留余地，也让她无法把你写进计划。"
+          "subtext": "主动不是失控，结束也不是否认刚才真实发生。"
         },
         {
           "id": "c",
-          "text": "退开：“想不代表可以。”",
+          "text": "后退一步：“想不代表现在可以。”",
           "vector": {
-            "trust": -0.28,
-            "reassurance": 0.26,
-            "idealization": 0.2,
-            "expression": -0.38
+            "autonomy": 0.48,
+            "certainty": 0.3,
+            "approach": -0.3,
+            "trust": 0.04
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s10",
-          "aftermath": "你承认欲望存在，也守住了行动边界。",
+          "aftermath": "你的拒绝被当作行动边界，而不是另一种暧昧信号。",
           "setFlags": {
-            "departure": "soften"
+            "kiss_state": "refused",
+            "contact_after_night": "limited"
           },
-          "subtext": "给出温和答案，却藏起真正的距离。"
+          "subtext": "欲望可以被承认，边界仍然决定行动。"
         },
         {
           "id": "d",
-          "text": "问他吻完以后准备怎么办",
+          "text": "先问：“吻完以后，你准备怎样面对明天？”",
           "vector": {
-            "approach": 0.28,
-            "certainty": 0.26,
+            "discernment": 0.4,
             "expression": 0.34,
-            "novelty": 0.22
+            "certainty": 0.28,
+            "approach": 0.04
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s10",
-          "aftermath": "你把亲密和后果放在同一个问题里。",
+          "aftermath": "你要求他先承担现实语言，而不是只承担浪漫冲动。",
           "setFlags": {
-            "departure": "reciprocal"
+            "kiss_state": "clarify",
+            "contact_after_night": "question"
           },
-          "subtext": "先知道她会去哪里，再决定自己说多少。"
+          "subtext": "先把后果放到桌上，再决定身体是否靠近。"
         }
       ],
       "decisionType": "hard",
       "decisionLabel": "关键选择",
-      "decisionNote": "你是否说出真实计划，会改变她后来怎样理解你的靠近。"
+      "decisionNote": "身体靠近不会自动覆盖工作、婚礼和六年前留下的事实。"
+    },
+    {
+      "id": "s09_distance",
+      "slot": 9,
+      "chapter": "09｜不在同一个房间",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你没有和周叙留在商务中心。零点前，工程师把修复后的数字文件发到你的邮箱，周叙只被抄送，没有再打电话。"
+        },
+        {
+          "type": "paragraph",
+          "text": "邮件末尾，他写：“我不会把今晚的联系延长成默认关系。你可以决定以后是否还有一次联系。”"
+        }
+      ],
+      "prompt": "你为今晚之后留下怎样的联系边界？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "允许三个月后发一次消息，由你决定是否回复",
+          "vector": {
+            "certainty": 0.4,
+            "autonomy": 0.42,
+            "approach": 0.04,
+            "commitment": -0.26
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s10",
+          "aftermath": "你留下一个明确而有限的未来窗口。",
+          "setFlags": {
+            "kiss_state": "none",
+            "contact_after_night": "three_month_message"
+          },
+          "subtext": "不是等待，也不是失联，而是一条有日期的窄路。"
+        },
+        {
+          "id": "b",
+          "text": "只允许发送文件，不再谈私人关系",
+          "vector": {
+            "autonomy": 0.44,
+            "approach": -0.3,
+            "certainty": 0.28,
+            "commitment": -0.16
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s10",
+          "aftermath": "你把联系限制在录音和授权事项。",
+          "setFlags": {
+            "kiss_state": "none",
+            "contact_after_night": "files_only"
+          },
+          "subtext": "故事继续完成，但不借工作重新进入私人生活。"
+        },
+        {
+          "id": "c",
+          "text": "允许他回答一个问题：当年为什么不告而别",
+          "vector": {
+            "expression": 0.34,
+            "discernment": 0.36,
+            "trust": -0.08,
+            "approach": 0.02
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s10",
+          "aftermath": "你只打开一个问题，不打开整段关系。",
+          "setFlags": {
+            "kiss_state": "none",
+            "contact_after_night": "one_question"
+          },
+          "subtext": "一次回答必须结束在问题本身，而不是变成新的追求。"
+        },
+        {
+          "id": "d",
+          "text": "文件交付后停止联系，除非你主动找他",
+          "vector": {
+            "autonomy": 0.5,
+            "certainty": 0.36,
+            "approach": -0.38,
+            "trust": -0.12
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s10",
+          "aftermath": "周叙确认收到，没有用告别制造下一次回应。",
+          "setFlags": {
+            "kiss_state": "none",
+            "contact_after_night": "no_contact"
+          },
+          "subtext": "停止联系不是惩罚，而是你现在需要的事实边界。"
+        }
+      ],
+      "decisionType": "hard",
+      "decisionLabel": "关键选择",
+      "decisionNote": "不在同一空间，也仍然可以对未来联系作出真实决定。"
     },
     {
       "id": "s10",
       "slot": 10,
-      "chapter": "10｜城市醒来以前",
+      "chapter": "10｜第十七轨完成",
       "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "你们在天亮前录完第十七轨。桥下第一班车驶过，卖早餐的人掀开蒸笼，雨后的城市像刚被擦亮。"
+          "text": "零点十七分，修复文件完成。第十七轨没有要求你们等到天亮：旧录音里保存着六年前的清晨，今晚补上的只是桥头雨声和一段新的空白。"
         },
         {
           "type": "paragraph",
-          "text": "录音里，二十二岁的你说：“以后如果我们走散了，就回来把清晨录完。”"
+          "text": "最后几秒，二十二岁的你笑着说：“以后如果走散了，不要替对方把结局录完。”"
         }
       ],
-      "prompt": "你愿意怎样保存这个完整的清晨？",
+      "variants": [
+        {
+          "when": {
+            "flag": "kiss_state",
+            "equals": "invited"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "刚才那个吻停在你点头允许的位置。周叙没有再靠近，也没有说“我们回来了”。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "kiss_state",
+            "equals": "initiated"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "你主动结束那个吻以后，周叙把注意力重新放回文件，没有把你的主动当成承诺。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "kiss_state",
+            "equals": "refused"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "你后退后，周叙没有第二次试探。剩余交流只围绕修复记录和文件授权。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "kiss_state",
+            "equals": "none"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "你们没有共享同一个房间。第十七轨通过邮箱抵达，依然可以完整播放。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "kiss_state",
+            "equals": "clarify"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "周叙回答，他会离开酒店、不会出现在婚礼，也不会把一个吻当成你选择了他。你没有因此点头，吻没有发生。"
+            }
+          ]
+        }
+      ],
+      "prompt": "你怎样处理这段终于完成的录音？",
       "choices": [
         {
           "id": "a",
-          "text": "和他分一副耳机，把整段听完",
+          "text": "从头听完，把声音和人分开判断",
           "vector": {
-            "trust": 0.46,
-            "repair": 0.32,
-            "expression": 0.28,
-            "approach": 0.18
+            "discernment": 0.52,
+            "trust": 0.08,
+            "idealization": -0.46,
+            "repair": 0.14
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s11",
-          "aftermath": "你允许幸福完整发生一次。"
+          "aftermath": "你让录音成为证据，而不是命运指令。",
+          "setFlags": {
+            "track_decision": "listen"
+          }
         },
         {
           "id": "b",
-          "text": "摘下耳机，说过去已经完成了",
+          "text": "存档后关掉播放器，不再重听",
           "vector": {
-            "autonomy": 0.42,
-            "discernment": 0.34,
-            "trust": 0.02,
-            "conflict": 0.12
+            "autonomy": 0.36,
+            "certainty": 0.3,
+            "approach": -0.16,
+            "commitment": -0.12
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s11",
-          "aftermath": "你把完成理解为告别，而不是重启。"
+          "aftermath": "你允许它完整存在，也拒绝让它占满今晚。",
+          "setFlags": {
+            "track_decision": "archive"
+          }
         },
         {
           "id": "c",
-          "text": "把自己的耳机塞回给他：“你替我记着。”",
+          "text": "让他保管母带，只要一份数字副本",
           "vector": {
-            "discernment": 0.42,
-            "approach": 0.28,
-            "expression": 0.3,
-            "trust": 0.14
+            "trust": 0.18,
+            "autonomy": 0.24,
+            "repair": 0.16,
+            "idealization": -0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s11",
-          "aftermath": "你把记忆托付给他，却不承诺未来。"
+          "aftermath": "你没有用占有录音来证明谁更在乎过去。",
+          "setFlags": {
+            "track_decision": "entrust"
+          }
         },
         {
           "id": "d",
-          "text": "问他如果当年没有走，现在会怎样",
+          "text": "问自己：若没有这台机器，你还会动摇吗",
           "vector": {
-            "idealization": 0.42,
-            "approach": 0.34,
-            "novelty": 0.3,
-            "discernment": -0.12
+            "discernment": 0.42,
+            "idealization": -0.28,
+            "certainty": 0.22,
+            "autonomy": 0.18
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s11",
-          "aftermath": "你第一次认真想象另一条人生。"
+          "aftermath": "你开始区分怀旧的力量和现在真正想要的生活。",
+          "setFlags": {
+            "track_decision": "counterfactual"
+          }
         }
       ]
     },
     {
       "id": "s11",
       "slot": 11,
-      "chapter": "11｜如果没有人会受伤",
+      "chapter": "11｜六个月的现实",
       "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "周叙说他已经调回这座城市，租了一个有两扇窗的录音室。“我没有回来抢你。我只是第一次有能力留下。”"
+          "text": "周叙把调回本城的合同放到桌面上：城市声音档案项目只有六个月，之后是否续约仍未确定。他租的录音室也只是半年短租。"
         },
         {
           "type": "paragraph",
-          "text": "他问：“如果没有人会受伤，你想过怎样的生活？”"
+          "text": "他没有说自己“终于有能力永远留下”，只说：“如果你暂停婚礼、把该处理的关系处理清楚，三个月后是否见面，也应该由那时的你决定。”"
         }
       ],
-      "prompt": "你会怎样回答这个不可能的假设？",
+      "variants": [
+        {
+          "when": {
+            "flag": "contact_after_night",
+            "in": [
+              "no_contact",
+              "files_only"
+            ]
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "项目附件列明：周叙调回本城只有六个月，之后是否续约仍未确定，录音室也是半年短租。"
+            },
+            {
+              "type": "paragraph",
+              "text": "按照你设下的边界，附件没有私人邀请。它只证明“留下”仍是一份有限合同，不是一句永远。"
+            }
+          ]
+        }
+      ],
+      "prompt": "面对一份有限、并不浪漫的现实计划，你怎样回应？",
       "choices": [
         {
           "id": "a",
-          "text": "描述一个有他、有声音、有清晨的家",
+          "text": "提出三个月后可以吃一顿饭，但今晚不算开始",
           "vector": {
-            "trust": 0.52,
-            "repair": 0.28,
-            "approach": 0.22,
-            "care": 0.12
+            "approach": 0.18,
+            "discernment": 0.4,
+            "certainty": 0.34,
+            "commitment": -0.24
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s12",
-          "aftermath": "你承认未来想象里仍然有他。"
+          "aftermath": "你留下未来窗口，也把它放在所有关系处理之后。",
+          "setFlags": {
+            "future_boundary": "three_month_meal"
+          }
         },
         {
           "id": "b",
-          "text": "说自己从不做这种假设",
+          "text": "明确说不要为你预留未来",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28,
+            "autonomy": 0.44,
+            "approach": -0.34,
+            "certainty": 0.3,
             "trust": -0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s12",
-          "aftermath": "你拒绝让假设绕过现实责任。"
+          "aftermath": "你不接受等待作为另一种压力。",
+          "setFlags": {
+            "future_boundary": "no_future"
+          }
         },
         {
           "id": "c",
-          "text": "告诉他真正想要的是有人留下，不一定是他",
+          "text": "提醒他：留下不等于你会选择他",
           "vector": {
-            "expression": 0.38,
-            "approach": 0.28,
-            "care": 0.26,
-            "trust": 0.2
+            "expression": 0.36,
+            "discernment": 0.3,
+            "trust": 0.04,
+            "idealization": -0.2
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s12",
-          "aftermath": "你开始区分爱他与渴望被留下。"
+          "aftermath": "你拆开了他的现实决定和你的感情答案。",
+          "setFlags": {
+            "future_boundary": "not_choice"
+          }
         },
         {
           "id": "d",
-          "text": "问他是否愿意为留下放弃下一次远行",
+          "text": "要求看完整行程、出差和续约风险",
           "vector": {
-            "care": 0.42,
-            "repair": 0.24,
-            "trust": 0.24,
-            "discernment": -0.08
+            "discernment": 0.4,
+            "certainty": 0.32,
+            "trust": 0.1,
+            "commitment": 0.06
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s12",
-          "aftermath": "你要求未来必须由具体取舍证明。"
+          "aftermath": "你不再只听“留下”，而是检查留下具体意味着什么。",
+          "setFlags": {
+            "future_boundary": "show_plan"
+          }
         }
       ]
     },
     {
       "id": "s12",
       "slot": 12,
-      "chapter": "12｜未婚夫的来电",
+      "chapter": "12｜许承的来电",
       "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "许承的电话打来。他问你是不是睡不着，要不要过来陪你。周叙已经退到几步之外，示意自己可以立刻离开。"
+          "text": "零点四十分，许承打来电话。他知道你婚前容易失眠，也知道明早六点要化妆，开口先问：“你安全吗？需要我过去吗？”"
         },
         {
           "type": "paragraph",
-          "text": "你的心跳比铃声更响。现实终于进入这个清晨。"
+          "text": "他不知道周叙是谁，更不知道第十七轨。现实不是一声审讯，而是一个相信自己正在和你共同生活的人。"
         }
       ],
-      "prompt": "你会怎样接这通电话？",
+      "prompt": "你怎样回答许承？",
       "choices": [
         {
           "id": "a",
-          "text": "如实说周叙来了",
+          "text": "如实说周叙来了、你在哪里、今晚发生了什么",
           "vector": {
-            "abandonment": 0.58,
-            "trust": -0.38,
-            "conflict": 0.32,
-            "reassurance": 0.2
+            "expression": 0.68,
+            "repair": 0.24,
+            "conflict": 0.34,
+            "commitment": -0.12
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s13",
-          "aftermath": "你让真相立刻进入现在的关系。"
+          "aftermath": "许承沉默了几秒，说会在酒店大堂等你回来。",
+          "setFlags": {
+            "truth_to_xucheng": "full"
+          }
         },
         {
           "id": "b",
-          "text": "只说出去透气，很快回去",
+          "text": "只说见了旧友，约定回酒店后再完整谈",
           "vector": {
-            "certainty": 0.5,
-            "expression": 0.44,
-            "discernment": 0.26,
-            "trust": -0.16
+            "discernment": 0.24,
+            "expression": 0.18,
+            "autonomy": 0.2,
+            "trust": -0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s13",
-          "aftermath": "你选择延迟冲突，也开始承担秘密。"
+          "aftermath": "你没有在电话里说完，但明确承诺回去后不能继续含糊。",
+          "setFlags": {
+            "truth_to_xucheng": "partial"
+          }
         },
         {
           "id": "c",
-          "text": "让电话响到结束",
+          "text": "暂时不接，让伴娘先告诉他你安全",
           "vector": {
-            "repair": 0.42,
-            "expression": 0.36,
-            "trust": 0.08,
-            "abandonment": 0.28
+            "autonomy": 0.3,
+            "conflict": 0.2,
+            "expression": -0.22,
+            "reassurance": 0.18
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s13",
-          "aftermath": "你暂时逃离了两边的答案。"
+          "aftermath": "你争取了一点时间，也让许承在不知道发生什么的情况下等待。",
+          "setFlags": {
+            "truth_to_xucheng": "missed"
+          }
         },
         {
           "id": "d",
-          "text": "接起来，用最平常的语气说晚安",
+          "text": "接起来，说自己已经睡下",
           "vector": {
-            "abandonment": 0.5,
-            "approach": -0.34,
-            "expression": -0.2,
-            "reassurance": 0.3
+            "expression": -0.5,
+            "conflict": -0.18,
+            "commitment": 0.1,
+            "trust": -0.34
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s13",
-          "aftermath": "你维持了表面平静，却让内心裂缝更清楚。"
+          "aftermath": "这句谎言暂时保住秩序，也制造了一个无法靠解释自动消失的裂缝。",
+          "setFlags": {
+            "truth_to_xucheng": "lied"
+          }
+        }
+      ],
+      "variants": [
+        {
+          "when": {
+            "flag": "meeting_mode",
+            "in": [
+              "bridge_together",
+              "bridge_public"
+            ]
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "伴娘已经把你的定位和预计返回时间告诉许承，所以他知道你离开过酒店。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "meeting_mode",
+            "equals": "hotel_lobby"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "伴娘只知道你在酒店大堂谈事，不知道谈话对象是谁。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "meeting_mode",
+            "equals": "hotel_remote"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "你一直留在酒店，但长时间没有回复婚礼群消息。许承因此打来确认。"
+            }
+          ]
         }
       ]
     },
@@ -1473,625 +1968,1299 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "周叙终于承认，当年不是因为签证、母亲或误会。他拿到海外项目，知道你不会跟他走，也知道见到你以后自己可能走不了。"
+          "text": "在周叙留下的书面时间线最后，有一段没有修饰的承认：当年他拿到海外项目，知道你不会跟他走，也知道见到你以后自己可能动摇。"
         },
         {
           "type": "paragraph",
-          "text": "所以他没有来。他爱过你，却仍然选择了自己的前途。"
+          "text": "所以他没有赴约。他爱过你，却仍然选择了自己的前途，也剥夺了你参与那次决定的机会。今晚亲自出现，同样有想知道“是否还有可能”的自私。"
         }
       ],
-      "prompt": "这个真相最刺痛你的是什么？",
+      "variants": [
+        {
+          "when": {
+            "flag": "explanation_mode",
+            "in": [
+              "full",
+              "motive",
+              "three_minutes"
+            ]
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "周叙把这段话亲口说出来，没有把责任推给签证、母亲或误会。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "explanation_mode",
+            "equals": "refused"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "你没有听他的个人解释。这段承认只存在于他留下的书面时间线里，你可以看，也可以不接受。"
+            }
+          ]
+        }
+      ],
+      "prompt": "面对这份不再自我美化的承认，你怎样回应？",
       "choices": [
         {
           "id": "a",
-          "text": "说谢谢他终于没有把自己说成好人",
+          "text": "说谢谢他终于没有把自己写成好人",
           "vector": {
-            "expression": 0.58,
-            "conflict": 0.5,
-            "autonomy": 0.36,
-            "repair": 0.18
+            "expression": 0.34,
+            "repair": 0.08,
+            "discernment": 0.48,
+            "trust": -0.18
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s14",
-          "aftermath": "你把诚实视为修复的最低起点。"
+          "aftermath": "你接受诚实的价值，却不把诚实当成赦免。",
+          "setFlags": {
+            "accountability_response": "honesty"
+          }
         },
         {
           "id": "b",
-          "text": "问他现在回来是否因为已经得到一切",
+          "text": "问他现在回来是否因为已经拿到了想要的一切",
           "vector": {
-            "expression": 0.5,
-            "repair": 0.46,
-            "trust": 0.16,
-            "conflict": 0.34
+            "conflict": 0.26,
+            "discernment": 0.36,
+            "trust": -0.22,
+            "expression": 0.24
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s14",
-          "aftermath": "你怀疑他的回归只是成功后的奢侈。"
+          "aftermath": "你指出他的勇敢可能建立在风险已经降低之后。",
+          "setFlags": {
+            "accountability_response": "timing"
+          }
         },
         {
           "id": "c",
           "text": "告诉他最恨的是他不让你参与决定",
           "vector": {
-            "autonomy": 0.42,
-            "conflict": -0.5,
-            "repair": 0.06,
-            "abandonment": 0.34
+            "expression": 0.42,
+            "abandonment": 0.26,
+            "autonomy": 0.22,
+            "conflict": 0.18
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s14",
-          "aftermath": "你终于准确说出伤口：不是离开，而是被剥夺决定权。"
+          "aftermath": "你把伤害说回它真正发生的位置：不是离开，而是被排除。",
+          "setFlags": {
+            "accountability_response": "deprived_choice"
+          }
         },
         {
           "id": "d",
-          "text": "转身离开，不再听任何一句",
+          "text": "结束谈话，让他把剩余材料交前台",
           "vector": {
-            "certainty": 0.38,
-            "approach": 0.22,
-            "expression": 0.46,
-            "idealization": 0.14
+            "autonomy": 0.5,
+            "approach": -0.38,
+            "certainty": 0.34,
+            "trust": -0.22
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s14",
-          "aftermath": "你选择先保护自己，不让解释无限延长。"
+          "aftermath": "你没有留下来见证他的悔意；后面的决定只能通过物品和书面信息继续。",
+          "setFlags": {
+            "accountability_response": "left"
+          }
         }
       ]
     },
     {
       "id": "s14",
       "slot": 14,
-      "chapter": "14｜你是否允许修复",
+      "chapter": "14｜你保留什么",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "他把录音室钥匙放在手边，却没有塞进你掌心：“你可以拿钥匙、拿录音，或者什么都不要。我明天不会去婚礼，除非你叫我。”"
+          "text": "周叙把录音室钥匙、数字文件和原始母带分别装好，没有把任何一样塞进你手里。钥匙代表未来可能，录音代表已经发生过的过去，两者不必一起接受。"
         },
         {
           "type": "paragraph",
-          "text": "这一次，他把行动与选择都留在明处。"
+          "text": "他说明：除非你主动联系，明天他不会去酒店、不会去礼堂，也不会借共同朋友打听你的决定。"
         }
       ],
-      "prompt": "你愿意给这段关系怎样的修复空间？",
+      "variants": [
+        {
+          "when": {
+            "flag": "accountability_response",
+            "equals": "left"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "你离开后，前台收到三个分开的信封和一张物品清单。周叙没有再要求见面。"
+            }
+          ]
+        }
+      ],
+      "prompt": "你为这段关系留下哪一种现实可能？",
       "choices": [
         {
           "id": "a",
-          "text": "收下钥匙，但要求他今晚离开",
+          "text": "收下钥匙，但写明三个月内不见面",
           "vector": {
-            "commitment": 0.46,
-            "idealization": 0.3,
-            "autonomy": 0.28,
-            "novelty": -0.28
+            "discernment": 0.46,
+            "autonomy": 0.46,
+            "approach": 0.08,
+            "commitment": -0.18
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s15",
-          "aftermath": "你保留现实可能，却要求时间验证。",
+          "aftermath": "你留下未来可能，也给它明确的冷却期。",
           "setFlags": {
-            "bench": "whole"
+            "repair_permission": "key_three_months"
           },
-          "subtext": "让记忆完整留下，也接受新空间为它让路。"
+          "subtext": "保留可能，不把钥匙当成今晚复合的邀请。"
         },
         {
           "id": "b",
-          "text": "只拿录音，告诉他这不是原谅",
+          "text": "只拿录音和材料，不拿钥匙",
           "vector": {
-            "repair": 0.48,
-            "commitment": 0.36,
-            "trust": 0.24,
-            "discernment": 0.24
+            "autonomy": 0.34,
+            "repair": 0.24,
+            "approach": -0.12,
+            "trust": 0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s15",
-          "aftermath": "你接受真相，不等于接受复合。",
+          "aftermath": "你接受过去的完整版本，不接受新的关系入口。",
           "setFlags": {
-            "bench": "table"
+            "repair_permission": "recording_only"
           },
-          "subtext": "让旧工作台继续被人使用，而不是只被纪念。"
+          "subtext": "知道真相与恢复关系，是两件不同的事。"
         },
         {
           "id": "c",
-          "text": "什么都不拿，结束这段关系",
+          "text": "什么都不拿，要求停止联系",
           "vector": {
-            "autonomy": 0.38,
-            "discernment": 0.34,
-            "idealization": 0.22,
-            "commitment": 0.14
+            "autonomy": 0.52,
+            "certainty": 0.38,
+            "approach": -0.44,
+            "commitment": -0.26
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s15",
-          "aftermath": "你承认爱情存在，也决定停止。",
+          "aftermath": "你结束联系，也不要求他把结束写成等待。",
           "setFlags": {
-            "bench": "board"
+            "repair_permission": "no_contact"
           },
-          "subtext": "只留下最私人、最不可替代的那一块。"
+          "subtext": "爱情存在过，不代表它必须继续占据现在。"
         },
         {
           "id": "d",
-          "text": "让他留下，把没说完的话说到天亮",
+          "text": "留下谈到一点钟，但不作关系承诺",
           "vector": {
-            "novelty": 0.5,
-            "autonomy": 0.34,
-            "commitment": -0.14,
-            "idealization": -0.28
+            "expression": 0.28,
+            "approach": 0.18,
+            "discernment": 0.2,
+            "commitment": -0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "s15",
-          "aftermath": "你允许两个人继续靠近，同时承担更高的现实代价。",
+          "aftermath": "你允许谈话完成，也让一点钟成为真实结束时间。",
           "setFlags": {
-            "bench": "new"
+            "repair_permission": "talk_until_deadline"
           },
-          "subtext": "允许旧物离开，让这里真正成为新的地方。"
+          "subtext": "继续说话不等于复合，更不等于跨过婚礼的现实。"
         }
       ],
       "decisionType": "hard",
       "decisionLabel": "关键选择",
-      "decisionNote": "这不是偏好题。你选择保留什么，也是在决定怎样面对过去。"
+      "decisionNote": "这一次的决定会改变后面的事实，而不只是改变语气。"
     },
     {
       "id": "s15",
       "slot": 15,
-      "chapter": "15｜爱情开始要求代价",
+      "chapter": "15｜许承在大堂等你",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "回到酒店，许承已经在门口。他没有质问，只看见湿透的裙摆和旧录音机。"
+          "text": "一点二十分，你在酒店大堂见到许承。手边放着温水和明早的流程表。他没有翻你的包，也没有要求查看手机。"
         },
         {
           "type": "paragraph",
-          "text": "“我只问一次。”他说，“今晚发生的事，会不会改变你明天的答案？”"
-        }
-      ],
-      "prompt": "你会怎样对现在的承诺负责？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "把一切告诉他，并请求推迟婚礼",
-          "vector": {
-            "expression": 0.5,
-            "repair": 0.4,
-            "trust": 0.28,
-            "reassurance": 0.18
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s16",
-          "aftermath": "你选择让所有人面对完整真相。"
-        },
-        {
-          "id": "b",
-          "text": "只承认见了旧友，坚持婚礼照常",
-          "vector": {
-            "certainty": 0.48,
-            "expression": 0.44,
-            "conflict": 0.24,
-            "repair": 0.22
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s16",
-          "aftermath": "你保护了秩序，也让秘密进入婚姻。"
-        },
-        {
-          "id": "c",
-          "text": "说自己不能结婚，却不把责任推给周叙",
-          "vector": {
-            "autonomy": 0.42,
-            "expression": -0.34,
-            "repair": -0.1,
-            "commitment": 0.18
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s16",
-          "aftermath": "你为自己的犹豫负责，不把任何男人当借口。"
-        },
-        {
-          "id": "d",
-          "text": "反问如果你犹豫过，他是否仍愿意娶你",
-          "vector": {
-            "expression": 0.48,
-            "autonomy": 0.36,
-            "certainty": 0.32,
-            "commitment": -0.06
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s16",
-          "aftermath": "你把决定的一部分交回给许承，也迫使关系面对真实。"
+          "text": "他说：“我不需要你现在证明更爱谁。我需要知道，我们明天是否还在共同作出同一个决定。”"
         }
       ],
       "variants": [
         {
           "when": {
-            "flag": "bench",
-            "equals": "whole"
+            "flag": "truth_to_xucheng",
+            "equals": "full"
           },
           "prependContent": [
             {
               "type": "paragraph",
-              "text": "完整工作台被加固后留在原处，旧划痕和新钢架同时存在。"
+              "text": "因为你在电话里已经说出周叙和录音，许承知道这不是一次普通叙旧。"
             }
           ]
         },
         {
           "when": {
-            "flag": "bench",
-            "equals": "table"
+            "flag": "truth_to_xucheng",
+            "equals": "partial"
           },
           "prependContent": [
             {
               "type": "paragraph",
-              "text": "工作台中段被重新打磨，变成书店里最长的一张公共桌。"
+              "text": "许承记得你答应回来后完整谈。他没有允许“旧友”两个字替代剩下的事实。"
             }
           ]
         },
         {
           "when": {
-            "flag": "bench",
-            "equals": "board"
+            "flag": "truth_to_xucheng",
+            "equals": "missed"
           },
           "prependContent": [
             {
               "type": "paragraph",
-              "text": "那块刻着歪线的木板被嵌进新墙面，只有你知道它原来在哪里。"
+              "text": "你只通过伴娘报过平安。许承等了四十分钟，担心和被排除同时留在他脸上。"
             }
           ]
         },
         {
           "when": {
-            "flag": "bench",
-            "equals": "new"
+            "flag": "truth_to_xucheng",
+            "equals": "lied"
           },
           "prependContent": [
             {
               "type": "paragraph",
-              "text": "工作台被全部移走，空出来的位置第一次让江面完整地照进屋里。"
+              "text": "你说自己已经睡下时，伴娘刚从房门外经过，知道灯还亮着。许承已经发现这句话不是真的，所以问题不再只是周叙，而是你为什么选择说谎。"
             }
           ]
+        }
+      ],
+      "prompt": "你怎样处理婚礼与许承的知情权？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "全部坦白，请求两个人共同宣布婚礼延期",
+          "vector": {
+            "expression": 0.7,
+            "repair": 0.3,
+            "conflict": 0.32,
+            "commitment": -0.18
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s16_postpone",
+          "aftermath": "许承没有立刻原谅，只同意先停止明天的惯性。",
+          "setFlags": {
+            "xucheng_resolution": "postpone_together"
+          }
+        },
+        {
+          "id": "b",
+          "text": "承认见面和动摇，请求二十四小时后再决定关系",
+          "vector": {
+            "expression": 0.3,
+            "autonomy": 0.26,
+            "certainty": -0.18,
+            "conflict": 0.18
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s16_24h",
+          "aftermath": "许承提醒你宾客已经在路上，但愿意先讨论如何不把后果推给别人。",
+          "setFlags": {
+            "xucheng_resolution": "pause_24h"
+          }
+        },
+        {
+          "id": "c",
+          "text": "取消婚礼，明确这不是为了立刻选择周叙",
+          "vector": {
+            "autonomy": 0.52,
+            "certainty": 0.38,
+            "commitment": -0.26,
+            "repair": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s16_cancel",
+          "aftermath": "你结束婚礼，也承担没有任何人立即接住你的可能。",
+          "setFlags": {
+            "xucheng_resolution": "cancel_self"
+          }
+        },
+        {
+          "id": "d",
+          "text": "隐瞒关键事实，让婚礼照常",
+          "vector": {
+            "expression": -0.54,
+            "trust": -0.34,
+            "commitment": 0.22,
+            "conflict": -0.16
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s16_conceal",
+          "aftermath": "许承听见了一个可以让流程继续的答案，却没有得到完整事实。",
+          "setFlags": {
+            "xucheng_resolution": "conceal_continue"
+          }
         }
       ]
     },
     {
-      "id": "s16",
+      "id": "s16_postpone",
       "slot": 16,
-      "chapter": "16｜婚礼开始以前",
+      "chapter": "16｜延期不是答案",
       "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "第二天下午，礼堂的门已经打开。周叙没有出现。许承站在尽头，眼里没有逼迫，只有等待。"
+          "text": "清晨四点，你和许承一起通知双方父母：仪式延期，原因由你们共同承担，不把周叙的名字交给家人审判。许承没有替你挡住所有追问，也没有承诺一定继续。"
         },
         {
           "type": "paragraph",
-          "text": "你的包里放着钥匙、旧录音，或什么都没有——那是昨夜的你留下的证据。"
+          "text": "下午，空着的礼堂仍要处理合同、宾客和费用。暂停只停止了仪式，没有替你们完成关系决定。"
         }
       ],
-      "prompt": "你会做出哪个不可逆的决定？",
+      "prompt": "延期以后，你决定把关系带向哪里？",
       "choices": [
         {
           "id": "a",
-          "text": "走向许承，但在所有人面前暂停仪式",
+          "text": "公开暂停仪式，双方先分开处理关系",
           "vector": {
-            "commitment": 0.42,
-            "trust": 0.3,
-            "approach": 0.2,
-            "expression": 0.18
+            "autonomy": 0.62,
+            "discernment": 0.38,
+            "certainty": 0.26,
+            "commitment": -0.34
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
-          "next": "s17",
-          "aftermath": "你选择先修复真相，而不是仓促完成承诺。"
+          "next": "s17_unbound",
+          "aftermath": "你没有把暂停当成拖延，而是承认关系需要重新审视。",
+          "setFlags": {
+            "wedding_decision": "postponed"
+          },
+          "subtext": "暂停不是选择另一个人，而是先停止错误的惯性。"
         },
         {
           "id": "b",
-          "text": "离开礼堂，去录音室找周叙",
+          "text": "结束婚约，也不立刻走向周叙",
           "vector": {
-            "reassurance": 0.38,
-            "approach": 0.32,
-            "expression": 0.38,
-            "validation": 0.2
+            "autonomy": 0.52,
+            "commitment": -0.28,
+            "certainty": 0.36,
+            "repair": 0.16
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
-          "next": "s17",
-          "aftermath": "你走向旧爱，也必须承担由此失去的一切。"
+          "next": "s17_unbound",
+          "aftermath": "你承担结束的代价，不让旧爱成为替代答案。",
+          "setFlags": {
+            "wedding_decision": "ended_alone"
+          },
+          "subtext": "失去两段关系，也比用一段关系逃离另一段诚实。"
         },
         {
           "id": "c",
-          "text": "结束婚礼，也不去找任何人",
+          "text": "结束婚约，只允许三个月后再决定是否见周叙",
           "vector": {
-            "autonomy": 0.42,
-            "discernment": 0.32,
-            "approach": -0.18,
-            "trust": 0.02
+            "discernment": 0.4,
+            "approach": 0.18,
+            "commitment": 0.12,
+            "certainty": 0.22
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
-          "next": "s17",
-          "aftermath": "你拒绝让两个男人替你定义答案。"
+          "next": "s17_unbound",
+          "aftermath": "你为未来留了一条窄路，却拒绝把今晚直接写成复合。",
+          "setFlags": {
+            "wedding_decision": "ended_future"
+          },
+          "subtext": "把冲动交给时间检验，而不是交给婚礼现场。"
         },
         {
           "id": "d",
-          "text": "隐瞒昨夜，按原计划说出“我愿意”",
-          "vector": {
-            "expression": 0.46,
-            "certainty": 0.42,
-            "autonomy": 0.32,
-            "commitment": -0.08
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s17",
-          "aftermath": "你保住了秩序，却把未完成的爱情带进未来。"
-        }
-      ],
-      "variants": [
-        {
-          "when": {
-            "flag": "departure",
-            "equals": "open"
-          },
-          "appendContent": [
-            {
-              "type": "paragraph",
-              "text": "许妍记得你说过可能离开，所以这句话里没有挽留，只是在确认你明天是否仍愿意参与。"
-            }
-          ]
-        },
-        {
-          "when": {
-            "flag": "departure",
-            "equals": "uncertain"
-          },
-          "appendContent": [
-            {
-              "type": "paragraph",
-              "text": "她没有追问你最终会不会走，但也没有再把你默认写进开业后的安排。"
-            }
-          ]
-        },
-        {
-          "when": {
-            "flag": "departure",
-            "equals": "soften"
-          },
-          "appendContent": [
-            {
-              "type": "paragraph",
-              "text": "你能感觉到，她仍然不知道你真正的计划。那句“明天还来吗”因此比表面更重。"
-            }
-          ]
-        },
-        {
-          "when": {
-            "flag": "departure",
-            "equals": "reciprocal"
-          },
-          "appendContent": [
-            {
-              "type": "paragraph",
-              "text": "你们都知道彼此未来几个月的大致方向，却还没有说这是否意味着要为对方留位置。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "s17",
-      "slot": 17,
-      "chapter": "17｜他是否真的记得",
-      "context": "commitment",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "不同路线里，周叙都会遵守你最早设下的边界。只给十分钟的人，他没有多留一秒；要求他说清楚的人，他把所有行程摊开。"
-        },
-        {
-          "type": "paragraph",
-          "text": "叫他的人，会在录音室门口看见他等着，却没有伸手拉你。"
-        }
-      ],
-      "prompt": "在故事最后真正落地以前，你还需要什么？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "先问他有没有后悔回来",
-          "vector": {
-            "commitment": 0.5,
-            "approach": 0.38,
-            "certainty": 0.38,
-            "trust": 0.28
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18",
-          "aftermath": "你仍需要确认这次选择对他意味着什么。"
-        },
-        {
-          "id": "b",
-          "text": "把钥匙或录音交还给他",
-          "vector": {
-            "approach": 0.3,
-            "certainty": 0.4,
-            "expression": 0.34,
-            "reassurance": 0.16
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18",
-          "aftermath": "你用归还完成自己的边界。"
-        },
-        {
-          "id": "c",
-          "text": "叫出他的名字，等他走向你",
-          "vector": {
-            "trust": 0.26,
-            "approach": 0.12,
-            "autonomy": 0.3,
-            "expression": -0.18
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18",
-          "aftermath": "你终于允许自己主动叫住一个人。"
-        },
-        {
-          "id": "d",
-          "text": "什么都不说，只让他听完第十七轨",
+          "text": "把昨夜全部说清，再问许承是否仍愿意继续",
           "vector": {
             "expression": 0.42,
-            "autonomy": 0.4,
-            "commitment": -0.18,
-            "trust": 0.12
+            "repair": 0.34,
+            "commitment": 0.24,
+            "certainty": 0.18
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
-          "next": "s18",
-          "aftermath": "你让共同见证代替最后一句漂亮台词。"
+          "next": "s17_married",
+          "aftermath": "你没有用坦白换取原谅，只把继续与否重新交给两个人。",
+          "setFlags": {
+            "wedding_decision": "continued_open"
+          },
+          "subtext": "继续不是恢复原样，而是接受关系已经改变。"
+        }
+      ],
+      "decisionType": "hard",
+      "decisionLabel": "关键选择",
+      "decisionNote": "暂停之后仍要处理婚约、现实损失与两个人的意愿。"
+    },
+    {
+      "id": "s16_24h",
+      "slot": 16,
+      "chapter": "16｜宾客已经在路上",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "许承没有答应把所有人晾二十四小时。他说：“你可以需要时间，但我们必须先决定今天的仪式是否继续。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "早上八点，家人开始催流程。你们坐在空宴会厅里，第一次不是讨论谁更适合你，而是讨论哪一种后果由谁承担。"
+        }
+      ],
+      "prompt": "你现在怎样处理这场已经启动的婚礼？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "公开暂停仪式，双方先分开处理关系",
+          "vector": {
+            "autonomy": 0.62,
+            "discernment": 0.38,
+            "certainty": 0.26,
+            "commitment": -0.34
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s17_unbound",
+          "aftermath": "你没有把暂停当成拖延，而是承认关系需要重新审视。",
+          "setFlags": {
+            "wedding_decision": "postponed"
+          },
+          "subtext": "暂停不是选择另一个人，而是先停止错误的惯性。"
+        },
+        {
+          "id": "b",
+          "text": "结束婚约，也不立刻走向周叙",
+          "vector": {
+            "autonomy": 0.52,
+            "commitment": -0.28,
+            "certainty": 0.36,
+            "repair": 0.16
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s17_unbound",
+          "aftermath": "你承担结束的代价，不让旧爱成为替代答案。",
+          "setFlags": {
+            "wedding_decision": "ended_alone"
+          },
+          "subtext": "失去两段关系，也比用一段关系逃离另一段诚实。"
+        },
+        {
+          "id": "c",
+          "text": "结束婚约，只允许三个月后再决定是否见周叙",
+          "vector": {
+            "discernment": 0.4,
+            "approach": 0.18,
+            "commitment": 0.12,
+            "certainty": 0.22
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s17_unbound",
+          "aftermath": "你为未来留了一条窄路，却拒绝把今晚直接写成复合。",
+          "setFlags": {
+            "wedding_decision": "ended_future"
+          },
+          "subtext": "把冲动交给时间检验，而不是交给婚礼现场。"
+        },
+        {
+          "id": "d",
+          "text": "把昨夜全部说清，再问许承是否仍愿意继续",
+          "vector": {
+            "expression": 0.42,
+            "repair": 0.34,
+            "commitment": 0.24,
+            "certainty": 0.18
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s17_married",
+          "aftermath": "你没有用坦白换取原谅，只把继续与否重新交给两个人。",
+          "setFlags": {
+            "wedding_decision": "continued_open"
+          },
+          "subtext": "继续不是恢复原样，而是接受关系已经改变。"
+        }
+      ],
+      "decisionType": "hard",
+      "decisionLabel": "关键选择",
+      "decisionNote": "时间压力不能替你决定，但现实中的其他人也不能被当作背景。"
+    },
+    {
+      "id": "s16_cancel",
+      "slot": 16,
+      "chapter": "16｜取消之后",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "婚礼在清晨被取消。许承自己通知了父母，你负责联系酒店和宾客。没有人替你把这件事包装成追随真爱的勇敢。"
+        },
+        {
+          "type": "paragraph",
+          "text": "下午，你回到空礼堂取走捧花。许承问的最后一个问题是：“取消以后，你是否也愿意诚实决定我们还剩下什么？”"
+        }
+      ],
+      "prompt": "取消仪式以后，你怎样确认真正的关系决定？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "维持取消决定，先独自住一段时间",
+          "vector": {
+            "autonomy": 0.62,
+            "discernment": 0.38,
+            "certainty": 0.26,
+            "commitment": -0.34
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s17_unbound",
+          "aftermath": "你没有把暂停当成拖延，而是承认关系需要重新审视。",
+          "setFlags": {
+            "wedding_decision": "relationship_paused"
+          },
+          "subtext": "暂停不是选择另一个人，而是先停止错误的惯性。"
+        },
+        {
+          "id": "b",
+          "text": "和许承正式结束，也不向周叙承诺未来",
+          "vector": {
+            "autonomy": 0.52,
+            "commitment": -0.28,
+            "certainty": 0.36,
+            "repair": 0.16
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s17_unbound",
+          "aftermath": "你承担结束的代价，不让旧爱成为替代答案。",
+          "setFlags": {
+            "wedding_decision": "ended_alone"
+          },
+          "subtext": "失去两段关系，也比用一段关系逃离另一段诚实。"
+        },
+        {
+          "id": "c",
+          "text": "结束婚约，只允许三个月后再决定是否见周叙",
+          "vector": {
+            "discernment": 0.4,
+            "approach": 0.18,
+            "commitment": 0.12,
+            "certainty": 0.22
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s17_unbound",
+          "aftermath": "你为未来留了一条窄路，却拒绝把今晚直接写成复合。",
+          "setFlags": {
+            "wedding_decision": "ended_future"
+          },
+          "subtext": "把冲动交给时间检验，而不是交给婚礼现场。"
+        },
+        {
+          "id": "d",
+          "text": "把昨夜全部说清，再问许承是否仍愿意继续",
+          "vector": {
+            "expression": 0.42,
+            "repair": 0.34,
+            "commitment": 0.24,
+            "certainty": 0.18
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s17_married",
+          "aftermath": "你没有用坦白换取原谅，只把继续与否重新交给两个人。",
+          "setFlags": {
+            "wedding_decision": "continued_open"
+          },
+          "subtext": "继续不是恢复原样，而是接受关系已经改变。"
+        }
+      ],
+      "decisionType": "hard",
+      "decisionLabel": "关键选择",
+      "decisionNote": "取消婚礼并不自动等于结束婚约，更不自动等于选择旧爱。"
+    },
+    {
+      "id": "s16_conceal",
+      "slot": 16,
+      "chapter": "16｜正确的流程",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "第二天下午，礼堂按计划开放。许承握住你的手，仍以为昨夜只是一次让你紧张的旧友重逢。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你可以在宣誓前纠正这件事，也可以继续让所有人按照一个不完整的事实往前走。"
+        }
+      ],
+      "prompt": "站到宣誓以前，你怎样处理这个秘密？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "公开暂停仪式，双方先分开处理关系",
+          "vector": {
+            "autonomy": 0.62,
+            "discernment": 0.38,
+            "certainty": 0.26,
+            "commitment": -0.34
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s17_unbound",
+          "aftermath": "你没有把暂停当成拖延，而是承认关系需要重新审视。",
+          "setFlags": {
+            "wedding_decision": "postponed"
+          },
+          "subtext": "暂停不是选择另一个人，而是先停止错误的惯性。"
+        },
+        {
+          "id": "b",
+          "text": "结束婚约，也不立刻走向周叙",
+          "vector": {
+            "autonomy": 0.52,
+            "commitment": -0.28,
+            "certainty": 0.36,
+            "repair": 0.16
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s17_unbound",
+          "aftermath": "你承担结束的代价，不让旧爱成为替代答案。",
+          "setFlags": {
+            "wedding_decision": "ended_alone"
+          },
+          "subtext": "失去两段关系，也比用一段关系逃离另一段诚实。"
+        },
+        {
+          "id": "c",
+          "text": "结束婚约，只允许三个月后再决定是否见周叙",
+          "vector": {
+            "discernment": 0.4,
+            "approach": 0.18,
+            "commitment": 0.12,
+            "certainty": 0.22
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s17_unbound",
+          "aftermath": "你为未来留了一条窄路，却拒绝把今晚直接写成复合。",
+          "setFlags": {
+            "wedding_decision": "ended_future"
+          },
+          "subtext": "把冲动交给时间检验，而不是交给婚礼现场。"
+        },
+        {
+          "id": "d",
+          "text": "按原计划宣誓，不告诉许承完整事实",
+          "vector": {
+            "commitment": 0.34,
+            "expression": -0.5,
+            "conflict": -0.18,
+            "reassurance": 0.26
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s17_married",
+          "aftermath": "你维持了仪式，也把未处理的事实带进了婚姻。",
+          "setFlags": {
+            "wedding_decision": "continued_hidden"
+          },
+          "subtext": "保住秩序，但秘密不会因此消失。"
+        }
+      ],
+      "decisionType": "hard",
+      "decisionLabel": "关键选择",
+      "decisionNote": "最后一刻仍能纠正，但继续隐瞒会成为婚姻中的真实事实。"
+    },
+    {
+      "id": "s17_unbound",
+      "slot": 17,
+      "chapter": "17｜雨夜之后的一周",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "一周后，礼堂里的事已经过去。周叙没有去现场，也没有通过共同朋友打听。第十七轨只在约定的文件夹里，钥匙也仍按你在大堂留下的方式保管。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你终于可以在没有雨、没有婚纱、没有人在门外等待的白天，决定这段关系下一步是否存在。"
         }
       ],
       "variants": [
         {
           "when": {
-            "flag": "departure",
-            "equals": "open"
+            "flag": "wedding_decision",
+            "in": [
+              "postponed",
+              "relationship_paused"
+            ]
           },
-          "appendContent": [
+          "prependContent": [
             {
-              "type": "quote",
-              "text": "她说：“你去哪里工作是一回事，愿不愿意回来，是另一回事。”"
+              "type": "paragraph",
+              "text": "婚礼被暂停，婚约也进入分开处理的阶段。没有人承诺一定继续。"
             }
           ]
         },
         {
           "when": {
-            "flag": "departure",
-            "equals": "uncertain"
+            "flag": "wedding_decision",
+            "in": [
+              "ended_alone",
+              "ended_future"
+            ]
           },
-          "appendContent": [
+          "prependContent": [
             {
-              "type": "quote",
-              "text": "她说：“你不需要因为舍不得就留下，但别把不决定当成没有选择。”"
+              "type": "paragraph",
+              "text": "婚礼和婚约都已经结束。这个结果没有自动把周叙变成下一段关系。"
             }
           ]
         },
         {
           "when": {
-            "flag": "departure",
-            "equals": "soften"
+            "flag": "repair_permission",
+            "equals": "no_contact"
           },
-          "appendContent": [
+          "prependContent": [
             {
-              "type": "quote",
-              "text": "她说：“真正让我介意的不是你会走，是你一直没让我知道该不该等。”"
+              "type": "paragraph",
+              "text": "周叙遵守了停止联系的要求。你没有收到试探性的节日问候，也没有“最后一条消息”。"
             }
           ]
         },
         {
           "when": {
-            "flag": "departure",
-            "equals": "reciprocal"
+            "flag": "repair_permission",
+            "equals": "key_three_months"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "钥匙被密封在你自己的抽屉里，三个月期限仍没有被任何人提前。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "truth_to_xucheng",
+            "equals": "lied"
           },
           "appendContent": [
             {
-              "type": "quote",
-              "text": "她说：“我们都知道自己接下来要去哪里。剩下的问题，是愿不愿意把对方也算进去。”"
+              "type": "paragraph",
+              "text": "你后来向许承承认了那通电话里的谎言。即使婚礼已经停止，迟到的坦白仍让信任付出了额外代价。"
             }
           ]
+        }
+      ],
+      "prompt": "没有即时结局替你作证时，你怎样安排这段旧爱？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "三个月后由你主动联系，只约一顿普通晚饭",
+          "vector": {
+            "approach": 0.28,
+            "discernment": 0.4,
+            "certainty": 0.24,
+            "commitment": -0.2
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s18_return",
+          "aftermath": "你把重新开始放进日常和时间，而不是放进逃离婚礼的冲动。"
+        },
+        {
+          "id": "b",
+          "text": "归还钥匙，先独自生活，不进入任何关系",
+          "vector": {
+            "autonomy": 0.5,
+            "certainty": 0.32,
+            "commitment": -0.28,
+            "repair": 0.16
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s18_commute",
+          "aftermath": "你不让失去任何一个人变成必须立即寻找另一个人的理由。"
+        },
+        {
+          "id": "c",
+          "text": "保留录音的档案权，停止私人联系",
+          "vector": {
+            "autonomy": 0.36,
+            "repair": 0.24,
+            "approach": -0.3,
+            "idealization": -0.1
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s18_distance",
+          "aftermath": "你允许爱情被完整记住，也让它停止占用现在。"
+        },
+        {
+          "id": "d",
+          "text": "把录音交给城市档案馆，至少一年不联系",
+          "vector": {
+            "discernment": 0.4,
+            "certainty": 0.28,
+            "approach": -0.34,
+            "commitment": -0.18
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s18_distance",
+          "aftermath": "你把共同记忆放到公开档案里，不再让它只属于两个人的秘密。"
         }
       ]
     },
     {
-      "id": "s18",
-      "slot": 18,
-      "chapter": "18｜这段爱情应如何被记住",
+      "id": "s17_married",
+      "slot": 17,
+      "chapter": "17｜婚姻里的第十七轨",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "第十七轨播放到最后，只剩城市醒来的声音。没有任何人能替你总结这六年。"
+          "text": "仪式继续了。周叙没有出现，也没有联系。真正留下来的问题不是他是否遵守边界，而是许承知道多少，以及你准备怎样让这段婚姻面对昨夜。"
         },
         {
           "type": "paragraph",
-          "text": "你必须决定，它在你的生命里究竟是什么。"
+          "text": "第十七轨仍在你的设备里。它可以成为公开处理过的过去，也可以成为只有你知道的秘密。"
         }
       ],
-      "prompt": "你愿意怎样理解这段爱情？",
+      "variants": [
+        {
+          "when": {
+            "flag": "wedding_decision",
+            "equals": "continued_open"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "许承是在知道完整事实后选择继续的，但继续并不等于信任已经恢复。你们约定婚后接受伴侣咨询。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "wedding_decision",
+            "equals": "continued_hidden"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "许承仍不知道完整事实。宣誓没有消除那通电话里的谎言，也没有让昨夜自动变成无关紧要。"
+            }
+          ]
+        }
+      ],
+      "prompt": "你怎样处理录音、周叙与许承之间的事实？",
       "choices": [
         {
           "id": "a",
-          "text": "一场来得太迟，却终于诚实的爱情",
+          "text": "现在向许承补全真相，接受婚姻可能暂停",
           "vector": {
-            "approach": 0.66,
-            "commitment": 0.6,
-            "expression": 0.54,
-            "trust": 0.42
+            "expression": 0.58,
+            "repair": 0.3,
+            "conflict": 0.3,
+            "commitment": -0.2
           },
-          "intensity": 1.0,
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s18_commute",
+          "aftermath": "你迟到地停止了秘密，也接受坦白不保证关系继续。"
+        },
+        {
+          "id": "b",
+          "text": "在许承知情下归还全部物品，停止联系",
+          "vector": {
+            "repair": 0.32,
+            "autonomy": 0.28,
+            "approach": -0.34,
+            "trust": 0.14
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s18_distance",
+          "aftermath": "你没有要求许承把关闭过去理解成已经修复信任。"
+        },
+        {
+          "id": "c",
+          "text": "公开保留档案副本，但不再与周叙私人联系",
+          "vector": {
+            "expression": 0.3,
+            "autonomy": 0.3,
+            "repair": 0.22,
+            "approach": -0.22
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s18_distance",
+          "aftermath": "录音不再是秘密，也不再是通往旧爱的暗门。"
+        },
+        {
+          "id": "d",
+          "text": "把录音锁进抽屉，继续不说完整事实",
+          "vector": {
+            "expression": -0.5,
+            "trust": -0.34,
+            "commitment": 0.2,
+            "conflict": -0.18
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "s18_farewell",
+          "aftermath": "秘密没有立刻摧毁生活，只是被你带进了生活。"
+        }
+      ]
+    },
+    {
+      "id": "s18_return",
+      "slot": 18,
+      "chapter": "18｜重新开始要经过生活",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "三个月后，雨季已经过去。你没有用周叙的等待证明自己值得被选，也没有让一次晚饭替六年的事实结案。"
+        },
+        {
+          "type": "paragraph",
+          "text": "现在你只需要决定：所谓重新开始，应该以什么方式进入真实生活。"
+        }
+      ],
+      "prompt": "你愿意怎样记住并开始这段迟到的关系？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "三个月后，先吃一顿普通晚饭",
+          "vector": {
+            "approach": 0.34,
+            "discernment": 0.32,
+            "idealization": -0.34,
+            "commitment": -0.18
+          },
+          "intensity": 1,
           "confidence": 0.95,
           "next": "$result",
-          "aftermath": "你珍惜迟到的真相，也接受它需要代价。",
+          "aftermath": "你让爱情从一顿饭开始，而不是从婚礼废墟开始。",
+          "outcome": "return",
           "setFlags": {
             "ending": "return"
           },
-          "outcome": "return",
-          "subtext": "回到她面前，让喜欢进入真实生活。",
+          "subtext": "让最后的理解承认前面真实发生过的事。",
           "finalReveal": {
             "eyebrow": "你亲手走出的结局",
             "title": "迟到的重新开始",
-            "copy": "你暂停了婚礼，却没有立刻回到周叙身边。礼堂外的雨停了，许承沉默地替你挡住家人的追问，而周叙也没有趁混乱出现。三个月后，你才第一次用那把钥匙打开录音室。桌上没有花，也没有一句“我等了你六年”，只有未来六个月的工作安排、出差日期和已经空出来的周末。周叙站在两扇窗之间，问你愿不愿意从一顿普通晚饭开始。你没有把迟到的爱情当成命运补偿，而是让它接受时间、生活和一次次兑现的检验。真正的重新开始，不是逃离婚礼，而是两个人终于不再替彼此决定未来。"
+            "copy": "婚礼没有按原样继续，你也没有从礼堂直接奔向周叙。许承有权离开、沉默或重新判断，周叙也没有趁混乱出现。三个月后，你才第一次主动联系。录音室里没有花，也没有“我等了你六年”，只有剩余项目日程、出差日期和一顿普通晚饭。你让迟到的爱情接受生活、时间和一次次兑现的检验。真正的重新开始，不是用周叙替代一场婚礼，而是两个人终于不再替彼此决定未来。"
           }
         },
         {
           "id": "b",
-          "text": "我差点用来逃离现实的一条路",
+          "text": "先看他能否兑现六个月的现实安排",
           "vector": {
-            "certainty": 0.46,
-            "commitment": 0.34,
-            "autonomy": 0.42,
-            "trust": 0.34
+            "discernment": 0.38,
+            "certainty": 0.3,
+            "trust": 0.14,
+            "approach": 0.1
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "$result",
-          "aftermath": "你看见了浪漫也可能成为逃生门。",
+          "aftermath": "你把留下拆成一次次可以核对的行动。",
+          "outcome": "return",
           "setFlags": {
-            "ending": "commute"
+            "ending": "return"
           },
-          "outcome": "commute",
-          "subtext": "给出下一步，但不拿永远交换爱情。",
+          "subtext": "不让一句漂亮的话覆盖已经付出的代价。",
           "finalReveal": {
             "eyebrow": "你亲手走出的结局",
-            "title": "一个人的清晨",
-            "copy": "你结束了婚礼，也没有去找周叙。走出酒店时，城市刚刚醒来，街边蒸笼冒出的白气和第十七轨里的声音几乎一模一样。你把录音导进电脑，将文件名从“我们”改成自己的名字，然后把录音室钥匙装进信封寄还。那一天你同时失去了稳定的婚姻和可能复燃的旧爱，没有人站在街角等你，也没有任何浪漫结局替你证明决定正确。可当你独自走过旧桥时，你第一次没有问谁会留下，只问自己接下来想去哪里。你没有选择任何一个男人，却终于完整地选择了自己。"
+            "title": "迟到的重新开始",
+            "copy": "婚礼没有按原样继续，你也没有从礼堂直接奔向周叙。许承有权离开、沉默或重新判断，周叙也没有趁混乱出现。三个月后，你才第一次主动联系。录音室里没有花，也没有“我等了你六年”，只有剩余项目日程、出差日期和一顿普通晚饭。你让迟到的爱情接受生活、时间和一次次兑现的检验。真正的重新开始，不是用周叙替代一场婚礼，而是两个人终于不再替彼此决定未来。"
           }
         },
         {
           "id": "c",
-          "text": "证明我值得被留下的一段证据",
+          "text": "从一次共同录音开始，不谈永远",
           "vector": {
-            "trust": 0.36,
-            "repair": 0.34,
-            "autonomy": 0.38,
-            "approach": 0.12
+            "approach": 0.28,
+            "novelty": 0.24,
+            "autonomy": 0.18,
+            "commitment": -0.08
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "$result",
-          "aftermath": "你承认自己最深的需要是被选择。",
+          "aftermath": "你允许共同创造，却不预支永久承诺。",
+          "outcome": "return",
+          "setFlags": {
+            "ending": "return"
+          },
+          "subtext": "把选择带进日常，而不是留在雨夜里。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "迟到的重新开始",
+            "copy": "婚礼没有按原样继续，你也没有从礼堂直接奔向周叙。许承有权离开、沉默或重新判断，周叙也没有趁混乱出现。三个月后，你才第一次主动联系。录音室里没有花，也没有“我等了你六年”，只有剩余项目日程、出差日期和一顿普通晚饭。你让迟到的爱情接受生活、时间和一次次兑现的检验。真正的重新开始，不是用周叙替代一场婚礼，而是两个人终于不再替彼此决定未来。"
+          }
+        },
+        {
+          "id": "d",
+          "text": "告诉他：重新开始不是补偿过去",
+          "vector": {
+            "expression": 0.42,
+            "repair": 0.28,
+            "autonomy": 0.2,
+            "trust": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你拒绝成为他悔恨的奖品，也拒绝让他成为你的逃生门。",
+          "outcome": "return",
+          "setFlags": {
+            "ending": "return"
+          },
+          "subtext": "由你为这段关系写下最后的意义。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "迟到的重新开始",
+            "copy": "婚礼没有按原样继续，你也没有从礼堂直接奔向周叙。许承有权离开、沉默或重新判断，周叙也没有趁混乱出现。三个月后，你才第一次主动联系。录音室里没有花，也没有“我等了你六年”，只有剩余项目日程、出差日期和一顿普通晚饭。你让迟到的爱情接受生活、时间和一次次兑现的检验。真正的重新开始，不是用周叙替代一场婚礼，而是两个人终于不再替彼此决定未来。"
+          }
+        }
+      ],
+      "decisionType": "final",
+      "decisionLabel": "最后的选择",
+      "decisionNote": "这一步只决定你怎样理解已经发生的事实，不会改写前面的婚礼与关系选择。"
+    },
+    {
+      "id": "s18_commute",
+      "slot": 18,
+      "chapter": "18｜没有人替你证明",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你最终停止了那条靠惯性或隐瞒推进的路。现实被重新安排，信任也需要付出代价；没有一段新关系立即把这些损失变成正确答案。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你要决定的，是独自往前走时怎样理解这场雨夜。"
+        }
+      ],
+      "prompt": "这段经历最终怎样属于你自己？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "先独自住一段时间",
+          "vector": {
+            "autonomy": 0.5,
+            "certainty": 0.28,
+            "commitment": -0.24,
+            "care": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你给自己一个不被关系追赶的住处。",
+          "outcome": "commute",
+          "setFlags": {
+            "ending": "commute"
+          },
+          "subtext": "让最后的理解承认前面真实发生过的事。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "一个人的清晨",
+            "copy": "你最终停止了那条靠惯性或隐瞒推进的路，却没有立刻走向周叙。关系可能在仪式前停下，也可能在迟到的坦白后重新拆开；无论从哪里开始，现实损失都没有被浪漫结局抹掉。你把第十七轨从“我们”改成自己的名字，独自处理住处、家人和被打乱的生活。没有人站在街角证明你做得对。可当你再次走过旧桥时，你第一次没有问谁会留下，只问自己接下来想去哪里。"
+          }
+        },
+        {
+          "id": "b",
+          "text": "把第十七轨改成自己的名字",
+          "vector": {
+            "autonomy": 0.4,
+            "expression": 0.24,
+            "novelty": 0.16,
+            "repair": 0.14
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你把共同记忆重新放回自己的生命叙事。",
+          "outcome": "commute",
+          "setFlags": {
+            "ending": "commute"
+          },
+          "subtext": "不让一句漂亮的话覆盖已经付出的代价。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "一个人的清晨",
+            "copy": "你最终停止了那条靠惯性或隐瞒推进的路，却没有立刻走向周叙。关系可能在仪式前停下，也可能在迟到的坦白后重新拆开；无论从哪里开始，现实损失都没有被浪漫结局抹掉。你把第十七轨从“我们”改成自己的名字，独自处理住处、家人和被打乱的生活。没有人站在街角证明你做得对。可当你再次走过旧桥时，你第一次没有问谁会留下，只问自己接下来想去哪里。"
+          }
+        },
+        {
+          "id": "c",
+          "text": "不再用任何人的后悔证明价值",
+          "vector": {
+            "reassurance": -0.24,
+            "autonomy": 0.42,
+            "discernment": 0.3,
+            "repair": 0.18
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你的价值不再依赖谁留下、谁后悔。",
+          "outcome": "commute",
+          "setFlags": {
+            "ending": "commute"
+          },
+          "subtext": "把选择带进日常，而不是留在雨夜里。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "一个人的清晨",
+            "copy": "你最终停止了那条靠惯性或隐瞒推进的路，却没有立刻走向周叙。关系可能在仪式前停下，也可能在迟到的坦白后重新拆开；无论从哪里开始，现实损失都没有被浪漫结局抹掉。你把第十七轨从“我们”改成自己的名字，独自处理住处、家人和被打乱的生活。没有人站在街角证明你做得对。可当你再次走过旧桥时，你第一次没有问谁会留下，只问自己接下来想去哪里。"
+          }
+        },
+        {
+          "id": "d",
+          "text": "承认失去，也不急着寻找替代",
+          "vector": {
+            "care": 0.24,
+            "repair": 0.28,
+            "certainty": 0.22,
+            "approach": -0.2
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你允许空白存在，不拿下一段感情填满它。",
+          "outcome": "commute",
+          "setFlags": {
+            "ending": "commute"
+          },
+          "subtext": "由你为这段关系写下最后的意义。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "一个人的清晨",
+            "copy": "你最终停止了那条靠惯性或隐瞒推进的路，却没有立刻走向周叙。关系可能在仪式前停下，也可能在迟到的坦白后重新拆开；无论从哪里开始，现实损失都没有被浪漫结局抹掉。你把第十七轨从“我们”改成自己的名字，独自处理住处、家人和被打乱的生活。没有人站在街角证明你做得对。可当你再次走过旧桥时，你第一次没有问谁会留下，只问自己接下来想去哪里。"
+          }
+        }
+      ],
+      "decisionType": "final",
+      "decisionLabel": "最后的选择",
+      "decisionNote": "这一步只决定你怎样理解已经发生的事实，不会改写前面的婚礼与关系选择。"
+    },
+    {
+      "id": "s18_distance",
+      "slot": 18,
+      "chapter": "18｜完整记住，停止拥有",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "第十七轨已经完整。完整不等于复合，也不等于否认当年的爱情。你终于可以同时承认它真实、迟到，并且不足以抵消伤害。"
+        },
+        {
+          "type": "paragraph",
+          "text": "最后一步不是删掉过去，而是决定它以后以什么距离存在。"
+        }
+      ],
+      "prompt": "你为这段爱情留下怎样的距离？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "把录音交给城市档案馆",
+          "vector": {
+            "repair": 0.32,
+            "autonomy": 0.3,
+            "idealization": -0.12,
+            "approach": -0.22
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你让记忆被保存，却不再只属于秘密关系。",
+          "outcome": "distance",
           "setFlags": {
             "ending": "distance"
           },
+          "subtext": "让最后的理解承认前面真实发生过的事。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "第十七轨",
+            "copy": "你只带走了录音，没有带走钥匙。周叙没有追问，也没有把告别说成等待。他按照你的要求，把第十七轨交给城市声音档案馆，并在授权人一栏写下你的名字。多年后，你在一次偶然的展览里再次听见那个清晨。年轻的你在录音里笑着抱怨麦克风拿反，随后是两个人都没有说出口的长久沉默。你站在人群中听完整段，没有寻找周叙是否也在附近。你承认那是一场真实的爱情，也承认真实不足以抵消当年被剥夺选择的伤。有些爱最好的归宿不是重新拥有，而是终于能够被完整地记住。"
+          }
+        },
+        {
+          "id": "b",
+          "text": "归还钥匙，只保留数字副本",
+          "vector": {
+            "autonomy": 0.38,
+            "certainty": 0.28,
+            "trust": 0.08,
+            "commitment": -0.18
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你保留自己的历史，不保留进入他生活的钥匙。",
           "outcome": "distance",
-          "subtext": "不靠一次奔赴证明感情，从普通联系开始。",
+          "setFlags": {
+            "ending": "distance"
+          },
+          "subtext": "不让一句漂亮的话覆盖已经付出的代价。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "第十七轨",
+            "copy": "你只带走了录音，没有带走钥匙。周叙没有追问，也没有把告别说成等待。他按照你的要求，把第十七轨交给城市声音档案馆，并在授权人一栏写下你的名字。多年后，你在一次偶然的展览里再次听见那个清晨。年轻的你在录音里笑着抱怨麦克风拿反，随后是两个人都没有说出口的长久沉默。你站在人群中听完整段，没有寻找周叙是否也在附近。你承认那是一场真实的爱情，也承认真实不足以抵消当年被剥夺选择的伤。有些爱最好的归宿不是重新拥有，而是终于能够被完整地记住。"
+          }
+        },
+        {
+          "id": "c",
+          "text": "感谢他回来，但不恢复联系",
+          "vector": {
+            "expression": 0.28,
+            "approach": -0.34,
+            "repair": 0.22,
+            "trust": 0.06
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你接受解释，也坚持停止私人关系。",
+          "outcome": "distance",
+          "setFlags": {
+            "ending": "distance"
+          },
+          "subtext": "把选择带进日常，而不是留在雨夜里。",
           "finalReveal": {
             "eyebrow": "你亲手走出的结局",
             "title": "第十七轨",
@@ -2100,32 +3269,150 @@
         },
         {
           "id": "d",
-          "text": "我第一次不再让别人替我决定的人生",
+          "text": "承认爱过，也承认爱不够",
           "vector": {
-            "autonomy": 0.62,
-            "approach": -0.52,
-            "commitment": -0.42,
-            "repair": -0.12
+            "discernment": 0.42,
+            "idealization": -0.28,
+            "care": 0.16,
+            "certainty": 0.24
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.95,
           "next": "$result",
-          "aftermath": "你最终带走的是主体性，而不仅是某个男人。",
+          "aftermath": "你不再用“真实”替爱情免除所有责任。",
+          "outcome": "distance",
+          "setFlags": {
+            "ending": "distance"
+          },
+          "subtext": "由你为这段关系写下最后的意义。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "第十七轨",
+            "copy": "你只带走了录音，没有带走钥匙。周叙没有追问，也没有把告别说成等待。他按照你的要求，把第十七轨交给城市声音档案馆，并在授权人一栏写下你的名字。多年后，你在一次偶然的展览里再次听见那个清晨。年轻的你在录音里笑着抱怨麦克风拿反，随后是两个人都没有说出口的长久沉默。你站在人群中听完整段，没有寻找周叙是否也在附近。你承认那是一场真实的爱情，也承认真实不足以抵消当年被剥夺选择的伤。有些爱最好的归宿不是重新拥有，而是终于能够被完整地记住。"
+          }
+        }
+      ],
+      "decisionType": "final",
+      "decisionLabel": "最后的选择",
+      "decisionNote": "这一步只决定你怎样理解已经发生的事实，不会改写前面的婚礼与关系选择。"
+    },
+    {
+      "id": "s18_farewell",
+      "slot": 18,
+      "chapter": "18｜秘密留在生活里",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "婚礼继续了，完整事实却没有进入婚姻。日常可以照常运转，秘密也可以长久安静；两件事并不矛盾。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你现在决定的不是昨夜有没有发生，而是准备怎样与这个没有说完的答案共同生活。"
+        }
+      ],
+      "prompt": "你怎样理解这个被带进婚姻的秘密？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "把录音锁进抽屉，继续婚姻",
+          "vector": {
+            "commitment": 0.3,
+            "expression": -0.38,
+            "trust": -0.22,
+            "certainty": 0.14
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你选择继续，也选择暂时不让真相进入关系。",
+          "outcome": "farewell",
           "setFlags": {
             "ending": "farewell"
           },
-          "outcome": "farewell",
-          "subtext": "承认心动，也接受故事可以停在这里。",
+          "subtext": "让最后的理解承认前面真实发生过的事。",
           "finalReveal": {
             "eyebrow": "你亲手走出的结局",
-            "title": "没有说出口的答案",
+            "title": "留在生活里的秘密",
+            "copy": "你按计划走进礼堂，握住许承的手，说出了准备已久的“我愿意”。没有人发现你包里还放着那台旧录音机，也没有人听见宣誓时它忽然发出的轻微转动声。婚后的生活并不坏。许承仍然温和，家人终于松了一口气，你们搬进提前选好的房子，一切都按照正确的次序发生。只是每逢雨后的清晨，你偶尔会在厨房里停住，想起桥下第一班车驶过的声音。你保住了所有人的秩序，却没有真正处理那段未完成的爱情。秘密没有摧毁生活，它只是安静地住在生活里面，提醒你曾经有一个答案没有说出口。"
+          }
+        },
+        {
+          "id": "b",
+          "text": "删掉周叙的联系方式，不删录音",
+          "vector": {
+            "autonomy": 0.24,
+            "approach": -0.38,
+            "expression": -0.24,
+            "repair": 0.08
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你切断未来联系，却仍保留未处理的过去。",
+          "outcome": "farewell",
+          "setFlags": {
+            "ending": "farewell"
+          },
+          "subtext": "不让一句漂亮的话覆盖已经付出的代价。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "留在生活里的秘密",
+            "copy": "你按计划走进礼堂，握住许承的手，说出了准备已久的“我愿意”。没有人发现你包里还放着那台旧录音机，也没有人听见宣誓时它忽然发出的轻微转动声。婚后的生活并不坏。许承仍然温和，家人终于松了一口气，你们搬进提前选好的房子，一切都按照正确的次序发生。只是每逢雨后的清晨，你偶尔会在厨房里停住，想起桥下第一班车驶过的声音。你保住了所有人的秩序，却没有真正处理那段未完成的爱情。秘密没有摧毁生活，它只是安静地住在生活里面，提醒你曾经有一个答案没有说出口。"
+          }
+        },
+        {
+          "id": "c",
+          "text": "告诉自己那只是婚前动摇",
+          "vector": {
+            "idealization": -0.1,
+            "discernment": -0.18,
+            "reassurance": 0.18,
+            "conflict": -0.16
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你试图把它缩小成一次动摇，生活仍会记得更多。",
+          "outcome": "farewell",
+          "setFlags": {
+            "ending": "farewell"
+          },
+          "subtext": "把选择带进日常，而不是留在雨夜里。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "留在生活里的秘密",
+            "copy": "你按计划走进礼堂，握住许承的手，说出了准备已久的“我愿意”。没有人发现你包里还放着那台旧录音机，也没有人听见宣誓时它忽然发出的轻微转动声。婚后的生活并不坏。许承仍然温和，家人终于松了一口气，你们搬进提前选好的房子，一切都按照正确的次序发生。只是每逢雨后的清晨，你偶尔会在厨房里停住，想起桥下第一班车驶过的声音。你保住了所有人的秩序，却没有真正处理那段未完成的爱情。秘密没有摧毁生活，它只是安静地住在生活里面，提醒你曾经有一个答案没有说出口。"
+          }
+        },
+        {
+          "id": "d",
+          "text": "承认秘密会一直留在生活里",
+          "vector": {
+            "expression": 0.12,
+            "conflict": 0.22,
+            "commitment": 0.18,
+            "repair": -0.12
+          },
+          "intensity": 1,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你承认秩序被保住了，答案却没有真正完成。",
+          "outcome": "farewell",
+          "setFlags": {
+            "ending": "farewell"
+          },
+          "subtext": "由你为这段关系写下最后的意义。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "留在生活里的秘密",
             "copy": "你按计划走进礼堂，握住许承的手，说出了准备已久的“我愿意”。没有人发现你包里还放着那台旧录音机，也没有人听见宣誓时它忽然发出的轻微转动声。婚后的生活并不坏。许承仍然温和，家人终于松了一口气，你们搬进提前选好的房子，一切都按照正确的次序发生。只是每逢雨后的清晨，你偶尔会在厨房里停住，想起桥下第一班车驶过的声音。你保住了所有人的秩序，却没有真正处理那段未完成的爱情。秘密没有摧毁生活，它只是安静地住在生活里面，提醒你曾经有一个答案没有说出口。"
           }
         }
       ],
       "decisionType": "final",
       "decisionLabel": "最后的选择",
-      "decisionNote": "选下去以后，故事会先揭晓你亲手走出的结局。"
+      "decisionNote": "这一步只决定你怎样理解已经发生的事实，不会改写前面的婚礼与关系选择。"
     }
   ]
 }
