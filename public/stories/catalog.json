@@ -78,6 +78,19 @@
       "coverTheme": "radio-blue",
       "storyUrl": "./stories/story-06/story.json",
       "resultsUrl": "./stories/story-06/results.json"
+    },
+    {
+      "id": "story-07",
+      "slug": "last-ferry",
+      "status": "published",
+      "title": "最后一班渡船开走以后",
+      "series": "LOVE RIGHT · STORY 07",
+      "description": "男性视角：故乡、去留和一段不靠牺牲证明的喜欢。",
+      "estimatedMinutes": 12,
+      "audience": "male",
+      "coverTheme": "river-amber",
+      "storyUrl": "./stories/story-07/story.json",
+      "resultsUrl": "./stories/story-07/results.json"
     }
   ]
 }

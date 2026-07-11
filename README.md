@@ -135,3 +135,8 @@ git push
 ## 产品边界
 
 Love Right 可以做强代入、强传播和动态叙事，但结果必须保持娱乐性与可能性表达。不得把结果包装成临床诊断、真实经历读取、忠诚度判断或确定的未来预言。
+
+
+## v0.5.5
+
+Key story decisions have a distinct presentation, and final choices reveal the authored ending before personality analysis.

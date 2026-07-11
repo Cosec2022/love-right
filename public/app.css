@@ -849,3 +849,158 @@
   line-height: 1.72;
   opacity: 0.86;
 }
+
+/* v0.5.5 — key decisions and ending reveal */
+.decision-banner {
+  margin: 14px 0 18px;
+  padding: 13px 14px 12px;
+  border: 1px solid rgba(177, 131, 72, .24);
+  border-radius: 17px;
+  background:
+    linear-gradient(135deg, rgba(247, 238, 221, .84), rgba(244, 235, 232, .68));
+}
+.decision-banner[hidden] { display: none; }
+.decision-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #8d663f;
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: .17em;
+}
+.decision-label::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #bd8c55;
+  box-shadow: 0 0 0 5px rgba(189, 140, 85, .11);
+}
+.decision-note {
+  margin: 7px 0 0;
+  color: #6d625c;
+  font-size: 12px;
+  line-height: 1.65;
+}
+.quiz-card[data-decision="hard"] {
+  border-color: rgba(177, 131, 72, .26);
+  box-shadow: 0 24px 70px rgba(61, 45, 39, .13);
+}
+.quiz-card[data-decision="final"] {
+  border-color: rgba(205, 173, 117, .28);
+  background:
+    radial-gradient(circle at 82% 4%, rgba(205, 173, 117, .15), transparent 32%),
+    rgba(253, 250, 245, .94);
+  box-shadow: 0 26px 80px rgba(33, 30, 43, .16);
+}
+.decision-option {
+  min-height: 86px;
+  border-color: rgba(177, 131, 72, .22);
+  background: linear-gradient(145deg, rgba(255,255,255,.88), rgba(248,242,232,.78));
+}
+.decision-option .option-key {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(177, 131, 72, .17);
+  color: #8a643e;
+  background: rgba(247, 236, 218, .82);
+  font-size: 10px;
+  letter-spacing: .06em;
+}
+.decision-option .option-main { font-size: 14px; }
+.decision-option .option-sub {
+  margin-top: 5px;
+  color: #756b68;
+  font-size: 11px;
+  line-height: 1.55;
+}
+.decision-option:hover {
+  border-color: rgba(177, 131, 72, .46);
+  box-shadow: 0 13px 28px rgba(98, 70, 49, .10);
+}
+.final-option {
+  min-height: 94px;
+  border-color: rgba(79, 69, 91, .18);
+  background: linear-gradient(145deg, rgba(255,255,255,.9), rgba(239,234,239,.82));
+}
+.final-option .option-key {
+  color: #6d6078;
+  border-color: rgba(94, 77, 108, .15);
+  background: rgba(235, 228, 239, .88);
+}
+
+.ending-reveal-card {
+  position: relative;
+  overflow: hidden;
+  min-height: min(680px, calc(100vh - 118px));
+  padding: 52px 24px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #f8f2e9;
+  background:
+    radial-gradient(circle at 18% 8%, rgba(214, 177, 113, .24), transparent 30%),
+    radial-gradient(circle at 92% 76%, rgba(128, 111, 150, .22), transparent 38%),
+    linear-gradient(155deg, #171a2b, #302b3d 58%, #423644);
+}
+.ending-reveal-glow {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  left: 50%;
+  top: 37%;
+  border-radius: 50%;
+  background: rgba(218, 183, 123, .08);
+  filter: blur(24px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.ending-reveal-eyebrow,
+.ending-reveal-story,
+.ending-reveal-title,
+.ending-reveal-copy,
+.ending-reveal-button { position: relative; z-index: 1; }
+.ending-reveal-eyebrow {
+  margin: 0 0 13px;
+  color: #d8bd92;
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: .21em;
+}
+.ending-reveal-story {
+  margin: 0 0 18px;
+  color: rgba(248,242,233,.55);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.ending-reveal-title {
+  margin: 0;
+  font-size: clamp(36px, 10vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+.ending-reveal-copy {
+  max-width: 560px;
+  margin: 22px auto 0;
+  color: rgba(248,242,233,.78);
+  font-size: 14px;
+  line-height: 1.95;
+  text-align: left;
+}
+.ending-reveal-button {
+  width: 100%;
+  max-width: 420px;
+  margin: 30px auto 0;
+  color: #29232f;
+  background: linear-gradient(135deg, #f1dfbd, #e5c994);
+  box-shadow: 0 16px 38px rgba(0,0,0,.2);
+}
+
+@media (min-width: 580px) {
+  .decision-banner { padding: 14px 16px 13px; }
+  .ending-reveal-card { padding: 64px 48px 44px; }
+  .ending-reveal-copy { text-align: center; font-size: 15px; }
+}

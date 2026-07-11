@@ -74,6 +74,20 @@ async function validateStory(entry) {
     if (!Array.isArray(scene.content) || !scene.content.length) fail(`${entry.id}/${scene.id}: content must not be empty.`);
     if (!Array.isArray(scene.choices) || scene.choices.length < 2) fail(`${entry.id}/${scene.id}: at least two choices are required.`);
     if (scene.context && !contextIds.has(scene.context)) fail(`${entry.id}/${scene.id}: unknown context '${scene.context}'.`);
+    if (scene.decisionType) {
+      if (!['hard', 'final'].includes(scene.decisionType)) fail(`${entry.id}/${scene.id}: invalid decisionType '${scene.decisionType}'.`);
+      if (!scene.decisionLabel || !scene.decisionNote) fail(`${entry.id}/${scene.id}: decision scenes require decisionLabel and decisionNote.`);
+      for (const choice of scene.choices ?? []) {
+        if (!choice.subtext || choice.subtext.trim().length < 8) fail(`${entry.id}/${scene.id}/${choice.id}: decision choices require meaningful subtext.`);
+      }
+      if (scene.decisionType === 'final') {
+        for (const choice of scene.choices ?? []) {
+          const targets = targetsFrom(choice.next ?? scene.next);
+          if (targets.some((target) => target !== '$result')) fail(`${entry.id}/${scene.id}/${choice.id}: final decision must lead to $result.`);
+          if (!choice.finalReveal?.title || !choice.finalReveal?.copy || choice.finalReveal.copy.trim().length < 40) fail(`${entry.id}/${scene.id}/${choice.id}: final decision requires a substantial finalReveal.`);
+        }
+      }
+    }
 
     const choiceIds = new Set();
     for (const choice of scene.choices ?? []) {

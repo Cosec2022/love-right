@@ -1,0 +1,2111 @@
+{
+  "schemaVersion": 2,
+  "id": "story-07",
+  "slug": "last-ferry",
+  "status": "published",
+  "locale": "zh-CN",
+  "metadata": {
+    "series": "LOVE RIGHT · STORY 07",
+    "title": "最后一班渡船开走以后",
+    "subtitle": "她要改造父亲的旧修理铺，而你原本只准备回来一周。",
+    "description": "男性视角。故乡、去留和一段不靠牺牲证明的喜欢。你会保留过去，还是允许它以新的方式继续？",
+    "estimatedMinutes": 12,
+    "coverTheme": "river-amber",
+    "audience": "male",
+    "tags": [
+      "男性视角",
+      "故乡重逢",
+      "旧渡口",
+      "现实选择"
+    ],
+    "disclaimer": "娱乐性叙事情境投射，不是心理诊断、事实识别或未来预言。"
+  },
+  "space": {
+    "version": 2,
+    "axes": [
+      {
+        "id": "approach",
+        "label": "靠近主动",
+        "low": "保护性退后",
+        "high": "主动靠近"
+      },
+      {
+        "id": "trust",
+        "label": "初始信任",
+        "low": "先验证",
+        "high": "先相信"
+      },
+      {
+        "id": "certainty",
+        "label": "关系清晰",
+        "low": "容忍模糊",
+        "high": "需要说清"
+      },
+      {
+        "id": "abandonment",
+        "label": "失去敏感",
+        "low": "不易被牵动",
+        "high": "容易担心失去"
+      },
+      {
+        "id": "idealization",
+        "label": "浪漫投射",
+        "low": "现实验证",
+        "high": "赋予意义"
+      },
+      {
+        "id": "novelty",
+        "label": "未知吸引",
+        "low": "熟悉稳定",
+        "high": "新鲜刺激"
+      },
+      {
+        "id": "discernment",
+        "label": "行动判断",
+        "low": "凭感觉",
+        "high": "看行动验证"
+      },
+      {
+        "id": "jealousy",
+        "label": "竞争警觉",
+        "low": "不易比较",
+        "high": "对第三人敏感"
+      },
+      {
+        "id": "expression",
+        "label": "情绪表达",
+        "low": "收住不说",
+        "high": "直接表达"
+      },
+      {
+        "id": "conflict",
+        "label": "冲突面对",
+        "low": "回避冷却",
+        "high": "当场处理"
+      },
+      {
+        "id": "repair",
+        "label": "修复意愿",
+        "low": "切断止损",
+        "high": "解释修复"
+      },
+      {
+        "id": "reassurance",
+        "label": "回应需要",
+        "low": "内在消化",
+        "high": "需要安抚"
+      },
+      {
+        "id": "autonomy",
+        "label": "自我边界",
+        "low": "关系融合",
+        "high": "保持独立"
+      },
+      {
+        "id": "commitment",
+        "label": "长期投入",
+        "low": "重视当下",
+        "high": "面向长期"
+      },
+      {
+        "id": "care",
+        "label": "照顾倾向",
+        "low": "接受照顾",
+        "high": "照顾别人"
+      },
+      {
+        "id": "validation",
+        "label": "被选择需求",
+        "low": "内在自足",
+        "high": "需要明确选择"
+      }
+    ],
+    "contexts": [
+      {
+        "id": "approach",
+        "label": "初次靠近"
+      },
+      {
+        "id": "ambiguity",
+        "label": "暧昧与不确定"
+      },
+      {
+        "id": "intimacy",
+        "label": "亲密与暴露"
+      },
+      {
+        "id": "jealousy",
+        "label": "第三人与比较"
+      },
+      {
+        "id": "rupture",
+        "label": "失约与冲突"
+      },
+      {
+        "id": "commitment",
+        "label": "现实与长期"
+      }
+    ],
+    "config": {
+      "priorWeight": 0.75,
+      "display": {
+        "center": 50,
+        "spread": 42,
+        "min": 8,
+        "max": 92
+      }
+    }
+  },
+  "traits": [
+    {
+      "id": "approach",
+      "label": "靠近主动"
+    },
+    {
+      "id": "trust",
+      "label": "初始信任"
+    },
+    {
+      "id": "certainty",
+      "label": "关系清晰"
+    },
+    {
+      "id": "abandonment",
+      "label": "失去敏感"
+    },
+    {
+      "id": "idealization",
+      "label": "浪漫投射"
+    },
+    {
+      "id": "novelty",
+      "label": "未知吸引"
+    },
+    {
+      "id": "discernment",
+      "label": "行动判断"
+    },
+    {
+      "id": "jealousy",
+      "label": "竞争警觉"
+    },
+    {
+      "id": "expression",
+      "label": "情绪表达"
+    },
+    {
+      "id": "conflict",
+      "label": "冲突面对"
+    },
+    {
+      "id": "repair",
+      "label": "修复意愿"
+    },
+    {
+      "id": "reassurance",
+      "label": "回应需要"
+    },
+    {
+      "id": "autonomy",
+      "label": "自我边界"
+    },
+    {
+      "id": "commitment",
+      "label": "长期投入"
+    },
+    {
+      "id": "care",
+      "label": "照顾倾向"
+    },
+    {
+      "id": "validation",
+      "label": "被选择需求"
+    }
+  ],
+  "scoreConfig": {
+    "center": 50,
+    "spread": 42,
+    "min": 8,
+    "max": 92
+  },
+  "initialScene": "s01",
+  "scenes": [
+    {
+      "id": "s01",
+      "slot": 1,
+      "chapter": "01｜回到渡口",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "父亲终于答应退休，出发旅行前把修理铺的钥匙扔给你：“渡口月底停运，里面那些东西，你看着处理。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "你多年没回临江镇。刚推起卷闸门，身后有人提醒右边的螺丝快掉了。她扶住松动的金属片，手里夹着改造图纸。"
+        },
+        {
+          "type": "paragraph",
+          "text": "她不是所有人都会认同的漂亮，但你第一眼就知道，她的外形和气质恰好是自己会注意的类型。她叫许妍，负责把旧渡口改成江边书店。"
+        }
+      ],
+      "prompt": "第一眼最让你多看了一下的，是哪种感觉？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "她安静站着时，也有一种不容忽略的存在感",
+          "vector": {
+            "idealization": 0.28,
+            "trust": 0.18,
+            "approach": 0.18,
+            "novelty": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s02",
+          "aftermath": "你没有急着表现兴趣，只是把她安静而明确的存在感记了下来。",
+          "setFlags": {
+            "appeal": "quiet"
+          }
+        },
+        {
+          "id": "b",
+          "text": "她说话直接，却不会故意让人难堪",
+          "vector": {
+            "expression": 0.35,
+            "discernment": 0.26,
+            "approach": 0.2,
+            "certainty": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s02",
+          "aftermath": "她的直接没有让你退后，反而让你想看看她是否一直都能把话说得这么清楚。",
+          "setFlags": {
+            "appeal": "direct"
+          }
+        },
+        {
+          "id": "c",
+          "text": "她看图纸时很专注，像很少遗漏真正重要的地方",
+          "vector": {
+            "discernment": 0.42,
+            "idealization": 0.18,
+            "trust": 0.16,
+            "novelty": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s02",
+          "aftermath": "你最先记住的不是她的脸，而是她看图纸时那种几乎不会被打断的专注。",
+          "setFlags": {
+            "appeal": "focused"
+          }
+        },
+        {
+          "id": "d",
+          "text": "她处理松动卷闸门时很稳，让人下意识放心",
+          "vector": {
+            "trust": 0.38,
+            "commitment": 0.2,
+            "care": 0.16,
+            "approach": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s02",
+          "aftermath": "那一下利落的处理比寒暄更有效，你对她的判断从“陌生人”悄悄多了一点可靠。",
+          "setFlags": {
+            "appeal": "steady"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "slot": 2,
+      "chapter": "02｜她要拆掉工作台",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "许妍指着效果图：“这里要打通。工作台、货架和旧电柜都得移走。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "那张厚重木台陪了你整个童年。木板边缘还有一道你用小刀刻出的歪线。"
+        }
+      ],
+      "prompt": "你会怎么回应？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "直接说，工作台不能拆",
+          "vector": {
+            "expression": 0.55,
+            "conflict": 0.34,
+            "autonomy": 0.28,
+            "commitment": 0.22
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s03",
+          "aftermath": "你先守住了最不愿失去的东西。许妍没有反驳，只把“不能拆”认真记在图纸边上。"
+        },
+        {
+          "id": "b",
+          "text": "先问，有没有保留一部分的可能",
+          "vector": {
+            "repair": 0.36,
+            "discernment": 0.38,
+            "expression": 0.3,
+            "trust": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s03",
+          "aftermath": "你没有把保留和改变做成二选一，而是给了她继续解释的空间。"
+        },
+        {
+          "id": "c",
+          "text": "告诉她，这看起来像任何一家普通书店",
+          "vector": {
+            "expression": 0.46,
+            "conflict": 0.28,
+            "idealization": 0.2,
+            "discernment": 0.24
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s03",
+          "aftermath": "你把真正的不满说了出来：你怕的不是拆一张桌子，而是这个地方被改得再也认不出来。"
+        },
+        {
+          "id": "d",
+          "text": "暂时不反对，先听完她的计划",
+          "vector": {
+            "discernment": 0.48,
+            "trust": 0.22,
+            "autonomy": 0.18,
+            "expression": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s03",
+          "aftermath": "你把反应压住，先让她说完。她也因此没有把你的沉默当成默认同意。"
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "slot": 3,
+      "chapter": "03｜她没有用情怀敷衍你",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "她蹲下检查木台底部：“左边已经受潮空了，整张留下来，半年后可能会塌。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "她在图纸上画了一道线：“中间这一段可以拆下来，做成书店的长桌。留下不是原样锁住，也可以是继续被使用。”"
+        }
+      ],
+      "prompt": "这一刻你更接近哪种反应？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "因为她认真检查过，态度缓和一点",
+          "vector": {
+            "trust": 0.46,
+            "repair": 0.32,
+            "approach": 0.18,
+            "discernment": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s04",
+          "aftermath": "你仍然舍不得，却开始承认她不是来粗暴抹掉过去的人。"
+        },
+        {
+          "id": "b",
+          "text": "还是觉得把工作台改成桌子太轻率",
+          "vector": {
+            "autonomy": 0.4,
+            "discernment": 0.28,
+            "trust": -0.18,
+            "conflict": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s04",
+          "aftermath": "她看见你的保留，没有再用方案压你，只说决定可以晚一点。"
+        },
+        {
+          "id": "c",
+          "text": "问她为什么这么熟悉老木结构",
+          "vector": {
+            "approach": 0.32,
+            "expression": 0.3,
+            "novelty": 0.28,
+            "trust": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s04",
+          "aftermath": "你第一次把注意力从方案移到她本人。她抬头时，像也听出了这个问题不只是在问木头。"
+        },
+        {
+          "id": "d",
+          "text": "说等父亲回来再决定",
+          "vector": {
+            "autonomy": 0.42,
+            "certainty": 0.26,
+            "approach": -0.18,
+            "commitment": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s04",
+          "aftermath": "你把决定暂时交还父亲。许妍接受了，但两个人之间还没有真正开始合作。"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "slot": 4,
+      "chapter": "04｜她想借用修理铺",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "项目办公室临时进水。许妍问能否借修理铺办公三天。"
+        },
+        {
+          "type": "paragraph",
+          "text": "这不是一件大事，却意味着她会进入这个你多年没回来、仍然本能地当作私人领地的地方。"
+        }
+      ],
+      "prompt": "你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "同意，但划出不能动的区域",
+          "vector": {
+            "certainty": 0.48,
+            "autonomy": 0.42,
+            "trust": 0.28,
+            "approach": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s05_boundary",
+          "aftermath": "你把边界说在前面。她没有觉得扫兴，反而先把不能碰的地方重新确认了一遍。",
+          "setFlags": {
+            "workspace": "boundary"
+          },
+          "subtext": "让她靠近，但先把边界说清。"
+        },
+        {
+          "id": "b",
+          "text": "同意，让她自己安排",
+          "vector": {
+            "trust": 0.56,
+            "approach": 0.42,
+            "autonomy": -0.2,
+            "idealization": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s05_open",
+          "aftermath": "你把空间直接交给她。距离因此缩短，也让之后任何越界都更容易被你注意到。",
+          "setFlags": {
+            "workspace": "open"
+          },
+          "subtext": "先交出信任，也承担可能被越界的风险。"
+        },
+        {
+          "id": "c",
+          "text": "拒绝，工作和私人空间分开",
+          "vector": {
+            "autonomy": 0.62,
+            "discernment": 0.36,
+            "approach": -0.42,
+            "trust": -0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s05_refuse",
+          "aftermath": "你拒绝了借用。她没有把边界理解成敌意，只把办公桌搬去了空着的售票厅。",
+          "setFlags": {
+            "workspace": "refuse"
+          },
+          "subtext": "保住私人空间，让关系绕一条更远的路。"
+        },
+        {
+          "id": "d",
+          "text": "你在场时，她才能进来",
+          "vector": {
+            "autonomy": 0.48,
+            "trust": 0.14,
+            "discernment": 0.38,
+            "approach": 0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s05_present",
+          "aftermath": "你没有完全关门，也没有假装毫无顾虑。之后的接触因此多了一层双方都知道的谨慎。",
+          "setFlags": {
+            "workspace": "present"
+          },
+          "subtext": "门没有关上，但进入必须经过你的同意。"
+        }
+      ],
+      "decisionType": "hard",
+      "decisionLabel": "关键选择",
+      "decisionNote": "这一次的决定会真正改变你们之后相处的距离。"
+    },
+    {
+      "id": "s05_boundary",
+      "slot": 5,
+      "chapter": "05｜边界说清以后",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "她把电脑放在你划出的区域，连充电线都没有越过那道旧油漆线。下午你回来时，她指着线说：“放心，我今天很守规矩。”"
+        }
+      ],
+      "prompt": "你会怎样接这句话？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "顺势和她聊几句项目之外的事",
+          "vector": {
+            "approach": 0.45,
+            "trust": 0.32,
+            "expression": 0.3,
+            "novelty": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你把话题稍微带离工作，两个人第一次有了不必立刻解决问题的几分钟。"
+        },
+        {
+          "id": "b",
+          "text": "只回应工作，不主动延长相处",
+          "vector": {
+            "autonomy": 0.38,
+            "discernment": 0.3,
+            "approach": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你保持了清楚的工作距离。她也没有强行把礼貌延伸成暧昧。"
+        },
+        {
+          "id": "c",
+          "text": "开个玩笑，让气氛轻一点",
+          "vector": {
+            "approach": 0.34,
+            "novelty": 0.34,
+            "expression": 0.26,
+            "idealization": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你用一句玩笑松开了气氛，她笑了一下，之后说话也不再像第一次那么公事公办。"
+        },
+        {
+          "id": "d",
+          "text": "提醒她一些不能碰的东西",
+          "vector": {
+            "autonomy": 0.46,
+            "certainty": 0.32,
+            "trust": 0.1,
+            "expression": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你再次把边界说清。她没有不耐烦，反而让这间屋子变得更容易共同使用。"
+        }
+      ]
+    },
+    {
+      "id": "s05_open",
+      "slot": 5,
+      "chapter": "05｜她真的把这里当成了办公室",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "她把图纸铺满半张工作台，却把父亲常用的工具整齐留在原位。你发现她没有问，便已经看懂哪些东西不能随便移动。"
+        }
+      ],
+      "prompt": "你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "顺势和她聊几句项目之外的事",
+          "vector": {
+            "approach": 0.45,
+            "trust": 0.32,
+            "expression": 0.3,
+            "novelty": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你把话题稍微带离工作，两个人第一次有了不必立刻解决问题的几分钟。"
+        },
+        {
+          "id": "b",
+          "text": "只回应工作，不主动延长相处",
+          "vector": {
+            "autonomy": 0.38,
+            "discernment": 0.3,
+            "approach": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你保持了清楚的工作距离。她也没有强行把礼貌延伸成暧昧。"
+        },
+        {
+          "id": "c",
+          "text": "开个玩笑，让气氛轻一点",
+          "vector": {
+            "approach": 0.34,
+            "novelty": 0.34,
+            "expression": 0.26,
+            "idealization": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你用一句玩笑松开了气氛，她笑了一下，之后说话也不再像第一次那么公事公办。"
+        },
+        {
+          "id": "d",
+          "text": "提醒她一些不能碰的东西",
+          "vector": {
+            "autonomy": 0.46,
+            "certainty": 0.32,
+            "trust": 0.1,
+            "expression": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你再次把边界说清。她没有不耐烦，反而让这间屋子变得更容易共同使用。"
+        }
+      ]
+    },
+    {
+      "id": "s05_refuse",
+      "slot": 5,
+      "chapter": "05｜隔着一间售票厅",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "她在售票厅办公，你们白天几乎没有交集。傍晚她来借一把螺丝刀，站在门口没有直接走进来。"
+        }
+      ],
+      "prompt": "你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "顺势和她聊几句项目之外的事",
+          "vector": {
+            "approach": 0.45,
+            "trust": 0.32,
+            "expression": 0.3,
+            "novelty": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你把话题稍微带离工作，两个人第一次有了不必立刻解决问题的几分钟。"
+        },
+        {
+          "id": "b",
+          "text": "只回应工作，不主动延长相处",
+          "vector": {
+            "autonomy": 0.38,
+            "discernment": 0.3,
+            "approach": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你保持了清楚的工作距离。她也没有强行把礼貌延伸成暧昧。"
+        },
+        {
+          "id": "c",
+          "text": "开个玩笑，让气氛轻一点",
+          "vector": {
+            "approach": 0.34,
+            "novelty": 0.34,
+            "expression": 0.26,
+            "idealization": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你用一句玩笑松开了气氛，她笑了一下，之后说话也不再像第一次那么公事公办。"
+        },
+        {
+          "id": "d",
+          "text": "提醒她一些不能碰的东西",
+          "vector": {
+            "autonomy": 0.46,
+            "certainty": 0.32,
+            "trust": 0.1,
+            "expression": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你再次把边界说清。她没有不耐烦，反而让这间屋子变得更容易共同使用。"
+        }
+      ]
+    },
+    {
+      "id": "s05_present",
+      "slot": 5,
+      "chapter": "05｜你在时，她才进来",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你们第一次在同一张工作台两边办公。她每次需要翻找东西都会先问，反而让修理铺比你独处时更安静。"
+        }
+      ],
+      "prompt": "你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "顺势和她聊几句项目之外的事",
+          "vector": {
+            "approach": 0.45,
+            "trust": 0.32,
+            "expression": 0.3,
+            "novelty": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你把话题稍微带离工作，两个人第一次有了不必立刻解决问题的几分钟。"
+        },
+        {
+          "id": "b",
+          "text": "只回应工作，不主动延长相处",
+          "vector": {
+            "autonomy": 0.38,
+            "discernment": 0.3,
+            "approach": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你保持了清楚的工作距离。她也没有强行把礼貌延伸成暧昧。"
+        },
+        {
+          "id": "c",
+          "text": "开个玩笑，让气氛轻一点",
+          "vector": {
+            "approach": 0.34,
+            "novelty": 0.34,
+            "expression": 0.26,
+            "idealization": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你用一句玩笑松开了气氛，她笑了一下，之后说话也不再像第一次那么公事公办。"
+        },
+        {
+          "id": "d",
+          "text": "提醒她一些不能碰的东西",
+          "vector": {
+            "autonomy": 0.46,
+            "certainty": 0.32,
+            "trust": 0.1,
+            "expression": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s06",
+          "aftermath": "你再次把边界说清。她没有不耐烦，反而让这间屋子变得更容易共同使用。"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "slot": 6,
+      "chapter": "06｜父亲突然打来视频",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "父亲在旅行团的大巴上大声问：“许工程师到了没有？人家比你靠谱，你少给她添乱。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "许妍明显听见了，却低头整理图纸，努力装作没有笑。"
+        }
+      ],
+      "prompt": "挂断以后，你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "说他对谁都比对自己儿子客气",
+          "vector": {
+            "expression": 0.42,
+            "trust": 0.3,
+            "approach": 0.22,
+            "abandonment": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07",
+          "aftermath": "你说得像玩笑，却也第一次让她听见你和父亲之间那点不太好解释的距离。"
+        },
+        {
+          "id": "b",
+          "text": "问她什么时候和父亲这么熟",
+          "vector": {
+            "certainty": 0.38,
+            "discernment": 0.34,
+            "expression": 0.32,
+            "jealousy": 0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07",
+          "aftermath": "你没有隐藏疑问。她也没有故意卖关子，只说父亲参与过前期沟通。"
+        },
+        {
+          "id": "c",
+          "text": "笑着说，至少他没当面拆你的台",
+          "vector": {
+            "novelty": 0.32,
+            "approach": 0.3,
+            "expression": 0.26,
+            "repair": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07",
+          "aftermath": "她终于笑出声。你们之间第一次出现一种不需要解释来历的轻松。"
+        },
+        {
+          "id": "d",
+          "text": "把话题拉回工程，不想谈父亲",
+          "vector": {
+            "autonomy": 0.44,
+            "expression": -0.28,
+            "approach": -0.16,
+            "discernment": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s07",
+          "aftermath": "你把私人部分收了回去。她没有追问，只在之后和你说话时更克制了一点。"
+        }
+      ]
+    },
+    {
+      "id": "s07",
+      "slot": 7,
+      "chapter": "07｜一场突然的雨",
+      "context": "approach",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "午后暴雨把渡口旧招牌吹松了半边。许妍拿起工具往外走。"
+        }
+      ],
+      "prompt": "你会怎么配合？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "跟出去，让她在下面扶梯子",
+          "vector": {
+            "approach": 0.48,
+            "care": 0.34,
+            "trust": 0.24,
+            "autonomy": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s08",
+          "aftermath": "你没有让她独自冒险，也没有替她决定只能站在安全处。雨里第一次出现了真正的并肩。"
+        },
+        {
+          "id": "b",
+          "text": "让她别冒险，等专业人员来",
+          "vector": {
+            "care": 0.38,
+            "discernment": 0.42,
+            "approach": 0.02,
+            "trust": 0.1
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s08",
+          "aftermath": "你选择先控制风险。她一开始不耐烦，确认支架情况后却承认等待更合理。"
+        },
+        {
+          "id": "c",
+          "text": "和她分工，一个固定招牌，一个处理电线",
+          "vector": {
+            "trust": 0.42,
+            "repair": 0.28,
+            "commitment": 0.24,
+            "expression": 0.24
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s08",
+          "aftermath": "你们没有谁保护谁，只迅速分了工。事情结束后，那种默契比雨更让人难以忽略。"
+        },
+        {
+          "id": "d",
+          "text": "不参与，认为这是项目方责任",
+          "vector": {
+            "autonomy": 0.52,
+            "approach": -0.46,
+            "care": -0.28,
+            "trust": -0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s08",
+          "aftermath": "你留在屋里。招牌最终被保住，她回来时没有指责，只是两个人之间明显少了一点共同经历。"
+        }
+      ],
+      "variants": [
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "quiet"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "她在雨里并不显得慌乱，只是站到风口最重的位置，安静地等你确认怎么配合。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "direct"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "她直接指出招牌受力的位置，也直接说：“你一个人扛不住，别逞强。”"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "focused"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "她抬头看了几秒，就判断出真正松动的不是招牌，而是后面的固定架。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "steady"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "风雨同时压下来时，她没有多说一句安慰，只把梯子、绳索和电源依次处理好。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "slot": 8,
+      "chapter": "08｜她记得你",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "雨停后，许妍拧着袖口的水，说自己小时候每天坐船去对岸上学。"
+        },
+        {
+          "type": "paragraph",
+          "text": "她还记得你。那时你总坐在修理铺门口，有一次她的书包掉进水里，是你帮她捞上来的。你却完全没有印象。"
+        }
+      ],
+      "prompt": "你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "怀疑她记错了人",
+          "vector": {
+            "discernment": 0.42,
+            "trust": -0.18,
+            "autonomy": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s09",
+          "aftermath": "你没有立刻接受这个像故事一样的巧合。她也不争，只描述了书包上那只褪色的兔子。"
+        },
+        {
+          "id": "b",
+          "text": "开玩笑说，她欠自己很多年的人情",
+          "vector": {
+            "approach": 0.4,
+            "novelty": 0.36,
+            "expression": 0.26,
+            "idealization": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s09",
+          "aftermath": "你把突如其来的亲近放进玩笑里。她顺着说：“那我现在开始还，来得及吗？”"
+        },
+        {
+          "id": "c",
+          "text": "因为她记得这件小事，忽然有些在意",
+          "vector": {
+            "idealization": 0.5,
+            "trust": 0.28,
+            "approach": 0.24,
+            "reassurance": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s09",
+          "aftermath": "你没有说出口，但她记得的那个少年，让你第一次感觉自己也曾被这个地方认真看见过。"
+        },
+        {
+          "id": "d",
+          "text": "问她为什么一开始不说",
+          "vector": {
+            "certainty": 0.42,
+            "expression": 0.4,
+            "discernment": 0.28,
+            "trust": 0.1
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s09",
+          "aftermath": "你想知道她是否从一开始就在观察你。她说：“因为我想先认识现在的你。”"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "slot": 9,
+      "chapter": "09｜你会不会留下",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你其实已经收到外地公司的调职邀请。这次回来，原本只准备停留一周。"
+        },
+        {
+          "type": "paragraph",
+          "text": "许妍问：“书店开业时，你还在吗？”"
+        }
+      ],
+      "prompt": "你会怎么回答？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "坦白自己很可能离开",
+          "vector": {
+            "expression": 0.56,
+            "certainty": 0.44,
+            "trust": 0.36,
+            "commitment": -0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s10",
+          "aftermath": "你把离开的可能说清。她沉默了一会儿，只问具体日期，没有用失落逼你改变计划。",
+          "setFlags": {
+            "departure": "open"
+          },
+          "subtext": "把离开的可能交给她判断。"
+        },
+        {
+          "id": "b",
+          "text": "说自己还没决定",
+          "vector": {
+            "certainty": -0.18,
+            "discernment": 0.32,
+            "autonomy": 0.3,
+            "approach": 0.06
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s10",
+          "aftermath": "你留下了可能，也留下了模糊。她点头，之后却不再默认你会参与开业后的任何安排。",
+          "setFlags": {
+            "departure": "uncertain"
+          },
+          "subtext": "保留余地，也让她无法把你写进计划。"
+        },
+        {
+          "id": "c",
+          "text": "不提调职，只说会尽量回来",
+          "vector": {
+            "trust": -0.28,
+            "reassurance": 0.26,
+            "idealization": 0.2,
+            "expression": -0.38
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s10",
+          "aftermath": "你给了一个听起来温和的答案，却没有给她真正判断距离的材料。",
+          "setFlags": {
+            "departure": "soften"
+          },
+          "subtext": "给出温和答案，却藏起真正的距离。"
+        },
+        {
+          "id": "d",
+          "text": "反问她项目结束后会去哪里",
+          "vector": {
+            "approach": 0.28,
+            "certainty": 0.26,
+            "expression": 0.34,
+            "novelty": 0.22
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s10",
+          "aftermath": "你没有先交出自己的答案，而是把未来的问题推回她那里。她说项目结束后仍会留在镇上半年。",
+          "setFlags": {
+            "departure": "reciprocal"
+          },
+          "subtext": "先知道她会去哪里，再决定自己说多少。"
+        }
+      ],
+      "decisionType": "hard",
+      "decisionLabel": "关键选择",
+      "decisionNote": "你是否说出真实计划，会改变她后来怎样理解你的靠近。"
+    },
+    {
+      "id": "s10",
+      "slot": 10,
+      "chapter": "10｜另一种保留方式",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "她带你去看镇上的旧邮局。那里被改成咖啡馆，门窗、柜台和墙上的邮戳都保留着。"
+        },
+        {
+          "type": "quote",
+          "text": "“保留不是把东西锁起来。有人继续使用，它才没有真正消失。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "你看见她谈起这些时，和平常有些不同。真正吸引你的，开始不只是第一眼。"
+        }
+      ],
+      "prompt": "你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "承认这个项目可能没那么糟",
+          "vector": {
+            "trust": 0.46,
+            "repair": 0.32,
+            "expression": 0.28,
+            "approach": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s11",
+          "aftermath": "你第一次明确承认自己改变了部分判断。她没有得意，只把新的平面图往你这边推近。"
+        },
+        {
+          "id": "b",
+          "text": "说邮局和父亲的修理铺不是一回事",
+          "vector": {
+            "autonomy": 0.42,
+            "discernment": 0.34,
+            "trust": 0.02,
+            "conflict": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s11",
+          "aftermath": "你没有因为被打动就放弃区别。她也接受，理解一种保留不代表能复制到所有地方。"
+        },
+        {
+          "id": "c",
+          "text": "问她有没有改造失败过",
+          "vector": {
+            "discernment": 0.42,
+            "approach": 0.28,
+            "expression": 0.3,
+            "trust": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s11",
+          "aftermath": "你开始想知道她的判断从哪里来，而不只是判断她这次是否正确。"
+        },
+        {
+          "id": "d",
+          "text": "发现自己更想了解她，不再继续争论",
+          "vector": {
+            "idealization": 0.42,
+            "approach": 0.34,
+            "novelty": 0.3,
+            "discernment": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s11",
+          "aftermath": "争论暂时停了。你们沿着旧邮局慢慢走，话题第一次与项目无关。"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "slot": 11,
+      "chapter": "11｜她曾经失败过",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "许妍做过一座老剧院改造。设计很漂亮，开业半年却倒闭了。"
+        },
+        {
+          "type": "quote",
+          "text": "“我那时只想着建筑能不能留下，没想过留下以后谁会来。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "所以这一次，她把书店、候船区和社区活动放在一起。"
+        }
+      ],
+      "prompt": "你会怎么接住这段坦白？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "因为她愿意承认失败，更信任她",
+          "vector": {
+            "trust": 0.52,
+            "repair": 0.28,
+            "approach": 0.22,
+            "care": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s12",
+          "aftermath": "她没有把失败说成漂亮的成长故事，而你的信任也因此更具体了一点。"
+        },
+        {
+          "id": "b",
+          "text": "觉得她可能把这次项目看得太个人化",
+          "vector": {
+            "discernment": 0.42,
+            "autonomy": 0.28,
+            "trust": -0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s12",
+          "aftermath": "你提醒她别让补偿心理替项目作决定。她没有否认，只说这正是她需要别人一起判断的原因。"
+        },
+        {
+          "id": "c",
+          "text": "问她是不是很怕再次失败",
+          "vector": {
+            "expression": 0.38,
+            "approach": 0.28,
+            "care": 0.26,
+            "trust": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s12",
+          "aftermath": "你问到了她没有主动说出的部分。她看了你一会儿，承认确实害怕。"
+        },
+        {
+          "id": "d",
+          "text": "说失败不一定全是设计师的问题",
+          "vector": {
+            "care": 0.42,
+            "repair": 0.24,
+            "trust": 0.24,
+            "discernment": -0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s12",
+          "aftermath": "你没有让她独自承担所有原因。她接受这句安慰，却仍坚持自己当时忽略了什么。"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "slot": 12,
+      "chapter": "12｜父亲早就同意了",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "整理文件时，你找到父亲三个月前签过的改造意向书。他不仅知道计划，还主动提出把修理铺交给项目使用。"
+        },
+        {
+          "type": "paragraph",
+          "text": "许妍解释：“他让我等你回来以后，再决定工作台怎么处理。”你突然觉得自己像最后一个才知道的人。"
+        }
+      ],
+      "prompt": "你最自然的反应是？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "生父亲的气，也觉得她一起隐瞒了你",
+          "vector": {
+            "abandonment": 0.58,
+            "trust": -0.38,
+            "conflict": 0.32,
+            "reassurance": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13",
+          "aftermath": "你把两份失望放在一起说了出来。许妍没有立即为自己辩护，但关系里的温度明显降了下来。"
+        },
+        {
+          "id": "b",
+          "text": "只问她为什么第一天不说",
+          "vector": {
+            "certainty": 0.5,
+            "expression": 0.44,
+            "discernment": 0.26,
+            "trust": -0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13",
+          "aftermath": "你把问题集中在她的选择上。她说答应过父亲，却也承认自己低估了隐瞒会带来的伤害。"
+        },
+        {
+          "id": "c",
+          "text": "理解她答应过父亲，但仍然不舒服",
+          "vector": {
+            "repair": 0.42,
+            "expression": 0.36,
+            "trust": 0.08,
+            "abandonment": 0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13",
+          "aftermath": "你没有把理解当成免除责任。她听懂了，也没有要求你立刻恢复原来的信任。"
+        },
+        {
+          "id": "d",
+          "text": "觉得这证明父亲根本不需要自己决定",
+          "vector": {
+            "abandonment": 0.5,
+            "approach": -0.34,
+            "expression": -0.2,
+            "reassurance": 0.3
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s13",
+          "aftermath": "你把失望转向自己在这个家里的位置。许妍没有替父亲解释，只提醒你：工作台的决定仍然在等你。"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "slot": 13,
+      "chapter": "13｜第一次真正的争吵",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你说：“你们早就安排好了，现在只是让我选一个装饰方案。”"
+        },
+        {
+          "type": "quote",
+          "text": "许妍第一次明显生气：“如果只是装饰方案，我根本不需要每天和你解释。你一直说别人替你决定，可你自己从来没说过想要什么。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "这句话击中了你，也越过了你原本允许她进入的位置。"
+        }
+      ],
+      "prompt": "你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "直接告诉她，这句话越界了",
+          "vector": {
+            "expression": 0.58,
+            "conflict": 0.5,
+            "autonomy": 0.36,
+            "repair": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s14",
+          "aftermath": "你没有回避冲突，也没有用更伤人的话反击。她停下来，承认自己说得太重。"
+        },
+        {
+          "id": "b",
+          "text": "承认自己没想清楚，但她仍不该隐瞒",
+          "vector": {
+            "expression": 0.5,
+            "repair": 0.46,
+            "trust": 0.16,
+            "conflict": 0.34
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s14",
+          "aftermath": "你同时承认自己的部分，也没有替她取消责任。争吵第一次变成了真正的对话。"
+        },
+        {
+          "id": "c",
+          "text": "转身离开，避免说出更伤人的话",
+          "vector": {
+            "autonomy": 0.42,
+            "conflict": -0.5,
+            "repair": 0.06,
+            "abandonment": 0.34
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s14",
+          "aftermath": "你先离开了现场。沉默避免了失控，也让未说完的话整晚留在两个人之间。"
+        },
+        {
+          "id": "d",
+          "text": "反问她为什么这么在意自己怎么选",
+          "vector": {
+            "certainty": 0.38,
+            "approach": 0.22,
+            "expression": 0.46,
+            "idealization": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s14",
+          "aftermath": "你把争论推到关系本身。她没有回答喜欢，只说：“因为你的选择会改变我正在做的东西。”"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "slot": 14,
+      "chapter": "14｜工作台最终怎么处理",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "第二天，施工队到了。无论昨晚的争吵有没有完全过去，你都必须作出决定。"
+        }
+      ],
+      "prompt": "你最终选择？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "保留完整工作台，重新加固",
+          "vector": {
+            "commitment": 0.46,
+            "idealization": 0.3,
+            "autonomy": 0.28,
+            "novelty": -0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s15",
+          "aftermath": "你选择让过去尽可能完整地留下，也接受空间会因此付出代价。",
+          "setFlags": {
+            "bench": "whole"
+          },
+          "subtext": "让记忆完整留下，也接受新空间为它让路。"
+        },
+        {
+          "id": "b",
+          "text": "拆下中间部分，改成长桌",
+          "vector": {
+            "repair": 0.48,
+            "commitment": 0.36,
+            "trust": 0.24,
+            "discernment": 0.24
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s15",
+          "aftermath": "你让过去改变用途，而不是消失。许妍没有把它说成折中，只说这是一个真正的新决定。",
+          "setFlags": {
+            "bench": "table"
+          },
+          "subtext": "让旧工作台继续被人使用，而不是只被纪念。"
+        },
+        {
+          "id": "c",
+          "text": "只保留刻着童年划痕的木板",
+          "vector": {
+            "autonomy": 0.38,
+            "discernment": 0.34,
+            "idealization": 0.22,
+            "commitment": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s15",
+          "aftermath": "你保留了最私人、最无法替代的一部分，也允许其他外壳离开。",
+          "setFlags": {
+            "bench": "board"
+          },
+          "subtext": "只留下最私人、最不可替代的那一块。"
+        },
+        {
+          "id": "d",
+          "text": "全部拆除，让新的空间真正开始",
+          "vector": {
+            "novelty": 0.5,
+            "autonomy": 0.34,
+            "commitment": -0.14,
+            "idealization": -0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s15",
+          "aftermath": "你选择彻底开始。木台被抬出去时，你仍然回头看了一眼，但没有叫停。",
+          "setFlags": {
+            "bench": "new"
+          },
+          "subtext": "允许旧物离开，让这里真正成为新的地方。"
+        }
+      ],
+      "decisionType": "hard",
+      "decisionLabel": "关键选择",
+      "decisionNote": "这不是偏好题。你选择保留什么，也是在决定怎样面对过去。"
+    },
+    {
+      "id": "s15",
+      "slot": 15,
+      "chapter": "15｜父亲提前回来了",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "父亲旅行途中吃不惯饭，提前回镇。他在门口看了一会儿，只问：“你自己选的？”"
+        },
+        {
+          "type": "paragraph",
+          "text": "你点头。他没有评价好坏。晚上，他才说：“你这些年每次回来，都像随时准备走。我想让你认真看一次这里，再决定。”"
+        }
+      ],
+      "prompt": "你会怎么回应父亲？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "说自己不是不在意，只是不知道回来能做什么",
+          "vector": {
+            "expression": 0.5,
+            "repair": 0.4,
+            "trust": 0.28,
+            "reassurance": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s16",
+          "aftermath": "你第一次把离开背后的无措说给父亲听。他没有立刻理解，却也没有再用一句“随你”结束谈话。"
+        },
+        {
+          "id": "b",
+          "text": "问他为什么不能早点直说",
+          "vector": {
+            "certainty": 0.48,
+            "expression": 0.44,
+            "conflict": 0.24,
+            "repair": 0.22
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s16",
+          "aftermath": "你问出了积压多年的问题。父亲想了很久，只说自己也不知道该怎样开口。"
+        },
+        {
+          "id": "c",
+          "text": "不继续谈，至少决定已经做完了",
+          "vector": {
+            "autonomy": 0.42,
+            "expression": -0.34,
+            "repair": -0.1,
+            "commitment": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s16",
+          "aftermath": "你把话停在决定本身。父亲没有追问，沉默里仍然留着一扇以后可能再打开的门。"
+        },
+        {
+          "id": "d",
+          "text": "告诉他，自己仍可能去外地",
+          "vector": {
+            "expression": 0.48,
+            "autonomy": 0.36,
+            "certainty": 0.32,
+            "commitment": -0.06
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s16",
+          "aftermath": "你没有用这次回来承诺永久留下。父亲点头，说他真正想知道的只是你有没有自己决定。"
+        }
+      ],
+      "variants": [
+        {
+          "when": {
+            "flag": "bench",
+            "equals": "whole"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "完整工作台被加固后留在原处，旧划痕和新钢架同时存在。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "bench",
+            "equals": "table"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "工作台中段被重新打磨，变成书店里最长的一张公共桌。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "bench",
+            "equals": "board"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "那块刻着歪线的木板被嵌进新墙面，只有你知道它原来在哪里。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "bench",
+            "equals": "new"
+          },
+          "prependContent": [
+            {
+              "type": "paragraph",
+              "text": "工作台被全部移走，空出来的位置第一次让江面完整地照进屋里。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "slot": 16,
+      "chapter": "16｜她没有替你劝父亲",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "许妍来送新图纸，正好看见你和父亲沉默地吃饭。她没有说“他其实很爱你”，也没有试图调解。"
+        },
+        {
+          "type": "quote",
+          "text": "离开前，她只问：“明天还来吗？”"
+        }
+      ],
+      "prompt": "你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "说会，因为事情还没做完",
+          "vector": {
+            "commitment": 0.42,
+            "trust": 0.3,
+            "approach": 0.2,
+            "expression": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s17",
+          "aftermath": "你没有把回来包装成浪漫，只给了一个明天会出现的具体答案。她说“好”，像这已经足够。"
+        },
+        {
+          "id": "b",
+          "text": "问她希望自己来吗",
+          "vector": {
+            "reassurance": 0.38,
+            "approach": 0.32,
+            "expression": 0.38,
+            "validation": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s17",
+          "aftermath": "你第一次直接确认自己在她的计划里是否重要。她没有躲开，只说：“希望。”"
+        },
+        {
+          "id": "c",
+          "text": "说不知道，需要一个人想想",
+          "vector": {
+            "autonomy": 0.42,
+            "discernment": 0.32,
+            "approach": -0.18,
+            "trust": 0.02
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s17",
+          "aftermath": "你没有为了留住气氛给出承诺。她接受了不确定，也把明天的选择留给你。"
+        },
+        {
+          "id": "d",
+          "text": "告诉她，自己可能仍会接受调职",
+          "vector": {
+            "expression": 0.46,
+            "certainty": 0.42,
+            "autonomy": 0.32,
+            "commitment": -0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s17",
+          "aftermath": "你把最现实的部分重新放回关系里。她沉默了一下，说离开和不再回来不是同一回事。"
+        }
+      ],
+      "variants": [
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "open"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "许妍记得你说过可能离开，所以这句话里没有挽留，只是在确认你明天是否仍愿意参与。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "uncertain"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "她没有追问你最终会不会走，但也没有再把你默认写进开业后的安排。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "soften"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "你能感觉到，她仍然不知道你真正的计划。那句“明天还来吗”因此比表面更重。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "reciprocal"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "你们都知道彼此未来几个月的大致方向，却还没有说这是否意味着要为对方留位置。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "slot": 17,
+      "chapter": "17｜最后一班渡船",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "渡口停运当天，镇上来了很多人。最后一班船鸣笛离岸，父亲站在最前面，没有挥手。"
+        },
+        {
+          "type": "paragraph",
+          "text": "许妍站在你旁边。肩膀偶尔碰到你，却没有借这个时刻要求你留下。"
+        }
+      ],
+      "prompt": "船消失在江面以后，你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "告诉她，书店开业时自己会回来",
+          "vector": {
+            "commitment": 0.5,
+            "approach": 0.38,
+            "certainty": 0.38,
+            "trust": 0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18",
+          "aftermath": "你给的不是永远留下，而是一个能够兑现的下一次。她看向你时，神情终于松了一点。"
+        },
+        {
+          "id": "b",
+          "text": "问她开业以后，还会不会继续留在这里",
+          "vector": {
+            "approach": 0.3,
+            "certainty": 0.4,
+            "expression": 0.34,
+            "reassurance": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18",
+          "aftermath": "你没有只谈自己的去留，也开始把她的未来当作需要一起理解的部分。"
+        },
+        {
+          "id": "c",
+          "text": "什么都不承诺，只陪她站到人群散去",
+          "vector": {
+            "trust": 0.26,
+            "approach": 0.12,
+            "autonomy": 0.3,
+            "expression": -0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18",
+          "aftermath": "你没有用告别气氛做决定。她也没有催促，只和你一起把这一刻完整地站完。"
+        },
+        {
+          "id": "d",
+          "text": "告诉她，自己大概率还是会走",
+          "vector": {
+            "expression": 0.42,
+            "autonomy": 0.4,
+            "commitment": -0.18,
+            "trust": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s18",
+          "aftermath": "你没有让心动替现实作答。她听完后没有退开，只说希望你至少别把回来理解成失败。"
+        }
+      ],
+      "variants": [
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "open"
+          },
+          "appendContent": [
+            {
+              "type": "quote",
+              "text": "她说：“你去哪里工作是一回事，愿不愿意回来，是另一回事。”"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "uncertain"
+          },
+          "appendContent": [
+            {
+              "type": "quote",
+              "text": "她说：“你不需要因为舍不得就留下，但别把不决定当成没有选择。”"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "soften"
+          },
+          "appendContent": [
+            {
+              "type": "quote",
+              "text": "她说：“真正让我介意的不是你会走，是你一直没让我知道该不该等。”"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "departure",
+            "equals": "reciprocal"
+          },
+          "appendContent": [
+            {
+              "type": "quote",
+              "text": "她说：“我们都知道自己接下来要去哪里。剩下的问题，是愿不愿意把对方也算进去。”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "slot": 18,
+      "chapter": "18｜靠窗的位置",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "一个月后，许妍发来书店开业的照片。工作台以你选择的方式留在新的空间里。"
+        },
+        {
+          "type": "quote",
+          "text": "她只发来一句：“靠窗的位置还空着。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "这一次，没有渡船替你决定要不要回来。"
+        }
+      ],
+      "prompt": "你会怎样让故事继续？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "回临江镇参加开业，也正式约她吃饭",
+          "vector": {
+            "approach": 0.66,
+            "commitment": 0.6,
+            "expression": 0.54,
+            "trust": 0.42
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你选择回到她所在的现实里。这个结局不是因为故乡绑住了你，而是你愿意亲手走回那张靠窗的位置。",
+          "setFlags": {
+            "ending": "return"
+          },
+          "outcome": "return",
+          "subtext": "回到她面前，让喜欢进入真实生活。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "靠窗的位置",
+            "copy": "你买了最早的一班车。书店开门时，许妍正在靠窗的位置整理最后一排书。她看见你，没有问会不会永远留下，只把身边的椅子向外拉了一点。你终于明白，回来不是认输，心动也不必用牺牲证明。"
+          }
+        },
+        {
+          "id": "b",
+          "text": "告诉她会回来，但不承诺永远留下",
+          "vector": {
+            "certainty": 0.46,
+            "commitment": 0.34,
+            "autonomy": 0.42,
+            "trust": 0.34
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你给了关系一个真实的下一步，也保留了对人生方向的判断。喜欢不再等于牺牲，回来也不等于放弃离开。",
+          "setFlags": {
+            "ending": "commute"
+          },
+          "outcome": "commute",
+          "subtext": "给出下一步，但不拿永远交换爱情。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "往返的人",
+            "copy": "你回去参加开业，也把未来说得诚实：你不会承诺永远留在这里。许妍把一把备用钥匙放进你手里。后来你们各自生活，也一次次认真安排见面。爱情没有把谁困在岸边，只让每次出发都有了想见的人。"
+          }
+        },
+        {
+          "id": "c",
+          "text": "暂时不回去，却开始和她稳定联系",
+          "vector": {
+            "trust": 0.36,
+            "repair": 0.34,
+            "autonomy": 0.38,
+            "approach": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你没有用一次奔赴证明爱情，而是选择让联系进入普通日子。故事从渡口退潮，慢慢走进可持续的生活。",
+          "setFlags": {
+            "ending": "distance"
+          },
+          "outcome": "distance",
+          "subtext": "不靠一次奔赴证明感情，从普通联系开始。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "从普通生活开始",
+            "copy": "你没有赶上开业，只在晚上接通她的视频。她带你看完书店，镜头最后停在靠窗空着的位置。你们没有用一场奔赴把关系说满，而是从每天一两条消息开始，让彼此慢慢进入真实、琐碎又可以持续的生活。"
+          }
+        },
+        {
+          "id": "d",
+          "text": "祝她开业顺利，让关系停在渡口",
+          "vector": {
+            "autonomy": 0.62,
+            "approach": -0.52,
+            "commitment": -0.42,
+            "repair": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "$result",
+          "aftermath": "你没有因为心动就强迫故事继续。那张空着的座位留在照片里，成为一段真实发生过、却不必拥有结果的关系。",
+          "setFlags": {
+            "ending": "farewell"
+          },
+          "outcome": "farewell",
+          "subtext": "承认心动，也接受故事可以停在这里。",
+          "finalReveal": {
+            "eyebrow": "你亲手走出的结局",
+            "title": "渡船已经开走",
+            "copy": "你祝她开业顺利，没有回去。那张靠窗的位置留在照片里，像一段没有被否认、也没有被强迫继续的心动。后来你仍会想起她，却不再把没有拥有解释成失败。有些人让你重新看见一座城，然后陪你走到这里。"
+          }
+        }
+      ],
+      "decisionType": "final",
+      "decisionLabel": "最后的选择",
+      "decisionNote": "选下去以后，故事会先揭晓你亲手走出的结局。"
+    }
+  ]
+}

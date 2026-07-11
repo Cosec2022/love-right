@@ -422,6 +422,27 @@
         "aftermath": {
           "type": "string",
           "minLength": 1
+        },
+        "finalReveal": {
+          "type": "object",
+          "required": [
+            "title",
+            "copy"
+          ],
+          "properties": {
+            "eyebrow": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "copy": {
+              "type": "string",
+              "minLength": 12
+            }
+          },
+          "additionalProperties": false
         }
       },
       "additionalProperties": false
@@ -511,6 +532,18 @@
             },
             "additionalProperties": false
           }
+        },
+        "decisionType": {
+          "enum": [
+            "hard",
+            "final"
+          ]
+        },
+        "decisionLabel": {
+          "type": "string"
+        },
+        "decisionNote": {
+          "type": "string"
         }
       },
       "additionalProperties": false

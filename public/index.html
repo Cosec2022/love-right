@@ -54,6 +54,10 @@
           <div id="progressText" class="progress-text"></div>
         </div>
         <p id="storyTitleMini" class="story-title-mini"></p>
+        <div id="decisionBanner" class="decision-banner" hidden>
+          <span id="decisionLabel" class="decision-label"></span>
+          <p id="decisionNote" class="decision-note"></p>
+        </div>
         <p id="chapter" class="chapter"></p>
         <div id="sceneCopy" class="scene-copy"></div>
         <h2 id="question" class="question"></h2>
@@ -62,6 +66,17 @@
         <div class="back-row"><button id="backBtn" class="back-btn" type="button">返回上一幕</button></div>
         <p class="status-line">进度只保存在这台设备，随时可以回来继续。</p>
       </div>
+    </section>
+
+    <section id="revealScreen" class="screen">
+      <article class="card ending-reveal-card">
+        <div class="ending-reveal-glow" aria-hidden="true"></div>
+        <p id="revealEyebrow" class="ending-reveal-eyebrow"></p>
+        <p id="revealStoryTitle" class="ending-reveal-story"></p>
+        <h2 id="revealTitle" class="ending-reveal-title"></h2>
+        <p id="revealCopy" class="ending-reveal-copy"></p>
+        <button id="revealContinueBtn" class="primary ending-reveal-button" type="button">看看这段选择说明了什么</button>
+      </article>
     </section>
 
     <section id="resultScreen" class="screen">

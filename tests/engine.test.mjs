@@ -213,7 +213,8 @@ test("high-stakes scenes explicitly acknowledge every user response", () => {
     "story-03": ["s09", "s13", "s16"],
     "story-04": ["s08", "s13", "s15"],
     "story-05": ["s08", "s10", "s13", "s15"],
-    "story-06": ["s07", "s08", "s10", "s13", "s15"]
+    "story-06": ["s07", "s08", "s10", "s13", "s15"],
+    "story-07": ["s04", "s09", "s12", "s13", "s14", "s16", "s17", "s18"]
   };
   for (const { story } of publishedPackages) {
     for (const sceneId of expected[story.id] ?? []) {
@@ -277,4 +278,78 @@ test("result heading speaks directly to the player", async () => {
   const rendererSource = await readFile(new URL("../public/app/ui/renderer.js", import.meta.url), "utf8");
   assert.match(rendererSource, /resultTitlePrefix\.textContent = "你是一个"/);
   assert.match(rendererSource, /resultTitleCore\.textContent = result\.memory\.title/);
+});
+
+
+test("story-07 has a stable spine with only meaningful hard branches", () => {
+  const { story } = packages.find(({ story }) => story.id === "story-07");
+  assert.equal(story.metadata.audience, "male");
+  assert.equal(new Set(story.scenes.find((scene) => scene.id === "s04").choices.map((choice) => choice.next)).size, 4);
+  assert.equal(new Set(story.scenes.find((scene) => scene.id === "s09").choices.map((choice) => choice.next)).size, 1);
+  assert.equal(new Set(story.scenes.find((scene) => scene.id === "s14").choices.map((choice) => choice.next)).size, 1);
+  assert.equal(new Set(story.scenes.find((scene) => scene.id === "s18").choices.map((choice) => choice.outcome)).size, 4);
+});
+
+test("story-07 carries departure and workbench choices into later copy", () => {
+  const { story } = packages.find(({ story }) => story.id === "story-07");
+  const engine = new StoryEngine(story, { store: memoryStore() });
+  engine.start();
+  while (engine.getCurrentScene().id !== "s09") engine.choose(engine.getCurrentScene().choices[0].id);
+  engine.choose("c");
+  while (engine.getCurrentScene().id !== "s14") engine.choose(engine.getCurrentScene().choices[0].id);
+  engine.choose("c");
+  const s15 = engine.getCurrentScene();
+  assert.match(s15.content.map((item) => item.text).join(" "), /童年划痕|木板/);
+  while (engine.getCurrentScene().id !== "s17") engine.choose(engine.getCurrentScene().choices[0].id);
+  const s17 = engine.getCurrentScene();
+  assert.match(s17.content.map((item) => item.text).join(" "), /该不该等/);
+});
+
+
+test("story-07 visually distinguishes consequential choices and reveals the ending before analysis", async () => {
+  const { story } = packages.find(({ story }) => story.id === "story-07");
+  for (const sceneId of ["s04", "s09", "s14"]) {
+    const scene = story.scenes.find((item) => item.id === sceneId);
+    assert.equal(scene.decisionType, "hard", sceneId);
+    assert.ok(scene.decisionLabel && scene.decisionNote, sceneId);
+    assert.equal(scene.choices.every((choice) => choice.subtext?.length >= 8), true, sceneId);
+  }
+  const finalScene = story.scenes.find((item) => item.id === "s18");
+  assert.equal(finalScene.decisionType, "final");
+  assert.equal(finalScene.choices.every((choice) => choice.finalReveal?.title && choice.finalReveal.copy.length >= 40), true);
+  assert.equal(new Set(finalScene.choices.map((choice) => choice.finalReveal.title)).size, 4);
+
+  const rendererSource = await readFile(new URL("../public/app/ui/renderer.js", import.meta.url), "utf8");
+  const mainSource = await readFile(new URL("../public/app/main.js", import.meta.url), "utf8");
+  assert.match(rendererSource, /renderReveal/);
+  assert.match(rendererSource, /decision-option/);
+  assert.match(mainSource, /scene\.decisionType === "final"/);
+});
+
+
+test("story-07 completes every consequential decision combination", () => {
+  const { story } = packages.find(({ story }) => story.id === "story-07");
+  const decisionIds = ["s04", "s09", "s14", "s18"];
+  const expectedOutcomes = ["return", "commute", "distance", "farewell"];
+  let completed = 0;
+  for (let a = 0; a < 4; a += 1) {
+    for (let b = 0; b < 4; b += 1) {
+      for (let c = 0; c < 4; c += 1) {
+        for (let d = 0; d < 4; d += 1) {
+          const picks = new Map(decisionIds.map((id, index) => [id, [a, b, c, d][index]]));
+          const engine = new StoryEngine(story, { store: memoryStore() });
+          engine.start();
+          while (!engine.state.complete) {
+            const scene = engine.getCurrentScene();
+            const index = picks.get(scene.id) ?? ((scene.slot + a + b + c + d) % scene.choices.length);
+            engine.choose(scene.choices[index].id);
+          }
+          assert.equal(engine.state.answers.length, 18);
+          assert.equal(engine.state.outcome, expectedOutcomes[d]);
+          completed += 1;
+        }
+      }
+    }
+  }
+  assert.equal(completed, 256);
 });

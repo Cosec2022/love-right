@@ -11,7 +11,7 @@ const appendParagraphs = (container, paragraphs) => {
 
 export class Renderer {
   constructor() {
-    this.screenIds = ["libraryScreen", "startScreen", "quizScreen", "resultScreen", "errorScreen"];
+    this.screenIds = ["libraryScreen", "startScreen", "quizScreen", "revealScreen", "resultScreen", "errorScreen"];
   }
 
   show(screenId) {
@@ -76,6 +76,14 @@ export class Renderer {
     el("sceneNote").textContent = scene.note ?? "";
     el("backBtn").style.visibility = canGoBack ? "visible" : "hidden";
 
+    const quizCard = el("quizScreen").querySelector(".quiz-card");
+    quizCard.dataset.decision = scene.decisionType ?? "soft";
+    const decisionBanner = el("decisionBanner");
+    const isDecision = scene.decisionType === "hard" || scene.decisionType === "final";
+    decisionBanner.hidden = !isDecision;
+    el("decisionLabel").textContent = scene.decisionLabel ?? (scene.decisionType === "final" ? "最后的选择" : "关键选择");
+    el("decisionNote").textContent = scene.decisionNote ?? "这一次的决定会改变后续故事。";
+
     const sceneCopy = el("sceneCopy");
     sceneCopy.replaceChildren();
     for (const block of scene.content ?? []) {
@@ -90,10 +98,10 @@ export class Renderer {
     scene.choices.forEach((choice, index) => {
       const button = document.createElement("button");
       button.type = "button";
-      button.className = "option";
+      button.className = `option${isDecision ? " decision-option" : ""}${scene.decisionType === "final" ? " final-option" : ""}`;
       const key = document.createElement("span");
       key.className = "option-key";
-      key.textContent = String.fromCharCode(65 + index);
+      key.textContent = isDecision ? String(index + 1).padStart(2, "0") : String.fromCharCode(65 + index);
       const main = document.createElement("span");
       main.className = "option-main";
       main.append(document.createTextNode(choice.text));
@@ -108,6 +116,18 @@ export class Renderer {
       options.appendChild(button);
     });
     this.show("quizScreen");
+  }
+
+
+  renderReveal({ story, choice, result }, onContinue) {
+    const reveal = choice.finalReveal ?? {};
+    el("revealEyebrow").textContent = reveal.eyebrow ?? "你亲手走出的结局";
+    el("revealStoryTitle").textContent = story.metadata.title;
+    el("revealTitle").textContent = reveal.title ?? result.memory.title;
+    el("revealCopy").textContent = reveal.copy ?? result.ending?.[0] ?? "故事已经抵达。";
+    const button = el("revealContinueBtn");
+    button.onclick = onContinue;
+    this.show("revealScreen");
   }
 
   renderResult(result, story) {

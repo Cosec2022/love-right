@@ -76,9 +76,17 @@ async function openStory(entry, { pushUrl = true } = {}) {
 
 function handleChoice(choiceId) {
   try {
+    const scene = engine.getCurrentScene();
+    const choice = scene.choices.find((item) => item.id === choiceId);
     engine.choose(choiceId);
-    if (engine.state.complete) renderCurrentResult();
-    else renderCurrentScene();
+    if (engine.state.complete) {
+      latestResult = resultEngine.build(engine.state);
+      if (scene.decisionType === "final" && choice?.finalReveal) {
+        renderer.renderReveal({ story, choice, result: latestResult }, () => renderer.renderResult(latestResult, story));
+      } else {
+        renderer.renderResult(latestResult, story);
+      }
+    } else renderCurrentScene();
   } catch (error) {
     console.error(error);
     renderer.error(`故事引擎遇到错误：${error.message}`);
