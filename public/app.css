@@ -1109,18 +1109,7 @@
   align-items: center;
   gap: 9px;
   min-width: 0;
-}
-.brand::before {
-  content: "";
-  width: 34px;
-  height: 34px;
-  flex: 0 0 34px;
-  display: block;
-  background: url("./assets/love-right-icon.png") center / cover no-repeat;
-  border-radius: 10px;
-  box-shadow: 0 5px 16px rgba(63, 48, 71, .14);
-}
-@media (max-width: 420px) {
+}@media (max-width: 420px) {
   .brand { gap: 7px; }
   .brand::before {
     width: 30px;
