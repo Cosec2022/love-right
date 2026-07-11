@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 2,
+  "storyId": "story-11",
+  "spatialModel": {
+    "mode": "cluster",
+    "blendThreshold": 0.0065,
+    "weights": {
+      "distance": 1
+    },
+    "blendPairs": [
+      [
+        "clear-slow",
+        "steady-confirm"
+      ],
+      [
+        "clear-slow",
+        "free-close"
+      ],
+      [
+        "clear-slow",
+        "chosen-sensitive"
+      ],
+      [
+        "clear-slow",
+        "direct-pursuit"
+      ],
+      [
+        "clear-slow",
+        "repair-nurturer"
+      ],
+      [
+        "steady-confirm",
+        "chosen-sensitive"
+      ],
+      [
+        "steady-confirm",
+        "repair-nurturer"
+      ],
+      [
+        "steady-confirm",
+        "romantic-resonance"
+      ],
+      [
+        "romantic-resonance",
+        "push-pull"
+      ],
+      [
+        "romantic-resonance",
+        "direct-pursuit"
+      ],
+      [
+        "romantic-resonance",
+        "free-close"
+      ],
+      [
+        "direct-pursuit",
+        "repair-nurturer"
+      ],
+      [
+        "direct-pursuit",
+        "chosen-sensitive"
+      ],
+      [
+        "free-close",
+        "push-pull"
+      ],
+      [
+        "chosen-sensitive",
+        "push-pull"
+      ],
+      [
+        "chosen-sensitive",
+        "repair-nurturer"
+      ]
+    ]
+  },
+  "meters": [
+    {
+      "id": "approach",
+      "label": "靠近主动",
+      "components": [
+        {
+          "trait": "approach"
+        }
+      ]
+    },
+    {
+      "id": "clarity",
+      "label": "关系清晰",
+      "components": [
+        {
+          "trait": "certainty",
+          "weight": 1.2
+        },
+        {
+          "trait": "expression",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "id": "romance",
+      "label": "浪漫投射",
+      "components": [
+        {
+          "trait": "idealization",
+          "weight": 1.2
+        },
+        {
+          "trait": "novelty",
+          "weight": 0.6
+        }
+      ]
+    },
+    {
+      "id": "judgment",
+      "label": "行动判断",
+      "components": [
+        {
+          "trait": "discernment",
+          "weight": 1.2
+        },
+        {
+          "trait": "trust",
+          "inverse": true,
+          "weight": 0.35
+        }
+      ]
+    },
+    {
+      "id": "securityNeed",
+      "label": "安全确认",
+      "components": [
+        {
+          "trait": "reassurance"
+        },
+        {
+          "trait": "validation"
+        },
+        {
+          "trait": "abandonment",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "id": "expression",
+      "label": "表达直接",
+      "components": [
+        {
+          "trait": "expression"
+        },
+        {
+          "trait": "conflict",
+          "weight": 0.65
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "label": "自我边界",
+      "components": [
+        {
+          "trait": "autonomy"
+        },
+        {
+          "trait": "discernment",
+          "weight": 0.35
+        }
+      ]
+    },
+    {
+      "id": "longterm",
+      "label": "长期能力",
+      "components": [
+        {
+          "trait": "commitment"
+        },
+        {
+          "trait": "repair",
+          "weight": 0.75
+        },
+        {
+          "trait": "care",
+          "weight": 0.55
+        }
+      ]
+    }
+  ],
+  "archetypes": [
+    {
+      "id": "clear-slow",
+      "title": "清醒慢热型",
+      "tagline": "在老楼的楼道里，你会用自己的方式确认：允许进入不是失去边界。",
+      "center": {
+        "approach": -0.0907,
+        "trust": -0.0896,
+        "certainty": -0.059,
+        "abandonment": 0.0128,
+        "idealization": -0.0641,
+        "novelty": -0.055,
+        "discernment": 0.1434,
+        "jealousy": 0,
+        "expression": -0.1168,
+        "conflict": -0.1185,
+        "repair": -0.1423,
+        "reassurance": -0.0115,
+        "autonomy": 0.1775,
+        "commitment": -0.11,
+        "care": -0.1127,
+        "validation": -0.0702
+      },
+      "bias": 0,
+      "tags": [
+        "老楼日常",
+        "清楚邀请",
+        "自选边界"
+      ]
+    },
+    {
+      "id": "steady-confirm",
+      "title": "稳定确认型",
+      "tagline": "在老楼的楼道里，你会用自己的方式确认：允许进入不是失去边界。",
+      "center": {
+        "approach": -0.0635,
+        "trust": -0.0466,
+        "certainty": 0.0744,
+        "abandonment": 0.1035,
+        "idealization": -0.0627,
+        "novelty": -0.0661,
+        "discernment": 0.0519,
+        "jealousy": 0,
+        "expression": -0.0452,
+        "conflict": -0.0418,
+        "repair": 0.0714,
+        "reassurance": 0.1231,
+        "autonomy": 0.037,
+        "commitment": -0.0318,
+        "care": 0.093,
+        "validation": -0.0215
+      },
+      "bias": 0,
+      "tags": [
+        "老楼日常",
+        "清楚邀请",
+        "自选边界"
+      ]
+    },
+    {
+      "id": "romantic-resonance",
+      "title": "浪漫共振型",
+      "tagline": "在老楼的楼道里，你会用自己的方式确认：允许进入不是失去边界。",
+      "center": {
+        "approach": 0.0998,
+        "trust": 0.0547,
+        "certainty": 0.0772,
+        "abandonment": 0.0797,
+        "idealization": 0.1335,
+        "novelty": 0.1286,
+        "discernment": -0.1747,
+        "jealousy": 0,
+        "expression": 0.0198,
+        "conflict": 0.0246,
+        "repair": 0.0933,
+        "reassurance": 0.1026,
+        "autonomy": -0.1516,
+        "commitment": 0.0306,
+        "care": 0.0945,
+        "validation": 0.0117
+      },
+      "bias": 0,
+      "tags": [
+        "老楼日常",
+        "清楚邀请",
+        "自选边界"
+      ]
+    },
+    {
+      "id": "direct-pursuit",
+      "title": "主动直球型",
+      "tagline": "在老楼的楼道里，你会用自己的方式确认：允许进入不是失去边界。",
+      "center": {
+        "approach": -0.1068,
+        "trust": 0.0209,
+        "certainty": -0.0752,
+        "abandonment": -0.142,
+        "idealization": -0.148,
+        "novelty": -0.1432,
+        "discernment": 0.1276,
+        "jealousy": 0,
+        "expression": 0.0449,
+        "conflict": 0.0472,
+        "repair": 0.025,
+        "reassurance": -0.1463,
+        "autonomy": 0.0987,
+        "commitment": 0.0333,
+        "care": -0.0029,
+        "validation": 0.0189
+      },
+      "bias": 0,
+      "tags": [
+        "老楼日常",
+        "清楚邀请",
+        "自选边界"
+      ]
+    },
+    {
+      "id": "free-close",
+      "title": "自由靠近型",
+      "tagline": "在老楼的楼道里，你会用自己的方式确认：允许进入不是失去边界。",
+      "center": {
+        "approach": 0.0469,
+        "trust": 0.0408,
+        "certainty": -0.1133,
+        "abandonment": -0.1033,
+        "idealization": 0.0748,
+        "novelty": 0.0801,
+        "discernment": -0.03,
+        "jealousy": 0,
+        "expression": -0.011,
+        "conflict": -0.0084,
+        "repair": -0.0098,
+        "reassurance": -0.1079,
+        "autonomy": 0.0075,
+        "commitment": -0.0511,
+        "care": -0.0249,
+        "validation": -0.0529
+      },
+      "bias": 0,
+      "tags": [
+        "老楼日常",
+        "清楚邀请",
+        "自选边界"
+      ]
+    },
+    {
+      "id": "chosen-sensitive",
+      "title": "偏爱确认型",
+      "tagline": "在老楼的楼道里，你会用自己的方式确认：允许进入不是失去边界。",
+      "center": {
+        "approach": 0.0142,
+        "trust": -0.0135,
+        "certainty": 0.0968,
+        "abandonment": 0.0422,
+        "idealization": -0.0279,
+        "novelty": -0.033,
+        "discernment": -0.0303,
+        "jealousy": 0,
+        "expression": 0.0751,
+        "conflict": 0.0727,
+        "repair": -0.063,
+        "reassurance": 0.0239,
+        "autonomy": -0.0505,
+        "commitment": 0.0908,
+        "care": -0.0765,
+        "validation": 0.1134
+      },
+      "bias": 0,
+      "tags": [
+        "老楼日常",
+        "清楚邀请",
+        "自选边界"
+      ]
+    },
+    {
+      "id": "repair-nurturer",
+      "title": "温柔修复型",
+      "tagline": "在老楼的楼道里，你会用自己的方式确认：允许进入不是失去边界。",
+      "center": {
+        "approach": -0.0071,
+        "trust": 0.0945,
+        "certainty": -0.0028,
+        "abandonment": -0.1023,
+        "idealization": -0.0459,
+        "novelty": -0.0686,
+        "discernment": -0.0714,
+        "jealousy": 0,
+        "expression": 0.0929,
+        "conflict": 0.1021,
+        "repair": 0.1871,
+        "reassurance": -0.0891,
+        "autonomy": -0.089,
+        "commitment": 0.1811,
+        "care": 0.1641,
+        "validation": 0.0943
+      },
+      "bias": 0,
+      "tags": [
+        "老楼日常",
+        "清楚邀请",
+        "自选边界"
+      ]
+    },
+    {
+      "id": "push-pull",
+      "title": "反差拉扯型",
+      "tagline": "在老楼的楼道里，你会用自己的方式确认：允许进入不是失去边界。",
+      "center": {
+        "approach": 0.0569,
+        "trust": -0.0659,
+        "certainty": 0.0496,
+        "abandonment": 0.1533,
+        "idealization": 0.1264,
+        "novelty": 0.1437,
+        "discernment": -0.0461,
+        "jealousy": 0,
+        "expression": -0.1082,
+        "conflict": -0.1095,
+        "repair": -0.1163,
+        "reassurance": 0.1463,
+        "autonomy": -0.0103,
+        "commitment": -0.1093,
+        "care": -0.0887,
+        "validation": -0.0737
+      },
+      "bias": 0,
+      "tags": [
+        "老楼日常",
+        "清楚邀请",
+        "自选边界"
+      ]
+    }
+  ],
+  "sections": {
+    "ending": {
+      "byOutcome": {
+        "together": "你没有把允许程野进门当成欠下人情。搬家后的新旧地址之间，你们仍然会约好时间：他带着露营灯来，你决定门要不要开。水槽不再漏水，楼道也亮着；靠近是一件可以重复确认的普通事。",
+        "slow": "你们没有急着把关系写成答案。程野仍住在楼下，你也仍有自己的搬家清单；偶尔在楼道相遇、一起倒垃圾，偶尔约好吃饭。慢一点不是撤退，而是让每一次进入私人空间都经过同意。",
+        "separate-close": "你搬走了，却没有把离开老楼写成对程野的否定。你们隔着新的地址联系，聊起露营灯和那次水槽漏水。关系不占据生活，也不被生活抹掉。",
+        "pause": "你选择把关系停在这里。程野没有用修水槽、借灯或搬箱子要求回报；你也没有把暂停解释成伤害谁。老楼的门仍由你开关，新的日子从这一点开始。"
+      },
+      "appendRules": [
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "steady"
+          },
+          "text": "他没有追问你为什么来，只把一直替你留着的另一张票递给你。海风吹过纸角，也把那句迟到的“我在等你”轻轻送到你面前。"
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "witty"
+          },
+          "text": "他看见你时先笑了：“这次没有走错馆吧？”你也笑了。那些一路上的紧张，忽然被一句只有你们懂的话变得很轻。"
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "gentle"
+          },
+          "text": "他先问你冷不冷，又停了一下，认真问：“我可以抱你吗？”你点头以后，海风像是忽然绕开了你们。"
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "direct"
+          },
+          "text": "他没有再让你猜，只看着你说：“我喜欢你，也想认真走下去。”这一次，心动终于有了清楚的声音。"
+        },
+        {
+          "default": true,
+          "text": "你正在学习让心动和判断同时存在。真正适合你的浪漫，不会要求你取消边界，只会让你更愿意向前一步。"
+        }
+      ]
+    },
+    "psychology": {
+      "byArchetype": {
+        "clear-slow": "你会观察对方是否尊重水槽、露营灯和搬家这些小事里的边界；真正让你安心的，是程野先等你的允许。",
+        "steady-confirm": "你会观察对方是否尊重水槽、露营灯和搬家这些小事里的边界；真正让你安心的，是程野先等你的允许。",
+        "romantic-resonance": "你会观察对方是否尊重水槽、露营灯和搬家这些小事里的边界；真正让你安心的，是程野先等你的允许。",
+        "direct-pursuit": "你会观察对方是否尊重水槽、露营灯和搬家这些小事里的边界；真正让你安心的，是程野先等你的允许。",
+        "free-close": "你会观察对方是否尊重水槽、露营灯和搬家这些小事里的边界；真正让你安心的，是程野先等你的允许。",
+        "chosen-sensitive": "你会观察对方是否尊重水槽、露营灯和搬家这些小事里的边界；真正让你安心的，是程野先等你的允许。",
+        "repair-nurturer": "你会观察对方是否尊重水槽、露营灯和搬家这些小事里的边界；真正让你安心的，是程野先等你的允许。",
+        "push-pull": "你会观察对方是否尊重水槽、露营灯和搬家这些小事里的边界；真正让你安心的，是程野先等你的允许。"
+      },
+      "appendRules": [
+        {
+          "when": {
+            "path": "spatial.trend.approach",
+            "op": ">=",
+            "value": 0.18
+          },
+          "text": "你在故事后半段明显比开始时更愿意靠近。你并非被第一眼征服，而是会被持续一致的细节慢慢说服。"
+        },
+        {
+          "when": {
+            "path": "spatial.trend.approach",
+            "op": "<=",
+            "value": -0.18
+          },
+          "text": "越接近现实选择，你反而越会收回冲动。你需要确认对方能承担关系，而不只是擅长让人心动。"
+        },
+        {
+          "when": {
+            "trait": "autonomy",
+            "gte": 62
+          },
+          "text": "你需要亲密，也需要完整的自我。对方越尊重你的节奏，你越可能主动把他放进生活。"
+        },
+        {
+          "default": true,
+          "text": "你在靠近与保留之间相对平衡，不会立刻交出全部，也不需要靠故意冷淡证明自己。"
+        }
+      ]
+    },
+    "history": {
+      "groups": [
+        [
+          {
+            "default": true,
+            "text": "你可能很早就学会把帮助和人情债分开，所以更珍惜不要求回报的靠近。"
+          }
+        ],
+        [
+          {
+            "default": true,
+            "text": "你对私人空间的谨慎，不是冷淡；它让你能在愿意时更清楚地说是。"
+          }
+        ]
+      ]
+    },
+    "future": [
+      {
+        "title": "楼道",
+        "rules": [
+          {
+            "default": true,
+            "text": "下一次相遇发生在亮着灯的楼道，你先决定要不要停下来。"
+          }
+        ]
+      },
+      {
+        "title": "搬家",
+        "rules": [
+          {
+            "default": true,
+            "text": "新的纸箱被拆开，关系不替你选择住处，只陪你把日子安顿好。"
+          }
+        ]
+      },
+      {
+        "title": "露营灯",
+        "rules": [
+          {
+            "default": true,
+            "text": "一盏露营灯提醒你：被照顾不等于失去自己。"
+          }
+        ]
+      }
+    ],
+    "match": {
+      "base": "适合你的人会先问能不能进门、能不能帮忙，也接受你选择等物业或独处。",
+      "appendRules": []
+    },
+    "warning": {
+      "rules": [
+        {
+          "default": true,
+          "text": "别把一次顺手的帮助当成必须交换亲密的理由；愿意尊重你的人不会这样要求。"
+        }
+      ]
+    }
+  }
+}
