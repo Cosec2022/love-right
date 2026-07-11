@@ -111,7 +111,15 @@ export class Renderer {
   }
 
   renderResult(result, story) {
-    el("resultTitle").textContent = result.memory.title;
+    const resultTitle = el("resultTitle");
+    resultTitle.replaceChildren();
+    const resultTitlePrefix = document.createElement("span");
+    resultTitlePrefix.className = "result-title-prefix";
+    resultTitlePrefix.textContent = "你是一个";
+    const resultTitleCore = document.createElement("span");
+    resultTitleCore.className = "result-title-core";
+    resultTitleCore.textContent = result.memory.title;
+    resultTitle.append(resultTitlePrefix, resultTitleCore);
     el("resultTagline").textContent = result.memory.hook;
     el("resultLabel").textContent = result.memory.label;
 

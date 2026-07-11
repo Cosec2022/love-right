@@ -248,3 +248,33 @@ test("active, cautious, warm-to-cold and cold-to-warm routes leave distinct emot
   }
   assert.equal(new Set(signatures).size, 4, signatures.join("\n"));
 });
+
+test("story-06 keeps one stable emotional spine before the final identity choice", () => {
+  const { story } = packages.find(({ story }) => story.id === "story-06");
+  assert.ok(story.scenes.length <= 22, `story-06 has too many scene nodes: ${story.scenes.length}`);
+
+  for (const [sceneId, expectedTarget] of [["s07", "s08"], ["s08", "s09"], ["s10", "s11"], ["s13", "s14"]]) {
+    const scene = story.scenes.find((item) => item.id === sceneId);
+    assert.ok(scene, sceneId);
+    assert.deepEqual(new Set(scene.choices.map((choice) => choice.next)), new Set([expectedTarget]), `${sceneId} should remain on the shared spine`);
+  }
+
+  const identityContext = story.scenes.find((item) => item.id === "s12");
+  assert.equal(identityContext.variants.length, 4, "privacy choices should alter copy rather than create four world lines");
+  assert.deepEqual(new Set(identityContext.choices.map((choice) => choice.next)), new Set(["s13"]));
+
+  const finalChoice = story.scenes.find((item) => item.id === "s15");
+  assert.equal(new Set(finalChoice.choices.map((choice) => choice.next)).size, 4, "only the final identity choice should open four real routes");
+  for (const branchId of ["s16_reveal", "s16_slow", "s16_anon", "s16_wait"]) {
+    const branch = story.scenes.find((item) => item.id === branchId);
+    assert.ok(branch, branchId);
+    assert.deepEqual(new Set(branch.choices.map((choice) => choice.next)), new Set(["s17"]), `${branchId} should converge after acknowledging the route`);
+  }
+});
+
+
+test("result heading speaks directly to the player", async () => {
+  const rendererSource = await readFile(new URL("../public/app/ui/renderer.js", import.meta.url), "utf8");
+  assert.match(rendererSource, /resultTitlePrefix\.textContent = "你是一个"/);
+  assert.match(rendererSource, /resultTitleCore\.textContent = result\.memory\.title/);
+});

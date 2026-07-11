@@ -1,7 +1,7 @@
-node_modules/
-.wrangler/
-.dev.vars
-.DS_Store
-npm-debug.log*
 
+.DS_Store
+.dev.vars
 .update-backups/
+.wrangler/
+node_modules/
+npm-debug.log*

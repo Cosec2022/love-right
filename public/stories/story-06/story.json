@@ -8,8 +8,8 @@
     "series": "LOVE RIGHT · STORY 06",
     "title": "凌晨一点，她只给你三分钟",
     "subtitle": "你先喜欢上她的声音，后来才发现，现实中的她也恰好符合你的类型。",
-    "description": "男性视角。匿名语音、现实偶遇与身份边界，让你分清喜欢的是她，还是想象中的她。",
-    "estimatedMinutes": 10,
+    "description": "男性视角。先让一个声音成为习惯，再让现实中的她慢慢与声音重合。你会尊重未知，还是急着确认答案？",
+    "estimatedMinutes": 11,
     "coverTheme": "radio-blue",
     "audience": "male",
     "tags": [
@@ -233,28 +233,28 @@
     {
       "id": "s01",
       "slot": 1,
-      "chapter": "01｜三分钟",
+      "chapter": "01｜第一晚",
       "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "你参加一项匿名电台实验：连续七晚，凌晨一点互发三分钟语音。"
+          "text": "你参加了一项匿名电台实验：连续七晚，凌晨一点，和同一个陌生人互发不超过三分钟的语音。"
         },
         {
           "type": "paragraph",
-          "text": "第一晚，一个女人说：“不知道你是谁，所以有些话反而容易说。”她的声音恰好是你会喜欢的类型。"
+          "text": "第一晚，一个女人问：“这周有没有哪一刻，你其实很累，却没有告诉任何人？”她的声音恰好是你会喜欢的类型，但真正让你停下来听完的，是她没有催你给出漂亮答案。"
         }
       ],
       "prompt": "你会怎样回复？",
       "choices": [
         {
           "id": "a",
-          "text": "说一件真实的事，但隐去人物",
+          "text": "讲一件真实的事，只隐去人物",
           "vector": {
-            "approach": 0.48,
-            "care": 0.28,
-            "trust": 0.22,
-            "repair": 0.35
+            "approach": 0.58,
+            "trust": 0.45,
+            "expression": 0.42,
+            "idealization": 0.18
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -262,11 +262,12 @@
         },
         {
           "id": "b",
-          "text": "用轻松方式回答",
+          "text": "用一个轻松的故事回答",
           "vector": {
-            "novelty": 0.45,
-            "expression": 0.5,
-            "approach": 0.42
+            "approach": 0.32,
+            "novelty": 0.38,
+            "expression": 0.28,
+            "autonomy": 0.22
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -276,9 +277,10 @@
           "id": "c",
           "text": "先问她是否也愿意回答同一个问题",
           "vector": {
-            "care": 0.52,
-            "discernment": 0.35,
-            "trust": 0.18
+            "trust": 0.28,
+            "certainty": 0.38,
+            "expression": 0.46,
+            "discernment": 0.22
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -286,11 +288,12 @@
         },
         {
           "id": "d",
-          "text": "给一个安全答案，先观察",
+          "text": "给一个安全答案，先观察她怎么回应",
           "vector": {
-            "approach": -0.48,
-            "autonomy": 0.58,
-            "trust": -0.12
+            "autonomy": 0.48,
+            "discernment": 0.48,
+            "trust": -0.2,
+            "approach": -0.15
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -301,27 +304,28 @@
     {
       "id": "s02",
       "slot": 2,
-      "chapter": "02｜白天的她",
-      "context": "approach",
+      "chapter": "02｜第二个三分钟",
+      "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "第二天下午，你去常逛的唱片店。新店主抬头看你。"
+          "text": "第二晚，她没有继续追问昨天的事，只说：“今天选一首你不会跳过的歌。不要解释原因。”"
         },
         {
           "type": "paragraph",
-          "text": "你无法确认她与声音有关，但她的外形和气质，也恰好是你会注意的类型。"
+          "text": "三分钟快结束时，她也放了一小段自己的选择。你们没有交换名字，却第一次拥有了只属于彼此的声音。"
         }
       ],
       "prompt": "你会？",
       "choices": [
         {
           "id": "a",
-          "text": "自然聊几句，不急着建立联系",
+          "text": "选一首和真实经历有关的歌",
           "vector": {
-            "trust": 0.52,
-            "autonomy": 0.32,
-            "approach": 0.28
+            "idealization": 0.48,
+            "trust": 0.38,
+            "expression": 0.35,
+            "care": 0.18
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -329,11 +333,11 @@
         },
         {
           "id": "b",
-          "text": "想知道她是不是记得你",
+          "text": "选一首最能代表自己审美的歌",
           "vector": {
-            "validation": 0.35,
-            "reassurance": 0.28,
-            "approach": 0.32
+            "autonomy": 0.38,
+            "novelty": 0.45,
+            "idealization": 0.25
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -341,11 +345,11 @@
         },
         {
           "id": "c",
-          "text": "问她最近最想推荐哪张唱片",
+          "text": "选一首轻松的歌，不让关系太快变沉",
           "vector": {
-            "approach": 0.55,
-            "care": 0.35,
-            "expression": 0.25
+            "novelty": 0.4,
+            "approach": 0.22,
+            "reassurance": -0.18
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -353,11 +357,12 @@
         },
         {
           "id": "d",
-          "text": "把外形吸引当第一印象，不多想",
+          "text": "随便选一首，避免暴露太多",
           "vector": {
-            "idealization": -0.45,
-            "discernment": 0.52,
-            "approach": -0.12
+            "autonomy": 0.55,
+            "trust": -0.2,
+            "expression": -0.3,
+            "discernment": 0.28
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -368,23 +373,23 @@
     {
       "id": "s03",
       "slot": 3,
-      "chapter": "03｜你喜欢哪一种她",
+      "chapter": "03｜你会记住她的哪一面",
       "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "她不刻意迎合顾客，却有一种很私人的吸引力。"
+          "text": "到第三晚，你已经能从几秒停顿里认出她的情绪。她没有固定扮演某一种样子，但总有一个部分最容易吸引你的注意。"
         }
       ],
-      "prompt": "最先让你在意的是什么？",
+      "prompt": "你更容易被哪一种感觉留下？",
       "choices": [
         {
           "id": "a",
-          "text": "平静克制，让人愿意继续听",
+          "text": "平静克制，情绪很深却不轻易倾倒给别人",
           "vector": {
-            "trust": 0.52,
-            "discernment": 0.4,
-            "commitment": 0.25
+            "discernment": 0.42,
+            "trust": 0.25,
+            "autonomy": 0.3
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -395,11 +400,11 @@
         },
         {
           "id": "b",
-          "text": "明亮松弛，普通话题也有趣",
+          "text": "明亮松弛，普通的话题也能让人想继续听",
           "vector": {
-            "novelty": 0.5,
-            "idealization": 0.32,
-            "approach": 0.32
+            "novelty": 0.55,
+            "approach": 0.42,
+            "idealization": 0.25
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -410,11 +415,11 @@
         },
         {
           "id": "c",
-          "text": "温柔自然，像真的在听",
+          "text": "温柔自然，像真的在听，而不是等着说自己",
           "vector": {
-            "care": 0.5,
-            "autonomy": 0.4,
-            "trust": 0.35
+            "care": 0.52,
+            "trust": 0.42,
+            "reassurance": 0.2
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -425,11 +430,11 @@
         },
         {
           "id": "d",
-          "text": "坦率清楚，有自己的判断",
+          "text": "坦率清楚，有自己的判断，也不刻意讨好",
           "vector": {
-            "expression": 0.62,
-            "certainty": 0.52,
-            "approach": 0.38
+            "expression": 0.52,
+            "certainty": 0.38,
+            "discernment": 0.45
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -443,23 +448,27 @@
     {
       "id": "s04",
       "slot": 4,
-      "chapter": "04｜第二晚的问题",
+      "chapter": "04｜匿名让人更诚实吗",
       "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "匿名女人问：“你更容易喜欢懂你的人，还是很吸引却不容易靠近的人？”"
+          "text": "第三晚，她问：“你觉得匿名让人更真实，还是只是让人更会挑选自己想展示的部分？”"
+        },
+        {
+          "type": "paragraph",
+          "text": "这个问题不像调情，更像她真的在确认：你们现在建立的亲密，究竟有多少可以带进现实。"
         }
       ],
-      "prompt": "你会？",
+      "prompt": "你会怎样回答？",
       "choices": [
         {
           "id": "a",
-          "text": "坦白自己更需要被理解",
+          "text": "匿名能让人先放下防备，真实会慢慢出现",
           "vector": {
-            "trust": 0.6,
-            "expression": 0.48,
-            "approach": 0.32
+            "trust": 0.55,
+            "approach": 0.35,
+            "idealization": 0.22
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -467,12 +476,11 @@
         },
         {
           "id": "b",
-          "text": "只说吸引力重要，不谈经历",
+          "text": "任何表达都经过选择，匿名也不例外",
           "vector": {
-            "trust": -0.28,
-            "expression": -0.42,
-            "autonomy": 0.4,
-            "discernment": 0.35
+            "discernment": 0.62,
+            "autonomy": 0.35,
+            "idealization": -0.22
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -480,11 +488,11 @@
         },
         {
           "id": "c",
-          "text": "反问她自己的答案",
+          "text": "真实不在于说多少，而在于有没有故意误导",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.4,
-            "novelty": 0.25
+            "certainty": 0.42,
+            "trust": 0.32,
+            "expression": 0.35
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -492,11 +500,11 @@
         },
         {
           "id": "d",
-          "text": "说吸引和适合要分开判断",
+          "text": "现在还不需要判断，七天以后再看",
           "vector": {
-            "discernment": 0.68,
-            "idealization": -0.25,
-            "trust": 0.15
+            "autonomy": 0.42,
+            "certainty": -0.3,
+            "approach": 0.12
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -507,219 +515,90 @@
     {
       "id": "s05",
       "slot": 5,
-      "chapter": "05｜两个形象",
-      "context": "ambiguity",
+      "chapter": "05｜白天的她",
+      "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "白天，店主说你挑的唱片“像应该喜欢，不像会反复听”。"
+          "text": "第四天下午，你去常逛的唱片店。店里换了新店主。她抬头看你时，你很快意识到，她的外形和气质同样是你会注意的类型。"
         },
         {
           "type": "paragraph",
-          "text": "晚上，匿名女人说：“人要绕点路，才承认真正喜欢什么。”"
+          "text": "你问一张唱片值不值得买。她没有急着推销，只听了你平时常听的几张，才说：“别选你觉得自己应该喜欢的。选你会再回来听的。”"
         }
       ],
       "prompt": "你会？",
       "choices": [
         {
           "id": "a",
-          "text": "在语音里提起现实中的店主",
+          "text": "请她再推荐一张真正适合你的",
           "vector": {
-            "approach": 0.7,
-            "expression": 0.55,
-            "novelty": 0.42
+            "approach": 0.55,
+            "trust": 0.3,
+            "novelty": 0.35
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s06_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s06_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s06_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s06_direct"
-              }
-            ],
-            "default": "s06_steady"
-          }
+          "next": "s06"
         },
         {
           "id": "b",
-          "text": "先保留怀疑，看更多一致细节",
+          "text": "问她为什么觉得自己选错了方向",
           "vector": {
-            "novelty": 0.45,
-            "discernment": 0.42,
-            "approach": 0.18
+            "expression": 0.45,
+            "discernment": 0.45,
+            "certainty": 0.25
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s06_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s06_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s06_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s06_direct"
-              }
-            ],
-            "default": "s06_steady"
-          }
+          "next": "s06"
         },
         {
           "id": "c",
-          "text": "直接问匿名对象是否也在附近开店",
+          "text": "笑着接受判断，但不顺势聊私人话题",
           "vector": {
-            "certainty": 0.68,
-            "expression": 0.58,
-            "approach": 0.35
+            "approach": 0.18,
+            "autonomy": 0.38,
+            "novelty": 0.25
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s06_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s06_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s06_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s06_direct"
-              }
-            ],
-            "default": "s06_steady"
-          }
+          "next": "s06"
         },
         {
           "id": "d",
-          "text": "停止联想，不让匿名侵入现实",
+          "text": "把吸引当第一印象，买完就离开",
           "vector": {
-            "certainty": 0.55,
-            "approach": -0.58,
-            "discernment": 0.5,
-            "autonomy": 0.48
+            "autonomy": 0.52,
+            "approach": -0.25,
+            "discernment": 0.38
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s06_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s06_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s06_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s06_direct"
-              }
-            ],
-            "default": "s06_steady"
-          }
+          "next": "s06"
         }
       ]
     },
     {
-      "id": "s06_steady",
+      "id": "s06",
       "slot": 6,
-      "chapter": "06｜同一首歌",
-      "context": "ambiguity",
+      "chapter": "06｜现实中的吸引",
+      "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "第二天，店里放着你在语音里提过的歌。她见你停下，只平静问：“怎么了？”没有急着解释巧合。"
+          "text": "第二次见面时，她和你多聊了几句。你开始喜欢这个现实里有分寸、有判断、也并不刻意迎合你的女人。"
         }
       ],
       "prompt": "你会？",
       "choices": [
         {
           "id": "a",
-          "text": "问她这首歌对她意味着什么",
+          "text": "主动留下来听完她推荐的那一面",
           "vector": {
-            "approach": 0.62,
-            "trust": 0.42,
-            "idealization": 0.2
+            "approach": 0.58,
+            "trust": 0.32,
+            "idealization": 0.25
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -727,11 +606,11 @@
         },
         {
           "id": "b",
-          "text": "问她是否特意放给某个熟客",
+          "text": "问她为什么会接手这家店",
           "vector": {
-            "certainty": 0.52,
-            "expression": 0.4,
-            "validation": 0.18
+            "expression": 0.45,
+            "care": 0.25,
+            "discernment": 0.22
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -739,11 +618,11 @@
         },
         {
           "id": "c",
-          "text": "开玩笑说今天的随机很懂你",
+          "text": "享受这次交流，但不急着制造下一次",
           "vector": {
-            "novelty": 0.45,
-            "expression": 0.55,
-            "approach": 0.35
+            "autonomy": 0.42,
+            "approach": 0.18,
+            "trust": 0.18
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -751,232 +630,108 @@
         },
         {
           "id": "d",
-          "text": "听完就走，不用巧合证明什么",
+          "text": "提醒自己，声音和现实中的吸引是两件事",
           "vector": {
-            "autonomy": 0.58,
-            "approach": -0.18,
-            "discernment": 0.35
+            "discernment": 0.55,
+            "idealization": -0.25,
+            "autonomy": 0.35
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s07"
-        }
-      ]
-    },
-    {
-      "id": "s06_witty",
-      "slot": 6,
-      "chapter": "06｜同一首歌",
-      "context": "ambiguity",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "店里放着那首歌。她看见你的表情，笑道：“别担心，我还没厉害到能读顾客脑子。”"
         }
       ],
-      "prompt": "你会？",
-      "choices": [
+      "variants": [
         {
-          "id": "a",
-          "text": "问她这首歌对她意味着什么",
-          "vector": {
-            "approach": 0.62,
-            "trust": 0.42,
-            "idealization": 0.2
+          "when": {
+            "flag": "appeal",
+            "equals": "steady"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s07"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "第二次见面时，她正在整理新到的唱片。她没有主动热络，只在你停在同一排太久时，把其中一张递过来：“这张可能更接近你真正会听的。”"
+            },
+            {
+              "type": "paragraph",
+              "text": "她安静时也有很强的存在感。你不需要她刻意靠近，注意力已经会落到她身上。"
+            }
+          ]
         },
         {
-          "id": "b",
-          "text": "问她是否特意放给某个熟客",
-          "vector": {
-            "certainty": 0.52,
-            "expression": 0.4,
-            "validation": 0.18
+          "when": {
+            "flag": "appeal",
+            "equals": "witty"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s07"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "第二次见面时，她看见你又站在同一排，笑了一下：“你和这几张唱片的关系，比很多恋爱稳定。”"
+            },
+            {
+              "type": "paragraph",
+              "text": "她的轻松不是讨好，而是总能让一段普通对话突然有了继续下去的理由。"
+            }
+          ]
         },
         {
-          "id": "c",
-          "text": "开玩笑说今天的随机很懂你",
-          "vector": {
-            "novelty": 0.45,
-            "expression": 0.55,
-            "approach": 0.35
+          "when": {
+            "flag": "appeal",
+            "equals": "gentle"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s07"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "第二次见面时，她记得你上次没有买下那张唱片，只问：“回去以后还在想它吗？”"
+            },
+            {
+              "type": "paragraph",
+              "text": "她没有把记得细节写成体贴表演，只给你足够空间决定要不要继续聊。"
+            }
+          ]
         },
         {
-          "id": "d",
-          "text": "听完就走，不用巧合证明什么",
-          "vector": {
-            "autonomy": 0.58,
-            "approach": -0.18,
-            "discernment": 0.35
+          "when": {
+            "flag": "appeal",
+            "equals": "direct"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s07"
-        }
-      ]
-    },
-    {
-      "id": "s06_gentle",
-      "slot": 6,
-      "chapter": "06｜同一首歌",
-      "context": "ambiguity",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "店里放着那首歌。她没有追问你的反应，只把音量调低一点，让你自己决定要不要说。"
-        }
-      ],
-      "prompt": "你会？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "问她这首歌对她意味着什么",
-          "vector": {
-            "approach": 0.62,
-            "trust": 0.42,
-            "idealization": 0.2
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s07"
-        },
-        {
-          "id": "b",
-          "text": "问她是否特意放给某个熟客",
-          "vector": {
-            "certainty": 0.52,
-            "expression": 0.4,
-            "validation": 0.18
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s07"
-        },
-        {
-          "id": "c",
-          "text": "开玩笑说今天的随机很懂你",
-          "vector": {
-            "novelty": 0.45,
-            "expression": 0.55,
-            "approach": 0.35
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s07"
-        },
-        {
-          "id": "d",
-          "text": "听完就走，不用巧合证明什么",
-          "vector": {
-            "autonomy": 0.58,
-            "approach": -0.18,
-            "discernment": 0.35
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s07"
-        }
-      ]
-    },
-    {
-      "id": "s06_direct",
-      "slot": 6,
-      "chapter": "06｜同一首歌",
-      "context": "ambiguity",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "店里放着那首歌。她看着你：“你似乎认识它。是因为某个人吗？”问题直接，却没有侵犯感。"
-        }
-      ],
-      "prompt": "你会？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "问她这首歌对她意味着什么",
-          "vector": {
-            "approach": 0.62,
-            "trust": 0.42,
-            "idealization": 0.2
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s07"
-        },
-        {
-          "id": "b",
-          "text": "问她是否特意放给某个熟客",
-          "vector": {
-            "certainty": 0.52,
-            "expression": 0.4,
-            "validation": 0.18
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s07"
-        },
-        {
-          "id": "c",
-          "text": "开玩笑说今天的随机很懂你",
-          "vector": {
-            "novelty": 0.45,
-            "expression": 0.55,
-            "approach": 0.35
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s07"
-        },
-        {
-          "id": "d",
-          "text": "听完就走，不用巧合证明什么",
-          "vector": {
-            "autonomy": 0.58,
-            "approach": -0.18,
-            "discernment": 0.35
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s07"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "第二次见面时，她看见你又在犹豫，直接说：“你不是没决定。你只是不想承认自己更喜欢哪一张。”"
+            },
+            {
+              "type": "paragraph",
+              "text": "她的判断有一点锋利，却没有让你觉得被冒犯。反而像有人终于把你绕开的部分说了出来。"
+            }
+          ]
         }
       ]
     },
     {
       "id": "s07",
       "slot": 7,
-      "chapter": "07｜你可以查到她",
-      "context": "intimacy",
+      "chapter": "07｜第一处重合",
+      "context": "ambiguity",
       "content": [
         {
           "type": "paragraph",
-          "text": "参与者都来自附近街区，唱片店也总在凌晨一点前关门。"
+          "text": "第四晚，匿名女人提起你们第二晚交换的歌。她说：“别选你觉得自己应该喜欢的。选你会再回来听的。”"
         },
         {
           "type": "paragraph",
-          "text": "只要搜她的账号或试探一句，答案可能就出来。"
+          "text": "这句话和唱片店里的表达几乎一样。第一次，你认真怀疑：声音里的她，也许就在现实里。"
         }
       ],
-      "prompt": "你会？",
+      "prompt": "你会怎样处理这个怀疑？",
       "choices": [
         {
           "id": "a",
-          "text": "遵守规则，不调查",
+          "text": "遵守规则，不调查，也不试探",
           "vector": {
-            "autonomy": 0.52,
-            "trust": 0.42,
-            "discernment": 0.35,
-            "idealization": 0.18
+            "autonomy": 0.55,
+            "trust": 0.4,
+            "discernment": 0.3
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -984,15 +739,15 @@
           "setFlags": {
             "privacy": "respect"
           },
-          "aftermath": "你把身份选择权留给了她。未知仍在，但这份克制本身让匿名关系更安全。"
+          "aftermath": "你没有把怀疑变成调查。答案仍然悬着，但她的身份选择权被完整保留，这让接下来的三分钟没有立刻失去安全感。"
         },
         {
           "id": "b",
-          "text": "只看公开信息，确认不是单方面投射",
+          "text": "只看公开信息，确认她是否参加过活动",
           "vector": {
-            "validation": 0.45,
-            "reassurance": 0.35,
-            "certainty": 0.28
+            "certainty": 0.48,
+            "reassurance": 0.32,
+            "discernment": 0.28
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -1000,15 +755,15 @@
           "setFlags": {
             "privacy": "research"
           },
-          "aftermath": "你只查了公开信息，告诉自己这是确认现实，不是闯入隐私。可你已经比她知道得更多，关系开始出现不对称。"
+          "aftermath": "你只查看了公开资料，没有联系任何人。可从这一刻起，你比她多知道了一点，匿名关系悄悄出现了信息上的不对称。"
         },
         {
           "id": "c",
-          "text": "用唱片店细节试探",
+          "text": "在下一段语音里放入唱片店的细节试探",
           "vector": {
-            "novelty": 0.48,
-            "expression": 0.45,
-            "idealization": 0.32
+            "certainty": 0.52,
+            "expression": 0.42,
+            "novelty": 0.35
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -1016,15 +771,15 @@
           "setFlags": {
             "privacy": "test"
           },
-          "aftermath": "你用细节试探她。答案或许会更近，信任却从这一刻多了一道细小的裂缝。"
+          "aftermath": "你没有直接问，而是放进一个只有唱片店里的人才会懂的细节。答案可能更近了，彼此是否还在平等地选择却开始变得模糊。"
         },
         {
           "id": "d",
-          "text": "白天直接问，若越界就结束匿名",
+          "text": "白天直接问她是否参加了匿名计划",
           "vector": {
-            "commitment": -0.28,
-            "trust": -0.18,
-            "certainty": 0.22
+            "expression": 0.62,
+            "certainty": 0.58,
+            "conflict": 0.22
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -1032,108 +787,105 @@
           "setFlags": {
             "privacy": "ask"
           },
-          "aftermath": "你直接把怀疑带到白天。坦率减少了猜测，也可能让她觉得匿名规则已经被提前结束。"
+          "aftermath": "你把怀疑带到了现实里。猜测少了一层，但她也必须提前面对一个原本应该留到第七晚才出现的问题。"
         }
       ]
     },
     {
       "id": "s08",
       "slot": 8,
-      "chapter": "08｜她拒绝帮助",
-      "context": "jealousy",
+      "chapter": "08｜她看出了你的注意",
+      "context": "ambiguity",
       "content": [
         {
           "type": "paragraph",
-          "text": "店里音箱坏了，你提出帮忙。她说：“谢谢，我已经约了维修。”"
+          "text": "第二天，你再次走进唱片店。她说话时，你下意识在辨认声音里的停顿。"
         },
         {
           "type": "paragraph",
-          "text": "她并不需要你通过解决问题证明价值。"
+          "text": "她放下手里的唱片，问：“你今天怎么像在拿我和另一个人比较？”她没有生气，只是在等一个诚实答案。"
         }
       ],
       "prompt": "你会？",
       "choices": [
         {
           "id": "a",
-          "text": "坦白自己有一点被拒绝感",
+          "text": "承认自己认识了一个声音很像她的人",
           "vector": {
-            "expression": 0.48,
-            "certainty": 0.38,
-            "jealousy": 0.22,
-            "discernment": 0.3
+            "expression": 0.62,
+            "trust": 0.38,
+            "certainty": 0.35
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s09",
-          "aftermath": "你承认自己有被拒绝的感觉，没有把它包装成她不近人情。接下来的谈话因此更真实。"
+          "aftermath": "你承认了怀疑，却没有逼她马上确认。现实中的对话因此多了一点紧张，也多了一点双方都能看见的诚实。"
         },
         {
           "id": "b",
-          "text": "接受拒绝，先观察她的边界",
+          "text": "说只是觉得她的声音很熟悉",
           "vector": {
-            "discernment": 0.72,
-            "jealousy": 0.25,
-            "trust": 0.08
+            "approach": 0.25,
+            "discernment": 0.35,
+            "expression": 0.15
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s09",
-          "aftermath": "你尊重她的拒绝，也开始重新理解：不需要帮助，并不等于不愿意靠近。"
+          "aftermath": "你只说到“熟悉”为止。她没有追问，但你们都知道这不是完整答案，未说出口的部分开始留在两次见面之间。"
         },
         {
           "id": "c",
-          "text": "觉得被拒绝，减少主动",
+          "text": "用玩笑带过，不让现实过早侵入匿名",
           "vector": {
-            "approach": -0.45,
-            "abandonment": 0.38,
-            "jealousy": 0.52,
-            "expression": -0.35
+            "novelty": 0.38,
+            "autonomy": 0.38,
+            "expression": -0.18
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s09",
-          "aftermath": "你减少了主动。她只看见距离变远，并不知道那背后其实是你被拒绝后的失落。"
+          "aftermath": "你用玩笑把问题推开。气氛没有变坏，可她也更难判断，你是在尊重规则，还是不愿承担确认之后的现实。"
         },
         {
           "id": "d",
-          "text": "认为她能处理，轻松放下",
+          "text": "否认自己在比较，结束这段话题",
           "vector": {
-            "trust": 0.58,
-            "jealousy": -0.55,
-            "reassurance": -0.25
+            "autonomy": 0.55,
+            "trust": -0.28,
+            "approach": -0.32
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s09",
-          "aftermath": "你轻松放下，没有把“能帮上忙”当成亲密的证明。关系也没有因为这次拒绝而降温。"
+          "aftermath": "你否认了那一瞬间的注意。她没有拆穿，只把话题收回到唱片上；关系仍在继续，却少了一次可以自然靠近的机会。"
         }
       ]
     },
     {
       "id": "s09",
       "slot": 9,
-      "chapter": "09｜凌晨的她",
-      "context": "jealousy",
+      "chapter": "09｜如果已经见过",
+      "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "当晚匿名语音里，她说：“有人好意帮我。我拒绝后，他像被我否定了。”"
+          "text": "第五晚，她没有提唱片店，只问：“如果你发现，我们在现实里可能已经见过，你希望我立刻告诉你吗？”"
         },
         {
           "type": "paragraph",
-          "text": "你几乎可以确认她是谁。"
+          "text": "她的语气不像套话。你意识到，她也许同样已经开始怀疑你的身份。"
         }
       ],
-      "prompt": "你会？",
+      "prompt": "你会怎样回答？",
       "choices": [
         {
           "id": "a",
-          "text": "承认自己可能把被需要当亲近",
+          "text": "希望她说，但不会因为等到第七晚而责怪她",
           "vector": {
-            "expression": 0.7,
-            "trust": 0.35,
-            "repair": 0.4,
-            "jealousy": 0.2
+            "certainty": 0.5,
+            "trust": 0.45,
+            "repair": 0.22
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -1141,11 +893,11 @@
         },
         {
           "id": "b",
-          "text": "只讲道理，不承认自己也在意",
+          "text": "继续遵守规则，直到双方都能同时选择",
           "vector": {
-            "expression": -0.5,
-            "autonomy": 0.42,
-            "abandonment": 0.25
+            "autonomy": 0.52,
+            "trust": 0.38,
+            "certainty": -0.22
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -1153,11 +905,11 @@
         },
         {
           "id": "c",
-          "text": "直接试探她是不是店主",
+          "text": "最在意她有没有利用匿名信息影响现实",
           "vector": {
-            "certainty": 0.7,
-            "expression": 0.55,
-            "validation": 0.28
+            "discernment": 0.58,
+            "certainty": 0.42,
+            "trust": -0.15
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -1165,12 +917,11 @@
         },
         {
           "id": "d",
-          "text": "回避身份，保持距离",
+          "text": "承认自己既期待答案，也有一点害怕落差",
           "vector": {
-            "autonomy": 0.52,
-            "jealousy": -0.1,
-            "approach": -0.22,
-            "trust": -0.1
+            "expression": 0.55,
+            "abandonment": 0.35,
+            "idealization": 0.28
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -1181,358 +932,219 @@
     {
       "id": "s10",
       "slot": 10,
-      "chapter": "10｜一个男人",
-      "context": "ambiguity",
+      "chapter": "10｜未经剪辑的她",
+      "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "你看见一个男人熟练走进柜台后，还替她带了晚餐。"
+          "text": "那天下午店里很安静。她告诉你，接手唱片店并不是浪漫决定：上一份工作让她长期失眠，回到这里以后收入更少，却终于能辨认自己真正喜欢什么。"
         },
         {
           "type": "paragraph",
-          "text": "当晚，她问：“还没开始关系时，你会因她身边有别人而介意吗？”"
+          "text": "这是你第一次认识到现实中的她，不是作为匿名声音的影子，而是一个有选择、有代价，也有普通疲惫的人。"
         }
       ],
-      "prompt": "你会？",
+      "prompt": "你更接近哪一种反应？",
       "choices": [
         {
           "id": "a",
-          "text": "承认介意，但不要求解释",
+          "text": "继续问下去，想认识她现实中的生活",
           "vector": {
-            "approach": 0.7,
-            "expression": 0.62,
-            "trust": 0.48,
-            "certainty": 0.45
+            "approach": 0.58,
+            "trust": 0.42,
+            "care": 0.28
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s11",
-          "aftermath": "你承认介意，却没有要求一个尚未确定关系的人交代。嫉妒被看见了，边界也还在。"
+          "aftermath": "你没有再把她当作声音身份的谜底，而是开始认真认识现实里的选择和代价。吸引因此从猜测变成了具体的人。"
         },
         {
           "id": "b",
-          "text": "表面不问，心里开始担心",
+          "text": "告诉她，能承认自己真正想要什么很难",
           "vector": {
-            "discernment": 0.58,
-            "autonomy": 0.45,
-            "certainty": 0.35,
-            "approach": 0.18
+            "expression": 0.45,
+            "care": 0.42,
+            "repair": 0.18
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s11",
-          "aftermath": "你没有问，担心却开始在沉默里长大。之后她的每一句话，都更容易被你拿来猜测。"
+          "aftermath": "你回应的是她的选择，而不是急着把谈话带回身份谜题。她明显放松了一点，也开始相信你并非只想得到答案。"
         },
         {
           "id": "c",
-          "text": "直接问她是否喜欢别人",
+          "text": "仍然留意她和匿名声音是否一致",
           "vector": {
-            "certainty": 0.62,
-            "commitment": 0.28,
-            "expression": 0.45
+            "discernment": 0.55,
+            "certainty": 0.32,
+            "idealization": 0.18
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s11",
-          "aftermath": "你直接问她是否喜欢别人。答案会很快出现，但她也会感受到你对关系位置的急切。"
+          "aftermath": "你愿意听她说，也仍在默默核对两个形象。现实里的她因此被看见了一部分，却还没有完全摆脱“是不是同一个人”的比较。"
         },
         {
           "id": "d",
-          "text": "没确认关系就没立场，正常看待",
+          "text": "不继续深入，避免对现实中的她投入过快",
           "vector": {
-            "approach": -0.35,
             "autonomy": 0.52,
-            "reassurance": 0.25,
-            "commitment": -0.25
+            "approach": -0.28,
+            "trust": 0.08
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s11",
-          "aftermath": "你没有把介意升级成权利。关系维持原样，只是你也更清楚自己已经不是完全无所谓。"
+          "aftermath": "你把谈话停在一个舒服的位置。她尊重了距离，但现实中的关系也暂时没有获得更多独立于匿名之外的内容。"
+        }
+      ],
+      "variants": [
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "steady"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "她讲这些时很平静，不用脆弱换取你的靠近。那种稳定反而让你更想知道，她没有录进三分钟里的生活是什么样。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "witty"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "她讲到最狼狈的地方时仍能笑自己一句，但没有用玩笑躲开真正难回答的问题。你第一次看见她的轻松和认真可以同时存在。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "gentle"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "她没有把自己的经历讲得很重，反而先问你是不是赶时间。那种不占据别人的温柔，让现实中的吸引变得更具体。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "appeal",
+            "equals": "direct"
+          },
+          "appendContent": [
+            {
+              "type": "paragraph",
+              "text": "她没有把选择包装成理想故事，只说自己试过别的生活，最后承认这里才是她真正想留下的地方。你欣赏这种不回避代价的清楚。"
+            }
+          ]
         }
       ]
     },
     {
       "id": "s11",
       "slot": 11,
-      "chapter": "11｜两个侧面",
-      "context": "commitment",
+      "chapter": "11｜她也认出了你",
+      "context": "ambiguity",
       "content": [
         {
           "type": "paragraph",
-          "text": "语音里的她会谈失败和害怕；现实中的她有距离、会拒绝，也不迎合你。"
+          "text": "第六晚，语音开始后，她沉默了几秒。"
         },
         {
           "type": "paragraph",
-          "text": "你逐渐意识到，问题不是两个女人，而是能否同时接受同一个人的两个侧面。"
-        }
-      ],
-      "prompt": "如果现实中的她没想象中温柔，你会？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "想继续认识现实中完整的她",
-          "vector": {
-            "approach": 0.68,
-            "care": 0.4,
-            "commitment": 0.35,
-            "expression": 0.25
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s12_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s12_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s12_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s12_direct"
-              }
-            ],
-            "default": "s12_steady"
-          }
+          "text": "“我可能已经知道你是谁。”她说，“不是因为调查。是你讲过的一件小事，在白天又出现了一次。”"
         },
-        {
-          "id": "b",
-          "text": "愿意重新认识，但不预设恋爱",
-          "vector": {
-            "approach": 0.42,
-            "autonomy": 0.35,
-            "idealization": -0.08
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s12_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s12_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s12_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s12_direct"
-              }
-            ],
-            "default": "s12_steady"
-          }
-        },
-        {
-          "id": "c",
-          "text": "先问她为什么现实中保持距离",
-          "vector": {
-            "care": 0.42,
-            "expression": 0.35,
-            "trust": 0.35
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s12_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s12_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s12_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s12_direct"
-              }
-            ],
-            "default": "s12_steady"
-          }
-        },
-        {
-          "id": "d",
-          "text": "先观察自己是不是只爱想象",
-          "vector": {
-            "approach": -0.35,
-            "discernment": 0.58,
-            "validation": 0.35,
-            "reassurance": 0.2
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s12_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s12_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s12_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s12_direct"
-              }
-            ],
-            "default": "s12_steady"
-          }
-        }
-      ]
-    },
-    {
-      "id": "s12_steady",
-      "slot": 12,
-      "chapter": "12｜她先认出了你",
-      "context": "intimacy",
-      "content": [
         {
           "type": "paragraph",
-          "text": "第六晚，她平静地问：“如果我已经认出你，却仍遵守七天规则，这算隐瞒吗？”"
+          "text": "她没有说出名字，只问你是否还愿意把最后两晚继续完成。"
         }
       ],
       "prompt": "你会？",
       "choices": [
         {
           "id": "a",
-          "text": "希望她马上说清",
+          "text": "继续，但希望现在就说明彼此知道到什么程度",
           "vector": {
-            "trust": 0.65,
-            "expression": 0.4,
-            "approach": 0.35
+            "certainty": 0.55,
+            "expression": 0.5,
+            "trust": 0.28
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": "s13"
+          "next": "s12"
         },
         {
           "id": "b",
-          "text": "理解她守规则，也愿意继续",
+          "text": "继续按规则走，到第七晚再揭晓",
           "vector": {
-            "care": 0.58,
-            "repair": 0.4,
-            "commitment": 0.25
+            "autonomy": 0.45,
+            "trust": 0.45,
+            "certainty": -0.2
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": "s13"
+          "next": "s12"
         },
         {
           "id": "c",
-          "text": "直接问她有没有利用信息",
+          "text": "先问她有没有改变白天对你的态度",
           "vector": {
-            "expression": 0.72,
-            "trust": 0.48,
-            "reassurance": 0.18
+            "discernment": 0.48,
+            "trust": 0.22,
+            "validation": 0.25
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": "s13"
+          "next": "s12"
         },
         {
           "id": "d",
-          "text": "需要时间判断这是否影响信任",
+          "text": "暂停一晚，先整理匿名和现实混在一起的感觉",
           "vector": {
-            "abandonment": 0.32,
-            "discernment": 0.48,
-            "reassurance": 0.35,
-            "trust": -0.1
+            "autonomy": 0.58,
+            "approach": -0.25,
+            "repair": 0.18
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": "s13"
+          "next": "s12"
         }
       ]
     },
     {
-      "id": "s12_witty",
+      "id": "s12",
       "slot": 12,
-      "chapter": "12｜她先认出了你",
-      "context": "intimacy",
+      "chapter": "12｜信息终于对等",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "她先笑着说“匿名实验最尴尬的情况，大概是白天已经见过”，随后认真问你是否介意。"
+          "text": "她明确告诉你：她已经认出了一部分，也知道你可能同样认出了她。"
+        },
+        {
+          "type": "paragraph",
+          "text": "真正的问题不再是“她是不是”，而是你们此前各自怎样处理了这份怀疑。"
         }
       ],
       "prompt": "你会？",
       "choices": [
         {
           "id": "a",
-          "text": "希望她马上说清",
+          "text": "如实说明自己知道和做过什么",
           "vector": {
-            "trust": 0.65,
-            "expression": 0.4,
-            "approach": 0.35
+            "expression": 0.62,
+            "trust": 0.38,
+            "repair": 0.45
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -1540,11 +1152,11 @@
         },
         {
           "id": "b",
-          "text": "理解她守规则，也愿意继续",
+          "text": "承认好奇，但也说明自己为什么害怕落差",
           "vector": {
-            "care": 0.58,
-            "repair": 0.4,
-            "commitment": 0.25
+            "expression": 0.48,
+            "abandonment": 0.32,
+            "repair": 0.38
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -1552,11 +1164,11 @@
         },
         {
           "id": "c",
-          "text": "直接问她有没有利用信息",
+          "text": "若曾越界就道歉，并把是否继续交给她",
           "vector": {
-            "expression": 0.72,
-            "trust": 0.48,
-            "reassurance": 0.18
+            "repair": 0.62,
+            "autonomy": 0.42,
+            "trust": 0.25
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -1564,373 +1176,191 @@
         },
         {
           "id": "d",
-          "text": "需要时间判断这是否影响信任",
+          "text": "认为双方都在隐瞒，不需要单独追究自己",
           "vector": {
-            "abandonment": 0.32,
-            "discernment": 0.48,
-            "reassurance": 0.35,
-            "trust": -0.1
+            "conflict": 0.42,
+            "trust": -0.32,
+            "repair": -0.25
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s13"
-        }
-      ]
-    },
-    {
-      "id": "s12_gentle",
-      "slot": 12,
-      "chapter": "12｜她先认出了你",
-      "context": "intimacy",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "她说：“我可能已经知道你是谁。但我不想在你没准备好时，把安全的匿名空间拿走。”"
         }
       ],
-      "prompt": "你会？",
-      "choices": [
+      "variants": [
         {
-          "id": "a",
-          "text": "希望她马上说清",
-          "vector": {
-            "trust": 0.65,
-            "expression": 0.4,
-            "approach": 0.35
+          "when": {
+            "flag": "privacy",
+            "equals": "respect"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s13"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "她说：“我注意到你没有查，也没有拿现实里的细节试我。谢谢你把决定留到了现在。”"
+            },
+            {
+              "type": "paragraph",
+              "text": "身份仍未完全揭开，但你们第一次明确承认：彼此已经在现实中认出了某些部分。"
+            }
+          ]
         },
         {
-          "id": "b",
-          "text": "理解她守规则，也愿意继续",
-          "vector": {
-            "care": 0.58,
-            "repair": 0.4,
-            "commitment": 0.25
+          "when": {
+            "flag": "privacy",
+            "equals": "research"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s13"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "她说：“我看到公开主页多了一个很像你的访问记录。我能理解你好奇，但希望你告诉我，你到底确认到了什么。”"
+            },
+            {
+              "type": "paragraph",
+              "text": "她没有指责，只要求关系重新回到信息对等的位置。"
+            }
+          ]
         },
         {
-          "id": "c",
-          "text": "直接问她有没有利用信息",
-          "vector": {
-            "expression": 0.72,
-            "trust": 0.48,
-            "reassurance": 0.18
+          "when": {
+            "flag": "privacy",
+            "equals": "test"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s13"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "她说：“你在语音里放过一个只有唱片店里才会出现的细节。我不喜欢被测试，但我想先听你为什么这样做。”"
+            },
+            {
+              "type": "paragraph",
+              "text": "她愿意继续，不代表那次试探没有留下影响。"
+            }
+          ]
         },
         {
-          "id": "d",
-          "text": "需要时间判断这是否影响信任",
-          "vector": {
-            "abandonment": 0.32,
-            "discernment": 0.48,
-            "reassurance": 0.35,
-            "trust": -0.1
+          "when": {
+            "flag": "privacy",
+            "equals": "ask"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s13"
-        }
-      ]
-    },
-    {
-      "id": "s12_direct",
-      "slot": 12,
-      "chapter": "12｜她先认出了你",
-      "context": "intimacy",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "她直接说：“我认出你了。我没有利用信息影响白天，但你有权知道。”"
-        }
-      ],
-      "prompt": "你会？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "希望她马上说清",
-          "vector": {
-            "trust": 0.65,
-            "expression": 0.4,
-            "approach": 0.35
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s13"
-        },
-        {
-          "id": "b",
-          "text": "理解她守规则，也愿意继续",
-          "vector": {
-            "care": 0.58,
-            "repair": 0.4,
-            "commitment": 0.25
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s13"
-        },
-        {
-          "id": "c",
-          "text": "直接问她有没有利用信息",
-          "vector": {
-            "expression": 0.72,
-            "trust": 0.48,
-            "reassurance": 0.18
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s13"
-        },
-        {
-          "id": "d",
-          "text": "需要时间判断这是否影响信任",
-          "vector": {
-            "abandonment": 0.32,
-            "discernment": 0.48,
-            "reassurance": 0.35,
-            "trust": -0.1
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s13"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "她说：“白天你问我的时候，我就知道你已经怀疑了。没有立刻承认，是因为我也需要决定，要不要让匿名里的自己进入现实。”"
+            },
+            {
+              "type": "paragraph",
+              "text": "你们没有再假装完全不知道，只剩下如何把这件事说清。"
+            }
+          ]
         }
       ]
     },
     {
       "id": "s13",
       "slot": 13,
-      "chapter": "13｜她不喜欢被测试",
-      "context": "commitment",
+      "chapter": "13｜最后一晚还要不要继续",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "第七晚前，她说：“我有件事明天要告诉你。”"
+          "text": "她听完后没有立刻给结论，只问：“明晚还要继续吗？”"
         },
         {
           "type": "paragraph",
-          "text": "你知道，你之前对身份边界的选择会决定她接下来怎么说。"
+          "text": "这不是用退出惩罚你。她只是把最后一晚重新变成双方都能选择的事。"
         }
       ],
       "prompt": "你会？",
       "choices": [
         {
           "id": "a",
-          "text": "如实说自己知道多少，也尊重她决定",
+          "text": "继续，并约定最后一晚不再互相试探",
           "vector": {
-            "autonomy": 0.55,
-            "commitment": 0.55,
-            "trust": 0.48,
-            "certainty": 0.35
+            "trust": 0.52,
+            "repair": 0.55,
+            "certainty": 0.3
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "respect"
-                },
-                "to": "s14_respect"
-              },
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "research"
-                },
-                "to": "s14_research"
-              },
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "test"
-                },
-                "to": "s14_test"
-              },
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "ask"
-                },
-                "to": "s14_ask"
-              }
-            ],
-            "default": "s14_respect"
-          },
-          "aftermath": "你把自己知道的范围全部说清，也把是否继续的选择交还给她。信任受过影响，却仍有修复的入口。"
+          "next": "s14",
+          "aftermath": "你们决定继续最后一晚，也明确停止试探。关系没有因为确认身份而自动恢复，却获得了一次真正修复和重新选择的机会。",
+          "setFlags": {
+            "finalFrame": "open"
+          }
         },
         {
           "id": "b",
-          "text": "希望她先明确是否还愿意继续",
+          "text": "继续，但只谈真实生活，不讨论关系结果",
           "vector": {
-            "validation": 0.58,
-            "reassurance": 0.45,
-            "certainty": 0.55
+            "autonomy": 0.45,
+            "trust": 0.32,
+            "discernment": 0.35
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "respect"
-                },
-                "to": "s14_respect"
-              },
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "research"
-                },
-                "to": "s14_research"
-              },
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "test"
-                },
-                "to": "s14_test"
-              },
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "ask"
-                },
-                "to": "s14_ask"
-              }
-            ],
-            "default": "s14_respect"
-          },
-          "aftermath": "你需要她先确认还愿不愿意继续。问题被说清了，但决定的压力也落到了她身上。"
+          "next": "s14",
+          "aftermath": "你愿意继续，却主动降低情绪浓度。最后一晚不再负责制造答案，只负责让彼此看见匿名之外更普通的部分。",
+          "setFlags": {
+            "finalFrame": "reality"
+          }
         },
         {
           "id": "c",
-          "text": "道歉后退出，避免继续越界",
+          "text": "不再延长匿名亲密，只完成一次现实见面前的说明",
           "vector": {
-            "commitment": -0.48,
-            "discernment": 0.48,
-            "autonomy": 0.5
+            "approach": 0.3,
+            "autonomy": 0.5,
+            "certainty": 0.42
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "respect"
-                },
-                "to": "s14_respect"
-              },
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "research"
-                },
-                "to": "s14_research"
-              },
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "test"
-                },
-                "to": "s14_test"
-              },
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "ask"
-                },
-                "to": "s14_ask"
-              }
-            ],
-            "default": "s14_respect"
-          },
-          "aftermath": "你道歉后退出，没有要求她立刻原谅。关系因此停下，却没有继续越过她的边界。"
+          "next": "s14",
+          "aftermath": "你不想再靠匿名环境增加情绪浓度，但愿意完成一次清楚的交代。最后一晚从暧昧继续，变成了现实见面前的准备。",
+          "setFlags": {
+            "finalFrame": "practical"
+          }
         },
         {
           "id": "d",
-          "text": "等规则结束再说，不先定义对错",
+          "text": "停止继续靠近，只保留最后一次告别和身份选择",
           "vector": {
-            "certainty": -0.55,
-            "commitment": -0.2,
-            "autonomy": 0.35,
-            "trust": 0.25
+            "approach": -0.58,
+            "commitment": -0.4,
+            "autonomy": 0.55
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "respect"
-                },
-                "to": "s14_respect"
-              },
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "research"
-                },
-                "to": "s14_research"
-              },
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "test"
-                },
-                "to": "s14_test"
-              },
-              {
-                "when": {
-                  "flag": "privacy",
-                  "equals": "ask"
-                },
-                "to": "s14_ask"
-              }
-            ],
-            "default": "s14_respect"
-          },
-          "aftermath": "你选择等规则结束再谈。冲突暂时被按住，彼此的猜疑也没有真正消失。"
+          "next": "s14",
+          "aftermath": "你停止继续靠近，却没有让故事在一句突然的消失里结束。最后一晚只剩告别，以及是否让彼此知道真实身份的最终选择。",
+          "setFlags": {
+            "finalFrame": "farewell"
+          }
         }
       ]
     },
     {
-      "id": "s14_respect",
+      "id": "s14",
       "slot": 14,
-      "chapter": "14｜边界揭晓",
-      "context": "commitment",
+      "chapter": "14｜最后一段不必漂亮",
+      "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "她说：“谢谢你把选择留给我。”你们约定第七晚一起决定是否揭晓。"
+          "text": "第七晚，她提出最后一个题目：“无论明天会不会见面，留一句没有准备好、也不够体面的话吧。”"
         },
         {
           "type": "paragraph",
-          "text": "她没有替你决定要不要继续。"
+          "text": "她先说了自己的答案：现实里的她会忙、会不耐烦，也不会每一次都给出恰到好处的回应。"
         }
       ],
-      "prompt": "你会？",
+      "prompt": "你更愿意留下哪一句？",
       "choices": [
         {
           "id": "a",
-          "text": "承认动机，并讨论怎么修复",
+          "text": "自己在意时会想得很多，却常常晚一点才说",
           "vector": {
-            "expression": 0.68,
-            "repair": 0.52,
-            "commitment": 0.58,
-            "autonomy": 0.38
+            "expression": 0.35,
+            "reassurance": 0.42,
+            "abandonment": 0.35
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -1938,12 +1368,11 @@
         },
         {
           "id": "b",
-          "text": "接受她不舒服，但不说自己也受影响",
+          "text": "自己习惯通过解决问题证明价值",
           "vector": {
-            "expression": -0.58,
-            "care": 0.35,
-            "abandonment": 0.28,
-            "autonomy": 0.22
+            "care": 0.48,
+            "validation": 0.32,
+            "discernment": 0.22
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -1951,11 +1380,11 @@
         },
         {
           "id": "c",
-          "text": "问清继续联系的边界",
+          "text": "自己越心动，越容易先观察对方是否可靠",
           "vector": {
-            "certainty": 0.72,
-            "reassurance": 0.42,
-            "commitment": 0.48
+            "discernment": 0.55,
+            "approach": 0.18,
+            "trust": -0.12
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -1963,1089 +1392,444 @@
         },
         {
           "id": "d",
-          "text": "认为双方都有责任，不必追究",
+          "text": "自己并不确定是否能把匿名里的亲密带进现实",
           "vector": {
-            "autonomy": -0.45,
-            "care": 0.45,
-            "discernment": -0.22,
-            "commitment": 0.35
+            "autonomy": 0.5,
+            "idealization": 0.32,
+            "commitment": -0.2
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s15"
-        }
-      ]
-    },
-    {
-      "id": "s14_research",
-      "slot": 14,
-      "chapter": "14｜边界揭晓",
-      "context": "commitment",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "她说：“看公开信息不算伤害，但我希望你知道，好奇也会改变关系里的力量。”"
-        },
-        {
-          "type": "paragraph",
-          "text": "她没有替你决定要不要继续。"
         }
       ],
-      "prompt": "你会？",
-      "choices": [
+      "variants": [
         {
-          "id": "a",
-          "text": "承认动机，并讨论怎么修复",
-          "vector": {
-            "expression": 0.68,
-            "repair": 0.52,
-            "commitment": 0.58,
-            "autonomy": 0.38
+          "when": {
+            "flag": "finalFrame",
+            "equals": "reality"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s15"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "你们约定不再讨论关系结果，只为可能的现实见面各留一句没有包装过的话。"
+            },
+            {
+              "type": "paragraph",
+              "text": "她说：“现实里的我会忙、会不耐烦，也不会每一次都给出恰到好处的回应。”"
+            }
+          ]
         },
         {
-          "id": "b",
-          "text": "接受她不舒服，但不说自己也受影响",
-          "vector": {
-            "expression": -0.58,
-            "care": 0.35,
-            "abandonment": 0.28,
-            "autonomy": 0.22
+          "when": {
+            "flag": "finalFrame",
+            "equals": "practical"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s15"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "匿名谈话到这里停止。见面以前，你们只各自说明一件可能影响现实相处的事，不再继续制造情绪浓度。"
+            },
+            {
+              "type": "paragraph",
+              "text": "她说：“我需要独处的时候会显得很冷，但不是在故意惩罚别人。”"
+            }
+          ]
         },
         {
-          "id": "c",
-          "text": "问清继续联系的边界",
-          "vector": {
-            "certainty": 0.72,
-            "reassurance": 0.42,
-            "commitment": 0.48
+          "when": {
+            "flag": "finalFrame",
+            "equals": "farewell"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s15"
-        },
-        {
-          "id": "d",
-          "text": "认为双方都有责任，不必追究",
-          "vector": {
-            "autonomy": -0.45,
-            "care": 0.45,
-            "discernment": -0.22,
-            "commitment": 0.35
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s15"
-        }
-      ]
-    },
-    {
-      "id": "s14_test",
-      "slot": 14,
-      "chapter": "14｜边界揭晓",
-      "context": "commitment",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "她说：“你用细节测试我时，我开始分不清你想认识我，还是只想证明自己猜对了。”"
-        },
-        {
-          "type": "paragraph",
-          "text": "她没有替你决定要不要继续。"
-        }
-      ],
-      "prompt": "你会？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "承认动机，并讨论怎么修复",
-          "vector": {
-            "expression": 0.68,
-            "repair": 0.52,
-            "commitment": 0.58,
-            "autonomy": 0.38
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s15"
-        },
-        {
-          "id": "b",
-          "text": "接受她不舒服，但不说自己也受影响",
-          "vector": {
-            "expression": -0.58,
-            "care": 0.35,
-            "abandonment": 0.28,
-            "autonomy": 0.22
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s15"
-        },
-        {
-          "id": "c",
-          "text": "问清继续联系的边界",
-          "vector": {
-            "certainty": 0.72,
-            "reassurance": 0.42,
-            "commitment": 0.48
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s15"
-        },
-        {
-          "id": "d",
-          "text": "认为双方都有责任，不必追究",
-          "vector": {
-            "autonomy": -0.45,
-            "care": 0.45,
-            "discernment": -0.22,
-            "commitment": 0.35
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s15"
-        }
-      ]
-    },
-    {
-      "id": "s14_ask",
-      "slot": 14,
-      "chapter": "14｜边界揭晓",
-      "context": "commitment",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "她说：“你直接问至少让我可以直接拒绝。比起被暗中查，我更能接受坦白的冒犯。”"
-        },
-        {
-          "type": "paragraph",
-          "text": "她没有替你决定要不要继续。"
-        }
-      ],
-      "prompt": "你会？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "承认动机，并讨论怎么修复",
-          "vector": {
-            "expression": 0.68,
-            "repair": 0.52,
-            "commitment": 0.58,
-            "autonomy": 0.38
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s15"
-        },
-        {
-          "id": "b",
-          "text": "接受她不舒服，但不说自己也受影响",
-          "vector": {
-            "expression": -0.58,
-            "care": 0.35,
-            "abandonment": 0.28,
-            "autonomy": 0.22
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s15"
-        },
-        {
-          "id": "c",
-          "text": "问清继续联系的边界",
-          "vector": {
-            "certainty": 0.72,
-            "reassurance": 0.42,
-            "commitment": 0.48
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s15"
-        },
-        {
-          "id": "d",
-          "text": "认为双方都有责任，不必追究",
-          "vector": {
-            "autonomy": -0.45,
-            "care": 0.45,
-            "discernment": -0.22,
-            "commitment": 0.35
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s15"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "她接受你不再继续靠近，也没有用最后一晚挽留。系统仍允许双方留下最后一句真实的话，再决定是否交换身份。"
+            },
+            {
+              "type": "paragraph",
+              "text": "她说：“我很珍惜这七天，但我不会因为它特别，就要求它一定有以后。”"
+            }
+          ]
         }
       ]
     },
     {
       "id": "s15",
       "slot": 15,
-      "chapter": "15｜第七晚",
-      "context": "rupture",
+      "chapter": "15｜第七晚的选择",
+      "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "系统出现两个按钮：交换真实身份，或继续保持匿名。"
+          "text": "系统出现最后的选择：交换真实身份，或者让关系停在匿名里。"
         },
         {
           "type": "paragraph",
-          "text": "你也可以只选择认识，不预设恋爱。"
+          "text": "你已经大致知道她是谁。按钮真正决定的，不是答案，而是你愿不愿意让双方同时承担答案之后的现实。"
         }
       ],
       "prompt": "你会？",
       "choices": [
         {
           "id": "a",
-          "text": "愿意揭晓，也说清想认识她",
+          "text": "交换身份，也明确想在现实中继续认识她",
           "vector": {
-            "trust": 0.7,
-            "expression": 0.65,
-            "reassurance": 0.28,
-            "approach": 0.3
+            "approach": 0.62,
+            "trust": 0.55,
+            "commitment": 0.48,
+            "expression": 0.45
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s16_reveal",
-          "aftermath": "你主动选择揭晓，也明确想把这段关系带进现实。期待变得具体，风险也第一次真正出现。"
+          "setFlags": {
+            "revealRoute": "reveal"
+          },
+          "aftermath": "你选择正式揭晓，并把“想继续”说清。匿名保护就此消失，期待不再只是感觉，而变成了需要在现实中承担的靠近。"
         },
         {
           "id": "b",
-          "text": "揭晓，但只从认识开始",
+          "text": "交换身份，但先从普通认识开始",
           "vector": {
-            "expression": -0.2,
-            "discernment": 0.28,
-            "trust": 0.32,
-            "autonomy": 0.38
+            "discernment": 0.48,
+            "autonomy": 0.42,
+            "trust": 0.38,
+            "commitment": 0.2
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s16_slow",
-          "aftermath": "你愿意揭晓，却不把七天的亲密直接等同于恋爱。靠近得以继续，也保留了重新认识的空间。"
+          "setFlags": {
+            "revealRoute": "slow"
+          },
+          "aftermath": "你愿意交换身份，却没有把七天的浓度直接当成恋爱。彼此终于能见面，也获得了重新认识而不是立即兑现幻想的空间。"
         },
         {
           "id": "c",
-          "text": "继续匿名，不让她承担后续",
+          "text": "继续匿名，让这段关系停在最完整的位置",
           "vector": {
-            "autonomy": 0.58,
-            "care": 0.35,
-            "reassurance": -0.42,
-            "expression": -0.35
+            "autonomy": 0.62,
+            "idealization": 0.38,
+            "reassurance": -0.28,
+            "commitment": -0.25
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s16_anon",
-          "aftermath": "你选择留在匿名里。那份亲密被完整保存，也因此无法再自然地走进现实。"
+          "setFlags": {
+            "revealRoute": "anon"
+          },
+          "aftermath": "你选择不揭晓。那七段语音被完整保存，却也意味着现实中的两个人不会立刻获得继续发展的资格。"
         },
         {
           "id": "d",
-          "text": "等她先决定，若不同就结束",
+          "text": "不先决定，等她选择后再回应",
           "vector": {
-            "approach": -0.52,
-            "abandonment": 0.35,
-            "trust": -0.25,
-            "repair": -0.22
+            "approach": -0.3,
+            "abandonment": 0.3,
+            "trust": 0.15,
+            "certainty": -0.25
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s16_wait",
-          "aftermath": "你把决定留给她。看似尊重，实际上也把被拒绝的风险暂时交到了对方手里。"
+          "setFlags": {
+            "revealRoute": "wait"
+          },
+          "aftermath": "你把第一步留给她。这个选择既可能是尊重，也可能是在回避被拒绝的风险；接下来，她需要决定是否先把自己交到现实里。"
         }
       ]
     },
     {
       "id": "s16_reveal",
       "slot": 16,
-      "chapter": "16｜真实身份",
-      "context": "rupture",
+      "chapter": "16｜第一次不隔着系统",
+      "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "双方都选择揭晓。屏幕显示唱片店地址，店门同时从里面推开。她站在那里，现实和声音终于重合。"
+          "text": "双方都选择揭晓。唱片店打烊后，她把门留了一条缝。"
+        },
+        {
+          "type": "paragraph",
+          "text": "真正坐到同一张桌子前，你们反而比语音里更容易停顿。她没有像节目里的声音那样准备好每一句话，却比你想象得更真实。"
         }
       ],
       "prompt": "你会？",
       "choices": [
         {
           "id": "a",
-          "text": "庆幸现实中的她更完整",
+          "text": "告诉她，现实中的停顿并没有让自己失望",
           "vector": {
-            "reassurance": 0.52,
-            "trust": 0.48,
+            "trust": 0.5,
+            "approach": 0.48,
             "idealization": 0.18
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
+          "next": "s17"
         },
         {
           "id": "b",
-          "text": "有落差，但愿意重新认识",
+          "text": "承认有些尴尬，但愿意慢慢适应",
           "vector": {
-            "discernment": 0.62,
-            "repair": 0.48,
-            "trust": 0.38
+            "repair": 0.45,
+            "discernment": 0.42,
+            "trust": 0.32
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
+          "next": "s17"
         },
         {
           "id": "c",
-          "text": "先处理隐瞒，但仍想继续",
+          "text": "先问她从什么时候认出了自己",
           "vector": {
-            "trust": 0.55,
-            "reassurance": 0.35,
-            "approach": 0.25
+            "certainty": 0.48,
+            "expression": 0.42,
+            "trust": 0.18
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
+          "next": "s17"
         },
         {
           "id": "d",
-          "text": "发现自己更依赖匿名，选择退后",
+          "text": "发现现实压力太强，提出先结束今晚",
           "vector": {
-            "autonomy": 0.68,
-            "reassurance": -0.48,
-            "trust": 0.08
+            "autonomy": 0.58,
+            "approach": -0.3,
+            "abandonment": 0.25
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
+          "next": "s17"
         }
       ]
     },
     {
       "id": "s16_slow",
       "slot": 16,
-      "chapter": "16｜真实身份",
-      "context": "rupture",
+      "chapter": "16｜从名字开始",
+      "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "她也选择揭晓，却先说：“我们不欠彼此一个恋爱结果，可以重新认识。”你第一次觉得克制也很浪漫。"
+          "text": "你们交换了名字，却没有立刻安排深夜见面。第二天下午，你像普通顾客一样走进店里。"
+        },
+        {
+          "type": "paragraph",
+          "text": "她把一杯咖啡推过来：“这次不算节目，也不用三分钟内说完。”"
         }
       ],
       "prompt": "你会？",
       "choices": [
         {
           "id": "a",
-          "text": "庆幸现实中的她更完整",
+          "text": "从最普通的话题开始，不急着复制匿名亲密",
           "vector": {
-            "reassurance": 0.52,
-            "trust": 0.48,
-            "idealization": 0.18
+            "discernment": 0.52,
+            "trust": 0.42,
+            "approach": 0.28
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
+          "next": "s17"
         },
         {
           "id": "b",
-          "text": "有落差，但愿意重新认识",
+          "text": "主动说起匿名时最打动自己的那一段",
           "vector": {
-            "discernment": 0.62,
-            "repair": 0.48,
-            "trust": 0.38
+            "idealization": 0.35,
+            "expression": 0.45,
+            "approach": 0.38
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
+          "next": "s17"
         },
         {
           "id": "c",
-          "text": "先处理隐瞒，但仍想继续",
+          "text": "问清彼此目前只是认识，还是带着约会意味",
           "vector": {
-            "trust": 0.55,
-            "reassurance": 0.35,
-            "approach": 0.25
+            "certainty": 0.58,
+            "validation": 0.3,
+            "expression": 0.4
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
+          "next": "s17"
         },
         {
           "id": "d",
-          "text": "发现自己更依赖匿名，选择退后",
+          "text": "保持朋友距离，看看现实里是否真的合拍",
           "vector": {
-            "autonomy": 0.68,
-            "reassurance": -0.48,
-            "trust": 0.08
+            "autonomy": 0.52,
+            "commitment": 0.05,
+            "discernment": 0.48
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
+          "next": "s17"
         }
       ]
     },
     {
       "id": "s16_anon",
       "slot": 16,
-      "chapter": "16｜真实身份",
-      "context": "rupture",
+      "chapter": "16｜没有名字的告别",
+      "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "她尊重你的决定，发来最后一段语音：“不知道名字，不代表这七天没有真实发生。”白天的她仍在店里。"
+          "text": "她也尊重了匿名选择。最后一段语音里，她说：“不知道名字，不代表这七天没有真实发生。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "系统会为双方保留二十四小时的反悔窗口。之后，所有录音都会删除。"
         }
       ],
       "prompt": "你会？",
       "choices": [
         {
           "id": "a",
-          "text": "庆幸现实中的她更完整",
+          "text": "保留匿名，不让短暂心动变成必须继续",
           "vector": {
-            "reassurance": 0.52,
-            "trust": 0.48,
-            "idealization": 0.18
+            "autonomy": 0.62,
+            "commitment": -0.3,
+            "idealization": 0.22
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
+          "next": "s17"
         },
         {
           "id": "b",
-          "text": "有落差，但愿意重新认识",
+          "text": "在窗口关闭前留下一个现实见面的可能",
           "vector": {
-            "discernment": 0.62,
-            "repair": 0.48,
-            "trust": 0.38
+            "approach": 0.35,
+            "trust": 0.3,
+            "certainty": 0.22
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
+          "next": "s17"
         },
         {
           "id": "c",
-          "text": "先处理隐瞒，但仍想继续",
+          "text": "写下想说的话，但不要求她回应",
           "vector": {
-            "trust": 0.55,
-            "reassurance": 0.35,
-            "approach": 0.25
+            "expression": 0.42,
+            "care": 0.28,
+            "reassurance": -0.2
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
+          "next": "s17"
         },
         {
           "id": "d",
-          "text": "发现自己更依赖匿名，选择退后",
+          "text": "临时改变决定，申请交换身份",
           "vector": {
-            "autonomy": 0.68,
-            "reassurance": -0.48,
-            "trust": 0.08
+            "approach": 0.52,
+            "abandonment": 0.3,
+            "certainty": 0.35
           },
           "intensity": 1.0,
           "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
+          "next": "s17"
         }
       ]
     },
     {
       "id": "s16_wait",
       "slot": 16,
-      "chapter": "16｜真实身份",
-      "context": "rupture",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "她先选择揭晓，并补充：“你不用因为我先走一步，就立刻跟上。”她把主动权还给你。"
-        }
-      ],
-      "prompt": "你会？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "庆幸现实中的她更完整",
-          "vector": {
-            "reassurance": 0.52,
-            "trust": 0.48,
-            "idealization": 0.18
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
-        },
-        {
-          "id": "b",
-          "text": "有落差，但愿意重新认识",
-          "vector": {
-            "discernment": 0.62,
-            "repair": 0.48,
-            "trust": 0.38
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
-        },
-        {
-          "id": "c",
-          "text": "先处理隐瞒，但仍想继续",
-          "vector": {
-            "trust": 0.55,
-            "reassurance": 0.35,
-            "approach": 0.25
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
-        },
-        {
-          "id": "d",
-          "text": "发现自己更依赖匿名，选择退后",
-          "vector": {
-            "autonomy": 0.68,
-            "reassurance": -0.48,
-            "trust": 0.08
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "steady"
-                },
-                "to": "s17_steady"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "witty"
-                },
-                "to": "s17_witty"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "gentle"
-                },
-                "to": "s17_gentle"
-              },
-              {
-                "when": {
-                  "flag": "appeal",
-                  "equals": "direct"
-                },
-                "to": "s17_direct"
-              }
-            ],
-            "default": "s17_steady"
-          }
-        }
-      ]
-    },
-    {
-      "id": "s17_steady",
-      "slot": 17,
-      "chapter": "17｜她担心的事",
+      "chapter": "16｜她先走了一步",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "她说：“我不怕你觉得现实里的我不够温柔。我怕你只喜欢每天准备好的三分钟。”她站得很稳，没有逼你回答。"
+          "text": "她先选择了揭晓。系统只显示了她的名字，没有替你自动交换信息。"
+        },
+        {
+          "type": "paragraph",
+          "text": "她留下十秒语音：“我愿意让你知道我是谁。你不需要因为我先选了，就给出相同答案。”"
         }
       ],
       "prompt": "你会？",
       "choices": [
         {
           "id": "a",
-          "text": "想认识完整的她，也保留各自生活",
+          "text": "回应身份，也承认自己刚才害怕被拒绝",
           "vector": {
-            "commitment": 0.62,
-            "autonomy": 0.55,
-            "trust": 0.48,
-            "expression": 0.4
+            "expression": 0.55,
+            "trust": 0.42,
+            "repair": 0.35
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s17"
+        },
+        {
+          "id": "b",
+          "text": "先感谢她，再请求一点时间决定",
+          "vector": {
+            "autonomy": 0.48,
+            "trust": 0.28,
+            "discernment": 0.3
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s17"
+        },
+        {
+          "id": "c",
+          "text": "只交换身份，不承诺后续关系",
+          "vector": {
+            "certainty": 0.35,
+            "commitment": 0.05,
+            "autonomy": 0.45
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s17"
+        },
+        {
+          "id": "d",
+          "text": "不回应，让关系停在她单方面揭晓的位置",
+          "vector": {
+            "approach": -0.48,
+            "trust": -0.15,
+            "abandonment": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.95,
+          "next": "s17"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "slot": 17,
+      "chapter": "17｜匿名之后",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "节目结束后，你们第一次面对没有倒计时、没有规则替双方维持距离的关系。"
+        }
+      ],
+      "prompt": "你会？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "进入真实生活，也保留彼此原来的节奏",
+          "vector": {
+            "commitment": 0.58,
+            "autonomy": 0.48,
+            "trust": 0.45,
+            "approach": 0.42
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -3053,11 +1837,11 @@
         },
         {
           "id": "b",
-          "text": "问清她想要怎样的关系",
+          "text": "从普通认识开始，不急着兑现七天的感觉",
           "vector": {
-            "certainty": 0.72,
-            "validation": 0.5,
-            "expression": 0.42
+            "discernment": 0.55,
+            "trust": 0.35,
+            "commitment": 0.18
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -3065,12 +1849,11 @@
         },
         {
           "id": "c",
-          "text": "先从朋友开始，不做承诺",
+          "text": "先确认边界和期待，再决定是否靠近",
           "vector": {
-            "autonomy": 0.52,
-            "commitment": 0.22,
-            "certainty": -0.2,
-            "trust": 0.35
+            "certainty": 0.62,
+            "expression": 0.42,
+            "autonomy": 0.35
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -3078,214 +1861,81 @@
         },
         {
           "id": "d",
-          "text": "承认只喜欢匿名版本，停止靠近",
+          "text": "承认自己更喜欢匿名里的安全感，选择停止",
           "vector": {
             "approach": -0.55,
-            "commitment": -0.52,
-            "abandonment": 0.42,
+            "commitment": -0.48,
             "autonomy": 0.58
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "s18"
         }
-      ]
-    },
-    {
-      "id": "s17_witty",
-      "slot": 17,
-      "chapter": "17｜她担心的事",
-      "context": "commitment",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "她说：“现实版没有剪辑，也可能超过三分钟。”笑意落下后，她认真问你是否还想认识。"
-        }
       ],
-      "prompt": "你会？",
-      "choices": [
+      "variants": [
         {
-          "id": "a",
-          "text": "想认识完整的她，也保留各自生活",
-          "vector": {
-            "commitment": 0.62,
-            "autonomy": 0.55,
-            "trust": 0.48,
-            "expression": 0.4
+          "when": {
+            "flag": "revealRoute",
+            "equals": "reveal"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "真正见面后的第一个小时并不完美。你们会抢话，会冷场，也会发现对方某些观点和匿名时想象得不一样。"
+            },
+            {
+              "type": "paragraph",
+              "text": "她问：“你现在想认识的是我，还是那七段声音？”"
+            }
+          ]
         },
         {
-          "id": "b",
-          "text": "问清她想要怎样的关系",
-          "vector": {
-            "certainty": 0.72,
-            "validation": 0.5,
-            "expression": 0.42
+          "when": {
+            "flag": "revealRoute",
+            "equals": "slow"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "你们没有复制匿名时的浓度，只从一杯咖啡和一张唱片开始。现实里的她更忙、更直接，也没有每一次都及时接住情绪。"
+            },
+            {
+              "type": "paragraph",
+              "text": "她问：“慢下来以后，你还想继续认识吗？”"
+            }
+          ]
         },
         {
-          "id": "c",
-          "text": "先从朋友开始，不做承诺",
-          "vector": {
-            "autonomy": 0.52,
-            "commitment": 0.22,
-            "certainty": -0.2,
-            "trust": 0.35
+          "when": {
+            "flag": "revealRoute",
+            "equals": "anon"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "二十四小时窗口只剩最后十分钟。你知道现实中的她可能就在那家店，也知道匿名关系一旦结束，就不会自动获得下一次。"
+            },
+            {
+              "type": "paragraph",
+              "text": "你需要决定，完整地停下，还是允许现实拥有一个很小的入口。"
+            }
+          ]
         },
         {
-          "id": "d",
-          "text": "承认只喜欢匿名版本，停止靠近",
-          "vector": {
-            "approach": -0.55,
-            "commitment": -0.52,
-            "abandonment": 0.42,
-            "autonomy": 0.58
+          "when": {
+            "flag": "revealRoute",
+            "equals": "wait"
           },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18"
-        }
-      ]
-    },
-    {
-      "id": "s17_gentle",
-      "slot": 17,
-      "chapter": "17｜她担心的事",
-      "context": "commitment",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "她说：“语音里的我是真的，白天会拒绝、会累的我也是真的。你不必马上接受全部。”"
-        }
-      ],
-      "prompt": "你会？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "想认识完整的她，也保留各自生活",
-          "vector": {
-            "commitment": 0.62,
-            "autonomy": 0.55,
-            "trust": 0.48,
-            "expression": 0.4
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18"
-        },
-        {
-          "id": "b",
-          "text": "问清她想要怎样的关系",
-          "vector": {
-            "certainty": 0.72,
-            "validation": 0.5,
-            "expression": 0.42
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18"
-        },
-        {
-          "id": "c",
-          "text": "先从朋友开始，不做承诺",
-          "vector": {
-            "autonomy": 0.52,
-            "commitment": 0.22,
-            "certainty": -0.2,
-            "trust": 0.35
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18"
-        },
-        {
-          "id": "d",
-          "text": "承认只喜欢匿名版本，停止靠近",
-          "vector": {
-            "approach": -0.55,
-            "commitment": -0.52,
-            "abandonment": 0.42,
-            "autonomy": 0.58
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18"
-        }
-      ]
-    },
-    {
-      "id": "s17_direct",
-      "slot": 17,
-      "chapter": "17｜她担心的事",
-      "context": "commitment",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "她看着你：“我想认识真实的你，也希望你不是只爱一个经过编辑的我。”"
-        }
-      ],
-      "prompt": "你会？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "想认识完整的她，也保留各自生活",
-          "vector": {
-            "commitment": 0.62,
-            "autonomy": 0.55,
-            "trust": 0.48,
-            "expression": 0.4
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18"
-        },
-        {
-          "id": "b",
-          "text": "问清她想要怎样的关系",
-          "vector": {
-            "certainty": 0.72,
-            "validation": 0.5,
-            "expression": 0.42
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18"
-        },
-        {
-          "id": "c",
-          "text": "先从朋友开始，不做承诺",
-          "vector": {
-            "autonomy": 0.52,
-            "commitment": 0.22,
-            "certainty": -0.2,
-            "trust": 0.35
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18"
-        },
-        {
-          "id": "d",
-          "text": "承认只喜欢匿名版本，停止靠近",
-          "vector": {
-            "approach": -0.55,
-            "commitment": -0.52,
-            "abandonment": 0.42,
-            "autonomy": 0.58
-          },
-          "intensity": 1.0,
-          "confidence": 0.95,
-          "next": "s18"
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "她已经把身份交给你，却没有追问你的答案。那份不催促让你更清楚：接下来不是对等交换的义务，而是你自己的选择。"
+            },
+            {
+              "type": "paragraph",
+              "text": "你想把关系带到哪里？"
+            }
+          ]
         }
       ]
     },
@@ -3297,23 +1947,19 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "项目已经结束。凌晨一点，你收到她从普通聊天软件发来的十几秒语音："
-        },
-        {
-          "type": "paragraph",
-          "text": "“今天没有三分钟限制。你想说多久都可以。”"
+          "text": "第八晚没有节目，只有一个由你自己决定是否继续的入口。"
         }
       ],
       "prompt": "你会？",
       "choices": [
         {
           "id": "a",
-          "text": "直接打电话给她",
+          "text": "直接打电话，接受未经准备的真实对话",
           "vector": {
-            "approach": 0.7,
-            "commitment": 0.72,
-            "autonomy": 0.5,
-            "trust": 0.58
+            "approach": 0.68,
+            "commitment": 0.65,
+            "trust": 0.52,
+            "expression": 0.48
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -3322,12 +1968,12 @@
         },
         {
           "id": "b",
-          "text": "回一段没有准备过的真实语音",
+          "text": "回一段没有排练过的真实语音",
           "vector": {
+            "expression": 0.58,
+            "trust": 0.42,
             "commitment": 0.3,
-            "discernment": 0.58,
-            "autonomy": 0.45,
-            "approach": 0.3
+            "discernment": 0.25
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -3336,12 +1982,12 @@
         },
         {
           "id": "c",
-          "text": "约她明天见面，慢慢认识",
+          "text": "约一次普通见面，从现实里慢慢认识",
           "vector": {
-            "certainty": 0.8,
-            "expression": 0.55,
-            "commitment": 0.45,
-            "reassurance": 0.3
+            "certainty": 0.62,
+            "discernment": 0.5,
+            "commitment": 0.38,
+            "approach": 0.3
           },
           "intensity": 1.0,
           "confidence": 0.95,
@@ -3350,17 +1996,83 @@
         },
         {
           "id": "d",
-          "text": "告诉她七天很特别，但不准备继续",
+          "text": "认真告别，不把特别误认为必须继续",
           "vector": {
-            "approach": -0.58,
-            "autonomy": 0.68,
-            "commitment": -0.48,
-            "discernment": 0.52
+            "autonomy": 0.65,
+            "discernment": 0.48,
+            "commitment": -0.5,
+            "approach": -0.55
           },
           "intensity": 1.0,
           "confidence": 0.95,
           "next": "$result",
           "outcome": "pause"
+        }
+      ],
+      "variants": [
+        {
+          "when": {
+            "flag": "revealRoute",
+            "equals": "reveal"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "分别以后，凌晨一点没有系统提示。你的手机却收到她从普通聊天软件发来的十几秒语音："
+            },
+            {
+              "type": "paragraph",
+              "text": "“今天没有三分钟限制。说得不好也没关系。”"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "revealRoute",
+            "equals": "slow"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "晚上，她把你白天犹豫过的那张唱片拍给你，没有暗号，也没有故意制造悬念。"
+            },
+            {
+              "type": "paragraph",
+              "text": "消息只有一句：“下次可以把另一面听完。”"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "revealRoute",
+            "equals": "anon"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "窗口即将关闭时，系统允许你发送最后一条不超过三十秒的信息。"
+            },
+            {
+              "type": "paragraph",
+              "text": "这一次，你可以让它成为告别，也可以留下一个现实世界能够找到你的方式。"
+            }
+          ]
+        },
+        {
+          "when": {
+            "flag": "revealRoute",
+            "equals": "wait"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "她没有再次催促。凌晨一点，你仍然可以通过系统回应她留下的名字。"
+            },
+            {
+              "type": "paragraph",
+              "text": "这一步不再由节目安排，也不再由她替你完成。"
+            }
+          ]
         }
       ]
     }
