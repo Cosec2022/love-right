@@ -146,7 +146,7 @@ async function bootstrap() {
   }
 }
 
-document.getElementById("startBtn").addEventListener("click", () => {
+void bootstrap(); document.getElementById("startBtn")?.addEventListener("click", () => {
   if (!engine) return;
   if (engine.state.complete) renderCurrentResult();
   else {
@@ -155,23 +155,23 @@ document.getElementById("startBtn").addEventListener("click", () => {
   }
 });
 
-document.getElementById("resetProgressBtn").addEventListener("click", () => {
+document.getElementById("resetProgressBtn")?.addEventListener("click", () => {
   engine?.reset();
   if (engine) renderer.renderStart(story, engine.state);
 });
 
-document.getElementById("backBtn").addEventListener("click", () => {
+document.getElementById("backBtn")?.addEventListener("click", () => {
   if (engine?.back()) renderCurrentScene();
 });
 
-document.getElementById("restartBtn").addEventListener("click", () => {
+document.getElementById("restartBtn")?.addEventListener("click", () => {
   engine?.reset();
   if (engine) renderer.renderStart(story, engine.state);
 });
 
-document.getElementById("shareBtn").addEventListener("click", copyResult);
-document.getElementById("libraryBtn").addEventListener("click", () => showLibrary());
-document.getElementById("brandBtn").addEventListener("click", () => showLibrary());
+document.getElementById("shareBtn")?.addEventListener("click", copyResult);
+document.getElementById("libraryBtn")?.addEventListener("click", () => showLibrary());
+document.getElementById("brandBtn")?.addEventListener("click", () => showLibrary());
 
 window.addEventListener("popstate", async () => {
   const requested = new URL(location.href).searchParams.get("story");
@@ -179,5 +179,3 @@ window.addEventListener("popstate", async () => {
   if (entry) await openStory(entry, { pushUrl: false });
   else await showLibrary({ pushUrl: false });
 });
-
-bootstrap();
