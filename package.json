@@ -8,6 +8,7 @@
     "dev": "wrangler dev",
     "validate": "node scripts/validate-stories.mjs",
     "test": "node --test tests/*.test.mjs",
+    "test:e2e": "playwright test",
     "check": "npm run validate && npm run static-check && npm test && npm run audit",
     "new-story": "node scripts/new-story.mjs",
     "deploy": "npm run check && wrangler deploy",
@@ -16,6 +17,7 @@
     "audit": "node scripts/audit-results.mjs"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "wrangler": "^4.0.0"
   }
 }
