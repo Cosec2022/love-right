@@ -1,0 +1,1826 @@
+{
+  "schemaVersion": 1,
+  "id": "story-01",
+  "slug": "summer-wind",
+  "status": "published",
+  "locale": "zh-CN",
+  "metadata": {
+    "series": "LOVE RIGHT · STORY 01",
+    "title": "那年夏天，风替他说了喜欢",
+    "subtitle": "你来到一座陌生的海边城市，只准备停留七天。展览、暴雨、旧唱片和一段没有说出口的喜欢，正在等你做出选择。",
+    "description": "在一段18幕的海边恋爱故事里，看见自己靠近、犹豫与确认爱的方式。",
+    "coverTheme": "night-rose",
+    "estimatedMinutes": 8,
+    "tags": [
+      "18幕连续剧情",
+      "恋爱心理",
+      "过往投射",
+      "未来预告"
+    ],
+    "disclaimer": "娱乐性叙事情境投射，不是心理诊断、事实识别或未来预言。"
+  },
+  "traits": [
+    {
+      "id": "security",
+      "label": "依恋安全"
+    },
+    {
+      "id": "spark",
+      "label": "心动强度"
+    },
+    {
+      "id": "idealism",
+      "label": "浪漫理想"
+    },
+    {
+      "id": "reassurance",
+      "label": "确认需求"
+    },
+    {
+      "id": "autonomy",
+      "label": "边界独立"
+    },
+    {
+      "id": "commitment",
+      "label": "长期投入"
+    },
+    {
+      "id": "directness",
+      "label": "沟通直接"
+    },
+    {
+      "id": "care",
+      "label": "照顾投入"
+    },
+    {
+      "id": "discernment",
+      "label": "识人谨慎"
+    },
+    {
+      "id": "novelty",
+      "label": "新鲜偏好"
+    },
+    {
+      "id": "validation",
+      "label": "公开认可"
+    },
+    {
+      "id": "repair",
+      "label": "关系修复"
+    }
+  ],
+  "scoreConfig": {
+    "center": 50,
+    "spread": 42,
+    "min": 8,
+    "max": 92
+  },
+  "initialScene": "s01_first_meeting",
+  "scenes": [
+    {
+      "id": "s01_first_meeting",
+      "slot": 1,
+      "chapter": "01 · 第一次对视",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "夏天快结束的时候，你来到一座陌生的海边城市。你原本只准备停留七天。"
+        },
+        {
+          "type": "paragraph",
+          "text": "夜间展览的入口突然停电，人群有些混乱。你再抬头时，一个男生正替你挡住身后拥挤的人。灯亮起来，他看了看你手里的票。"
+        },
+        {
+          "type": "quote",
+          "text": "“你是不是走错馆了？我也去那边，一起？”"
+        }
+      ],
+      "prompt": "你会：",
+      "note": "第一步往往不是决定爱谁，而是决定要不要让一个陌生人靠近。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "点头跟上，觉得偶遇本身就值得期待",
+          "effects": {
+            "spark": 1,
+            "security": 1,
+            "novelty": 1,
+            "idealism": 1
+          },
+          "setFlags": {
+            "route": "base"
+          },
+          "next": "s02_detail"
+        },
+        {
+          "id": "b",
+          "text": "先说谢谢，但刻意和他保持半步距离",
+          "effects": {
+            "discernment": 2,
+            "autonomy": 1,
+            "security": 1
+          },
+          "setFlags": {
+            "route": "base"
+          },
+          "next": "s02_detail"
+        },
+        {
+          "id": "c",
+          "text": "笑着问他：‘你不会也走错了吧？’",
+          "effects": {
+            "spark": 2,
+            "directness": 2,
+            "novelty": 1
+          },
+          "setFlags": {
+            "route": "base"
+          },
+          "next": "s02_detail"
+        },
+        {
+          "id": "d",
+          "text": "婉拒，自己重新找路",
+          "effects": {
+            "autonomy": 2,
+            "discernment": 2,
+            "commitment": -1
+          },
+          "setFlags": {
+            "route": "declined"
+          },
+          "next": "s02_reencounter"
+        }
+      ]
+    },
+    {
+      "id": "s02_detail",
+      "slot": 2,
+      "chapter": "02 · 他记住了一个细节",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "展厅里有一面墙，写满了陌生人没有寄出的信。你停在其中一句前面很久。"
+        },
+        {
+          "type": "quote",
+          "text": "“我不是不想靠近，只是怕靠近以后，失去得更快。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "离开展厅时，他忽然问：‘你刚才是不是很喜欢那句话？’"
+        }
+      ],
+      "prompt": "你会：",
+      "note": "被注意到的那一刻，有人会靠近，有人会先藏起来。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "有点惊讶，问他为什么一直在注意你",
+          "effects": {
+            "reassurance": 1,
+            "spark": 1,
+            "directness": 1,
+            "validation": 1
+          },
+          "next": "s03_rain"
+        },
+        {
+          "id": "b",
+          "text": "轻描淡写地说：‘只是觉得写得不错。’",
+          "effects": {
+            "autonomy": 1,
+            "discernment": 1,
+            "directness": -1
+          },
+          "next": "s03_rain"
+        },
+        {
+          "id": "c",
+          "text": "直接告诉他，那句话让你想起了一些事",
+          "effects": {
+            "care": 1,
+            "idealism": 1,
+            "repair": 1,
+            "directness": 2
+          },
+          "next": "s03_rain"
+        },
+        {
+          "id": "d",
+          "text": "反问他：‘那你呢？你最喜欢哪一句？’",
+          "effects": {
+            "discernment": 1,
+            "directness": 2,
+            "care": 1,
+            "spark": 1
+          },
+          "next": "s03_rain"
+        }
+      ]
+    },
+    {
+      "id": "s03_rain",
+      "slot": 3,
+      "chapter": "03 · 雨来得很突然",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "展览结束时，外面下起大雨。你们站在屋檐下等了十分钟，雨却越来越大。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他跑去便利店买了一把透明伞。回来时肩膀已经湿了。伞不大，你们走得很近。"
+        }
+      ],
+      "prompt": "那一刻，你最在意的是：",
+      "note": "你最先注意到的细节，往往就是你理解爱的方式。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "他淋湿的那边肩膀",
+          "effects": {
+            "care": 2,
+            "commitment": 1,
+            "security": 1
+          },
+          "next": "s04_message"
+        },
+        {
+          "id": "b",
+          "text": "你们偶尔碰到的手臂",
+          "effects": {
+            "spark": 2,
+            "idealism": 1,
+            "novelty": 1
+          },
+          "next": "s04_message"
+        },
+        {
+          "id": "c",
+          "text": "他有没有故意把伞偏向你",
+          "effects": {
+            "reassurance": 2,
+            "validation": 1,
+            "care": 1
+          },
+          "next": "s04_message"
+        },
+        {
+          "id": "d",
+          "text": "这场雨会不会让你们再多走一会儿",
+          "effects": {
+            "idealism": 2,
+            "spark": 1,
+            "novelty": 1
+          },
+          "next": "s04_message"
+        }
+      ]
+    },
+    {
+      "id": "s04_message",
+      "slot": 4,
+      "chapter": "04 · 第一条消息",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "回到住处半小时后，你收到他的消息。"
+        },
+        {
+          "type": "quote",
+          "text": "“到家了吗？”"
+        },
+        {
+          "type": "paragraph",
+          "text": "后面没有多余的话。你盯着那四个字看了一会儿。"
+        }
+      ],
+      "prompt": "你会怎样回复？",
+      "note": "有些关系从一句普通的话开始，真正暴露心意的是回复方式。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "‘到了，你呢？’",
+          "effects": {
+            "directness": 1,
+            "security": 1,
+            "care": 1
+          },
+          "next": "s05_silence"
+        },
+        {
+          "id": "b",
+          "text": "‘刚到，今天谢谢你。’",
+          "effects": {
+            "directness": 1,
+            "discernment": 1,
+            "security": 1
+          },
+          "next": "s05_silence"
+        },
+        {
+          "id": "c",
+          "text": "发一张窗外下雨的照片",
+          "effects": {
+            "idealism": 2,
+            "spark": 1,
+            "novelty": 1
+          },
+          "next": "s05_silence"
+        },
+        {
+          "id": "d",
+          "text": "故意过一会儿再回，不想显得太主动",
+          "effects": {
+            "reassurance": 1,
+            "discernment": 1,
+            "autonomy": 1,
+            "directness": -1
+          },
+          "next": "s05_silence"
+        }
+      ]
+    },
+    {
+      "id": "s05_silence",
+      "slot": 5,
+      "chapter": "05 · 第二天，他没有联系你",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你本来以为，第二天他至少会再发一条消息。但一整天都没有。"
+        },
+        {
+          "type": "paragraph",
+          "text": "晚上十一点，你看到他发了一条动态，是昨晚展览里的那面信墙。"
+        },
+        {
+          "type": "quote",
+          "text": "“有些人只见一次，也会记得很久。”"
+        }
+      ],
+      "prompt": "你的第一反应是：",
+      "note": "暧昧最擅长让人用自己的期待，替一句话补上主语。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "觉得他可能在说你",
+          "effects": {
+            "idealism": 2,
+            "reassurance": 2,
+            "spark": 1
+          },
+          "next": "s06_record"
+        },
+        {
+          "id": "b",
+          "text": "想点赞，但忍住了",
+          "effects": {
+            "discernment": 1,
+            "autonomy": 1,
+            "reassurance": 1
+          },
+          "next": "s06_record"
+        },
+        {
+          "id": "c",
+          "text": "直接问他：‘这是在说谁？’",
+          "effects": {
+            "directness": 2,
+            "spark": 1,
+            "validation": 1
+          },
+          "next": "s06_record"
+        },
+        {
+          "id": "d",
+          "text": "告诉自己别想太多",
+          "effects": {
+            "security": 2,
+            "autonomy": 1,
+            "discernment": 1
+          },
+          "next": "s06_record"
+        }
+      ]
+    },
+    {
+      "id": "s06_record",
+      "slot": 6,
+      "chapter": "06 · 他突然出现在你面前",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "第三天下午，你在旧城区的一家唱片店再次遇见他。他看起来也很意外。"
+        },
+        {
+          "type": "quote",
+          "text": "“这么巧？”"
+        },
+        {
+          "type": "paragraph",
+          "text": "后来你才发现，他手里拿着你昨天在聊天时提过的那张唱片。"
+        }
+      ],
+      "prompt": "你会更愿意相信：",
+      "note": "有些巧合只负责发生，意义是我们后来加上去的。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "他特意记住了你的话",
+          "effects": {
+            "reassurance": 1,
+            "care": 2,
+            "idealism": 1
+          },
+          "next": "s07_date"
+        },
+        {
+          "id": "b",
+          "text": "他可能只是刚好也喜欢",
+          "effects": {
+            "discernment": 2,
+            "security": 1
+          },
+          "next": "s07_date"
+        },
+        {
+          "id": "c",
+          "text": "他有一点故意制造偶遇",
+          "effects": {
+            "spark": 1,
+            "discernment": 1,
+            "novelty": 1
+          },
+          "next": "s07_date"
+        },
+        {
+          "id": "d",
+          "text": "不管是不是巧合，你都已经有点开心",
+          "effects": {
+            "spark": 2,
+            "idealism": 1,
+            "security": 1
+          },
+          "next": "s07_date"
+        }
+      ]
+    },
+    {
+      "id": "s07_date",
+      "slot": 7,
+      "chapter": "07 · 第一次真正的约会",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "他邀请你去看海边的露天电影。开场前，你们坐在台阶上吃东西。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他把不喜欢吃的香菜一点点挑出来。你忽然发现，这个人并没有最初看起来那么成熟。"
+        },
+        {
+          "type": "quote",
+          "text": "“你以前喜欢过什么样的人？”"
+        }
+      ],
+      "prompt": "你会：",
+      "note": "谈过去时，你是在分享自己，也是在判断他是否值得听见。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "认真讲一段过去",
+          "effects": {
+            "directness": 2,
+            "care": 1,
+            "repair": 1,
+            "commitment": 1
+          },
+          "next": "s08_name"
+        },
+        {
+          "id": "b",
+          "text": "说一个模糊的答案，观察他的反应",
+          "effects": {
+            "discernment": 2,
+            "autonomy": 1
+          },
+          "next": "s08_name"
+        },
+        {
+          "id": "c",
+          "text": "笑着说：‘你先回答。’",
+          "effects": {
+            "directness": 1,
+            "discernment": 1,
+            "spark": 1
+          },
+          "next": "s08_name"
+        },
+        {
+          "id": "d",
+          "text": "说自己已经不记得了",
+          "effects": {
+            "autonomy": 1,
+            "repair": -1,
+            "directness": -1
+          },
+          "next": "s08_name"
+        }
+      ]
+    },
+    {
+      "id": "s08_name",
+      "slot": 8,
+      "chapter": "08 · 一个让你不舒服的名字",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "电影结束后，他接到一个电话。电话那头是个女生。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他的语气很熟悉，也很温柔。挂断后，他只说：‘以前认识的人。’"
+        }
+      ],
+      "prompt": "你会：",
+      "note": "嫉妒不一定代表不信任，有时只是关系还没有边界。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "直接问他们是什么关系",
+          "effects": {
+            "directness": 2,
+            "security": 1,
+            "discernment": 1
+          },
+          "next": "s09_emotion"
+        },
+        {
+          "id": "b",
+          "text": "表面不问，但之后会明显变冷",
+          "effects": {
+            "reassurance": 2,
+            "directness": -1,
+            "discernment": 1
+          },
+          "next": "s09_emotion"
+        },
+        {
+          "id": "c",
+          "text": "相信他会在合适的时候解释",
+          "effects": {
+            "security": 2,
+            "care": 1,
+            "repair": 1
+          },
+          "next": "s09_emotion"
+        },
+        {
+          "id": "d",
+          "text": "用玩笑试探：‘前女友？’",
+          "effects": {
+            "spark": 1,
+            "directness": 1,
+            "reassurance": 1
+          },
+          "next": "s09_emotion"
+        }
+      ]
+    },
+    {
+      "id": "s09_emotion",
+      "slot": 9,
+      "chapter": "09 · 他看出了你的情绪",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "走到海边时，他忽然停下来。"
+        },
+        {
+          "type": "quote",
+          "text": "“你是不是不高兴了？”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他没有敷衍，也没有立刻解释，只是在等你开口。"
+        }
+      ],
+      "prompt": "你会说：",
+      "note": "真正的沟通，不是有没有情绪，而是敢不敢让对方看见。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "‘有一点，但我不知道自己有没有资格问。’",
+          "effects": {
+            "reassurance": 2,
+            "validation": 1,
+            "care": 1
+          },
+          "next": "s10_confession"
+        },
+        {
+          "id": "b",
+          "text": "‘没有，你想多了。’",
+          "effects": {
+            "autonomy": 1,
+            "directness": -2,
+            "repair": -1
+          },
+          "next": "s10_confession"
+        },
+        {
+          "id": "c",
+          "text": "‘我不喜欢不清不楚的关系。’",
+          "effects": {
+            "directness": 2,
+            "validation": 1,
+            "security": 1
+          },
+          "next": "s10_confession"
+        },
+        {
+          "id": "d",
+          "text": "‘你先告诉我，她是谁。’",
+          "effects": {
+            "directness": 2,
+            "discernment": 1
+          },
+          "next": "s10_confession"
+        }
+      ]
+    },
+    {
+      "id": "s10_confession",
+      "slot": 10,
+      "chapter": "10 · 他第一次向你坦白",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "他告诉你，那个女生曾经是他很喜欢的人。他们没有正式在一起，却也没有完全说清楚。"
+        },
+        {
+          "type": "paragraph",
+          "text": "后来对方离开了这座城市，两个人偶尔还会联系。"
+        },
+        {
+          "type": "quote",
+          "text": "“我不想骗你，但我也不知道，这个答案会不会让你离开。”"
+        }
+      ],
+      "prompt": "你最真实的想法是：",
+      "note": "你如何理解一个人的过去，也暴露你怎样保护自己的未来。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "过去不重要，只要他现在选择你",
+          "effects": {
+            "validation": 2,
+            "commitment": 2,
+            "reassurance": 1
+          },
+          "next": "s11_hand"
+        },
+        {
+          "id": "b",
+          "text": "你能理解，但会担心自己只是替代品",
+          "effects": {
+            "reassurance": 2,
+            "discernment": 1,
+            "idealism": 1
+          },
+          "next": "s11_hand"
+        },
+        {
+          "id": "c",
+          "text": "你需要他先处理干净过去",
+          "effects": {
+            "discernment": 2,
+            "autonomy": 1,
+            "directness": 2
+          },
+          "next": "s11_hand"
+        },
+        {
+          "id": "d",
+          "text": "你开始想保护自己，不敢再投入太快",
+          "effects": {
+            "autonomy": 2,
+            "discernment": 2,
+            "commitment": -1
+          },
+          "next": "s11_hand"
+        }
+      ]
+    },
+    {
+      "id": "s11_hand",
+      "slot": 11,
+      "chapter": "11 · 距离忽然变近",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "回去的路上，你们都没有说太多。"
+        },
+        {
+          "type": "paragraph",
+          "text": "走到路口时，一辆车从旁边经过，他下意识拉住你的手腕，把你带到身边。那一瞬间，你没有立刻松开。"
+        },
+        {
+          "type": "quote",
+          "text": "“我可以牵你吗？”"
+        }
+      ],
+      "prompt": "你会：",
+      "note": "身体先靠近的那一刻，理智往往只能晚半步到场。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "直接把手放进他手里",
+          "effects": {
+            "spark": 2,
+            "commitment": 1,
+            "idealism": 1
+          },
+          "next": "s12_cancel"
+        },
+        {
+          "id": "b",
+          "text": "笑着说：‘你不是已经牵了吗？’",
+          "effects": {
+            "spark": 2,
+            "directness": 1,
+            "novelty": 1
+          },
+          "next": "s12_cancel"
+        },
+        {
+          "id": "c",
+          "text": "先看着他，不说话",
+          "effects": {
+            "idealism": 2,
+            "reassurance": 1,
+            "spark": 1
+          },
+          "next": "s12_cancel"
+        },
+        {
+          "id": "d",
+          "text": "告诉他，你还需要一点时间",
+          "effects": {
+            "discernment": 2,
+            "autonomy": 2,
+            "security": 1
+          },
+          "next": "s12_cancel"
+        }
+      ]
+    },
+    {
+      "id": "s12_cancel",
+      "slot": 12,
+      "chapter": "12 · 你们之间第一次冷下来",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "第四天，他因为临时有事取消了见面。消息发得很晚，只有一句："
+        },
+        {
+          "type": "quote",
+          "text": "“抱歉，今天可能来不了了。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "你已经准备了很久。"
+        }
+      ],
+      "prompt": "你会：",
+      "note": "失望出现时，人最习惯的反应，通常来自以前受过的伤。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "回复‘没关系’，但心里很失落",
+          "effects": {
+            "reassurance": 2,
+            "directness": -1,
+            "care": 1
+          },
+          "next": "s13_call"
+        },
+        {
+          "id": "b",
+          "text": "问清楚原因，希望他认真解释",
+          "effects": {
+            "directness": 2,
+            "repair": 1,
+            "security": 1
+          },
+          "next": "s13_call"
+        },
+        {
+          "id": "c",
+          "text": "不回复，等他自己意识到问题",
+          "effects": {
+            "discernment": 1,
+            "validation": 1,
+            "directness": -1
+          },
+          "next": "s13_call"
+        },
+        {
+          "id": "d",
+          "text": "改变自己的安排，不让这件事影响整晚",
+          "effects": {
+            "autonomy": 2,
+            "security": 1
+          },
+          "next": "s13_call"
+        }
+      ]
+    },
+    {
+      "id": "s13_call",
+      "slot": 13,
+      "chapter": "13 · 深夜的电话",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "凌晨一点，他打来电话。背景很安静，他的声音听起来很疲惫。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他说家里出了点事，他必须提前离开这座城市。原本七天的相遇，可能只剩下最后一天。"
+        },
+        {
+          "type": "quote",
+          "text": "“我不知道该不该告诉你。我怕说了以后，这件事就会变得太认真。”"
+        }
+      ],
+      "prompt": "你会：",
+      "note": "当时间忽然缩短，你最想抓住的，就是你最在意的东西。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "立刻问他在哪里，想去见他",
+          "effects": {
+            "care": 2,
+            "commitment": 2,
+            "spark": 1
+          }
+        },
+        {
+          "id": "b",
+          "text": "先安慰他，再问以后还会不会联系",
+          "effects": {
+            "reassurance": 2,
+            "commitment": 1,
+            "directness": 1
+          }
+        },
+        {
+          "id": "c",
+          "text": "有些生气，因为他一直替你决定",
+          "effects": {
+            "directness": 2,
+            "autonomy": 1,
+            "validation": 1
+          }
+        },
+        {
+          "id": "d",
+          "text": "沉默，害怕自己表现得太在意",
+          "effects": {
+            "reassurance": 2,
+            "directness": -1,
+            "idealism": 1
+          }
+        }
+      ],
+      "next": {
+        "cases": [
+          {
+            "when": {
+              "flag": "route",
+              "equals": "newLead"
+            },
+            "to": "s14_new_lead"
+          }
+        ],
+        "default": "s14_last_day"
+      }
+    },
+    {
+      "id": "s14_last_day",
+      "slot": 14,
+      "chapter": "14 · 最后一天",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "第二天傍晚，你们去了第一次见面的展览馆。墙上的信已经被换掉了。"
+        },
+        {
+          "type": "quote",
+          "text": "“真正遗憾的不是没有结果，而是当时谁都没有再向前一步。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他站在你旁边，问：‘如果我们不是在这里认识，你觉得我们还会喜欢上对方吗？’"
+        }
+      ],
+      "prompt": "你会回答：",
+      "note": "有人相信命运，有人更相信相遇之后的选择。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "‘会，只是可能需要更久。’",
+          "effects": {
+            "commitment": 2,
+            "security": 1,
+            "idealism": 1
+          },
+          "next": "s15_station"
+        },
+        {
+          "id": "b",
+          "text": "‘我不知道，但我很喜欢现在发生的一切。’",
+          "effects": {
+            "idealism": 2,
+            "spark": 1,
+            "novelty": 1
+          },
+          "next": "s15_station"
+        },
+        {
+          "id": "c",
+          "text": "‘重要的不是在哪里认识，是你之后怎么做。’",
+          "effects": {
+            "discernment": 2,
+            "directness": 1,
+            "commitment": 1
+          },
+          "next": "s15_station"
+        },
+        {
+          "id": "d",
+          "text": "‘可能不会，所以我才更珍惜这几天。’",
+          "effects": {
+            "idealism": 2,
+            "novelty": 1,
+            "spark": 1
+          },
+          "next": "s15_station"
+        }
+      ]
+    },
+    {
+      "id": "s15_station",
+      "slot": 15,
+      "chapter": "15 · 他没有说“喜欢你”",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "离开展览馆后，他送你到车站。车快来了，他却一直没有说那句你在等的话。"
+        },
+        {
+          "type": "paragraph",
+          "text": "最后，他只问："
+        },
+        {
+          "type": "quote",
+          "text": "“我走以后，你会忘记我吗？”"
+        }
+      ],
+      "prompt": "你会：",
+      "note": "有些人等一句告白，有些人会把自己真正需要的答案说出来。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "‘不会，但你也不要让我等太久。’",
+          "effects": {
+            "validation": 2,
+            "directness": 2,
+            "commitment": 1
+          },
+          "next": "s16_missing"
+        },
+        {
+          "id": "b",
+          "text": "‘那要看你值不值得我记住。’",
+          "effects": {
+            "autonomy": 1,
+            "discernment": 2,
+            "spark": 1
+          },
+          "next": "s16_missing"
+        },
+        {
+          "id": "c",
+          "text": "‘有些人不是想忘就能忘的。’",
+          "effects": {
+            "idealism": 2,
+            "reassurance": 1
+          },
+          "next": "s16_missing"
+        },
+        {
+          "id": "d",
+          "text": "‘我不知道，你呢？’",
+          "effects": {
+            "reassurance": 1,
+            "directness": 1,
+            "spark": 1
+          },
+          "next": "s16_missing"
+        }
+      ]
+    },
+    {
+      "id": "s16_missing",
+      "slot": 16,
+      "chapter": "16 · 一条没有按时到来的消息",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "他离开后的第一天，你们聊了很多。第二天，也聊了很多。"
+        },
+        {
+          "type": "paragraph",
+          "text": "第三天晚上，他忽然消失了。消息没有回复，电话也没有接。直到第二天中午，他才发来一句："
+        },
+        {
+          "type": "quote",
+          "text": "“对不起，昨晚发生了很多事。”"
+        }
+      ],
+      "prompt": "你会：",
+      "note": "失联后的第一反应，往往比你想象中更诚实。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "先确认他是不是安全",
+          "effects": {
+            "care": 2,
+            "security": 1
+          },
+          "next": "s17_reality"
+        },
+        {
+          "id": "b",
+          "text": "告诉他，你不喜欢这种突然失联",
+          "effects": {
+            "directness": 2,
+            "repair": 1,
+            "security": 1
+          },
+          "next": "s17_reality"
+        },
+        {
+          "id": "c",
+          "text": "等他主动解释完整，再决定态度",
+          "effects": {
+            "discernment": 2,
+            "security": 1
+          },
+          "next": "s17_reality"
+        },
+        {
+          "id": "d",
+          "text": "装作不在意，回复得比他更冷淡",
+          "effects": {
+            "autonomy": 1,
+            "validation": 1,
+            "repair": -1
+          },
+          "next": "s17_reality"
+        }
+      ]
+    },
+    {
+      "id": "s17_reality",
+      "slot": 17,
+      "chapter": "17 · 现实开始进入这段关系",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "后来你们保持联系。他会记得你随口说过的小事，也会在忙的时候消失几个小时。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你们像恋人，却始终没有正式确定关系。某天，他问："
+        },
+        {
+          "type": "quote",
+          "text": "“如果一段关系需要等很久，你还会开始吗？”"
+        }
+      ],
+      "prompt": "你会：",
+      "note": "等待是否浪漫，取决于它有没有方向。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "只要彼此坚定，时间不是问题",
+          "effects": {
+            "idealism": 2,
+            "commitment": 2,
+            "security": 1
+          }
+        },
+        {
+          "id": "b",
+          "text": "可以等，但必须有明确的未来",
+          "effects": {
+            "commitment": 2,
+            "directness": 1,
+            "discernment": 1
+          }
+        },
+        {
+          "id": "c",
+          "text": "不愿意把最好的时间交给不确定",
+          "effects": {
+            "autonomy": 2,
+            "discernment": 2
+          }
+        },
+        {
+          "id": "d",
+          "text": "先开始再说，感情本来就无法计算",
+          "effects": {
+            "spark": 2,
+            "novelty": 1,
+            "idealism": 1
+          }
+        }
+      ],
+      "next": {
+        "cases": [
+          {
+            "when": {
+              "flag": "route",
+              "equals": "newLead"
+            },
+            "to": "s18_new_lead"
+          }
+        ],
+        "default": "s18_invitation"
+      }
+    },
+    {
+      "id": "s18_invitation",
+      "slot": 18,
+      "chapter": "18 · 未来向你打开了一扇门",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "一个月后，你再次收到那座城市的展览邀请。"
+        },
+        {
+          "type": "paragraph",
+          "text": "这一次，邀请函背后多了一行手写字："
+        },
+        {
+          "type": "quote",
+          "text": "“如果你愿意回来，我会在那里等你。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "没有署名。你几乎确定是他，却又不敢完全确定。"
+        }
+      ],
+      "prompt": "你会：",
+      "note": "故事最后的问题，不是他会不会等，而是你愿不愿意为一个答案再走一次。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "买下最近一班车票，不提前告诉他",
+          "effects": {
+            "spark": 2,
+            "idealism": 2,
+            "novelty": 1
+          },
+          "outcome": "leap",
+          "next": "$result"
+        },
+        {
+          "id": "b",
+          "text": "先发消息确认，不愿意只靠猜测",
+          "effects": {
+            "discernment": 2,
+            "directness": 1,
+            "security": 1
+          },
+          "outcome": "confirm",
+          "next": "$result"
+        },
+        {
+          "id": "c",
+          "text": "去，但告诉自己这次一定要问清楚",
+          "effects": {
+            "commitment": 1,
+            "directness": 2,
+            "discernment": 1
+          },
+          "outcome": "clarify",
+          "next": "$result"
+        },
+        {
+          "id": "d",
+          "text": "不去，等待他真正走到你面前",
+          "effects": {
+            "validation": 2,
+            "autonomy": 2,
+            "discernment": 1
+          },
+          "outcome": "wait",
+          "next": "$result"
+        }
+      ]
+    },
+    {
+      "id": "s02_reencounter",
+      "slot": 2,
+      "chapter": "02 · 第二次遇见",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你婉拒后，自己找到了展厅。你们没有同行，也没有交换联系方式。"
+        },
+        {
+          "type": "paragraph",
+          "text": "半小时后，你在那面写满“没有寄出的信”的墙前再次看见他。他也认出了你，却只隔着两三步点了点头，没有靠近。"
+        },
+        {
+          "type": "paragraph",
+          "text": "临走时，你的票根掉在地上。他捡起来递给你。"
+        },
+        {
+          "type": "quote",
+          "text": "“这次应该没有走错了。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "说完，他便准备离开。"
+        }
+      ],
+      "prompt": "这一次，你会：",
+      "note": "拒绝应当被尊重。故事能不能继续，应该由你重新决定。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "接过票根，主动问他最喜欢墙上的哪封信",
+          "subtext": "你重新打开了一点谈话空间",
+          "effects": {
+            "directness": 2,
+            "spark": 1,
+            "idealism": 1,
+            "security": 1
+          },
+          "setFlags": {
+            "route": "reopened"
+          },
+          "next": "s03_reopened"
+        },
+        {
+          "id": "b",
+          "text": "说声谢谢，顺口问他是不是也一个人来看展",
+          "subtext": "礼貌，但不急着定义这次相遇",
+          "effects": {
+            "discernment": 1,
+            "autonomy": 1,
+            "directness": 1,
+            "care": 1
+          },
+          "setFlags": {
+            "route": "reopened"
+          },
+          "next": "s03_reopened"
+        },
+        {
+          "id": "c",
+          "text": "笑着说：‘看来我们这次都没走错。’",
+          "subtext": "用轻松的方式重新靠近",
+          "effects": {
+            "spark": 2,
+            "directness": 2,
+            "novelty": 1
+          },
+          "setFlags": {
+            "route": "reopened"
+          },
+          "next": "s03_reopened"
+        },
+        {
+          "id": "d",
+          "text": "只说谢谢，让这次偶遇停在这里",
+          "subtext": "你拒绝的是这个人，不是爱情",
+          "effects": {
+            "autonomy": 2,
+            "discernment": 2,
+            "commitment": -1
+          },
+          "setFlags": {
+            "route": "newLead"
+          },
+          "next": "s03_new_lead"
+        }
+      ]
+    },
+    {
+      "id": "s03_reopened",
+      "slot": 3,
+      "chapter": "03 · 雨来得很突然",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你们聊了几句。离开展厅时，外面忽然下起大雨。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他没有再次提出共撑一把伞，而是跑去便利店买了两把透明伞，把其中一把递给你。后来发现方向相同，你们隔着不远不近的距离并肩走了一段。"
+        },
+        {
+          "type": "paragraph",
+          "text": "走到岔路口时，你们自然交换了联系方式。没有谁借机越界，也没有谁假装这次相遇毫无意义。"
+        }
+      ],
+      "prompt": "那一刻，你最在意的是：",
+      "note": "真正让人放松的靠近，通常不是更用力，而是对方记得你的边界。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "他把看起来更结实的那把伞留给了你",
+          "subtext": "你会从照顾里读取心意",
+          "effects": {
+            "care": 2,
+            "commitment": 1,
+            "security": 1
+          },
+          "next": "s04_message"
+        },
+        {
+          "id": "b",
+          "text": "他没有故意走近，却一直保持在你身边",
+          "subtext": "克制反而让你更容易心动",
+          "effects": {
+            "spark": 2,
+            "idealism": 1,
+            "autonomy": 1
+          },
+          "next": "s04_message"
+        },
+        {
+          "id": "c",
+          "text": "他记得你刚才拒绝过，没有再次替你做决定",
+          "subtext": "尊重会明显提高你的好感",
+          "effects": {
+            "reassurance": 2,
+            "discernment": 1,
+            "autonomy": 1
+          },
+          "next": "s04_message"
+        },
+        {
+          "id": "d",
+          "text": "你竟然希望这场雨再下久一点",
+          "subtext": "你已经允许故事继续一点点",
+          "effects": {
+            "idealism": 2,
+            "spark": 1,
+            "novelty": 1
+          },
+          "next": "s04_message"
+        }
+      ]
+    },
+    {
+      "id": "s03_new_lead",
+      "slot": 3,
+      "chapter": "03 · 故事换了一条路",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你没有给第一次偶遇更多空间，他也没有继续靠近。那段相遇就停在那里，没有纠缠，也没有惩罚。"
+        },
+        {
+          "type": "paragraph",
+          "text": "第二天下午，你在海边一家旧书店躲雨。店里只剩一把透明伞。准备关门的年轻店员把伞递给你。"
+        },
+        {
+          "type": "quote",
+          "text": "“你先拿吧。我住得近，明天方便的话再还。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他说完便低头去收门外的招牌，没有借机问你的名字。"
+        }
+      ],
+      "prompt": "这一刻，你最先注意到的是：",
+      "note": "你拒绝了一个人，故事便换了一个入口，而不是强迫原来的关系继续。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "他搬招牌时被雨淋湿的肩膀",
+          "subtext": "你会先看见别人的付出",
+          "effects": {
+            "care": 2,
+            "commitment": 1,
+            "security": 1
+          },
+          "next": "s04_new_lead"
+        },
+        {
+          "id": "b",
+          "text": "这份善意没有附带任何熟络要求",
+          "subtext": "没有压力的靠近更容易让你放松",
+          "effects": {
+            "spark": 1,
+            "idealism": 1,
+            "autonomy": 2
+          },
+          "next": "s04_new_lead"
+        },
+        {
+          "id": "c",
+          "text": "他没有趁机要你的联系方式",
+          "subtext": "边界感会直接影响你的好感",
+          "effects": {
+            "reassurance": 1,
+            "discernment": 2,
+            "autonomy": 1
+          },
+          "next": "s04_new_lead"
+        },
+        {
+          "id": "d",
+          "text": "你会不会真的为了还伞再回来",
+          "subtext": "你开始允许下一次见面发生",
+          "effects": {
+            "idealism": 2,
+            "spark": 1,
+            "novelty": 1
+          },
+          "next": "s04_new_lead"
+        }
+      ]
+    },
+    {
+      "id": "s04_new_lead",
+      "slot": 4,
+      "chapter": "04 · 第一条消息",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "第二天，你把伞送回旧书店。他认出了你，只说了一句“雨停了就好”。"
+        },
+        {
+          "type": "paragraph",
+          "text": "聊天时，他提到晚上有一场很小的海边演出。你怕找错地方，他把地址发给你，于是你们交换了联系方式。"
+        },
+        {
+          "type": "paragraph",
+          "text": "回到住处半小时后，你收到他的消息。"
+        },
+        {
+          "type": "quote",
+          "text": "“伞收到了。还有，演出的位置我没有发错吧？”"
+        }
+      ],
+      "prompt": "你会怎样回复？",
+      "note": "这次联系不是追赶，而是你们共同允许发生的下一步。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "‘收到了，你今晚也会去吗？’",
+          "subtext": "你愿意把话题继续下去",
+          "effects": {
+            "directness": 1,
+            "security": 1,
+            "care": 1
+          },
+          "next": "s05_new_lead"
+        },
+        {
+          "id": "b",
+          "text": "‘收到了，谢谢你的伞和地址。’",
+          "subtext": "友好，但仍然保留节奏",
+          "effects": {
+            "directness": 1,
+            "discernment": 1,
+            "security": 1
+          },
+          "next": "s05_new_lead"
+        },
+        {
+          "id": "c",
+          "text": "发一张窗外已经放晴的照片",
+          "subtext": "你更习惯用氛围传递好感",
+          "effects": {
+            "idealism": 2,
+            "spark": 1,
+            "novelty": 1
+          },
+          "next": "s05_new_lead"
+        },
+        {
+          "id": "d",
+          "text": "过一会儿再回，不想显得太主动",
+          "subtext": "你会先管理自己的暴露感",
+          "effects": {
+            "reassurance": 1,
+            "discernment": 1,
+            "autonomy": 1,
+            "directness": -1
+          },
+          "next": "s05_new_lead"
+        }
+      ]
+    },
+    {
+      "id": "s05_new_lead",
+      "slot": 5,
+      "chapter": "05 · 第二天，他没有联系你",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你本来以为，第二天他至少会再发一条消息。但一整天都没有。"
+        },
+        {
+          "type": "paragraph",
+          "text": "晚上十一点，你看到他发了一张旧书店门口的照片。透明伞靠在门边，配文只有一句："
+        },
+        {
+          "type": "quote",
+          "text": "“有些人把伞还回来，也把一个雨天变得值得记住。”"
+        }
+      ],
+      "prompt": "你的第一反应是：",
+      "note": "暧昧最容易发生在没有点名的句子里，也最容易暴露你如何理解暗示。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "觉得他可能在说你",
+          "subtext": "你会本能地把细节连成故事",
+          "effects": {
+            "idealism": 2,
+            "reassurance": 2,
+            "spark": 1
+          },
+          "next": "s06_new_lead"
+        },
+        {
+          "id": "b",
+          "text": "想点赞，但最后还是忍住了",
+          "subtext": "你想回应，也怕自己理解过度",
+          "effects": {
+            "discernment": 1,
+            "autonomy": 1,
+            "reassurance": 1
+          },
+          "next": "s06_new_lead"
+        },
+        {
+          "id": "c",
+          "text": "直接问他：‘这是在说谁？’",
+          "subtext": "你不喜欢把心思一直留在猜测里",
+          "effects": {
+            "directness": 2,
+            "spark": 1,
+            "validation": 1
+          },
+          "next": "s06_new_lead"
+        },
+        {
+          "id": "d",
+          "text": "告诉自己别想太多",
+          "subtext": "你会先把解释权还给事实",
+          "effects": {
+            "security": 2,
+            "autonomy": 1,
+            "discernment": 1
+          },
+          "next": "s06_new_lead"
+        }
+      ]
+    },
+    {
+      "id": "s06_new_lead",
+      "slot": 6,
+      "chapter": "06 · 第三次见面",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "第三天下午，你在旧城区的一家唱片店再次遇见那个借伞给你的男生。他看起来也有些意外。"
+        },
+        {
+          "type": "quote",
+          "text": "“这座城是不是比想象中更小？”"
+        },
+        {
+          "type": "paragraph",
+          "text": "后来你发现，他手里拿着你昨天聊天时提过的那张唱片。离开前，他问你愿不愿意一起去看海边的露天电影。"
+        }
+      ],
+      "prompt": "你更愿意相信：",
+      "note": "到这里，关系才真正由双方共同推进，而不是由一次被拒绝的搭讪强行续写。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "他特意记住了你的话",
+          "subtext": "被记住会明显提高你的心动",
+          "effects": {
+            "reassurance": 1,
+            "care": 2,
+            "idealism": 1
+          },
+          "next": "s07_date"
+        },
+        {
+          "id": "b",
+          "text": "他可能只是刚好也喜欢",
+          "subtext": "你会先保留一种更安全的解释",
+          "effects": {
+            "discernment": 2,
+            "security": 1
+          },
+          "next": "s07_date"
+        },
+        {
+          "id": "c",
+          "text": "他也许猜到你会来这里",
+          "subtext": "一点点设计感让你既警惕又好奇",
+          "effects": {
+            "spark": 1,
+            "discernment": 1,
+            "novelty": 1
+          },
+          "next": "s07_date"
+        },
+        {
+          "id": "d",
+          "text": "不管是不是巧合，你都愿意接受这次邀请",
+          "subtext": "这一次是你明确选择让故事继续",
+          "effects": {
+            "spark": 2,
+            "idealism": 1,
+            "security": 1
+          },
+          "next": "s07_date"
+        }
+      ]
+    },
+    {
+      "id": "s14_new_lead",
+      "slot": 14,
+      "chapter": "14 · 最后一天",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "第二天傍晚，你们回到那家旧书店。门边还放着第一次借给你的透明伞。"
+        },
+        {
+          "type": "paragraph",
+          "text": "店里有一块让客人留下句子的木板。今天多了一张新的卡片："
+        },
+        {
+          "type": "quote",
+          "text": "“真正遗憾的不是没有结果，而是当时谁都没有再向前一步。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他站在你旁边问："
+        },
+        {
+          "type": "quote",
+          "text": "“如果我们不是在这座城市认识，你觉得我们还会喜欢上对方吗？”"
+        }
+      ],
+      "prompt": "你会回答：",
+      "note": "同一个问题可以很浪漫，也可以很现实。区别在于你更相信相遇，还是后来的行动。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "‘会，只是可能需要更久。’",
+          "subtext": "你相信吸引并不只属于特定场景",
+          "effects": {
+            "commitment": 2,
+            "idealism": 1,
+            "security": 1
+          },
+          "next": "s15_station"
+        },
+        {
+          "id": "b",
+          "text": "‘我不知道，但我很喜欢现在发生的一切。’",
+          "subtext": "你愿意珍惜当下，不急着保证永远",
+          "effects": {
+            "spark": 1,
+            "security": 1,
+            "idealism": 1
+          },
+          "next": "s15_station"
+        },
+        {
+          "id": "c",
+          "text": "‘重要的不是在哪里认识，是你之后怎么做。’",
+          "subtext": "你最终还是会用行动判断关系",
+          "effects": {
+            "discernment": 2,
+            "directness": 2,
+            "commitment": 1
+          },
+          "next": "s15_station"
+        },
+        {
+          "id": "d",
+          "text": "‘可能不会，所以我才更珍惜这几天。’",
+          "subtext": "你接受短暂也可以拥有真实价值",
+          "effects": {
+            "idealism": 2,
+            "autonomy": 1,
+            "spark": 1
+          },
+          "next": "s15_station"
+        }
+      ]
+    },
+    {
+      "id": "s18_new_lead",
+      "slot": 18,
+      "chapter": "18 · 未来向你打开了一扇门",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "一个月后，你收到那家旧书店寄来的夜间读诗会邀请。"
+        },
+        {
+          "type": "paragraph",
+          "text": "邀请卡背后多了一行手写字："
+        },
+        {
+          "type": "quote",
+          "text": "“如果你愿意回来，我会在那里等你。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "没有署名。你几乎确定是他，却又不敢完全确定。"
+        }
+      ],
+      "prompt": "你会：",
+      "note": "最后一题测的不是你敢不敢爱，而是你希望浪漫以怎样的方式落到现实。",
+      "choices": [
+        {
+          "id": "a",
+          "text": "买下最近一班车票，不提前告诉他",
+          "subtext": "你愿意为命运感保留一次冒险",
+          "effects": {
+            "spark": 2,
+            "idealism": 2,
+            "novelty": 2,
+            "reassurance": 1
+          },
+          "outcome": "leap",
+          "next": "$result"
+        },
+        {
+          "id": "b",
+          "text": "先发消息确认，不愿意只靠猜测",
+          "subtext": "你需要浪漫，也需要基本确定性",
+          "effects": {
+            "directness": 2,
+            "discernment": 2,
+            "security": 2
+          },
+          "outcome": "confirm",
+          "next": "$result"
+        },
+        {
+          "id": "c",
+          "text": "去，但告诉自己这次一定要问清楚",
+          "subtext": "你愿意靠近，同时保留现实判断",
+          "effects": {
+            "commitment": 2,
+            "directness": 2,
+            "autonomy": 1,
+            "repair": 1
+          },
+          "outcome": "clarify",
+          "next": "$result"
+        },
+        {
+          "id": "d",
+          "text": "不去，等待他真正走到你面前",
+          "subtext": "你不再独自完成关系的最后一步",
+          "effects": {
+            "autonomy": 2,
+            "validation": 2,
+            "discernment": 1,
+            "commitment": -1
+          },
+          "outcome": "wait",
+          "next": "$result"
+        }
+      ]
+    }
+  ]
+}

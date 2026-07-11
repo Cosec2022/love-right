@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://love-right.coseclab.dev/schemas/story.schema.json",
+  "title": "Love Right Story Package",
+  "type": "object",
+  "required": ["schemaVersion", "id", "slug", "metadata", "traits", "initialScene", "scenes"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "id": {"type": "string", "minLength": 1},
+    "slug": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]+$"},
+    "status": {"enum": ["draft", "published", "archived"]},
+    "locale": {"type": "string"},
+    "metadata": {
+      "type": "object",
+      "required": ["series", "title", "subtitle", "description", "tags", "disclaimer"],
+      "properties": {
+        "series": {"type": "string"},
+        "title": {"type": "string"},
+        "subtitle": {"type": "string"},
+        "description": {"type": "string"},
+        "estimatedMinutes": {"type": "integer", "minimum": 1},
+        "coverTheme": {"type": "string"},
+        "tags": {"type": "array", "items": {"type": "string"}},
+        "disclaimer": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "traits": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "properties": {"id": {"type": "string"}, "label": {"type": "string"}},
+        "additionalProperties": false
+      }
+    },
+    "scoreConfig": {
+      "type": "object",
+      "properties": {
+        "center": {"type": "number"}, "spread": {"type": "number"},
+        "min": {"type": "number"}, "max": {"type": "number"}
+      },
+      "additionalProperties": false
+    },
+    "initialScene": {"type": "string"},
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/scene"}
+    }
+  },
+  "$defs": {
+    "condition": {
+      "type": "object",
+      "properties": {
+        "all": {"type": "array", "items": {"$ref": "#/$defs/condition"}},
+        "any": {"type": "array", "items": {"$ref": "#/$defs/condition"}},
+        "not": {"$ref": "#/$defs/condition"},
+        "flag": {"type": "string"}, "trait": {"type": "string"}, "rawTrait": {"type": "string"},
+        "meter": {"type": "string"}, "outcome": {}, "archetype": {}, "visited": {"type": "string"},
+        "equals": {}, "notEquals": {}, "gte": {"type": "number"}, "lte": {"type": "number"},
+        "gt": {"type": "number"}, "lt": {"type": "number"},
+        "in": {"type": "array"}, "notIn": {"type": "array"}, "default": {"const": true}
+      },
+      "additionalProperties": true
+    },
+    "next": {
+      "oneOf": [
+        {"type": "string"},
+        {
+          "type": "object",
+          "required": ["default"],
+          "properties": {
+            "cases": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["when", "to"],
+                "properties": {"when": {"$ref": "#/$defs/condition"}, "to": {"type": "string"}}
+              }
+            },
+            "default": {"type": "string"}
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "choice": {
+      "type": "object",
+      "required": ["id", "text"],
+      "properties": {
+        "id": {"type": "string"}, "text": {"type": "string"}, "subtext": {"type": "string"},
+        "effects": {"type": "object", "additionalProperties": {"type": "number"}},
+        "setFlags": {"type": "object"}, "unsetFlags": {"type": "array", "items": {"type": "string"}},
+        "outcome": {"type": "string"}, "next": {"$ref": "#/$defs/next"}
+      },
+      "additionalProperties": false
+    },
+    "scene": {
+      "type": "object",
+      "required": ["id", "slot", "chapter", "content", "prompt", "choices"],
+      "properties": {
+        "id": {"type": "string"}, "slot": {"type": "integer", "minimum": 1},
+        "chapter": {"type": "string"}, "prompt": {"type": "string"}, "note": {"type": "string"},
+        "content": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["type", "text"],
+            "properties": {"type": {"enum": ["paragraph", "quote"]}, "text": {"type": "string"}},
+            "additionalProperties": false
+          }
+        },
+        "choices": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/choice"}},
+        "next": {"$ref": "#/$defs/next"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

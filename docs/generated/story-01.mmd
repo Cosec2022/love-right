@@ -1,0 +1,140 @@
+flowchart TD
+  START([Start]) --> s01_first_meeting
+  s01_first_meeting["01 · 第一次对视"]
+  s01_first_meeting -- "A" --> s02_detail
+  s01_first_meeting -- "B" --> s02_detail
+  s01_first_meeting -- "C" --> s02_detail
+  s01_first_meeting -- "D" --> s02_reencounter
+  s02_detail["02 · 他记住了一个细节"]
+  s02_detail -- "A" --> s03_rain
+  s02_detail -- "B" --> s03_rain
+  s02_detail -- "C" --> s03_rain
+  s02_detail -- "D" --> s03_rain
+  s03_rain["03 · 雨来得很突然"]
+  s03_rain -- "A" --> s04_message
+  s03_rain -- "B" --> s04_message
+  s03_rain -- "C" --> s04_message
+  s03_rain -- "D" --> s04_message
+  s04_message["04 · 第一条消息"]
+  s04_message -- "A" --> s05_silence
+  s04_message -- "B" --> s05_silence
+  s04_message -- "C" --> s05_silence
+  s04_message -- "D" --> s05_silence
+  s05_silence["05 · 第二天，他没有联系你"]
+  s05_silence -- "A" --> s06_record
+  s05_silence -- "B" --> s06_record
+  s05_silence -- "C" --> s06_record
+  s05_silence -- "D" --> s06_record
+  s06_record["06 · 他突然出现在你面前"]
+  s06_record -- "A" --> s07_date
+  s06_record -- "B" --> s07_date
+  s06_record -- "C" --> s07_date
+  s06_record -- "D" --> s07_date
+  s07_date["07 · 第一次真正的约会"]
+  s07_date -- "A" --> s08_name
+  s07_date -- "B" --> s08_name
+  s07_date -- "C" --> s08_name
+  s07_date -- "D" --> s08_name
+  s08_name["08 · 一个让你不舒服的名字"]
+  s08_name -- "A" --> s09_emotion
+  s08_name -- "B" --> s09_emotion
+  s08_name -- "C" --> s09_emotion
+  s08_name -- "D" --> s09_emotion
+  s09_emotion["09 · 他看出了你的情绪"]
+  s09_emotion -- "A" --> s10_confession
+  s09_emotion -- "B" --> s10_confession
+  s09_emotion -- "C" --> s10_confession
+  s09_emotion -- "D" --> s10_confession
+  s10_confession["10 · 他第一次向你坦白"]
+  s10_confession -- "A" --> s11_hand
+  s10_confession -- "B" --> s11_hand
+  s10_confession -- "C" --> s11_hand
+  s10_confession -- "D" --> s11_hand
+  s11_hand["11 · 距离忽然变近"]
+  s11_hand -- "A" --> s12_cancel
+  s11_hand -- "B" --> s12_cancel
+  s11_hand -- "C" --> s12_cancel
+  s11_hand -- "D" --> s12_cancel
+  s12_cancel["12 · 你们之间第一次冷下来"]
+  s12_cancel -- "A" --> s13_call
+  s12_cancel -- "B" --> s13_call
+  s12_cancel -- "C" --> s13_call
+  s12_cancel -- "D" --> s13_call
+  s13_call["13 · 深夜的电话"]
+  s13_call -- "A" --> s14_new_lead
+  s13_call -- "A" --> s14_last_day
+  s13_call -- "B" --> s14_new_lead
+  s13_call -- "B" --> s14_last_day
+  s13_call -- "C" --> s14_new_lead
+  s13_call -- "C" --> s14_last_day
+  s13_call -- "D" --> s14_new_lead
+  s13_call -- "D" --> s14_last_day
+  s14_last_day["14 · 最后一天"]
+  s14_last_day -- "A" --> s15_station
+  s14_last_day -- "B" --> s15_station
+  s14_last_day -- "C" --> s15_station
+  s14_last_day -- "D" --> s15_station
+  s15_station["15 · 他没有说“喜欢你”"]
+  s15_station -- "A" --> s16_missing
+  s15_station -- "B" --> s16_missing
+  s15_station -- "C" --> s16_missing
+  s15_station -- "D" --> s16_missing
+  s16_missing["16 · 一条没有按时到来的消息"]
+  s16_missing -- "A" --> s17_reality
+  s16_missing -- "B" --> s17_reality
+  s16_missing -- "C" --> s17_reality
+  s16_missing -- "D" --> s17_reality
+  s17_reality["17 · 现实开始进入这段关系"]
+  s17_reality -- "A" --> s18_new_lead
+  s17_reality -- "A" --> s18_invitation
+  s17_reality -- "B" --> s18_new_lead
+  s17_reality -- "B" --> s18_invitation
+  s17_reality -- "C" --> s18_new_lead
+  s17_reality -- "C" --> s18_invitation
+  s17_reality -- "D" --> s18_new_lead
+  s17_reality -- "D" --> s18_invitation
+  s18_invitation["18 · 未来向你打开了一扇门"]
+  s18_invitation -- "A" --> RESULT([Result])
+  s18_invitation -- "B" --> RESULT([Result])
+  s18_invitation -- "C" --> RESULT([Result])
+  s18_invitation -- "D" --> RESULT([Result])
+  s02_reencounter["02 · 第二次遇见"]
+  s02_reencounter -- "A" --> s03_reopened
+  s02_reencounter -- "B" --> s03_reopened
+  s02_reencounter -- "C" --> s03_reopened
+  s02_reencounter -- "D" --> s03_new_lead
+  s03_reopened["03 · 雨来得很突然"]
+  s03_reopened -- "A" --> s04_message
+  s03_reopened -- "B" --> s04_message
+  s03_reopened -- "C" --> s04_message
+  s03_reopened -- "D" --> s04_message
+  s03_new_lead["03 · 故事换了一条路"]
+  s03_new_lead -- "A" --> s04_new_lead
+  s03_new_lead -- "B" --> s04_new_lead
+  s03_new_lead -- "C" --> s04_new_lead
+  s03_new_lead -- "D" --> s04_new_lead
+  s04_new_lead["04 · 第一条消息"]
+  s04_new_lead -- "A" --> s05_new_lead
+  s04_new_lead -- "B" --> s05_new_lead
+  s04_new_lead -- "C" --> s05_new_lead
+  s04_new_lead -- "D" --> s05_new_lead
+  s05_new_lead["05 · 第二天，他没有联系你"]
+  s05_new_lead -- "A" --> s06_new_lead
+  s05_new_lead -- "B" --> s06_new_lead
+  s05_new_lead -- "C" --> s06_new_lead
+  s05_new_lead -- "D" --> s06_new_lead
+  s06_new_lead["06 · 第三次见面"]
+  s06_new_lead -- "A" --> s07_date
+  s06_new_lead -- "B" --> s07_date
+  s06_new_lead -- "C" --> s07_date
+  s06_new_lead -- "D" --> s07_date
+  s14_new_lead["14 · 最后一天"]
+  s14_new_lead -- "A" --> s15_station
+  s14_new_lead -- "B" --> s15_station
+  s14_new_lead -- "C" --> s15_station
+  s14_new_lead -- "D" --> s15_station
+  s18_new_lead["18 · 未来向你打开了一扇门"]
+  s18_new_lead -- "A" --> RESULT([Result])
+  s18_new_lead -- "B" --> RESULT([Result])
+  s18_new_lead -- "C" --> RESULT([Result])
+  s18_new_lead -- "D" --> RESULT([Result])

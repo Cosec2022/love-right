@@ -1,0 +1,20 @@
+{
+  "name": "love-right",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Love Right — a reusable interactive romance story and projection engine by CosecLab.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "validate": "node scripts/validate-stories.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run validate && npm run static-check && npm test",
+    "new-story": "node scripts/new-story.mjs",
+    "deploy": "npm run check && wrangler deploy",
+    "static-check": "node scripts/check-static.mjs",
+    "graph": "node scripts/story-graph.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

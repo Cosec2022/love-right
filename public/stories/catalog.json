@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "stories": [
+    {
+      "id": "story-01",
+      "slug": "summer-wind",
+      "status": "published",
+      "title": "那年夏天，风替他说了喜欢",
+      "series": "LOVE RIGHT · STORY 01",
+      "description": "在一段18幕的海边恋爱故事里，看见自己靠近、犹豫与确认爱的方式。",
+      "estimatedMinutes": 8,
+      "coverTheme": "night-rose",
+      "storyUrl": "./stories/story-01/story.json",
+      "resultsUrl": "./stories/story-01/results.json"
+    }
+  ]
+}

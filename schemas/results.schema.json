@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://love-right.coseclab.dev/schemas/results.schema.json",
+  "title": "Love Right Dynamic Results Package",
+  "type": "object",
+  "required": ["schemaVersion", "storyId", "meters", "archetypes", "sections"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "storyId": {"type": "string"},
+    "meters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "components"],
+        "properties": {
+          "id": {"type": "string"}, "label": {"type": "string"},
+          "components": {
+            "type": "array", "minItems": 1,
+            "items": {
+              "type": "object", "required": ["trait"],
+              "properties": {"trait": {"type": "string"}, "weight": {"type": "number"}, "inverse": {"type": "boolean"}},
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "archetypes": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["id", "title", "tagline", "target", "tags"],
+        "properties": {
+          "id": {"type": "string"}, "title": {"type": "string"}, "tagline": {"type": "string"},
+          "target": {"type": "object", "additionalProperties": {"type": "number"}},
+          "weights": {"type": "object", "additionalProperties": {"type": "number"}},
+          "tags": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "sections": {"type": "object"}
+  },
+  "additionalProperties": false
+}
