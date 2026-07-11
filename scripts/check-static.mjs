@@ -24,9 +24,20 @@ for (const file of [
   "app/engine/story-engine.js",
   "app/engine/score-engine.js",
   "app/engine/result-engine.js",
+  "app/engine/result-compressor.js",
   "app/ui/renderer.js",
   "stories/catalog.json"
 ]) await access(path.join(publicDir, file));
+
+if (html.includes("你的心动参数") || html.includes('id="meterGrid"')) {
+  console.error("Legacy parameter grid is still exposed in the primary result page.");
+  process.exit(1);
+}
+
+if (!html.includes('id="contradictionCopy"') || !html.includes('id="insightGrid"') || !html.includes('id="moveList"')) {
+  console.error("Memory-first result sections are missing.");
+  process.exit(1);
+}
 
 if (!html.includes('type="module" src="./app/main.js"')) {
   console.error("index.html does not load the application module.");

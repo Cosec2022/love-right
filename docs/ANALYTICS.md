@@ -5,7 +5,7 @@
 只有同时满足以下条件才会发送匿名事件：
 
 ```text
-存在 LOVE_BAY_ANALYTICS_ENDPOINT
+存在 LOVE_RIGHT_ANALYTICS_ENDPOINT
 且本机 love-right:analytics-consent = granted
 ```
 

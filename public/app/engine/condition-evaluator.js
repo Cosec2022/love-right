@@ -10,16 +10,32 @@ const compare = (value, rule) => {
   return Boolean(value);
 };
 
+const getPath = (source, path) => String(path ?? "")
+  .split(".")
+  .filter(Boolean)
+  .reduce((value, key) => value?.[key], source);
+
+const comparePath = (value, op, expected) => {
+  switch (op) {
+    case "==": case "=": case "equals": return value === expected;
+    case "!=": case "notEquals": return value !== expected;
+    case ">=": return Number(value) >= Number(expected);
+    case "<=": return Number(value) <= Number(expected);
+    case ">": return Number(value) > Number(expected);
+    case "<": return Number(value) < Number(expected);
+    case "in": return Array.isArray(expected) && expected.includes(value);
+    case "notIn": return Array.isArray(expected) && !expected.includes(value);
+    default: return Boolean(value);
+  }
+};
+
 export function evaluateCondition(condition, context = {}) {
   if (!condition || condition.default === true) return true;
-  if (Array.isArray(condition.all)) {
-    return condition.all.every((part) => evaluateCondition(part, context));
-  }
-  if (Array.isArray(condition.any)) {
-    return condition.any.some((part) => evaluateCondition(part, context));
-  }
+  if (Array.isArray(condition.all)) return condition.all.every((part) => evaluateCondition(part, context));
+  if (Array.isArray(condition.any)) return condition.any.some((part) => evaluateCondition(part, context));
   if (condition.not) return !evaluateCondition(condition.not, context);
 
+  if (condition.path) return comparePath(getPath(context, condition.path), condition.op, condition.value);
   if (condition.flag) return compare(context.flags?.[condition.flag], condition);
   if (condition.trait) return compare(context.traits?.[condition.trait], condition);
   if (condition.rawTrait) return compare(context.rawTraits?.[condition.rawTrait], condition);
@@ -33,7 +49,6 @@ export function evaluateCondition(condition, context = {}) {
       (!condition.answer.choiceId || answer.choiceId === condition.answer.choiceId)
     ) ?? false;
   }
-
   return false;
 }
 

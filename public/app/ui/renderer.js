@@ -33,8 +33,8 @@ export class Renderer {
         <p></p>
         <span class="entry-meta">
           <span class="engine-badge">${story.estimatedMinutes ?? 8} 分钟</span>
-          <span class="engine-badge">互动分支</span>
-          <span class="engine-badge">动态结果</span>
+          <span class="engine-badge">${story.audience === "male" ? "男性视角" : "女性视角"}</span>
+          <span class="engine-badge">空间结果</span>
         </span>`;
       button.querySelector(".entry-kicker").textContent = story.series;
       button.querySelector("h2").textContent = story.title;
@@ -110,18 +110,35 @@ export class Renderer {
   }
 
   renderResult(result, story) {
-    el("resultTitle").textContent = result.archetype.title;
-    el("resultTagline").textContent = result.archetype.tagline;
-    appendParagraphs(el("endingCopy"), result.ending);
-    appendParagraphs(el("psychologyCopy"), result.psychology);
-    appendParagraphs(el("historyCopy"), result.history);
+    el("resultTitle").textContent = result.memory.title;
+    el("resultTagline").textContent = result.memory.hook;
+    el("resultLabel").textContent = result.memory.label;
 
-    const labels = Object.fromEntries(result.meterDefinitions.map((meter) => [meter.id, meter.label]));
-    el("meterGrid").innerHTML = Object.entries(result.meters).map(([id, score]) => `
-      <div class="meter-card">
-        <div class="meter-head"><span>${labels[id] ?? id}</span><span>${score}</span></div>
-        <div class="meter-track"><div class="meter-fill" data-score="${score}"></div></div>
-      </div>`).join("");
+    el("contradictionTitle").textContent = result.memory.contradiction.title;
+    el("contradictionCopy").textContent = result.memory.contradiction.text;
+
+    el("insightGrid").replaceChildren(...result.memory.insights.map((item, index) => {
+      const card = document.createElement("article");
+      card.className = "insight-card";
+      card.dataset.no = `0${index + 1}`;
+      const title = document.createElement("h3");
+      title.textContent = item.title;
+      const copy = document.createElement("p");
+      copy.textContent = item.text;
+      card.append(title, copy);
+      return card;
+    }));
+
+    el("moveList").replaceChildren(...result.memory.moves.map((item) => {
+      const row = document.createElement("div");
+      row.className = "move-row";
+      const title = document.createElement("strong");
+      title.textContent = item.title;
+      const copy = document.createElement("span");
+      copy.textContent = item.text;
+      row.append(title, copy);
+      return row;
+    }));
 
     const evidence = el("evidenceList");
     evidence.replaceChildren();
@@ -130,11 +147,15 @@ export class Renderer {
       card.className = "evidence-item";
       const title = document.createElement("strong");
       title.textContent = `${item.chapter} · ${item.choice}`;
-      const influence = document.createElement("span");
-      influence.textContent = item.influence || "这次选择影响了整体关系模式。";
-      card.append(title, influence);
+      const meaning = document.createElement("span");
+      meaning.textContent = item.meaning;
+      card.append(title, meaning);
       evidence.appendChild(card);
     }
+
+    appendParagraphs(el("endingCopy"), result.ending);
+    appendParagraphs(el("psychologyCopy"), result.psychology);
+    appendParagraphs(el("historyCopy"), result.history);
 
     el("futureGrid").innerHTML = result.future.map((item, index) => `
       <div class="story-card" data-no="0${index + 1}"><h3></h3><p></p></div>`).join("");
@@ -164,11 +185,6 @@ export class Renderer {
 
     el("resultFooter").textContent = `${story.metadata.disclaimer} Love Right · A CosecLab Experiment`;
     this.show("resultScreen");
-    requestAnimationFrame(() => setTimeout(() => {
-      document.querySelectorAll(".meter-fill").forEach((node) => {
-        node.style.width = `${node.dataset.score}%`;
-      });
-    }, 80));
   }
 
   error(message) {

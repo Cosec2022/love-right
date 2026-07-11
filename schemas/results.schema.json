@@ -3,20 +3,56 @@
   "$id": "https://love-right.coseclab.dev/schemas/results.schema.json",
   "title": "Love Right Spatial Results Package v2",
   "type": "object",
-  "required": ["schemaVersion", "storyId", "spatialModel", "meters", "archetypes", "sections"],
+  "required": [
+    "schemaVersion",
+    "storyId",
+    "spatialModel",
+    "meters",
+    "archetypes",
+    "sections"
+  ],
   "properties": {
-    "schemaVersion": {"const": 2},
-    "storyId": {"type": "string"},
+    "schemaVersion": {
+      "const": 2
+    },
+    "storyId": {
+      "type": "string"
+    },
     "spatialModel": {
       "type": "object",
       "properties": {
-        "mode": {"enum": ["cluster", "spatial"]},
-        "blendThreshold": {"type": "number", "minimum": 0},
+        "mode": {
+          "enum": [
+            "cluster",
+            "spatial"
+          ]
+        },
+        "blendThreshold": {
+          "type": "number",
+          "minimum": 0
+        },
         "blendPairs": {
           "type": "array",
-          "items": {"type": "array", "prefixItems": [{"type": "string"}, {"type": "string"}], "minItems": 2, "maxItems": 2}
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 2,
+            "maxItems": 2
+          }
         },
-        "weights": {"type": "object", "additionalProperties": {"type": "number"}}
+        "weights": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        }
       },
       "additionalProperties": true
     },
@@ -24,16 +60,39 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "label", "components"],
+        "required": [
+          "id",
+          "label",
+          "components"
+        ],
         "properties": {
-          "id": {"type": "string"}, "label": {"type": "string"},
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
           "components": {
-            "type": "array", "minItems": 1,
+            "type": "array",
+            "minItems": 1,
             "items": {
-              "type": "object", "required": ["trait"],
+              "type": "object",
+              "required": [
+                "trait"
+              ],
               "properties": {
-                "trait": {"type": "string"}, "weight": {"type": "number"},
-                "inverse": {"type": "boolean"}, "context": {"type": "string"}
+                "trait": {
+                  "type": "string"
+                },
+                "weight": {
+                  "type": "number"
+                },
+                "inverse": {
+                  "type": "boolean"
+                },
+                "context": {
+                  "type": "string"
+                }
               },
               "additionalProperties": false
             }
@@ -43,24 +102,105 @@
       }
     },
     "archetypes": {
-      "type": "array", "minItems": 1,
+      "type": "array",
+      "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["id", "title", "tagline", "tags"],
+        "required": [
+          "id",
+          "title",
+          "tagline",
+          "tags"
+        ],
         "properties": {
-          "id": {"type": "string"}, "title": {"type": "string"}, "tagline": {"type": "string"},
-          "center": {"type": "object", "additionalProperties": {"type": "number"}},
-          "target": {"type": "object", "additionalProperties": {"type": "number"}},
-          "weights": {"type": "object", "additionalProperties": {"type": "number"}},
-          "contextCenters": {"type": "object"}, "interactionTargets": {"type": "array"},
-          "consistencyAxes": {"type": "array", "items": {"type": "string"}},
-          "gates": {"type": "array"}, "gatePenalty": {"type": "number"}, "bias": {"type": "number"},
-          "tags": {"type": "array", "items": {"type": "string"}}
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "tagline": {
+            "type": "string"
+          },
+          "center": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number"
+            }
+          },
+          "target": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number"
+            }
+          },
+          "weights": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number"
+            }
+          },
+          "contextCenters": {
+            "type": "object"
+          },
+          "interactionTargets": {
+            "type": "array"
+          },
+          "consistencyAxes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "gates": {
+            "type": "array"
+          },
+          "gatePenalty": {
+            "type": "number"
+          },
+          "bias": {
+            "type": "number"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
         },
         "additionalProperties": true
       }
     },
-    "sections": {"type": "object"}
+    "sections": {
+      "type": "object"
+    },
+    "memoryProfiles": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "hook": {
+            "type": "string"
+          },
+          "contradiction": {
+            "type": "string"
+          },
+          "attraction": {
+            "type": "string"
+          },
+          "fear": {
+            "type": "string"
+          },
+          "fit": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
   },
   "additionalProperties": false
 }

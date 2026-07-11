@@ -8,7 +8,7 @@ import { Renderer } from "./ui/renderer.js";
 const renderer = new Renderer();
 const store = new SessionStore();
 const analytics = new AnalyticsClient({
-  endpoint: globalThis.LOVE_BAY_ANALYTICS_ENDPOINT ?? null,
+  endpoint: globalThis.LOVE_RIGHT_ANALYTICS_ENDPOINT ?? null,
   consent: localStorage.getItem("love-right:analytics-consent") === "granted"
 });
 
@@ -99,15 +99,13 @@ async function showLibrary({ pushUrl = true } = {}) {
 
 async function copyResult() {
   if (!latestResult) return;
-  const labels = Object.fromEntries(latestResult.meterDefinitions.map((meter) => [meter.id, meter.label]));
-  const topMeters = Object.entries(latestResult.meters).sort((a, b) => b[1] - a[1]).slice(0, 3);
   const text = [
-    `我在 Love Right《${story.metadata.title}》里的恋爱心理是「${latestResult.archetype.title}」`,
-    latestResult.archetype.tagline,
+    `我在 Love Right《${story.metadata.title}》里是「${latestResult.memory.title}」`,
+    latestResult.memory.hook,
     "",
-    `最高三项：${topMeters.map(([id, score]) => `${labels[id]} ${score}`).join(" / ")}`,
-    "",
-    `未来剧情：${latestResult.future[0]?.text ?? ""}`,
+    `最矛盾：${latestResult.memory.contradiction.text}`,
+    `会被打动：${latestResult.memory.insights[0]?.text ?? ""}`,
+    `适合的人：${latestResult.memory.insights[2]?.text ?? ""}`,
     "",
     "娱乐性叙事情境投射，不是心理诊断或未来预言。"
   ].join("\n");

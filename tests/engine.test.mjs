@@ -51,6 +51,11 @@ test("all published stories complete in exactly 18 answers and build spatial res
     const scorer = new ScoreEngine(story);
     const result = new ResultEngine(story, results, scorer).build(engine.state);
     assert.ok(result.archetype.title, story.id);
+    assert.ok(result.memory.title, `${story.id}: memory title`);
+    assert.ok(result.memory.hook, `${story.id}: memory hook`);
+    assert.equal(result.memory.insights.length, 3, `${story.id}: three memorable insights`);
+    assert.equal(result.memory.moves.length, 4, `${story.id}: four relationship moves`);
+    assert.equal(result.evidence.length, 3, `${story.id}: three story moments`);
     assert.equal(Object.keys(result.traits).length, 16, story.id);
     assert.equal(Object.keys(result.meters).length, 8, story.id);
     assert.equal(result.future.length, 3, story.id);
@@ -133,4 +138,19 @@ test("male-target story is present and uses a female lead", async () => {
   assert.equal(story.metadata.audience, "male");
   assert.match(story.metadata.subtitle, /她/);
   assert.equal(story.metadata.tags.includes("男性视角"), true);
+});
+
+
+test("memory-first titles stay distinct and avoid parameter-style naming", async () => {
+  for (const { story, results } of publishedPackages) {
+    const resultEngine = new ResultEngine(story, results, new ScoreEngine(story));
+    const titles = [];
+    for (let index = 0; index < 4; index += 1) {
+      const result = resultEngine.build(completeWithPattern(story, index).state);
+      titles.push(result.memory.title);
+      assert.equal(/型$/.test(result.memory.title), false, `${story.id}: ${result.memory.title}`);
+      assert.equal(result.memory.title.includes("分"), false, `${story.id}: ${result.memory.title}`);
+    }
+    assert.ok(new Set(titles).size >= 3, `${story.id}: ${titles.join(",")}`);
+  }
 });

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "stories": [
     {
       "id": "story-01",
@@ -7,11 +7,51 @@
       "status": "published",
       "title": "那年夏天，风替他说了喜欢",
       "series": "LOVE RIGHT · STORY 01",
-      "description": "在一段18幕的海边恋爱故事里，看见自己靠近、犹豫与确认爱的方式。",
+      "description": "海边偶遇与七日心动。测试你在陌生、暧昧和距离里的靠近方式。",
       "estimatedMinutes": 8,
+      "audience": "female",
       "coverTheme": "night-rose",
       "storyUrl": "./stories/story-01/story.json",
       "resultsUrl": "./stories/story-01/results.json"
+    },
+    {
+      "id": "story-02",
+      "slug": "last-train",
+      "status": "published",
+      "title": "最后一班地铁之前",
+      "series": "LOVE RIGHT · STORY 02",
+      "description": "职场慢热线：可靠、克制、尊重边界的他，能不能进入你的现实生活？",
+      "estimatedMinutes": 10,
+      "audience": "female",
+      "coverTheme": "midnight-office",
+      "storyUrl": "./stories/story-02/story.json",
+      "resultsUrl": "./stories/story-02/results.json"
+    },
+    {
+      "id": "story-03",
+      "slug": "after-wedding",
+      "status": "published",
+      "title": "婚礼散场以后",
+      "series": "LOVE RIGHT · STORY 03",
+      "description": "旧识重逢线：他记得过去，却不拿过去要求你。你会重新认识，还是让遗憾留在原处？",
+      "estimatedMinutes": 10,
+      "audience": "female",
+      "coverTheme": "river-wedding",
+      "storyUrl": "./stories/story-03/story.json",
+      "resultsUrl": "./stories/story-03/results.json"
+    },
+    {
+      "id": "story-04",
+      "slug": "name-on-cup",
+      "status": "published",
+      "title": "她把你的名字写在杯套背面",
+      "series": "LOVE RIGHT · STORY 04",
+      "description": "男性视角：聪明、松弛、明确的她，要去很远的地方时，你会如何选择？",
+      "estimatedMinutes": 10,
+      "audience": "male",
+      "coverTheme": "coffee-film",
+      "storyUrl": "./stories/story-04/story.json",
+      "resultsUrl": "./stories/story-04/results.json"
     }
   ]
 }

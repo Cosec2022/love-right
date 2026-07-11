@@ -1,97 +1,67 @@
 {
+  "generatedAt": "2026-07-11T08:07:49.506Z",
+  "method": "engine route simulation plus static mobile result render",
   "catalog": {
-    "count": 4,
-    "titles": [
-      "那年夏天，风替他说了喜欢",
-      "最后一班地铁之前",
-      "婚礼散场以后",
-      "她把你的名字写在杯套背面"
-    ],
-    "overflow": 0
+    "count": 4
   },
   "stories": [
     {
       "title": "那年夏天，风替他说了喜欢",
       "answers": 18,
-      "result": "反差拉扯型",
-      "meters": 8,
+      "memoryTitle": "总想把关系照顾好的人",
+      "contradiction": "你很会理解对方，却容易把自己的委屈也一起解释掉。",
+      "insights": 3,
+      "moves": 4,
+      "evidence": 3,
       "traits": 16,
-      "evidence": 4,
+      "visibleParameterBars": 0,
       "history": 2,
-      "future": 3,
-      "overflow": 0,
-      "backTested": true
+      "future": 3
     },
     {
       "title": "最后一班地铁之前",
       "answers": 18,
-      "result": "温柔修复型",
-      "meters": 8,
+      "memoryTitle": "总想把关系照顾好的人",
+      "contradiction": "你很会理解对方，却容易把自己的委屈也一起解释掉。",
+      "insights": 3,
+      "moves": 4,
+      "evidence": 3,
       "traits": 16,
-      "evidence": 4,
+      "visibleParameterBars": 0,
       "history": 2,
-      "future": 3,
-      "overflow": 0,
-      "backTested": false
+      "future": 3
     },
     {
       "title": "婚礼散场以后",
       "answers": 18,
-      "result": "偏爱确认型 · 带一点清醒慢热型",
-      "meters": 8,
+      "memoryTitle": "会把细节记很久的人",
+      "contradiction": "你能被一个细节打动很久，也会因为另一个细节突然失去感觉。",
+      "insights": 3,
+      "moves": 4,
+      "evidence": 3,
       "traits": 16,
-      "evidence": 4,
+      "visibleParameterBars": 0,
       "history": 2,
-      "future": 3,
-      "overflow": 0,
-      "backTested": false
+      "future": 3
     },
     {
       "title": "她把你的名字写在杯套背面",
       "answers": 18,
-      "result": "浪漫共振型",
-      "meters": 8,
+      "memoryTitle": "总想把关系照顾好的人",
+      "contradiction": "你很会理解对方，却容易把自己的委屈也一起解释掉。",
+      "insights": 3,
+      "moves": 4,
+      "evidence": 3,
       "traits": 16,
-      "evidence": 4,
+      "visibleParameterBars": 0,
       "history": 2,
-      "future": 3,
-      "overflow": 0,
-      "backTested": false
+      "future": 3
     }
   ],
-  "errors": [],
-  "appealCallbacks": {
-    "steady": {
-      "slots": [
-        6,
-        12,
-        17
-      ],
-      "verified": true
-    },
-    "witty": {
-      "slots": [
-        6,
-        12,
-        17
-      ],
-      "verified": true
-    },
-    "gentle": {
-      "slots": [
-        6,
-        12,
-        17
-      ],
-      "verified": true
-    },
-    "direct": {
-      "slots": [
-        6,
-        12,
-        17
-      ],
-      "verified": true
-    }
-  }
+  "visualPreview": {
+    "file": "result-memory-mobile.png",
+    "viewport": "390x844",
+    "horizontalOverflow": 0
+  },
+  "errors": []
 }

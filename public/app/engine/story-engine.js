@@ -28,7 +28,7 @@ export class StoryEngine {
       sessionId: makeSessionId(),
       currentSceneId: this.story.initialScene,
       answers: [],
-      rawTraits: Object.fromEntries(this.story.traits.map((trait) => [trait.id, 0])),
+      rawTraits: Object.fromEntries((this.story.space?.axes ?? this.story.traits ?? []).map((trait) => [trait.id, 0])),
       flags: {},
       visited: [this.story.initialScene],
       outcome: null,
@@ -106,14 +106,20 @@ export class StoryEngine {
       chapter: scene.chapter,
       choiceId: choice.id,
       choiceText: choice.text,
-      effects: clone(choice.effects ?? {}),
+      vector: clone(choice.vector ?? choice.effects ?? {}),
+      context: choice.context ?? scene.context ?? "general",
+      intensity: choice.intensity ?? 1,
+      confidence: choice.confidence ?? 1,
+      cross: clone(choice.cross ?? []),
+      effects: clone(choice.effects ?? choice.vector ?? {}),
       outcome: choice.outcome ?? null,
       answeredAt: Date.now()
     };
     this.state.answers.push(answer);
 
-    for (const trait of this.story.traits) {
-      this.state.rawTraits[trait.id] += choice.effects?.[trait.id] ?? 0;
+    for (const axis of this.story.space?.axes ?? this.story.traits ?? []) {
+      this.state.rawTraits[axis.id] ??= 0;
+      this.state.rawTraits[axis.id] += answer.vector?.[axis.id] ?? 0;
     }
     Object.assign(this.state.flags, choice.setFlags ?? {});
     for (const flag of choice.unsetFlags ?? []) delete this.state.flags[flag];

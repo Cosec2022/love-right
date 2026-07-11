@@ -1,4 +1,5 @@
 import { evaluateCondition } from "./condition-evaluator.js";
+import { buildMemoryProfile } from "./result-compressor.js";
 
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
@@ -190,31 +191,46 @@ export class ResultEngine {
   }
 
   buildEvidence(answers, scoring) {
-    const traits = scoring.traits;
-    const topTraits = Object.entries(traits)
-      .sort((a, b) => Math.abs(b[1] - 50) - Math.abs(a[1] - 50))
-      .slice(0, 5)
-      .map(([id]) => id);
-    const labels = Object.fromEntries((this.story.space?.axes ?? this.story.traits ?? []).map((axis) => [axis.id, axis.label]));
+    const contextMeaning = {
+      approach: "这一步说明你在最初的心动里，会先决定自己愿意交出多少主动权。",
+      intimacy: "这一步说明真正拉近距离的，不只是气氛，而是你有没有感觉自己被认真看见。",
+      ambiguity: "这一步说明关系一旦变得模糊，你会怎样寻找答案，或把自己先收回来。",
+      jealousy: "这一步说明出现竞争感时，你会同时观察自己的位置和对方的边界。",
+      rupture: "这一步说明面对失望时，你更习惯说开、等待，还是先保护自己。",
+      commitment: "这一步说明你是否愿意把心动带进现实，并承担关系接下来的重量。",
+      general: "这一步留下了你面对亲密关系时最自然的反应。"
+    };
 
-    return answers
-      .map((answer) => {
-        const vector = answer.vector ?? answer.effects ?? {};
-        const relevant = topTraits
-          .filter((axisId) => vector[axisId])
-          .map((axisId) => ({ id: axisId, value: vector[axisId] }));
-        const strength = relevant.reduce((sum, item) => sum + Math.abs(item.value), 0);
-        return {
-          strength,
-          chapter: answer.chapter,
-          choice: answer.choiceText,
-          context: answer.context ?? "general",
-          influence: relevant.map((item) => `${labels[item.id] ?? item.id}${item.value > 0 ? "+" : ""}${item.value}`).join(" · ")
-        };
-      })
-      .filter((item) => item.strength > 0)
-      .sort((a, b) => b.strength - a.strength)
-      .slice(0, 4);
+    const items = answers.map((answer, index) => {
+      const vector = answer.vector ?? answer.effects ?? {};
+      return {
+        index,
+        strength: Object.values(vector).reduce((sum, value) => sum + Math.abs(Number(value) || 0), 0),
+        chapter: answer.chapter,
+        choice: answer.choiceText,
+        context: answer.context ?? "general",
+        meaning: contextMeaning[answer.context ?? "general"] ?? contextMeaning.general
+      };
+    });
+
+    const groups = [
+      new Set(["approach", "intimacy"]),
+      new Set(["ambiguity", "jealousy", "rupture"]),
+      new Set(["commitment"])
+    ];
+    const selected = [];
+    for (const group of groups) {
+      const candidate = items
+        .filter((item) => group.has(item.context) && !selected.includes(item))
+        .sort((a, b) => b.strength - a.strength || a.index - b.index)[0];
+      if (candidate) selected.push(candidate);
+    }
+    for (const item of [...items].sort((a, b) => b.strength - a.strength || a.index - b.index)) {
+      if (selected.length >= 3) break;
+      if (!selected.includes(item)) selected.push(item);
+    }
+
+    return selected.sort((a, b) => a.index - b.index).slice(0, 3);
   }
 
   build(state) {
@@ -251,6 +267,7 @@ export class ResultEngine {
     const future = (sections.future ?? []).map((slot) => ({ title: slot.title, text: selectFirst(slot.rules, context) }));
     const match = [sections.match.base, ...selectAll(sections.match.appendRules, context)].filter(Boolean).join(" ");
     const warning = selectFirst(sections.warning.rules, context);
+    const memory = buildMemoryProfile(archetype, meters, this.resultsSpec);
 
     return {
       story: this.story.metadata,
@@ -260,6 +277,7 @@ export class ResultEngine {
       meters,
       meterDefinitions: this.resultsSpec.meters,
       archetype,
+      memory,
       ending: [endingBase, endingTail].filter(Boolean),
       psychology: [psychologyBase, psychologyTail].filter(Boolean),
       history,

@@ -16,7 +16,7 @@
     <header class="topbar">
       <button id="brandBtn" class="brand" type="button">COSEC LAB · LOVE RIGHT</button>
       <div class="topbar-actions">
-        <span class="tiny-note">互动叙事引擎 v0.4.1</span>
+        <span class="tiny-note">互动叙事引擎 v0.4.2</span>
         <button id="libraryBtn" class="topbar-button" type="button" hidden>故事库</button>
       </div>
     </header>
@@ -67,22 +67,30 @@
     <section id="resultScreen" class="screen">
       <article class="card result-card">
         <div class="result-hero">
-          <p class="result-kicker">故事抵达以后 · 这段选择读出的你</p>
+          <p class="result-kicker">故事抵达以后 · 你最容易记住的自己</p>
           <h2 id="resultTitle" class="result-title"></h2>
           <p id="resultTagline" class="result-tagline"></p>
+          <span id="resultLabel" class="result-label"></span>
         </div>
         <div class="result-body">
-          <h3 class="section-title">你在这个故事里的结局</h3>
+          <section class="contradiction-card">
+            <p id="contradictionTitle" class="contradiction-kicker"></p>
+            <p id="contradictionCopy" class="contradiction-copy"></p>
+          </section>
+
+          <div id="insightGrid" class="insight-grid"></div>
+
+          <h3 class="section-title">你在关系里的四个动作</h3>
+          <div id="moveList" class="move-list"></div>
+
+          <h3 class="section-title">系统记住的三个瞬间</h3>
+          <div id="evidenceList" class="evidence-list"></div>
+
+          <h3 class="section-title">故事给你的结局</h3>
           <div id="endingCopy" class="copy-block"></div>
 
-          <h3 class="section-title">你真正想要的恋爱</h3>
+          <h3 class="section-title">读深一点</h3>
           <div id="psychologyCopy" class="copy-block"></div>
-
-          <h3 class="section-title">你的心动参数</h3>
-          <div id="meterGrid" class="meter-grid"></div>
-
-          <h3 class="section-title">系统为什么这样判断</h3>
-          <div id="evidenceList" class="evidence-list"></div>
 
           <h3 class="section-title">你的过去，可能留下了什么</h3>
           <div id="historyCopy" class="copy-block"></div>
@@ -90,15 +98,16 @@
           <h3 class="section-title">下一段恋爱的三幕预告</h3>
           <div id="futureGrid" class="story-grid"></div>
 
-          <h3 class="section-title">真正适合你的对象</h3>
+          <h3 class="section-title">适合你的对象，具体一点</h3>
           <div id="matchTags" class="type-tags"></div>
           <div id="matchCopy" class="copy-block" style="margin-top:10px"></div>
 
           <h3 class="section-title">你最容易误判的信号</h3>
           <div id="warningCopy" class="warning-card"></div>
 
-          <details>
-            <summary>查看底层恋爱维度</summary>
+          <details class="research-details">
+            <summary>研究模式：查看16维底层数据</summary>
+            <p class="research-note">这些数据用于引擎区分相似选择，不是需要记住的测试结果。</p>
             <div id="traitGrid" class="trait-grid"></div>
           </details>
 
