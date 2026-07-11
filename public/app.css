@@ -1119,3 +1119,121 @@
   }
 }
 /* Love Right brand icon v0.5.6-fix END */
+
+/* Love Right homepage UI tuning · v0.6.1 */
+.lr-home-slogan {
+  max-width: 780px;
+  margin-top: 20px;
+  font-size: clamp(24px, 4vw, 34px);
+  line-height: 1.5;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.story-audience-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 20px 0 28px;
+  padding: 12px 16px;
+  border: 1px solid rgba(140, 112, 121, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(12px);
+}
+
+.story-audience-filter__label {
+  color: #8f6a73;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+}
+
+.story-audience-filter__buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.story-audience-filter__button {
+  appearance: none;
+  border: 1px solid rgba(141, 97, 111, 0.16);
+  background: rgba(252, 249, 247, 0.94);
+  color: #86616a;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.story-audience-filter__button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(141, 97, 111, 0.28);
+  box-shadow: 0 10px 24px rgba(61, 40, 53, 0.08);
+}
+
+.story-audience-filter__button.is-active {
+  color: #fffaf8;
+  border-color: #8b4655;
+  background: linear-gradient(135deg, #8b4655, #a45764);
+  box-shadow: 0 12px 24px rgba(120, 57, 73, 0.18);
+}
+
+.story-inline-badges {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+.story-inline-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+
+.story-inline-badge--forbidden {
+  color: #95515a;
+  border: 1px solid rgba(149, 81, 90, .34);
+  background: rgba(255, 247, 247, .88);
+}
+
+.story-inline-badge--adult {
+  color: #fff9f7;
+  border: 1px solid #7f3542;
+  background: #7f3542;
+  box-shadow: 0 8px 18px rgba(96, 36, 48, .14);
+}
+
+@media (max-width: 760px) {
+  .story-audience-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .lr-home-slogan {
+    font-size: 20px;
+  }
+  .story-inline-badges {
+    margin-left: 0;
+    width: 100%;
+  }
+  .story-inline-badge {
+    min-height: 32px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+}
+/* End Love Right homepage UI tuning · v0.6.1 */
