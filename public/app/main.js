@@ -12,7 +12,7 @@ const REQUIRED_DOM_IDS = [
   "quizScreen", "progressBar", "progressText", "chapter", "sceneCopy", "question", "sceneNote", "options", "backBtn", "decisionBanner", "decisionLabel", "decisionNote",
   "revealScreen", "revealEyebrow", "revealStoryTitle", "revealTitle", "revealCopy", "revealContinueBtn",
   "resultScreen", "resultTitle", "resultTagline", "resultLabel", "endingStoryTitle", "endingCopy", "contradictionTitle", "contradictionCopy", "insightGrid", "emotionIndexGrid", "moveList", "evidenceList", "psychologyCopy", "historyCopy", "futureGrid", "matchTags", "matchCopy", "warningCopy", "traitGrid", "restartBtn", "shareBtn", "resultFooter",
-  "errorScreen", "errorMessage", "toast"
+  "errorScreen", "errorMessage", "errorRecoveryBtn", "toast"
 ];
 
 const missingDomIds = (root = document) => REQUIRED_DOM_IDS.filter((id) => !root.getElementById(id));
@@ -190,6 +190,13 @@ document.getElementById("restartBtn").addEventListener("click", () => {
 document.getElementById("shareBtn").addEventListener("click", copyResult);
 document.getElementById("libraryBtn").addEventListener("click", () => showLibrary());
 document.getElementById("brandBtn").addEventListener("click", () => showLibrary());
+document.getElementById("errorRecoveryBtn").addEventListener("click", () => {
+  if (catalog) showLibrary({ pushUrl: false });
+  else {
+    catalogPromise = null;
+    bootstrap();
+  }
+});
 for (const id of ["filterAll", "filterFemale", "filterMale"]) {
   document.getElementById(id).addEventListener("click", (event) => {
     selectedAudience = event.currentTarget.dataset.audience;

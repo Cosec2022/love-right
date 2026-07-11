@@ -85,6 +85,8 @@ test("story package failures reach an explicit error screen", async ({ page }) =
   await page.route("**/stories/story-01/story.json", (route) => route.fulfill({ status: 500, body: "story failure" }));
   await page.getByRole("button", { name: /那年夏天，风替他说了喜欢/ }).click();
   await expect(page.locator("#errorScreen.active")).toContainText("无法载入");
+  await page.getByRole("button", { name: "返回故事库", exact: true }).click();
+  await waitForLibrary(page);
 });
 
 test("research mode shows sixteen numeric values without qualitative labels", async ({ page }) => {
