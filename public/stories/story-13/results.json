@@ -1,0 +1,515 @@
+{
+  "schemaVersion": 2,
+  "storyId": "story-13",
+  "spatialModel": {
+    "mode": "cluster",
+    "blendThreshold": 0.0065,
+    "weights": {
+      "distance": 1
+    },
+    "blendPairs": [
+      [
+        "clear-slow",
+        "steady-confirm"
+      ],
+      [
+        "clear-slow",
+        "free-close"
+      ],
+      [
+        "clear-slow",
+        "chosen-sensitive"
+      ],
+      [
+        "clear-slow",
+        "direct-pursuit"
+      ],
+      [
+        "clear-slow",
+        "repair-nurturer"
+      ],
+      [
+        "steady-confirm",
+        "chosen-sensitive"
+      ],
+      [
+        "steady-confirm",
+        "repair-nurturer"
+      ],
+      [
+        "steady-confirm",
+        "romantic-resonance"
+      ],
+      [
+        "romantic-resonance",
+        "push-pull"
+      ],
+      [
+        "romantic-resonance",
+        "direct-pursuit"
+      ],
+      [
+        "romantic-resonance",
+        "free-close"
+      ],
+      [
+        "direct-pursuit",
+        "repair-nurturer"
+      ],
+      [
+        "direct-pursuit",
+        "chosen-sensitive"
+      ],
+      [
+        "free-close",
+        "push-pull"
+      ],
+      [
+        "chosen-sensitive",
+        "push-pull"
+      ],
+      [
+        "chosen-sensitive",
+        "repair-nurturer"
+      ]
+    ]
+  },
+  "meters": [
+    {
+      "id": "approach",
+      "label": "靠近主动",
+      "components": [
+        {
+          "trait": "approach"
+        }
+      ]
+    },
+    {
+      "id": "clarity",
+      "label": "关系清晰",
+      "components": [
+        {
+          "trait": "certainty",
+          "weight": 1.2
+        },
+        {
+          "trait": "expression",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "id": "romance",
+      "label": "浪漫投射",
+      "components": [
+        {
+          "trait": "idealization",
+          "weight": 1.2
+        },
+        {
+          "trait": "novelty",
+          "weight": 0.6
+        }
+      ]
+    },
+    {
+      "id": "judgment",
+      "label": "行动判断",
+      "components": [
+        {
+          "trait": "discernment",
+          "weight": 1.2
+        },
+        {
+          "trait": "trust",
+          "inverse": true,
+          "weight": 0.35
+        }
+      ]
+    },
+    {
+      "id": "securityNeed",
+      "label": "安全确认",
+      "components": [
+        {
+          "trait": "reassurance"
+        },
+        {
+          "trait": "validation"
+        },
+        {
+          "trait": "abandonment",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "id": "expression",
+      "label": "表达直接",
+      "components": [
+        {
+          "trait": "expression"
+        },
+        {
+          "trait": "conflict",
+          "weight": 0.65
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "label": "自我边界",
+      "components": [
+        {
+          "trait": "autonomy"
+        },
+        {
+          "trait": "discernment",
+          "weight": 0.35
+        }
+      ]
+    },
+    {
+      "id": "longterm",
+      "label": "长期能力",
+      "components": [
+        {
+          "trait": "commitment"
+        },
+        {
+          "trait": "repair",
+          "weight": 0.75
+        },
+        {
+          "trait": "care",
+          "weight": 0.55
+        }
+      ]
+    }
+  ],
+  "archetypes": [
+    {
+      "id": "clear-slow",
+      "title": "清醒慢热型",
+      "tagline": "你在最后一场排练里，既看见靠近，也看见署名、时间和公开责任。",
+      "center": {
+        "approach": -0.0907,
+        "trust": -0.0896,
+        "certainty": -0.059,
+        "abandonment": 0.0128,
+        "idealization": -0.0641,
+        "novelty": -0.055,
+        "discernment": 0.1434,
+        "jealousy": 0,
+        "expression": -0.1168,
+        "conflict": -0.1185,
+        "repair": -0.1423,
+        "reassurance": -0.0115,
+        "autonomy": 0.1775,
+        "commitment": -0.11,
+        "care": -0.1127,
+        "validation": -0.0702
+      },
+      "bias": 0,
+      "tags": [
+        "公开责任",
+        "共同创作",
+        "现实选择"
+      ]
+    },
+    {
+      "id": "steady-confirm",
+      "title": "稳定确认型",
+      "tagline": "你在最后一场排练里，既看见靠近，也看见署名、时间和公开责任。",
+      "center": {
+        "approach": -0.0635,
+        "trust": -0.0466,
+        "certainty": 0.0744,
+        "abandonment": 0.1035,
+        "idealization": -0.0627,
+        "novelty": -0.0661,
+        "discernment": 0.0519,
+        "jealousy": 0,
+        "expression": -0.0452,
+        "conflict": -0.0418,
+        "repair": 0.0714,
+        "reassurance": 0.1231,
+        "autonomy": 0.037,
+        "commitment": -0.0318,
+        "care": 0.093,
+        "validation": -0.0215
+      },
+      "bias": 0,
+      "tags": [
+        "公开责任",
+        "共同创作",
+        "现实选择"
+      ]
+    },
+    {
+      "id": "romantic-resonance",
+      "title": "浪漫共振型",
+      "tagline": "你在最后一场排练里，既看见靠近，也看见署名、时间和公开责任。",
+      "center": {
+        "approach": 0.0998,
+        "trust": 0.0547,
+        "certainty": 0.0772,
+        "abandonment": 0.0797,
+        "idealization": 0.1335,
+        "novelty": 0.1286,
+        "discernment": -0.1747,
+        "jealousy": 0,
+        "expression": 0.0198,
+        "conflict": 0.0246,
+        "repair": 0.0933,
+        "reassurance": 0.1026,
+        "autonomy": -0.1516,
+        "commitment": 0.0306,
+        "care": 0.0945,
+        "validation": 0.0117
+      },
+      "bias": 0,
+      "tags": [
+        "公开责任",
+        "共同创作",
+        "现实选择"
+      ]
+    },
+    {
+      "id": "direct-pursuit",
+      "title": "主动直球型",
+      "tagline": "你在最后一场排练里，既看见靠近，也看见署名、时间和公开责任。",
+      "center": {
+        "approach": -0.1068,
+        "trust": 0.0209,
+        "certainty": -0.0752,
+        "abandonment": -0.142,
+        "idealization": -0.148,
+        "novelty": -0.1432,
+        "discernment": 0.1276,
+        "jealousy": 0,
+        "expression": 0.0449,
+        "conflict": 0.0472,
+        "repair": 0.025,
+        "reassurance": -0.1463,
+        "autonomy": 0.0987,
+        "commitment": 0.0333,
+        "care": -0.0029,
+        "validation": 0.0189
+      },
+      "bias": 0,
+      "tags": [
+        "公开责任",
+        "共同创作",
+        "现实选择"
+      ]
+    },
+    {
+      "id": "free-close",
+      "title": "自由靠近型",
+      "tagline": "你在最后一场排练里，既看见靠近，也看见署名、时间和公开责任。",
+      "center": {
+        "approach": 0.0469,
+        "trust": 0.0408,
+        "certainty": -0.1133,
+        "abandonment": -0.1033,
+        "idealization": 0.0748,
+        "novelty": 0.0801,
+        "discernment": -0.03,
+        "jealousy": 0,
+        "expression": -0.011,
+        "conflict": -0.0084,
+        "repair": -0.0098,
+        "reassurance": -0.1079,
+        "autonomy": 0.0075,
+        "commitment": -0.0511,
+        "care": -0.0249,
+        "validation": -0.0529
+      },
+      "bias": 0,
+      "tags": [
+        "公开责任",
+        "共同创作",
+        "现实选择"
+      ]
+    },
+    {
+      "id": "chosen-sensitive",
+      "title": "偏爱确认型",
+      "tagline": "你在最后一场排练里，既看见靠近，也看见署名、时间和公开责任。",
+      "center": {
+        "approach": 0.0142,
+        "trust": -0.0135,
+        "certainty": 0.0968,
+        "abandonment": 0.0422,
+        "idealization": -0.0279,
+        "novelty": -0.033,
+        "discernment": -0.0303,
+        "jealousy": 0,
+        "expression": 0.0751,
+        "conflict": 0.0727,
+        "repair": -0.063,
+        "reassurance": 0.0239,
+        "autonomy": -0.0505,
+        "commitment": 0.0908,
+        "care": -0.0765,
+        "validation": 0.1134
+      },
+      "bias": 0,
+      "tags": [
+        "公开责任",
+        "共同创作",
+        "现实选择"
+      ]
+    },
+    {
+      "id": "repair-nurturer",
+      "title": "温柔修复型",
+      "tagline": "你在最后一场排练里，既看见靠近，也看见署名、时间和公开责任。",
+      "center": {
+        "approach": -0.0071,
+        "trust": 0.0945,
+        "certainty": -0.0028,
+        "abandonment": -0.1023,
+        "idealization": -0.0459,
+        "novelty": -0.0686,
+        "discernment": -0.0714,
+        "jealousy": 0,
+        "expression": 0.0929,
+        "conflict": 0.1021,
+        "repair": 0.1871,
+        "reassurance": -0.0891,
+        "autonomy": -0.089,
+        "commitment": 0.1811,
+        "care": 0.1641,
+        "validation": 0.0943
+      },
+      "bias": 0,
+      "tags": [
+        "公开责任",
+        "共同创作",
+        "现实选择"
+      ]
+    },
+    {
+      "id": "push-pull",
+      "title": "反差拉扯型",
+      "tagline": "你在最后一场排练里，既看见靠近，也看见署名、时间和公开责任。",
+      "center": {
+        "approach": 0.0569,
+        "trust": -0.0659,
+        "certainty": 0.0496,
+        "abandonment": 0.1533,
+        "idealization": 0.1264,
+        "novelty": 0.1437,
+        "discernment": -0.0461,
+        "jealousy": 0,
+        "expression": -0.1082,
+        "conflict": -0.1095,
+        "repair": -0.1163,
+        "reassurance": 0.1463,
+        "autonomy": -0.0103,
+        "commitment": -0.1093,
+        "care": -0.0887,
+        "validation": -0.0737
+      },
+      "bias": 0,
+      "tags": [
+        "公开责任",
+        "共同创作",
+        "现实选择"
+      ]
+    }
+  ],
+  "sections": {
+    "ending": {
+      "byOutcome": {
+        "collective-stage": "集体授权被逐一签下。乔安没有把留下写成爱情的牺牲；她和陆惟也不替彼此定义关系。剧场会关门，但署名、合唱团和下一季的合作方案留在每个人看得见的桌上。谢幕以后，陆惟没有先问你们算不算开始，只把水渍清单摊开，和你一起核对最后一页的名字。你们并肩走到门口，各自带走钥匙和明天的安排。",
+      "two-cities": "乔安接受苏州职位，集体授权仍在。两座城没有被写成考验：约会、开放联系、朋友或不联系，都按此前说出的词继续。离站前，陆惟把改稿的署名页递给她，没有要求她答应一段更容易解释的未来。乔安把出发时间发给唐瑛，也把自己的安排留给自己。距离不是失败，而是现实被承认后的安排。",
+        "names-returned": "拒绝或撤回授权让剧本回到共同作者手里。吴照收回自己的停顿，唐瑛封存无署名版本。乔安不替陆惟原谅，也不需要把公共修复误认成私人和好。",
+        "last-cue": "个人交易已经造成伤害。陆惟在台口撤下使用集体剧本的独角戏；广告不能倒带，但他没有再用掌声盖住他人名字。乔安按下停电提示，保留自己选择的边界。"
+      },
+      "appendRules": [
+        {
+          "default": true,
+          "text": "你没有让最后一句话替代已经发生的署名、授权和职业决定。"
+        }
+      ]
+    },
+    "psychology": {
+      "byArchetype": {
+        "clear-slow": "你会注意谁拥有署名、谁被告知、谁承担关场的后果。对你而言，可靠不只是好听的话，而是愿意在公开处把事实说清。",
+        "steady-confirm": "你会注意谁拥有署名、谁被告知、谁承担关场的后果。对你而言，可靠不只是好听的话，而是愿意在公开处把事实说清。",
+        "romantic-resonance": "你会注意谁拥有署名、谁被告知、谁承担关场的后果。对你而言，可靠不只是好听的话，而是愿意在公开处把事实说清。",
+        "direct-pursuit": "你会注意谁拥有署名、谁被告知、谁承担关场的后果。对你而言，可靠不只是好听的话，而是愿意在公开处把事实说清。",
+        "free-close": "你会注意谁拥有署名、谁被告知、谁承担关场的后果。对你而言，可靠不只是好听的话，而是愿意在公开处把事实说清。",
+        "chosen-sensitive": "你会注意谁拥有署名、谁被告知、谁承担关场的后果。对你而言，可靠不只是好听的话，而是愿意在公开处把事实说清。",
+        "repair-nurturer": "你会注意谁拥有署名、谁被告知、谁承担关场的后果。对你而言，可靠不只是好听的话，而是愿意在公开处把事实说清。",
+        "push-pull": "你会注意谁拥有署名、谁被告知、谁承担关场的后果。对你而言，可靠不只是好听的话，而是愿意在公开处把事实说清。"
+      },
+      "appendRules": [
+        {
+          "default": true,
+          "text": "你把亲密放回现实：允许靠近，也允许事实、时间和边界同时存在。"
+        }
+      ]
+    },
+    "history": {
+      "groups": [
+        [
+          {
+            "default": true,
+            "text": "你对合作里的细节敏感：清单、水渍、署名和一段没有被吞掉的停顿。"
+          }
+        ],
+        [
+          {
+            "default": true,
+            "text": "你不把靠近当作替人收拾后果的理由，也不把离开当作对谁的背叛。"
+          }
+        ]
+      ]
+    },
+    "future": [
+      {
+        "title": "关场以后",
+        "rules": [
+          {
+            "default": true,
+            "text": "剧场会关门，真正被带走的是谁愿意共同署名。"
+          }
+        ]
+      },
+      {
+        "title": "苏州或留下",
+        "rules": [
+          {
+            "default": true,
+            "text": "职业选择不需要由一段关系代替回答。"
+          }
+        ]
+      },
+      {
+        "title": "水渍清单",
+        "rules": [
+          {
+            "default": true,
+            "text": "你把被雨打湿的清单收进档案，也把事实留在了光里。"
+          }
+        ]
+      }
+    ],
+    "match": {
+      "base": "适合你的人不会把急迫当作许可；他会在署名、时间和公开责任上与你并肩。",
+      "appendRules": []
+    },
+    "warning": {
+      "rules": [
+        {
+          "default": true,
+          "text": "不要把私人道歉当成公共修复，也不要用爱情替任何人的劳动签字。"
+        }
+      ]
+    }
+  }
+}

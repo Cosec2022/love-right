@@ -9,10 +9,10 @@ const root = new URL("..", import.meta.url);
 const read = (path) => readFile(new URL(path, root), "utf8");
 const catalog = JSON.parse(await read("public/stories/catalog.json"));
 
-test("library has ten published stories and audience filters are deterministic", () => {
-  assert.equal(publishedStories(catalog).length, 12);
-  assert.equal(storiesForAudience(catalog, "all").length, 12);
-  assert.equal(storiesForAudience(catalog, "female").length, 8);
+test("library has thirteen published stories and audience filters are deterministic", () => {
+  assert.equal(publishedStories(catalog).length, 13);
+  assert.equal(storiesForAudience(catalog, "all").length, 13);
+  assert.equal(storiesForAudience(catalog, "female").length, 9);
   assert.equal(storiesForAudience(catalog, "male").length, 4);
 });
 
