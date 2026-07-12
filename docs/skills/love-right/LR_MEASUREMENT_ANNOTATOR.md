@@ -1,3 +1,3 @@
 # Measurement
 
-Annotate Narrative Approved material only. Soft evidence measures perspective; hard evidence is secondary. Never annotate target archetypes or target distributions.
+Annotate Narrative Approved material only. Soft evidence measures perspective; hard evidence is secondary. Never annotate target archetypes or target distributions; uneven results are a report, not a rewrite order.
