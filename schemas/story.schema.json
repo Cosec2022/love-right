@@ -32,6 +32,7 @@
         "archived"
       ]
     },
+    "storyContractVersion": { "type": "integer", "minimum": 1 },
     "locale": {
       "type": "string"
     },

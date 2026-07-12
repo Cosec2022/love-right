@@ -7,3 +7,5 @@ v0.8 separates measurement from interpretation. `ProfileBuilder` converts answer
 Each story may declare which axes it measures, but may not supply its own archetype centers, bias or gates. The global v2 model is the sole classification semantic source. Legacy per-story classification remains behind a migration boundary until every story is migrated, then is deleted.
 
 Audit is deterministic: a fixed seed drives route sampling and the default command writes no tracked file. During migration, health indicators are reachability, unique archetypes, top share, entropy, deterministic-route diversity and stability. The temporary Story 03 v2 baseline is unique >= 6/8, top share <= 55%, normalized entropy >= .62 and deterministic diversity >= 3/4. These are migration guardrails, not a product requirement that every archetype must be uniformly distributed.
+
+`storyContractVersion` is independent from result `modelVersion`. Contract v2 choices explicitly declare hard factual actions or soft scene-bound perspectives; invalid v2 contracts fail rather than falling back to legacy. A/B/C/D have no personality meaning, and v2 forbids personality quota fields.

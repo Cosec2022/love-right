@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
+import { validateStoryContract } from "../public/app/engine/story-contract-validator.js";
 
 const root = path.resolve(new URL("..", import.meta.url).pathname);
 const publicDir = path.join(root, "public");
@@ -42,6 +43,7 @@ async function validateStory(entry) {
   let results;
   try { story = await readJson(storyFile); } catch (error) { fail(`${entry.id}: cannot read story file: ${error.message}`); return; }
   try { results = await readJson(resultsFile); } catch (error) { fail(`${entry.id}: cannot read results file: ${error.message}`); return; }
+  try { validateStoryContract(story); } catch (error) { fail(error.message); }
 
   if (story.schemaVersion !== 2) fail(`${entry.id}: story.schemaVersion must be 2.`);
   if (results.schemaVersion !== 2) fail(`${entry.id}: results.schemaVersion must be 2.`);
