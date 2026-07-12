@@ -167,12 +167,13 @@
       "status": "published",
       "title": "最后一场排练，他没有上台",
       "series": "LOVE RIGHT · STORY 13",
-      "description": "社区剧场最后九天：在署名、租约与巡演之间，选择公开的信任与各自的去处。",
-      "estimatedMinutes": 14,
+      "description": "九天后的演出结束，陆惟就会离开。三个月前他吻过你，随后却隐瞒了车票和一份改变所有人的巡演邀约。你要弄清他为什么退后，也要决定自己的工作、城市与关系。",
+      "estimatedMinutes": 18,
       "audience": "female",
       "coverTheme": "studio-amber",
       "storyUrl": "./stories/story-13/story.json",
-      "resultsUrl": "./stories/story-13/results.json"
+      "resultsUrl": "./stories/story-13/results.json",
+      "subtitle": "他离开以前，你要决定的不是追不追，而是还信不信。"
     }
   ]
 }
