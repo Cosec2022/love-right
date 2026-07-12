@@ -1237,3 +1237,42 @@
   }
 }
 /* End Love Right homepage UI tuning · v0.6.1 */
+
+/* love-right slogan art v5 */
+.lr-home-slogan {
+  position: relative;
+  display: inline-block;
+  max-width: 17em;
+  margin-top: 0.2rem;
+  padding-bottom: 0.72rem;
+  color: rgba(63, 50, 61, 0.82);
+  font-family: "Songti SC", "STSong", "STFangsong", "Noto Serif CJK SC", serif;
+  font-size: clamp(1.18rem, 3vw, 1.62rem);
+  font-weight: 600;
+  line-height: 1.7;
+  letter-spacing: 0.12em;
+  text-wrap: balance;
+  text-shadow: 0 0.45rem 1.35rem rgba(98, 58, 68, 0.12);
+}
+
+.lr-home-slogan::after {
+  content: "";
+  position: absolute;
+  left: 0.05em;
+  bottom: 0.18rem;
+  width: 5.8em;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(143, 85, 93, 0.72),
+    rgba(199, 164, 106, 0.56),
+    transparent
+  );
+}
+
+@media (max-width: 420px) {
+  .lr-home-slogan {
+    font-size: 1.08rem;
+    letter-spacing: 0.08em;
+  }
+}
