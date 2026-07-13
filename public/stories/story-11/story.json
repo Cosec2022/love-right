@@ -7,14 +7,15 @@
   "metadata": {
     "series": "LOVE RIGHT · STORY 11",
     "title": "搬家后的第七个晚上",
-    "subtitle": "程野住在楼下；他愿意靠近，也愿意等你把门打开。",
-    "description": "城市老楼里的搬家日常：从漏水的水槽到停电的楼道，决定谁能进入你的生活。",
-    "estimatedMinutes": 12,
+    "subtitle": "他会修灯、修水槽，却要到很久以后才学会：想进入一个人的生活，不能只靠有用。",
+    "description": "搬进老楼第七天，一只送错的搪瓷锅和漏水的水槽，让你认识了楼下的程野。他习惯在别人开口前把事情解决，也因此第一次真正越过了你的边界。",
+    "estimatedMinutes": 10,
     "coverTheme": "river-amber",
     "audience": "female",
     "tags": [
       "城市邻里",
-      "搬家日常",
+      "生活爱情",
+      "边界与修复",
       "女性视角"
     ],
     "disclaimer": "娱乐性叙事情境投射，不是心理诊断、事实识别或未来预言。"
@@ -232,1771 +233,2337 @@
     {
       "id": "s01",
       "slot": 1,
-      "chapter": "01｜第七个晚上",
+      "chapter": "01｜送错的搪瓷锅",
       "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "搬进老楼第七晚，程野把一只认错的搪瓷锅送到门口；他站在门外，没有朝屋里看。"
+          "text": "搬进老楼的第七个晚上，雨刚停，门铃响了。"
+        },
+        {
+          "type": "paragraph",
+          "text": "门外站着一个穿灰色T恤的男人，手里捏着一张被雨打湿的快递单。你脚边那只蓝边搪瓷锅，收件人写着“程野”，房号却糊成了你这一层。"
+        },
+        {
+          "type": "quote",
+          "text": "“楼下，程野。这个大概是来找我的。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他站在门槛外，眼睛只落在锅上，没有顺势往屋里看。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么把这只锅还给他？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "把锅递过去，笑说：“楼下的锅自己爬了两层。”",
           "vector": {
             "approach": 0.42,
-            "expression": 0.28
+            "expression": 0.34,
+            "novelty": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s02",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野愣了一下才笑：“这楼没电梯，它挺有诚意。”",
+          "subtext": "先用玩笑试试他的反应。",
+          "setFlags": {
+            "first_tone": "playful"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "先让他把收件人和电话号码念一遍。",
           "vector": {
-            "discernment": 0.42,
+            "discernment": 0.48,
+            "trust": -0.18,
             "autonomy": 0.28
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s02",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他没有不耐烦，把快递单翻给你看，还报了手机尾号。",
+          "subtext": "先确认人和物都没有认错。",
+          "setFlags": {
+            "first_tone": "verify"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "发现锅把松了，先用报纸包好再递给他。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "care": 0.42,
+            "repair": 0.26,
+            "approach": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s02",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他接过时看了看你缠的那圈报纸：“谢谢。我本来没打算今天被一口锅照顾。”",
+          "subtext": "先处理眼前的小麻烦。",
+          "setFlags": {
+            "first_tone": "care"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "告诉他你还在拆箱，把锅放到门外让他自己拿。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.5,
+            "approach": -0.28,
+            "expression": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s02",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野点头，往后退了一步：“好。我拿走，不打扰。”",
+          "subtext": "先保留新家的私人空间。",
+          "setFlags": {
+            "first_tone": "distance"
+          }
         }
-      ]
+      ],
+      "note": "陌生人第一次出现时，真正重要的不是浪漫，而是他怎样对待你的门槛。"
     },
     {
       "id": "s02",
       "slot": 2,
-      "chapter": "02｜没有顺势进门",
+      "chapter": "02｜楼下开始滴水",
       "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "程野说需要帮忙可以敲地板，随后就下楼，把决定留给你。"
+          "text": "程野刚把锅抱起来，厨房里忽然传来一阵细密的喷水声。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他侧耳听了两秒：“你家水槽下面是不是漏了？我卧室灯罩刚开始滴水。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "你跑进厨房，水已经沿着柜脚往外爬。程野站在门外指向走廊尽头：“总阀在那里。现在关，还来得及。”"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你先怎么处理？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "让他进来，但说清楚：“只去厨房。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "trust": 0.22,
+            "certainty": 0.38,
+            "approach": 0.3
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s03",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他先重复了一遍“只去厨房”，才跨过门槛。",
+          "subtext": "允许帮助，同时给出明确范围。",
+          "setFlags": {
+            "access_route": "inside"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "让他告诉你总阀位置，你自己去关。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "autonomy": 0.46,
+            "discernment": 0.32,
+            "approach": -0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s03",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野站在原地报方向，没有伸手抢过你的工具。",
+          "subtext": "自己处理，接受必要信息。",
+          "setFlags": {
+            "access_route": "self"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "先打给物业，请他在门外等。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "discernment": 0.44,
+            "trust": -0.12,
+            "certainty": 0.28
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s03",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他蹲在门边看水有没有继续往楼下渗，没催你改变决定。",
+          "subtext": "先把正式责任人叫来。",
+          "setFlags": {
+            "access_route": "property"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "先跟他下楼看看漏水到底有多严重。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "discernment": 0.34,
+            "care": 0.24,
+            "approach": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s03",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "楼下灯罩里已经积了一小圈水。你第一次确认，这不是他借题进门。",
+          "subtext": "先核对他所说的后果。",
+          "setFlags": {
+            "access_route": "inspect"
+          }
         }
       ]
     },
     {
       "id": "s03",
       "slot": 3,
-      "chapter": "03｜第一场雨",
-      "context": "approach",
+      "chapter": "03｜他先动了你的箱子",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "楼道漏雨，他挪开水桶给你留出干燥的路。"
+          "text": "无论你让程野进来、让他在门外指路，还是先叫了物业，漏水总算止住。"
+        },
+        {
+          "type": "paragraph",
+          "text": "水沿着柜脚淌向一个还没拆封的纸箱。程野看见以后，伸手把箱子拖开。动作很快，快到没有先问你。"
+        },
+        {
+          "type": "paragraph",
+          "text": "箱子停下时，他才意识到你的脸色不对。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么处理这一下越界？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "按住箱子：“先问我，再碰我的东西。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "conflict": 0.46,
+            "certainty": 0.42,
+            "autonomy": 0.36
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s04",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野立刻松手，耳朵有点红：“对。是我太快了。”",
+          "subtext": "当场把边界说清楚。",
+          "setFlags": {
+            "boundary_style": "direct"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "接过扳手：“你说怎么做，我自己来。”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "autonomy": 0.5,
+            "discernment": 0.3,
+            "approach": -0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s04",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他退到门边，一步一步告诉你接口怎么拧，没有再替你伸手。",
+          "subtext": "收回处理权。",
+          "setFlags": {
+            "boundary_style": "control"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "先把漏水处理完，再告诉他你不喜欢别人碰未拆的箱子。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "repair": 0.28,
+            "expression": 0.34,
+            "conflict": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s04",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野没有拿“刚才是紧急情况”顶回来，只说：“记住了。”",
+          "subtext": "先结束危险，再处理关系。",
+          "setFlags": {
+            "boundary_style": "after"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "看着他问：“你是不是习惯替整栋楼的人做决定？”",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "discernment": 0.36,
+            "expression": 0.32,
+            "trust": -0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s04",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他靠着门框停了两秒：“习惯先把事情弄好。听起来不算优点。”",
+          "subtext": "追问这个习惯来自哪里。",
+          "setFlags": {
+            "boundary_style": "probe"
+          }
         }
       ]
     },
     {
       "id": "s04",
       "slot": 4,
-      "chapter": "04｜楼下的灯",
-      "context": "approach",
+      "chapter": "04｜锅底那四个字",
+      "context": "ambiguity",
       "content": [
         {
           "type": "paragraph",
-          "text": "露营灯放在台阶上，程野说谁回来都能用。"
+          "text": "清理地上的水时，搪瓷锅的盖子滑下来。锅底有一道旧划痕，旁边刻着四个歪歪扭扭的字：吃完再走。"
+        },
+        {
+          "type": "paragraph",
+          "text": "程野说，这是他奶奶以前煮面用的锅。她去世以后，姨妈整理旧厨房，才把它寄回来。"
+        },
+        {
+          "type": "quote",
+          "text": "“她很会留人。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他说完低头拧锅把，又补了一句：“我不太会。”"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么接住这句话？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "问他：“她最常用这只锅煮什么？”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "care": 0.32,
+            "trust": 0.24,
+            "approach": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s05",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他开始认真数奶奶会做的三种面，语气比刚才松了。",
+          "subtext": "从这只锅真正的记忆问起。",
+          "setFlags": {
+            "pot_tone": "memory"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "提醒他：“不会留人，倒是挺会闯厨房。”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "expression": 0.36,
+            "conflict": 0.24,
+            "novelty": 0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s05",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野笑了一下，又很快收住：“这句我认。”",
+          "subtext": "用玩笑把边界留在场上。",
+          "setFlags": {
+            "pot_tone": "tease"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "拿起松动的锅把：“先把这个修好再谈留人。”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "repair": 0.34,
+            "discernment": 0.28,
+            "idealization": -0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s05",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他从工具包里找出螺丝，第一次没有抢着替你拿。",
+          "subtext": "把情绪落回眼前的小事。",
+          "setFlags": {
+            "pot_tone": "practical"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "没有追问，只说：“今天信息已经够多了。”",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.4,
+            "approach": -0.18,
+            "certainty": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s05",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他把锅盖扣好，没有再把自己的过去往你面前推。",
+          "subtext": "不让第一次见面过早变成深谈。",
+          "setFlags": {
+            "pot_tone": "limit"
+          }
         }
       ]
     },
     {
       "id": "s05",
       "slot": 5,
-      "chapter": "05｜水槽的决定",
+      "chapter": "05｜停水前的一顿晚饭",
       "context": "intimacy",
-      "decisionType": "hard",
-      "decisionLabel": "这一次由你决定距离",
-      "decisionNote": "没有哪一种边界需要被解释成亏欠。",
       "content": [
         {
           "type": "paragraph",
-          "text": "水槽漏水，程野带着扳手问：进门看一下，还是把工具留在门外？"
+          "text": "物业通知，整栋楼要停水到第二天中午。你的冰箱里还有一袋解冻的饺子和两把青菜。"
+        },
+        {
+          "type": "paragraph",
+          "text": "程野说楼下的燃气还能用，搪瓷锅也洗干净了。"
+        },
+        {
+          "type": "quote",
+          "text": "“东西别浪费。在哪吃，你定。”"
         }
       ],
-      "prompt": "你会怎么做？",
-      "note": "四种回应都会被认真承接。",
+      "prompt": "你怎么安排这顿饭？",
       "choices": [
         {
           "id": "a",
-          "text": "让程野进门，只处理水槽",
+          "text": "带着食材去他家厨房，一起煮。",
           "vector": {
-            "approach": 0.3,
-            "autonomy": -0.15
+            "approach": 0.4,
+            "trust": 0.24,
+            "care": 0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s06a",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "允许进入，但只处理眼前的事。"
+          "aftermath": "程野先把厨房门推到最开，给你看调料和碗放在哪里。",
+          "subtext": "进入他的生活空间。",
+          "setFlags": {
+            "meal_route": "downstairs"
+          }
         },
         {
           "id": "b",
-          "text": "请他把工具放门外",
+          "text": "把露营炉搬到楼道，在公共位置吃。",
           "vector": {
-            "approach": 0.13999999999999999,
-            "autonomy": 0.03
+            "autonomy": 0.3,
+            "novelty": 0.26,
+            "approach": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s06b",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "把界限留在自己手里。"
+          "aftermath": "他搬来两把折叠椅，没把公共楼道偷偷布置成约会。",
+          "subtext": "靠近，但保留公共边界。",
+          "setFlags": {
+            "meal_route": "landing"
+          }
         },
         {
           "id": "c",
-          "text": "请吴阿姨一起在场",
+          "text": "借走炉子，自己在楼上煮，之后还他一碗。",
           "vector": {
-            "approach": -0.020000000000000018,
-            "autonomy": 0.21
+            "autonomy": 0.44,
+            "care": 0.22,
+            "approach": -0.08
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s06c",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "让公共关系成为安全感的一部分。"
+          "aftermath": "程野把气罐使用方法写在纸上，连锅一起放在你门外。",
+          "subtext": "保留自己的晚饭，只分享结果。",
+          "setFlags": {
+            "meal_route": "borrow"
+          }
         },
         {
           "id": "d",
-          "text": "等物业来，不需要帮忙",
+          "text": "不一起吃，点外卖，把青菜送给吴阿姨。",
           "vector": {
-            "approach": -0.18,
-            "autonomy": 0.39
+            "autonomy": 0.42,
+            "care": 0.26,
+            "approach": -0.26
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s06d",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "不接受帮助也不会被惩罚。 "
+          "aftermath": "程野说“行”，抱着锅下楼，没有问你是不是在躲他。",
+          "subtext": "拒绝这次亲近。",
+          "setFlags": {
+            "meal_route": "decline"
+          }
         }
       ]
     },
     {
       "id": "s06a",
       "slot": 6,
-      "chapter": "06｜6的承接",
+      "chapter": "06｜他家的厨房",
       "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "程野站在玄关等你指厨房，修好水槽就离开，没有评论你的屋子。"
+          "text": "程野的厨房比你想象中乱。墙边堆着邻居送来待修的台灯、电饭锅和风扇，他自己的水壶却用胶带缠着把手。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他抢着切蒜，刀太快，蒜末飞了一地。你看着他手忙脚乱，忽然觉得这个总能解决问题的人，也没有那么可靠。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么加入这顿饭？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "接过刀：“你煮面，我切菜。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "care": 0.36,
+            "commitment": 0.18,
+            "approach": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他没有逞强，把案板让给你。两个人第一次像真正的搭档。",
+          "subtext": "把任务分开，而不是让他包办。"
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "笑他：“全楼的东西都会修，蒜不会切？”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "expression": 0.38,
+            "novelty": 0.28,
+            "approach": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野把散落的蒜拢回来：“这项暂时不接单。”",
+          "subtext": "让笨拙变成轻松的吸引。"
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "指着坏水壶问：“为什么不先修自己的？”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "discernment": 0.38,
+            "care": 0.2,
+            "trust": 0.1
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他看了水壶一眼：“自己的东西，坏着也能将就。”",
+          "subtext": "看见他只会照顾外面的部分。"
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "告诉他你随时可以回楼上，不必把这顿饭完成得漂亮。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.3,
+            "repair": 0.22,
+            "idealization": -0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他关小火：“好。那就煮熟，不表演。”",
+          "subtext": "把压力从这顿饭里拿走。"
         }
       ]
     },
     {
       "id": "s06b",
       "slot": 6,
-      "chapter": "06｜6的承接",
+      "chapter": "06｜楼道里的两碗面",
       "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "工具箱留在门外，你自己拧紧接口；程野只发消息问水槽是否止住。"
+          "text": "露营炉刚把水烧开，吴阿姨就开门问是谁把楼道煮成了食堂。"
+        },
+        {
+          "type": "paragraph",
+          "text": "程野端着锅，明显有点窘，却没有把你介绍成“新来的姑娘”或别的关系。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "吴阿姨等着你们解释，你怎么做？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "给她添一只碗：“正好一起吃。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "care": 0.42,
+            "approach": 0.16,
+            "commitment": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "三个人围着小炉子吃面，浪漫被生活挤得很小，却没有消失。",
+          "subtext": "让这顿饭成为邻里日常。"
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "提议把炉子搬到楼顶，不堵楼道。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "discernment": 0.36,
+            "autonomy": 0.26,
+            "novelty": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "你们端着锅往楼顶走，程野一路护着汤不洒。",
+          "subtext": "换一个不打扰别人的位置。"
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "说明停水和食材的事，问她介不介意十分钟。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "certainty": 0.34,
+            "expression": 0.26,
+            "care": 0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "吴阿姨摆手让你们继续，还从屋里拿出一碟腌萝卜。",
+          "subtext": "把公共空间的使用说清楚。"
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "立刻收拾，改去你家门口吃。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.38,
+            "approach": -0.08,
+            "conflict": -0.08
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野没有嫌麻烦，端着锅跟你上楼。",
+          "subtext": "不让别人围观这次靠近。"
         }
       ]
     },
     {
       "id": "s06c",
       "slot": 6,
-      "chapter": "06｜6的承接",
+      "chapter": "06｜一碗太咸的面",
       "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "吴阿姨在厨房门口聊天，程野修好接口后把扳手收好。"
+          "text": "你在楼上独自煮完，给程野盛了一碗。十分钟后，他把空碗送回来，表情很认真。"
+        },
+        {
+          "type": "quote",
+          "text": "“很好吃。就是有一点像海水。”"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么回应这份不太客气的诚实？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "承认盐放多了，笑出声。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "expression": 0.34,
+            "trust": 0.22,
+            "repair": 0.14
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野也笑了，第一次没有努力让自己显得体面。",
+          "subtext": "允许小失败存在。"
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "把责任推给他的旧锅：“它记错配方了。”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "novelty": 0.34,
+            "approach": 0.18,
+            "idealization": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他低头看锅：“那它得负责下一顿。”",
+          "subtext": "把下一次见面藏进玩笑。"
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "问他奶奶的配方，下次再试。",
           "vector": {
             "repair": 0.32,
-            "trust": 0.24
+            "commitment": 0.18,
+            "care": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他真的发来一张手写配方，没有顺便追问你什么时候再煮。",
+          "subtext": "给日常留下下一次。"
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "接过碗，只说晚安。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.42,
+            "approach": -0.2,
+            "expression": -0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野没有继续站在门口，把楼道留还给你。",
+          "subtext": "让分享停在一碗面。"
         }
       ]
     },
     {
       "id": "s06d",
       "slot": 6,
-      "chapter": "06｜6的承接",
+      "chapter": "06｜没有发生的晚饭",
       "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "物业第二天修好水槽；程野只问一句是否顺利，没有邀功。"
+          "text": "你没有和程野吃饭。夜里，楼下飘上来一点蒜香，他只发了一条消息：“锅拿到了。晚安。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "第二天早上，你在垃圾房门口遇见他。他右手食指贴着创可贴，显然昨晚自己也没把饭做得多顺利。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么打破这次短暂的尴尬？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "问他的手怎么了。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "care": 0.32,
+            "approach": 0.16,
+            "trust": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他看了一眼创可贴：“刀比我有主意。”",
+          "subtext": "对他保留一点关心。"
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "只问：“锅还活着吗？”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "expression": 0.28,
+            "novelty": 0.24,
+            "approach": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野说锅活着，他的蒜不一定。尴尬被一句话放轻。",
+          "subtext": "用锅重新打开对话。"
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "谢谢他昨晚没有继续劝你。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "certainty": 0.3,
+            "repair": 0.2,
+            "autonomy": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他点头：“你说不，就是不。”这次没有附带原则说明。",
+          "subtext": "确认拒绝被真实听见。"
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "点头打招呼，继续下楼。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.44,
+            "approach": -0.24,
+            "expression": -0.1
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野没有追上来。你们的下一次相遇仍然要等新的理由。",
+          "subtext": "不因为尴尬补偿亲近。"
         }
       ]
     },
     {
       "id": "s07",
       "slot": 7,
-      "chapter": "07｜多买的橘子",
-      "context": "intimacy",
+      "chapter": "07｜两只橘子",
+      "context": "ambiguity",
       "content": [
         {
           "type": "paragraph",
-          "text": "门口有一袋橘子，纸条写着楼上楼下都分了，不是单独投喂。"
+          "text": "第二天下班，门把上挂着两只橘子。纸条写得很大："
+        },
+        {
+          "type": "quote",
+          "text": "“全楼团购多了。不是赔礼。昨晚的蒜才是。——楼下”"
+        },
+        {
+          "type": "paragraph",
+          "text": "你隔着门都能想象他写完以后觉得这句话哪里不对。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么处理这两只橘子？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "剥开一只，拍下果皮像花的样子发给他。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "idealization": 0.32,
+            "approach": 0.28,
+            "expression": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s08",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他回了一张被切坏的蒜，像在认真交换证据。",
+          "subtext": "把普通东西变成两个人的暗号。",
+          "setFlags": {
+            "orange_reply": "photo"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "查团购价，把钱转给他。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "discernment": 0.38,
+            "autonomy": 0.28,
+            "trust": 0.08
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s08",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野退回一半：“两只橘子不值一笔人情债。”",
+          "subtext": "把礼物和欠账分开。",
+          "setFlags": {
+            "orange_reply": "pay"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "拿一只下楼，敲门问他要不要分着吃。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "approach": 0.42,
+            "expression": 0.28,
+            "care": 0.14
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s08",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他开门时还拿着螺丝刀，明显没想到你会主动下来。",
+          "subtext": "让一只橘子变成真实相处。",
+          "setFlags": {
+            "orange_reply": "share"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "把橘子送给吴阿姨，消息告诉他你收到了。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "care": 0.32,
+            "autonomy": 0.34,
+            "approach": -0.08
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s08",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野只回“好”。他没有追问你为什么没有留下。",
+          "subtext": "接受好意，但不把它变成暧昧。",
+          "setFlags": {
+            "orange_reply": "pass"
+          }
         }
       ]
     },
     {
       "id": "s08",
       "slot": 8,
-      "chapter": "08｜一起倒垃圾",
-      "context": "intimacy",
+      "chapter": "08｜他不想再当万能邻居",
+      "context": "ambiguity",
       "content": [
         {
           "type": "paragraph",
-          "text": "你们在楼道碰见，聊起搬家后还没习惯的那些小事。"
+          "text": "傍晚，你们一起下楼倒垃圾。程野怀里夹着一本电工证考试题，封面被翻得起毛。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他说自己下个月考试。考过以后，他想去正规维修公司，不再二十四小时替整栋楼接电话。"
+        },
+        {
+          "type": "quote",
+          "text": "“我不是特别热心。我只是一直不太会说不。”"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你最想回应哪一件事？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "“那就从下一次邻居叫你修东西开始拒绝。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "certainty": 0.32,
+            "autonomy": 0.3,
+            "care": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s09",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他皱眉想了想：“第一单可能就从吴阿姨的电饭锅开始。”",
+          "subtext": "把改变落到具体行动。",
+          "setFlags": {
+            "helper_view": "refuse"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "“你刚才也差点替我把所有事情做完。”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "conflict": 0.36,
+            "discernment": 0.3,
+            "repair": 0.14
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s09",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野没有装没听懂：“我知道。这个比考试难改。”",
+          "subtext": "把他的习惯和你们之间联系起来。",
+          "setFlags": {
+            "helper_view": "mirror"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "提议帮他在楼群里写一张维修边界说明。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "repair": 0.34,
+            "care": 0.26,
+            "commitment": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s09",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他把手机递给你，又收回来：“先让我自己写第一版。”",
+          "subtext": "帮助他，但不替他成长。",
+          "setFlags": {
+            "helper_view": "support"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "笑问：“那我算你最后一个免费客户吗？”",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "expression": 0.3,
+            "novelty": 0.28,
+            "approach": 0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s09",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野看你一眼：“你那单已经超出维修范围了。”",
+          "subtext": "用玩笑承认关系已经不只维修。",
+          "setFlags": {
+            "helper_view": "tease"
+          }
         }
       ]
     },
     {
       "id": "s09",
       "slot": 9,
-      "chapter": "09｜停电的选择",
-      "context": "intimacy",
-      "decisionType": "hard",
-      "decisionLabel": "这一次由你决定距离",
-      "decisionNote": "没有哪一种边界需要被解释成亏欠。",
+      "chapter": "09｜整栋楼突然黑了",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "停电后程野说可以进他家等电、拿灯回家、留在楼道，或者完全自己待着。"
+          "text": "当晚十点，整栋楼突然断电。楼群里一片消息，老人和孩子都在问什么时候恢复。"
+        },
+        {
+          "type": "paragraph",
+          "text": "程野敲了一下你的门，没有推门，只隔着门板说：“总闸在一楼。我去看。你手机还剩多少电？”"
         }
       ],
-      "prompt": "你会怎么做？",
-      "note": "四种回应都会被认真承接。",
+      "prompt": "黑暗里，你选择做什么？",
       "choices": [
         {
           "id": "a",
-          "text": "进他家坐一会儿",
+          "text": "拿上手电，跟他去一楼配电箱。",
           "vector": {
-            "approach": 0.3,
-            "autonomy": -0.15
+            "approach": 0.36,
+            "care": 0.24,
+            "conflict": 0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s10a",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "允许进入，但只处理眼前的事。"
+          "aftermath": "你走在他身后，把光照在台阶和工具箱之间。",
+          "subtext": "直接进入问题中心。",
+          "setFlags": {
+            "blackout_route": "panel"
+          }
         },
         {
           "id": "b",
-          "text": "拿露营灯回自己家",
+          "text": "留在楼道，用手机灯给上下楼的人照路。",
           "vector": {
-            "approach": 0.13999999999999999,
-            "autonomy": 0.03
+            "care": 0.42,
+            "autonomy": 0.18,
+            "commitment": 0.14
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s10b",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "把界限留在自己手里。"
+          "aftermath": "你把门开着一条缝，让微弱的光落在楼梯转角。",
+          "subtext": "承担公共空间里的一部分。",
+          "setFlags": {
+            "blackout_route": "stairs"
+          }
         },
         {
           "id": "c",
-          "text": "留在公共楼道等电",
+          "text": "先去敲吴阿姨的门，把她接到你家门口。",
           "vector": {
-            "approach": -0.020000000000000018,
-            "autonomy": 0.21
+            "care": 0.46,
+            "discernment": 0.18,
+            "approach": 0.1
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s10c",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "让公共关系成为安全感的一部分。"
+          "aftermath": "吴阿姨抱着药盒坐到你门边，嘴上还嫌你们太紧张。",
+          "subtext": "先照顾最需要帮助的人。",
+          "setFlags": {
+            "blackout_route": "neighbor"
+          }
         },
         {
           "id": "d",
-          "text": "回家，不需要灯",
+          "text": "留在屋里省电，只告诉程野有需要再叫你。",
           "vector": {
-            "approach": -0.18,
-            "autonomy": 0.39
+            "autonomy": 0.44,
+            "trust": 0.18,
+            "approach": -0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s10d",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "不接受帮助也不会被惩罚。 "
+          "aftermath": "他回了一个“好”，没有把你的不参与理解成冷漠。",
+          "subtext": "保留自己的安全和体力。",
+          "setFlags": {
+            "blackout_route": "home"
+          }
         }
       ]
     },
     {
       "id": "s10a",
       "slot": 10,
-      "chapter": "10｜10的承接",
-      "context": "intimacy",
+      "chapter": "10｜配电箱前的坏脾气",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "程野把两把椅子隔开摆在客厅，电一来就送你到门口。"
+          "text": "一楼配电箱里有股焦味。你把手电照过去，光正好晃进程野眼睛。"
+        },
+        {
+          "type": "quote",
+          "text": "“别照我脸。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他的语气比需要的重。你立刻把光移开，他也立刻意识到自己冲你发了火。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么处理他的急躁？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "“你可以急，但别冲我发火。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "conflict": 0.46,
+            "certainty": 0.34,
+            "autonomy": 0.24
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野深吸一口气：“对不起。不是你的错。”然后才继续检查线路。",
+          "subtext": "不让紧急情况吞掉基本尊重。"
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "把光压低，先配合他把总闸处理完。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "care": 0.3,
+            "repair": 0.22,
+            "conflict": -0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "电恢复以后，你没有假装刚才那句话不存在。",
+          "subtext": "先处理危险，保留之后再谈。"
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "把手电交给另一个邻居，自己退开。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "autonomy": 0.4,
+            "approach": -0.18,
+            "discernment": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野看见你退开，没要求你继续帮忙。",
+          "subtext": "不承担他情绪里的工作。"
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "等灯亮后说：“电工脾气也会跳闸？”",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "expression": 0.32,
+            "novelty": 0.22,
+            "repair": 0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他苦笑：“刚才那一下不该跳到你身上。”",
+          "subtext": "用玩笑打开道歉，但不替他免掉责任。"
         }
       ]
     },
     {
       "id": "s10b",
       "slot": 10,
-      "chapter": "10｜10的承接",
-      "context": "intimacy",
+      "chapter": "10｜你守住了楼梯口",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "你带着露营灯回家；他只隔着消息确认你是否看见恢复的楼道灯。"
+          "text": "你用手机灯照着楼梯，先后送一个孩子和两位老人回到门口。"
+        },
+        {
+          "type": "paragraph",
+          "text": "程野从一楼上来时，额头全是汗，手背蹭了一道黑灰。电虽然恢复了，他的考试书却被漏下来的雨水打湿了一角。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你先做什么？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "递给他一瓶水。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "care": 0.38,
+            "approach": 0.18,
+            "trust": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他一口气喝掉半瓶，第一次没有说“我没事”。",
+          "subtext": "照顾他此刻真实的疲惫。"
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "先问这次修复是临时的还是彻底的。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "discernment": 0.4,
+            "certainty": 0.3,
+            "care": 0.08
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野说只是临时恢复，明天必须让物业换线。",
+          "subtext": "不被恢复的灯光骗过现实。"
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "把湿掉的考试书拿走，说明天帮他晾。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "care": 0.34,
+            "commitment": 0.2,
+            "repair": 0.14
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他想拒绝，最后只说：“别把页码弄乱。”",
+          "subtext": "让他接受一次具体帮助。"
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "提醒他：这栋楼不能永远只靠他一个人。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.3,
+            "conflict": 0.22,
+            "discernment": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他看了看亮起来的楼道：“我知道。只是今天还没学会停手。”",
+          "subtext": "把他的目标拉回现实。"
         }
       ]
     },
     {
       "id": "s10c",
       "slot": 10,
-      "chapter": "10｜10的承接",
-      "context": "intimacy",
+      "chapter": "10｜吴阿姨说漏了嘴",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "你们和吴阿姨坐在楼道，公共空间没有被偷偷变成私密约会。"
+          "text": "你陪吴阿姨坐在门口。她嫌黑，又忍不住说程野从小就爱逞能，去年为了照顾住院的父亲，错过了一次考试。"
+        },
+        {
+          "type": "paragraph",
+          "text": "电恢复时，程野正好听见最后一句，脸色明显沉了一下。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么处理这段他没准备说的过去？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "打断吴阿姨，换到停电的话题。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "care": 0.36,
+            "autonomy": 0.22,
+            "discernment": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野看了你一眼，没有被迫当场解释父亲和考试。",
+          "subtext": "保护他没有主动公开的部分。"
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "告诉程野：“你不用现在解释。”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "trust": 0.28,
+            "care": 0.24,
+            "approach": 0.08
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他点头，肩膀慢慢放下来。",
+          "subtext": "不把知道变成追问的权利。"
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "等吴阿姨回屋后，问他为什么没有重新报名。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "expression": 0.3,
+            "discernment": 0.28,
+            "approach": 0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他说今年已经报了，准考证就在口袋里。",
+          "subtext": "只问与当下目标有关的部分。"
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "先检查吴阿姨冰箱里的药有没有断冷。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "care": 0.44,
+            "commitment": 0.14,
+            "approach": -0.04
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野和你一起确认药盒，私人话题自然停在了那里。",
+          "subtext": "让现实需要优先于好奇。"
         }
       ]
     },
     {
       "id": "s10d",
       "slot": 10,
-      "chapter": "10｜10的承接",
-      "context": "intimacy",
+      "chapter": "10｜隔着门的那条消息",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "你独自在屋里等电；程野没有敲门，只在电恢复后报了平安。"
+          "text": "你留在屋里。四十分钟后，冰箱重新启动，走廊的灯也亮了。"
+        },
+        {
+          "type": "paragraph",
+          "text": "程野发来消息：“恢复了。你那边冰箱响了吗？”没有顺便邀功，也没有问你为什么没出来。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么回复？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "拍一段冰箱嗡嗡响的视频给他。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "expression": 0.26,
+            "approach": 0.2,
+            "novelty": 0.14
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他回了一个很丑的胜利手势。隔着门也有了共同经历。",
+          "subtext": "用一个具体画面回应。"
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "只回：“响了，谢谢。”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "certainty": 0.26,
+            "autonomy": 0.28,
+            "trust": 0.1
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野回“好”，对话停在刚好的位置。",
+          "subtext": "保持礼貌和边界。"
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "问他有没有受伤。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "care": 0.34,
+            "approach": 0.12,
+            "trust": 0.14
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他说手背擦了一点灰，不严重。你没有因为关心失去自己的空间。",
+          "subtext": "确认他的安全。"
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "第二天早上再回复。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.4,
+            "approach": -0.22,
+            "expression": -0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他没有补发第二条消息催你。",
+          "subtext": "不把即时回应当作义务。"
         }
       ]
     },
     {
       "id": "s11",
       "slot": 11,
-      "chapter": "11｜楼顶晒被子",
+      "chapter": "11｜楼顶的风",
       "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "风把床单吹歪，程野只捏住边角，等你决定要不要一起夹好。"
+          "text": "第二天下午，你们在楼顶晾被停电弄湿的东西。程野脸侧还有一点没洗干净的黑灰。"
+        },
+        {
+          "type": "paragraph",
+          "text": "一阵风把你的床单卷起来，他和你同时抓住同一个角。床单鼓在中间，像临时搭起的一顶白色帐篷。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "这一下靠得很近，你怎么做？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "握住同一角，没有马上松手。",
           "vector": {
             "approach": 0.42,
-            "expression": 0.28
+            "trust": 0.2,
+            "idealization": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s12",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野看见你的手，没有把靠近继续推进，只陪你把床单夹好。",
+          "subtext": "允许这一刻停留。",
+          "setFlags": {
+            "roof_moment": "close"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "故意松手，让床单飞走，再和他一起追。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "novelty": 0.44,
+            "expression": 0.28,
+            "approach": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s12",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "你们追到水箱后面才抓住它，笑得比这件事值得的更久。",
+          "subtext": "让吸引先变成好玩的共同记忆。",
+          "setFlags": {
+            "roof_moment": "play"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "递给他纸巾：“你脸上还有灰。”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "care": 0.3,
+            "discernment": 0.18,
+            "approach": 0.1
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s12",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他接过纸巾，擦错了位置。你指了指另一边，没有替他擦。",
+          "subtext": "用照顾保持自然距离。",
+          "setFlags": {
+            "roof_moment": "care"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "退开半步，说你还在想昨晚的事。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.36,
+            "expression": 0.28,
+            "approach": -0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s12",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野把床单另一角夹好：“那就先想。风不急。”",
+          "subtext": "不让浪漫覆盖未解决的感受。",
+          "setFlags": {
+            "roof_moment": "hold"
+          }
         }
       ]
     },
     {
       "id": "s12",
       "slot": 12,
-      "chapter": "12｜没有用亲密解决冲突",
-      "context": "intimacy",
+      "chapter": "12｜他进过你的屋子",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "快递误会让程野安静下来；他没有把不高兴变成让你安抚的任务。"
+          "text": "第二天下午，你在外面开会，物业连续打了两个电话。楼上水管爆裂，水正沿着墙流进你的卧室。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你赶回去时，程野和物业已经用备用钥匙进过屋。他们关了阀门，也把你床边的三个纸箱移到了客厅。"
+        },
+        {
+          "type": "paragraph",
+          "text": "程野只打过一次电话。第二条消息，是一张处理完的照片。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你回来后先问什么？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "“物业是不是全程都在场？”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "discernment": 0.44,
+            "trust": -0.12,
+            "certainty": 0.26
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s13",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他回答从开门到关门，物业一直在。",
+          "subtext": "先确认进入过程。",
+          "setFlags": {
+            "breach_focus": "witness"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "“你动了哪些东西？”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "autonomy": 0.34,
+            "discernment": 0.38,
+            "expression": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s13",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他把移动过的箱子、床头柜和插线板一件件指出来。",
+          "subtext": "先弄清私人空间发生了什么。",
+          "setFlags": {
+            "breach_focus": "objects"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "“为什么只打一次电话，就替我决定进去？”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "conflict": 0.46,
+            "certainty": 0.38,
+            "trust": -0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s13",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野下意识说“楼下已经进水”，语气里还有防备。",
+          "subtext": "直接指出决定权被拿走。",
+          "setFlags": {
+            "breach_focus": "consent"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "先检查损失，说：“水停住了，我们等会儿谈。”",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "care": 0.18,
+            "discernment": 0.34,
+            "conflict": -0.06
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s13",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他跟着你检查墙面，没有把你的暂缓理解成原谅。",
+          "subtext": "先确认现实损失。",
+          "setFlags": {
+            "breach_focus": "damage"
+          }
         }
       ]
     },
     {
       "id": "s13",
       "slot": 13,
-      "chapter": "13｜搬家的消息",
-      "context": "intimacy",
+      "chapter": "13｜这次他没有道歉得很好听",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "房东说隔壁新楼有空房。程野听完只问：你自己更想住在哪里？"
+          "text": "楼道里还有潮湿的味道。程野说：“再等十分钟，楼下天花板就要塌。我没办法站在门外等你同意。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "这句话有一半是事实，另一半仍在为他自己辩护。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他看见你没有说话，才慢慢补了一句：“我应该多打电话，也应该让物业给你留完整记录。”"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么回应这份不够漂亮的道歉？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "“救水没错，别把后面的所有决定也算成紧急。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "certainty": 0.42,
+            "conflict": 0.34,
+            "repair": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s14",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野点头：“这句我得记。”他没有要求你马上接受。",
+          "subtext": "区分必要行动和过度决定。",
+          "setFlags": {
+            "conflict_mode": "distinguish"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "让他把电话、开门和移动物品的时间线写清楚。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "discernment": 0.46,
+            "autonomy": 0.28,
+            "trust": -0.1
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s14",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他真的在手机备忘录里逐条写完，发给你。",
+          "subtext": "用可核对的事实修复信任。",
+          "setFlags": {
+            "conflict_mode": "record"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "告诉他你需要几天，不想现在继续谈。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "autonomy": 0.48,
+            "approach": -0.24,
+            "expression": 0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s14",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野说“好”，三天里没有借修东西再来敲门。",
+          "subtext": "暂停关系，让情绪有位置。",
+          "setFlags": {
+            "conflict_mode": "space"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "承认你知道他为什么进去，但这仍然改变了你对他的信任。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "expression": 0.4,
+            "repair": 0.26,
+            "trust": -0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s14",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他没有追问要多久才能恢复，只说：“我明白不是一句对不起就够。”",
+          "subtext": "同时承认动机和后果。",
+          "setFlags": {
+            "conflict_mode": "mixed"
+          }
         }
       ]
     },
     {
       "id": "s14",
       "slot": 14,
-      "chapter": "14｜住所和关系",
-      "context": "intimacy",
-      "decisionType": "hard",
-      "decisionLabel": "这一次由你决定距离",
-      "decisionNote": "没有哪一种边界需要被解释成亏欠。",
+      "chapter": "14｜你要不要搬走",
+      "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "新的房子、旧的楼道和你们刚刚长出来的关系，都不该替你做决定。"
+          "text": "三天后，房东说这栋楼要大修，隔壁新楼正好空出一间。租金贵一点，但不会再漏水，搬家费也能减免。"
+        },
+        {
+          "type": "paragraph",
+          "text": "程野在楼梯口听见这件事，几乎没想就说：“搬吧，新楼省心。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "你看着他：“你又替我决定。”他这才闭嘴。"
         }
       ],
-      "prompt": "你会怎么做？",
-      "note": "四种回应都会被认真承接。",
+      "prompt": "住所的决定，你怎么做？",
       "choices": [
         {
           "id": "a",
-          "text": "搬走，也继续慢慢见面",
+          "text": "接受新楼的房子，告诉他具体搬家日期。",
           "vector": {
-            "approach": 0.3,
-            "autonomy": -0.15
+            "autonomy": 0.38,
+            "discernment": 0.3,
+            "commitment": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s15a",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "允许进入，但只处理眼前的事。"
+          "aftermath": "程野只问你需不需要推车，没有把搬走听成关系答案。",
+          "subtext": "搬去更省心的地方。",
+          "setFlags": {
+            "move_plan": "move"
+          }
         },
         {
           "id": "b",
-          "text": "留在老楼，但不是为了他",
+          "text": "留在老楼，因为你喜欢这里的采光和通勤。",
           "vector": {
-            "approach": 0.13999999999999999,
-            "autonomy": 0.03
+            "commitment": 0.28,
+            "autonomy": 0.3,
+            "trust": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s15b",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "把界限留在自己手里。"
+          "aftermath": "你把理由说得很清楚，不给任何人把留下占为自己的功劳。",
+          "subtext": "为自己的生活留下。",
+          "setFlags": {
+            "move_plan": "stay"
+          }
         },
         {
           "id": "c",
-          "text": "搬走，同时暂停关系",
+          "text": "先试住新楼一周，再决定。",
           "vector": {
-            "approach": -0.020000000000000018,
-            "autonomy": 0.21
+            "discernment": 0.42,
+            "certainty": -0.08,
+            "autonomy": 0.26
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s15c",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "让公共关系成为安全感的一部分。"
+          "aftermath": "房东给了你七天。程野没有每天问结果。",
+          "subtext": "先让现实替你提供证据。",
+          "setFlags": {
+            "move_plan": "trial"
+          }
         },
         {
           "id": "d",
-          "text": "先试住新房，再决定",
+          "text": "两个都不要，自己去找别的房子。",
           "vector": {
-            "approach": -0.18,
-            "autonomy": 0.39
+            "autonomy": 0.5,
+            "novelty": 0.16,
+            "approach": -0.08
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s15d",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "不接受帮助也不会被惩罚。 "
+          "aftermath": "程野说“好”，这次没有递上任何建议。",
+          "subtext": "把住所彻底从这段关系里拿开。",
+          "setFlags": {
+            "move_plan": "elsewhere"
+          }
         }
       ]
     },
     {
       "id": "s15a",
       "slot": 15,
-      "chapter": "15｜15的承接",
+      "chapter": "15｜搬到新的地址",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "你搬到新地方，程野帮你把箱子搬到楼下就告别；后来见面是你们重新约的。"
+          "text": "搬家那天，程野推着一辆旧手推车来到门口。他先问：“哪些箱子可以碰？”"
+        },
+        {
+          "type": "paragraph",
+          "text": "你第一次看见他的帮助不是自动发生，而是在等一个明确答案。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你让他怎么参与？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "只让他搬书和厨房用品。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "certainty": 0.34,
+            "trust": 0.18,
+            "autonomy": 0.28
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他给箱子重新贴标签，卧室那几只一眼都没碰。",
+          "subtext": "给帮助划出具体范围。",
+          "setFlags": {
+            "move_boundary": "limited"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "请他只把箱子送到楼下，之后你自己处理。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "autonomy": 0.4,
+            "approach": -0.06,
+            "discernment": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野把最后一只箱子放上车，就停在旧楼门口。",
+          "subtext": "接受一段帮助，不延伸成陪伴。",
+          "setFlags": {
+            "move_boundary": "stairs"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "不让他搬，但约他晚上来新家喝茶。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "approach": 0.28,
+            "autonomy": 0.28,
+            "expression": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他空着手离开，晚上按你发的时间重新出现。",
+          "subtext": "把帮助和见面分成两件事。",
+          "setFlags": {
+            "move_boundary": "tea"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "让他全程帮忙，结束后请他吃饭。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "trust": 0.28,
+            "care": 0.24,
+            "commitment": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他每碰一个没标清的箱子都会先问，速度慢了很多。",
+          "subtext": "在新的规则里重新合作。",
+          "setFlags": {
+            "move_boundary": "full"
+          }
         }
       ]
     },
     {
       "id": "s15b",
       "slot": 15,
-      "chapter": "15｜15的承接",
+      "chapter": "15｜你决定留下",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "你留下，是因为喜欢楼道晒到的阳光；程野没有把它当作承诺。"
+          "text": "你签了续租。程野听说后第一句是：“我不会以为你是为了我。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他说得太快，像是在抢先保护自己，也像怕你误会他自作多情。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么回答？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "“本来就不是。别替我补原因。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "certainty": 0.38,
+            "autonomy": 0.34,
+            "expression": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野笑得有点尴尬：“好，我只听你说的。”",
+          "subtext": "让留下保持原本理由。",
+          "setFlags": {
+            "stay_tone": "clear"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "“有一点和你有关，但不是全部。”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "expression": 0.42,
+            "approach": 0.26,
+            "trust": 0.14
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他没有顺势把“一点”放大，只说：“一点我也听见了。”",
+          "subtext": "承认吸引，不交出全部决定。",
+          "setFlags": {
+            "stay_tone": "honest"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "把物业维修清单递给他：“先把楼的问题算明白。”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "discernment": 0.38,
+            "idealization": -0.18,
+            "repair": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野接过清单，第一次不是为了自己去修，而是准备让物业承担。",
+          "subtext": "把现实问题和爱情分开。",
+          "setFlags": {
+            "stay_tone": "practical"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "告诉他别让“怕误会”变成新的沉默。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "conflict": 0.34,
+            "repair": 0.24,
+            "certainty": 0.28
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他点头：“那我以后少猜，多问。”",
+          "subtext": "指出自我保护也会伤害关系。",
+          "setFlags": {
+            "stay_tone": "challenge"
+          }
         }
       ]
     },
     {
       "id": "s15c",
       "slot": 15,
-      "chapter": "15｜15的承接",
+      "chapter": "15｜试住的第七天",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "你搬走并说想暂停。程野回复好，没有把搬家解释成抛弃。"
+          "text": "你在新楼试住了七天。没有漏水，没有停电，睡眠也确实更好。"
+        },
+        {
+          "type": "paragraph",
+          "text": "第七个晚上，程野只发来一句：“新楼怎么样？”没有问你会不会回来。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么回答这个问题？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "请他来新楼喝一杯茶，再告诉他感受。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "approach": 0.32,
+            "trust": 0.18,
+            "autonomy": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他按导航走到新地址，手里没有工具，只带了两只橘子。",
+          "subtext": "让他进入新的生活场景。",
+          "setFlags": {
+            "trial_reply": "invite"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "诚实说你睡得更好，但会想起旧楼的灯。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "expression": 0.4,
+            "idealization": 0.2,
+            "discernment": 0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野回：“睡得好更重要。想灯的时候可以来看看。”",
+          "subtext": "把矛盾感受一起说出来。",
+          "setFlags": {
+            "trial_reply": "mixed"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "约在楼下咖啡店谈，不让地址决定关系。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "certainty": 0.34,
+            "autonomy": 0.28,
+            "approach": 0.14
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "你们在两个住处之间见面，第一次没有任何故障替你们开场。",
+          "subtext": "选择中立地点。",
+          "setFlags": {
+            "trial_reply": "neutral"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "告诉他你还需要更多时间。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.42,
+            "approach": -0.18,
+            "certainty": -0.08
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他回“好”，没有在第八天继续追问。",
+          "subtext": "让试住仍然只是试住。",
+          "setFlags": {
+            "trial_reply": "time"
+          }
         }
       ]
     },
     {
       "id": "s15d",
       "slot": 15,
-      "chapter": "15｜15的承接",
+      "chapter": "15｜去找第三个地方",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "你短租试住，程野不替你判断，只在你邀请时来喝茶。"
+          "text": "你开始自己找房。程野发来三条房源链接，看到你说“我可以自己找”以后，真的停了。"
+        },
+        {
+          "type": "paragraph",
+          "text": "第二天，他只问了一句：“看房需要有人陪吗？不需要也没关系。”"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么回应这次更克制的帮助？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "谢谢他听见了“我自己来”。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "repair": 0.3,
+            "trust": 0.18,
+            "autonomy": 0.28
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野回：“这次听见得比较快。”",
+          "subtext": "承认他的改变。",
+          "setFlags": {
+            "search_reply": "thanks"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "只请他帮你判断一个房子的电路。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "discernment": 0.38,
+            "trust": 0.2,
+            "care": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他只回答了电路问题，没有顺便评价你该不该租。",
+          "subtext": "在专业范围内接受帮助。",
+          "setFlags": {
+            "search_reply": "technical"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "邀请他陪你看一套房，但路上不谈关系。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "approach": 0.28,
+            "autonomy": 0.22,
+            "certainty": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他答应了，也没有把同行当成约会。",
+          "subtext": "允许陪伴，但不给它偷换含义。",
+          "setFlags": {
+            "search_reply": "viewing"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "不需要他参与找房。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.46,
+            "approach": -0.22,
+            "expression": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野说“知道了”，之后没有再发房源。",
+          "subtext": "把这项决定留给自己。",
+          "setFlags": {
+            "search_reply": "private"
+          }
         }
       ]
     },
     {
       "id": "s16",
       "slot": 16,
-      "chapter": "16｜新的日常",
-      "context": "commitment",
+      "chapter": "16｜他终于不再靠修东西说话",
+      "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "无论住在哪里，你们都开始练习把普通日子说得清楚。"
+          "text": "几天后，程野把那只搪瓷锅送来。松动的把手已经修好，锅里放着一张旧配方纸。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他站在门外，没有工具箱，也没有借口。"
+        },
+        {
+          "type": "quote",
+          "text": "“我以前觉得，把事情解决了，人就会留下。上次进你家，我把着急当成了理所当然。这个不对。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "这次他说得不漂亮，也没有替你安排原谅。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你让这次修复走到哪一步？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "“把道歉说完整：你具体做错了什么？”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "certainty": 0.42,
+            "repair": 0.3,
+            "conflict": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s17",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野重新说了一遍：少打电话、先移动东西、事后才通知。没有省略。",
+          "subtext": "让道歉落在具体行为上。",
+          "setFlags": {
+            "repair_gate": "specific"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "“我不需要你一直有用。先学会问。”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "expression": 0.4,
+            "autonomy": 0.34,
+            "care": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s17",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他点头：“那我现在问。锅能不能先放你这里？”",
+          "subtext": "把关系从功能交换里拿出来。",
+          "setFlags": {
+            "repair_gate": "ask"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "“你可以问我留下不留下，但我不保证答案。”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "approach": 0.28,
+            "certainty": 0.28,
+            "autonomy": 0.24
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s17",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野说：“这已经比我替你回答强。”",
+          "subtext": "允许他表达欲望，不承诺结果。",
+          "setFlags": {
+            "repair_gate": "permission"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "收下锅，说今天先不继续谈。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.44,
+            "approach": -0.18,
+            "repair": 0.08
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s17",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他把锅放在门边，按你说的停下。",
+          "subtext": "让修复保留自己的速度。",
+          "setFlags": {
+            "repair_gate": "pause"
+          }
         }
       ]
     },
     {
       "id": "s17",
       "slot": 17,
-      "chapter": "17｜一把备用的灯",
+      "chapter": "17｜第一次真正的约会",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "程野问露营灯要不要还；你意识到重要的不是灯，而是有人先问你的选择。"
+          "text": "程野考试那天，下午四点发来一张成绩截图：通过。"
+        },
+        {
+          "type": "paragraph",
+          "text": "过了十分钟，他又发了一条消息。"
+        },
+        {
+          "type": "quote",
+          "text": "“周六，吃一碗不是停水逼出来的面？算约会。地点你定。拒绝也行。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "这是他第一次没有借水槽、停电或搬箱子靠近你。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎样回答这次真正的邀请？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "直接定下时间和一家你想去的小店。",
           "vector": {
             "approach": 0.42,
-            "expression": 0.28
+            "expression": 0.34,
+            "certainty": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s18",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他回“收到”，没有擅自把地点改成更方便他的地方。",
+          "subtext": "明确接受这次约会。",
+          "setFlags": {
+            "date_mode": "direct"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "说先和邻居一起庆祝考试，约会改到下周。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "commitment": 0.26,
+            "care": 0.22,
+            "autonomy": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s18",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野答应先参加楼里的庆祝，也把下周的日期记进日历。",
+          "subtext": "接受靠近，但不让恋爱占满生活。",
+          "setFlags": {
+            "date_mode": "later"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "反问他：“你想要的只是吃面，还是想开始一段关系？”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "certainty": 0.44,
+            "expression": 0.36,
+            "discernment": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s18",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他回答：“想认真约会。不是顺便。”这次没有躲到玩笑后面。",
+          "subtext": "先问清邀请的含义。",
+          "setFlags": {
+            "date_mode": "clarify"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "告诉他你现在还不想约会。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.46,
+            "approach": -0.28,
+            "expression": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s18",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "程野回“明白”。周六那天，他没有再找一个维修理由出现。",
+          "subtext": "拒绝这次邀请。",
+          "setFlags": {
+            "date_mode": "decline"
+          }
         }
       ]
     },
     {
       "id": "s18",
       "slot": 18,
-      "chapter": "18｜把谁放进日常",
+      "chapter": "18｜门要怎么打开",
       "context": "commitment",
-      "decisionType": "final",
-      "decisionLabel": "最后的关系定义",
-      "decisionNote": "你可以靠近，也可以保留自己的门。",
       "content": [
         {
           "type": "paragraph",
-          "text": "老楼的楼道亮起来。程野站在台阶下，等你说这段关系要怎样进入以后。"
+          "text": "一周后，旧楼的线路换好了。楼道灯亮得很普通，再也不需要那盏露营灯。"
+        },
+        {
+          "type": "paragraph",
+          "text": "那顿面可能已经吃过、改了日期，也可能根本没有发生。程野站在你门外，没有带工具。"
+        },
+        {
+          "type": "quote",
+          "text": "“以后，我该以什么身份敲门？”"
+        },
+        {
+          "type": "paragraph",
+          "text": "最后的答案不会改变你住在哪里，也不会抹掉他曾经越界。它只决定这段关系从现在起要成为什么。"
         }
       ],
-      "prompt": "你会怎样定义你们？",
-      "note": "四个结局都由你决定。",
+      "prompt": "你怎么回答？",
       "choices": [
         {
           "id": "a",
-          "text": "继续把日常留给彼此",
+          "text": "“男朋友。门还是要敲。”",
           "vector": {
-            "commitment": 0.45
+            "commitment": 0.46,
+            "certainty": 0.38,
+            "approach": 0.28
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "$result",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
+          "aftermath": "程野笑了一下，真的退后半步，重新敲了两下。",
+          "subtext": "正式开始关系，同时保留边界。",
           "outcome": "together",
-          "subtext": "这是你为自己的生活作出的选择。",
           "finalReveal": {
-            "title": "把门打开，也保留钥匙",
-            "copy": "你让程野进入的是一次次被邀请的日常：水槽、露营灯和搬家后的晚饭。 这一次的决定不需要用急切或亏欠来证明。"
+            "title": "门会打开，但不是默认",
+            "copy": "你选择让程野进入恋爱关系，也保留每一次进入都需要被询问的权利。靠近不再靠故障和帮助发生。"
           }
         },
         {
           "id": "b",
-          "text": "先约会，不急着命名",
+          "text": "“先认真约会三次，再决定要不要命名。”",
           "vector": {
-            "commitment": 0.2
+            "commitment": 0.24,
+            "discernment": 0.3,
+            "autonomy": 0.24
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "$result",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
+          "aftermath": "他拿出手机记下第一次约会，不把“三次”理解成迟早会答应。",
+          "subtext": "进入有限、清楚的尝试。",
           "outcome": "slow",
-          "subtext": "这是你为自己的生活作出的选择。",
           "finalReveal": {
-            "title": "慢慢把日子排进彼此",
-            "copy": "你没有把心动赶成答案；程野也没有用等待催促你。 这一次的决定不需要用急切或亏欠来证明。"
+            "title": "先把三次约会过完",
+            "copy": "你没有把心动赶成承诺，也没有把谨慎写成撤退。接下来的关系要靠真正的约会，而不是维修事故推进。"
           }
         },
         {
           "id": "c",
-          "text": "各自住好，也保持联系",
+          "text": "“楼下邻居，也可以是朋友。”",
           "vector": {
-            "commitment": -0.04999999999999999
+            "certainty": 0.36,
+            "autonomy": 0.34,
+            "approach": -0.08
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "$result",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
+          "aftermath": "程野点头，把关系停在你说出的范围里。",
+          "subtext": "保留联系，结束恋爱方向。",
           "outcome": "separate-close",
-          "subtext": "这是你为自己的生活作出的选择。",
           "finalReveal": {
-            "title": "隔着城市也不失去联系",
-            "copy": "你选择各自安顿，却把尊重留在每一次联系里。 这一次的决定不需要用急切或亏欠来证明。"
+            "title": "灯亮着，门不必为爱情打开",
+            "copy": "你保留了一个可以打招呼、可以互相帮忙的朋友，却不再让生活里的亲近自动升级成恋爱。"
           }
         },
         {
           "id": "d",
-          "text": "把关系停在这里",
+          "text": "“不用再敲了。我们到这里。”",
           "vector": {
-            "commitment": -0.3
+            "autonomy": 0.5,
+            "certainty": 0.38,
+            "approach": -0.36
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "$result",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
+          "aftermath": "程野说“好”，转身下楼。此后需要联系的事只留在物业群里。",
+          "subtext": "结束私人关系。",
           "outcome": "pause",
-          "subtext": "这是你为自己的生活作出的选择。",
           "finalReveal": {
-            "title": "把门关好，仍然感谢相遇",
-            "copy": "你决定暂停。程野没有挽留成债务，老楼的楼道仍然属于你自己。  这一次的决定不需要用急切或亏欠来证明。"
+            "title": "把门关好，不留下暗号",
+            "copy": "你承认这段相遇有过吸引，也确认它不适合继续。结束不是试探，更不是等他用新的帮助追回来。"
           }
         }
       ]
