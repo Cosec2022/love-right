@@ -2421,229 +2421,533 @@
           "text": "他穿得很简单，没有带锅，也没有带任何能让道歉显得更好吃的东西。"
         },
         {
-          "type": "quote",
-          "text": "“那晚我缺人，第一反应是把你塞进去。”"
+          "type": "paragraph",
+          "text": "“开业那晚，我缺人，第一反应是把你塞进我的安排里。”"
         },
         {
           "type": "paragraph",
-          "text": "他看着你。"
+          "text": "他看着你，把后半句说完。"
         },
         {
           "type": "quote",
-          "text": "“我想让你站在我这边，不代表我可以替你决定站哪里。”"
+          "text": "“我想让你站在我这边，不代表我可以替你决定站在哪里。”"
         },
         {
           "type": "paragraph",
-          "text": "他说完以后才问：“还愿不愿意和我见一次？不在店里。”"
+          "text": "这次他没有替你安排下一步。"
+        },
+        {
+          "type": "quote",
+          "text": "“还愿不愿意再见我一次？时间和地方都由你定。”"
         }
       ],
       "prompt": "你怎么回答？",
       "choices": [
         {
           "id": "a",
-          "text": "答应，并由你选地方。",
+          "text": "“明晚八点，去河边走半小时。”",
           "vector": {
             "approach": 0.34,
             "autonomy": 0.16,
             "commitment": 0.14
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.9,
-          "next": "s17",
-          "aftermath": "程野说：“好。这次我跟你的安排。”",
           "setFlags": {
             "date_answer": "yes"
-          }
+          },
+          "next": "s17a",
+          "aftermath": "你给了明确的时间和地点，也保留了自己随时结束谈话的权利。"
         },
         {
           "id": "b",
-          "text": "先问他，为什么偏偏是你。",
+          "text": "“先别约。你先告诉我，为什么偏偏是我。”",
           "vector": {
             "certainty": 0.34,
             "validation": 0.2,
             "discernment": 0.16
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.9,
-          "next": "s17",
-          "aftermath": "他没有用“因为你特别”敷衍：“见面时我认真说。”",
           "setFlags": {
             "date_answer": "why"
-          }
+          },
+          "next": "s17b",
+          "aftermath": "程野没有再用一次约会绕开这个问题。"
         },
         {
           "id": "c",
-          "text": "说可以再约三次，但不保证会变成恋爱。",
+          "text": "“可以再约三次。第一次周日早上，去旧书店。”",
           "vector": {
             "discernment": 0.28,
             "commitment": 0.16,
             "autonomy": 0.2
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.9,
-          "next": "s17",
-          "aftermath": "程野点头：“三次就是三次，不提前算结果。”",
           "setFlags": {
             "date_answer": "three"
-          }
+          },
+          "next": "s17c",
+          "aftermath": "你没有许诺恋爱，只给了你们三个真实相处的机会。"
         },
         {
           "id": "d",
-          "text": "拒绝继续。",
+          "text": "“现在不见。等你的店开稳一个月，再来问一次。”",
           "vector": {
             "autonomy": 0.38,
             "certainty": 0.22,
-            "approach": -0.26
+            "approach": -0.18
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.9,
-          "next": "s17",
-          "aftermath": "他站了一会儿，说“知道了”，然后下楼。",
           "setFlags": {
-            "date_answer": "no"
-          }
+            "date_answer": "later"
+          },
+          "next": "s17d",
+          "aftermath": "你没有被道歉催着给答案，而是给出了一个清楚的新条件。"
         }
       ]
     },
     {
-      "id": "s17",
+      "id": "s17a",
       "slot": 17,
-      "chapter": "17｜为什么是你",
+      "chapter": "17｜河边那一晚",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "你们可能去了河边、看了一场夜场电影，也可能只在门口把话说完。"
+          "text": "第二天八点，程野准时到了河边。"
         },
         {
           "type": "paragraph",
-          "text": "程野终于回答，为什么偏偏是你。"
+          "text": "他没带花，也没带店里的吃的。你们沿着堤岸走到第二座桥，他才停下来。"
         },
         {
           "type": "quote",
-          "text": "“第一眼，是因为你好看。”"
+          "text": "“第一眼，当然是因为你好看。”"
         },
         {
           "type": "paragraph",
-          "text": "他说得很直接，目光没有躲。"
+          "text": "他说得直接，没有拿玩笑遮过去。"
         },
         {
           "type": "quote",
-          "text": "“后来是因为你吃第一口的时候没夸我。再后来，是因为你肯靠近，也肯在我不讲理的时候转身。”"
+          "text": "“后来是因为你吃完那碗汤，皱着眉说偏甜，却还是把剩下的喝完。再后来，是你会笑我，也会在我自以为是的时候转身。”"
         },
         {
           "type": "paragraph",
-          "text": "他不是因为你能帮店里、懂他或让他变好才喜欢你。"
+          "text": "他看着河面，声音低下来。"
+        },
+        {
+          "type": "quote",
+          "text": "“你在的时候，我总想把下一顿也留给你。”"
         }
       ],
-      "prompt": "你把自己的真实想法说到哪一步？",
+      "prompt": "听完以后，你怎么决定？",
       "choices": [
         {
           "id": "a",
-          "text": "“我也想要你。不是只想继续观察。”",
-          "vector": {
-            "approach": 0.38,
-            "expression": 0.32,
-            "commitment": 0.18
-          },
-          "intensity": 1.0,
-          "confidence": 0.9,
-          "next": "s18",
-          "aftermath": "程野的眼神明显深了一点，却仍等你把最后的关系说完。",
-          "setFlags": {
-            "desire": "want"
-          }
-        },
-        {
-          "id": "b",
-          "text": "“我有兴趣，但我要慢一点。”",
-          "vector": {
-            "approach": 0.14,
-            "discernment": 0.24,
-            "commitment": 0.12
-          },
-          "intensity": 1.0,
-          "confidence": 0.9,
-          "next": "s18",
-          "aftermath": "他说：“慢不是没有。我听得懂。”",
-          "setFlags": {
-            "desire": "slow"
-          }
-        },
-        {
-          "id": "c",
-          "text": "“我喜欢你，但现在不想进入恋爱。”",
-          "vector": {
-            "expression": 0.3,
-            "autonomy": 0.28,
-            "approach": 0.04
-          },
-          "intensity": 1.0,
-          "confidence": 0.9,
-          "next": "s18",
-          "aftermath": "程野点头，没有把喜欢自动改写成关系。",
-          "setFlags": {
-            "desire": "like_no_relationship"
-          }
-        },
-        {
-          "id": "d",
-          "text": "“这份吸引已经不够让我继续。”",
-          "vector": {
-            "certainty": 0.32,
-            "autonomy": 0.34,
-            "approach": -0.28
-          },
-          "intensity": 1.0,
-          "confidence": 0.9,
-          "next": "s18",
-          "aftermath": "他没有追问还差什么。",
-          "setFlags": {
-            "desire": "end"
-          }
-        }
-      ]
-    },
-    {
-      "id": "s18",
-      "slot": 18,
-      "chapter": "18｜第四次敲门",
-      "context": "commitment",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "又过了一个星期，程野第四次站在你门外。"
-        },
-        {
-          "type": "paragraph",
-          "text": "第一次他来拿锅，后来他想见你、想吻你，也曾在最忙的时候擅自替你安排位置。"
-        },
-        {
-          "type": "paragraph",
-          "text": "现在他只站在那里，等你的答案。"
-        },
-        {
-          "type": "quote",
-          "text": "“以后我以什么身份敲门？”"
-        }
-      ],
-      "prompt": "你怎么回答？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "“男朋友。下次只带你自己。”",
+          "text": "“我也喜欢你。那就正式开始。”",
           "vector": {
             "commitment": 0.44,
             "approach": 0.32,
             "certainty": 0.3
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "程野笑了，低头吻你以前仍然先问：“现在可以？”",
           "setFlags": {
             "final": "together"
           },
+          "next": "s18_together",
+          "aftermath": "你把喜欢和关系都说得明确。"
+        },
+        {
+          "id": "b",
+          "text": "“继续约会，但先别叫我女朋友。”",
+          "vector": {
+            "discernment": 0.3,
+            "commitment": 0.2,
+            "autonomy": 0.2
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "slow"
+          },
+          "next": "s18_slow",
+          "aftermath": "你愿意继续，却不让热度替你决定速度。"
+        },
+        {
+          "id": "c",
+          "text": "“我喜欢你，但我不想进入恋爱。”",
+          "vector": {
+            "autonomy": 0.34,
+            "certainty": 0.3,
+            "approach": -0.04
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "separate"
+          },
+          "next": "s18_separate",
+          "aftermath": "你承认吸引，也给关系划下了事实边界。"
+        },
+        {
+          "id": "d",
+          "text": "“我相信你喜欢我，但我不想继续。”",
+          "vector": {
+            "autonomy": 0.46,
+            "certainty": 0.34,
+            "approach": -0.34
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "end"
+          },
+          "next": "s18_end",
+          "aftermath": "你没有否认曾经的心动，也没有因此改变自己的决定。"
+        }
+      ]
+    },
+    {
+      "id": "s17b",
+      "slot": 17,
+      "chapter": "17｜门口的答案",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "程野仍站在门外，没有把你的问题改成一次约会。"
+        },
+        {
+          "type": "quote",
+          "text": "“第一眼，因为你好看。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他停了一下，又把更难说的部分接上。"
+        },
+        {
+          "type": "quote",
+          "text": "“第二次上楼，我其实没有东西要拿，只是想再见你。后来你说我的菜偏甜，笑我爱安排人。你让我想靠近，也让我没法一直装作自己什么都对。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "楼道的感应灯灭了一次。他没有往前，只等你决定要不要重新把灯叫亮。"
+        }
+      ],
+      "prompt": "你现在怎么回答？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "“我也喜欢你。那就正式开始。”",
+          "vector": {
+            "commitment": 0.44,
+            "approach": 0.32,
+            "certainty": 0.3
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "together"
+          },
+          "next": "s18_together",
+          "aftermath": "你把喜欢和关系都说得明确。"
+        },
+        {
+          "id": "b",
+          "text": "“继续约会，但先别叫我女朋友。”",
+          "vector": {
+            "discernment": 0.3,
+            "commitment": 0.2,
+            "autonomy": 0.2
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "slow"
+          },
+          "next": "s18_slow",
+          "aftermath": "你愿意继续，却不让热度替你决定速度。"
+        },
+        {
+          "id": "c",
+          "text": "“我喜欢你，但我不想进入恋爱。”",
+          "vector": {
+            "autonomy": 0.34,
+            "certainty": 0.3,
+            "approach": -0.04
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "separate"
+          },
+          "next": "s18_separate",
+          "aftermath": "你承认吸引，也给关系划下了事实边界。"
+        },
+        {
+          "id": "d",
+          "text": "“我相信你喜欢我，但我不想继续。”",
+          "vector": {
+            "autonomy": 0.46,
+            "certainty": 0.34,
+            "approach": -0.34
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "end"
+          },
+          "next": "s18_end",
+          "aftermath": "你没有否认曾经的心动，也没有因此改变自己的决定。"
+        }
+      ]
+    },
+    {
+      "id": "s17c",
+      "slot": 17,
+      "chapter": "17｜第三次约会",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "第一次约会，你们在周日早上逛了旧书店。第二次，他带你去吃一家自己嫌弃了很多年的面馆。"
+        },
+        {
+          "type": "paragraph",
+          "text": "第三次是一场夜场电影。散场以后，他送你走回老楼，没有提店里的事。"
+        },
+        {
+          "type": "paragraph",
+          "text": "走到楼梯口，你问他，三次以后答案有没有变。"
+        },
+        {
+          "type": "quote",
+          "text": "“没有。第一眼是因为你好看。”"
+        },
+        {
+          "type": "quote",
+          "text": "“后来是因为你不哄我，也不怕让我失望。跟你待在一起，我不用一直做那个什么都能安排好的人。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "三次约会结束了。接下来不再由约定替你们决定。"
+        }
+      ],
+      "prompt": "你怎么决定？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "“我也喜欢你。那就正式开始。”",
+          "vector": {
+            "commitment": 0.44,
+            "approach": 0.32,
+            "certainty": 0.3
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "together"
+          },
+          "next": "s18_together",
+          "aftermath": "你把喜欢和关系都说得明确。"
+        },
+        {
+          "id": "b",
+          "text": "“继续约会，但先别叫我女朋友。”",
+          "vector": {
+            "discernment": 0.3,
+            "commitment": 0.2,
+            "autonomy": 0.2
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "slow"
+          },
+          "next": "s18_slow",
+          "aftermath": "你愿意继续，却不让热度替你决定速度。"
+        },
+        {
+          "id": "c",
+          "text": "“我喜欢你，但我不想进入恋爱。”",
+          "vector": {
+            "autonomy": 0.34,
+            "certainty": 0.3,
+            "approach": -0.04
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "separate"
+          },
+          "next": "s18_separate",
+          "aftermath": "你承认吸引，也给关系划下了事实边界。"
+        },
+        {
+          "id": "d",
+          "text": "“我相信你喜欢我，但我不想继续。”",
+          "vector": {
+            "autonomy": 0.46,
+            "certainty": 0.34,
+            "approach": -0.34
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "end"
+          },
+          "next": "s18_end",
+          "aftermath": "你没有否认曾经的心动，也没有因此改变自己的决定。"
+        }
+      ]
+    },
+    {
+      "id": "s17d",
+      "slot": 17,
+      "chapter": "17｜一个月以后",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "接下来的一个月，程野没有再敲你的门。"
+        },
+        {
+          "type": "paragraph",
+          "text": "楼下的小店慢慢稳定下来。你偶尔在楼梯上遇见他，他会打招呼，却没有借机重提那晚。"
+        },
+        {
+          "type": "paragraph",
+          "text": "满一个月的晚上，门铃响了。程野站在门外，手里什么都没有。"
+        },
+        {
+          "type": "quote",
+          "text": "“你说等一个月。我来问一次。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "在你回答以前，他先把原因说清楚。"
+        },
+        {
+          "type": "quote",
+          "text": "“第一眼是因为你好看。后来，是因为你没有为了喜欢我，就假装我做的每件事都对。”"
+        },
+        {
+          "type": "quote",
+          "text": "“我还是想见你。但这一次，你说什么我都听完整。”"
+        }
+      ],
+      "prompt": "你怎么决定？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "“我也喜欢你。那就正式开始。”",
+          "vector": {
+            "commitment": 0.44,
+            "approach": 0.32,
+            "certainty": 0.3
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "together"
+          },
+          "next": "s18_together",
+          "aftermath": "你把喜欢和关系都说得明确。"
+        },
+        {
+          "id": "b",
+          "text": "“继续约会，但先别叫我女朋友。”",
+          "vector": {
+            "discernment": 0.3,
+            "commitment": 0.2,
+            "autonomy": 0.2
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "slow"
+          },
+          "next": "s18_slow",
+          "aftermath": "你愿意继续，却不让热度替你决定速度。"
+        },
+        {
+          "id": "c",
+          "text": "“我喜欢你，但我不想进入恋爱。”",
+          "vector": {
+            "autonomy": 0.34,
+            "certainty": 0.3,
+            "approach": -0.04
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "separate"
+          },
+          "next": "s18_separate",
+          "aftermath": "你承认吸引，也给关系划下了事实边界。"
+        },
+        {
+          "id": "d",
+          "text": "“我相信你喜欢我，但我不想继续。”",
+          "vector": {
+            "autonomy": 0.46,
+            "certainty": 0.34,
+            "approach": -0.34
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "final": "end"
+          },
+          "next": "s18_end",
+          "aftermath": "你没有否认曾经的心动，也没有因此改变自己的决定。"
+        }
+      ]
+    },
+    {
+      "id": "s18_together",
+      "slot": 18,
+      "chapter": "18｜第一次以男朋友身份敲门",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "一个星期后，程野第一次以男朋友的身份站在你门外。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他没带锅，也没带试菜，只带了自己。"
+        },
+        {
+          "type": "quote",
+          "text": "“今晚不谈店。可以进去吗？”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他站在门槛外，等你用自己的方式开始这段关系。"
+        }
+      ],
+      "prompt": "你怎么让他进来？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "拉住他的衣领，把人直接带进门。",
+          "vector": {
+            "approach": 0.28,
+            "expression": 0.26
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "ending_tone": "bold"
+          },
+          "next": "$result",
+          "aftermath": "这一次，靠近是你主动选择的。",
           "outcome": "together",
           "finalReveal": {
             "title": "第四次敲门，他只为你来",
@@ -2652,19 +2956,121 @@
         },
         {
           "id": "b",
-          "text": "“先约会三次。每一次都不要在你的店里。”",
+          "text": "“先陪我下楼买瓶酒，回来再说。”",
           "vector": {
-            "discernment": 0.3,
-            "commitment": 0.2,
-            "autonomy": 0.2
+            "novelty": 0.18,
+            "approach": 0.14
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "他拿出手机，只记下第一次的时间。",
           "setFlags": {
-            "final": "slow"
+            "ending_tone": "playful"
           },
+          "next": "$result",
+          "aftermath": "你把正式开始变成了一件轻松的事。",
+          "outcome": "together",
+          "finalReveal": {
+            "title": "第四次敲门，他只为你来",
+            "copy": "你选择和程野正式交往。你喜欢他的外表、手艺和直接，也没有因此忽略他的控制欲。关系从这一次开始，不再默认你该站在哪里。"
+          }
+        },
+        {
+          "id": "c",
+          "text": "“可以。今晚谁都不许替对方安排。”",
+          "vector": {
+            "autonomy": 0.2,
+            "certainty": 0.18
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "ending_tone": "clear"
+          },
+          "next": "$result",
+          "aftermath": "你把最重要的边界留在了关系开头。",
+          "outcome": "together",
+          "finalReveal": {
+            "title": "第四次敲门，他只为你来",
+            "copy": "你选择和程野正式交往。你喜欢他的外表、手艺和直接，也没有因此忽略他的控制欲。关系从这一次开始，不再默认你该站在哪里。"
+          }
+        },
+        {
+          "id": "d",
+          "text": "先抱他一会儿，再把门打开。",
+          "vector": {
+            "care": 0.2,
+            "reassurance": 0.14
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "ending_tone": "gentle"
+          },
+          "next": "$result",
+          "aftermath": "你先确认彼此真的在这里，再进入新的身份。",
+          "outcome": "together",
+          "finalReveal": {
+            "title": "第四次敲门，他只为你来",
+            "copy": "你选择和程野正式交往。你喜欢他的外表、手艺和直接，也没有因此忽略他的控制欲。关系从这一次开始，不再默认你该站在哪里。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s18_slow",
+      "slot": 18,
+      "chapter": "18｜下一次约会",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你们没有立刻成为恋人。"
+        },
+        {
+          "type": "paragraph",
+          "text": "几天后，程野发来一条消息，只写了四个字：“下一次去哪？”"
+        },
+        {
+          "type": "paragraph",
+          "text": "没有试菜，也没有需要你帮忙的开业安排。这次约会只属于你们两个人。"
+        }
+      ],
+      "prompt": "你选下一次见面的地方：",
+      "choices": [
+        {
+          "id": "a",
+          "text": "清晨的旧街，边走边吃早餐。",
+          "vector": {
+            "care": 0.12,
+            "commitment": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "ending_tone": "morning"
+          },
+          "next": "$result",
+          "aftermath": "你想看看日常里的他。",
+          "outcome": "slow",
+          "finalReveal": {
+            "title": "先把三次约会过完",
+            "copy": "你保留心动，也保留判断。接下来没有锅、厨房和开业夜替你们制造靠近，只看两个普通人是否仍然想见彼此。"
+          }
+        },
+        {
+          "id": "b",
+          "text": "一场你想看的电影，票由他来买。",
+          "vector": {
+            "validation": 0.14,
+            "approach": 0.1
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "ending_tone": "movie"
+          },
+          "next": "$result",
+          "aftermath": "你让他为下一次靠近付出具体行动。",
           "outcome": "slow",
           "finalReveal": {
             "title": "先把三次约会过完",
@@ -2673,19 +3079,125 @@
         },
         {
           "id": "c",
-          "text": "“楼上楼下。可以喜欢，但不继续恋爱。”",
+          "text": "河边长椅，只谈彼此，不谈店。",
           "vector": {
-            "autonomy": 0.34,
-            "certainty": 0.3,
-            "approach": -0.04
+            "certainty": 0.18,
+            "expression": 0.16
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "程野点头。以后你去店里会照常付钱，他也不会再替你留恋人的位置。",
           "setFlags": {
-            "final": "separate"
+            "ending_tone": "talk"
           },
+          "next": "$result",
+          "aftermath": "你愿意继续，也要留出真正了解彼此的空间。",
+          "outcome": "slow",
+          "finalReveal": {
+            "title": "先把三次约会过完",
+            "copy": "你保留心动，也保留判断。接下来没有锅、厨房和开业夜替你们制造靠近，只看两个普通人是否仍然想见彼此。"
+          }
+        },
+        {
+          "id": "d",
+          "text": "暂时不定日期，等你真的想见他时再说。",
+          "vector": {
+            "autonomy": 0.22,
+            "discernment": 0.14
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "ending_tone": "open"
+          },
+          "next": "$result",
+          "aftermath": "慢一点也包括不被下一次见面追赶。",
+          "outcome": "slow",
+          "finalReveal": {
+            "title": "先把三次约会过完",
+            "copy": "你保留心动，也保留判断。接下来没有锅、厨房和开业夜替你们制造靠近，只看两个普通人是否仍然想见彼此。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s18_separate",
+      "slot": 18,
+      "chapter": "18｜楼上楼下",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你们没有成为恋人。"
+        },
+        {
+          "type": "paragraph",
+          "text": "一周后，你在楼梯上遇见程野。他停在下面一级，没有装作什么都没发生。"
+        },
+        {
+          "type": "quote",
+          "text": "“以后怎么相处，你说。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "吸引仍然存在，但它不再自动拥有继续发展的权利。"
+        }
+      ],
+      "prompt": "你留下什么边界？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "正常做邻居，见面可以打招呼。",
+          "vector": {
+            "repair": 0.12,
+            "autonomy": 0.16
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "ending_tone": "neighbor"
+          },
+          "next": "$result",
+          "aftermath": "你保留了礼貌，也结束了暧昧。",
+          "outcome": "separate-close",
+          "finalReveal": {
+            "title": "喜欢停在楼上楼下之间",
+            "copy": "你没有否认程野的吸引力，也没有因为吸引就必须进入关系。你们保留邻居和熟人的位置，让这段相遇停在不会继续索取的地方。"
+          }
+        },
+        {
+          "id": "b",
+          "text": "可以偶尔去店里，但不再单独约会。",
+          "vector": {
+            "certainty": 0.18,
+            "autonomy": 0.14
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "ending_tone": "customer"
+          },
+          "next": "$result",
+          "aftermath": "你把关系放回清楚的位置。",
+          "outcome": "separate-close",
+          "finalReveal": {
+            "title": "喜欢停在楼上楼下之间",
+            "copy": "你没有否认程野的吸引力，也没有因为吸引就必须进入关系。你们保留邻居和熟人的位置，让这段相遇停在不会继续索取的地方。"
+          }
+        },
+        {
+          "id": "c",
+          "text": "暂时不要私下联系，等感觉真正退下去。",
+          "vector": {
+            "discernment": 0.18,
+            "autonomy": 0.2
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "ending_tone": "distance"
+          },
+          "next": "$result",
+          "aftermath": "你不给吸引继续制造误会。",
           "outcome": "separate-close",
           "finalReveal": {
             "title": "喜欢停在楼上楼下之间",
@@ -2694,19 +3206,121 @@
         },
         {
           "id": "d",
-          "text": "“不用再敲了。我们到这里。”",
+          "text": "只处理必要的邻里事情。",
           "vector": {
-            "autonomy": 0.46,
-            "certainty": 0.34,
-            "approach": -0.34
+            "autonomy": 0.24,
+            "approach": -0.12
           },
-          "intensity": 1.0,
+          "intensity": 1,
           "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "程野说“好”，转身下楼。",
           "setFlags": {
-            "final": "end"
+            "ending_tone": "formal"
           },
+          "next": "$result",
+          "aftermath": "你把边界收得更完整。",
+          "outcome": "separate-close",
+          "finalReveal": {
+            "title": "喜欢停在楼上楼下之间",
+            "copy": "你没有否认程野的吸引力，也没有因为吸引就必须进入关系。你们保留邻居和熟人的位置，让这段相遇停在不会继续索取的地方。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s18_end",
+      "slot": 18,
+      "chapter": "18｜锅回到楼下",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "程野没有再来敲门。"
+        },
+        {
+          "type": "paragraph",
+          "text": "几天后，你发现那只蓝边搪瓷锅还放在自己厨房最上层。第一次见面时，他把锅拿走；后来试菜时，又把它留在了你这里。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你决定把这件最后的东西处理完。"
+        }
+      ],
+      "prompt": "你怎么把锅还给他？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "洗干净，放到店门口，不留字条。",
+          "vector": {
+            "autonomy": 0.22,
+            "expression": -0.08
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "ending_tone": "quiet"
+          },
+          "next": "$result",
+          "aftermath": "你让结束保持安静。",
+          "outcome": "pause",
+          "finalReveal": {
+            "title": "门关上以后",
+            "copy": "你结束了这段关系。好看、好吃和心动都可以是真的，却不必因此留下。程野没有再用新的菜、道歉或偶遇要求你重新决定。"
+          }
+        },
+        {
+          "id": "b",
+          "text": "附一张纸条：“锅还你。以后不用再送错了。”",
+          "vector": {
+            "expression": 0.18,
+            "certainty": 0.16
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "ending_tone": "clear"
+          },
+          "next": "$result",
+          "aftermath": "你用一句清楚的话结束最后的暗号。",
+          "outcome": "pause",
+          "finalReveal": {
+            "title": "门关上以后",
+            "copy": "你结束了这段关系。好看、好吃和心动都可以是真的，却不必因此留下。程野没有再用新的菜、道歉或偶遇要求你重新决定。"
+          }
+        },
+        {
+          "id": "c",
+          "text": "请邻居转交，不再单独见面。",
+          "vector": {
+            "discernment": 0.18,
+            "autonomy": 0.2
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "ending_tone": "indirect"
+          },
+          "next": "$result",
+          "aftermath": "你不为告别再制造一次见面。",
+          "outcome": "pause",
+          "finalReveal": {
+            "title": "门关上以后",
+            "copy": "你结束了这段关系。好看、好吃和心动都可以是真的，却不必因此留下。程野没有再用新的菜、道歉或偶遇要求你重新决定。"
+          }
+        },
+        {
+          "id": "d",
+          "text": "当面还给他，只说一句“保重”。",
+          "vector": {
+            "expression": 0.16,
+            "repair": 0.08
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "setFlags": {
+            "ending_tone": "farewell"
+          },
+          "next": "$result",
+          "aftermath": "你给这段吸引一个完整但不回头的句号。",
           "outcome": "pause",
           "finalReveal": {
             "title": "门关上以后",
