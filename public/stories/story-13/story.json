@@ -7,15 +7,15 @@
   "metadata": {
     "series": "LOVE RIGHT · STORY 13",
     "title": "最后一场排练，他没有上台",
-    "subtitle": "他离开以前，你要决定的不是追不追，而是还信不信。",
-    "description": "九天后的演出结束，陆惟就会离开。三个月前他吻过你，随后却隐瞒了车票和一份改变所有人的巡演邀约。你要弄清他为什么退后，也要决定自己的工作、城市与关系。",
-    "estimatedMinutes": 18,
+    "subtitle": "九天后他会离开。你要决定的不是追不追，而是还愿不愿意相信他。",
+    "description": "最后一场演出前，舞台监督乔安得知陆惟将在九天后离开。三个月前的吻、随后的沉默和一张没发出的邀请，让他们必须在倒计时里把话说清。",
+    "estimatedMinutes": 11,
     "coverTheme": "studio-amber",
     "audience": "female",
     "tags": [
       "社区剧场",
-      "共同署名",
-      "职业选择",
+      "离别倒计时",
+      "异地关系",
       "女性视角"
     ],
     "disclaimer": "娱乐性叙事情境投射，不是心理诊断、事实识别或未来预言。"
@@ -233,2149 +233,2071 @@
     {
       "id": "s01",
       "slot": 1,
-      "chapter": "01｜他要离开了",
+      "chapter": "01｜九天后的车票",
       "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "最后一次排练，提示音乐已经响了。你站在侧幕，等陆惟走进灯光里。十秒过去，他没有动。"
+          "text": "排练结束时，陆惟没有立刻离开。他等最后一盏工作灯熄灭，把一张车票放到你的提示本上。"
         },
         {
           "type": "paragraph",
-          "text": "这是你们一起准备了半年的演出，也是他离开这座城以前，最后一次站在你面前。"
+          "text": "“演出第二天早上，我走。”"
         },
         {
           "type": "paragraph",
-          "text": "九天前，你还不知道他要走。"
+          "text": "你叫乔安，是这家社区剧场的舞台监督。陆惟是主演，也是三个月前在空排练厅吻过你、第二天却开始躲着你的人。"
         },
         {
           "type": "paragraph",
-          "text": "你叫乔安，是这部戏的舞台监督。陆惟是主演，也是那个三个月前在空排练厅吻过你、第二天却开始躲着你的人。"
-        },
-        {
-          "type": "paragraph",
-          "text": "那天散场后，他把一张九天后的车票推到你面前：“演出结束，我就走。”"
+          "text": "九天以后，你们共同准备了半年的戏会落幕；再过一夜，他会去另一座城，参加为期半年的巡演。"
         }
       ],
       "prompt": "你第一句问什么？",
       "choices": [
         {
           "id": "a",
-          "text": "“你是不是原本想让我和你一起走？”",
+          "text": "“你原本打算什么时候告诉我？”",
           "vector": {
-            "approach": 0.62,
-            "care": 0.2,
-            "trust": 0.28,
-            "expression": 0.18,
-            "commitment": 0.22
+            "discernment": 0.58,
+            "expression": 0.34,
+            "trust": -0.18,
+            "certainty": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s02",
-          "aftermath": "陆惟抬起眼。他没想到你先问的不是目的地，而是你有没有被放进他的未来。",
-          "subtext": "直接确认他是否曾把你放进未来。"
+          "aftermath": "陆惟看了眼日期：“如果你今晚没有发现，我可能会拖到演出以后。”",
+          "subtext": "先确认隐瞒持续了多久。",
+          "setFlags": {
+            "first_response": "timeline"
+          }
         },
         {
           "id": "b",
-          "text": "“你什么时候决定的，为什么现在才告诉我？”",
+          "text": "“三个月前那个吻，和这张票有关系吗？”",
           "vector": {
-            "discernment": 0.62,
-            "trust": -0.12,
-            "autonomy": 0.48,
-            "certainty": 0.22,
-            "approach": -0.08
+            "repair": 0.5,
+            "expression": 0.48,
+            "approach": 0.16,
+            "certainty": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s02",
-          "aftermath": "他承认车票不是今天买的。你终于知道，这场沉默已经持续了三个月。",
-          "subtext": "先查清隐瞒发生了多久。"
+          "aftermath": "他点头，又很快摇头：“有关系。但我躲开，不是因为不喜欢。”",
+          "subtext": "把离开和突然退后放回同一条时间线。",
+          "setFlags": {
+            "first_response": "kiss"
+          }
         },
         {
           "id": "c",
-          "text": "“三个月前你突然躲开我，也是因为这件事？”",
+          "text": "“你现在告诉我，是想让我挽留你吗？”",
           "vector": {
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3,
-            "conflict": 0.18
+            "validation": 0.42,
+            "certainty": 0.5,
+            "conflict": 0.28,
+            "autonomy": 0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s02",
-          "aftermath": "陆惟握紧票角：“是。但不是因为我不想靠近你。”",
-          "subtext": "追问他退后的真正原因。"
+          "aftermath": "“不是。”他停了一下，“至少我没有资格把这个问题推给你。”",
+          "subtext": "先确认他是否在用离别索取答案。",
+          "setFlags": {
+            "first_response": "motive"
+          }
         },
         {
           "id": "d",
-          "text": "“我知道了。先把最后这场戏排完。”",
+          "text": "“先把今晚的收尾做完。散场以后再说。”",
           "vector": {
-            "autonomy": 0.66,
-            "care": 0.22,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
+            "autonomy": 0.56,
+            "care": 0.3,
+            "conflict": -0.18,
+            "commitment": 0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s02",
-          "aftermath": "你把车票推回去。离开没有消失，只是你暂时不让它进入自己的情绪。",
-          "subtext": "先保护自己，不立刻进入这场谈话。"
+          "aftermath": "你把车票夹进提示本，没有当场给他情绪，也没有假装它不存在。",
+          "subtext": "先完成眼前的工作，再处理私人关系。",
+          "setFlags": {
+            "first_response": "work-first"
+          }
         }
-      ],
-      "decisionLabel": "今晚的第一小时只会给一个人",
-      "decisionNote": "你选择先听谁说话；其他三件事要等到明天。"
+      ]
     },
     {
       "id": "s02",
       "slot": 2,
       "chapter": "02｜那条没有发出的消息",
-      "context": "approach",
+      "context": "ambiguity",
       "content": [
         {
           "type": "paragraph",
           "text": "第二天，陆惟把手机递给你。草稿箱里有一条写于三个月前、却从未发出的消息："
         },
         {
-          "type": "paragraph",
-          "text": "“演出结束以后，要不要和我一起走？”"
+          "type": "quote",
+          "text": "“演出结束以后，我会去巡演。你愿不愿意和我试一试？”"
         },
         {
           "type": "paragraph",
-          "text": "他已经写好了这句话，也已经替你决定不必看见它。"
+          "text": "他写过，也删过，最后替你决定了不必看见。"
         },
         {
           "type": "paragraph",
-          "text": "“我怕你为了我答应。”他说，“也怕你拒绝。”"
+          "text": "“我怕你为了我改变生活。”他说，“也怕你说不。”"
         }
       ],
-      "prompt": "此刻你最需要他回答什么？",
+      "prompt": "你最难接受的是什么？",
       "choices": [
         {
           "id": "a",
-          "text": "“如果我现在说愿意，你还敢把完整计划告诉我吗？”",
+          "text": "他把“保护你”当成了替你决定。",
           "vector": {
-            "discernment": 0.28,
-            "expression": 0.18,
-            "approach": 0.62,
-            "trust": 0.28,
-            "commitment": 0.22
+            "autonomy": 0.62,
+            "discernment": 0.38,
+            "trust": -0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s03",
-          "aftermath": "他没有立刻高兴，而是从工作、住处到合同期限，一件件说给你听。",
-          "subtext": "用完整现实检验他的邀请。"
+          "aftermath": "你说完以后，他没有再解释自己的好意，只承认那确实是一种越界。",
+          "subtext": "在意的是知情权和决定权。",
+          "setFlags": {
+            "hurt_focus": "choice"
+          }
         },
         {
           "id": "b",
-          "text": "“把时间线说清楚：机会、车票和躲开我，分别是什么时候？”",
+          "text": "他吻过你，却把接下来的三个月留给沉默。",
           "vector": {
-            "expression": 0.36,
-            "conflict": 0.18,
-            "discernment": 0.62,
-            "autonomy": 0.48,
-            "certainty": 0.22,
-            "approach": -0.08
+            "repair": 0.5,
+            "reassurance": 0.34,
+            "abandonment": 0.32,
+            "expression": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s03",
-          "aftermath": "你得到了一条完整时间线。它不浪漫，却让你第一次能判断他的话。",
-          "subtext": "先建立可以核对的事实。"
+          "aftermath": "陆惟低声说：“我知道。那个吻不是错，消失才是。”",
+          "subtext": "在意亲密之后没有承担回应。",
+          "setFlags": {
+            "hurt_focus": "silence"
+          }
         },
         {
           "id": "c",
-          "text": "“别替我分析。告诉我，你那天到底有多想让我去。”",
+          "text": "他直到要走了，才允许你知道自己也被喜欢过。",
           "vector": {
-            "discernment": 0.2,
-            "conflict": 0.18,
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3
+            "validation": 0.52,
+            "certainty": 0.36,
+            "idealization": 0.18,
+            "trust": -0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s03",
-          "aftermath": "陆惟说：“想得连你拒绝以后怎么继续排练，我都提前想过。”",
-          "subtext": "要求他承担真实感情，而非替你解释。"
+          "aftermath": "这句话让他沉默了很久。他第一次听见，迟到的坦白也会夺走一段本来可以发生的时间。",
+          "subtext": "在意自己是否被明确放进对方的选择。",
+          "setFlags": {
+            "hurt_focus": "late-choice"
+          }
         },
         {
           "id": "d",
-          "text": "“手机收起来。你错过了三个月前开口的时间。”",
+          "text": "离开本身并不可怕，可怕的是他以为你承受不了真话。",
           "vector": {
-            "discernment": 0.36,
-            "trust": 0.1,
-            "autonomy": 0.66,
-            "approach": -0.3,
-            "commitment": -0.16
+            "trust": 0.18,
+            "autonomy": 0.48,
+            "discernment": 0.42,
+            "abandonment": -0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s03",
-          "aftermath": "他收回手机。你没有否认那条消息，只拒绝让迟到的坦白立刻变成答案。",
-          "subtext": "拒绝让迟来的坦白催促你回应。"
+          "aftermath": "“我低估了你。”他说。这一次，他没有把恐惧说成体贴。",
+          "subtext": "更在意被平等对待，而不是距离本身。",
+          "setFlags": {
+            "hurt_focus": "truth"
+          }
         }
-      ],
-      "decisionLabel": "这个处理会决定今天使用的版本",
-      "decisionNote": "四种做法不能同时采用；排练会按你的决定继续。"
+      ]
     },
     {
       "id": "s03",
       "slot": 3,
-      "chapter": "03｜另一封已经发出的邮件",
-      "context": "approach",
+      "chapter": "03｜提示灯还亮着",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "陆惟的手机还在你手里，一封新邮件从屏幕顶端弹出来："
+          "text": "导演在台下问能不能继续。灯光、音响和另外十几个人都在等你的提示。"
         },
         {
           "type": "paragraph",
-          "text": "“两人巡演版已收到，今晚等你的最终回复。”"
+          "text": "陆惟站在侧幕，没有催你原谅，也没有先走。"
         },
         {
           "type": "paragraph",
-          "text": "你们的戏原本不只有两个人。编剧吴照写下了最重要的几场，社区合唱团也参与了演出。"
-        },
-        {
-          "type": "paragraph",
-          "text": "陆惟看见你的表情：“我可以解释。”"
+          "text": "你们的私人问题是真的，今晚的工作也是真的。"
         }
       ],
-      "prompt": "你先做什么？",
+      "prompt": "你怎样处理接下来的排练？",
       "choices": [
         {
           "id": "a",
-          "text": "把手机还给他：“从头说，不准再省略任何一段。”",
+          "text": "叫停十分钟。你需要先确认他今晚还能不能上台。",
           "vector": {
-            "trust": 0.28,
-            "approach": 0.62,
-            "expression": 0.18,
-            "commitment": 0.22
+            "conflict": 0.36,
+            "care": 0.34,
+            "discernment": 0.28
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s04",
-          "aftermath": "陆惟从第一次接触制作人讲起。你听见的，不再只是离开，而是他怎样为离开铺路。",
-          "subtext": "给他一次完整说明的机会。"
+          "aftermath": "你们只谈他的状态，不谈关系。十分钟后，他重新站回走位点。",
+          "subtext": "先处理会影响全组的即时状态。",
+          "setFlags": {
+            "rehearsal_mode": "pause"
+          }
         },
         {
           "id": "b",
-          "text": "要求看完整往来邮件，再决定要不要相信他的解释。",
+          "text": "照常排完；私人谈话放到散场以后。",
           "vector": {
-            "certainty": 0.22,
-            "expression": 0.2,
-            "discernment": 0.62,
-            "autonomy": 0.48,
-            "approach": -0.08
+            "commitment": 0.4,
+            "autonomy": 0.34,
+            "care": 0.18,
+            "expression": -0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s04",
-          "aftermath": "他同意把邮件全部展开。解释从一句情绪，变成了可以核对的事实。",
-          "subtext": "先核对事实，再决定信任。"
+          "aftermath": "你给出下一次提示。陆惟按时上场，没有把你继续工作误解成原谅。",
+          "subtext": "把职业秩序和私人情绪分开。",
+          "setFlags": {
+            "rehearsal_mode": "finish"
+          }
         },
         {
           "id": "c",
-          "text": "给吴照打电话——她是编剧，也是你最好的朋友，她有权知道自己的文字发生了什么。",
+          "text": "把提示本交给副手，出去透十分钟气。",
           "vector": {
-            "care": 0.3,
-            "conflict": 0.18,
-            "expression": 0.56,
-            "repair": 0.5
+            "autonomy": 0.5,
+            "reassurance": 0.18,
+            "conflict": -0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s04",
-          "aftermath": "电话接通时，吴照先问你是不是出事了。你忽然意识到，她比任何人都知道你有多在意陆惟。",
-          "subtext": "让与你直接相关的人进入真相。"
+          "aftermath": "你没有逼自己立刻稳定。回来时，排练仍在继续，陆惟也没有追出去。",
+          "subtext": "允许自己暂时退出，而不是勉强撑住。",
+          "setFlags": {
+            "rehearsal_mode": "step-out"
+          }
         },
         {
           "id": "d",
-          "text": "结束这次私下谈话：“你先把该告诉的人都告诉，再来找我。”",
+          "text": "让陆惟先休息一场，你继续带其他段落。",
           "vector": {
-            "autonomy": 0.66,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
+            "discernment": 0.46,
+            "care": 0.28,
+            "approach": -0.18,
+            "commitment": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s04",
-          "aftermath": "你离开座位。陆惟第一次明白，你们的关系不能包住他对其他人的隐瞒。",
-          "subtext": "暂停私人关系，要求他先承担责任。"
+          "aftermath": "他坐到最后一排。你没有惩罚他，也没有让他的情绪拖住所有人。",
+          "subtext": "先降低他的参与度，保护整体排练。",
+          "setFlags": {
+            "rehearsal_mode": "bench"
+          }
         }
       ]
     },
     {
       "id": "s04",
       "slot": 4,
-      "chapter": "04｜你最好的朋友也瞒了你",
-      "context": "approach",
+      "chapter": "04｜他只要二十分钟",
+      "context": "ambiguity",
       "content": [
         {
           "type": "paragraph",
-          "text": "吴照赶到排练厅。她是这部戏的编剧，也是陪你走过上一段分手、最早看出你喜欢陆惟的人。"
+          "text": "散场后，陆惟没有挡住门。他站在两步以外说：“能不能给我二十分钟？时间到，你想走就走。”"
         },
         {
           "type": "paragraph",
-          "text": "她承认自己早就知道巡演邀约，却不知道陆惟已经把两人版发了出去。"
+          "text": "街角的面馆还亮着，剧场大厅也没有关门。最后一班地铁还有四十分钟。"
         },
         {
           "type": "paragraph",
-          "text": "“他让我先别告诉你。”吴照说，“他说最后一场演完以前，不想让你为他的去留做决定。”"
-        },
-        {
-          "type": "paragraph",
-          "text": "你面前站着两个自称在保护你、却都替你决定了知情时间的人。"
-        }
-      ],
-      "prompt": "你先把哪件事说清楚？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "让陆惟当着吴照的面说明，他删掉了谁的内容、答应了什么。",
-          "vector": {
-            "care": 0.38,
-            "autonomy": 0.1,
-            "approach": 0.62,
-            "trust": 0.28,
-            "expression": 0.18,
-            "commitment": 0.22
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s05",
-          "aftermath": "陆惟一项项说出改动。吴照没有打断，只在听到自己的结尾被删时闭了闭眼。",
-          "subtext": "让陆惟先面对他对吴照造成的事实。"
-        },
-        {
-          "id": "b",
-          "text": "先问吴照：“你为什么同意替他瞒我？”",
-          "vector": {
-            "autonomy": 0.48,
-            "discernment": 0.62,
-            "certainty": 0.22,
-            "approach": -0.08
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s05",
-          "aftermath": "吴照说她怕你再次为了喜欢的人放弃自己的计划。好意没有让隐瞒变得更轻。",
-          "subtext": "先处理好友对你的隐瞒。"
-        },
-        {
-          "id": "c",
-          "text": "告诉他们：“别再以保护我的名义，替我决定我该知道什么。”",
-          "vector": {
-            "care": 0.3,
-            "repair": 0.5,
-            "expression": 0.56,
-            "conflict": 0.18
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s05",
-          "aftermath": "这句话同时落在两个人身上。你第一次把自己从他们的判断里拿了回来。",
-          "subtext": "同时收回自己的知情权。"
-        },
-        {
-          "id": "d",
-          "text": "暂停今晚排练。你不在两个隐瞒你的人面前继续工作。",
-          "vector": {
-            "certainty": 0.24,
-            "autonomy": 0.66,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s05",
-          "aftermath": "你关掉工作灯。陆惟没有追上来，吴照也没有要求你今晚就原谅谁。",
-          "subtext": "停止工作，明确隐瞒已经破坏信任。"
-        }
-      ],
-      "decisionType": "hard",
-      "decisionLabel": "这次处理会留下事实",
-      "decisionNote": "后面的关系会记得，你先要求谁承担、又把边界划在哪里。"
-    },
-    {
-      "id": "s05",
-      "slot": 5,
-      "chapter": "05｜散场后，他只问你二十分钟",
-      "context": "approach",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "当晚十一点，陆惟等在侧门。他没有拿合同，也没有说工作。"
-        },
-        {
-          "type": "paragraph",
-          "text": "“给我二十分钟。”他说，“不是劝你跟我走。我只想告诉你，我为什么会怕到一句话都不敢发。”"
-        },
-        {
-          "type": "paragraph",
-          "text": "你仍然喜欢他。这正是你不能假装这只是一场普通谈话的原因。"
+          "text": "他把谈话的地点和结束权都留给你。"
         }
       ],
       "prompt": "你把这二十分钟放在哪里？",
       "choices": [
         {
           "id": "a",
-          "text": "和他单独去吃一碗面，让工作暂时留在门外。",
+          "text": "去面馆。你愿意听，但不保证给答案。",
           "vector": {
-            "approach": 0.62,
-            "trust": 0.28,
-            "expression": 0.18,
-            "commitment": 0.22
+            "approach": 0.38,
+            "trust": 0.18,
+            "repair": 0.22,
+            "autonomy": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
-          "next": "s06",
-          "aftermath": "走出剧场时，他把脚步放慢。你们第一次不以同事身份并肩离开。",
-          "subtext": "允许一次明确的私人靠近。"
+          "next": "s05-talk",
+          "aftermath": "你们坐在靠门的位置。陆惟没有点你常吃的东西，先问你要不要留下。",
+          "subtext": "允许一次普通、有限的私人谈话。",
+          "setFlags": {
+            "talk_mode": "noodles"
+          }
         },
         {
           "id": "b",
-          "text": "改到明天下午的咖啡馆，在更清楚的时间和地点谈。",
+          "text": "留在剧场大厅，灯亮着，门也开着。",
           "vector": {
-            "autonomy": 0.48,
-            "discernment": 0.62,
-            "certainty": 0.22,
-            "approach": -0.08
+            "discernment": 0.42,
+            "autonomy": 0.38,
+            "repair": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
-          "next": "s06",
-          "aftermath": "陆惟记下时间，没有把你的谨慎误读成拒绝。",
-          "subtext": "接受谈话，同时保留节奏和边界。"
+          "next": "s05-talk",
+          "aftermath": "你选了一个谁都能随时离开的地方。他接受了这个边界。",
+          "subtext": "在更清楚、更安全的环境里谈。",
+          "setFlags": {
+            "talk_mode": "lobby"
+          }
         },
         {
           "id": "c",
-          "text": "请吴照一起在场；在她的文字被牵涉时，你不接受只有两个人的解释。",
+          "text": "让他陪你走到地铁站，只谈路上这段时间。",
           "vector": {
-            "care": 0.3,
-            "discernment": 0.15,
-            "expression": 0.56,
-            "repair": 0.5,
-            "conflict": 0.18
+            "approach": 0.24,
+            "autonomy": 0.34,
+            "certainty": 0.18,
+            "care": 0.14
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
-          "next": "s06",
-          "aftermath": "他短暂失望，却接受这不是一场可以只谈你们两个人的谈话。",
-          "subtext": "让受影响的人共同在场。"
+          "next": "s05-talk",
+          "aftermath": "你们并肩走，却没有靠得很近。谈话的长度由路程决定。",
+          "subtext": "允许靠近，但给它明确终点。",
+          "setFlags": {
+            "talk_mode": "walk"
+          }
         },
         {
           "id": "d",
-          "text": "拒绝：“先把你已经做过的事处理完，我们再谈感情。”",
+          "text": "拒绝见面，让他把完整计划写给你。",
           "vector": {
-            "autonomy": 0.66,
-            "approach": -0.3,
-            "discernment": 0.36,
-            "commitment": -0.16
+            "autonomy": 0.58,
+            "discernment": 0.44,
+            "approach": -0.28,
+            "trust": -0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s05-distance",
+          "aftermath": "陆惟点头，没有把拒绝改写成欲擒故纵。凌晨一点，你收到一封没有省略的邮件。",
+          "subtext": "不接受当面谈，但允许他用另一种方式承担说明。",
+          "setFlags": {
+            "talk_mode": "written"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s05-talk",
+      "slot": 5,
+      "chapter": "05｜二十分钟没有答案",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "陆惟从巡演合同讲起：六个月，五座城，演出结束后是否续约还没有确定。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他说三个月前那个吻以后，他第一反应不是后悔，而是想问你愿不愿意和他开始。"
+        },
+        {
+          "type": "paragraph",
+          "text": "“然后我开始想，你会不会为了我放弃这里。想得越多，我越不敢问。”"
+        }
+      ],
+      "prompt": "你现在最需要他说清什么？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "“你希望我怎么选，不代表你可以替我选。你真正希望的是什么？”",
+          "vector": {
+            "expression": 0.46,
+            "certainty": 0.38,
+            "autonomy": 0.26
+          },
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s06",
-          "aftermath": "他点头。你的拒绝没有被写成欲拒还迎，也没有被继续追问。",
-          "subtext": "在责任完成前暂停感情谈判。"
+          "aftermath": "他承认自己希望你愿意开始，也希望你不必离开自己的生活。",
+          "subtext": "要求他承担愿望，而不是继续躲在分析后面。",
+          "setFlags": {
+            "truth_focus": "desire"
+          }
+        },
+        {
+          "id": "b",
+          "text": "“如果我不等你，也不跟你走，你还准备怎么面对我？”",
+          "vector": {
+            "discernment": 0.48,
+            "trust": -0.08,
+            "commitment": 0.28,
+            "autonomy": 0.26
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s06",
+          "aftermath": "“接受。”他说，“但不能再消失。”",
+          "subtext": "确认他的靠近是否以你的同意为条件。",
+          "setFlags": {
+            "truth_focus": "respect"
+          }
+        },
+        {
+          "id": "c",
+          "text": "“你当时最怕听见的，到底是哪一句？”",
+          "vector": {
+            "repair": 0.46,
+            "care": 0.22,
+            "expression": 0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s06",
+          "aftermath": "他回答：“你说那个吻对你什么都不是。”",
+          "subtext": "让他承认退后的私人恐惧。",
+          "setFlags": {
+            "truth_focus": "fear"
+          }
+        },
+        {
+          "id": "d",
+          "text": "“二十分钟到了。剩下的等我愿意再听。”",
+          "vector": {
+            "autonomy": 0.56,
+            "conflict": 0.18,
+            "approach": -0.22
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s06",
+          "aftermath": "你按约定结束谈话。陆惟没有追问下一次是什么时候。",
+          "subtext": "守住已经说好的时间边界。",
+          "setFlags": {
+            "truth_focus": "limit"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s05-distance",
+      "slot": 5,
+      "chapter": "05｜那封写到凌晨一点的邮件",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "邮件没有道歉开场，也没有请求你等他。"
+        },
+        {
+          "type": "paragraph",
+          "text": "陆惟写清了合同、离开日期、回来的不确定性，也写下三个月前的吻以后，他怎样一遍遍删掉那句“要不要和我试一试”。"
+        },
+        {
+          "type": "paragraph",
+          "text": "最后一行是：“你不需要今晚回复。以后我也不会再替你判断什么真相比较适合你。”"
+        }
+      ],
+      "prompt": "你怎样回应这封邮件？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "只回一句：“收到。明天把合同原件带来。”",
+          "vector": {
+            "discernment": 0.54,
+            "autonomy": 0.38,
+            "trust": -0.06
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s06",
+          "aftermath": "第二天，他把原件放在你桌上，没有追问邮件有没有让你心软。",
+          "subtext": "先核对事实，不提前回应感情。",
+          "setFlags": {
+            "truth_focus": "facts"
+          }
+        },
+        {
+          "id": "b",
+          "text": "告诉他：“我看完了，但这不等于我原谅了。”",
+          "vector": {
+            "expression": 0.4,
+            "certainty": 0.34,
+            "repair": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s06",
+          "aftermath": "他回复：“知道。谢谢你告诉我你看完了。”",
+          "subtext": "承认沟通发生，同时保留判断。",
+          "setFlags": {
+            "truth_focus": "boundary"
+          }
+        },
+        {
+          "id": "c",
+          "text": "问他：“如果我不等你，你还会不会好好演完？”",
+          "vector": {
+            "commitment": 0.34,
+            "discernment": 0.38,
+            "reassurance": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s06",
+          "aftermath": "“会。”他回答，“这部戏不该替我向你施压。”",
+          "subtext": "确认他是否会把工作当作情感筹码。",
+          "setFlags": {
+            "truth_focus": "work"
+          }
+        },
+        {
+          "id": "d",
+          "text": "不回复。你需要先睡一晚。",
+          "vector": {
+            "autonomy": 0.48,
+            "conflict": -0.26,
+            "reassurance": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s06",
+          "aftermath": "第二天他照常来排练，没有用第二封邮件催你。",
+          "subtext": "不让对方的说明决定你的回应时间。",
+          "setFlags": {
+            "truth_focus": "time"
+          }
         }
       ]
     },
     {
       "id": "s06",
       "slot": 6,
-      "chapter": "06｜现在，轮到你有一张车票",
-      "context": "rupture",
+      "chapter": "06｜六个月，不是永远",
+      "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "第三天早上，你收到苏州一家制作公司的正式录用。薪水更稳定，项目至少一年，三天内答复。"
+          "text": "合同是真的。六个月也是真的。"
         },
         {
           "type": "paragraph",
-          "text": "昨晚陆惟问过你：“如果没有我，你想不想离开这里？”"
+          "text": "陆惟没有稳定的返城日期，但每座城的演出时间、休息日和收入都写得很清楚。"
         },
         {
           "type": "paragraph",
-          "text": "现在你手里也有一条能离开的路。你可以告诉他，也可以先把这个答案留给自己。"
+          "text": "这不再是一句“跟我走”，而是一段可以被检查、也可能失败的现实安排。"
         }
       ],
-      "prompt": "你现在告诉陆惟多少？",
+      "prompt": "此刻哪件事最影响你的判断？",
       "choices": [
         {
           "id": "a",
-          "text": "把完整录用邮件给他看：“我也可能会走。”",
+          "text": "他是否愿意把不确定也说出来，而不是只给你漂亮保证。",
           "vector": {
-            "expression": 0.18,
-            "trust": 0.28,
-            "approach": 0.62,
-            "commitment": 0.22
+            "discernment": 0.5,
+            "trust": 0.12,
+            "idealization": -0.28
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "陆惟看完没有先问你会不会留下，只问：“你想去吗？”",
-          "subtext": "把自己的现实完整放进关系。"
+          "aftermath": "你把几个“待定”圈出来。陆惟没有急着把它们填成承诺。",
+          "subtext": "更看重真实的不确定，而不是完整的浪漫叙事。"
         },
         {
           "id": "b",
-          "text": "只告诉他你收到外地机会，暂时不说条件。",
+          "text": "他有没有把你放进计划，却又给你拒绝的空间。",
           "vector": {
-            "autonomy": 0.48,
-            "certainty": 0.22,
-            "discernment": 0.62,
-            "approach": -0.08
+            "validation": 0.4,
+            "autonomy": 0.32,
+            "commitment": 0.24
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "他听见你的保留，也知道自己没有资格要求更多。",
-          "subtext": "只披露变化，不交出全部决定。"
+          "aftermath": "他承认自己想过与你见面的日期，却没有提前把它们写成你的义务。",
+          "subtext": "希望被考虑，也希望决定权仍属于自己。"
         },
         {
           "id": "c",
-          "text": "先问他到底准备怎样处理两人版，再决定是否告诉他你的去处。",
+          "text": "你们三个月的沉默，是否已经说明他不适合长期关系。",
           "vector": {
-            "discernment": 0.28,
-            "trust": 0.12,
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3,
-            "conflict": 0.18
+            "trust": -0.36,
+            "discernment": 0.4,
+            "repair": -0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把谈话拉回尚未解决的信任。自己的未来仍留在你手里。",
-          "subtext": "先要求他处理自己的责任。"
+          "aftermath": "你没有让一份清楚合同盖住过去的行为。陆惟也没有要求你忘记。",
+          "subtext": "用既往行动检验现在的坦白。"
         },
         {
           "id": "d",
-          "text": "现在不说。你的工作选择不需要立刻进入你们的关系。",
+          "text": "你现在还想不想靠近他，而不是这段关系是否“合理”。",
           "vector": {
-            "autonomy": 0.66,
-            "expression": -0.12,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
+            "approach": 0.44,
+            "idealization": 0.2,
+            "expression": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你合上电脑。沉默这次由你选择，也由你承担。",
-          "subtext": "保留独立判断空间。"
+          "aftermath": "现实没有消失，但你允许自己承认，判断里也有欲望。",
+          "subtext": "承认情感本身也是事实。"
         }
       ]
     },
     {
       "id": "s07",
       "slot": 7,
-      "chapter": "07｜他必须先向吴照说清楚",
+      "chapter": "07｜那句“等我回来”",
       "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "吴照把两个版本并排放在桌上。陆惟发给制作人的版本里，她写下的停顿、合唱段落和名字都被删掉了。"
+          "text": "下午的连排进行到最后一场。陆惟饰演的人要在离开前说：“等我回来。”"
         },
         {
           "type": "paragraph",
-          "text": "她没有问你是不是还喜欢他，只问：“在你决定还要不要信他以前，他准备怎么处理这个？”"
+          "text": "提示音乐响起，他却没有接上台词。"
         },
         {
           "type": "paragraph",
-          "text": "你很清楚：一句对不起可以是开始，但不能自动修复任何东西。"
+          "text": "全场安静了两秒。导演抬头看向你的提示台。"
         }
       ],
-      "prompt": "你要求陆惟先完成哪一步？",
+      "prompt": "你怎样处理这次空白？",
       "choices": [
         {
           "id": "a",
-          "text": "逐处标出改动和原作者，先把每个人的名字放回版本记录。",
+          "text": "叫停排练，问陆惟是否需要五分钟。",
           "vector": {
-            "discernment": 0.34,
-            "repair": 0.2,
-            "approach": 0.62,
-            "trust": 0.28,
-            "expression": 0.18,
-            "commitment": 0.22
+            "care": 0.38,
+            "conflict": 0.26,
+            "discernment": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s08",
-          "aftermath": "陆惟坐下逐条补回名字。修复很慢，却终于不是一句笼统的后悔。",
-          "subtext": "用可追溯记录开始修复。"
+          "aftermath": "他点头。五分钟后回来时，他没有道歉表演，只说自己可以继续。",
+          "subtext": "先确认演员状态，再恢复工作。",
+          "setFlags": {
+            "missed_cue": "pause"
+          }
         },
         {
           "id": "b",
-          "text": "撤回未经确认的两人版，恢复到最后一版共同稿。",
+          "text": "重新给一次提示，让他自己决定能不能接住。",
           "vector": {
-            "discernment": 0.62,
-            "autonomy": 0.48,
-            "certainty": 0.22,
-            "approach": -0.08
+            "trust": 0.3,
+            "commitment": 0.26,
+            "autonomy": 0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s08",
-          "aftermath": "撤回邮件发出后，他失去了一次抢时间的优势，也停止继续扩大伤害。",
-          "subtext": "先停止未经同意的版本。"
+          "aftermath": "第二次提示响起，他说完了台词，却没有把眼睛转向你。",
+          "subtext": "给他一次专业上的重新进入。",
+          "setFlags": {
+            "missed_cue": "retry"
+          }
         },
         {
           "id": "c",
-          "text": "暂停排练，请唐瑛主持正式的署名与授权会议。",
+          "text": "让替补接上这一段，陆惟先退出场。",
           "vector": {
-            "conflict": 0.18,
-            "certainty": 0.2,
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3
+            "discernment": 0.48,
+            "care": 0.2,
+            "approach": -0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s08",
-          "aftermath": "排练被按下暂停。私人关系第一次被明确排除在权利程序之外。",
-          "subtext": "把争议交给正式程序。"
+          "aftermath": "排练没有停住。陆惟坐在侧幕，看完替补把那句台词说完。",
+          "subtext": "先保护演出连续性，不让私人状态拖住全组。",
+          "setFlags": {
+            "missed_cue": "understudy"
+          }
         },
         {
           "id": "d",
-          "text": "让陆惟先单独向吴照完整解释，你不替任何一方接受道歉。",
+          "text": "直接跳过这一场，排其他段落。",
           "vector": {
-            "expression": 0.28,
-            "autonomy": 0.66,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
+            "autonomy": 0.38,
+            "conflict": -0.16,
+            "commitment": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s08",
-          "aftermath": "你离开房间，把是否接受解释的权利交还给吴照。",
-          "subtext": "不替受影响者接受私人解释。"
+          "aftermath": "你在提示表上做了标记。这句没有被解决，只被留到下一次面对。",
+          "subtext": "暂时绕开问题，但明确它尚未完成。",
+          "setFlags": {
+            "missed_cue": "skip"
+          }
         }
-      ],
-      "decisionType": "hard",
-      "decisionLabel": "这是可验证的修复动作",
-      "decisionNote": "后面不会只记得他道过歉，也会记得他真正做了什么。"
+      ]
     },
     {
       "id": "s08",
       "slot": 8,
-      "chapter": "08｜末班车来以前",
-      "context": "rupture",
+      "chapter": "08｜走到地铁口的那段路",
+      "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "处理完版本已经接近午夜。站台上只剩你和陆惟。"
+          "text": "散场时下起小雨。陆惟撑开一把黑伞，问能不能送你到地铁口。"
         },
         {
           "type": "paragraph",
-          "text": "他没有再说“跟我走”。他只是承认：“我喜欢你。三个月前是，现在也是。”"
+          "text": "从剧场到车站只有七分钟。"
         },
         {
           "type": "paragraph",
-          "text": "末班车正在进站。你可以靠近，也可以让这份喜欢停在边界之外。"
-        }
-      ],
-      "prompt": "你怎样回应他？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "吻他一下，再说清楚：“这是真的，但它还不是承诺。”",
-          "vector": {
-            "approach": 0.62,
-            "trust": 0.28,
-            "expression": 0.18,
-            "commitment": 0.22
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s09",
-          "aftermath": "陆惟没有把那个吻索取成未来，只轻声说：“我知道。”",
-          "subtext": "允许真实靠近，但不提前承诺。"
-        },
-        {
-          "id": "b",
-          "text": "告诉他：“等你把隐瞒和授权处理完，我们再谈开始。”",
-          "vector": {
-            "discernment": 0.62,
-            "autonomy": 0.48,
-            "certainty": 0.22,
-            "approach": -0.08
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s09",
-          "aftermath": "他接受了你的时间线，没有要求喜欢替他提前通过考验。",
-          "subtext": "把信任修复放在关系开始以前。"
-        },
-        {
-          "id": "c",
-          "text": "承认你也喜欢他，但今晚只把话说到这里。",
-          "vector": {
-            "autonomy": 0.18,
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3,
-            "conflict": 0.18
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s09",
-          "aftermath": "你们第一次同时承认感情，却没有因此跳过尚未解决的问题。",
-          "subtext": "表达感情，同时保留行动距离。"
-        },
-        {
-          "id": "d",
-          "text": "后退半步：“不。我现在不想和你开始。”",
-          "vector": {
-            "autonomy": 0.66,
-            "approach": -0.3,
-            "discernment": 0.36,
-            "commitment": -0.16
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s09",
-          "aftermath": "他收回伸出的手。你的拒绝被完整听见，不再成为下一次追逐的暗号。",
-          "subtext": "明确拒绝继续发展。"
-        }
-      ],
-      "decisionLabel": "今天必须选定一个排练基础",
-      "decisionNote": "下一次完整排练会直接使用这份版本。"
-    },
-    {
-      "id": "s09",
-      "slot": 9,
-      "chapter": "09｜这次，他把完整附件交给了你",
-      "context": "rupture",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "第四天下午，正式巡演附件到了。"
-        },
-        {
-          "type": "paragraph",
-          "text": "两人版会让陆惟得到全国巡演，也意味着他更快离开；附件还会删除吴照和合唱团的大部分内容。"
-        },
-        {
-          "type": "paragraph",
-          "text": "这一次，他没有继续瞒。他把完整文件交给你：“我不想再替任何人决定什么时候知道。”"
-        },
-        {
-          "type": "paragraph",
-          "text": "唐瑛是剧场出品人，也是唯一能代表场地方启动正式程序的人。"
-        }
-      ],
-      "prompt": "你把附件带到哪里？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "立即转发所有权利相关者，并写明任何人都不能替别人签字。",
-          "vector": {
-            "expression": 0.18,
-            "care": 0.18,
-            "approach": 0.62,
-            "trust": 0.28,
-            "commitment": 0.22
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s10",
-          "aftermath": "所有人的手机同时亮起。真相来得突然，但不再由你和陆惟垄断。",
-          "subtext": "立刻扩大知情范围。"
-        },
-        {
-          "id": "b",
-          "text": "要求陆惟在今晚会议上亲自说明完整条件。",
-          "vector": {
-            "conflict": 0.24,
-            "discernment": 0.62,
-            "autonomy": 0.48,
-            "certainty": 0.22,
-            "approach": -0.08
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s10",
-          "aftermath": "陆惟必须面对整间排练厅，而不是只面对你是否失望。",
-          "subtext": "让陆惟承担公开说明责任。"
-        },
-        {
-          "id": "c",
-          "text": "先交给唐瑛核对场地和出品权限，再召集全体。",
-          "vector": {
-            "discernment": 0.3,
-            "trust": 0.1,
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3,
-            "conflict": 0.18
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s10",
-          "aftermath": "唐瑛看完说：“场地批准和作者授权是两件事，谁也不能混过去。”",
-          "subtext": "先进入正式权限程序。"
-        },
-        {
-          "id": "d",
-          "text": "给陆惟一个小时自行公开；到时无论他是否开口，你都会转发。",
-          "vector": {
-            "autonomy": 0.66,
-            "certainty": 0.2,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s10",
-          "aftermath": "倒计时开始。你给他主动承担的机会，也不给沉默无限延长的空间。",
-          "subtext": "保留主动坦白机会，同时设定期限。"
-        }
-      ],
-      "decisionType": "hard",
-      "decisionLabel": "这份文件会改变所有人的选择",
-      "decisionNote": "谁先知道、谁负责说明，会成为后面信任判断的一部分。"
-    },
-    {
-      "id": "s10",
-      "slot": 10,
-      "chapter": "10｜他问你，还能不能站在他这边",
-      "context": "rupture",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "制作人在线上说得很直接：“两个人，一架钢琴，全国能跑。完整版本成本太高。”"
-        },
-        {
-          "type": "paragraph",
-          "text": "会议结束后，陆惟没有问你合同怎么改。他问的是：“如果我还想抓住这个机会，你是不是就再也不会相信我？”"
-        },
-        {
-          "type": "paragraph",
-          "text": "你可以支持他的野心，也可以告诉他，什么样的成功会让你无法再靠近。"
+          "text": "他没有因为你们谈过一次，就默认可以重新靠近。"
         }
       ],
       "prompt": "你怎样回答？",
       "choices": [
         {
           "id": "a",
-          "text": "“我支持你的机会，但前提是每个人都真正同意。”",
+          "text": "和他一起走，但让伞停在两个人都舒服的位置。",
           "vector": {
-            "trust": 0.28,
-            "repair": 0.2,
-            "approach": 0.62,
-            "expression": 0.18,
-            "commitment": 0.22
+            "approach": 0.28,
+            "autonomy": 0.28,
+            "trust": 0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "陆惟听见的不是无条件支持，而是一条他必须亲自守住的底线。",
-          "subtext": "支持机会，但不放弃共同同意。"
+          "next": "s09",
+          "aftermath": "你们肩膀之间还隔着一点距离。七分钟并不浪漫，却很安静。",
+          "subtext": "允许有限靠近，同时保留身体边界。"
         },
         {
           "id": "b",
-          "text": "“如果你的出口要靠删掉别人，我不会再相信你。”",
+          "text": "答应，但今晚不再谈离开。",
           "vector": {
-            "discernment": 0.62,
-            "autonomy": 0.48,
-            "certainty": 0.22,
-            "approach": -0.08
+            "approach": 0.22,
+            "autonomy": 0.36,
+            "repair": 0.14
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "这句话很重，却没有回避你们之间真正的裂缝。",
-          "subtext": "明确成功方式会影响爱情信任。"
+          "next": "s09",
+          "aftermath": "陆惟只问你明天几点到剧场，没有利用同行继续追问。",
+          "subtext": "接受陪伴，不把每次靠近都变成关系谈判。"
         },
         {
           "id": "c",
-          "text": "“和我一起写一份保留所有名字的反提案。”",
+          "text": "让他把伞给你，他自己回去。",
           "vector": {
-            "repair": 0.5,
-            "expression": 0.56,
-            "care": 0.3,
-            "conflict": 0.18
+            "care": -0.12,
+            "autonomy": 0.46,
+            "approach": -0.18,
+            "trust": 0.06
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你们再次坐到同一台电脑前。这次不是替彼此做主，而是共同提出可被所有人拒绝的方案。",
-          "subtext": "尝试共同修复现实方案。"
+          "next": "s09",
+          "aftermath": "他把伞柄交给你，站在屋檐下等网约车。你没有欠下一段同行。",
+          "subtext": "接受实际帮助，但拒绝陪伴。"
         },
         {
           "id": "d",
-          "text": "“今晚我不替你决定。你先想清楚自己愿意成为什么样的人。”",
+          "text": "说不用，自己跑去地铁站。",
           "vector": {
-            "certainty": 0.2,
-            "autonomy": 0.66,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
+            "autonomy": 0.54,
+            "approach": -0.34,
+            "novelty": 0.08
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把决定还给他，也拒绝让自己成为他选择的借口。",
-          "subtext": "拒绝替他承担人生判断。"
+          "next": "s09",
+          "aftermath": "他没有跟上来。第二天，你的提示桌上也没有多出一把自作主张的新伞。",
+          "subtext": "明确拒绝这次靠近，并让拒绝被尊重。"
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "slot": 9,
+      "chapter": "09｜他没有再消失",
+      "context": "ambiguity",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "接下来的三天，陆惟每天准时到排练厅。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他把变动过的时间提前发给全组，忘记走位就重新记，不再单独给你发送需要猜测的消息。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他没有突然变成更会说话的人，只是不再把沉默留给你收拾。"
         }
       ],
-      "decisionLabel": "今晚只会发出一封正式回信",
-      "decisionNote": "这封信会真实改变巡演机会，而不只是表达态度。"
+      "prompt": "哪一个变化最能影响你？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "他持续出现，而不是只在情绪最浓的时候坦白。",
+          "vector": {
+            "trust": 0.42,
+            "commitment": 0.38,
+            "idealization": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s10",
+          "aftermath": "你开始把他的改变看成一段时间，而不是一个晚上。",
+          "subtext": "被持续行动而非高潮时刻说服。"
+        },
+        {
+          "id": "b",
+          "text": "他不再用愧疚逼你安慰他。",
+          "vector": {
+            "discernment": 0.4,
+            "repair": 0.24,
+            "care": -0.1
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s10",
+          "aftermath": "他的后悔仍然存在，但不再成为你必须处理的任务。",
+          "subtext": "看重修复是否由犯错的人承担。"
+        },
+        {
+          "id": "c",
+          "text": "他每次靠近前都会先问。",
+          "vector": {
+            "trust": 0.28,
+            "autonomy": 0.38,
+            "reassurance": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s10",
+          "aftermath": "你发现自己没有因为被尊重而失去心动，反而更愿意放松一点。",
+          "subtext": "边界清楚以后，亲密才更可信。"
+        },
+        {
+          "id": "d",
+          "text": "这些还不够。三个月的沉默不会被三天覆盖。",
+          "vector": {
+            "discernment": 0.48,
+            "trust": -0.28,
+            "repair": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s10",
+          "aftermath": "你没有否认他的改变，也没有提前把它判定为修复完成。",
+          "subtext": "需要更长时间验证。"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "slot": 10,
+      "chapter": "10｜他把计划摊开",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "第六天晚上，陆惟带来一本薄薄的行程册。"
+        },
+        {
+          "type": "paragraph",
+          "text": "每座城的演出日期、休息日、住宿安排和可能返城的周末都写在上面。空白的地方仍然空着。"
+        },
+        {
+          "type": "paragraph",
+          "text": "“这是我知道的全部。”他说，“你不需要现在决定任何事。”"
+        }
+      ],
+      "prompt": "你怎样使用这本行程册？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "把可以见面的日期圈出来，但不写承诺。",
+          "vector": {
+            "commitment": 0.38,
+            "approach": 0.24,
+            "certainty": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s11",
+          "aftermath": "两个周末被圈了出来。它们是可能，不是债务。",
+          "subtext": "把感情放进可执行的时间，而不是誓言。",
+          "setFlags": {
+            "plan_view": "dates"
+          }
+        },
+        {
+          "id": "b",
+          "text": "先问清联系频率、临时变动和谁负责说明。",
+          "vector": {
+            "certainty": 0.48,
+            "discernment": 0.4,
+            "reassurance": 0.2
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s11",
+          "aftermath": "你们把“忙了再说”改成了几条普通但明确的规则。",
+          "subtext": "先讨论关系怎样运行。",
+          "setFlags": {
+            "plan_view": "rules"
+          }
+        },
+        {
+          "id": "c",
+          "text": "告诉他你不会围着这本册子安排自己的生活。",
+          "vector": {
+            "autonomy": 0.58,
+            "commitment": 0.12,
+            "approach": -0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s11",
+          "aftermath": "陆惟说：“应该这样。”他没有把独立听成拒绝。",
+          "subtext": "保留自己的生活轴心。",
+          "setFlags": {
+            "plan_view": "own-life"
+          }
+        },
+        {
+          "id": "d",
+          "text": "合上行程册：“计划很清楚，但我还没有决定要不要参与。”",
+          "vector": {
+            "discernment": 0.44,
+            "autonomy": 0.4,
+            "trust": -0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s11",
+          "aftermath": "他收回册子。清楚的信息没有被强行兑换成关系。",
+          "subtext": "承认事实完整，但情感答案仍未形成。",
+          "setFlags": {
+            "plan_view": "undecided"
+          }
+        }
+      ]
     },
     {
       "id": "s11",
       "slot": 11,
-      "chapter": "11｜黑暗里，他没有碰你",
-      "context": "rupture",
+      "chapter": "11｜一个与你无关的邀请",
+      "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "带灯排练时突然跳闸。黑暗里，陆惟就在离你一步的位置。"
+          "text": "第二天，导演唐瑛把你叫到办公室。"
         },
         {
           "type": "paragraph",
-          "text": "三个月前，他会本能地抓住你的手；这一次，他先问：“可以吗？”"
+          "text": "巡演团队的舞台监督伤了脚，前两站临时缺人。唐瑛推荐了你，对方愿意按正式项目合同聘你两周。"
         },
         {
           "type": "paragraph",
-          "text": "你知道这只是一个很小的动作。可在所有替你决定的事情之后，这句询问忽然变得很重要。"
+          "text": "“陆惟不知道。”她说，“我推荐你，是因为你做得到，不是因为你们之间有什么。”"
         }
       ],
-      "prompt": "你怎样回应这一步距离？",
+      "prompt": "你怎样回应这份工作邀请？",
       "choices": [
         {
           "id": "a",
-          "text": "主动握住他的手：“可以，但别把这当成我已经原谅你。”",
+          "text": "先看合同、报酬和职责，再决定是否接。",
           "vector": {
-            "commitment": 0.22,
-            "care": 0.25,
-            "approach": 0.62,
-            "trust": 0.28,
-            "expression": 0.18
+            "discernment": 0.54,
+            "autonomy": 0.34,
+            "commitment": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s12",
-          "aftermath": "他回握得很轻。你允许靠近，也把靠近的含义说得清清楚楚。",
-          "subtext": "允许身体靠近，同时保留关系判断。"
+          "aftermath": "唐瑛把完整文件发给你。你第一次面对的是自己的工作机会，不是谁的车票。",
+          "subtext": "把它当作职业选择进行核对。",
+          "setFlags": {
+            "tour_option": "consider"
+          }
         },
         {
           "id": "b",
-          "text": "让他站近一点，但不要触碰你。",
+          "text": "拒绝。你已经答应留下完成剧场接下来的项目。",
           "vector": {
-            "care": 0.35,
-            "autonomy": 0.48,
-            "discernment": 0.62,
-            "certainty": 0.22,
-            "approach": -0.08
+            "commitment": 0.42,
+            "autonomy": 0.38,
+            "novelty": -0.24
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s12",
-          "aftermath": "陆惟停在你允许的位置，没有再向前试探。",
-          "subtext": "允许陪伴，不允许触碰。"
+          "aftermath": "唐瑛接受了你的决定，没有问这是不是因为陆惟。",
+          "subtext": "按照现有责任安排工作。",
+          "setFlags": {
+            "tour_option": "decline"
+          }
         },
         {
           "id": "c",
-          "text": "告诉他：“我害怕的不是你走，是你又不告而别。”",
+          "text": "推荐副手去；你愿意帮她准备交接。",
           "vector": {
-            "discernment": 0.25,
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3,
-            "conflict": 0.18
+            "care": 0.36,
+            "autonomy": 0.3,
+            "commitment": 0.24
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s12",
-          "aftermath": "黑暗里，他第一次听见你真正害怕失去的方式。",
-          "subtext": "直接表达被隐瞒造成的恐惧。"
+          "aftermath": "机会没有消失，只是被你交给了更适合当前安排的人。",
+          "subtext": "不接受机会，同时让工作得到解决。",
+          "setFlags": {
+            "tour_option": "refer"
+          }
         },
         {
           "id": "d",
-          "text": "说“不用”，独自打开手机照明。",
+          "text": "要一天考虑，不把离别倒计时当成催促。",
           "vector": {
-            "autonomy": 0.66,
-            "certainty": 0.14,
+            "autonomy": 0.42,
             "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
+            "reassurance": -0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s12",
-          "aftermath": "你自己照亮脚下。他没有把你的独立解释成惩罚。",
-          "subtext": "拒绝依赖，独立处理当下。"
+          "aftermath": "唐瑛给了你二十四小时。你没有因为一张同方向的车票立刻赋予它命运感。",
+          "subtext": "给职业决定独立的思考时间。",
+          "setFlags": {
+            "tour_option": "day"
+          }
         }
-      ],
-      "decisionType": "hard",
-      "decisionLabel": "这一步必须得到你的许可",
-      "decisionNote": "后面的亲密不会把你的边界改写成暧昧游戏。"
+      ]
     },
     {
       "id": "s12",
       "slot": 12,
-      "chapter": "12｜屋顶上的十分钟",
-      "context": "rupture",
+      "chapter": "12｜这次他没有替你问",
+      "context": "ambiguity",
       "content": [
         {
           "type": "paragraph",
-          "text": "电力恢复后，陆惟问能不能在屋顶谈十分钟。"
+          "text": "陆惟从唐瑛那里知道了邀请。"
         },
         {
           "type": "paragraph",
-          "text": "他说：“不是谈合同。我想告诉你，我为什么宁愿让你恨我，也没敢问你要不要一起走。”"
+          "text": "他在排练厅门口停了一下，只说：“无论你怎么选，我都不会把它当成你对我的答案。”"
         },
         {
           "type": "paragraph",
-          "text": "他停在门口，等你决定地点、距离和谈话深度。"
+          "text": "他没有问你会不会去。"
         }
       ],
-      "prompt": "你怎样给出这十分钟？",
+      "prompt": "你怎样回应他的克制？",
       "choices": [
         {
           "id": "a",
-          "text": "和他上屋顶，允许他牵你的手把话说完。",
+          "text": "“你可以问我怎么想，但不能替我解释。”",
           "vector": {
-            "approach": 0.62,
-            "trust": 0.28,
-            "expression": 0.18,
-            "commitment": 0.22
+            "expression": 0.46,
+            "autonomy": 0.38,
+            "repair": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s13",
-          "aftermath": "他牵住你，却没有借这个动作跳过任何一句难说的话。",
-          "subtext": "允许较高程度的亲密与坦白。"
+          "aftermath": "陆惟问：“那你怎么想？”这一次，问题只停在问题。",
+          "subtext": "允许他参与对话，但不允许他定义答案。"
         },
         {
           "id": "b",
-          "text": "在公共走廊谈，不触碰，也不关门。",
+          "text": "“我也想知道，你希望我去吗？”",
           "vector": {
-            "autonomy": 0.48,
-            "discernment": 0.62,
-            "certainty": 0.22,
-            "approach": -0.08
+            "expression": 0.42,
+            "validation": 0.28,
+            "approach": 0.22
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s13",
-          "aftermath": "来往的人偶尔经过。这个空间让你不必独自承受他的情绪。",
-          "subtext": "选择公开、安全的谈话边界。"
+          "aftermath": "“希望。”他说，“但这次希望只属于我，不是你的义务。”",
+          "subtext": "要求他诚实表达愿望。"
         },
         {
           "id": "c",
-          "text": "只允许他回答一个问题：“你当时最怕我说什么？”",
+          "text": "“先别把工作邀请变成我们之间的事。”",
           "vector": {
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3,
-            "conflict": 0.18
+            "autonomy": 0.5,
+            "discernment": 0.34,
+            "approach": -0.12
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s13",
-          "aftermath": "陆惟回答：“我最怕你说愿意，然后有一天发现那不是你自己的生活。”",
-          "subtext": "只获取最核心的真实答案。"
+          "aftermath": "他点头，转而和你核对第二天的技术时间。",
+          "subtext": "继续隔离职业决定和关系决定。"
         },
         {
           "id": "d",
-          "text": "拒绝今晚私谈，要求他把想说的话写下来。",
+          "text": "“谢谢你这次没有替我决定。”",
           "vector": {
-            "certainty": 0.2,
-            "autonomy": 0.66,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
+            "repair": 0.42,
+            "trust": 0.26,
+            "care": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "s13",
-          "aftermath": "他接受了书面边界。你不必在夜色和离别倒计时里即时作答。",
-          "subtext": "拒绝即时情绪压力，改为书面沟通。"
+          "aftermath": "这句感谢没有取消过去，却承认了一个真实变化。",
+          "subtext": "看见修复中的具体一步。"
         }
       ]
     },
     {
       "id": "s13",
       "slot": 13,
-      "chapter": "13｜他终于承认，沉默也是替你决定",
-      "context": "rupture",
+      "chapter": "13｜黑暗里的距离",
+      "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "陆惟说，他不是不想带你走。他是太想，才害怕你的答案会被喜欢影响。"
+          "text": "技术联排时，剧场突然断电。应急灯要十几秒才会亮。"
         },
         {
           "type": "paragraph",
-          "text": "“所以我替你决定不必回答。”他说，“我以为那叫保护你。”"
+          "text": "黑暗里，陆惟就在你旁边。"
         },
         {
           "type": "paragraph",
-          "text": "你听得出他的后悔，也听得出问题所在：他把自己的恐惧包装成了你的自由。"
-        }
-      ],
-      "prompt": "什么才算真正的修复？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "要求他在全体面前说清自己隐瞒和发送版本的完整经过。",
-          "vector": {
-            "conflict": 0.3,
-            "expression": 0.18,
-            "approach": 0.62,
-            "trust": 0.28,
-            "commitment": 0.22
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s14",
-          "aftermath": "陆惟同意让自己的错误进入公开记录，而不是只留在你们的私人对话里。",
-          "subtext": "让他公开承担事实。"
-        },
-        {
-          "id": "b",
-          "text": "要求他把全部邮件和决定权交出，不再单独代表这部戏谈判。",
-          "vector": {
-            "repair": 0.32,
-            "discernment": 0.62,
-            "autonomy": 0.48,
-            "certainty": 0.22,
-            "approach": -0.08
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s14",
-          "aftermath": "他交出联系人和往来文件。信任不再只靠一句“相信我”。",
-          "subtext": "撤回他的单独代理权。"
-        },
-        {
-          "id": "c",
-          "text": "要求他先恢复所有署名，再谈你们之间是否可能继续。",
-          "vector": {
-            "certainty": 0.28,
-            "autonomy": 0.12,
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3,
-            "conflict": 0.18
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s14",
-          "aftermath": "名字被重新放回海报和版本页。你没有因此自动给出私人原谅。",
-          "subtext": "先完成对他人的修复。"
-        },
-        {
-          "id": "d",
-          "text": "告诉他：“今晚没有修复。你做完该做的，我再决定要不要看。”",
-          "vector": {
-            "autonomy": 0.66,
-            "expression": -0.2,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s14",
-          "aftermath": "你拒绝在他的愧疚最强烈时替他提供安慰。",
-          "subtext": "拒绝把你的回应变成他的安慰。"
-        }
-      ],
-      "decisionLabel": "这次空场必须产生一个真实结果",
-      "decisionNote": "排练会停止、切换、解释或转入会议，不能当作什么也没发生。"
-    },
-    {
-      "id": "s14",
-      "slot": 14,
-      "chapter": "14｜这份合同，也会决定你还能不能信他",
-      "context": "commitment",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "最终授权会议开始。每个人只能签自己的权利，没有谁能替别人同意。"
-        },
-        {
-          "type": "paragraph",
-          "text": "你不能替吴照、陆惟或合唱团签字，但作为执行制作人，你必须明确支持哪一种方案。"
-        },
-        {
-          "type": "paragraph",
-          "text": "这不是一道“爱情优先还是事业优先”的题。它决定的是：陆惟将怎样获得未来，而你是否愿意继续认识那个作出选择的他。"
-        }
-      ],
-      "prompt": "你支持并签下哪一种制作立场？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "只接受完整集体授权：所有名字、素材许可和收益条件缺一不可。",
-          "vector": {
-            "commitment": 0.22,
-            "care": 0.18,
-            "approach": 0.62,
-            "trust": 0.28,
-            "expression": 0.18
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s15",
-          "aftermath": "文件逐一传递。任何一个人的“不”都拥有真实效力。",
-          "setFlags": {
-            "licence": "collective"
-          },
-          "subtext": "进入集体授权路线。"
-        },
-        {
-          "id": "b",
-          "text": "拒绝这次巡演，让共同作品留在现有作者手里。",
-          "vector": {
-            "autonomy": 0.48,
-            "discernment": 0.62,
-            "certainty": 0.22,
-            "approach": -0.08
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s15",
-          "aftermath": "报价失效。陆惟失去最快的出口，也不再能用这部共同作品独自离开。",
-          "setFlags": {
-            "licence": "refused"
-          },
-          "subtext": "明确拒绝巡演路线。"
-        },
-        {
-          "id": "c",
-          "text": "允许陆惟谈个人版本，但必须删去他无权使用的内容，不能再称作你们共同的戏。",
-          "vector": {
-            "certainty": 0.2,
-            "autonomy": 0.2,
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3,
-            "conflict": 0.18
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s15",
-          "aftermath": "律师开始拆分版本。陆惟保住个人机会，也必须独自承担它与原作之间的断裂。",
-          "setFlags": {
-            "licence": "negotiated-individual"
-          },
-          "subtext": "进入个人版本交易路线。"
-        },
-        {
-          "id": "d",
-          "text": "撤回剧场的运营与制作支持，让当前方案立即停止。",
-          "vector": {
-            "autonomy": 0.66,
-            "conflict": 0.16,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s15",
-          "aftermath": "剧场名称和制作资源被撤回。你没有替其他人决定，却明确退出了当前方案。",
-          "setFlags": {
-            "licence": "withdrawn"
-          },
-          "subtext": "撤回剧场参与路线。"
-        }
-      ],
-      "decisionType": "hard",
-      "decisionLabel": "这份签字会锁定事实结局",
-      "decisionNote": "后面的拥抱、告别或承诺，都不能推翻这份授权决定。"
-    },
-    {
-      "id": "s15",
-      "slot": 15,
-      "chapter": "15｜苏州只等你到六点",
-      "context": "commitment",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "授权会议结束后，苏州的人事打来最后一通电话：“六点以前，我们需要你的答案。”"
-        },
-        {
-          "type": "paragraph",
-          "text": "陆惟就在舞台另一边。他听见了，却没有走过来替你分析，也没有问你会不会为了他留下。"
-        },
-        {
-          "type": "paragraph",
-          "text": "这一次，你只回答自己的生活。"
-        }
-      ],
-      "prompt": "你怎样答复苏州？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "接受正式岗位，按录用日期去苏州。",
-          "vector": {
-            "commitment": 0.22,
-            "autonomy": 0.18,
-            "approach": 0.62,
-            "trust": 0.28,
-            "expression": 0.18
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "入职日期进入日历。两座城从可能变成事实。",
-          "setFlags": {
-            "job": "accept"
-          },
-          "subtext": "正式接受苏州工作。"
-        },
-        {
-          "id": "b",
-          "text": "请求延长一周，再给最终答案。",
-          "vector": {
-            "certainty": 0.22,
-            "discernment": 0.62,
-            "autonomy": 0.48,
-            "approach": -0.08
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "对方答应向负责人申请，但你没有假装延期已经获批。",
-          "setFlags": {
-            "job": "week"
-          },
-          "subtext": "暂缓决定，等待延期回复。"
-        },
-        {
-          "id": "c",
-          "text": "拒绝岗位，留在本地完成交接并寻找下一份工作。",
-          "vector": {
-            "autonomy": 0.28,
-            "care": 0.3,
-            "expression": 0.56,
-            "repair": 0.5,
-            "conflict": 0.18
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "电话结束。你留下，却没有把这个决定送给陆惟当作爱情证明。",
-          "setFlags": {
-            "job": "decline"
-          },
-          "subtext": "明确拒绝苏州工作。"
-        },
-        {
-          "id": "d",
-          "text": "提出两个月的项目制过渡；只有对方书面接受后才成立。",
-          "vector": {
-            "commitment": -0.16,
-            "autonomy": 0.66,
-            "discernment": 0.36,
-            "approach": -0.3
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "方案被转交评估。你没有假装自己已经同时保住两种生活。",
-          "setFlags": {
-            "job": "hybrid"
-          },
-          "subtext": "提出过渡方案，但尚未获批。"
-        }
-      ],
-      "decisionLabel": "这是你的职业决定",
-      "decisionNote": "是否离开，只由你回答；它不会被自动解释成爱或不爱。"
-    },
-    {
-      "id": "s16",
-      "slot": 16,
-      "chapter": "16｜演出以后，我们是什么",
-      "context": "commitment",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "所有工作决定已经落定。陆惟在空观众席里问你："
-        },
-        {
-          "type": "paragraph",
-          "text": "“现在不谈剧场，不谈合同。演出以后，我们是什么？”"
-        },
-        {
-          "type": "paragraph",
-          "text": "你仍然可以喜欢他，也可以不再把喜欢变成关系。这个答案必须清楚，结局会原样尊重它。"
-        }
-      ],
-      "prompt": "你怎样定义你们？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "认真约会：固定联系和见面，更长期的安排以后共同决定。",
-          "vector": {
-            "commitment": 0.22,
-            "approach": 0.62,
-            "trust": 0.28,
-            "expression": 0.18
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s17",
-          "aftermath": "陆惟重复了一遍“认真约会”，确认彼此理解的是同一个意思。",
-          "setFlags": {
-            "relationship": "dates"
-          },
-          "subtext": "建立明确的约会关系。"
-        },
-        {
-          "id": "b",
-          "text": "保持开放联系：承认吸引，但现在不建立排他关系。",
-          "vector": {
-            "autonomy": 0.48,
-            "trust": 0.16,
-            "discernment": 0.62,
-            "certainty": 0.22,
-            "approach": -0.08
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s17",
-          "aftermath": "他接受开放边界，没有把它理解成等待你最终改变主意。",
-          "setFlags": {
-            "relationship": "open"
-          },
-          "subtext": "保留亲密，但不承诺排他。"
-        },
-        {
-          "id": "c",
-          "text": "只做朋友：保留关心，不再继续暧昧或身体靠近。",
-          "vector": {
-            "autonomy": 0.3,
-            "care": 0.3,
-            "expression": 0.56,
-            "repair": 0.5,
-            "conflict": 0.18
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s17",
-          "aftermath": "他沉默一会儿，说：“好，朋友。”",
-          "setFlags": {
-            "relationship": "friends"
-          },
-          "subtext": "结束暧昧，只保留朋友关系。"
-        },
-        {
-          "id": "d",
-          "text": "演出后不再联系：让私人关系在这里结束。",
-          "vector": {
-            "autonomy": 0.66,
-            "approach": -0.3,
-            "discernment": 0.36,
-            "commitment": -0.16
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s17",
-          "aftermath": "他没有追问，也没有要求一个以后还能回来的暗示。",
-          "setFlags": {
-            "relationship": "no-contact"
-          },
-          "subtext": "结束私人联系。"
-        }
-      ],
-      "decisionLabel": "这个关系名称会被结局尊重",
-      "decisionNote": "最后的灯光、车站或谢幕，不会偷偷提高或降低你已经说清的关系。"
-    },
-    {
-      "id": "s17",
-      "slot": 17,
-      "chapter": "17｜最后一场排练，他没有上台",
-      "context": "commitment",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "最后一次排练，制作人要求先录一段尚未完成授权的两人版。"
-        },
-        {
-          "type": "paragraph",
-          "text": "提示音乐响了。你报出陆惟的进场点。"
-        },
-        {
-          "type": "paragraph",
-          "text": "他站在侧幕，却没有走进灯里。"
-        },
-        {
-          "type": "paragraph",
-          "text": "“这版还不只属于我。”他说，“我现在上去，就等于替别人答应了。”"
-        },
-        {
-          "type": "paragraph",
-          "text": "全场都看着他，也看着你。这个瞬间会成为你们怎样结束这九天的公开事实。"
-        }
-      ],
-      "prompt": "你怎样处理这十秒空场？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "站到他身边，由你们共同说明为何停止录制，但只代表自己。",
-          "vector": {
-            "expression": 0.18,
-            "approach": 0.62,
-            "trust": 0.28,
-            "commitment": 0.22
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "path": "flags.licence",
-                  "op": "equals",
-                  "value": "negotiated-individual"
-                },
-                "to": "s18-ed"
-              },
-              {
-                "when": {
-                  "path": "flags.licence",
-                  "op": "in",
-                  "value": [
-                    "refused",
-                    "withdrawn"
-                  ]
-                },
-                "to": "s18-ec"
-              },
-              {
-                "when": {
-                  "all": [
-                    {
-                      "path": "flags.licence",
-                      "op": "equals",
-                      "value": "collective"
-                    },
-                    {
-                      "path": "flags.job",
-                      "op": "equals",
-                      "value": "accept"
-                    }
-                  ]
-                },
-                "to": "s18-eb"
-              }
-            ],
-            "default": "s18-ea"
-          },
-          "aftermath": "你们并肩站着，却没有把两个人的亲密包装成全体同意。",
-          "subtext": "共同公开说明，但不代表他人。"
-        },
-        {
-          "id": "b",
-          "text": "让陆惟独自向全体说明他的决定和此前的隐瞒。",
-          "vector": {
-            "conflict": 0.16,
-            "discernment": 0.62,
-            "autonomy": 0.48,
-            "certainty": 0.22,
-            "approach": -0.08
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "path": "flags.licence",
-                  "op": "equals",
-                  "value": "negotiated-individual"
-                },
-                "to": "s18-ed"
-              },
-              {
-                "when": {
-                  "path": "flags.licence",
-                  "op": "in",
-                  "value": [
-                    "refused",
-                    "withdrawn"
-                  ]
-                },
-                "to": "s18-ec"
-              },
-              {
-                "when": {
-                  "all": [
-                    {
-                      "path": "flags.licence",
-                      "op": "equals",
-                      "value": "collective"
-                    },
-                    {
-                      "path": "flags.job",
-                      "op": "equals",
-                      "value": "accept"
-                    }
-                  ]
-                },
-                "to": "s18-eb"
-              }
-            ],
-            "default": "s18-ea"
-          },
-          "aftermath": "陆惟第一次独自承担说明，没有借你的支持减轻自己的责任。",
-          "subtext": "让陆惟独自承担公开责任。"
-        },
-        {
-          "id": "c",
-          "text": "请吴照上台，只陈述她的文字和授权状态。",
-          "vector": {
-            "discernment": 0.3,
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3,
-            "conflict": 0.18
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "path": "flags.licence",
-                  "op": "equals",
-                  "value": "negotiated-individual"
-                },
-                "to": "s18-ed"
-              },
-              {
-                "when": {
-                  "path": "flags.licence",
-                  "op": "in",
-                  "value": [
-                    "refused",
-                    "withdrawn"
-                  ]
-                },
-                "to": "s18-ec"
-              },
-              {
-                "when": {
-                  "all": [
-                    {
-                      "path": "flags.licence",
-                      "op": "equals",
-                      "value": "collective"
-                    },
-                    {
-                      "path": "flags.job",
-                      "op": "equals",
-                      "value": "accept"
-                    }
-                  ]
-                },
-                "to": "s18-eb"
-              }
-            ],
-            "default": "s18-ea"
-          },
-          "aftermath": "吴照只说属于她的事实。她不替你原谅，也不替陆惟解释。",
-          "subtext": "把发言权交给受影响的作者。"
-        },
-        {
-          "id": "d",
-          "text": "直接结束排练，不用一场漂亮发言替任何人提前和解。",
-          "vector": {
-            "care": 0.2,
-            "repair": 0.2,
-            "autonomy": 0.66,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": {
-            "cases": [
-              {
-                "when": {
-                  "path": "flags.licence",
-                  "op": "equals",
-                  "value": "negotiated-individual"
-                },
-                "to": "s18-ed"
-              },
-              {
-                "when": {
-                  "path": "flags.licence",
-                  "op": "in",
-                  "value": [
-                    "refused",
-                    "withdrawn"
-                  ]
-                },
-                "to": "s18-ec"
-              },
-              {
-                "when": {
-                  "all": [
-                    {
-                      "path": "flags.licence",
-                      "op": "equals",
-                      "value": "collective"
-                    },
-                    {
-                      "path": "flags.job",
-                      "op": "equals",
-                      "value": "accept"
-                    }
-                  ]
-                },
-                "to": "s18-eb"
-              }
-            ],
-            "default": "s18-ea"
-          },
-          "aftermath": "工作灯亮起。最后一场排练停在这里，没有掌声替任何人盖章。",
-          "subtext": "停止排练，拒绝表演式和解。"
-        }
-      ],
-      "decisionType": "hard",
-      "decisionLabel": "标题事件在这里真实发生",
-      "decisionNote": "他没有上台，不是浪漫姿态，而是此前所有选择终于落到行动。"
-    },
-    {
-      "id": "s18-ea",
-      "slot": 18,
-      "chapter": "18｜所有名字都在",
-      "context": "commitment",
-      "decisionType": "final",
-      "decisionLabel": "谢幕位置只决定这个瞬间",
-      "decisionNote": "授权、职业和你们的关系都已经锁定。",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "最终演出按完整授权版本完成。谢幕时，吴照、陆惟、你和所有参与者的名字都在屏幕上。"
-        },
-        {
-          "type": "paragraph",
-          "text": "陆惟没有站在最中央。他隔着人群看向你，等你决定最后这一刻要怎样靠近或离开。"
-        },
-        {
-          "type": "paragraph",
-          "text": "你们此前定义的关系仍然有效。谢幕不能替你们改口。"
-        }
-      ],
-      "prompt": "谢幕后，你怎样走向他？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "穿过人群抱住他，但只说：“我们明天再慢慢谈。”",
-          "vector": {
-            "approach": 0.62,
-            "trust": 0.28,
-            "expression": 0.18,
-            "commitment": 0.22
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "他回抱你，没有把拥抱变成一份新的承诺。",
-          "outcome": "collective-stage",
-          "finalReveal": {
-            "title": "灯亮以后",
-            "copy": "集体授权已经完成。乔安没有接受苏州职位，署名、合唱团和未完成的工作都被留在公开的安排里。"
-          },
-          "subtext": "更主动地确认关系与下一步。"
-        },
-        {
-          "id": "b",
-          "text": "和他并肩走出剧场，不在今晚许下更远的未来。",
-          "vector": {
-            "autonomy": 0.48,
-            "discernment": 0.62,
-            "certainty": 0.22,
-            "approach": -0.08
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "你们一起走到门外。未来仍未写完，但不再由一个人替另一个人决定。",
-          "outcome": "collective-stage",
-          "finalReveal": {
-            "title": "灯亮以后",
-            "copy": "集体授权已经完成。乔安没有接受苏州职位，署名、合唱团和未完成的工作都被留在公开的安排里。"
-          },
-          "subtext": "先确认事实与边界。"
-        },
-        {
-          "id": "c",
-          "text": "按你们说好的关系叫住他：“明天见。”",
-          "vector": {
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3,
-            "conflict": 0.18
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "陆惟笑了一下。这个称呼和明天，都没有越过你们已经说清的边界。",
-          "outcome": "collective-stage",
-          "finalReveal": {
-            "title": "灯亮以后",
-            "copy": "集体授权已经完成。乔安没有接受苏州职位，署名、合唱团和未完成的工作都被留在公开的安排里。"
-          },
-          "subtext": "直接表达感受并尝试修复。"
-        },
-        {
-          "id": "d",
-          "text": "向他点头告别，让这一晚停在共同完成的作品里。",
-          "vector": {
-            "care": 0.1,
-            "autonomy": 0.66,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "他没有追上来。告别完整发生，也没有抹掉你们曾经真实喜欢过。",
-          "outcome": "collective-stage",
-          "finalReveal": {
-            "title": "灯亮以后",
-            "copy": "集体授权已经完成。乔安没有接受苏州职位，署名、合唱团和未完成的工作都被留在公开的安排里。"
-          },
-          "subtext": "保护自主空间或结束靠近。"
-        }
-      ]
-    },
-    {
-      "id": "s18-eb",
-      "slot": 18,
-      "chapter": "18｜两座城",
-      "context": "commitment",
-      "decisionType": "final",
-      "decisionLabel": "两座城已经成为事实",
-      "decisionNote": "这个告别不会改变你的入职、集体授权或关系定义。",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "集体授权完成，你也接受了苏州的岗位。"
-        },
-        {
-          "type": "paragraph",
-          "text": "演出结束十二小时后，你站在车站。陆惟把完整署名的剧本递给你，没有问你会不会留下。"
-        },
-        {
-          "type": "paragraph",
-          "text": "两座城已经是事实。你们此前定义的关系，同样是事实。"
-        }
-      ],
-      "prompt": "上车以前，你给这段关系怎样的下一步？",
-      "choices": [
-        {
-          "id": "a",
-          "text": "把下一次见面的日期写进两个人的日历。",
-          "vector": {
-            "approach": 0.62,
-            "trust": 0.28,
-            "expression": 0.18,
-            "commitment": 0.22
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "你们只承诺一个真正能执行的日期，而不是无限未来。",
-          "outcome": "two-cities",
-          "finalReveal": {
-            "title": "两座城的排练表",
-            "copy": "集体授权没有被匆忙吞掉，乔安接受苏州职位。两座城之间保留的不是悬而未决的承诺，而是按你此前说出的关系边界继续或结束的权利。"
-          },
-          "subtext": "更主动地确认关系与下一步。"
-        },
-        {
-          "id": "b",
-          "text": "告诉他：“先各自到达，再按我们说好的方式联系。”",
-          "vector": {
-            "autonomy": 0.48,
-            "discernment": 0.62,
-            "certainty": 0.22,
-            "approach": -0.08
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "陆惟点头。距离没有被写成考验，也没有被假装不存在。",
-          "outcome": "two-cities",
-          "finalReveal": {
-            "title": "两座城的排练表",
-            "copy": "集体授权没有被匆忙吞掉，乔安接受苏州职位。两座城之间保留的不是悬而未决的承诺，而是按你此前说出的关系边界继续或结束的权利。"
-          },
-          "subtext": "先确认事实与边界。"
-        },
-        {
-          "id": "c",
-          "text": "只拥抱一次，不在离别时提高承诺。",
-          "vector": {
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3,
-            "conflict": 0.18
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "拥抱结束时，你先松开手。爱意真实，边界也真实。",
-          "outcome": "two-cities",
-          "finalReveal": {
-            "title": "两座城的排练表",
-            "copy": "集体授权没有被匆忙吞掉，乔安接受苏州职位。两座城之间保留的不是悬而未决的承诺，而是按你此前说出的关系边界继续或结束的权利。"
-          },
-          "subtext": "直接表达感受并尝试修复。"
-        },
-        {
-          "id": "d",
-          "text": "按已经说清的关系告别，不留下模糊的等待。",
-          "vector": {
-            "care": 0.1,
-            "autonomy": 0.66,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "车门关闭前，他没有要求你改变答案。",
-          "outcome": "two-cities",
-          "finalReveal": {
-            "title": "两座城的排练表",
-            "copy": "集体授权没有被匆忙吞掉，乔安接受苏州职位。两座城之间保留的不是悬而未决的承诺，而是按你此前说出的关系边界继续或结束的权利。"
-          },
-          "subtext": "保护自主空间或结束靠近。"
-        }
-      ]
-    },
-    {
-      "id": "s18-ec",
-      "slot": 18,
-      "chapter": "18｜名字归还",
-      "context": "commitment",
-      "decisionType": "final",
-      "decisionLabel": "巡演已经停止或失去剧场支持",
-      "decisionNote": "怎样保存剧本不会把它重新变成原来的商业方案。",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "巡演被拒绝，或剧场撤回了当前方案。共同作品没有按两人版继续。"
-        },
-        {
-          "type": "paragraph",
-          "text": "陆惟失去了那条最快的职业出口。你也没有因为结果符合自己的底线，就假装信任已经全部恢复。"
-        },
-        {
-          "type": "paragraph",
-          "text": "散场后，他问：“我们说好的关系，还算数吗？”"
+          "text": "“可以握住你吗？”他问。没有碰到你以前，他停在原地。"
         }
       ],
       "prompt": "你怎样回答？",
       "choices": [
         {
           "id": "a",
-          "text": "“算数。我们从已经说清的地方继续。”",
+          "text": "握住他的手：“可以，但这不代表其他答案。”",
           "vector": {
-            "approach": 0.62,
-            "trust": 0.28,
-            "expression": 0.18,
-            "commitment": 0.22
+            "approach": 0.42,
+            "autonomy": 0.28,
+            "trust": 0.2
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "你没有用他的损失交换爱情，也没有否认自己仍愿意继续。",
-          "outcome": "names-returned",
-          "finalReveal": {
-            "title": "不替谁署名",
-            "copy": "拒绝或撤回授权让剧本回到共同作者手中。没有人替陆惟原谅，也没有人丢掉自己的名字。"
-          },
-          "subtext": "更主动地确认关系与下一步。"
+          "next": "s14",
+          "aftermath": "他的手只收紧了一点。灯亮时，他先松开。",
+          "subtext": "接受亲密，同时明确它不是关系承诺。"
         },
         {
           "id": "b",
-          "text": "“先给彼此一点时间，再按约定联系。”",
+          "text": "“站近一点就好，不要碰我。”",
           "vector": {
-            "autonomy": 0.48,
-            "discernment": 0.62,
-            "certainty": 0.22,
-            "approach": -0.08
+            "autonomy": 0.46,
+            "approach": 0.14,
+            "reassurance": 0.18
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "陆惟接受了等待，不再用离开或失去催促你。",
-          "outcome": "names-returned",
-          "finalReveal": {
-            "title": "不替谁署名",
-            "copy": "拒绝或撤回授权让剧本回到共同作者手中。没有人替陆惟原谅，也没有人丢掉自己的名字。"
-          },
-          "subtext": "先确认事实与边界。"
+          "next": "s14",
+          "aftermath": "他移近半步，仍然没有触碰。黑暗没有替任何人越过边界。",
+          "subtext": "允许陪伴，不接受身体接触。"
         },
         {
           "id": "c",
-          "text": "“只保留朋友关系，不再回到暧昧里。”",
+          "text": "“我怕的不是你走，是你又不说话。”",
           "vector": {
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3,
-            "conflict": 0.18
+            "expression": 0.5,
+            "repair": 0.36,
+            "abandonment": 0.24
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "他点头，把朋友这个词完整地接住。",
-          "outcome": "names-returned",
-          "finalReveal": {
-            "title": "不替谁署名",
-            "copy": "拒绝或撤回授权让剧本回到共同作者手中。没有人替陆惟原谅，也没有人丢掉自己的名字。"
-          },
-          "subtext": "直接表达感受并尝试修复。"
+          "next": "s14",
+          "aftermath": "陆惟说：“这一次不会让你从沉默里猜。”",
+          "subtext": "用语言暴露真正的不安。"
         },
         {
           "id": "d",
-          "text": "“不算了。到这里结束。”",
+          "text": "“不用。”你打开手机照明。",
           "vector": {
-            "care": 0.1,
-            "autonomy": 0.66,
-            "discernment": 0.36,
+            "autonomy": 0.56,
             "approach": -0.3,
-            "commitment": -0.16
+            "trust": -0.06
           },
-          "intensity": 1,
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s14",
+          "aftermath": "他退回原位。应急灯亮起以后，你们继续检查线路。",
+          "subtext": "拒绝身体靠近，并让工作继续。"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "slot": 14,
+      "chapter": "14｜演出以后，我们是什么",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "倒数第三天，排练结束得很早。"
+        },
+        {
+          "type": "paragraph",
+          "text": "陆惟没有再问你会不会跟他走。他问的是：“演出以后，你希望我们是什么？”"
+        },
+        {
+          "type": "paragraph",
+          "text": "这一次，你的答案会改变关系事实。"
+        }
+      ],
+      "prompt": "你怎样定义你们？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "正式开始：承认恋爱关系，离开以后按具体约定继续。",
+          "vector": {
+            "commitment": 0.58,
+            "certainty": 0.5,
+            "approach": 0.34,
+            "trust": 0.22
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s15",
+          "aftermath": "你们把“开始”说成一件需要共同维护的事，而不是离别前的奖励。",
+          "subtext": "建立明确关系。",
+          "setFlags": {
+            "relationship": "try"
+          }
+        },
+        {
+          "id": "b",
+          "text": "承认喜欢，但先用一个月验证联系和见面能否做到。",
+          "vector": {
+            "discernment": 0.38,
+            "repair": 0.32,
+            "commitment": 0.26,
+            "certainty": 0.22
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s15",
+          "aftermath": "一个月以后再确认。陆惟接受这不是降级，而是你愿意给出的真实速度。",
+          "subtext": "有限期地尝试，不提前许诺长期。",
+          "setFlags": {
+            "relationship": "slow"
+          }
+        },
+        {
+          "id": "c",
+          "text": "只做朋友：停止暧昧和身体靠近，保留普通联系。",
+          "vector": {
+            "autonomy": 0.48,
+            "certainty": 0.46,
+            "approach": -0.28,
+            "repair": 0.06
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s15",
+          "aftermath": "陆惟沉默了一会儿，说：“好。我会按朋友的边界来。”",
+          "subtext": "保留关系，但结束恋爱方向。",
+          "setFlags": {
+            "relationship": "friends"
+          }
+        },
+        {
+          "id": "d",
+          "text": "演出后不再联系。你不愿从这段隐瞒开始一段关系。",
+          "vector": {
+            "autonomy": 0.6,
+            "certainty": 0.48,
+            "repair": -0.34,
+            "approach": -0.42
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s15",
+          "aftermath": "他没有请求你把结束改成等待，只问最后两天怎样把工作完成。",
+          "subtext": "明确结束私人关系。",
+          "setFlags": {
+            "relationship": "end"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "slot": 15,
+      "chapter": "15｜最后一场排练，他没有上台",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "最后一次整排，提示音乐准时响起。"
+        },
+        {
+          "type": "paragraph",
+          "text": "陆惟站在侧幕，却没有走进灯光。他要说的仍是那句：“等我回来。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "十秒过去，台上空着。你能听见观众席里导演翻动剧本的声音。"
+        }
+      ],
+      "prompt": "你怎样处理这十秒空场？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "叫停五分钟，走到侧幕确认他能否继续。",
+          "vector": {
+            "care": 0.38,
+            "conflict": 0.3,
+            "discernment": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s16",
+          "aftermath": "陆惟说他可以继续，但不想把台词说成给你的保证。你让他把角色和你分开。",
+          "subtext": "先确认状态，再要求他完成角色。",
+          "setFlags": {
+            "last_rehearsal": "pause"
+          }
+        },
+        {
+          "id": "b",
+          "text": "让替补上场，陆惟今晚先退出这一段。",
+          "vector": {
+            "discernment": 0.5,
+            "commitment": 0.32,
+            "care": 0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s16",
+          "aftermath": "整排继续。陆惟坐在黑暗里看完，没有把被替换理解成惩罚。",
+          "subtext": "优先保证最后一次整排完成。",
+          "setFlags": {
+            "last_rehearsal": "understudy"
+          }
+        },
+        {
+          "id": "c",
+          "text": "重新给一次提示，不走过去，也不替他决定。",
+          "vector": {
+            "trust": 0.28,
+            "autonomy": 0.26,
+            "commitment": 0.3
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s16",
+          "aftermath": "第二次音乐响起，他终于上台，把那句台词说给角色，而不是说给你。",
+          "subtext": "给他一次自己承担职业选择的机会。",
+          "setFlags": {
+            "last_rehearsal": "retry"
+          }
+        },
+        {
+          "id": "d",
+          "text": "结束这一场，直接排谢幕。",
+          "vector": {
+            "autonomy": 0.38,
+            "conflict": -0.18,
+            "commitment": 0.24
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s16",
+          "aftermath": "那句台词留在空舞台上。你没有用一场公开排练解决私人问题。",
+          "subtext": "暂时取消该段，不制造当众和解。",
+          "setFlags": {
+            "last_rehearsal": "cut"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "slot": 16,
+      "chapter": "16｜他终于不替你决定",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "排练结束后，陆惟把那张车票重新放到你面前。"
+        },
+        {
+          "type": "paragraph",
+          "text": "“我以前以为，不问就是不给你压力。”他说，“其实是不肯承担答案。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "演出以后怎么继续，现在必须由你按照自己的工作、生活和已经说清的关系决定。"
+        }
+      ],
+      "prompt": "你选择哪一种实际安排？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "接受两周的巡演工作。你因合同和经验出发，也按已经说清的关系与他同行。",
+          "vector": {
+            "autonomy": 0.36,
+            "commitment": 0.42,
+            "novelty": 0.3,
+            "discernment": 0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s17",
+          "aftermath": "你签下的是自己的项目合同，不是他的车票。你们会同行，但谁也不能把同行解释成牺牲。",
+          "subtext": "以独立职业理由进入同一段旅程。",
+          "setFlags": {
+            "plan": "join"
+          }
+        },
+        {
+          "id": "b",
+          "text": "留在这里；若关系继续，就写下下一次见面日期和联系规则。",
+          "vector": {
+            "commitment": 0.5,
+            "certainty": 0.42,
+            "autonomy": 0.28,
+            "reassurance": 0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s17",
+          "aftermath": "你没有跟着离开，也没有让距离只剩一句“到时候再说”。",
+          "subtext": "选择异地，并为它建立具体安排。",
+          "setFlags": {
+            "plan": "distance"
+          }
+        },
+        {
+          "id": "c",
+          "text": "留在这里，只保留朋友关系。以后见面不再承担恋爱期待。",
+          "vector": {
+            "autonomy": 0.48,
+            "certainty": 0.5,
+            "approach": -0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s17",
+          "aftermath": "你们把可以保留的部分说清，也把不能继续的部分停下。",
+          "subtext": "选择明确的朋友关系。",
+          "setFlags": {
+            "plan": "friends"
+          }
+        },
+        {
+          "id": "d",
+          "text": "演出结束后不再联系。离开成为这段关系的终点。",
+          "vector": {
+            "autonomy": 0.62,
+            "certainty": 0.5,
+            "repair": -0.4,
+            "approach": -0.46
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "s17",
+          "aftermath": "陆惟收起车票。你们不再用未来的可能拖延一个已经形成的结束。",
+          "subtext": "选择完整告别。",
+          "setFlags": {
+            "plan": "end"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "slot": 17,
+      "chapter": "17｜开场前十分钟",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "正式演出前十分钟，剧场已经坐满。"
+        },
+        {
+          "type": "paragraph",
+          "text": "陆惟穿好戏服站在侧幕，没有再问你的答案会不会改变。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他只说：“还有什么不能留到明天？”"
+        }
+      ],
+      "prompt": "你把哪一句留在开场以前？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "“别向我保证回来。先把今晚演完。”",
+          "vector": {
+            "discernment": 0.4,
+            "commitment": 0.34,
+            "idealization": -0.24
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "join"
+                },
+                "to": "s18-ea"
+              },
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "distance"
+                },
+                "to": "s18-eb"
+              },
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "friends"
+                },
+                "to": "s18-ec"
+              },
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "end"
+                },
+                "to": "s18-ed"
+              }
+            ],
+            "default": "s18-ed"
+          },
+          "aftermath": "他点头。提示音乐响起时，他准时走进灯光。",
+          "subtext": "让行动先于新的保证。"
+        },
+        {
+          "id": "b",
+          "text": "“我说过的关系不会因为今晚很漂亮就升级，也不会降级。”",
+          "vector": {
+            "certainty": 0.52,
+            "autonomy": 0.34,
+            "expression": 0.28
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "join"
+                },
+                "to": "s18-ea"
+              },
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "distance"
+                },
+                "to": "s18-eb"
+              },
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "friends"
+                },
+                "to": "s18-ec"
+              },
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "end"
+                },
+                "to": "s18-ed"
+              }
+            ],
+            "default": "s18-ed"
+          },
+          "aftermath": "陆惟说：“明白。”演出没有被用来替任何人加码。",
+          "subtext": "确认关系事实不被现场情绪改写。"
+        },
+        {
+          "id": "c",
+          "text": "替他理好领口，只说：“演完见。”",
+          "vector": {
+            "care": 0.32,
+            "approach": 0.24,
+            "expression": -0.08
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "join"
+                },
+                "to": "s18-ea"
+              },
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "distance"
+                },
+                "to": "s18-eb"
+              },
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "friends"
+                },
+                "to": "s18-ec"
+              },
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "end"
+                },
+                "to": "s18-ed"
+              }
+            ],
+            "default": "s18-ed"
+          },
+          "aftermath": "这个动作只属于此刻。灯亮以后，他没有回头找你确认更多。",
+          "subtext": "给出当下的温柔，不增加未来承诺。"
+        },
+        {
+          "id": "d",
+          "text": "“到点了。”你退回提示台。",
+          "vector": {
+            "autonomy": 0.38,
+            "commitment": 0.28,
+            "expression": -0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": {
+            "cases": [
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "join"
+                },
+                "to": "s18-ea"
+              },
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "distance"
+                },
+                "to": "s18-eb"
+              },
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "friends"
+                },
+                "to": "s18-ec"
+              },
+              {
+                "when": {
+                  "path": "flags.plan",
+                  "op": "equals",
+                  "value": "end"
+                },
+                "to": "s18-ed"
+              }
+            ],
+            "default": "s18-ed"
+          },
+          "aftermath": "你按下播放键。最后一场戏终于按它自己的节奏开始。",
+          "subtext": "让工作进入最后阶段，不再追加私人谈话。"
+        }
+      ]
+    },
+    {
+      "id": "s18-ea",
+      "slot": 18,
+      "chapter": "18｜同一班车",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "演出结束后的第三天，你以临时舞台监督的身份登上巡演列车。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你的工牌、合同和行李都写着自己的名字。陆惟坐在另一排，没有用“你还是来了”替你解释原因。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你们去往同一个方向，但同行不等于谁属于谁。"
+        }
+      ],
+      "prompt": "列车开动以前，你怎样走向他？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "坐到他旁边，先和他核对第一站的工作时间。",
+          "vector": {
+            "commitment": 0.28,
+            "discernment": 0.28,
+            "approach": 0.16
+          },
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "$result",
-          "aftermath": "这次他没有替你决定告别应该保留多少余地。",
-          "outcome": "names-returned",
-          "finalReveal": {
-            "title": "不替谁署名",
-            "copy": "拒绝或撤回授权让剧本回到共同作者手中。没有人替陆惟原谅，也没有人丢掉自己的名字。"
+          "aftermath": "你们先谈工作，再谈晚饭。现实没有破坏心动，反而让它有了落脚处。",
+          "subtext": "从共同现实开始同行。",
+          "outcome": "same-train"
+        },
+        {
+          "id": "b",
+          "text": "隔着过道和他碰一下杯：“到站以后再见。”",
+          "vector": {
+            "autonomy": 0.28,
+            "approach": 0.22,
+            "novelty": 0.18
           },
-          "subtext": "保护自主空间或结束靠近。"
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你们没有急着坐到一起。同行也可以保留各自的位置。",
+          "subtext": "允许靠近，也保留空间。",
+          "outcome": "same-train"
+        },
+        {
+          "id": "c",
+          "text": "把自己的行程表递给他：“我的安排也要放进去。”",
+          "vector": {
+            "certainty": 0.36,
+            "autonomy": 0.3,
+            "commitment": 0.24
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "两份行程第一次并排放在桌上，没有任何一份自动成为中心。",
+          "subtext": "要求共同计划包含双方生活。",
+          "outcome": "same-train"
+        },
+        {
+          "id": "d",
+          "text": "先去检查设备。等工作结束，再决定今晚怎么相处。",
+          "vector": {
+            "commitment": 0.3,
+            "autonomy": 0.34,
+            "care": 0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你推着设备箱走向车尾。陆惟没有把你的专业优先理解成冷淡。",
+          "subtext": "先完成自己的职责。",
+          "outcome": "same-train"
+        }
+      ]
+    },
+    {
+      "id": "s18-eb",
+      "slot": 18,
+      "chapter": "18｜下一站见",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你留在剧场。陆惟离开的早晨，你没有去同一座城。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你们是否继续，已经在演出以前说清；距离不会把朋友变成恋人，也不会把恋人自动变成等待。"
+        },
+        {
+          "type": "paragraph",
+          "text": "行程册上，只有真正约好的日期被圈了出来。"
+        }
+      ],
+      "prompt": "车门关闭以前，你怎样告别？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "把下一次见面的日期再确认一遍。",
+          "vector": {
+            "certainty": 0.4,
+            "commitment": 0.34,
+            "reassurance": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "日期没有被说成永远，却足够让下一步不靠猜。",
+          "subtext": "用具体安排承接距离。",
+          "outcome": "next-station"
+        },
+        {
+          "id": "b",
+          "text": "拥抱他，但不在离别时提高承诺。",
+          "vector": {
+            "approach": 0.32,
+            "autonomy": 0.24,
+            "idealization": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "这个拥抱只说明你愿意拥抱，不替未来签字。",
+          "subtext": "允许情感存在，不让离别逼出更大答案。",
+          "outcome": "next-station"
+        },
+        {
+          "id": "c",
+          "text": "只说：“按我们说好的来。”",
+          "vector": {
+            "certainty": 0.36,
+            "trust": 0.18,
+            "expression": 0.16
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "陆惟点头。你们不再需要用临场情绪重新解释关系。",
+          "subtext": "让已建立的规则继续生效。",
+          "outcome": "next-station"
+        },
+        {
+          "id": "d",
+          "text": "不去车站，演出结束那晚已经是完整告别。",
+          "vector": {
+            "autonomy": 0.4,
+            "approach": -0.22,
+            "commitment": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "没有补拍的离别画面。你仍按自己选择的关系继续生活。",
+          "subtext": "不把送站当成必须完成的浪漫仪式。",
+          "outcome": "next-station"
+        }
+      ]
+    },
+    {
+      "id": "s18-ec",
+      "slot": 18,
+      "chapter": "18｜谢幕后再见",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你们留下了普通联系，也停止了暧昧。"
+        },
+        {
+          "type": "paragraph",
+          "text": "演出结束以后，陆惟没有再握你的手，也没有用离开前最后一次见面试探边界。"
+        },
+        {
+          "type": "paragraph",
+          "text": "喜欢没有被否认，只是没有被继续写成恋爱。"
+        }
+      ],
+      "prompt": "最后一次见面，你怎样结束？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "把剧照发给他：“一路顺利，朋友。”",
+          "vector": {
+            "care": 0.24,
+            "certainty": 0.34,
+            "approach": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "称呼把边界说清，也让关心有了可以留下的位置。",
+          "subtext": "以明确朋友身份告别。",
+          "outcome": "after-curtain"
+        },
+        {
+          "id": "b",
+          "text": "和全组一起送他，不单独留下。",
+          "vector": {
+            "autonomy": 0.32,
+            "care": 0.18,
+            "approach": -0.18
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "这场告别属于所有一起工作的人，不再被私人关系占满。",
+          "subtext": "把关系放回共同生活中。",
+          "outcome": "after-curtain"
+        },
+        {
+          "id": "c",
+          "text": "单独喝一杯咖啡，但不回到那个吻。",
+          "vector": {
+            "repair": 0.22,
+            "autonomy": 0.26,
+            "trust": 0.14
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你们谈工作、城市和接下来的生活，没有用怀旧重新打开已经关闭的门。",
+          "subtext": "保留交流，不恢复暧昧。",
+          "outcome": "after-curtain"
+        },
+        {
+          "id": "d",
+          "text": "只在群里说再见。",
+          "vector": {
+            "autonomy": 0.4,
+            "approach": -0.3,
+            "expression": -0.12
+          },
+          "intensity": 1.0,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "陆惟没有私下追问。朋友关系也可以从更远的位置开始。",
+          "subtext": "用更低接触度保留边界。",
+          "outcome": "after-curtain"
         }
       ]
     },
     {
       "id": "s18-ed",
       "slot": 18,
-      "chapter": "18｜他独自上台",
+      "chapter": "18｜灯灭以后",
       "context": "commitment",
-      "decisionType": "final",
-      "decisionLabel": "个人版本会真实演出",
-      "decisionNote": "你所在的位置不会抹掉交易，也不会自动改变私人关系。",
       "content": [
         {
           "type": "paragraph",
-          "text": "个人版本交易生效。吴照和合唱团未授权的内容被删去，陆惟得到一部合法、也更孤单的独角戏。"
+          "text": "谢幕以后，你们一起完成了最后的收尾。"
         },
         {
           "type": "paragraph",
-          "text": "正式演出那晚，他真的独自上台。最后排练时的缺席没有替他取消后来签下的选择。"
+          "text": "陆惟离开剧场时没有问能不能再联系。你也没有留下一个含糊的“以后再说”。"
         },
         {
           "type": "paragraph",
-          "text": "你可以爱他，也可以看清：爱与认可他的每个决定，从来不是同一件事。"
+          "text": "灯光一盏盏熄灭，这段关系停在它真正结束的地方。"
         }
       ],
-      "prompt": "这场独角戏结束时，你在哪里？",
+      "prompt": "你怎样完成最后一步？",
       "choices": [
         {
           "id": "a",
-          "text": "留在提示台完成工作，谢幕后再按约见他。",
+          "text": "把车票还给他：“一路顺利。”",
           "vector": {
-            "approach": 0.62,
-            "trust": 0.28,
-            "expression": 0.18,
-            "commitment": 0.22
+            "certainty": 0.36,
+            "autonomy": 0.38,
+            "repair": -0.16
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "$result",
-          "aftermath": "你履行了工作，也没有把履行解释成原谅或支持。",
-          "outcome": "last-cue",
-          "finalReveal": {
-            "title": "他没有上台",
-            "copy": "个人署名交易已经伤害集体；陆惟撤下当晚使用集体剧本的独角戏，不能再用掌声遮住它。"
-          },
-          "subtext": "更主动地确认关系与下一步。"
+          "aftermath": "他接过车票，没有把礼貌听成新的可能。",
+          "subtext": "用清楚而克制的方式结束。",
+          "outcome": "lights-out"
         },
         {
           "id": "b",
-          "text": "坐在吴照身边看完，不让被删去的人独自承受。",
+          "text": "只完成工作交接，不再单独告别。",
           "vector": {
-            "autonomy": 0.48,
-            "discernment": 0.62,
-            "certainty": 0.22,
-            "approach": -0.08
+            "commitment": 0.26,
+            "autonomy": 0.42,
+            "approach": -0.28
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "$result",
-          "aftermath": "掌声响起时，你和吴照都没有替舞台上的人定义代价。",
-          "outcome": "last-cue",
-          "finalReveal": {
-            "title": "他没有上台",
-            "copy": "个人署名交易已经伤害集体；陆惟撤下当晚使用集体剧本的独角戏，不能再用掌声遮住它。"
-          },
-          "subtext": "先确认事实与边界。"
+          "aftermath": "最后一条工作消息发送以后，你退出了私人对话。",
+          "subtext": "让职业完成，私人关系结束。",
+          "outcome": "lights-out"
         },
         {
           "id": "c",
-          "text": "在开场前离开，不参与这次选择的完成。",
+          "text": "告诉他：“我喜欢过你，但到这里。”",
           "vector": {
-            "expression": 0.56,
-            "repair": 0.5,
-            "care": 0.3,
-            "conflict": 0.18
+            "expression": 0.46,
+            "certainty": 0.4,
+            "autonomy": 0.3
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "$result",
-          "aftermath": "你走出剧场。喜欢仍曾经存在，但不再要求你留下见证。",
-          "outcome": "last-cue",
-          "finalReveal": {
-            "title": "他没有上台",
-            "copy": "个人署名交易已经伤害集体；陆惟撤下当晚使用集体剧本的独角戏，不能再用掌声遮住它。"
-          },
-          "subtext": "直接表达感受并尝试修复。"
+          "aftermath": "喜欢被承认，结束也被承认。两件事没有互相取消。",
+          "subtext": "以真实感情完成明确结束。",
+          "outcome": "lights-out"
         },
         {
           "id": "d",
-          "text": "看完最后一场，但不再等他走出后台。",
+          "text": "不再回头。你已经在第十六幕说完。",
           "vector": {
-            "care": 0.1,
-            "autonomy": 0.66,
-            "discernment": 0.36,
-            "approach": -0.3,
-            "commitment": -0.16
+            "autonomy": 0.5,
+            "expression": -0.22,
+            "approach": -0.36
           },
-          "intensity": 1,
+          "intensity": 1.0,
           "confidence": 0.9,
           "next": "$result",
-          "aftermath": "灯暗以后，你先离开。陆惟必须独自承担自己的掌声与失去。",
-          "outcome": "last-cue",
-          "finalReveal": {
-            "title": "他没有上台",
-            "copy": "个人署名交易已经伤害集体；陆惟撤下当晚使用集体剧本的独角戏，不能再用掌声遮住它。"
-          },
-          "subtext": "保护自主空间或结束靠近。"
+          "aftermath": "没有更多解释。已经说清的决定不需要重复表演。",
+          "subtext": "让此前的明确选择保持有效。",
+          "outcome": "lights-out"
         }
       ]
     }
