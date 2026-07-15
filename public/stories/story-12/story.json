@@ -7,15 +7,16 @@
   "metadata": {
     "series": "LOVE RIGHT · STORY 12",
     "title": "星期天，他准时到了",
-    "subtitle": "许知行提前五分钟出现，也把每一次改变说清楚。",
-    "description": "成年人的现代约会：从排他约会到家庭邀请，选择适合自己的约会节奏。",
-    "estimatedMinutes": 12,
-    "coverTheme": "midnight-office",
+    "subtitle": "他提前五分钟出现，却把下午四点以前的人生安排得太满。",
+    "description": "一次本来只到下午三点半的约会，把你带进一间即将结束营业的老电影院。许知行好看、守时、做事利落，也习惯把重要的事塞进计划里而不解释。你要判断的，是他的准时能不能容得下另一个人的时间。",
+    "estimatedMinutes": 10,
+    "coverTheme": "cinema-blue",
     "audience": "female",
     "tags": [
-      "现代约会",
-      "稳定节奏",
-      "女性视角"
+      "星期日约会",
+      "老电影院",
+      "成年吸引",
+      "现实节奏"
     ],
     "disclaimer": "娱乐性叙事情境投射，不是心理诊断、事实识别或未来预言。"
   },
@@ -237,1766 +238,2983 @@
       "content": [
         {
           "type": "paragraph",
-          "text": "第一次见面，他提前五分钟到咖啡馆，没有替你点饮料。"
+          "text": "星期天上午十点五十五分，你推开咖啡馆的门。"
+        },
+        {
+          "type": "paragraph",
+          "text": "窗边的男人已经到了。浅色衬衫的袖口折到小臂，肩背利落，低头看菜单时显得有些冷。听见门响，他抬起眼，你下意识又看了他一秒。"
+        },
+        {
+          "type": "quote",
+          "text": "“许知行。还差五分钟，不算让你等。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他站起来，声音比照片给人的感觉更低一点。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么坐下？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "“你每次约会都掐着表来吗？”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "approach": 0.24,
+            "expression": 0.2,
+            "novelty": 0.1
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s02",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他笑了一下，把腕表翻过去扣在桌面上。",
+          "setFlags": {
+            "first_tone": "tease"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "先把外套放好：“我饿了，边吃边聊。”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "autonomy": 0.16,
+            "trust": 0.12,
+            "approach": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s02",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他把菜单递给你，没有把寒暄拖成考验。",
+          "setFlags": {
+            "first_tone": "practical"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "看着他说：“你比照片好看。”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "approach": 0.32,
+            "expression": 0.28,
+            "certainty": 0.12
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s02",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "许知行顿了一下，耳后很轻地红了一点。",
+          "setFlags": {
+            "first_tone": "direct"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "坐到他对面，先问共同朋友怎么介绍你的。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "discernment": 0.24,
+            "trust": -0.08,
+            "autonomy": 0.12
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s02",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他没有用朋友的话替你下结论，只把原话复述了一遍。",
+          "setFlags": {
+            "first_tone": "verify"
+          }
         }
       ]
     },
     {
       "id": "s02",
       "slot": 2,
-      "chapter": "02｜不被审问的晚餐",
+      "chapter": "02｜他没有替你点单",
       "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "晚餐没有审问，许知行只问什么不该被关系打乱。"
+          "text": "服务员过来时，许知行面前只有一杯黑咖啡。"
+        },
+        {
+          "type": "quote",
+          "text": "“我只知道你不喜欢太甜。其他的你自己选。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他说这句话时没有邀功，只把菜单往你这边推了半寸。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你点什么？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "和他点同一份咸早餐，看看他的口味到底多无聊。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "approach": 0.14,
+            "novelty": 0.14,
+            "trust": 0.1
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s03",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他把自己的盘子往中间推：“先尝我的，难吃就别跟。”",
+          "setFlags": {
+            "order_style": "same"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "点一块看起来很甜的蛋糕：“今天例外。”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "novelty": 0.22,
+            "idealization": 0.12,
+            "autonomy": 0.1
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s03",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他看了一眼蛋糕，又看你：“看来朋友提供的信息已经过期。”",
+          "setFlags": {
+            "order_style": "sweet"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "让他推荐，但补一句：“不好吃算你的。”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "approach": 0.2,
+            "trust": 0.14,
+            "expression": 0.12
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s03",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他认真看了两分钟菜单，最后选了一份不太甜的烤面包。",
+          "setFlags": {
+            "order_style": "recommend"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "只点咖啡：“我还没决定这顿要不要待很久。”",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.24,
+            "discernment": 0.16,
+            "approach": -0.08
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s03",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "许知行点头，没有因为你保留时间就变得更热情。",
+          "setFlags": {
+            "order_style": "short"
+          }
         }
       ]
     },
     {
       "id": "s03",
       "slot": 3,
-      "chapter": "03｜结束得刚好",
+      "chapter": "03｜走哪一条街",
       "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "地铁口分别得刚好，他不把延长见面当成测试。"
+          "text": "早餐结束时，雨刚停。许知行看了眼窗外，没有立刻拿出下一张行程表。"
+        },
+        {
+          "type": "quote",
+          "text": "“附近有河堤、旧市场和一家二手书店。你选。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他说完把手机收起来，像是真的准备跟着你走。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你带他往哪边走？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "沿河堤走，路宽，想停就能停。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "autonomy": 0.16,
+            "approach": 0.1,
+            "care": 0.06
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s04",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他配合你的速度，没有故意把距离走得太近。",
+          "setFlags": {
+            "walk": "river"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "穿过旧市场，顺便买点水果。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "novelty": 0.16,
+            "care": 0.1,
+            "approach": 0.1
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s04",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他替摊主扶住差点倒下的纸箱，动作快得像做惯了。",
+          "setFlags": {
+            "walk": "market"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "去二手书店，看看他会停在哪一排。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "discernment": 0.14,
+            "novelty": 0.14,
+            "idealization": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s04",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他最后停在电影和旧建筑之间，挑书时手指很长，动作却不慢。",
+          "setFlags": {
+            "walk": "books"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "让他决定：“既然你准时到了，路线也交给你一次。”",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "trust": 0.16,
+            "approach": 0.12,
+            "autonomy": -0.04
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s04",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他没有选最远的路，只带你拐进一条安静的旧街。",
+          "setFlags": {
+            "walk": "his"
+          }
         }
       ]
     },
     {
       "id": "s04",
       "slot": 4,
-      "chapter": "04｜第二个星期天",
-      "context": "approach",
+      "chapter": "04｜下午四点以前",
+      "context": "ambiguity",
       "content": [
         {
           "type": "paragraph",
-          "text": "第二个星期天，他给出散步和早餐两个清楚选项。"
+          "text": "走到旧街尽头，许知行抬腕看了一眼时间。"
+        },
+        {
+          "type": "quote",
+          "text": "“我四点有件事，三点半必须走。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "这句话来得很平静，却是你坐下以后第一次听见今天有明确的结束时间。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么回应？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "“现在才告诉我？”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "conflict": 0.24,
+            "expression": 0.2,
+            "certainty": 0.16
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s05",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他承认这件事应该在见面前说。",
+          "setFlags": {
+            "schedule_reaction": "late"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "“什么事？”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "discernment": 0.22,
+            "certainty": 0.14,
+            "trust": 0.04
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s05",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "许知行没有再含糊，只说和前面那家老电影院有关。",
+          "setFlags": {
+            "schedule_reaction": "ask"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "“那就只约到三点半，别临时往后拖。”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "autonomy": 0.26,
+            "certainty": 0.2,
+            "approach": 0.02
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s05",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "你把今天的边界先说清，他答应得很干脆。",
+          "setFlags": {
+            "schedule_reaction": "limit"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "“还有两个小时。先别浪费。”",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "approach": 0.22,
+            "novelty": 0.14,
+            "expression": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s05",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他看了你一秒，步子明显慢了下来。",
+          "setFlags": {
+            "schedule_reaction": "enjoy"
+          }
         }
       ]
     },
     {
       "id": "s05",
       "slot": 5,
-      "chapter": "5｜排他约会",
-      "context": "intimacy",
-      "decisionType": "hard",
-      "decisionLabel": "这一次由你决定距离",
-      "decisionNote": "没有哪一种边界需要被解释成亏欠。",
+      "chapter": "05｜旧光影院",
+      "context": "approach",
       "content": [
         {
           "type": "paragraph",
-          "text": "许知行说想认真了解你：他会停止认识其他人，但不要求你现在承诺结果。"
+          "text": "旧街尽头是一间已经褪色的电影院。门牌上写着“旧光”，玻璃门里贴满了过去几十年的海报。"
+        },
+        {
+          "type": "paragraph",
+          "text": "许知行从口袋里拿出钥匙。"
+        },
+        {
+          "type": "quote",
+          "text": "“我每个星期天下午在这里放一场电影。今天四点也是。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他推开门，昏暗大厅里浮着一点灰尘和木头的味道。"
         }
       ],
-      "prompt": "你会怎么做？",
-      "note": "四种回应都会被认真承接。",
+      "prompt": "你想看到哪里？",
       "choices": [
         {
           "id": "a",
-          "text": "同意只和彼此约会",
+          "text": "跟他进放映室：“约会对象还兼职放电影？”",
+          "vector": {
+            "approach": 0.24,
+            "novelty": 0.18,
+            "expression": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s06",
+          "aftermath": "许知行让你先走，自己留在后面锁门。",
+          "setFlags": {
+            "cinema_entry": "booth"
+          }
+        },
+        {
+          "id": "b",
+          "text": "只站在放映室门口，先问他为什么每周都来。",
+          "vector": {
+            "certainty": 0.22,
+            "discernment": 0.18,
+            "expression": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s06",
+          "aftermath": "他把手从门把上拿开，认真回答。",
+          "setFlags": {
+            "cinema_entry": "ask"
+          }
+        },
+        {
+          "id": "c",
+          "text": "只看大厅和海报，不碰机器。",
+          "vector": {
+            "autonomy": 0.2,
+            "approach": 0.06,
+            "discernment": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s06",
+          "aftermath": "他把放映室的门留着，却没有催你进去。",
+          "setFlags": {
+            "cinema_entry": "lobby"
+          }
+        },
+        {
+          "id": "d",
+          "text": "留在门外：“第一次约会先别变成工作参观。”",
+          "vector": {
+            "autonomy": 0.28,
+            "certainty": 0.16,
+            "approach": -0.1
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s06",
+          "aftermath": "许知行靠在门边陪你说话，没有把拒绝变成扫兴。",
+          "setFlags": {
+            "cinema_entry": "outside"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "slot": 6,
+      "chapter": "06｜放映机的白光",
+      "context": "intimacy",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "几分钟后，老放映机转了起来。白光从小窗穿过灰尘，在黑暗里划出一道清楚的线。"
+        },
+        {
+          "type": "paragraph",
+          "text": "许知行卷起另一边袖口，手掌压住金属盖板。工作时的他比照片里更有吸引力，动作利落，却没有故意展示。"
+        },
+        {
+          "type": "quote",
+          "text": "“这边会烫。想试就按这个，不想碰也没关系。”"
+        }
+      ],
+      "prompt": "你怎么回应？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "走到他身边，按下他说的按钮。",
+          "vector": {
+            "approach": 0.24,
+            "trust": 0.12,
+            "novelty": 0.14
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s07",
+          "aftermath": "你们的肩膀短暂碰了一下，他没有立即躲开。",
+          "setFlags": {
+            "booth_mode": "close"
+          }
+        },
+        {
+          "id": "b",
+          "text": "让他握着你的手示范一次。",
           "vector": {
             "approach": 0.3,
-            "autonomy": -0.15
+            "trust": 0.16,
+            "idealization": 0.1
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s06a",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "这是你为约会节奏作出的清楚选择。"
-        },
-        {
-          "id": "b",
-          "text": "继续约会，但暂不排他",
-          "vector": {
-            "approach": 0.13999999999999999,
-            "autonomy": 0.03
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s06b",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "这是你为约会节奏作出的清楚选择。"
+          "next": "s07",
+          "aftermath": "他的手掌只停了一秒，确认你会了就松开。",
+          "setFlags": {
+            "booth_mode": "touch"
+          }
         },
         {
           "id": "c",
-          "text": "需要一周考虑",
+          "text": "先问：“你为什么每周都来？”",
           "vector": {
-            "approach": -0.020000000000000018,
-            "autonomy": 0.21
+            "discernment": 0.18,
+            "expression": 0.14,
+            "care": 0.1
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s06c",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "这是你为约会节奏作出的清楚选择。"
+          "next": "s07",
+          "aftermath": "他关小机器的声音，认真回答你。",
+          "setFlags": {
+            "booth_mode": "story"
+          }
         },
         {
           "id": "d",
-          "text": "不进入排他关系",
+          "text": "站在一旁看，不碰机器。",
           "vector": {
-            "approach": -0.18,
-            "autonomy": 0.39
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s06d",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "这是你为约会节奏作出的清楚选择。"
-        }
-      ]
-    },
-    {
-      "id": "s06a",
-      "slot": 6,
-      "chapter": "06｜6的承接",
-      "context": "intimacy",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "程野站在玄关等你指厨房，修好水槽就离开，没有评论你的屋子。"
-        }
-      ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
-      "choices": [
-        {
-          "id": "a",
-          "text": "主动说出自己的想法",
-          "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "autonomy": 0.2,
+            "approach": -0.06,
+            "discernment": 0.1
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "b",
-          "text": "先确认彼此的分寸",
-          "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "c",
-          "text": "把感受讲得更具体",
-          "vector": {
-            "repair": 0.32,
-            "trust": 0.24
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "d",
-          "text": "保留一点自己的空间",
-          "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        }
-      ]
-    },
-    {
-      "id": "s06b",
-      "slot": 6,
-      "chapter": "06｜6的承接",
-      "context": "intimacy",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "工具箱留在门外，你自己拧紧接口；程野只发消息问水槽是否止住。"
-        }
-      ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
-      "choices": [
-        {
-          "id": "a",
-          "text": "主动说出自己的想法",
-          "vector": {
-            "approach": 0.42,
-            "expression": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "b",
-          "text": "先确认彼此的分寸",
-          "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "c",
-          "text": "把感受讲得更具体",
-          "vector": {
-            "repair": 0.32,
-            "trust": 0.24
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "d",
-          "text": "保留一点自己的空间",
-          "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        }
-      ]
-    },
-    {
-      "id": "s06c",
-      "slot": 6,
-      "chapter": "06｜6的承接",
-      "context": "intimacy",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "吴阿姨在厨房门口聊天，程野修好接口后把扳手收好。"
-        }
-      ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
-      "choices": [
-        {
-          "id": "a",
-          "text": "主动说出自己的想法",
-          "vector": {
-            "approach": 0.42,
-            "expression": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "b",
-          "text": "先确认彼此的分寸",
-          "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "c",
-          "text": "把感受讲得更具体",
-          "vector": {
-            "repair": 0.32,
-            "trust": 0.24
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "d",
-          "text": "保留一点自己的空间",
-          "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        }
-      ]
-    },
-    {
-      "id": "s06d",
-      "slot": 6,
-      "chapter": "06｜6的承接",
-      "context": "intimacy",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "物业第二天修好水槽；程野只问一句是否顺利，没有邀功。"
-        }
-      ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
-      "choices": [
-        {
-          "id": "a",
-          "text": "主动说出自己的想法",
-          "vector": {
-            "approach": 0.42,
-            "expression": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "b",
-          "text": "先确认彼此的分寸",
-          "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "c",
-          "text": "把感受讲得更具体",
-          "vector": {
-            "repair": 0.32,
-            "trust": 0.24
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "d",
-          "text": "保留一点自己的空间",
-          "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s07",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "许知行继续操作，也把你保留的距离当作正常。",
+          "setFlags": {
+            "booth_mode": "watch"
+          }
         }
       ]
     },
     {
       "id": "s07",
       "slot": 7,
-      "chapter": "07｜多买的橘子",
-      "context": "intimacy",
+      "chapter": "07｜最后一场",
+      "context": "ambiguity",
       "content": [
         {
           "type": "paragraph",
-          "text": "门口有一袋橘子，纸条写着楼上楼下都分了，不是单独投喂。"
+          "text": "你准备离开影院时，看见玻璃门内侧贴着一张新打印的纸。"
+        },
+        {
+          "type": "quote",
+          "text": "“星期日四点，旧光影院最后一场放映。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "下面还有一行小字：影院今晚以后停止营业。"
+        },
+        {
+          "type": "paragraph",
+          "text": "许知行站在你身后，没有再假装这只是普通的兼职。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你先问什么？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "“你为什么没告诉我今天是最后一天？”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "conflict": 0.24,
+            "expression": 0.2,
+            "certainty": 0.16
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s08",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他承认自己故意避开了这句话。",
+          "setFlags": {
+            "final_truth": "why_hide"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "“关门以后，你还会留在这座城吗？”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "commitment": 0.16,
+            "certainty": 0.18,
+            "abandonment": 0.1
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s08",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "许知行说工作还在这里，但星期天会突然空下来。",
+          "setFlags": {
+            "final_truth": "future"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "“你把第一次约会放在今天，是不想一个人等四点？”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "discernment": 0.2,
+            "conflict": 0.12,
+            "validation": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s08",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他没有立即否认。",
+          "setFlags": {
+            "final_truth": "distraction"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "先不问，让他把该说的自己说完。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "trust": 0.12,
+            "care": 0.12,
+            "expression": -0.04
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s08",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "许知行说，他只是想在告别以前过一个普通上午。",
+          "setFlags": {
+            "final_truth": "listen"
+          }
         }
       ]
     },
     {
       "id": "s08",
       "slot": 8,
-      "chapter": "08｜一起倒垃圾",
-      "context": "intimacy",
+      "chapter": "08｜他说十分钟",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "你们在楼道碰见，聊起搬家后还没习惯的那些小事。"
+          "text": "许知行刚说完，手机响了。"
+        },
+        {
+          "type": "paragraph",
+          "text": "影院里的人说放映机卡住了，四点前必须修好。"
+        },
+        {
+          "type": "quote",
+          "text": "“我进去十分钟。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他说着已经往门里走，走出两步才意识到自己没有问你准备怎么办。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你现在怎么做？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "跟进去，看他到底在忙什么。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "approach": 0.18,
+            "care": 0.14,
+            "novelty": 0.1
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s09",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s09a",
+          "aftermath": "你跟进放映室，但没有答应替他做任何事。",
+          "setFlags": {
+            "emergency_route": "follow"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "告诉他你在街角咖啡店等二十分钟。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "autonomy": 0.18,
+            "certainty": 0.14,
+            "care": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s09",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s09b",
+          "aftermath": "你给了明确的等待时间，不让“十分钟”无限延长。",
+          "setFlags": {
+            "emergency_route": "wait"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "结束今天的约会：“忙完以后再解释。”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "autonomy": 0.24,
+            "certainty": 0.2,
+            "approach": -0.08
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s09",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s09c",
+          "aftermath": "你没有把他的紧急情况变成自己的下午。",
+          "setFlags": {
+            "emergency_route": "leave_talk"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "直接离开：“今天别联系我。”",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "conflict": 0.18,
+            "autonomy": 0.28,
+            "approach": -0.18
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s09",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s09d",
+          "aftermath": "许知行停下脚步，答应今天不再打扰。",
+          "setFlags": {
+            "emergency_route": "leave_space"
+          }
         }
       ]
     },
     {
-      "id": "s09",
+      "id": "s09a",
       "slot": 9,
-      "chapter": "9｜临时取消",
-      "context": "intimacy",
-      "decisionType": "hard",
-      "decisionLabel": "这一次由你决定距离",
-      "decisionNote": "没有哪一种边界需要被解释成亏欠。",
+      "chapter": "09｜放映机停了",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "周六他说明父亲腰伤，需要陪同检查；他给出两个替代日期，也说你不必承担照护。"
+          "text": "放映室里一片忙乱。许知行脱下薄外套，袖口重新卷紧，整个人和咖啡馆里判若两人。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他判断故障、拆开盖板、让所有人先别同时说话。你第一次看见他真正擅长的样子。"
+        },
+        {
+          "type": "paragraph",
+          "text": "十二分钟后，他回头递给你一支手电。"
         }
       ],
-      "prompt": "你会怎么做？",
-      "note": "四种回应都会被认真承接。",
+      "prompt": "你接不接？",
       "choices": [
         {
           "id": "a",
-          "text": "接受取消和新的日期",
+          "text": "接过手电，按他说的位置照。",
           "vector": {
-            "approach": 0.3,
-            "autonomy": -0.15
+            "care": 0.18,
+            "approach": 0.1,
+            "trust": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s10a",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "这是你为约会节奏作出的清楚选择。"
+          "next": "s10",
+          "aftermath": "你帮了一个具体的小忙，没有接管整个现场。",
+          "setFlags": {
+            "emergency_detail": "help"
+          }
         },
         {
           "id": "b",
-          "text": "只确认收到，保持边界",
+          "text": "不接：“我可以等，但不是来上班。”",
           "vector": {
-            "approach": 0.13999999999999999,
-            "autonomy": 0.03
+            "autonomy": 0.24,
+            "certainty": 0.18,
+            "expression": 0.14
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s10b",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "这是你为约会节奏作出的清楚选择。"
+          "next": "s10",
+          "aftermath": "许知行立即把手电交给工作人员。",
+          "setFlags": {
+            "emergency_detail": "not_staff"
+          }
         },
         {
           "id": "c",
-          "text": "表达失落并讨论修复",
+          "text": "先问还要多久，再决定。",
           "vector": {
-            "approach": -0.020000000000000018,
-            "autonomy": 0.21
+            "discernment": 0.22,
+            "certainty": 0.14
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s10c",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "这是你为约会节奏作出的清楚选择。"
+          "next": "s10",
+          "aftermath": "他看了一眼机器，第一次给出诚实答案：“至少半小时。”",
+          "setFlags": {
+            "emergency_detail": "time"
+          }
         },
         {
           "id": "d",
-          "text": "暂停关系",
+          "text": "看够了，转身去大厅等。",
           "vector": {
-            "approach": -0.18,
-            "autonomy": 0.39
+            "autonomy": 0.18,
+            "approach": -0.04
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s10d",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "这是你为约会节奏作出的清楚选择。"
+          "next": "s10",
+          "aftermath": "你离开狭窄的放映室，不让他的能力自动替代约会。",
+          "setFlags": {
+            "emergency_detail": "lobby"
+          }
         }
       ]
     },
     {
-      "id": "s10a",
-      "slot": 10,
-      "chapter": "10｜10的承接",
-      "context": "intimacy",
+      "id": "s09b",
+      "slot": 9,
+      "chapter": "09｜二十分钟以后",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "普通工作日的相遇让你们练习：稳定不是报备，而是需要改变时说清楚。"
+          "text": "你在街角咖啡店坐下，点了一杯茶。"
+        },
+        {
+          "type": "paragraph",
+          "text": "二十分钟到了，许知行没有出现。第二十七分钟，他发来消息：还没修好。"
+        },
+        {
+          "type": "paragraph",
+          "text": "第三十五分钟，窗外开始下雨。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么处理这次迟到？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "回复：“我再等十分钟，然后走。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "certainty": 0.2,
+            "autonomy": 0.18,
+            "expression": 0.12
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s10",
+          "aftermath": "你把最后期限重新说清。",
+          "setFlags": {
+            "emergency_detail": "ten_more"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "现在就走，告诉他今天到这里。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "c",
-          "text": "把感受讲得更具体",
-          "vector": {
-            "repair": 0.32,
-            "trust": 0.24
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "d",
-          "text": "保留一点自己的空间",
-          "vector": {
-            "autonomy": 0.45,
+            "autonomy": 0.26,
+            "certainty": 0.2,
             "approach": -0.12
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        }
-      ]
-    },
-    {
-      "id": "s10b",
-      "slot": 10,
-      "chapter": "10｜10的承接",
-      "context": "intimacy",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "普通工作日的相遇让你们练习：稳定不是报备，而是需要改变时说清楚。"
-        }
-      ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
-      "choices": [
-        {
-          "id": "a",
-          "text": "主动说出自己的想法",
-          "vector": {
-            "approach": 0.42,
-            "expression": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "b",
-          "text": "先确认彼此的分寸",
-          "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s10",
+          "aftermath": "你没有因为已经等了二十分钟，就继续投入更多时间。",
+          "setFlags": {
+            "emergency_detail": "leave_now"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "让他不用出来，等放映结束再联系。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "care": 0.14,
+            "autonomy": 0.14,
+            "approach": -0.02
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s10",
+          "aftermath": "你停止等待，也没有要求他在故障里证明重视。",
+          "setFlags": {
+            "emergency_detail": "after_show"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "不回复，结账离开。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "conflict": -0.08,
+            "autonomy": 0.2,
+            "expression": -0.12
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s10",
+          "aftermath": "你把不满留到他真正有时间听的时候。",
+          "setFlags": {
+            "emergency_detail": "silent_leave"
+          }
         }
       ]
     },
     {
-      "id": "s10c",
-      "slot": 10,
-      "chapter": "10｜10的承接",
-      "context": "intimacy",
+      "id": "s09c",
+      "slot": 9,
+      "chapter": "09｜地铁口的电话",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "普通工作日的相遇让你们练习：稳定不是报备，而是需要改变时说清楚。"
+          "text": "你走到地铁口时，许知行打来电话。"
+        },
+        {
+          "type": "paragraph",
+          "text": "背景里全是机器和人声。他没有说“马上好”，只说自己刚才不该一边走一边替你决定等待。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你接下来怎么说？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "“忙完以后发消息，今天不再见。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "certainty": 0.22,
+            "autonomy": 0.18,
+            "repair": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s10",
+          "aftermath": "你给了他解释机会，也保留今天已经结束的事实。",
+          "setFlags": {
+            "emergency_detail": "message_later"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "“先把电影放完，下周再谈。”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "care": 0.12,
+            "autonomy": 0.16,
+            "commitment": 0.06
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s10",
+          "aftermath": "你不在故障现场处理关系。",
+          "setFlags": {
+            "emergency_detail": "next_week"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "“你不是临时有事，你是一直没把整件事告诉我。”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "conflict": 0.24,
+            "expression": 0.22,
+            "discernment": 0.14
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s10",
+          "aftermath": "他听懂问题不只在十分钟。",
+          "setFlags": {
+            "emergency_detail": "name_issue"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "“不用解释了。”",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.28,
+            "certainty": 0.2,
+            "approach": -0.18
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s10",
+          "aftermath": "电话安静了两秒，他没有继续说服你。",
+          "setFlags": {
+            "emergency_detail": "no_explain"
+          }
         }
       ]
     },
     {
-      "id": "s10d",
-      "slot": 10,
-      "chapter": "10｜10的承接",
-      "context": "intimacy",
+      "id": "s09d",
+      "slot": 9,
+      "chapter": "09｜今天没有第二条消息",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "普通工作日的相遇让你们练习：稳定不是报备，而是需要改变时说清楚。"
+          "text": "你离开以后，手机一整天没有再亮起。"
+        },
+        {
+          "type": "paragraph",
+          "text": "许知行遵守了你说的“今天别联系”。"
+        },
+        {
+          "type": "paragraph",
+          "text": "第二天上午十点，他只发来一条消息："
+        },
+        {
+          "type": "quote",
+          "text": "“昨天我把你的时间当成了会自动配合我的部分。对不起。你不必回复。”"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么处理这条消息？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "回复：“道歉收到，但我还在生气。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "expression": 0.2,
+            "conflict": 0.14,
+            "repair": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s10",
+          "aftermath": "你没有用收到道歉替代真实情绪。",
+          "setFlags": {
+            "emergency_detail": "angry_reply"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "只回一个“知道了”。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "autonomy": 0.16,
+            "expression": -0.04,
+            "certainty": 0.1
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s10",
+          "aftermath": "你确认收到，不给他立刻重启关系的机会。",
+          "setFlags": {
+            "emergency_detail": "received"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "隔一天再问，他为什么把约会安排在最后放映日。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "discernment": 0.2,
+            "certainty": 0.16,
+            "repair": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s10",
+          "aftermath": "你把问题放回最开始的隐瞒。",
+          "setFlags": {
+            "emergency_detail": "ask_later"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "不回复。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.22,
+            "approach": -0.12,
+            "expression": -0.12
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s11",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s10",
+          "aftermath": "沉默也成为他必须接受的答案。",
+          "setFlags": {
+            "emergency_detail": "no_reply"
+          }
         }
       ]
     },
     {
-      "id": "s11",
+      "id": "s10",
+      "slot": 10,
+      "chapter": "10｜他只问一次",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "一个星期过去，许知行没有制造偶遇，也没有让共同朋友替他说话。"
+        },
+        {
+          "type": "paragraph",
+          "text": "下一个星期六晚上，他发来一条消息。"
+        },
+        {
+          "type": "quote",
+          "text": "“如果你还愿意见一次，星期天由你定时间、地点和多久。要是不愿意，我不会再问。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "这一次，信息里没有影院，也没有被藏起来的下午四点。"
+        }
+      ],
+      "prompt": "你给他什么答案？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "“明早十点，吃早餐。十二点以前结束。”",
+          "vector": {
+            "approach": 0.16,
+            "certainty": 0.18,
+            "autonomy": 0.14
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s11a",
+          "aftermath": "你给了他一次有明确边界的第二个星期天。",
+          "setFlags": {
+            "second_sunday": "breakfast"
+          }
+        },
+        {
+          "id": "b",
+          "text": "“晚上七点，影院门口走二十分钟。”",
+          "vector": {
+            "approach": 0.12,
+            "repair": 0.12,
+            "autonomy": 0.16
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s11b",
+          "aftermath": "你选择回到事情发生的地方，但不进去。",
+          "setFlags": {
+            "second_sunday": "walk"
+          }
+        },
+        {
+          "id": "c",
+          "text": "“先把为什么是我写清楚，我看完再决定见不见。”",
+          "vector": {
+            "discernment": 0.22,
+            "validation": 0.14,
+            "certainty": 0.18
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s11c",
+          "aftermath": "你先要一个不靠气氛的答案。",
+          "setFlags": {
+            "second_sunday": "write"
+          }
+        },
+        {
+          "id": "d",
+          "text": "“现在不见。一个月以后，你还想问再问一次。”",
+          "vector": {
+            "autonomy": 0.24,
+            "certainty": 0.18,
+            "approach": -0.08
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s11d",
+          "aftermath": "你没有永久关闭，也没有让道歉立刻得到奖励。",
+          "setFlags": {
+            "second_sunday": "month"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s11a",
       "slot": 11,
-      "chapter": "11｜楼顶晒被子",
-      "context": "intimacy",
+      "chapter": "11｜第二个星期天",
+      "context": "rupture",
       "content": [
         {
           "type": "paragraph",
-          "text": "普通工作日的相遇让你们练习：稳定不是报备，而是需要改变时说清楚。"
+          "text": "星期天十点，许知行准时出现在早餐店。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他穿一件深色薄外套，头发还带着一点清晨的潮气。没有腕表放在桌上，也没有提前点单。"
+        },
+        {
+          "type": "quote",
+          "text": "“十二点以前结束。你说了算。”"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你先谈什么？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "问他影院最后一晚后来怎样。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "care": 0.12,
+            "repair": 0.12,
+            "approach": 0.06
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s12",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他把结局说得很短，没有把你拉回那场告别。",
+          "setFlags": {
+            "second_detail": "cinema"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "问他第一次见你时在想什么。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "validation": 0.18,
+            "expression": 0.14,
+            "approach": 0.1
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s12",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他抬眼看你，回答前明显认真了一点。",
+          "setFlags": {
+            "second_detail": "first_look"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "先说上次最让你不舒服的那一刻。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "conflict": 0.18,
+            "expression": 0.18,
+            "certainty": 0.12
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s12",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他没有先解释自己有多忙。",
+          "setFlags": {
+            "second_detail": "hurt"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "不谈上次，先吃完这顿早餐。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.14,
+            "repair": 0.06,
+            "approach": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s12",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "你不让一次错误占满第二次见面。",
+          "setFlags": {
+            "second_detail": "ordinary"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s11b",
+      "slot": 11,
+      "chapter": "11｜影院门外二十分钟",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "晚上七点，影院的灯已经全黑。许知行站在旧招牌下面，穿着一件简单的黑色上衣。"
+        },
+        {
+          "type": "paragraph",
+          "text": "没有放映任务以后，他显得比第一次见面更安静。"
+        },
+        {
+          "type": "quote",
+          "text": "“二十分钟。从现在开始。”"
+        }
+      ],
+      "prompt": "你往哪边走？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "沿着旧街慢慢走，让他先说。",
+          "vector": {
+            "trust": 0.1,
+            "repair": 0.12,
+            "approach": 0.08
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s12",
+          "aftermath": "他从隐瞒最后一场开始讲，没有跳过难听的部分。",
+          "setFlags": {
+            "second_detail": "let_talk"
+          }
+        },
+        {
+          "id": "b",
+          "text": "站在原地：“就在这里说清楚。”",
+          "vector": {
+            "certainty": 0.2,
+            "expression": 0.16,
+            "autonomy": 0.14
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s12",
+          "aftermath": "你不让散步替问题制造浪漫。",
+          "setFlags": {
+            "second_detail": "stay"
+          }
+        },
+        {
+          "id": "c",
+          "text": "问影院关门后，他的星期天变成什么样。",
+          "vector": {
+            "care": 0.12,
+            "commitment": 0.1,
+            "discernment": 0.08
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s12",
+          "aftermath": "他承认自己到现在还不习惯那段空白。",
+          "setFlags": {
+            "second_detail": "empty_sunday"
+          }
+        },
+        {
+          "id": "d",
+          "text": "先问：“你今天还带着表吗？”",
+          "vector": {
+            "expression": 0.16,
+            "novelty": 0.08,
+            "conflict": 0.06
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s12",
+          "aftermath": "他把空着的手腕给你看，终于笑了。",
+          "setFlags": {
+            "second_detail": "watch_joke"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s11c",
+      "slot": 11,
+      "chapter": "11｜一段没有安排的文字",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "第二天晚上，许知行发来一段不长的文字。"
+        },
+        {
+          "type": "quote",
+          "text": "“第一眼，因为你好看。后来，因为你没有被我的准时骗过去，也没有因为我忙就自动体谅。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "最后一句是："
+        },
+        {
+          "type": "quote",
+          "text": "“我想再见你，不是因为影院关了以后星期天空着。”"
+        }
+      ],
+      "prompt": "你看完怎么做？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "约他第二天吃晚饭。",
+          "vector": {
+            "approach": 0.2,
+            "trust": 0.1,
+            "repair": 0.1
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s12",
+          "aftermath": "你让文字接受一次面对面的检验。",
+          "setFlags": {
+            "second_detail": "meet_dinner"
+          }
+        },
+        {
+          "id": "b",
+          "text": "打电话，让他把最难说的部分再说一遍。",
+          "vector": {
+            "expression": 0.18,
+            "certainty": 0.16,
+            "repair": 0.1
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s12",
+          "aftermath": "他的声音没有文字那么从容。",
+          "setFlags": {
+            "second_detail": "call"
+          }
+        },
+        {
+          "id": "c",
+          "text": "回复：“我会见你，但不是今天。”",
+          "vector": {
+            "autonomy": 0.18,
+            "approach": 0.06,
+            "certainty": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s12",
+          "aftermath": "你接受继续的可能，不接受被答案催促。",
+          "setFlags": {
+            "second_detail": "later"
+          }
+        },
+        {
+          "id": "d",
+          "text": "告诉他这段话还不够，你需要看行动。",
+          "vector": {
+            "discernment": 0.22,
+            "trust": -0.04,
+            "certainty": 0.14
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s12",
+          "aftermath": "许知行没有再补一段更漂亮的话。",
+          "setFlags": {
+            "second_detail": "action"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s11d",
+      "slot": 11,
+      "chapter": "11｜一个月以后",
+      "context": "rupture",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "接下来的一个月，许知行没有联系你。"
+        },
+        {
+          "type": "paragraph",
+          "text": "第三十天是星期天。上午十点零五分，他发来一条消息："
+        },
+        {
+          "type": "quote",
+          "text": "“一个月到了。我还是想问一次。今天不方便也没关系。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他没有假装忘记你给出的时间。"
+        }
+      ],
+      "prompt": "你怎么回答？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "约他下午喝咖啡。",
+          "vector": {
+            "approach": 0.14,
+            "repair": 0.12,
+            "autonomy": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s12",
+          "aftermath": "你让一个月后的他重新走到你面前。",
+          "setFlags": {
+            "second_detail": "month_coffee"
+          }
+        },
+        {
+          "id": "b",
+          "text": "只打十分钟电话。",
+          "vector": {
+            "autonomy": 0.18,
+            "certainty": 0.14,
+            "approach": 0.04
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s12",
+          "aftermath": "你给的是有限而真实的机会。",
+          "setFlags": {
+            "second_detail": "month_call"
+          }
+        },
+        {
+          "id": "c",
+          "text": "问他这一个月有没有后悔。",
+          "vector": {
+            "expression": 0.16,
+            "validation": 0.12,
+            "certainty": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s12",
+          "aftermath": "他没有说“每天”，只说自己没有改变答案。",
+          "setFlags": {
+            "second_detail": "month_why"
+          }
+        },
+        {
+          "id": "d",
+          "text": "告诉他你还没准备好，再等。",
+          "vector": {
+            "autonomy": 0.22,
+            "approach": -0.08,
+            "certainty": 0.14
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s12",
+          "aftermath": "许知行接受这次仍然不是开始。",
+          "setFlags": {
+            "second_detail": "month_wait"
+          }
         }
       ]
     },
     {
       "id": "s12",
       "slot": 12,
-      "chapter": "12｜没有用亲密解决冲突",
+      "chapter": "12｜为什么是你",
       "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "普通工作日的相遇让你们练习：稳定不是报备，而是需要改变时说清楚。"
+          "text": "这一次，他没有让影院、机器或一张时间表替自己说话。"
+        },
+        {
+          "type": "quote",
+          "text": "“第一眼，是因为你好看。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "许知行说得很直接，目光没有躲。"
+        },
+        {
+          "type": "quote",
+          "text": "“后来，是因为你会当面问我不想回答的问题。你没有因为我准时、会安排，就把我想成一个永远不会让人失望的人。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他说完停下来，等你决定这句话够不够真实。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么回应？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "“至少第一句我很满意。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "expression": 0.18,
+            "approach": 0.16,
+            "novelty": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s13",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "许知行笑了，刚才的郑重终于松开一点。",
+          "setFlags": {
+            "why_reply": "playful"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "“我想要的不是不失望，是失望以后你别替我决定。”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "certainty": 0.2,
+            "expression": 0.18,
+            "repair": 0.12
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s13",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他点头，没有把要求改写成夸奖。",
+          "setFlags": {
+            "why_reply": "clear"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "“我也确实第一眼就注意到你。”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "approach": 0.22,
+            "expression": 0.2,
+            "validation": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s13",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "你把吸引还给他，不再只让他单方面暴露。",
+          "setFlags": {
+            "why_reply": "mutual"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "“先别说喜欢。再让我看一阵。”",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "discernment": 0.2,
+            "autonomy": 0.16,
+            "approach": -0.02
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s13",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "许知行接受你还没有把判断交出来。",
+          "setFlags": {
+            "why_reply": "observe"
+          }
         }
       ]
     },
     {
       "id": "s13",
       "slot": 13,
-      "chapter": "13｜搬家的消息",
+      "chapter": "13｜雨棚下面",
       "context": "intimacy",
       "content": [
         {
           "type": "paragraph",
-          "text": "普通工作日的相遇让你们练习：稳定不是报备，而是需要改变时说清楚。"
+          "text": "见面结束时又下起雨。你们站在街边雨棚下，距离比第一次进影院时更近。"
+        },
+        {
+          "type": "paragraph",
+          "text": "许知行低头看你，袖口被风吹开一点。"
+        },
+        {
+          "type": "quote",
+          "text": "“我现在很想吻你。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "他没有向前，只把这句话放在你们中间。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么回答？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "“那就吻。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "approach": 0.3,
+            "expression": 0.24,
+            "trust": 0.12
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s14",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "你先靠近半步，他才低下头。",
+          "setFlags": {
+            "kiss_mode": "kiss"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "让他只亲一下额头。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "approach": 0.14,
+            "autonomy": 0.18,
+            "care": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s14",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他的嘴唇只停在你额前，很快就退开。",
+          "setFlags": {
+            "kiss_mode": "forehead"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "牵住他的手：“今天先这样。”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "approach": 0.14,
+            "autonomy": 0.18,
+            "commitment": 0.06
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s14",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "他把你的手握住，没有用失望逼你改变。",
+          "setFlags": {
+            "kiss_mode": "hand"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "退开一点：“还不到时候。”",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.24,
+            "certainty": 0.16,
+            "approach": -0.1
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "s14",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "aftermath": "许知行把手放回外套口袋，陪你等雨小。",
+          "setFlags": {
+            "kiss_mode": "no"
+          }
         }
       ]
     },
     {
       "id": "s14",
       "slot": 14,
-      "chapter": "14｜家庭邀请",
-      "context": "intimacy",
-      "decisionType": "hard",
-      "decisionLabel": "这一次由你决定距离",
-      "decisionNote": "没有哪一种边界需要被解释成亏欠。",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "许知行邀请你参加父亲生日午餐，并说这不是测试；不去也不会改变他的态度。"
-        }
-      ],
-      "prompt": "你会怎么做？",
-      "note": "四种回应都会被认真承接。",
-      "choices": [
-        {
-          "id": "a",
-          "text": "参加，但只停留两小时",
-          "vector": {
-            "approach": 0.3,
-            "autonomy": -0.15
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s15a",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "这是你为约会节奏作出的清楚选择。"
-        },
-        {
-          "id": "b",
-          "text": "暂时不参加",
-          "vector": {
-            "approach": 0.13999999999999999,
-            "autonomy": 0.03
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s15b",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "这是你为约会节奏作出的清楚选择。"
-        },
-        {
-          "id": "c",
-          "text": "以朋友身份参加",
-          "vector": {
-            "approach": -0.020000000000000018,
-            "autonomy": 0.21
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s15c",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "这是你为约会节奏作出的清楚选择。"
-        },
-        {
-          "id": "d",
-          "text": "重新讨论节奏或暂停",
-          "vector": {
-            "approach": -0.18,
-            "autonomy": 0.39
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s15d",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "subtext": "这是你为约会节奏作出的清楚选择。"
-        }
-      ]
-    },
-    {
-      "id": "s15a",
-      "slot": 15,
-      "chapter": "15｜15的承接",
+      "chapter": "14｜空下来的星期天",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "你们把约会节奏留在彼此同意的范围里；普通日常不需要被赶成承诺。"
+          "text": "影院关门以后，许知行接下了一项旧建筑修缮工作。"
+        },
+        {
+          "type": "paragraph",
+          "text": "未来两个月，他每个星期天下午都要去现场。"
+        },
+        {
+          "type": "quote",
+          "text": "“我想继续见你，但我不能把每个星期天都空出来。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "这次他在答应工作以前就把安排告诉了你。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你觉得怎样见面才现实？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "改成周三晚上，星期天各过各的。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "autonomy": 0.2,
+            "commitment": 0.12,
+            "discernment": 0.1
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s15",
+          "aftermath": "你没有把约会绑死在星期天。",
+          "setFlags": {
+            "schedule_plan": "weekday"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "隔一个星期天见一次，提前定好。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "commitment": 0.18,
+            "certainty": 0.16,
+            "autonomy": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s15",
+          "aftermath": "你们为关系留出稳定但不过量的位置。",
+          "setFlags": {
+            "schedule_plan": "alternate"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "不设固定频率，谁想见就主动约。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "autonomy": 0.18,
+            "approach": 0.1,
+            "certainty": -0.06
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s15",
+          "aftermath": "你选择保留弹性，也接受主动需要真实发生。",
+          "setFlags": {
+            "schedule_plan": "flexible"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "告诉他这种节奏不适合你。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.24,
+            "certainty": 0.2,
+            "approach": -0.16
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s15",
+          "aftermath": "你没有因为心动就答应一段让自己长期不舒服的安排。",
+          "setFlags": {
+            "schedule_plan": "not_fit"
+          }
         }
       ]
     },
     {
-      "id": "s15b",
+      "id": "s15",
       "slot": 15,
-      "chapter": "15｜15的承接",
+      "chapter": "15｜先过一个月",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "你们把约会节奏留在彼此同意的范围里；普通日常不需要被赶成承诺。"
-        }
-      ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
-      "choices": [
-        {
-          "id": "a",
-          "text": "主动说出自己的想法",
-          "vector": {
-            "approach": 0.42,
-            "expression": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "text": "你们没有立刻给关系命名。"
         },
-        {
-          "id": "b",
-          "text": "先确认彼此的分寸",
-          "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "c",
-          "text": "把感受讲得更具体",
-          "vector": {
-            "repair": 0.32,
-            "trust": 0.24
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "d",
-          "text": "保留一点自己的空间",
-          "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        }
-      ]
-    },
-    {
-      "id": "s15c",
-      "slot": 15,
-      "chapter": "15｜15的承接",
-      "context": "commitment",
-      "content": [
         {
           "type": "paragraph",
-          "text": "你们把约会节奏留在彼此同意的范围里；普通日常不需要被赶成承诺。"
-        }
-      ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
-      "choices": [
-        {
-          "id": "a",
-          "text": "主动说出自己的想法",
-          "vector": {
-            "approach": 0.42,
-            "expression": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "text": "接下来的一个月，许知行按照你们说好的方式出现，也有一次因为现场延误不得不改期。"
         },
-        {
-          "id": "b",
-          "text": "先确认彼此的分寸",
-          "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "c",
-          "text": "把感受讲得更具体",
-          "vector": {
-            "repair": 0.32,
-            "trust": 0.24
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        },
-        {
-          "id": "d",
-          "text": "保留一点自己的空间",
-          "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
-          },
-          "intensity": 1,
-          "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
-        }
-      ]
-    },
-    {
-      "id": "s15d",
-      "slot": 15,
-      "chapter": "15｜15的承接",
-      "context": "commitment",
-      "content": [
         {
           "type": "paragraph",
-          "text": "你们把约会节奏留在彼此同意的范围里；普通日常不需要被赶成承诺。"
+          "text": "不同的是，这次他在你出门以前就说明了情况，并把新的时间交给你决定。"
+        },
+        {
+          "type": "paragraph",
+          "text": "准时不再是他最好看的部分。真正有用的是，他终于不让你在变化里猜。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "一个月以后，你最想确认什么？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "他是不是只在犯错以后才会做得这么好。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "discernment": 0.22,
+            "trust": -0.04,
+            "certainty": 0.14
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s16a",
+          "aftermath": "你继续观察稳定能不能脱离愧疚长期存在。",
+          "setFlags": {
+            "month_focus": "consistency"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "你们不见面的日子，他会不会主动想起你。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "validation": 0.18,
+            "reassurance": 0.12,
+            "approach": 0.06
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s16b",
+          "aftermath": "你要确认自己不是只被安排在空档里。",
+          "setFlags": {
+            "month_focus": "chosen"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "这段关系有没有让你的生活变得更舒服。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "autonomy": 0.18,
+            "discernment": 0.16,
+            "commitment": 0.08
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s16c",
+          "aftermath": "你把自己的感受放回判断中心。",
+          "setFlags": {
+            "month_focus": "life"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "即使他做得更好，你还想不想继续。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "certainty": 0.22,
+            "autonomy": 0.18,
+            "approach": -0.02
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s16",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s16d",
+          "aftermath": "你不把他的改进当成必须留下的理由。",
+          "setFlags": {
+            "month_focus": "desire"
+          }
         }
       ]
     },
     {
-      "id": "s16",
+      "id": "s16a",
       "slot": 16,
-      "chapter": "16｜新的日常",
+      "chapter": "16｜第四个星期天",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "你们把约会节奏留在彼此同意的范围里；普通日常不需要被赶成承诺。"
+          "text": "第四个星期天，许知行的工作没有出问题。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他还是在约定时间前五分钟到，但这次没有提醒你他多准时。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你们吃完饭，他把下午留给自己的工作，也没有把短暂见面表现成牺牲。"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你怎么看这一个月？",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "你愿意把关系向前推进。",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "commitment": 0.26,
+            "approach": 0.14,
+            "certainty": 0.12
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s17",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s17a",
+          "aftermath": "你承认自己想继续。",
+          "setFlags": {
+            "pre_final": "partner"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "继续约会，再多看一段时间。",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "discernment": 0.2,
+            "commitment": 0.12,
+            "autonomy": 0.1
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s17",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s17a",
+          "aftermath": "你认可变化，但不急着命名。",
+          "setFlags": {
+            "pre_final": "steady"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "把关系放回朋友的位置。",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "certainty": 0.2,
+            "autonomy": 0.16,
+            "approach": -0.08
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s17",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s17a",
+          "aftermath": "你把欣赏和恋爱分开。",
+          "setFlags": {
+            "pre_final": "friends"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "你仍然不想继续。",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.24,
+            "certainty": 0.18,
+            "approach": -0.18
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s17",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s17a",
+          "aftermath": "做得更好也不能替你产生欲望。",
+          "setFlags": {
+            "pre_final": "end"
+          }
         }
       ]
     },
     {
-      "id": "s17",
+      "id": "s16b",
+      "slot": 16,
+      "chapter": "16｜不是空档",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "一个月里，许知行没有每天报备。"
+        },
+        {
+          "type": "paragraph",
+          "text": "但他会在路过你喜欢的面包店时问一句要不要带，也会在没有约会的星期天发来一张老电影海报，不要求你立即回复。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他不是每次有空才想起你，也没有把想念写成任务。"
+        }
+      ],
+      "prompt": "这让你更确定什么？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "你愿意把关系向前推进。",
+          "vector": {
+            "commitment": 0.26,
+            "approach": 0.14,
+            "certainty": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s17b",
+          "aftermath": "你承认自己想继续。",
+          "setFlags": {
+            "pre_final": "partner"
+          }
+        },
+        {
+          "id": "b",
+          "text": "继续约会，再多看一段时间。",
+          "vector": {
+            "discernment": 0.2,
+            "commitment": 0.12,
+            "autonomy": 0.1
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s17b",
+          "aftermath": "你认可变化，但不急着命名。",
+          "setFlags": {
+            "pre_final": "steady"
+          }
+        },
+        {
+          "id": "c",
+          "text": "把关系放回朋友的位置。",
+          "vector": {
+            "certainty": 0.2,
+            "autonomy": 0.16,
+            "approach": -0.08
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s17b",
+          "aftermath": "你把欣赏和恋爱分开。",
+          "setFlags": {
+            "pre_final": "friends"
+          }
+        },
+        {
+          "id": "d",
+          "text": "你仍然不想继续。",
+          "vector": {
+            "autonomy": 0.24,
+            "certainty": 0.18,
+            "approach": -0.18
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s17b",
+          "aftermath": "做得更好也不能替你产生欲望。",
+          "setFlags": {
+            "pre_final": "end"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s16c",
+      "slot": 16,
+      "chapter": "16｜关系有没有挤进来",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "一个月以后，你回头看自己的生活。"
+        },
+        {
+          "type": "paragraph",
+          "text": "工作没有因为约会被打乱，朋友没有被排到后面，独处的星期天也没有消失。"
+        },
+        {
+          "type": "paragraph",
+          "text": "许知行进入了一部分日常，却没有把每个空白都占满。"
+        }
+      ],
+      "prompt": "你现在想把他放在哪里？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "你愿意把关系向前推进。",
+          "vector": {
+            "commitment": 0.26,
+            "approach": 0.14,
+            "certainty": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s17c",
+          "aftermath": "你承认自己想继续。",
+          "setFlags": {
+            "pre_final": "partner"
+          }
+        },
+        {
+          "id": "b",
+          "text": "继续约会，再多看一段时间。",
+          "vector": {
+            "discernment": 0.2,
+            "commitment": 0.12,
+            "autonomy": 0.1
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s17c",
+          "aftermath": "你认可变化，但不急着命名。",
+          "setFlags": {
+            "pre_final": "steady"
+          }
+        },
+        {
+          "id": "c",
+          "text": "把关系放回朋友的位置。",
+          "vector": {
+            "certainty": 0.2,
+            "autonomy": 0.16,
+            "approach": -0.08
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s17c",
+          "aftermath": "你把欣赏和恋爱分开。",
+          "setFlags": {
+            "pre_final": "friends"
+          }
+        },
+        {
+          "id": "d",
+          "text": "你仍然不想继续。",
+          "vector": {
+            "autonomy": 0.24,
+            "certainty": 0.18,
+            "approach": -0.18
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s17c",
+          "aftermath": "做得更好也不能替你产生欲望。",
+          "setFlags": {
+            "pre_final": "end"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s16d",
+      "slot": 16,
+      "chapter": "16｜做对以后",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "许知行没有再重复第一次约会里的错误。"
+        },
+        {
+          "type": "paragraph",
+          "text": "可你也发现，一个人学会尊重时间，并不会自动让你更想爱他。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他做得更好是一件好事，却不该成为你留下的债。"
+        }
+      ],
+      "prompt": "你准备怎么说？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "你愿意把关系向前推进。",
+          "vector": {
+            "commitment": 0.26,
+            "approach": 0.14,
+            "certainty": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s17d",
+          "aftermath": "你承认自己想继续。",
+          "setFlags": {
+            "pre_final": "partner"
+          }
+        },
+        {
+          "id": "b",
+          "text": "继续约会，再多看一段时间。",
+          "vector": {
+            "discernment": 0.2,
+            "commitment": 0.12,
+            "autonomy": 0.1
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s17d",
+          "aftermath": "你认可变化，但不急着命名。",
+          "setFlags": {
+            "pre_final": "steady"
+          }
+        },
+        {
+          "id": "c",
+          "text": "把关系放回朋友的位置。",
+          "vector": {
+            "certainty": 0.2,
+            "autonomy": 0.16,
+            "approach": -0.08
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s17d",
+          "aftermath": "你把欣赏和恋爱分开。",
+          "setFlags": {
+            "pre_final": "friends"
+          }
+        },
+        {
+          "id": "d",
+          "text": "你仍然不想继续。",
+          "vector": {
+            "autonomy": 0.24,
+            "certainty": 0.18,
+            "approach": -0.18
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s17d",
+          "aftermath": "做得更好也不能替你产生欲望。",
+          "setFlags": {
+            "pre_final": "end"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s17a",
       "slot": 17,
-      "chapter": "17｜一把备用的灯",
+      "chapter": "17｜你真正想要什么",
       "context": "commitment",
       "content": [
         {
           "type": "paragraph",
-          "text": "你们把约会节奏留在彼此同意的范围里；普通日常不需要被赶成承诺。"
+          "text": "你们坐在第一次见面的咖啡馆里。许知行没有拿这个月的表现要求答案，只说：“我想继续，但你不用因为我改了就奖励我。”"
         }
       ],
-      "prompt": "你会怎样回应？",
-      "note": "这一步记录你如何在日常里靠近并保留边界。",
+      "prompt": "你的最终决定是：",
       "choices": [
         {
           "id": "a",
-          "text": "主动说出自己的想法",
+          "text": "“我想和你正式在一起。”",
           "vector": {
-            "approach": 0.42,
-            "expression": 0.28
+            "approach": 0.78,
+            "expression": 0.62,
+            "commitment": 0.62,
+            "trust": 0.38,
+            "certainty": 0.35
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s18",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s18_partner",
+          "aftermath": "你把喜欢和关系都说得明确。",
+          "setFlags": {
+            "final": "partner"
+          }
         },
         {
           "id": "b",
-          "text": "先确认彼此的分寸",
+          "text": "“继续约会，但先不定义。”",
           "vector": {
-            "discernment": 0.42,
-            "autonomy": 0.28
+            "discernment": 0.72,
+            "autonomy": 0.55,
+            "certainty": -0.28,
+            "approach": 0.12,
+            "commitment": 0.12
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s18",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s18_steady",
+          "aftermath": "你愿意继续，也保留判断。",
+          "setFlags": {
+            "final": "steady"
+          }
         },
         {
           "id": "c",
-          "text": "把感受讲得更具体",
+          "text": "“我想把关系留在朋友。”",
           "vector": {
-            "repair": 0.32,
-            "trust": 0.24
+            "care": 0.58,
+            "repair": 0.52,
+            "autonomy": 0.42,
+            "commitment": -0.35,
+            "approach": -0.18
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s18",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s18_friends",
+          "aftermath": "你承认这段相遇的价值，却不进入恋爱。",
+          "setFlags": {
+            "final": "friends"
+          }
         },
         {
           "id": "d",
-          "text": "保留一点自己的空间",
+          "text": "“到这里吧，以后不用再约。”",
           "vector": {
-            "autonomy": 0.45,
-            "approach": -0.12
+            "autonomy": 0.78,
+            "approach": -0.72,
+            "commitment": -0.68,
+            "repair": -0.52,
+            "trust": -0.35,
+            "certainty": 0.55
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "s18",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。"
+          "next": "s18_end",
+          "aftermath": "你让结束成为清楚的事实。",
+          "setFlags": {
+            "final": "end"
+          }
         }
       ]
     },
     {
-      "id": "s18",
-      "slot": 18,
-      "chapter": "18｜把谁放进日常",
+      "id": "s17b",
+      "slot": 17,
+      "chapter": "17｜你真正想要什么",
       "context": "commitment",
-      "decisionType": "final",
-      "decisionLabel": "最后的关系定义",
-      "decisionNote": "你可以靠近，也可以保留自己的门。",
       "content": [
         {
           "type": "paragraph",
-          "text": "又一个星期天，许知行提前五分钟到达。你决定这段关系要以怎样的节奏继续。"
+          "text": "许知行把带来的面包放在桌上，没有说“我对你这么好”。他只问：“你现在真正想要什么？”"
         }
       ],
-      "prompt": "你会怎样定义你们？",
-      "note": "四个结局都由你决定。",
+      "prompt": "你的最终决定是：",
       "choices": [
         {
           "id": "a",
-          "text": "正式成为伴侣",
+          "text": "“我想和你正式在一起。”",
           "vector": {
-            "commitment": 0.45
+            "approach": 0.78,
+            "expression": 0.62,
+            "commitment": 0.62,
+            "trust": 0.38,
+            "certainty": 0.35
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "outcome": "partner",
-          "subtext": "这是你为自己的生活作出的选择。",
-          "finalReveal": {
-            "title": "把星期天留给彼此",
-            "copy": "你选择伴侣关系，但仍保留各自的周末和普通日常。 这一次的决定不需要用急切或亏欠来证明。"
+          "next": "s18_partner",
+          "aftermath": "你把喜欢和关系都说得明确。",
+          "setFlags": {
+            "final": "partner"
           }
         },
         {
           "id": "b",
-          "text": "继续稳定约会",
+          "text": "“继续约会，但先不定义。”",
           "vector": {
-            "commitment": 0.2
+            "discernment": 0.72,
+            "autonomy": 0.55,
+            "certainty": -0.28,
+            "approach": 0.12,
+            "commitment": 0.12
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "outcome": "steady",
-          "subtext": "这是你为自己的生活作出的选择。",
-          "finalReveal": {
-            "title": "稳定但不催促",
-            "copy": "你选择不急着命名；提前五分钟和替代日期已经足够说明认真。 这一次的决定不需要用急切或亏欠来证明。"
+          "next": "s18_steady",
+          "aftermath": "你愿意继续，也保留判断。",
+          "setFlags": {
+            "final": "steady"
           }
         },
         {
           "id": "c",
-          "text": "保留朋友式联系",
+          "text": "“我想把关系留在朋友。”",
           "vector": {
-            "commitment": -0.04999999999999999
+            "care": 0.58,
+            "repair": 0.52,
+            "autonomy": 0.42,
+            "commitment": -0.35,
+            "approach": -0.18
           },
           "intensity": 1,
           "confidence": 0.9,
-          "next": "$result",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "outcome": "friends",
-          "subtext": "这是你为自己的生活作出的选择。",
-          "finalReveal": {
-            "title": "联系不必占据生活",
-            "copy": "你保留联系，也保留不必解释的空间。 这一次的决定不需要用急切或亏欠来证明。 这一次的决定不需要用急切或亏欠来证明。"
+          "next": "s18_friends",
+          "aftermath": "你承认这段相遇的价值，却不进入恋爱。",
+          "setFlags": {
+            "final": "friends"
           }
         },
         {
           "id": "d",
-          "text": "结束这段约会",
+          "text": "“到这里吧，以后不用再约。”",
           "vector": {
-            "commitment": -0.3
+            "autonomy": 0.78,
+            "approach": -0.72,
+            "commitment": -0.68,
+            "repair": -0.52,
+            "trust": -0.35,
+            "certainty": 0.55
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s18_end",
+          "aftermath": "你让结束成为清楚的事实。",
+          "setFlags": {
+            "final": "end"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s17c",
+      "slot": 17,
+      "chapter": "17｜你真正想要什么",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你们沿着河堤走到最初分开的路口。许知行停下来，等你决定这段关系在生活里留下什么位置。"
+        }
+      ],
+      "prompt": "你的最终决定是：",
+      "choices": [
+        {
+          "id": "a",
+          "text": "“我想和你正式在一起。”",
+          "vector": {
+            "approach": 0.78,
+            "expression": 0.62,
+            "commitment": 0.62,
+            "trust": 0.38,
+            "certainty": 0.35
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s18_partner",
+          "aftermath": "你把喜欢和关系都说得明确。",
+          "setFlags": {
+            "final": "partner"
+          }
+        },
+        {
+          "id": "b",
+          "text": "“继续约会，但先不定义。”",
+          "vector": {
+            "discernment": 0.72,
+            "autonomy": 0.55,
+            "certainty": -0.28,
+            "approach": 0.12,
+            "commitment": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s18_steady",
+          "aftermath": "你愿意继续，也保留判断。",
+          "setFlags": {
+            "final": "steady"
+          }
+        },
+        {
+          "id": "c",
+          "text": "“我想把关系留在朋友。”",
+          "vector": {
+            "care": 0.58,
+            "repair": 0.52,
+            "autonomy": 0.42,
+            "commitment": -0.35,
+            "approach": -0.18
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s18_friends",
+          "aftermath": "你承认这段相遇的价值，却不进入恋爱。",
+          "setFlags": {
+            "final": "friends"
+          }
+        },
+        {
+          "id": "d",
+          "text": "“到这里吧，以后不用再约。”",
+          "vector": {
+            "autonomy": 0.78,
+            "approach": -0.72,
+            "commitment": -0.68,
+            "repair": -0.52,
+            "trust": -0.35,
+            "certainty": 0.55
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s18_end",
+          "aftermath": "你让结束成为清楚的事实。",
+          "setFlags": {
+            "final": "end"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s17d",
+      "slot": 17,
+      "chapter": "17｜你真正想要什么",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "许知行听完你的判断，没有用自己已经做得更好反驳。你终于可以只回答一件事：你还想不想继续。"
+        }
+      ],
+      "prompt": "你的最终决定是：",
+      "choices": [
+        {
+          "id": "a",
+          "text": "“我想和你正式在一起。”",
+          "vector": {
+            "approach": 0.78,
+            "expression": 0.62,
+            "commitment": 0.62,
+            "trust": 0.38,
+            "certainty": 0.35
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s18_partner",
+          "aftermath": "你把喜欢和关系都说得明确。",
+          "setFlags": {
+            "final": "partner"
+          }
+        },
+        {
+          "id": "b",
+          "text": "“继续约会，但先不定义。”",
+          "vector": {
+            "discernment": 0.72,
+            "autonomy": 0.55,
+            "certainty": -0.28,
+            "approach": 0.12,
+            "commitment": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s18_steady",
+          "aftermath": "你愿意继续，也保留判断。",
+          "setFlags": {
+            "final": "steady"
+          }
+        },
+        {
+          "id": "c",
+          "text": "“我想把关系留在朋友。”",
+          "vector": {
+            "care": 0.58,
+            "repair": 0.52,
+            "autonomy": 0.42,
+            "commitment": -0.35,
+            "approach": -0.18
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s18_friends",
+          "aftermath": "你承认这段相遇的价值，却不进入恋爱。",
+          "setFlags": {
+            "final": "friends"
+          }
+        },
+        {
+          "id": "d",
+          "text": "“到这里吧，以后不用再约。”",
+          "vector": {
+            "autonomy": 0.78,
+            "approach": -0.72,
+            "commitment": -0.68,
+            "repair": -0.52,
+            "trust": -0.35,
+            "certainty": 0.55
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "s18_end",
+          "aftermath": "你让结束成为清楚的事实。",
+          "setFlags": {
+            "final": "end"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s18_partner",
+      "slot": 18,
+      "chapter": "18｜下一个星期天",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "下一个星期天，许知行提前五分钟到你楼下。"
+        },
+        {
+          "type": "paragraph",
+          "text": "他没有安排整天，只发来一句：“我到了。今天想去哪里，你下楼以后再定。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "第一次，他把准时只当作出现，不再当作掌控后面的理由。"
+        }
+      ],
+      "prompt": "你怎么开始恋人身份下的第一个星期天？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "下楼以后先抱他。",
+          "vector": {
+            "approach": 0.72,
+            "expression": 0.58,
+            "care": 0.28,
+            "trust": 0.25
           },
           "intensity": 1,
           "confidence": 0.9,
           "next": "$result",
-          "aftermath": "你把自己的节奏说清楚，也留意到对方是否尊重。",
-          "outcome": "end",
-          "subtext": "这是你为自己的生活作出的选择。",
+          "aftermath": "你用身体确认这次靠近。",
+          "setFlags": {
+            "ending_tone": "warm"
+          },
+          "outcome": "partner",
           "finalReveal": {
-            "title": "把结束说清楚",
-            "copy": "你结束约会；许知行没有追赶，只把最后一次说明说清楚。  这一次的决定不需要用急切或亏欠来证明。"
+            "title": "他准时到了，也学会等你一起决定",
+            "copy": "你选择和许知行正式交往。你喜欢他的外表、能力和认真，也看见他曾把另一个人的时间塞进自己的计划。关系真正开始，不是因为他从此永远准时，而是他终于学会在变化发生前把你当作需要一起决定的人。"
+          }
+        },
+        {
+          "id": "b",
+          "text": "让他陪你去买早餐，边走边决定。",
+          "vector": {
+            "novelty": 0.12,
+            "autonomy": 0.1
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你们让计划在行走中发生。",
+          "setFlags": {
+            "ending_tone": "easy"
+          },
+          "outcome": "partner",
+          "finalReveal": {
+            "title": "他准时到了，也学会等你一起决定",
+            "copy": "你选择和许知行正式交往。你喜欢他的外表、能力和认真，也看见他曾把另一个人的时间塞进自己的计划。关系真正开始，不是因为他从此永远准时，而是他终于学会在变化发生前把你当作需要一起决定的人。"
+          }
+        },
+        {
+          "id": "c",
+          "text": "告诉他下午你要见朋友，只留上午。",
+          "vector": {
+            "autonomy": 0.16,
+            "certainty": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "恋爱没有吞掉你原来的生活。",
+          "setFlags": {
+            "ending_tone": "balanced"
+          },
+          "outcome": "partner",
+          "finalReveal": {
+            "title": "他准时到了，也学会等你一起决定",
+            "copy": "你选择和许知行正式交往。你喜欢他的外表、能力和认真，也看见他曾把另一个人的时间塞进自己的计划。关系真正开始，不是因为他从此永远准时，而是他终于学会在变化发生前把你当作需要一起决定的人。"
+          }
+        },
+        {
+          "id": "d",
+          "text": "开玩笑：“今天迟到十分钟也不会分手。”",
+          "vector": {
+            "expression": 0.14,
+            "repair": 0.1
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你们终于能拿第一次的紧绷开一个轻松的玩笑。",
+          "setFlags": {
+            "ending_tone": "playful"
+          },
+          "outcome": "partner",
+          "finalReveal": {
+            "title": "他准时到了，也学会等你一起决定",
+            "copy": "你选择和许知行正式交往。你喜欢他的外表、能力和认真，也看见他曾把另一个人的时间塞进自己的计划。关系真正开始，不是因为他从此永远准时，而是他终于学会在变化发生前把你当作需要一起决定的人。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s18_steady",
+      "slot": 18,
+      "chapter": "18｜再约一次",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你们没有立刻成为恋人。"
+        },
+        {
+          "type": "paragraph",
+          "text": "几天后，许知行问下一次什么时候见。没有默认星期天，也没有先订好票。"
+        }
+      ],
+      "prompt": "你给下一次什么安排？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "周三晚饭，只见两个小时。",
+          "vector": {
+            "autonomy": 0.14,
+            "commitment": 0.1
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你让关系进入普通工作日。",
+          "setFlags": {
+            "ending_tone": "weekday"
+          },
+          "outcome": "steady",
+          "finalReveal": {
+            "title": "先把下一次过好",
+            "copy": "你选择继续认真约会，但暂时不定义关系。接下来的星期天不再是考试，也不需要靠身份保证安全。你们只看一件事：在计划改变、工作挤进来和心动退潮以后，是否仍然愿意见彼此。"
+          }
+        },
+        {
+          "id": "b",
+          "text": "隔周星期天，再去看一场电影。",
+          "vector": {
+            "idealization": 0.65,
+            "novelty": 0.52,
+            "commitment": 0.25,
+            "approach": 0.18
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你保留了属于故事开头的星期天。",
+          "setFlags": {
+            "ending_tone": "sunday"
+          },
+          "outcome": "steady",
+          "finalReveal": {
+            "title": "先把下一次过好",
+            "copy": "你选择继续认真约会，但暂时不定义关系。接下来的星期天不再是考试，也不需要靠身份保证安全。你们只看一件事：在计划改变、工作挤进来和心动退潮以后，是否仍然愿意见彼此。"
+          }
+        },
+        {
+          "id": "c",
+          "text": "暂时不定，等你真的想见时再约。",
+          "vector": {
+            "autonomy": 0.18,
+            "discernment": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "继续不等于被下一次追赶。",
+          "setFlags": {
+            "ending_tone": "open"
+          },
+          "outcome": "steady",
+          "finalReveal": {
+            "title": "先把下一次过好",
+            "copy": "你选择继续认真约会，但暂时不定义关系。接下来的星期天不再是考试，也不需要靠身份保证安全。你们只看一件事：在计划改变、工作挤进来和心动退潮以后，是否仍然愿意见彼此。"
+          }
+        },
+        {
+          "id": "d",
+          "text": "让他提出两个时间，你再选。",
+          "vector": {
+            "trust": 0.1,
+            "certainty": 0.12
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你接受他的安排能力，也保留共同决定。",
+          "setFlags": {
+            "ending_tone": "shared"
+          },
+          "outcome": "steady",
+          "finalReveal": {
+            "title": "先把下一次过好",
+            "copy": "你选择继续认真约会，但暂时不定义关系。接下来的星期天不再是考试，也不需要靠身份保证安全。你们只看一件事：在计划改变、工作挤进来和心动退潮以后，是否仍然愿意见彼此。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s18_friends",
+      "slot": 18,
+      "chapter": "18｜电影散场以后",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "你们没有成为恋人。"
+        },
+        {
+          "type": "paragraph",
+          "text": "旧光影院后来做了一场告别展。许知行问你愿不愿意作为朋友去看看。"
+        },
+        {
+          "type": "paragraph",
+          "text": "这一次，邀请里没有暧昧的默认。"
+        }
+      ],
+      "prompt": "你留下怎样的联系？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "偶尔一起看电影，其他时间各自生活。",
+          "vector": {
+            "autonomy": 0.14,
+            "repair": 0.08
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你们保留共同兴趣，不重启恋爱。",
+          "setFlags": {
+            "ending_tone": "film_friend"
+          },
+          "outcome": "friends",
+          "finalReveal": {
+            "title": "喜欢没有被勉强改名",
+            "copy": "你把许知行留在朋友的位置。吸引、欣赏和一次真实的吻都可以存在，却不必被推成恋爱。你没有因为他变得更好，就把自己的答案改成奖励。"
+          }
+        },
+        {
+          "id": "b",
+          "text": "共同朋友聚会可以见，暂时不单独约。",
+          "vector": {
+            "autonomy": 0.18,
+            "certainty": 0.14
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你为吸引留出退潮的时间。",
+          "setFlags": {
+            "ending_tone": "group"
+          },
+          "outcome": "friends",
+          "finalReveal": {
+            "title": "喜欢没有被勉强改名",
+            "copy": "你把许知行留在朋友的位置。吸引、欣赏和一次真实的吻都可以存在，却不必被推成恋爱。你没有因为他变得更好，就把自己的答案改成奖励。"
+          }
+        },
+        {
+          "id": "c",
+          "text": "正常联系，但不谈如果当初。",
+          "vector": {
+            "certainty": 0.68,
+            "autonomy": 0.5,
+            "expression": 0.28,
+            "repair": 0.18
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你不让假设继续占据关系。",
+          "setFlags": {
+            "ending_tone": "clear_friend"
+          },
+          "outcome": "friends",
+          "finalReveal": {
+            "title": "喜欢没有被勉强改名",
+            "copy": "你把许知行留在朋友的位置。吸引、欣赏和一次真实的吻都可以存在，却不必被推成恋爱。你没有因为他变得更好，就把自己的答案改成奖励。"
+          }
+        },
+        {
+          "id": "d",
+          "text": "先暂停联系，等真正放下以后再说。",
+          "vector": {
+            "autonomy": 0.22,
+            "approach": -0.1
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "朋友也需要在双方都舒服时才能成立。",
+          "setFlags": {
+            "ending_tone": "distance"
+          },
+          "outcome": "friends",
+          "finalReveal": {
+            "title": "喜欢没有被勉强改名",
+            "copy": "你把许知行留在朋友的位置。吸引、欣赏和一次真实的吻都可以存在，却不必被推成恋爱。你没有因为他变得更好，就把自己的答案改成奖励。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "s18_end",
+      "slot": 18,
+      "chapter": "18｜时间还给自己",
+      "context": "commitment",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "许知行没有再约你。"
+        },
+        {
+          "type": "paragraph",
+          "text": "某个星期天上午十点五十五分，你路过第一次见面的咖啡馆。窗边的位置空着。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你没有停下来确认他是否会出现。"
+        }
+      ],
+      "prompt": "你怎么度过这个星期天？",
+      "choices": [
+        {
+          "id": "a",
+          "text": "约朋友吃早餐。",
+          "vector": {
+            "care": 0.1,
+            "autonomy": 0.14
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你把时间交还给原本的生活。",
+          "setFlags": {
+            "ending_tone": "friends"
+          },
+          "outcome": "end",
+          "finalReveal": {
+            "title": "星期天重新只属于你",
+            "copy": "你结束了这段关系。许知行没有再用准时、道歉或一个更完美的星期天请求你重来。你把时间还给自己，也确认一个人值得欣赏，并不等于必须留下。"
+          }
+        },
+        {
+          "id": "b",
+          "text": "一个人去看新上映的电影。",
+          "vector": {
+            "autonomy": 0.18,
+            "idealization": 0.06
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你仍然喜欢电影，不需要保留那个人。",
+          "setFlags": {
+            "ending_tone": "solo_film"
+          },
+          "outcome": "end",
+          "finalReveal": {
+            "title": "星期天重新只属于你",
+            "copy": "你结束了这段关系。许知行没有再用准时、道歉或一个更完美的星期天请求你重来。你把时间还给自己，也确认一个人值得欣赏，并不等于必须留下。"
+          }
+        },
+        {
+          "id": "c",
+          "text": "回家睡到中午。",
+          "vector": {
+            "autonomy": 0.16,
+            "reassurance": -0.04
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "没有安排也是完整的一天。",
+          "setFlags": {
+            "ending_tone": "rest"
+          },
+          "outcome": "end",
+          "finalReveal": {
+            "title": "星期天重新只属于你",
+            "copy": "你结束了这段关系。许知行没有再用准时、道歉或一个更完美的星期天请求你重来。你把时间还给自己，也确认一个人值得欣赏，并不等于必须留下。"
+          }
+        },
+        {
+          "id": "d",
+          "text": "去河边走一圈，不再看时间。",
+          "vector": {
+            "autonomy": 0.78,
+            "approach": -0.62,
+            "commitment": -0.55,
+            "novelty": 0.22
+          },
+          "intensity": 1,
+          "confidence": 0.9,
+          "next": "$result",
+          "aftermath": "你让这一天按照自己的速度结束。",
+          "setFlags": {
+            "ending_tone": "walk"
+          },
+          "outcome": "end",
+          "finalReveal": {
+            "title": "星期天重新只属于你",
+            "copy": "你结束了这段关系。许知行没有再用准时、道歉或一个更完美的星期天请求你重来。你把时间还给自己，也确认一个人值得欣赏，并不等于必须留下。"
           }
         }
       ]
