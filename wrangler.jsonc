@@ -5,12 +5,26 @@
   "assets": {
     "directory": "./public",
     "html_handling": "auto-trailing-slash",
-    "not_found_handling": "single-page-application"
+    "not_found_handling": "single-page-application",
+    "binding": "ASSETS",
+    "run_worker_first": true
   },
   "routes": [
     {
       "pattern": "love-right.coseclab.dev",
       "custom_domain": true
+    }
+  ],
+  "main": "./src/index.js",
+  "vars": {
+    "DONATION_URL": ""
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "love-right-db",
+      "database_id": "01a203e3-aaef-463c-97a2-7528a6d8407c",
+      "migrations_dir": "migrations"
     }
   ]
 }

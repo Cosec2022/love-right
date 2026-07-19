@@ -46,5 +46,22 @@ test("bootstrap validates required DOM before binding controls", async () => {
   const main = await read("public/app/main.js");
   assert.match(main, /REQUIRED_DOM_IDS/);
   assert.match(main, /应用页面不完整，缺少必要节点/);
-  assert.match(main, /bindEvents\(\);\s*bootstrap\(\)/);
+  assert.match(main, /bindEvents\(\);\s*await commercial\.init\(\);\s*await bootstrap\(\)/);
+});
+
+
+test("commercial UI is integrated through the formal renderer rather than DOM observers", async () => {
+  const [html, main, renderer, controller] = await Promise.all([
+    read("public/index.html"),
+    read("public/app/main.js"),
+    read("public/app/ui/renderer.js"),
+    read("public/app/commercial/commercial-controller.js")
+  ]);
+  assert.match(html, /id="accountBtn"/);
+  assert.match(html, /id="commercialResultPanel"/);
+  assert.match(main, /selectFourCharacterLabel/);
+  assert.match(main, /commercial\?\.presentResult/);
+  assert.match(renderer, /你是一个怎样的人/);
+  assert.match(renderer, /commercial-rating-badge/);
+  assert.doesNotMatch(controller, /MutationObserver/);
 });

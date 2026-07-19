@@ -142,6 +142,10 @@
         "label": "失约与冲突"
       },
       {
+        "id": "repair",
+        "label": "修复与重新协商"
+      },
+      {
         "id": "commitment",
         "label": "现实与长期"
       }
@@ -2602,7 +2606,12 @@
           "setFlags": {
             "ending": "return"
           },
-          "outcome": "return"
+          "outcome": "return",
+          "subtext": "把认真放进可以兑现的具体安排里。",
+          "finalReveal": {
+            "title": "下次见面已定",
+            "copy": "闻野出发前，你们先定下下一次见面的日期，再讨论更远的以后。谁也没有辞掉工作，也没有用牺牲证明认真。那扇门锁上的一夜仍然重要，但真正让关系成立的是天亮以后，你们都没有消失。"
+          }
         },
         {
           "id": "b",
@@ -2617,7 +2626,12 @@
           "setFlags": {
             "ending": "return"
           },
-          "outcome": "return"
+          "outcome": "return",
+          "subtext": "让亲密与创作都保留清楚的同意范围。",
+          "finalReveal": {
+            "title": "边界写进以后",
+            "copy": "闻野出发前，你们先定下下一次见面的日期，再讨论更远的以后。谁也没有辞掉工作，也没有用牺牲证明认真。那扇门锁上的一夜仍然重要，但真正让关系成立的是天亮以后，你们都没有消失。"
+          }
         },
         {
           "id": "c",
@@ -2632,7 +2646,12 @@
           "setFlags": {
             "ending": "return"
           },
-          "outcome": "return"
+          "outcome": "return",
+          "subtext": "先约定冲突发生时仍然留在谈话里。",
+          "finalReveal": {
+            "title": "争执不再失联",
+            "copy": "闻野出发前，你们先定下下一次见面的日期，再讨论更远的以后。谁也没有辞掉工作，也没有用牺牲证明认真。那扇门锁上的一夜仍然重要，但真正让关系成立的是天亮以后，你们都没有消失。"
+          }
         },
         {
           "id": "d",
@@ -2647,9 +2666,17 @@
           "setFlags": {
             "ending": "return"
           },
-          "outcome": "return"
+          "outcome": "return",
+          "subtext": "不急着许诺，用第二天的清醒继续决定。",
+          "finalReveal": {
+            "title": "明天再谈未来",
+            "copy": "闻野出发前，你们先定下下一次见面的日期，再讨论更远的以后。谁也没有辞掉工作，也没有用牺牲证明认真。那扇门锁上的一夜仍然重要，但真正让关系成立的是天亮以后，你们都没有消失。"
+          }
         }
-      ]
+      ],
+      "decisionType": "final",
+      "decisionLabel": "最后的选择",
+      "decisionNote": "它不会改写已经发生的结局，只决定你怎样把这段关系留在记忆里。"
     },
     {
       "id": "s18_commute",
@@ -2681,7 +2708,12 @@
           "setFlags": {
             "ending": "commute"
           },
-          "outcome": "commute"
+          "outcome": "commute",
+          "subtext": "先确认没有气氛加持时是否仍然舒服。",
+          "finalReveal": {
+            "title": "白天重新认识",
+            "copy": "你们从三次正式约会开始。第一次发生在白天，没有酒店房卡、暴雨或拍摄任务。身体已经靠近过，却没有替你们跳过重新认识。闻野仍然好看，也终于要靠现实里的耐心继续得到你。"
+          }
         },
         {
           "id": "b",
@@ -2696,7 +2728,12 @@
           "setFlags": {
             "ending": "commute"
           },
-          "outcome": "commute"
+          "outcome": "commute",
+          "subtext": "保留各自判断，再交换真正不同的看法。",
+          "finalReveal": {
+            "title": "各自看完再说",
+            "copy": "你们从三次正式约会开始。第一次发生在白天，没有酒店房卡、暴雨或拍摄任务。身体已经靠近过，却没有替你们跳过重新认识。闻野仍然好看，也终于要靠现实里的耐心继续得到你。"
+          }
         },
         {
           "id": "c",
@@ -2711,7 +2748,12 @@
           "setFlags": {
             "ending": "commute"
           },
-          "outcome": "commute"
+          "outcome": "commute",
+          "subtext": "让他进入你的现实，而不是只看见身体。",
+          "finalReveal": {
+            "title": "镜头以外见面",
+            "copy": "你们从三次正式约会开始。第一次发生在白天，没有酒店房卡、暴雨或拍摄任务。身体已经靠近过，却没有替你们跳过重新认识。闻野仍然好看，也终于要靠现实里的耐心继续得到你。"
+          }
         },
         {
           "id": "d",
@@ -2726,9 +2768,17 @@
           "setFlags": {
             "ending": "commute"
           },
-          "outcome": "commute"
+          "outcome": "commute",
+          "subtext": "把有限时间变成一次清醒而具体的约会。",
+          "finalReveal": {
+            "title": "只给彼此一小时",
+            "copy": "你们从三次正式约会开始。第一次发生在白天，没有酒店房卡、暴雨或拍摄任务。身体已经靠近过，却没有替你们跳过重新认识。闻野仍然好看，也终于要靠现实里的耐心继续得到你。"
+          }
         }
-      ]
+      ],
+      "decisionType": "final",
+      "decisionLabel": "最后的选择",
+      "decisionNote": "它不会改写已经发生的结局，只决定你怎样把这段关系留在记忆里。"
     },
     {
       "id": "s18_distance",
@@ -2760,7 +2810,12 @@
           "setFlags": {
             "ending": "distance"
           },
-          "outcome": "distance"
+          "outcome": "distance",
+          "subtext": "保留被看见的瞬间，但不延长这段关系。",
+          "finalReveal": {
+            "title": "照片只属于你",
+            "copy": "你承认那一夜有欲望、有温柔，也有真实的喜欢。它不需要变成长久关系才值得被记住。闻野没有用最后一次拥抱改变你的决定，你也没有为了显得清醒，把短暂说成错误。这不是失败，而是一次没有被夸大的真心。"
+          }
         },
         {
           "id": "b",
@@ -2775,7 +2830,12 @@
           "setFlags": {
             "ending": "distance"
           },
-          "outcome": "distance"
+          "outcome": "distance",
+          "subtext": "把私人欲望与共同完成的工作彻底分开。",
+          "finalReveal": {
+            "title": "作品留下就够",
+            "copy": "你承认那一夜有欲望、有温柔，也有真实的喜欢。它不需要变成长久关系才值得被记住。闻野没有用最后一次拥抱改变你的决定，你也没有为了显得清醒，把短暂说成错误。这不是失败，而是一次没有被夸大的真心。"
+          }
         },
         {
           "id": "c",
@@ -2790,7 +2850,12 @@
           "setFlags": {
             "ending": "distance"
           },
-          "outcome": "distance"
+          "outcome": "distance",
+          "subtext": "承认仍有可能，也不拿可能要求未来。",
+          "finalReveal": {
+            "title": "以后不必承诺",
+            "copy": "你承认那一夜有欲望、有温柔，也有真实的喜欢。它不需要变成长久关系才值得被记住。闻野没有用最后一次拥抱改变你的决定，你也没有为了显得清醒，把短暂说成错误。这不是失败，而是一次没有被夸大的真心。"
+          }
         },
         {
           "id": "d",
@@ -2805,9 +2870,17 @@
           "setFlags": {
             "ending": "distance"
           },
-          "outcome": "distance"
+          "outcome": "distance",
+          "subtext": "不靠纪念物延长一段已经完成的关系。",
+          "finalReveal": {
+            "title": "让它完整结束",
+            "copy": "你承认那一夜有欲望、有温柔，也有真实的喜欢。它不需要变成长久关系才值得被记住。闻野没有用最后一次拥抱改变你的决定，你也没有为了显得清醒，把短暂说成错误。这不是失败，而是一次没有被夸大的真心。"
+          }
         }
-      ]
+      ],
+      "decisionType": "final",
+      "decisionLabel": "最后的选择",
+      "decisionNote": "它不会改写已经发生的结局，只决定你怎样把这段关系留在记忆里。"
     },
     {
       "id": "s18_farewell",
@@ -2839,7 +2912,12 @@
           "setFlags": {
             "ending": "farewell"
           },
-          "outcome": "farewell"
+          "outcome": "farewell",
+          "subtext": "完成所有现实责任，再关闭私人入口。",
+          "finalReveal": {
+            "title": "到这里就结束",
+            "copy": "项目结束后，你们只通过正式邮件完成交付。闻野没有再用照片、欲望或离开的期限敲你的门。你没有否认曾经心动，只是不再把自己交给一个在关键事实前选择沉默的人。离开并没有抹掉吸引，只让责任重新回到正确的位置。"
+          }
         },
         {
           "id": "b",
@@ -2854,7 +2932,12 @@
           "setFlags": {
             "ending": "farewell"
           },
-          "outcome": "farewell"
+          "outcome": "farewell",
+          "subtext": "不否定专业合作，也不恢复亲密关系。",
+          "finalReveal": {
+            "title": "只保留工作",
+            "copy": "项目结束后，你们只通过正式邮件完成交付。闻野没有再用照片、欲望或离开的期限敲你的门。你没有否认曾经心动，只是不再把自己交给一个在关键事实前选择沉默的人。离开并没有抹掉吸引，只让责任重新回到正确的位置。"
+          }
         },
         {
           "id": "c",
@@ -2869,7 +2952,12 @@
           "setFlags": {
             "ending": "farewell"
           },
-          "outcome": "farewell"
+          "outcome": "farewell",
+          "subtext": "把身体与影像的决定权完整收回自己。",
+          "finalReveal": {
+            "title": "把肖像还给你",
+            "copy": "项目结束后，你们只通过正式邮件完成交付。闻野没有再用照片、欲望或离开的期限敲你的门。你没有否认曾经心动，只是不再把自己交给一个在关键事实前选择沉默的人。离开并没有抹掉吸引，只让责任重新回到正确的位置。"
+          }
         },
         {
           "id": "d",
@@ -2884,9 +2972,17 @@
           "setFlags": {
             "ending": "farewell"
           },
-          "outcome": "farewell"
+          "outcome": "farewell",
+          "subtext": "保存事实和边界，不再等待新的解释。",
+          "finalReveal": {
+            "title": "最后一封邮件",
+            "copy": "项目结束后，你们只通过正式邮件完成交付。闻野没有再用照片、欲望或离开的期限敲你的门。你没有否认曾经心动，只是不再把自己交给一个在关键事实前选择沉默的人。离开并没有抹掉吸引，只让责任重新回到正确的位置。"
+          }
         }
-      ]
+      ],
+      "decisionType": "final",
+      "decisionLabel": "最后的选择",
+      "decisionNote": "它不会改写已经发生的结局，只决定你怎样把这段关系留在记忆里。"
     }
   ]
 }

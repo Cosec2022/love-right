@@ -39,6 +39,7 @@ export class Renderer {
       const button = document.createElement("button");
       button.type = "button";
       button.className = "story-entry";
+      button.dataset.storyId = story.id;
       button.innerHTML = `
         <span class="entry-kicker"></span>
         <h2></h2>
@@ -58,6 +59,15 @@ export class Renderer {
         badge.className = "engine-badge";
         badge.textContent = label;
         meta.appendChild(badge);
+      }
+      if (story.commercialRating) {
+        const rating = document.createElement("span");
+        rating.className = "commercial-rating-badge";
+        rating.dataset.eligible = String(story.commercialRating.ratingEligible);
+        rating.textContent = story.commercialRating.ratingEligible
+          ? `${Math.round(story.commercialRating.approvalRate * 100)}% 好评 · ${story.commercialRating.totalVotes}票`
+          : `新故事 · ${story.commercialRating.totalVotes}票`;
+        meta.appendChild(rating);
       }
       button.addEventListener("click", () => onSelect(story));
       list.appendChild(button);
@@ -150,18 +160,19 @@ export class Renderer {
     this.show("revealScreen");
   }
 
-  renderResult(result, story) {
+  renderResult(result, story, fourCharacterLabel = null) {
     const resultTitle = el("resultTitle");
     resultTitle.replaceChildren();
     const resultTitlePrefix = document.createElement("span");
     resultTitlePrefix.className = "result-title-prefix";
-    resultTitlePrefix.textContent = "你是一个";
+    resultTitlePrefix.textContent = "你是一个怎样的人";
     const resultTitleCore = document.createElement("span");
     resultTitleCore.className = "result-title-core";
-    resultTitleCore.textContent = result.memory.title;
+    resultTitleCore.textContent = fourCharacterLabel?.title ?? result.memory.title;
     resultTitle.append(resultTitlePrefix, resultTitleCore);
-    el("resultTagline").textContent = result.memory.hook;
-    el("resultLabel").textContent = result.memory.label;
+    el("resultTagline").textContent = fourCharacterLabel?.hook ?? result.memory.hook;
+    el("resultLabel").textContent = result.memory.title;
+    el("resultLabel").title = result.memory.label;
 
     el("endingStoryTitle").textContent = story.metadata.title;
     appendParagraphs(el("endingCopy"), result.ending);

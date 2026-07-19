@@ -276,8 +276,8 @@ test("story-06 keeps one stable emotional spine before the final identity choice
 
 test("result heading speaks directly to the player", async () => {
   const rendererSource = await readFile(new URL("../public/app/ui/renderer.js", import.meta.url), "utf8");
-  assert.match(rendererSource, /resultTitlePrefix\.textContent = "你是一个"/);
-  assert.match(rendererSource, /resultTitleCore\.textContent = result\.memory\.title/);
+  assert.match(rendererSource, /resultTitlePrefix\.textContent = "你是一个怎样的人"/);
+  assert.match(rendererSource, /resultTitleCore\.textContent = fourCharacterLabel\?\.title \?\? result\.memory\.title/);
 });
 
 

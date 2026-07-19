@@ -1,6 +1,6 @@
 {
   "name": "love-right",
-  "version": "0.5.5",
+  "version": "1.0.0-beta.3",
   "private": true,
   "type": "module",
   "description": "Love Right — a reusable spatial interactive romance story and projection engine by CosecLab.",
@@ -9,12 +9,18 @@
     "validate": "node scripts/validate-stories.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:e2e": "playwright test",
-    "check": "npm run validate && npm run static-check && npm test && npm run audit",
+    "check": "npm run check:base && npm run test:commercial && npm run audit:commercial",
     "new-story": "node scripts/new-story.mjs",
     "deploy": "npm run check && wrangler deploy",
     "static-check": "node scripts/check-static.mjs",
     "graph": "node scripts/story-graph.mjs",
-    "audit": "node scripts/audit-results.mjs"
+    "audit": "node scripts/audit-results.mjs",
+    "test:commercial": "node --test tests/commercial-v1.test.mjs",
+    "audit:commercial": "node scripts/audit-commercial-labels.mjs",
+    "db:migrate:local": "wrangler d1 migrations apply love-right-db --local",
+    "db:migrate:remote": "wrangler d1 migrations apply love-right-db --remote",
+    "check:base": "npm run validate && npm run static-check && npm test",
+    "audit:legacy": "npm run audit"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.1",

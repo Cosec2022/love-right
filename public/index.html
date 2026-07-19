@@ -8,6 +8,7 @@
   <title>Love Right｜CosecLab</title>
   <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="./app.css" />
+  <link rel="stylesheet" href="./app/commercial/commercial.css?v=20260720" />
 
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=20260711204703">
 </head>
@@ -22,6 +23,7 @@
       </button>
       <div class="topbar-actions">
         <span class="tiny-note">互动叙事引擎</span>
+        <button id="accountBtn" class="account-button" type="button"><span class="account-button-main">登录</span><small class="account-button-sub">保存你的故事</small></button>
         <button id="libraryBtn" class="topbar-button" type="button" hidden>故事库</button>
       </div>
     </header>
@@ -146,6 +148,8 @@
             <div id="traitGrid" class="trait-grid"></div>
           </details>
 
+          <section id="commercialResultPanel" class="commercial-result-panel" hidden></section>
+
           <div class="action-grid">
             <button id="restartBtn" class="secondary" type="button">重新走一次</button>
             <button id="shareBtn" class="secondary dark" type="button">复制结果</button>
@@ -164,6 +168,6 @@
   </main>
 
   <div id="toast" class="toast">结果已复制</div>
-  <script type="module" src="./app/main.js?v=20260711214813"></script>
+  <script type="module" src="./app/main.js?v=20260720003000"></script>
 </body>
 </html>

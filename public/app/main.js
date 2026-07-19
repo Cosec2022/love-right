@@ -5,13 +5,15 @@ import { SessionStore } from "./engine/session-store.js";
 import { AnalyticsClient } from "./engine/analytics-client.js";
 import { Renderer } from "./ui/renderer.js";
 import { createRequestGate } from "./request-gate.js";
+import { CommercialController } from "./commercial/commercial-controller.js";
+import { selectFourCharacterLabel } from "./commercial/label-engine.js";
 
 const REQUIRED_DOM_IDS = [
-  "brandBtn", "libraryBtn", "libraryScreen", "storyList", "filterAll", "filterFemale", "filterMale",
+  "brandBtn", "libraryBtn", "accountBtn", "libraryScreen", "storyList", "filterAll", "filterFemale", "filterMale",
   "startScreen", "startBtn", "resetProgressBtn", "storySeries", "storyTitle", "storySubtitle", "storyTitleMini", "storyTags", "startNote",
   "quizScreen", "progressBar", "progressText", "chapter", "sceneCopy", "question", "sceneNote", "options", "backBtn", "decisionBanner", "decisionLabel", "decisionNote",
   "revealScreen", "revealEyebrow", "revealStoryTitle", "revealTitle", "revealCopy", "revealContinueBtn",
-  "resultScreen", "resultTitle", "resultTagline", "resultLabel", "endingStoryTitle", "endingCopy", "contradictionTitle", "contradictionCopy", "insightGrid", "emotionIndexGrid", "moveList", "evidenceList", "psychologyCopy", "historyCopy", "futureGrid", "matchTags", "matchCopy", "warningCopy", "traitGrid", "restartBtn", "shareBtn", "resultFooter",
+  "resultScreen", "resultTitle", "resultTagline", "resultLabel", "endingStoryTitle", "endingCopy", "contradictionTitle", "contradictionCopy", "insightGrid", "emotionIndexGrid", "moveList", "evidenceList", "psychologyCopy", "historyCopy", "futureGrid", "matchTags", "matchCopy", "warningCopy", "traitGrid", "restartBtn", "shareBtn", "commercialResultPanel", "resultFooter",
   "errorScreen", "errorMessage", "errorRecoveryBtn", "toast"
 ];
 
@@ -20,6 +22,7 @@ const missingDomIds = (root = document) => REQUIRED_DOM_IDS.filter((id) => !root
 let renderer;
 let store;
 let analytics;
+let commercial;
 
 let catalog = null;
 let currentEntry = null;
@@ -27,6 +30,7 @@ let story = null;
 let engine = null;
 let resultEngine = null;
 let latestResult = null;
+let latestLabel = null;
 let selectedAudience = "all";
 let catalogPromise = null;
 const storyRequests = createRequestGate();
@@ -55,9 +59,15 @@ function renderCurrentScene() {
   );
 }
 
+function showBuiltResult(result) {
+  latestResult = result;
+  latestLabel = selectFourCharacterLabel(result);
+  renderer.renderResult(result, story, latestLabel);
+  commercial?.presentResult({ result, label: latestLabel, story: currentEntry });
+}
+
 function renderCurrentResult() {
-  latestResult = resultEngine.build(engine.state);
-  renderer.renderResult(latestResult, story);
+  showBuiltResult(resultEngine.build(engine.state));
 }
 
 async function openStory(entry, { pushUrl = true } = {}) {
@@ -80,6 +90,8 @@ async function openStory(entry, { pushUrl = true } = {}) {
       onEvent: (type, payload) => analytics.track(type, payload)
     });
     latestResult = null;
+    latestLabel = null;
+    commercial?.clearResult();
     renderer.renderStart(story, engine.state);
     if (pushUrl) updateUrl(entry);
   } catch (error) {
@@ -97,9 +109,9 @@ function handleChoice(choiceId) {
     if (engine.state.complete) {
       latestResult = resultEngine.build(engine.state);
       if (scene.decisionType === "final" && choice?.finalReveal) {
-        renderer.renderReveal({ story, choice, result: latestResult }, () => renderer.renderResult(latestResult, story));
+        renderer.renderReveal({ story, choice, result: latestResult }, () => showBuiltResult(latestResult));
       } else {
-        renderer.renderResult(latestResult, story);
+        showBuiltResult(latestResult);
       }
     } else renderCurrentScene();
   } catch (error) {
@@ -116,7 +128,10 @@ async function showLibrary({ pushUrl = true } = {}) {
   engine = null;
   resultEngine = null;
   latestResult = null;
-  renderer.renderCatalog(catalog, selectedAudience, (entry) => openStory(entry));
+  latestLabel = null;
+  commercial?.clearResult();
+  const rankedCatalog = commercial?.rankCatalog(catalog) ?? catalog;
+  renderer.renderCatalog(rankedCatalog, selectedAudience, (entry) => openStory(entry));
   document.title = "Love Right｜CosecLab";
   if (pushUrl) updateUrl(null);
 }
@@ -124,8 +139,8 @@ async function showLibrary({ pushUrl = true } = {}) {
 async function copyResult() {
   if (!latestResult) return;
   const text = [
-    `我在 Love Right《${story.metadata.title}》里是「${latestResult.memory.title}」`,
-    latestResult.memory.hook,
+    `我在 Love Right《${story.metadata.title}》里得到「${latestLabel?.title ?? latestResult.memory.title}」`,
+    latestLabel?.hook ?? latestResult.memory.hook,
     "",
     `最矛盾：${latestResult.memory.contradiction.text}`,
     `会被打动：${latestResult.memory.insights[0]?.text ?? ""}`,
@@ -212,7 +227,7 @@ window.addEventListener("popstate", async () => {
 });
 }
 
-function start() {
+async function start() {
   const missing = missingDomIds();
   if (missing.length) {
     const error = document.getElementById("errorMessage");
@@ -226,8 +241,17 @@ function start() {
     endpoint: globalThis.LOVE_RIGHT_ANALYTICS_ENDPOINT ?? null,
     consent: localStorage.getItem("love-right:analytics-consent") === "granted"
   });
+  commercial = new CommercialController({
+    accountButton: document.getElementById("accountBtn"),
+    resultPanel: document.getElementById("commercialResultPanel"),
+    notify: (message) => renderer.toast(message),
+    onRankingChange: () => {
+      if (catalog && !currentEntry) showLibrary({ pushUrl: false });
+    }
+  });
   bindEvents();
-  bootstrap();
+  await commercial.init();
+  await bootstrap();
 }
 
 // Start only after this module has finished binding all static controls.
